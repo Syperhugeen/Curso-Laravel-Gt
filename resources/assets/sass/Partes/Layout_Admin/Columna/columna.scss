@@ -1,0 +1,34 @@
+.admin-columna-contenedor{
+  width: 200px;
+  padding: 5px 6px;
+  border: solid 1px transparent;
+  border-right-color: $Color-Gris-Claro;
+  border-radius: 4px;
+}
+
+  .admin-columna-ul{
+     width: 100%;
+  }
+
+   .admin-columna-li{
+    width: 100%;
+    padding:5px;
+    font: arial;
+    font-size: 16px;
+    color: $Color-texto-gris-Mercadolibre ;
+    margin-top: 2px;
+   }
+
+   .admin-columna-li:hover{
+    background-color:$Color-Gris-Claro ;
+   }
+
+
+      .admin-boton-registrar{
+        padding: 8px;
+        background-color:$Color-Azul-Wm;
+        font-size: 18px;
+        color: white;
+        border-radius: 5px;
+      }
+

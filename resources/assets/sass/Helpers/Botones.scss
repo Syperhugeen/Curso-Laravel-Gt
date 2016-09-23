@@ -1,0 +1,13 @@
+@mixin Boton-Normal($bk: $Color-Azul-Wm, $color:white )
+{
+  background-color: $bk;
+  color:$color ;
+  padding: 10px 14px;
+  font-size: 20px;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  margin: 15px auto;
+  display: table;
+  cursor:pointer;
+  
+}
