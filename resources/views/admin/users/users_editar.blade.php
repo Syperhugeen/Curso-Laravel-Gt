@@ -6,12 +6,12 @@
 <div class="contenedor-admin-entidad">
 
  {{-- titulo --}}
- <div class="admin-entidad-titulo">Crear Usuario 
+ <div class="admin-entidad-titulo">Editar Usuario {{$user->name}}
  </div>
 
  {{-- formulario --}}
-  {!! Form::open(['route' => 'set_admin_users_crear',
-                            'method'=> 'post',
+  {!! Form::model($user,   ['route' => ['set_admin_users_editar',$user->id],
+                            'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
                           ])               !!}
@@ -38,7 +38,7 @@
       
    </div>
    <div class="admin-boton-editar">
-     Crear Usuario
+     Editar Usuario
    </div> 
 
 

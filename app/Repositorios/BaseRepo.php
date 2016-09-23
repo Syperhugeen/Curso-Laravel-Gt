@@ -42,9 +42,13 @@ abstract class BaseRepo
 
     //setters
 
-    public function setEntidadDato($Entidad,$request,$nombreDelFiel)
+    public function setEntidadDato($Entidad,$request,$Propiedades)
     {
-      $Entidad->$nombreDelFiel = $request->input($nombreDelFiel);
+        foreach ($Propiedades as $Propiedad) 
+        {
+           $Entidad->$Propiedad = $request->input($Propiedad);
+        } 
+     
     }
 
 

@@ -28,11 +28,9 @@ class EmpresaRepo extends BaseRepo
     $Empresa = $this->getEmpresaDatos();
 
     $Propiedades = ['name','slogan','vision','mision','telefono','direccion','horarios_dias'];
-
-    foreach ($Propiedades as $Propiedad) 
-    {
-      $this->setEntidadDato($Empresa,$request,$Propiedad);
-    }    
+    
+    $this->setEntidadDato($Empresa,$request,$Propiedades);
+       
 
     $this->setImagen($Empresa,$request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
     $this->setImagen($Empresa,$request,'logo_horizontal','Empresa/','logo_horizontal','.png');

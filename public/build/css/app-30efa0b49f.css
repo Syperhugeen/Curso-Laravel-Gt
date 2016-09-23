@@ -5788,14 +5788,6 @@ a:active {
 form {
   width: 100%; }
 
-/* TAmaño de fuentes y fuentes */
-/* Home */
-/* Header */
-/* la parte de las categorias Randoms Resolucion mobile */
-/* Para ficha de Entidades /////////////////////*/
-/* Entidad de Super-Cate-SubCate */
-/* menu de las categorias en la pagina de las entidades */
-/* Articulos en categorias */
 ::-webkit-scrollbar {
   width: 6px; }
 
@@ -9381,6 +9373,87 @@ body.avgrund-active {
   display: table;
   cursor: pointer;
   display: inline-block; }
+
+.admin-user-lista-contenedor {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #FDF9F9;
+  border: solid 1px #dfdfdf;
+  margin-top: 3px;
+  width: 300px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between; }
+
+.admin-user-lista-icono {
+  font-size: 20px;
+  color: #999999;
+  padding: 3px;
+  width: 30px;
+  text-align: center; }
+
+.admin-user-contenedor-datos {
+  width: 270px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  padding: 4px;
+  border-left: solid 1px #dfdfdf; }
+
+.admin-user-name-y-mas {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.admin-lista-dato-primario {
+  font-size: 13px;
+  padding: 1px;
+  border-bottom: solid 1px #dfdfdf;
+  font-weight: bold; }
+
+.admin-lista-dato-secundario {
+  font-size: 10px;
+  padding: 1px;
+  color: #999999; }
+
+.boton-acciones-editar {
+  background-color: #468C00;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: arial;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  margin: 15px auto;
+  display: table;
+  cursor: pointer; }
+
+.boton-acciones-editar:hover {
+  background-color: #006621; }
 
 .formulario-contenedor {
   display: -moz-flex;

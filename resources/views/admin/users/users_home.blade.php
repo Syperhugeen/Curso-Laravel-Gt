@@ -10,6 +10,12 @@
  >Crear <span class="icon-add_circle_outline"></span> </span></a>
  </div>
 
+ <div>
+   @foreach($users as $user)
+        @include('admin.users.partes.lista')
+   @endforeach
+ </div>
+
  
 
 
