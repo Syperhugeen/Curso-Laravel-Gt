@@ -10,31 +10,30 @@
   <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
 
   {{-- lugar donde esta --}}
-  <span>Usuarios</span>
+  <span>Marcas</span>
 </div>
-
 
 <div class="contenedor-admin-entidad">
 
  {{-- titulo --}}
  <div class="contenedor-admin-entidad-titulo-form-busqueda">
-    <div class="admin-entidad-titulo">Usuarios 
-     <a href="{{route('get_admin_users_crear')}}">
+    <div class="admin-entidad-titulo">Marcas 
+     <a href="{{route('get_admin_marcas_crear')}}">
       <span class="admin-user-boton-Crear">Crear 
        <span class="icon-add_circle_outline"></span> 
       </span>
      </a>  
     </div>
-    @include('admin.users.partes.buscador')
+    @include('admin.marcas.partes.buscador')
  </div>
  <div class="admin-contiene-entidades-y-pagination">
    <div class="admin-entidad-contenedor-entidades">
-     @foreach($users as $user)
-          @include('admin.users.partes.lista')
+     @foreach($marcas as $marca)
+          @include('admin.marcas.partes.lista')
      @endforeach
    </div>
    <div>
-     {!! $users->appends(Request::all())->render() !!}
+     {!! $marcas->appends(Request::all())->render() !!}
    </div>
  </div>
 

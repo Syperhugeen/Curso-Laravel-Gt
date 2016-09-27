@@ -27,8 +27,10 @@ abstract class BaseRepo
 
     public function getEntidadActivas()
     {
-      return $this->entidad->Active()->get();
+      return $this->entidad->where('estado','si');
     }
+
+    
 
 
      

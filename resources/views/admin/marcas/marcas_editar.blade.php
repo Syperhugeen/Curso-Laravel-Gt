@@ -10,24 +10,23 @@
   <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
 
   {{-- lugar atras --}}
-  <a href="{{route('get_admin_users')}}"><span>Usuarios</span></a>
+  <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
 
   {{-- separador --}}
   <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
 
   {{-- lugar donde esta --}}
-  <span>Editar Usuario: {{$user->name}}</span>
+  <span>Editar Marca: {{$marca->name}}</span>
 </div>
-
 
 <div class="contenedor-admin-entidad">
 
  {{-- titulo --}}
- <div class="admin-entidad-titulo">Editar Usuario {{$user->name}}
+ <div class="admin-entidad-titulo">Editar Marca {{$marca->name}}
  </div>
 
  {{-- formulario --}}
-  {!! Form::model($user,   ['route' => ['set_admin_users_editar',$user->id],
+  {!! Form::model($marca,   ['route' => ['set_admin_marcas_editar',$marca->id],
                             'method'=> 'patch',
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
@@ -38,7 +37,7 @@
       <div class="contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Identidad</div>
         <div class="contenedor-formulario-label-fiel">                       
-          @include('admin.users.formularios_partes.datos_user')
+         @include('admin.marcas.formularios_partes.datos_basicos')
         </div>
       </div>
 
@@ -46,7 +45,7 @@
       <div class="contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Estado y Rol</div>
         <div class="contenedor-formulario-label-fiel">                       
-          @include('admin.users.formularios_partes.datos_user_select')
+          @include('admin.marcas.formularios_partes.datos_imagenes')
         </div>
       </div>
 
@@ -55,7 +54,7 @@
       
    </div>
    <div class="admin-boton-editar">
-     Editar Usuario
+     Editar Marca
    </div> 
 
 

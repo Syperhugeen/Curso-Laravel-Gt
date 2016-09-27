@@ -32,4 +32,39 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+
+
+
+    //scoups
+    /**
+     * PAra busqueda por nombre
+     */
+    public function scopeName($query, $name)
+    {
+        //si el paramatre(campo busqueda) esta vacio ejecutamos el codigo
+        /// trim() se utiliza para eliminar los espacios.
+        ////Like se usa para busqueda incompletas
+        /////%% es para los espacios adelante y atras
+        if (trim($name) !="")
+        {                        
+           $query->where('name', "LIKE","%$name%"); 
+        }
+        
+    }
+    /**
+     * Busqueda por Rol formulario Admin
+     */
+    public function scopeRole($query, $role)
+    {
+        //los tipo de roles que estan en el archivo config option
+        $types = config('options.role');
+
+        if($role !="" && isset($types[$role]))
+        {
+            //                  "=" con elocuent no es necesario ponerlo
+            $query->where('role',$role);
+        }
+
+    }
 }

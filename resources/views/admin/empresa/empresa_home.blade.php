@@ -2,6 +2,16 @@
 
 @section('content')
 
+<div class="admin-contnedor-navegacion-miga">
+  {{-- home --}}
+  <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
+
+  {{-- separador --}}
+  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
+
+  {{-- lugar donde esta --}}
+  <span>Mi Empresa</span>
+</div>
 
 <div class="contenedor-admin-entidad">
 

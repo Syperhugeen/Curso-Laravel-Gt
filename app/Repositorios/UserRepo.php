@@ -19,9 +19,13 @@ class UserRepo extends BaseRepo
 
   //guetters/////////////////////////////////////////////////////////////////////
 
-  public function getUsersAll()
+  public function getUsersAll($request)
   {
-    return $this->getEntidad()->orderBy('id','desc')->paginate(100);
+    return $this->getEntidad()
+                ->name($request->get('name'))
+                ->role($request->get('role'))
+                ->orderBy('id','desc')
+                ->paginate(30);
   }
 
 

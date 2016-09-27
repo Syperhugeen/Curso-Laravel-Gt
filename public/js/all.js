@@ -4834,7 +4834,7 @@ function EventoDeGoogleAnalitics($Elemento,$Categoria,$Nombre,$Accion)
 
  
 //inicio chose en todos los selects
- $('select:not(.contenedor-estrellitas-select,#SuperCategoria_id,#Categoria_id,#SubCategoria_id,#Marca_id)').chosen({
+ $('select:not(.contenedor-estrellitas-select,.navbar-form,#SuperCategoria_id,#Categoria_id,#SubCategoria_id,#Marca_id)').chosen({
  width:"100%"}); //todos los select menos ese que indique
 
 

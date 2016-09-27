@@ -143,6 +143,7 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
 
         Styde\Html\HtmlServiceProvider::class,
         GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,

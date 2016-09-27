@@ -67,5 +67,8 @@
 
 
               .admin-boton-editar{
-                @include Boton-Normal($Color-Verde-Claro)
+                @include Boton-Normal($Color-Verde-MercadoLibre)
+              }
+              .admin-boton-editar:hover{
+                background-color: $Color-Verde-Claro;
               }

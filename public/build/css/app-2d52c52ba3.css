@@ -5805,7 +5805,7 @@ form {
   pointer-events: none; }
 
 #nprogress .bar {
-  background: #F6FCC7;
+  background: #468C00;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -9262,9 +9262,32 @@ body.avgrund-active {
 .admin-header {
   height: 50px;
   width: 100%;
-  background-color: #c2c2c2;
+  background-color: #FDF9F9;
   position: fixed;
-  top: 0; }
+  top: 0;
+  padding: 0 6px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border: solid 1px transparent;
+  border-bottom-color: #dfdfdf; }
+
+.admin-header-logo {
+  height: 36px;
+  width: 36px;
+  margin: 0 3px;
+  border-radius: 8px; }
+
+.admi-header-titulo {
+  font-size: 16px;
+  color: #999999;
+  margin-left: 5px; }
 
 .admin-contiene-columna-y-content {
   width: 90%;
@@ -9298,6 +9321,16 @@ body.avgrund-active {
   border-radius: 4px;
   border: solid 1px #EFEEEE;
   margin: 4px auto; }
+
+.admin-contnedor-navegacion-miga {
+  width: 100%;
+  padding: 6px 2px;
+  border-bottom: solid 1px #EFEEEE;
+  font-size: 14px;
+  margin-bottom: 12px; }
+
+.spam-separador {
+  margin: 0 2px; }
 
 .admin-columna-contenedor {
   width: 200px;
@@ -9358,9 +9391,66 @@ body.avgrund-active {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+.contenedor-admin-entidad-titulo-form-busqueda {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  padding: 5px 2px;
+  border-bottom: solid 1px #EFEEEE; }
+
 .admin-entidad-titulo {
-  font-size: 24px;
-  margin-bottom: 15px; }
+  font-size: 24px; }
+
+.admin-entidad-buscador-contenedor {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.admin-contiene-entidades-y-pagination {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.admin-entidad-contenedor-entidades {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 4px; }
 
 .admin-user-boton-Crear {
   background-color: #c2c2c2;
@@ -9373,6 +9463,9 @@ body.avgrund-active {
   display: table;
   cursor: pointer;
   display: inline-block; }
+
+.admin-user-boton-Crear:hover {
+  background-color: #468C00; }
 
 .admin-user-lista-contenedor {
   padding: 4px;
@@ -9454,6 +9547,44 @@ body.avgrund-active {
 
 .boton-acciones-editar:hover {
   background-color: #006621; }
+
+.admin-marca-lista-contenedor {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 4px;
+  border: solid 1px #EFEEEE;
+  width: 250px; }
+
+.admin-marca-lista-contenedor:hover {
+  border-color: #dfdfdf; }
+
+.admin-marca-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 4px; }
+
+.admin-marca-contnedor-datos {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%; }
 
 .formulario-contenedor {
   display: -moz-flex;
@@ -9541,7 +9672,7 @@ body.avgrund-active {
   width: 380px; }
 
 .admin-boton-editar {
-  background-color: #03BA3D;
+  background-color: #468C00;
   color: white;
   padding: 10px 14px;
   font-size: 20px;
@@ -9550,6 +9681,9 @@ body.avgrund-active {
   margin: 15px auto;
   display: table;
   cursor: pointer; }
+
+.admin-boton-editar:hover {
+  background-color: #03BA3D; }
 
 .contendor-errores-header {
   display: -moz-flex;

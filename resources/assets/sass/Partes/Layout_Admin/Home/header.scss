@@ -1,7 +1,28 @@
 .admin-header{
   height: 50px;
   width: 100%;
-  background-color:$Color-Corporativo-1;
+  background-color:$Color-Gris-CasiBlanco;
   position:fixed;
-  top:0;  
-}
+  top:0; 
+  padding: 0 6px; 
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row); 
+  border:solid 1px transparent;
+  border-bottom-color: $Color-Gris-Claro-Para-Bordes; 
+}  
+
+  .admin-header-logo{
+    height: 36px;
+    width: 36px;
+    margin:0 3px;
+    border-radius: 8px;
+  }
+
+  .admi-header-titulo{
+    font-size: 16px;
+    color: $Color-texto-gris-Mercadolibre;
+    margin-left: 5px;
+    
+
+  }

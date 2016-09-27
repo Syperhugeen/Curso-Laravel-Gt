@@ -23,9 +23,9 @@ class Admin_Users_Controllers extends Controller
   }
 
   //home admin User
-  public function get_admin_users()
+  public function get_admin_users(Request $Request)
   { 
-    $users = $this->UserRepo->getUsersAll();
+    $users = $this->UserRepo->getUsersAll($Request);
 
 
 
