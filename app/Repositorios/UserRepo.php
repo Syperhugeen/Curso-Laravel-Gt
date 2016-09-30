@@ -58,6 +58,37 @@ class UserRepo extends BaseRepo
 
   }
 
+  public function setUserRegistro($request)
+  {
+   
+    $user                       = $this->getEntidad();
+    $user->role                 = 'user';
+    $user->envio_publicidad     = 'si';
+    $user->estado               = 'si';
+
+    //propiedades para crear
+    $Propiedades = ['name','email','telefono','password'];
+
+    $this->setEntidadDato($user,$request,$Propiedades);
+    
+    $user->save();
+
+    //Encripto la contraseña
+    $user->password = bcrypt($user->password);
+
+    //Genero el Token ( campo en la Table User)
+    $user->registration_token = str_random(40);
+
+    $user->save();
+
+    $url = route('confirmation' , [ 'token' => $user->registration_token ]);
+
+    //envio Correo usuario
+    $this->EmailsRepo()->EnviarEmailDeConfirmacion($user);
+
+    return $user;
+  }
+  
 
   
 }

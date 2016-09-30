@@ -6,6 +6,8 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Repositorios\UserRepo;
+use App\Managers\Users\user_registro;
 
 class AuthController extends Controller
 {
@@ -22,13 +24,16 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers;
 
+    protected $UserRepo;
+
     /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(UserRepo $UserRepo)
     {
+        $this->UserRepo   = $UserRepo;
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
@@ -60,5 +65,33 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postRegister(Request $request)
+    {
+
+        $user    = $this->UserRepo->getEntidad();
+        $manager = new user_registro($user,$request->all());
+
+        //verifica si paso la validación o no
+        if ($manager->isValid())
+        {
+         //me traigo la funcion del repositorio UserRepo y ya Hago el Login de ese Usuario   
+         Auth::login($this->UserRepo->CreoUsuarioNuevo($request)); 
+
+         return redirect()->route('home')
+                          ->with('alert' , $user->name . ' Ve a tu Email: ' . $user->email .' y verifica tu cuenta');      
+        }  
+
+        
+        return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     }
 }

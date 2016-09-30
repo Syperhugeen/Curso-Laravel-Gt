@@ -6,3 +6,8 @@ require __DIR__ . '/Users/Rutas_Users.php';
 
 require __DIR__ . '/Marcas/Rutas_Marcas.php';
 
+Route::get('/' , [
+                    
+                    'uses' => 'Admin\AdminController@index',
+                    'as'   => 'home']
+          );

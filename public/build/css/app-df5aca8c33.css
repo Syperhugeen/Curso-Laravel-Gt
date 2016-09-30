@@ -9685,6 +9685,109 @@ body.avgrund-active {
 .admin-boton-editar:hover {
   background-color: #03BA3D; }
 
+.user-layout-contenedor {
+  margin-top: 50px;
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+.Auth-contenedor {
+  width: 80%;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.Auth-titulo {
+  font-size: 22px;
+  padding: 6px;
+  border-bottom: solid 1px #EFEEEE; }
+
+.Auth-form {
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+  width: 450px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #FDF9F9;
+  border: solid 1px #dfdfdf; }
+
+.Auth-form-contiene-label-input {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 4px 4px 10px 4px;
+  border-radius: 3px;
+  margin-top: 8px;
+  width: 100%; }
+
+.Auth-form-contiene-label {
+  padding: 2px 0px;
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 2px; }
+
+.Auth-form-contiene-input {
+  font-size: 20px;
+  width: 100%;
+  padding: 6px;
+  border-radius: 3px;
+  border: solid 1px #EFEEEE; }
+
+.Auth-olvidastes-password {
+  margin-top: 10px; }
+
+.Auth-bottom {
+  background-color: #468C00;
+  color: white;
+  padding: 10px 14px;
+  font-size: 20px;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  margin: 15px auto;
+  display: table;
+  cursor: pointer; }
+
+.Auth-bottom:hover {
+  background-color: #006621; }
+
+.Auth-olvidastes-password-contendor {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
 .contendor-errores-header {
   display: -moz-flex;
   display: -ms-flexbox;

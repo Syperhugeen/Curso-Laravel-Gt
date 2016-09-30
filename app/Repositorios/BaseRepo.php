@@ -3,6 +3,7 @@ namespace App\Repositorios;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use App\Repositorios\Emails\EmailsRepo;
 
 /**
 * Contiene metodos comunes para todo los repositorios
@@ -13,10 +14,12 @@ abstract class BaseRepo
      * entidad que ingresamos por parametro
      */
     protected $entidad;
+    protected $EmailsRepo;
 
-    public function __construct()
+    public function __construct(EmailsRepo $EmailsRepo)
     {
-      $this->entidad = $this->getEntidad();
+      $this->EmailsRepo   = $EmailsRepo; 
+      $this->entidad      = $this->getEntidad();
     }
 
 
