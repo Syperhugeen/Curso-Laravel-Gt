@@ -1,0 +1,94 @@
+.Default-header{  
+  width: 100%;
+  background-color:$Color-Gris-CasiBlanco;
+  position:fixed;
+  height: 60px;
+  top:0; 
+  padding: 20px 0;   
+  border:solid 1px transparent;
+  border-bottom-color: $Color-Gris-Claro-Para-Bordes; 
+  background-color:$institucional4 ;
+  @include flexbox; 
+  @include flex-direction(row);
+  @include align-items(center);
+  z-index: 999;  
+}  
+
+  .Default-header-logo{
+    height: 36px;
+    width: 36px;
+    margin:0 3px;
+    border-radius: 8px;
+  }
+
+  .Default-header-titulo{
+    font-size: 16px;
+    color: $Color-texto-gris-Mercadolibre;
+    margin-left: 5px;
+  }
+
+
+  .nav-links{
+    padding: 4px;
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(row);
+    border-radius: 4px;
+   
+  }
+
+    ul.nav-links>a>li{
+      padding:10px;
+      color: $institucional1;
+      border-radius: 4px; 
+    }
+    ul.nav-links>a>li:hover{
+      color: $institucional3;
+      background-color: $institucional1;
+    }
+
+
+
+
+    .nav-derecha-iconos{
+      padding: 4px; 
+      border-radius:4px;
+      font-size: 22px;
+      color:$Color-Gris-Plata;
+      border: solid 1px $Color-Gris-Claro-Para-Bordes;
+    }
+
+
+
+
+
+
+ /* media querys  */
+@media (min-width: $BrackPoint-Primario) { 
+
+
+}
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario) { 
+
+.Default-header{
+  height: 80px;
+ }
+}
+
+
+@media (min-width:$BrackPoint-Tercer) { 
+ .Default-header{
+  height: 120px;
+  border-bottom: solid 3px $institucional5; 
+ }
+
+}
+
+
+@media (min-width:$BrackPoint-Cuarto) { }

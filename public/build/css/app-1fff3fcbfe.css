@@ -9259,6 +9259,185 @@ body.avgrund-active {
   font-size: 14px;
   line-height: 16px; }
 
+/**
+ * bxSlider v4.2.5
+ * Copyright 2013-2015 Steven Wanderski
+ * Written while drinking Belgian ales and listening to jazz
+
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+/** VARIABLES 
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y; }
+
+.bx-wrapper img {
+  max-width: 100%;
+  display: block; }
+
+.bxslider {
+  margin: 0;
+  padding: 0; }
+
+ul.bxslider {
+  list-style: none; }
+
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0); }
+
+/** THEME
+===================================*/
+.bx-wrapper {
+  box-shadow: 0 0 5px #ccc;
+  border: 5px solid #fff;
+  background: #fff; }
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%; }
+
+/* LOADER */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url("images/bx_loader.gif") center center no-repeat #ffffff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000; }
+
+/* PAGER */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px; }
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  border-radius: 5px; }
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #000; }
+
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline; }
+
+.bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0; }
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url("images/controls.png") no-repeat 0 -32px; }
+
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  background-position: 0 0; }
+
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url("images/controls.png") no-repeat -43px -32px; }
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: -43px 0; }
+
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999; }
+
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none; }
+
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+  text-align: center; }
+
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url("images/controls.png") -86px -11px no-repeat;
+  margin: 0 3px; }
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+  background-position: -86px 0; }
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url("images/controls.png") -86px -44px no-repeat;
+  margin: 0 3px; }
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus {
+  background-position: -86px -33px; }
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%; }
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px; }
+
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%; }
+
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px; }
+
 .admin-header {
   height: 50px;
   width: 100%;
@@ -9491,7 +9670,7 @@ body.avgrund-active {
   font-size: 20px;
   color: #999999;
   padding: 3px;
-  width: 30px;
+  min-width: 30px;
   text-align: center; }
 
 .admin-user-contenedor-datos {
@@ -9685,8 +9864,12 @@ body.avgrund-active {
 .admin-boton-editar:hover {
   background-color: #03BA3D; }
 
+/* la parte de lista de img se usa mucho codigo de user lista y aca esta algunas clases que modifique */
+.img-home-lista-contenedor {
+  height: 40px; }
+
 .user-layout-contenedor {
-  margin-top: 50px;
+  margin-top: 61px;
   width: 100%;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -9697,6 +9880,162 @@ body.avgrund-active {
   -ms-flex-align: center;
   -moz-align-items: center;
   align-items: center; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between; }
+
+/* media querys  */
+@media (min-width: 630px) {
+  .user-layout-contenedor {
+    margin-top: 81px; } }
+
+@media (min-width: 1000px) {
+  .user-layout-contenedor {
+    margin-top: 121px; } }
+
+.Default-header {
+  width: 100%;
+  background-color: #FDF9F9;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  padding: 20px 0;
+  border: solid 1px transparent;
+  border-bottom-color: #dfdfdf;
+  background-color: #f1f1f1;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  z-index: 999; }
+
+.Default-header-logo {
+  height: 36px;
+  width: 36px;
+  margin: 0 3px;
+  border-radius: 8px; }
+
+.Default-header-titulo {
+  font-size: 16px;
+  color: #999999;
+  margin-left: 5px; }
+
+.nav-links {
+  padding: 4px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-radius: 4px; }
+
+ul.nav-links > a > li {
+  padding: 10px;
+  color: #3b3b3b;
+  border-radius: 4px; }
+
+ul.nav-links > a > li:hover {
+  color: orange;
+  background-color: #3b3b3b; }
+
+.nav-derecha-iconos {
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 22px;
+  color: #c2c2c2;
+  border: solid 1px #dfdfdf; }
+
+/* media querys  */
+@media (min-width: 630px) {
+  .Default-header {
+    height: 80px; } }
+
+@media (min-width: 1000px) {
+  .Default-header {
+    height: 120px;
+    border-bottom: solid 3px #2045FF; } }
+
+.footer-contenedor {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #f1f1f1; }
+
+.wrapper-footer {
+  width: 80%;
+  margin: 0 auto;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.footer-outer-box {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -ms-flex-pack: distribute;
+  -moz-justify-content: space-around;
+  justify-content: space-around; }
+
+.footer-inner-box {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 250px;
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 4px; }
+
+.footer-inner-box-p {
+  font-size: 12px;
+  padding: 4px;
+  color: #999999; }
+
+.footer-inner-box-simbionte {
+  padding: 6px;
+  text-align: center;
+  font-size: 12px;
+  border-top: solid 1px #EFEEEE;
+  width: 100%;
+  color: #999999; }
 
 .Auth-contenedor {
   width: 80%;

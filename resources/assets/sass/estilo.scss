@@ -19,6 +19,7 @@
 @import "resources/assets/sass/Helpers/Plug-EasyAutoComplete";
 @import "resources/assets/sass/Helpers/ClasesParaCartelitosHover";
 @import "resources/assets/sass/Helpers/Botones";
+@import "resources/assets/sass/Helpers/Plug-bxSlider";
 //@import "resources/assets/sass/Helpers/font-amazing";
 
 //Layout_Admin
@@ -30,10 +31,13 @@
 @import "resources/assets/sass/Partes/Layout_Admin/Home_Entidades/Users";
 @import "resources/assets/sass/Partes/Layout_Admin/Home_Entidades/marcas";
 @import "resources/assets/sass/Partes/Layout_Admin/formularios/formulario_estilos";
+@import "resources/assets/sass/Partes/Layout_Admin/Home_Entidades/home";
 
 
 //Layout_User
 @import "resources/assets/sass/Partes/Layout_User/layout_user_general";
+@import "resources/assets/sass/Partes/Layout_User/navbar/navbar-general";
+@import "resources/assets/sass/Partes/Layout_User/footer/footer-general";
 
 
 //Auth

@@ -41,7 +41,7 @@
  <div class="contenedor-Auth">
           
           {!! Form::open( ['route' => 'auth_login_post',
-                            'method'   => 'Post',
+                            'method'   => 'post',
                             'files'    => true,
                             'class'    => 'Auth-form',
                             'id'       => 'Form-LogIn'

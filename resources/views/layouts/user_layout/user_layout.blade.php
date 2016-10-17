@@ -15,14 +15,14 @@
   <body>
 
    @include('layouts.user_layout.header.global')
+
    <div class="user-layout-contenedor">
-      
-     
-        @yield('content')
-      
-      
+        @yield('content')  
    </div>
+
+   @include('layouts.user_layout.footer.footer-general')
+   
       <!-- Scripts -->
       <script src="{{ asset('js/all.js')}}"></script>    
   </body>
-</html>
+</html>   

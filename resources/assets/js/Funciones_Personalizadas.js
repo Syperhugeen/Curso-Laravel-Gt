@@ -9,7 +9,7 @@ function DispararForm($ElementoQueDispara,$FormADisparar)
    // Show the progress bar 
    NProgress.start();
 
-   var form  = $FormADisparar;  
+   var form  = $FormADisparar ;  
    form.submit();
   });
 }

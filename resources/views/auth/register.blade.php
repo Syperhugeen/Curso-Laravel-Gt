@@ -14,9 +14,12 @@
 @stop
 
 
-
+ 
 
 @section('content')
+
+<div class="Auth-contenedor">
+
 {{-- ejemplo para la bavehacion --}}
 <div class="admin-contnedor-navegacion-miga">
   {{-- home --}}
@@ -29,120 +32,45 @@
   <span>Registro</span>
 </div>
 
+ <h1 class="Auth-titulo">
+             <span class="icon-account_box"></span> 
+              Crear Cuenta
+ </h1>
+
  <div class="contenedor-Auth">
-
-     
-
-
-
           
           {!! Form::open( ['route' => 'register_post',
                             'method'   => 'Post',
                             'files'    => true,
-                            'class'    => 'Form-Auth',
+                            'class'    => 'Auth-form',
                             'id'       => 'Form-Registro'
                             ])               !!}
 
           
+           <div class="Auth-form-contiene-label-input">
+            {!! Form::label('name', 'Nombre y apellido', array('class' => 'Auth-form-contiene-label')) !!}
+            {!! Form::text('name', null ,['class' => 'Auth-form-contiene-input']) !!}
+           </div>
 
-            <h1 class="Titulo-Auth">
-             <span class="icon-account_box"></span>Crear Cuenta</h1>
+           <div class="Auth-form-contiene-label-input">
+            {!! Form::label('email', 'Email', array('class' => 'Auth-form-contiene-label')) !!}
+            {!! Form::text('email', null ,['class' => 'Auth-form-contiene-input']) !!}
+           </div>
 
-             <div class="Auth-Field-Contenedor">
-              <label class="Auth-Field-Contenedor-Label">Nombre y Apellido</label>
-              <input class="Auth-Field-Contenedor-Label-Input"  
-                          type="text"
-                          name="name" 
-                         value="{{ Input::old('name') }}"
-                      required="required"
-                  data-pattern="name_register"
-            data-empty-message="Ingresa Tu Nombre y Apellido"
-            data-error-message="Ingresa Tu Nombre y Apellido Validos."
-                   placeholder="Ej: Pedro Martinez">
-             </div>
-             <div class="Auth-Field-Contenedor">
-              <label class="Auth-Field-Contenedor-Label">Email</label>
-              <input class="Auth-Field-Contenedor-Label-Input"  
-                          type="email"
-                          name="email"
-                            id="register-email" 
-                         value="{{ Input::old('email') }}"
-                      required="required"
-                  data-pattern="email"
-            data-empty-message="Ingresa Tu Email."
-            data-error-message="Ingresa un Email Valido."
-                   placeholder="Escribe Tu Email">
-             </div>
-             
-             <div class="Auth-Field-Contenedor">
-              <label class="Auth-Field-Contenedor-Label">Celular</label>
-              <input class="Auth-Field-Contenedor-Label-Input"  
-                          type="text"
-                          name="celular" 
-                         value="{{ Input::old('celular') }}"
-                      required="required"
-                     maxlength="9"
-                  data-pattern="cel"
-            data-empty-message="Dinos Cual es Tu Celular"
-            data-error-message="Ingresa un numero valido"
-                   placeholder="Escribe Tu Celular">
-             </div>
+           <div class="Auth-form-contiene-label-input">
+            {!! Form::label('telefono', 'Celular/Telefono', array('class' => 'Auth-form-contiene-label')) !!}
+            {!! Form::text('telefono', null ,['class' => 'Auth-form-contiene-input']) !!}
+           </div>
 
-             <div class="Auth-Field-Contenedor">
-              <label class="Auth-Field-Contenedor-Label">Contraseña</label>
-              <input class="Auth-Field-Contenedor-Label-Input"  
-                          type="password"
-                          name="password"
-                            id="register-password" 
-                         value="{{ Input::old('password') }}"
-                      required="required"
-                  data-pattern="calle"
-            data-empty-message="Debes Escribe una Contraseña"
-            data-error-message="Escribe una Contraseña valida"
-                   placeholder="Escribe una Contraseña">
-             </div>
-
-             
-             <div class="Auth-Field-Contenedor">
-              
-              <label class="Auth-Field-Contenedor-Label">Razon Social
-              <span class="Auth-Field-Contenedor-Label-Span" >(Si no eres empresa Salteate esto)</span>
-              </label>
-              
-             
-              <input class="Auth-Field-Contenedor-Label-Input"  
-                          type="text"
-                          name="Razon_Social" 
-                         value="{{ Input::old('Razon_Social') }}"
-                  data-pattern="calle"
-            
-            data-error-message="Escribe una Contraseña valida"
-                   placeholder="Escribe la razon social de tu empresa">
-             </div>
-             <div class="Auth-Field-Contenedor">
-             <label class="Auth-Field-Contenedor-Label">Rut
-              <span class="Auth-Field-Contenedor-Label-Span" >(Si no eres empresa Salteate esto)</span>
-              </label>
-              
-              <input class="Auth-Field-Contenedor-Label-Input"  
-                          type="text"
-                          name="Rut" 
-                         value="{{ Input::old('Rut') }}"
-              
-            
-            data-error-message="Escribe el Rut sin espacio, puntos. Solo Numeros."
-                   placeholder="Escribe tu Rut">
-             </div>
+           <div class="Auth-form-contiene-label-input">
+            {!! Form::label('password', 'Contraseña', array('class' => 'Auth-form-contiene-label')) !!}
+            {!! Form::password('password', ['class' => 'Auth-form-contiene-input']) !!}
+           </div>
            
-           
-                <input type="submit" class="boton-inicio_sesion" value="Crear Cuenta" style="margin-right: 15px;">
-               
-
-                
-              
+            <input type="submit" class="Auth-bottom" value="Crear Cuenta" >
 
           {!! Form::close() !!}
   </div>
-     
+</div>     
 
 @stop

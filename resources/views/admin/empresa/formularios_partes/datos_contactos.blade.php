@@ -4,6 +4,16 @@
 </div>
 
 <div class="formulario-label-fiel">
+  {!! Form::label('celular', 'Celular', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('celular', null ,['class' => 'formulario-field']) !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('email', 'Email', array('class' => 'formulario-label ')) !!}
+  {!! Form::text('email', null ,['class' => 'formulario-field']) !!}
+</div>
+
+<div class="formulario-label-fiel">
   {!! Form::label('direccion', 'Dirección', array('class' => 'formulario-label ')) !!}
   {!! Form::text('direccion', null ,['class' => 'formulario-field'
 

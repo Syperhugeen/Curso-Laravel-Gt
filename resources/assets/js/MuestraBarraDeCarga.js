@@ -19,7 +19,7 @@
 
 
 //todos los elementos a menos los siguientes
- $('body').on('click','a:not(.chosen-single,.avgrund-close)',function(){
+ $('body').on('click','a:not(.chosen-single,.avgrund-close,.bx-pager-link)',function(){
  NProgress.start();
 });
 

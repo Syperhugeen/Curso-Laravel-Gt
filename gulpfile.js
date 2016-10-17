@@ -25,6 +25,7 @@ elixir(function(mix) {
         'Plug-jquery.tooltip.min.js',
         'Plug-barraprogreso.js',
         'Plug-rating-plugin.js',
+        'Plug-bxSlider.js',
         'inicio.js',
         'Funciones_Personalizadas.js',
         'googleAnaliticsEventosFunciones.js',
@@ -62,6 +63,6 @@ elixir(function(mix) {
         'Plug-Scroll-Too.js',
         'botonItArriva.js',
         'Disparador_De_Form.js',
-
+        'mis-sliders.js',
         'fin.js']);
 });

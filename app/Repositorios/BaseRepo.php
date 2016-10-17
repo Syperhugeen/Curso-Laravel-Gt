@@ -28,9 +28,15 @@ abstract class BaseRepo
       return $this->entidad->find($id);
     }
 
+     public function destroy($id)
+    {
+      $entidad_a_borrar = $this->entidad->find($id);
+      $entidad_a_borrar->destroy();
+    }
+
     public function getEntidadActivas()
     {
-      return $this->entidad->where('estado','si');
+      return $this->entidad->where('estado','si')->get();
     }
 
     
