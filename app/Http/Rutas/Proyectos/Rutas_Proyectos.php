@@ -1,0 +1,34 @@
+<?php 
+
+Route::get('get_admin_proyectos',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@get_admin_proyectos',
+  'as'    => 'get_admin_proyectos'
+]);
+
+
+Route::get('get_admin_proyectos_crear',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@get_admin_proyectos_crear',
+  'as'    => 'get_admin_proyectos_crear'
+]);
+
+
+
+Route::post('set_admin_proyectos_crear',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@set_admin_proyectos_crear',
+  'as'    => 'set_admin_proyectos_crear'
+]);
+
+Route::get('get_admin_proyectos_editar/{id}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@get_admin_proyectos_editar',
+  'as'    => 'get_admin_proyectos_editar'
+]);
+
+Route::patch('set_admin_proyectos_editar/{id}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@set_admin_proyectos_editar',
+  'as'    => 'set_admin_proyectos_editar'
+]);

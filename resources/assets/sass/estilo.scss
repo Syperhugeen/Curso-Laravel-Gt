@@ -20,6 +20,9 @@
 @import "resources/assets/sass/Helpers/ClasesParaCartelitosHover";
 @import "resources/assets/sass/Helpers/Botones";
 @import "resources/assets/sass/Helpers/Plug-bxSlider";
+@import "resources/assets/sass/Helpers/Wrappers";
+@import "resources/assets/sass/Helpers/GlobalText";
+@import "resources/assets/sass/Helpers/RecetsSimbionte";
 //@import "resources/assets/sass/Helpers/font-amazing";
 
 //Layout_Admin
@@ -38,6 +41,10 @@
 @import "resources/assets/sass/Partes/Layout_User/layout_user_general";
 @import "resources/assets/sass/Partes/Layout_User/navbar/navbar-general";
 @import "resources/assets/sass/Partes/Layout_User/footer/footer-general";
+
+
+//home
+@import "resources/assets/sass/Partes/Home/home_general";
 
 
 //Auth

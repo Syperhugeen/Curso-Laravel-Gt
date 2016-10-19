@@ -1,4 +1,23 @@
 @charset "UTF-8";
+/* C O L O R S */
+/*no recuerdo la sintaxis, pero esto sería para establecer
+qué color es "color-1" y cuál es "color-2", etc.*/
+/*para textos*/
+/*gris más claro (párrafos y otras cosas)*/
+/*gris medio (títulos por ej.)*/
+/*gris más oscuro (backgrounds por ej.)*/
+/*básicos*/
+/* (se usará en cada sección de fondo blanco, pero usaremos este
+ en lugar de "white" por si decidimos cambiarlo más adelante) */
+/* (lo mismo que el blanco) */
+/*institucionales*/
+/*en este caso coincide con los grises nuestros*/
+/* (se usará principalmente para links de la nav-bar [no-hover]) */
+/*en este caso coincide con los grises nuestros*/
+/* (se usará para complementar a los dos principales, para que
+ no sean tan "empalagosos", alternando, ofreciendo algo diferente
+ con que hacer destacar ciertas cosas como links:hover o elementos
+ de diseño puntuales. No se abusará de este color tanto */
 /* /////////////Links, Titulos, Descripciones///////////////// */
 /*color para el contador de caracteres*/
 /*color para el head de los iconos*/
@@ -9438,6 +9457,49 @@ ul.bxslider {
   font-size: .85em;
   padding: 10px; }
 
+/* W R A P P E R S */
+/*este código habría que adentro de cada sección
+tener en cuenta que los elementos de 100%width como la navbar tienen 
+que ir por fuera de este div*/
+.content-wrapper {
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 80%;
+  max-width: 978px; }
+
+/*este engloba absolutamente todo el body, por ahora sin reglas*/
+.global-wrapper {
+  display: block; }
+
+/* G L O B A L   T E X T */
+p {
+  color: #b3b3b3;
+  text-decoration: none;
+  cursor: default;
+  text-align: justify; }
+
+h1 {
+  /*para título único por página*/
+  color: white; }
+
+h2 {
+  /*para títulos de las dif. secciones de cada página*/
+  color: #b3b3b3; }
+
+h3 {
+  /*para títulos de cada bloque de párrafo*/
+  color: #858585; }
+
+h4 {
+  /*para párrafos cortos de alta relevancia*/
+  color: #858585; }
+
+/* R E S E T S */
+/*acá vamos a poner los resets que nos parezcan mandatorios para
+absolutamente todos nuestros proyectos*/
+body {
+  background-color: white; }
+
 .admin-header {
   height: 50px;
   width: 100%;
@@ -9458,8 +9520,7 @@ ul.bxslider {
   border-bottom-color: #dfdfdf; }
 
 .admin-header-logo {
-  height: 36px;
-  width: 36px;
+  height: 37px;
   margin: 0 3px;
   border-radius: 8px; }
 
@@ -9587,8 +9648,39 @@ ul.bxslider {
   padding: 5px 2px;
   border-bottom: solid 1px #EFEEEE; }
 
+.contenedor-img-titulo {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 3px 0px; }
+
+.admin-entidad-img {
+  height: 40px; }
+
 .admin-entidad-titulo {
-  font-size: 24px; }
+  font-size: 24px;
+  margin-left: 5px; }
+
+.boton-subir-img {
+  background-color: #468C00;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: arial;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  margin: 15px auto;
+  display: table;
+  cursor: pointer; }
+
+.boton-subir-img:hover {
+  background-color: #03BA3D; }
 
 .admin-entidad-buscador-contenedor {
   display: -moz-flex;
@@ -9906,6 +9998,145 @@ ul.bxslider {
   .user-layout-contenedor {
     margin-top: 121px; } }
 
+.navbar {
+  border-bottom: 5px solid #DCB13F;
+  border-radius: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+@media (max-width: 399px) {
+  .navbar {
+    display: block; } }
+
+/*--- COLORES NAVBAR Y LINKS ---*/
+.navbar-default {
+  background-color: #858585;
+  border-color: #4a9fff; }
+
+.navbar-logo {
+  height: 80px; }
+
+.navbar-default .navbar-text {
+  color: #b3b3b3; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #b3b3b3; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #b3b3b3;
+  background-color: #4a9fff; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #4a9fff;
+  text-shadow: 0 0 5px #4a9fff, 0 0 10px #4a9fff;
+  background-color: #3b5f73; }
+
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: grey;
+  background-color: transparent; }
+
+.navbar-default .navbar-toggle {
+  border-color: #b3b3b3; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #b3b3b3; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #b3b3b3; }
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #4a9fff; }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #b3b3b3; }
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #858585;
+  background-color: #b3b3b3; }
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #b3b3b3; }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #858585;
+    background-color: #b3b3b3; }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #4a9fff;
+    background-color: transparent; }
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: grey;
+    background-color: transparent; } }
+
+.navbar-default .navbar-link {
+  color: #b3b3b3; }
+
+.navbar-default .navbar-link:hover {
+  color: #858585;
+  background-color: #4a9fff; }
+
+.navbar-default .btn-link {
+  color: #b3b3b3; }
+
+.navbar-default .btn-link:hover,
+.navbar-default .btn-link:focus {
+  color: #4a9fff; }
+
+.dropdown-menu {
+  background-color: #858585;
+  margin: 0px 0 0;
+  border: 0px solid #b3b3b3; }
+
+.dropdown-menu .divider {
+  background-color: #4a9fff; }
+
+.dropdown-menu > li > a {
+  color: #b3b3b3; }
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #858585;
+  background-color: #4a9fff; }
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #b3b3b3;
+  background-color: transparent; }
+
+.navbar-default .navbar-brand {
+  float: left;
+  height: 120px;
+  padding: 16px 20px 10px 20px;
+  color: #b3b3b3; }
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  text-decoration: none;
+  color: #4a9fff; }
+
+@media (min-width: 768px) and (max-width: 850px) {
+  .navbar-default .navbar-brand {
+    padding: 16px 0px 10px 0px; } }
+
+@media (min-width: 980px) and (max-width: 1000px) {
+  .navbar-default .navbar-brand {
+    padding: 16px 0px 10px 0px; } }
+
 .Default-header {
   width: 100%;
   background-color: #FDF9F9;
@@ -10036,6 +10267,28 @@ ul.nav-links > a > li:hover {
   border-top: solid 1px #EFEEEE;
   width: 100%;
   color: #999999; }
+
+.home-header {
+  background-color: #b3b3b3;
+  background-image: url(../../imagenes/Img/header01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%; }
+
+.home-box {
+  border-left: 5px solid #b3b3b3;
+  text-align: justify-left; }
+
+.globito {
+  width: 100px;
+  height: 100px;
+  background-color: #4a9fff;
+  color: white;
+  transition: all 0.3s ease-in-out 0s; }
+
+.globito:hover {
+  transform: scaleX(1.2); }
 
 .Auth-contenedor {
   width: 80%;

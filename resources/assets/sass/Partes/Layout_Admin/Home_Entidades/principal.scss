@@ -18,9 +18,30 @@
 
  }
 
+  .contenedor-img-titulo{
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(row);
+    padding: 3px 0px;
+  }
+
+   .admin-entidad-img{
+    height: 40px;
+   }
+
    .admin-entidad-titulo{
     font-size: 24px;
+    margin-left: 5px;
     
+   }
+
+   .boton-subir-img{
+    @include Boton-Chico($Color-Verde-MercadoLibre);
+    margin: 0 ;
+   }
+
+   .boton-subir-img:hover{
+    background-color:$Color-Verde-Claro ;
    }
 
    .admin-entidad-buscador-contenedor{

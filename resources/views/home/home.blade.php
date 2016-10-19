@@ -19,9 +19,19 @@
 @section('content')
 
  {{-- imagenes en grande --}}
- @include('home.partes.slideImg')
+ @include('home.partes.imagen_de_portada')
 
- {{-- imagenes en grande --}}
- @include('home.partes.bloqueDatos')
+ <!--para agregar los márgenes laterales-->
+ <div class="content-wrapper">
+
+
+     {{-- imagenes en grande --}}
+     @include('home.partes.datos_bienvenida')
+
+     {{-- imagenes en grande --}}
+     @include('home.partes.globitos')
+
+
+ </div>
 
 @stop

@@ -1,0 +1,19 @@
+/* G L O B A L   T E X T */
+p {
+  color:$color-grey1;
+  text-decoration: none;
+  cursor:default;
+  text-align:justify;
+}
+h1 { /*para título único por página*/
+color:$color-white;
+}
+h2 { /*para títulos de las dif. secciones de cada página*/
+color:$color-grey1;
+}
+h3 { /*para títulos de cada bloque de párrafo*/
+color:$color-grey2;
+}
+h4 { /*para párrafos cortos de alta relevancia*/
+color:$color-grey2;
+}

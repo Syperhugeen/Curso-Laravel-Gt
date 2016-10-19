@@ -1,3 +1,49 @@
+/* C O L O R S */
+
+/*no recuerdo la sintaxis, pero esto sería para establecer
+qué color es "color-1" y cuál es "color-2", etc.*/
+
+/*para textos*/
+
+$color-grey1:#b3b3b3; /*gris más claro (párrafos y otras cosas)*/
+$color-grey2:#858585; /*gris medio (títulos por ej.)*/
+$color-grey3:#3b3b3b; /*gris más oscuro (backgrounds por ej.)*/
+
+/*básicos*/
+
+$color-white:white;
+ /* (se usará en cada sección de fondo blanco, pero usaremos este
+ en lugar de "white" por si decidimos cambiarlo más adelante) */
+
+$color-black:black;
+ /* (lo mismo que el blanco) */
+
+/*institucionales*/
+
+$color-1:#b3b3b3; /*en este caso coincide con los grises nuestros*/
+ /* (se usará principalmente para links de la nav-bar [no-hover]) */
+
+$color-2:#858585; /*en este caso coincide con los grises nuestros*/
+
+$color-3:#4a9fff;
+ /* (se usará para complementar a los dos principales, para que
+ no sean tan "empalagosos", alternando, ofreciendo algo diferente
+ con que hacer destacar ciertas cosas como links:hover o elementos
+ de diseño puntuales. No se abusará de este color tanto */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $Color-Corporativo-1:#c2c2c2;
 $Color-Corporativo-2:#c2c2c2;
 $Color-Corporativo-3:#c2c2c2;

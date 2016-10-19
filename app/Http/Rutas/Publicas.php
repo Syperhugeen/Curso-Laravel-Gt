@@ -8,6 +8,8 @@ require __DIR__ . '/Marcas/Rutas_Marcas.php';
 
 require __DIR__ . '/Home/Rutas_Home.php';
 
+require __DIR__ . '/Proyectos/Rutas_Proyectos.php';
+
 
 
 //Ruta de Home
