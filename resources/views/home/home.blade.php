@@ -25,10 +25,10 @@
  <div class="content-wrapper">
 
 
-     {{-- imagenes en grande --}}
+    
      @include('home.partes.datos_bienvenida')
 
-     {{-- imagenes en grande --}}
+     
      @include('home.partes.globitos')
 
 
