@@ -9494,12 +9494,6 @@ h4 {
   /*para párrafos cortos de alta relevancia*/
   color: #858585; }
 
-/* R E S E T S */
-/*acá vamos a poner los resets que nos parezcan mandatorios para
-absolutamente todos nuestros proyectos*/
-body {
-  background-color: white; }
-
 .admin-header {
   height: 50px;
   width: 100%;
@@ -9677,7 +9671,8 @@ body {
   border-radius: 4px;
   margin: 15px auto;
   display: table;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 0; }
 
 .boton-subir-img:hover {
   background-color: #03BA3D; }
