@@ -74,6 +74,12 @@
           position: absolute;
           right: 3px;
           top: 3px;
+          padding:5px;
+          border-radius:2px;
+        }
+        .icono-eleminar-imagen:hover{
+          background-color: $Color-Errors-BG;
+          border-color: $Color-Rojo-Texto-Error;
         }
 
       .admin-entidad-contenedor-imagenes-form-field{

@@ -9694,11 +9694,25 @@ h4 {
   border-radius: 4px;
   background-color: #EFEEEE; }
 
+.admin-entidad-proyecto-img-adicionales-contenedor {
+  position: relative; }
+
 .admin-entidad-proyecto-img-adicionales {
   height: 50px;
   padding: 5px;
   border: solid 1px #EFEEEE;
   margin-right: 4px; }
+
+.icono-eleminar-imagen {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  padding: 5px;
+  border-radius: 2px; }
+
+.icono-eleminar-imagen:hover {
+  background-color: #FCB6B6;
+  border-color: #B40404; }
 
 .admin-entidad-contenedor-imagenes-form-field {
   font-size: 10px;
