@@ -9697,9 +9697,12 @@ h4 {
 .admin-entidad-proyecto-img-adicionales-contenedor {
   position: relative; }
 
+.admin-entidad-proyecto-img-adicionales-contenedor {
+  border-color: #dfdfdf; }
+
 .admin-entidad-proyecto-img-adicionales {
-  height: 50px;
-  padding: 5px;
+  height: 70px;
+  padding: 8px;
   border: solid 1px #EFEEEE;
   margin-right: 4px; }
 

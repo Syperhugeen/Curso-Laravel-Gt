@@ -38,3 +38,10 @@ Route::post('set_admin_proyectos_img{id_proyecto}',
   'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@set_admin_proyectos_img',
   'as'    => 'set_admin_proyectos_img'
 ]);
+
+Route::get('delete_admin_proyectos_img/{id_img}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@delete_admin_proyectos_img',
+  'as'    => 'delete_admin_proyectos_img'
+]);
+
