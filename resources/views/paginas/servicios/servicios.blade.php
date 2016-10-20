@@ -2,7 +2,7 @@
 
 
 @section('title')
- Listado de Proyectos
+ Servicios
 @stop
 
 @section('MetaContent')
@@ -19,13 +19,10 @@
 @section('content')
 
  
-
- <!--para agregar los márgenes laterales-->
  <div class="content-wrapper">
 
 
-     aqui va la descripcion de proyectos listado
-     
+    aqui va la descripcion de servicios   
 
 
  </div>

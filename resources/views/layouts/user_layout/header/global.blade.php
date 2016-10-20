@@ -12,10 +12,11 @@
       <div class="collapse navbar-collapse" id="defaultNavbar1">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span> INICIO<span class="sr-only">(current)</span></a></li>
-          <li><a href="#acerca">LA EMPRESA</a></li>
-          <li><a href="#servicios">SERVICIOS</a></li>
-          <li><a href="#articulos">ARTÍCULOS</a></li>
-          <li><a href="#contacto">CONTACTO</a></li>
+          <li><a href="{{route('get_pagina_empresa')}}">LA EMPRESA</a></li>
+          <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
+          <li><a href="{{route('get_pagina_proyecto_listado')}}">PROYECTOS</a></li>
+          <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
+          <li><a href="{{route('get_pagina_noticias_noticias_listado')}}">NOTICIAS</a></li>
         </ul>       
       </div>
       <!-- /.navbar-collapse -->

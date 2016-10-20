@@ -2,7 +2,7 @@
 
 
 @section('title')
- Listado de Proyectos
+ Empresa
 @stop
 
 @section('MetaContent')
@@ -21,12 +21,9 @@
  
 
  <!--para agregar los márgenes laterales-->
- <div class="content-wrapper">
-
-
-     aqui va la descripcion de proyectos listado
+ <div class="content-wrapper">   
      
-
+   Aqui el contenido de empresa
 
  </div>
 
