@@ -26,7 +26,9 @@
   }
 
    .admin-entidad-img{
-    height: 40px;
+    height: 80px;
+    border-radius:4px;
+    margin-right: 4px;
    }
 
    .admin-entidad-titulo{
@@ -35,14 +37,60 @@
     
    }
 
-   .boton-subir-img{
-    @include Boton-Chico($Color-Verde-MercadoLibre);
-    margin: 0 ;
+   .admin-entidad-contenedor-imagenes-y-form{
+     @include flexbox;
+     @include align-items(center);
+     @include flex-direction(row);
+     width: 100%;
+     @include justify-content(flex-start);
+     @include flex-wrap(wrap);
+     padding:2px;
+     border: solid 1px $Color-Gris-Claro-Para-Bordes;
+
    }
 
-   .boton-subir-img:hover{
-    background-color:$Color-Verde-Claro ;
-   }
+     .admin-entidad-contenedor-imagenes-form-form{
+      @include flexbox;
+      @include align-items(center);
+      @include flex-direction(row);
+      margin-left:15px;
+      padding:3px;
+      border-radius:4px;
+      background-color:$Color-Gris-Claro;
+     }
+
+     .admin-entidad-proyecto-img-adicionales-contenedor{
+        position: relative;
+     }
+
+        .admin-entidad-proyecto-img-adicionales{
+          height: 50px;
+          padding: 5px;
+          border: solid 1px $Color-Gris-Claro;
+          margin-right: 4px;
+        }
+
+        .icono-eleminar-imagen{
+          position: absolute;
+          right: 3px;
+          top: 3px;
+        }
+
+      .admin-entidad-contenedor-imagenes-form-field{
+        font-size: 10px;
+        margin: 0 5px;
+      }
+
+
+
+         .boton-subir-img{
+          @include Boton-Chico($Color-Verde-MercadoLibre);
+          margin: 0 ;
+         }
+
+         .boton-subir-img:hover{
+          background-color:$Color-Verde-Claro ;
+         }
 
    .admin-entidad-buscador-contenedor{
      @include flexbox;

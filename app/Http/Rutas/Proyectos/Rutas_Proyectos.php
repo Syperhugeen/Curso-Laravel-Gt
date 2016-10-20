@@ -32,3 +32,9 @@ Route::patch('set_admin_proyectos_editar/{id}',
   'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@set_admin_proyectos_editar',
   'as'    => 'set_admin_proyectos_editar'
 ]);
+
+Route::post('set_admin_proyectos_img{id_proyecto}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@set_admin_proyectos_img',
+  'as'    => 'set_admin_proyectos_img'
+]);
