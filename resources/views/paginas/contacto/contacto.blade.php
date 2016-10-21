@@ -23,7 +23,16 @@
  <!--para agregar los márgenes laterales-->
  <div class="content-wrapper">   
      
-   Aqui el contenido de contacto
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <p>Aqui el contenido de contacto. Ahora estamos escribiendo otras cositas lindas.</p>
+   <div class="well">lalala lalala qué lindo diseño</div>
+   <P>pim pum pam asdfasdfa lasdfl dkdfgjlsij flesif dks.j ofijeksfj ds. oeifjdslfk.</P>
 
  </div>
 

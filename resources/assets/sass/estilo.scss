@@ -1,15 +1,15 @@
 @import "resources/assets/sass/Helpers/Plug-flex";
 @import "resources/assets/sass/Helpers/Colores";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "resources/assets/sass/Helpers/recet";
-@import "resources/assets/sass/Helpers/fonts";
-@import "resources/assets/sass/Helpers/scroll";
 @import "resources/assets/sass/Helpers/mediCueris";
-@import "resources/assets/sass/Helpers/Plug-progresbar";
+@import "resources/assets/sass/Helpers/fonts";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "resources/assets/sass/Helpers/recet";
+@import "resources/assets/sass/Helpers/scroll";
+//@import "resources/assets/sass/Helpers/Plug-progresbar";
 @import "resources/assets/sass/Helpers/Plug-Guardiastyle.scss";
 @import "resources/assets/sass/Helpers/Plug-chosen";
 @import "resources/assets/sass/Helpers/Plug-Tootlipster-hoverJquery";
-@import "resources/assets/sass/Helpers/fonts-iconos";
+//@import "resources/assets/sass/Helpers/fonts-iconos";
 @import "resources/assets/sass/Helpers/Plug-ImageSelect";
 @import "resources/assets/sass/Helpers/notyCarrito";
 @import "resources/assets/sass/Helpers/clasesWarning";
@@ -20,9 +20,10 @@
 @import "resources/assets/sass/Helpers/ClasesParaCartelitosHover";
 @import "resources/assets/sass/Helpers/Botones";
 @import "resources/assets/sass/Helpers/Plug-bxSlider";
-@import "resources/assets/sass/Helpers/Wrappers";
+//@import "resources/assets/sass/Helpers/Wrappers";
 @import "resources/assets/sass/Helpers/GlobalText";
 //@import "resources/assets/sass/Helpers/font-amazing";
+
 
 //Layout_Admin
 @import "resources/assets/sass/Partes/Layout_Admin/Home/header";

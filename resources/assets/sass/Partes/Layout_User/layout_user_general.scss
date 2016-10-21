@@ -7,42 +7,12 @@
 }
 
 .wrapper{
-  width:80%;
-  margin:0 auto;
-  @include flexbox;
-  @include align-items(center);
-  @include flex-direction(row);
-  @include justify-content(space-between); 
+overflow:hidden;
 }
 
 
-
-
-/* media querys  */
-@media (min-width: $BrackPoint-Primario) { 
-
-
-}
-
-
-
-
-
-
-@media (min-width: $BrackPoint-Secundario) { 
-
-.user-layout-contenedor{
-  margin-top: 81px;       
-}
-}
-
-
-@media (min-width:$BrackPoint-Tercer) { 
- .user-layout-contenedor{
-  margin-top: 121px;       
-}
-
-}
-
-
-@media (min-width:$BrackPoint-Cuarto) { }
+/*---RESET STYLE: para resetear los inherit styles del browser (si es que los tiene)---*/
+*{
+  margin:0;
+  padding:0;
+  border:0;}

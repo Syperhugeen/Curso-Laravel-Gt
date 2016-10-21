@@ -1,48 +1,32 @@
-.footer-contenedor{
-  width: 100%;
-  padding: 15px 0;
-  background-color: $institucional4;
-  
-
+.footer-wrapper{
+  background-color: $color-grey3;
+}
+.footer-p-destacado{
+  letter-spacing: 8px;
+}
+.footer-p-izquierda{
+  color:$color-grey1;
+  text-align:right;
+  padding-right: 20px;
+  vertical-align: middle;
+}
+.footer-p-derecha{
+  color:$color-grey1;
+  text-align:left;
+  padding-left: 20px;
 }
 
-.wrapper-footer{
-  width:80%;
-  margin:0 auto;
-  @include flexbox;
-  @include align-items(center);
-  @include flex-direction(column);   
+@media (max-width: 991px){
+.footer-p-izquierda,
+.footer-p-derecha {
+  text-align:center;
+  padding-right: 0;
+  padding-left: 0;
 }
-
-.footer-outer-box{
-  @include flexbox;
-  @include align-items(center);
-  @include flex-direction(row);
-  @include flex-wrap(wrap); 
-  width: 100%;
-  @include justify-content(space-around); 
-
-}
-.footer-inner-box{
-  @include flexbox; 
-  @include flex-direction(column); 
-  max-width: 250px;
-  padding:10px;   
-  border:solid 1px white;
-  border-radius: 4px;
-  
-}
-
-   .footer-inner-box-p{
-    font-size: 12px;
-    padding:4px;
-    color:$Color-texto-gris-Mercadolibre;
-   }
-.footer-inner-box-simbionte{
-  padding:6px;
-  text-align: center; 
-  font-size: 12px;
-  border-top:solid 1px $Color-Gris-Claro; 
-  width: 100%;
-  color:$Color-texto-gris-Mercadolibre;
-}
+.footer-col-derecha{
+  border-bottom:1px solid $color-grey2;
+}}
+@media (min-width: 992px){
+.footer-col-derecha{
+  border-left:2px solid $color-grey2;
+}}

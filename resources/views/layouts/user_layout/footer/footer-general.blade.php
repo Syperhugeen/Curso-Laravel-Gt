@@ -1,19 +1,36 @@
-<div class="footer-contenedor">
-  <div class="wrapper-footer">    
-    <div class="footer-outer-box">
-      <div class="footer-inner-box">
-        <p class="footer-inner-box-p"><span class="icon-mail"></span> {{$Empresa->email}}</p>
-        <p class="footer-inner-box-p"><span class="icon-phone"></span> {{$Empresa->telefono}}</p>
-        <p class="footer-inner-box-p"><span class="icon-stay_primary_portrait"></span> {{$Empresa->celular}}</p>
+<div class="container-fluid footer-wrapper">
+  <div class="row" style="padding-top:40px;padding-bottom:40px;">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+
+
+
+
+
+    <div class="row">
+
+
+      <div class="col-md-6">
+        <p class="footer-p-izquierda footer-p-destacado"><strong>V&amp;V</strong>INGENIERÍA <span class="glyphicon glyphicon-copyright-mark"></span>2016</p>
+        <p class="footer-p-izquierda">Diseño de interfaz y desarrollo web: Ernesto Calvo</p>
       </div>
-      <div class="footer-inner-box">
-        <p class="footer-inner-box-p"><span class="icon-location_on"></span> {{$Empresa->direccion}}</p>
-        <p class="footer-inner-box-p"><span class="icon-access_time"></span> {{$Empresa->horarios_dias}}</p>
+
+
+      <div class="col-md-6 footer-col-derecha">
+        <p class="footer-p-derecha"><span class="glyphicon glyphicon-envelope"></span> {{$Empresa->email}}</p>
+        <p class="footer-p-derecha"><span class="glyphicon glyphicon-earphone"></span> {{$Empresa->telefono}}</p>
+        <p class="footer-p-derecha"><span class="iglyphicon glyphicon-phone"></span> {{$Empresa->celular}}</p>
+        <p class="footer-p-derecha"><span class="glyphicon glyphicon-map-marker"></span> {{$Empresa->direccion}}</p>
+        <p class="footer-p-derecha"><span class="glyphicon glyphicon-time"></span> {{$Empresa->horarios_dias}}</p>
       </div>
-      
+
+  
     </div>
-    <div class="footer-inner-box-simbionte">
-        Diseño de interfaz y desarrollo web: Ernesto Calvo
+        
+
+
+
+
+
     </div>  
   </div>
 </div>

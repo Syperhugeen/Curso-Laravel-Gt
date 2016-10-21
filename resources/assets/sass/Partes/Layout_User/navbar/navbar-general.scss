@@ -1,42 +1,104 @@
+
+
+
 #mynavbar{
 }
-.navbar {  
+
+.navbar {
   border-bottom: 5px solid #DCB13F;
   border-radius: 0px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-@media (max-width: 399px){.navbar{display:block;}}
+@media (max-width: 399px){.navbar{
+  display:block;
+  }}
+@media (min-width: 768px){.navbar{
+  height:100px;
+  }}
+
+
+
+
 
 
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
-  background-color: $color-2;
+  background-color: $color-grey3;
   border-color: $color-3;
 }
 
 .navbar-logo{
-  height: 80px;
+height: 60px;
 }
+@media (max-width: 767px) {.navbar-logo{
+height: 40px;
+}}
+@media (min-width: 785px) and (max-width: 1000px) {.navbar-logo{
+height: 50px;
+}}
 
 .navbar-default .navbar-text {
-  color: $color-1;
+  color: $color-grey1;
 }
 .navbar-default .navbar-nav > li > a {
-  color: $color-1;
+  display:inline-block;
+  color: $color-grey1;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  transition: transform .3s ease;
 }
+@media (min-width: 768px) {.navbar-default .navbar-nav > li > a {
+  border-bottom: 5px solid $color-3;
+  margin-top:25px;
+  line-height: 40px;
+  }}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: $color-1;
-  background-color: $color-3;
+  color: $color-grey1;
+  -webkit-transform: translate(0, -5px);
+  -moz-transform: translate(0, -5px);
+  transform: translate(0, -5px);
 }
+
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: $color-3;
   text-shadow: 0 0 5px $color-3, 0 0 10px $color-3;
-  background-color: #3b5f73;
+  background-color:transparent;
 }
+@media (max-width: 767px) {.navbar-default .navbar-nav > .active > a:after{
+  left: 0;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: $color-3;
+  border-width: 10px;
+  margin-top: -10px;
+}}
+
+@media (min-width: 768px) {.navbar-default .navbar-nav > .active > a:after{
+  bottom: 0;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: $color-3;
+  border-width: 10px;
+  margin-left: -10px;
+}}
+
+
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
@@ -46,6 +108,9 @@
 .navbar-default .navbar-toggle {
   border-color: $color-1;
 }
+@media (max-width: 767px){.navbar-default .navbar-toggle {
+  margin-top:20px;
+}}
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: $color-1;
