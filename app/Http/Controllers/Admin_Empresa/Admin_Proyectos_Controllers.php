@@ -79,4 +79,14 @@ class Admin_Proyectos_Controllers extends Controller
       $this->ImgProyectoRepo->setDatos($id_proyecto,$Request);
       return redirect()->back()->with('alert', 'Imagen Subida Correctamente');
   }
+
+
+  //elimino img adicional
+  public function delete_admin_proyectos_img($id_img)
+  {
+      $this->ImgProyectoRepo->destroy_entidad($id_img);
+
+
+      return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
+  }
 }

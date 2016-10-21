@@ -5,7 +5,7 @@
    @foreach($proyecto->imagenesproyecto as $img)
     <div class="admin-entidad-proyecto-img-adicionales-contenedor">
       <img class="admin-entidad-proyecto-img-adicionales" src="{{$img->url_img}}">
-      <a href=""><span class="" ></span></a>
+      <a href="{{route('delete_admin_proyectos_img',$img->id)}}" class="icono-eleminar-imagen"><span class="icon-clear" ></span></a>
     </div>
     
    @endforeach

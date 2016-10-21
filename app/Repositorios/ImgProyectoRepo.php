@@ -29,7 +29,7 @@ class ImgProyectoRepo extends BaseRepo
 
     $Proyecto_img->save();
 
-    $this->setImagen($Proyecto_img,$request,'img','ProyectosImagenesAdicionales/', $Proyecto_img->name,'.png');  
+    $this->setImagen($Proyecto_img,$request,'img','ProyectosImagenesAdicionales/', $Proyecto_img->id,'.png');  
 
     $Proyecto_img->save();   
   }
