@@ -8,9 +8,9 @@
 
 <!--columna derecha-->
 <div class="col-md-6 home-box">
-<h2><span class="glyphicon glyphicon-envelope" style="font-size:120%; padding-right:10px;"></span>dirección@mail.com</h2>
-<h2><span class="glyphicon glyphicon-earphone" style="font-size:120%; padding-right:10px;"></span>2400 1234</h2>
-<h2><span class="glyphicon glyphicon-phone" style="font-size:120%; padding-right:10px;"></span>099 123 456</h2>
+<h2><span class="glyphicon glyphicon-envelope" style="font-size:120%; padding-right:10px;"></span>{{$Empresa->email}} </h2>
+<h2><span class="glyphicon glyphicon-earphone" style="font-size:120%; padding-right:10px;"></span>{{$Empresa->telefono}}</h2>
+<h2><span class="glyphicon glyphicon-phone" style="font-size:120%; padding-right:10px;"></span>{{$Empresa->celular}}</h2>
 </div>
 <!--/cierra el row-->
 </div>

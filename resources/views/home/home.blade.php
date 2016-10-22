@@ -32,6 +32,8 @@
      
      @include('home.partes.globitos')
 
+     @include('home.partes.proyectos')
+
 
     </div>  
   </div>
