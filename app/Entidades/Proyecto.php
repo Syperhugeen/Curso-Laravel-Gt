@@ -51,5 +51,12 @@ class Proyecto extends Model
         
         return url().'/imagenes/'.$this->img;
     }
+
+
+    public function getRouteAttribute()
+    {
+        
+        return route('get_pagina_proyecto_individual', [$this->name, $this->id]);
+    }
     
 }

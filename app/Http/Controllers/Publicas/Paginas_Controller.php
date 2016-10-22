@@ -4,15 +4,19 @@ namespace App\Http\Controllers\Publicas;
 
 use App\Http\Controllers\Controller;
 use App\Repositorios\ImgHomeRepo;
+use App\Repositorios\ProyectoRepo;
 
 
 class Paginas_Controller extends Controller
 {
     protected $ImgHomeRepo;
+    protected $ProyectoRepo;
 
-    public function __construct(ImgHomeRepo $ImgHomeRepo)
+    public function __construct(ImgHomeRepo  $ImgHomeRepo,
+                                ProyectoRepo $ProyectoRepo     )
     {
-        $this->ImgHomeRepo = $ImgHomeRepo;
+        $this->ProyectoRepo = $ProyectoRepo;
+        $this->ImgHomeRepo  = $ImgHomeRepo;
     }
 
     //Contacto
@@ -50,12 +54,16 @@ class Paginas_Controller extends Controller
     //Proyectos
     public function get_pagina_proyecto_listado()
     {
-        return view('paginas.proyecto.proyecto_listado');
+        $Proyectos = $this->ProyectoRepo->getEntidadActivas();
+        return view('paginas.proyecto.proyecto_listado', compact('Proyectos'));
     }
 
-    public function get_pagina_proyecto_individual()
+    public function get_pagina_proyecto_individual($name,$id)
     {
-        return view('paginas.proyecto.proyecto_individual');
+
+        $Proyecto = $this->ProyectoRepo->find($id);
+
+        return view('paginas.proyecto.proyecto_individual',compact('Proyecto'));
     }
 
 
