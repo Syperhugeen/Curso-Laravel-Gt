@@ -23,11 +23,8 @@
  <!--para agregar los márgenes laterales-->
  <div class="content-wrapper">
 
-
      aqui va la descripcion de proyectos listado
      
-
-
  </div>
 
 @stop
