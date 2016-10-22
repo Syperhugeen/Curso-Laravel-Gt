@@ -8,7 +8,7 @@
       <div class="navbar-header">
         <div class="text-center"><!-- para centrar el navbar toggle button -->
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
-        <a class="navbar-brand" href="#"><img class="navbar-logo img-responsive" src="{{url()}}/imagenes/{{$Empresa->logo_cuadrado}}"></a></div>
+        <a class="navbar-brand" href="{{route('get_home')}}"><img class="navbar-logo img-responsive" src="{{url()}}/imagenes/{{$Empresa->logo_cuadrado}}"></a></div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-right navbar-collapse" id="defaultNavbar1">
         <ul class="nav navbar-nav">
