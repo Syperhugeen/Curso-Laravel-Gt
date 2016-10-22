@@ -12,7 +12,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-right navbar-collapse" id="defaultNavbar1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span> INICIO<span class="sr-only">(current)</span></a></li>
+          <li class="active"><a href="{{route('get_home')}}"><span class="glyphicon glyphicon-home"></span> INICIO<span class="sr-only">(current)</span></a></li>
           <li><a href="{{route('get_pagina_empresa')}}">LA EMPRESA</a></li>
           <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
           <li><a href="{{route('get_pagina_proyecto_listado')}}">PROYECTOS</a></li>

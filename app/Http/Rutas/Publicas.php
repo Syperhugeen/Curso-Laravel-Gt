@@ -15,7 +15,7 @@ require __DIR__ . '/Proyectos/Rutas_Proyectos.php';
 //Ruta de Home
 Route::get('/' , [                    
   'uses' => 'Publicas\Home_Controller@get_home',
-  'as'   => 'home']
+  'as'   => 'get_home']
 );
 
 
