@@ -2,9 +2,9 @@
 {{-- contenedor de la parte completa de proyectos en la home --}}
 <div style="color:white;">
   {{-- titulo de seccion --}}
- <div>Proyectos Destacados o Ultimos</div>
+ <h2>Proyectos Destacados o Ultimos</h2>
  {{-- contiene por ejemplo varios proyectos --}}
- <div>    
+ <div class="contenedor-home-proyectos">    
     @foreach($Proyectos as $Proyecto)
       {{-- contiene proyecto indivual --}}
       <a href="{{$Proyecto->route}}">
