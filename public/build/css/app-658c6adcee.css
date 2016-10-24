@@ -7502,27 +7502,24 @@ h4 {
 .img-home-lista-contenedor {
   height: 40px; }
 
-.user-layout-contenedor {
-  margin-top: 61px;
-  width: 100%;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center; }
-
-.wrapper {
+.section-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
   overflow: hidden; }
 
-/*---RESET STYLE: para resetear los inherit styles del browser (si es que los tiene)---*/
+.bg-footer {
+  background-color: #3b3b3b; }
+
+/*---RESET STYLE: para resetear los inherit styles
+del browser (si es que los tiene)---*/
 * {
   margin: 0;
   padding: 0;
   border: 0; }
+
+/*---acá ponemos la altura de la Navbar---*/
+body {
+  padding-top: 100px; }
 
 .navbar {
   border-bottom: 5px solid #DCB13F;
@@ -7786,9 +7783,6 @@ ul.nav-links > a > li:hover {
     height: 120px;
     border-bottom: solid 3px #2045FF; } }
 
-.footer-wrapper {
-  background-color: #3b3b3b; }
-
 .footer-p-destacado {
   letter-spacing: 8px; }
 
@@ -7816,27 +7810,23 @@ ul.nav-links > a > li:hover {
   .footer-col-derecha {
     border-left: 2px solid #858585; } }
 
-.home-header {
-  background-color: #b3b3b3;
-  background-image: url(../../imagenes/Img/header01.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 400px;
-  width: 100%; }
-
 .home-box {
-  border-left: 5px solid #b3b3b3;
   text-align: justify-left; }
 
 .globito {
+  border-radius: 50%;
   width: 100px;
   height: 100px;
-  background-color: #4a9fff;
   color: white;
-  transition: all 0.3s ease-in-out 0s; }
+  background-color: #4a9fff;
+  font-size: 200%; }
 
-.globito:hover {
-  transform: scaleX(1.2); }
+.carousel-caption > h3 {
+  color: white; }
+
+.carousel-caption > p {
+  color: white;
+  text-align: center; }
 
 .Auth-contenedor {
   width: 80%;

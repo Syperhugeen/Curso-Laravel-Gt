@@ -1,18 +1,23 @@
-.user-layout-contenedor{
-  margin-top: 61px;
-  width: 100%;
-  @include flexbox; 
-  @include flex-direction(column);
-  @include align-items(center);      
-}
 
-.wrapper{
+
+.section-wrapper{
+padding-top:40px;
+padding-bottom:40px;
 overflow:hidden;
 }
 
+.bg-footer{
+background-color: $color-grey3;
+}
 
-/*---RESET STYLE: para resetear los inherit styles del browser (si es que los tiene)---*/
+/*---RESET STYLE: para resetear los inherit styles
+del browser (si es que los tiene)---*/
 *{
   margin:0;
   padding:0;
   border:0;}
+
+/*---acá ponemos la altura de la Navbar---*/
+  body{
+  	padding-top:100px;
+  }

@@ -22,15 +22,33 @@
  @include('home.partes.imagen_de_portada')
 
  <!--para agregar los márgenes laterales-->
-<div class="container-fluid footer-wrapper">
-  <div class="row" style="padding-top:40px;padding-bottom:40px;">    
+<div class="container-fluid section-wrapper">
+  <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
-     {{-- la parte de vienvenidad --}}
+     {{-- la parte de bienvenidad --}}
      @include('home.partes.datos_bienvenida')
+
+    </div>  
+  </div>
+</div>
+
+ <!--para agregar los márgenes laterales-->
+<div class="container-fluid section-wrapper">
+  <div class="row">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
      {{-- la parte de los globitos --}}
      @include('home.partes.globitos')
+
+    </div>  
+  </div>
+</div>
+
+ <!--para agregar los márgenes laterales-->
+<div class="container-fluid section-wrapper">
+  <div class="row">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
      {{-- la parte de proyectos  --}}
      @include('home.partes.proyectos')

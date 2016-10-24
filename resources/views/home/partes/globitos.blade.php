@@ -1,39 +1,29 @@
-<!--este row es el siguiente renglón, contiene los globitos-->
-<div class="row" style="padding-top:80px;padding-bottom:80px;">
 
-  <!--acá van 3 globitos (cualquier cosa después ajustamos la agrupacíon)-->
-  <div class="col-md-6">
+
+ <h3>mauri, ponele flex a la class ".globito", está en home_general.scss</h3>
+<h4>flex le agrega automaticamente una separación entre sí? sino le agregamos margenes manualmente</h4>
+<h4>otra cosa que necesitamos es que cargue la fuente de glyphicons</h4>
 
     <div class="globito">
-    icono de servicios1
+    <span class="glyphicon glyphicon-tower"></span>
     </div>
 
     <div class="globito">
-    icono de servicios2
+    <span class="glyphicon glyphicon-tree-conifer"></span>
     </div>
 
     <div class="globito">
-    icono de servicios3
-    </div>
-
-  </div>
-
-
-  <!--acá van 3 globitos más-->
-  <div class="col-md-6">
-
-    <div class="globito">
-    icono de métodos de construcción
+    <span class="glyphicon glyphicon-screenshot"></span>
     </div>
 
     <div class="globito">
-    icono de trabaja para nosotros
+    <span class="glyphicon glyphicon-share-alt"></span>
     </div>
 
     <div class="globito">
-    icono de contáctanos
+    <span class="glyphicon glyphicon-bullhorn"></span>
     </div>
 
-  <!--/cierra la col y el row-->
-  </div>
-</div>
+    <div class="globito">
+    <span class="glyphicon glyphicon-resize-small"></span>
+    </div>
