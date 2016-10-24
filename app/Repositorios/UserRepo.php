@@ -58,10 +58,10 @@ class UserRepo extends BaseRepo
 
   }
 
-  public function setUserRegistro($request)
+  public function setUserRegistro($user,$request)
   {
    
-    $user                       = $this->getEntidad();
+    
     $user->role                 = 'user';
     $user->envio_publicidad     = 'si';
     $user->estado               = 'si';

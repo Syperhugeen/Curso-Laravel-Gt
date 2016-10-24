@@ -87,7 +87,7 @@ class AuthController extends Controller
         if ($manager->isValid())
         {
          //me traigo la funcion del repositorio UserRepo y ya Hago el Login de ese Usuario   
-         Auth::login($this->UserRepo->CreoUsuarioNuevo($request)); 
+         Auth::login($this->UserRepo->setUserRegistro($user,$request)); 
 
          return redirect()->route('home')
                           ->with('alert' , $user->name . ' Ve a tu Email: ' . $user->email .' y verifica tu cuenta');      
