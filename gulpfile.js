@@ -43,4 +43,6 @@ elixir(function(mix) {
         'mis-disparador_De_Form.js',
         'mis-sliders.js',
         'fin.js']);
+
+    mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');
 });
