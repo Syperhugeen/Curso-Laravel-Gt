@@ -1,8 +1,8 @@
   <!--navigation bar-->
   <nav class="navbar navbar-default navbar-fixed-top" id="mynavbar">
-    <div class="container-fluid row">
+    <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
-
+      <div class="row">
       <div class="col-lg-10 col-lg-push-1">
 
       <div class="navbar-header">
@@ -23,7 +23,7 @@
 
 
     </div>  <!-- /.col -->
-
+    </div>  <!-- /.row -->
     </div> <!-- / container fluid row -->
 
     <!-- errores -->

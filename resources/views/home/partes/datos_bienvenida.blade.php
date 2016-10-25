@@ -9,7 +9,7 @@
 </div>
 
 <!--columna derecha-->
-<div class="col-md-6 home-box well" style="background-color:transparent;">
+<div class="col-md-6 home-box well well-lg" style="background-color:transparent;">
 <h3><span class="glyphicon glyphicon-envelope"></span>{{$Empresa->email}} </h3>
 <h3><span class="glyphicon glyphicon-earphone" style="font-size:120%; padding-right:10px;"></span>{{$Empresa->telefono}}</h3>
 <h3><span class="glyphicon glyphicon-phone" style="font-size:120%; padding-right:10px;"></span>{{$Empresa->celular}}</h3>

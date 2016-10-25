@@ -10170,23 +10170,6 @@ ul.nav-links > a > li:hover {
   color: orange;
   background-color: #3b3b3b; }
 
-.nav-derecha-iconos {
-  padding: 4px;
-  border-radius: 4px;
-  font-size: 22px;
-  color: #c2c2c2;
-  border: solid 1px #dfdfdf; }
-
-/* media querys  */
-@media (min-width: 630px) {
-  .Default-header {
-    height: 80px; } }
-
-@media (min-width: 1000px) {
-  .Default-header {
-    height: 120px;
-    border-bottom: solid 3px #2045FF; } }
-
 .footer-p-destacado {
   letter-spacing: 8px; }
 
@@ -10265,6 +10248,27 @@ ul.nav-links > a > li:hover {
 .carousel-caption > p {
   color: white;
   text-align: center; }
+
+.contenedor-home-proyectos {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 6px;
+  border: solid 3px #EFEEEE;
+  border-radius: 4px;
+  width: 100%;
+  margin: 5px 0; }
 
 .Auth-contenedor {
   width: 80%;
