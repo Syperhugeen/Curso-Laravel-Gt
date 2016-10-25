@@ -23,7 +23,14 @@
  <!--para agregar los márgenes laterales-->
  <div class="section-wrapper">   
      
-@include('paginas.formularios.auth.login_form')
+    @include('formularios.auth.login_form')
+    
+    <!-- comienza el form -->
+    <h4 class="wow fadeInUp delay1"><span class="glyphicon glyphicon-chevron-right color-contacto" style="font-size:70%"></span> Envíame un mensaje
+    </h4>
+    <p class="lead wow fadeInUp delay1b">Si deseas comunicarte conmigo, puedes hacerlo vía telefónica, por correo o aquí mismo:
+    </p>
+    @include('formularios.contacto_form')
 
  </div>
 
