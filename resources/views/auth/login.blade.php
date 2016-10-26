@@ -18,12 +18,12 @@
 
 @section('content')
 
-<div class="Auth-contenedor">
+
  
 {{-- ejemplo para la bavehacion --}}
 <div class="admin-contnedor-navegacion-miga">
   {{-- home --}}
-  <a href="{{route('home')}}"><span class="icon-home"></span></a>
+  <a href="{{route('get_home')}}"><span class="icon-home"></span></a>
 
   {{-- separador --}}
   <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
@@ -33,42 +33,14 @@
 </div>
 
 
- <h1 class="Auth-titulo">
-             <span class="icon-lock_open"></span> 
-              Iniciar Sesión
- </h1>
-
- <div class="contenedor-Auth">
-          
-          {!! Form::open( ['route' => 'auth_login_post',
-                            'method'   => 'post',
-                            'files'    => true,
-                            'class'    => 'Auth-form',
-                            'id'       => 'Form-LogIn'
-                            ])               !!}
-
-           <div class="Auth-form-contiene-label-input">
-            {!! Form::label('email', 'Email', array('class' => 'Auth-form-contiene-label')) !!}
-            {!! Form::text('email', null ,['class' => 'Auth-form-contiene-input']) !!}
-           </div>
-
-           <div class="Auth-form-contiene-label-input">
-            {!! Form::label('password', 'Contraseña', array('class' => 'Auth-form-contiene-label')) !!}
-            {!! Form::password('password', ['class' => 'Auth-form-contiene-input']) !!}
-           </div> 
-
-           <a class="Auth-olvidastes-password" href="{{route('password_recet_get')}}">¿ olvidastes tu contraseña ?
-           </a>
-           
-           <input type="submit" class="Auth-bottom" value="Iniciar Sesión" >
-
-           <div class="Auth-olvidastes-password-contendor">
-             <div>¿aun no tienes cuenta?</div>
-             <br>
-             <a href="{{route('register_get')}}">Crear Cuenta Aquí</a>
-           </div>
-          {!! Form::close() !!}
+  <h1>Inicio de Sesión</h1>
+   <div class="container-fluid section-wrapper">
+     <div class="row">    
+      <div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-3 col-lg-4 col-lg-push-4 wow fadeInUp">
+       @include('formularios.auth.login_form')
+      </div>
+    </div>
   </div>
      
-</div>
+
 @stop

@@ -18,7 +18,7 @@
 
 @section('content')
 
-<div class="Auth-contenedor">
+
 
 {{-- ejemplo para la bavehacion --}}
 <div class="admin-contnedor-navegacion-miga">
@@ -32,45 +32,14 @@
   <span>Registro</span>
 </div>
 
- <h1 class="Auth-titulo">
-             <span class="icon-account_box"></span> 
-              Crear Cuenta
- </h1>
-
- <div class="contenedor-Auth">
-          
-          {!! Form::open( ['route' => 'register_post',
-                            'method'   => 'Post',
-                            'files'    => true,
-                            'class'    => 'Auth-form',
-                            'id'       => 'Form-Registro'
-                            ])               !!}
-
-          
-           <div class="Auth-form-contiene-label-input">
-            {!! Form::label('name', 'Nombre y apellido', array('class' => 'Auth-form-contiene-label')) !!}
-            {!! Form::text('name', null ,['class' => 'Auth-form-contiene-input']) !!}
-           </div>
-
-           <div class="Auth-form-contiene-label-input">
-            {!! Form::label('email', 'Email', array('class' => 'Auth-form-contiene-label')) !!}
-            {!! Form::text('email', null ,['class' => 'Auth-form-contiene-input']) !!}
-           </div>
-
-           <div class="Auth-form-contiene-label-input">
-            {!! Form::label('telefono', 'Celular/Telefono', array('class' => 'Auth-form-contiene-label')) !!}
-            {!! Form::text('telefono', null ,['class' => 'Auth-form-contiene-input']) !!}
-           </div>
-
-           <div class="Auth-form-contiene-label-input">
-            {!! Form::label('password', 'Contraseña', array('class' => 'Auth-form-contiene-label')) !!}
-            {!! Form::password('password', ['class' => 'Auth-form-contiene-input']) !!}
-           </div>
-           
-            <input type="submit" class="Auth-bottom" value="Crear Cuenta" >
-
-          {!! Form::close() !!}
+ <h1>formulario de registro</h1>
+    <div class="container-fluid section-wrapper">
+     <div class="row">    
+      <div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-3 col-lg-4 col-lg-push-4 wow fadeInUp">
+       @include('formularios.auth.register_form')
+      </div>
+    </div>
   </div>
-</div>     
+     
 
 @stop
