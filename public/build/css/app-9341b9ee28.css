@@ -3,6 +3,7 @@
 /*no recuerdo la sintaxis, pero esto sería para establecer
 qué color es "color-1" y cuál es "color-2", etc.*/
 /*para textos*/
+/*gris SUPER claro (solo para líneas divisoras de relevancia baja)*/
 /*gris más claro (párrafos y otras cosas)*/
 /*gris medio (títulos por ej.)*/
 /*gris más oscuro (backgrounds por ej.)*/
@@ -18,6 +19,9 @@ qué color es "color-1" y cuál es "color-2", etc.*/
  no sean tan "empalagosos", alternando, ofreciendo algo diferente
  con que hacer destacar ciertas cosas como links:hover o elementos
  de diseño puntuales. No se abusará de este color tanto */
+/* (se usará para el estado hover de los botones color-3) */
+/* (se usará para el estado hover de los botones color-3) */
+/* (se usará para backgrounds de bloques de texto en instancia de hover) */
 /* /////////////Links, Titulos, Descripciones///////////////// */
 /*color para el contador de caracteres*/
 /*color para el head de los iconos*/
@@ -9906,14 +9910,6 @@ h4 {
 .img-home-lista-contenedor {
   height: 40px; }
 
-.section-wrapper {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  overflow: hidden; }
-
-.bg-footer {
-  background-color: #3b3b3b; }
-
 /*---RESET STYLE: para resetear los inherit styles
 del browser (si es que los tiene)---*/
 * {
@@ -9924,6 +9920,67 @@ del browser (si es que los tiene)---*/
 /*---acá ponemos la altura de la Navbar---*/
 body {
   padding-top: 100px; }
+
+/*---estilizando algunas cosas básicas---*/
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none; }
+
+@font-face {
+  font-family: Pioret;
+  src: url(../fonts/poiret.ttf); }
+
+/*---esto es para envolver cada sección de cada página
+se le adjudica al container-fluid que adentro contiene los rows
+y las columns que agregan los márgenes laterales---*/
+.section-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: hidden; }
+
+/*---estilizando los botones con colores institucionales---*/
+.btn-primary {
+  color: white;
+  background-color: #4a9fff;
+  border-color: #4a9fff; }
+
+.btn-primary:focus,
+.btn-primary.focus {
+  color: white;
+  background-color: #97c8ff;
+  border-color: #97c8ff;
+  outline-width: 1px;
+  outline-offset: 4px;
+  outline-style: dotted; }
+
+.btn-primary:hover {
+  color: white;
+  background-color: #97c8ff;
+  border-color: #97c8ff; }
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: white;
+  background-color: #0077fd;
+  border-color: #4a9fff;
+  outline: none; }
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: white;
+  background-color: #0077fd;
+  border-color: #4a9fff;
+  outline: none; }
 
 .navbar {
   border-bottom: 5px solid #DCB13F;
@@ -9969,14 +10026,14 @@ body {
     margin-top: 25px;
     line-height: 40px; } }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #b3b3b3;
+.navbar-default .navbar-nav > li:not(.active) > a:hover,
+.navbar-default .navbar-nav > li:not(.active) > a:focus {
+  color: white;
   transform: translate(0, -5px); }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus {
   color: #4a9fff;
   text-shadow: 0 0 5px #4a9fff, 0 0 10px #4a9fff;
   background-color: transparent; }
@@ -10197,6 +10254,9 @@ ul.nav-links > a > li:hover {
   .footer-col-derecha {
     border-left: 2px solid #858585; } }
 
+.bg-footer {
+  background-color: #3b3b3b; }
+
 .home-box {
   text-align: justify-left; }
 
@@ -10215,11 +10275,8 @@ ul.nav-links > a > li:hover {
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 6px;
-  border: solid 3px #EFEEEE;
-  border-radius: 4px;
-  width: 100%;
-  margin: 5px 0; }
+  padding: 40px 0;
+  width: 100%; }
 
 .globito {
   border-radius: 50%;
@@ -10240,7 +10297,24 @@ ul.nav-links > a > li:hover {
   flex-direction: row;
   -ms-flex-pack: center;
   -moz-justify-content: center;
-  justify-content: center; }
+  justify-content: center;
+  transition: all .3s ease; }
+
+.globito:hover {
+  background-color: #97c8ff;
+  transform: translate(0, -10%); }
+
+@media (max-width: 767px) {
+  .globito {
+    width: 50px;
+    height: 50px;
+    font-size: 100%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .globito {
+    width: 75px;
+    height: 75px;
+    font-size: 150%; } }
 
 .carousel-caption > h3 {
   color: white; }
@@ -10249,26 +10323,45 @@ ul.nav-links > a > li:hover {
   color: white;
   text-align: center; }
 
-.contenedor-home-proyectos {
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: distribute;
-  -moz-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 6px;
-  border: solid 3px #EFEEEE;
-  border-radius: 4px;
+/*título principal de Bienvenida*/
+.home-title-welcome {
+  font-family: Pioret;
+  font-size: 60px; }
+
+/*título de cada sección interior del Home,
+por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
+.home-section-title {
+  color: #b3b3b3;
+  text-align: right;
+  font-family: Pioret;
+  border-bottom: 1px solid #b3b3b3; }
+
+/*el contenedor de todos los proyectos mostrados*/
+.home-section-display {
+  padding: 10px; }
+
+/*el contenedor de cada proyecto individual*/
+.home-section-display-item {
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform .3s ease; }
+
+.home-section-display-divider {
+  margin: 4px 20px;
   width: 100%;
-  margin: 5px 0; }
+  color: #f8f8f8; }
+
+a > .home-section-display-item:hover {
+  background-color: #f8f8f8;
+  transform: translate(20px, 0); }
+
+/*imágenes dentro de la sección de Home que muestra últimos proyectos*/
+img.media-object {
+  width: 200px;
+  height: 200px; }
+
+.media-body {
+  padding-left: 20px; }
 
 .Auth-contenedor {
   width: 80%;

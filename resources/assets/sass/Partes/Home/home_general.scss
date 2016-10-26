@@ -10,11 +10,8 @@ text-align:justify-left;}
   @include flex-direction(row);
   @include justify-content(space-around);
   @include flex-wrap(wrap);
-  padding: 6px;
-  border:solid 3px $Color-Gris-Claro;
-  border-radius:4px;
+  padding: 40px 0;
   width: 100%;
-  margin: 5px 0;
  }
 
     .globito{
@@ -29,25 +26,85 @@ text-align:justify-left;}
     @include align-items(center);
     @include flex-direction(row);
     @include justify-content(center);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
     }
 
-    .carousel-caption>h3{
+    .globito:hover{
+    background-color:$color-3light;
+    -webkit-transform: translate(0, -10%);
+    -moz-transform: translate(0, -10%);
+    transform: translate(0, -10%);
+	 }
+
+   @media (max-width: 767px){.globito{
+    width:50px;
+    height:50px;
+    font-size:100%;
+    }}
+
+   @media (min-width: 768px) and (max-width: 991px){.globito{
+    width:75px;
+    height:75px;
+    font-size:150%;
+    }}
+
+.carousel-caption>h3{
     color:$color-white;
     }
-    .carousel-caption>p{
+.carousel-caption>p{
     color:$color-white;
     text-align:center;
     }
 
-.contenedor-home-proyectos{
-  @include flexbox;
-  @include align-items(center);
-  @include flex-direction(row);
-  @include justify-content(space-around);
-  @include flex-wrap(wrap);
-  padding: 6px;
-  border:solid 3px $Color-Gris-Claro;
-  border-radius:4px;
-  width: 100%;
-  margin: 5px 0;
- }
+/*título principal de Bienvenida*/
+.home-title-welcome{
+  font-family:Pioret;
+  font-size:60px;
+}
+
+/*título de cada sección interior del Home,
+por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
+.home-section-title{
+  color:$color-grey1;
+  text-align:right;
+  font-family:Pioret;
+  border-bottom:1px solid $color-grey1;
+}
+/*el contenedor de todos los proyectos mostrados*/
+.home-section-display{
+  padding:10px;
+}
+
+  /*el contenedor de cada proyecto individual*/
+  .home-section-display-item{
+    border-radius:8px;
+    padding:20px;
+    -webkit-transition: transform .3s ease;
+    -moz-transition: transform .3s ease;
+    transition: transform .3s ease;
+  }
+
+  .home-section-display-divider {
+    margin:4px 20px;
+    width:100%;
+    color:$color-grey0;
+  }
+
+  a>.home-section-display-item:hover{
+    background-color:$color-grey0;
+    -webkit-transform: translate(20px, 0);
+    -moz-transform: translate(20px, 0);
+    transform: translate(20px, 0);
+  }
+
+  /*imágenes dentro de la sección de Home que muestra últimos proyectos*/
+  img.media-object{
+    width: 200px;
+    height: 200px;
+  }
+
+  .media-body{
+    padding-left:20px;
+  }

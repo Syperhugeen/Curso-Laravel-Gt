@@ -1,4 +1,13 @@
-                    <form class="wow fadeInUp delay2" id="contact-form" method="post" action="contact.php" role="form">
+<div class="container-fluid section-wrapper">
+  <div class="row">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 wow fadeInUp">
+
+  {!! Form::open(             ['route' => 'auth_login_post',
+                            'method'   => 'post',
+                            'files'    => true
+                            ])               !!}
+
+<form id="contact-form" method="post" action="contact.php" role="form">
 
     <div class="messages"></div>
 
@@ -45,9 +54,12 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send" value="Enviar">
+                <input type="submit" class="btn btn-primary btn-lg btn-send" value="Enviar">
             </div>
         </div>
+
+        <hr>
+
         <div class="row">
             <div class="col-md-12">
                 <p class="text-muted small"><strong>*</strong> Estos campos son obligatorios.</p>
@@ -57,9 +69,8 @@
 
 </form>
 
-<div class="checkbox">
-  <label>
-    <input type="checkbox" value="">
-    Option one is this and that&mdash;be sure to include why it's great
-  </label>
+{!! Form::close() !!}
+
+    </div>  
+  </div>
 </div>

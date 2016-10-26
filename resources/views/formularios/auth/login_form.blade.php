@@ -1,36 +1,53 @@
+ <div class="container-fluid section-wrapper">
+  <div class="row">    
+    <div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-3 col-lg-4 col-lg-push-4 wow fadeInUp">
+
   {!! Form::open(             ['route' => 'auth_login_post',
                             'method'   => 'post',
                             'files'    => true
                             ])               !!}
 
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
 
-  <div class="container">
-    <label><b>Email</b></label>
-    <input type="text" placeholder="Enter Username" name="email" required>
+  <form class="form-horizontal" method="post" action="#">
+            
 
-    <label><b>Contraseña</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+            <div class="form-group">
+              <label for="username" class="cols-sm-2 control-label">Usuario</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                </div>
+              </div>
+            </div>
 
-    <button type="submit">Login</button>
-    <input type="checkbox" checked="checked"> Recordar mi usuario
-  </div>
+            <div class="form-group">
+              <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                </div>
+              </div>
+            </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Iniciar Sesión</button>
-    <span class="psw">¿Olvidaste la <a href="{{route('password_recet_get')}}">contraseña?</a></span>
-  </div>
+            <div class="form-group ">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+            </div>
+            <hr>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" value="">
+    Recordar mi usuario
+  </label>
+</div>
+  </form>
+
+
 
 {!! Form::close() !!}
 
 
-
-
-       
-
-
-
-
-
+    </div>
+  </div>
+</div>

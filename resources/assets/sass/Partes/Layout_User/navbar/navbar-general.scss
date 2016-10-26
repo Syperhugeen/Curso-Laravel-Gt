@@ -54,18 +54,18 @@ height: 50px;
   line-height: 40px;
   }}
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: $color-grey1;
+.navbar-default .navbar-nav > li:not(.active) > a:hover,
+.navbar-default .navbar-nav > li:not(.active) > a:focus {
+  color: $color-white;
   -webkit-transform: translate(0, -5px);
   -moz-transform: translate(0, -5px);
   transform: translate(0, -5px);
 }
 
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus {
   color: $color-3;
   text-shadow: 0 0 5px $color-3, 0 0 10px $color-3;
   background-color:transparent;

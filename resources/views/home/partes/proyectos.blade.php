@@ -1,19 +1,26 @@
 
 {{-- contenedor de la parte completa de proyectos en la home --}}
-<div style="color:white;">
+
   {{-- titulo de seccion --}}
- <h2>Proyectos Destacados o Ultimos</h2>
- {{-- contiene por ejemplo varios proyectos --}}
- <div class="contenedor-home-proyectos">    
-    @foreach($Proyectos as $Proyecto)
-      {{-- contiene proyecto indivual --}}
-      <a href="{{$Proyecto->route}}">
-       <div style="color:white;">
-        <img style="height: 50px;" src="{{$Proyecto->url_img}}">
-        <span>{{$Proyecto->name}}</span>
-        <span>{{$Proyecto->description}}</span>        
-       </div>
+ <h2 class="home-section-title">ÚLTIMOS PROYECTOS</h2>
+
+
+{{-- contiene hasta tres proyectos como máximo --}}
+<div class="home-section-display">
+
+      @foreach($Proyectos as $Proyecto)
+      <a href="{{$Proyecto->route}}"> 
+        <div class="media home-section-display-item">
+          <div class="media-left">
+            <img class="media-object img-rounded" src="{{$Proyecto->url_img}}" alt="..."">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{$Proyecto->name}}</h4>
+            <p>{{$Proyecto->description}}</p>
+          </div>
+        </div> 
       </a>
-    @endforeach
- </div>  
+    <hr class="home-section-display-divider">
+      @endforeach
+
 </div>
