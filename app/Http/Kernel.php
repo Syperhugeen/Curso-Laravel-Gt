@@ -29,7 +29,7 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,        
-        'verificad'  =>\Styde\Http\Middleware\RestriccionUsuarioNoVerificado::class,
-        'role'       =>\Styde\Http\Middleware\ControlAcceso::class
+        'verificad'  =>\App\Http\Middleware\RestriccionUsuarioNoVerificado::class,
+        'role'       =>\App\Http\Middleware\ControlAcceso::class
     ];
 }

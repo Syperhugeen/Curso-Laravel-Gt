@@ -28,12 +28,10 @@
               <h3>Inicio de sesión</h3>
               @include('formularios.auth.login_form')
              </div>
-
-             <div class="contenido-auth-deplegado-navbar">              
-               <ul>
-                  <li><a href="{{route('logout')}}">Salir</a></li>
-               </ul>
-             </div>   
+             
+             {{-- contenido a mostrar de user deplsegado --}}
+             @include('layouts.user_layout.header.partes.desplegado_user_auth')
+              
           </div>
 
         </ul>       
