@@ -89,7 +89,7 @@ class AuthController extends Controller
          //me traigo la funcion del repositorio UserRepo y ya Hago el Login de ese Usuario   
          Auth::login($this->UserRepo->setUserRegistro($user,$request)); 
 
-         return redirect()->route('home')
+         return redirect()->route('get_home')
                           ->with('alert' , $user->name . ' Ve a tu Email: ' . $user->email .' y verifica tu cuenta');      
         }  
 
@@ -117,7 +117,7 @@ class AuthController extends Controller
      */
     public function redirectPath()
     {
-        return route('home');
+        return route('get_home');
     }
 
      /**

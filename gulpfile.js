@@ -22,10 +22,10 @@ elixir(function(mix) {
         'Plug-chosen.jquery.js',
         'Plug-ImageSelect.jquery.js',
         'Plug-jquery.maxcharwarning.min.js',
-        'Plug-jquery.tooltip.min.js',
         'Plug-barraprogreso.js',
         'Plug-rating-plugin.js',
         'Plug-bxSlider.js',
+        'Plug-jquery.tooltip.min.js',
         'inicio.js',
         'mis-funciones_personalizadas.js',
         'mis-funciones_personalizadas_para_GoogleAnalitics.js',        
@@ -40,6 +40,7 @@ elixir(function(mix) {
         'Plug-Scroll-Too.js',
         'mis-disparador_De_Form.js',
         'mis-sliders.js',
+        'mis-tooltips.js',
         'fin.js']);
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');

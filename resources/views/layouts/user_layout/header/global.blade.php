@@ -18,6 +18,24 @@
           <li><a href="{{route('get_pagina_proyecto_listado')}}">PROYECTOS</a></li>
           <li><a href="{{route('get_pagina_noticias_noticias_listado')}}">NOTICIAS</a></li>
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
+
+          {{-- aqui pongo el tema de inicio de sesion y datos del user --}}
+          @include('layouts.user_layout.header.auth')
+
+          {{-- contenidos ocultos para mostrar con tooltips --}}
+          <div style="display: none;">
+             <div class="contenido-inicio-de-sesion-navbar">
+              <h3>Inicio de sesión</h3>
+              @include('formularios.auth.login_form')
+             </div>
+
+             <div class="contenido-auth-deplegado-navbar">              
+               <ul>
+                  <li><a href="{{route('logout')}}">Salir</a></li>
+               </ul>
+             </div>   
+          </div>
+
         </ul>       
       </div>    <!-- /.navbar-collapse -->
 

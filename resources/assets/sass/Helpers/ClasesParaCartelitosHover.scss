@@ -1,44 +1,16 @@
 
-.contenedor-header-user-carrito-notificaciones-favoritos {
+.contenedor-default-tooltips {
 	border-radius: 4px; 
-	border: 2px solid $Color-Azul-Wm;
-	background: $Color-Gris-CasiBlanco;
+	border: 3px solid $color-3;
+	background: $color-grey0;
+  padding:6px;
 	
 }
 /* Use this next selector to style things like font-size and line-height: */
-.contenedor-header-user-carrito-notificaciones-favoritos .tooltipster-content {
-	font-family: Arial, sans-serif;
+.contenedor-default-tooltips .tooltipster-content {	
 	font-size: 14px;
 	line-height: 16px;
 	padding: 6px 6px;
 }
 
 
-.contenedor-header-menugrande {
-	border-radius: 4px; 
-	border: 2px solid $Color-Azul-Wm;
-	background: $Color-Gris-CasiBlanco;
-	
-}
-
-.contenedor-header-logo-hover {
-	border-radius: 4px; 
-	border: 2px solid $Color-Azul-Medio-Claro;
-	background: $Color-Gris-CasiBlanco;
-	
-}
-
-/* Use this next selector to style things like font-size and line-height: */
-.contenedor-header-menugrande .tooltipster-content {
-	font-family: Arial, sans-serif;
-	font-size: 14px;
-	line-height: 16px;
-	
-}
-
-.contenedor-header-logo-hover .tooltipster-content {
-	font-family: Arial, sans-serif;
-	font-size: 14px;
-	line-height: 16px;
-	
-}

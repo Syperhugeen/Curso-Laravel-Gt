@@ -43,7 +43,7 @@ protected $Gerarquia = [
 
         if($this->Gerarquia[$user->role] < $this->Gerarquia[$role] )
         {
-            return redirect()->route('home')
+            return redirect()->route('get_home')
                              ->with('alert-rojo' , 'Sin permisos para ingresar a esa pagina ') ; 
         }
 

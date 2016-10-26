@@ -2077,6 +2077,1237 @@ if(!window.console) { var console = { log: function() { } } };
   }
   
 })(jQuery);
+/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
+ * @license MIT */
+
+;(function(root, factory) {
+
+  if (typeof define === 'function' && define.amd) {
+    define(factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory();
+  } else {
+    root.NProgress = factory();
+  }
+
+})(this, function() {
+  var NProgress = {};
+
+  NProgress.version = '0.2.0';
+
+  var Settings = NProgress.settings = {
+    minimum: 0.08,
+    easing: 'ease',
+    positionUsing: '',
+    speed: 200,
+    trickle: true,
+    trickleRate: 0.02,
+    trickleSpeed: 800,
+    showSpinner: true,
+    barSelector: '[role="bar"]',
+    spinnerSelector: '[role="spinner"]',
+    parent: 'body',
+    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+  };
+
+  /**
+   * Updates configuration.
+   *
+   *     NProgress.configure({
+   *       minimum: 0.1
+   *     });
+   */
+  NProgress.configure = function(options) {
+    var key, value;
+    for (key in options) {
+      value = options[key];
+      if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
+    }
+
+    return this;
+  };
+
+  /**
+   * Last number.
+   */
+
+  NProgress.status = null;
+
+  /**
+   * Sets the progress bar status, where `n` is a number from `0.0` to `1.0`.
+   *
+   *     NProgress.set(0.4);
+   *     NProgress.set(1.0);
+   */
+
+  NProgress.set = function(n) {
+    var started = NProgress.isStarted();
+
+    n = clamp(n, Settings.minimum, 1);
+    NProgress.status = (n === 1 ? null : n);
+
+    var progress = NProgress.render(!started),
+        bar      = progress.querySelector(Settings.barSelector),
+        speed    = Settings.speed,
+        ease     = Settings.easing;
+
+    progress.offsetWidth; /* Repaint */
+
+    queue(function(next) {
+      // Set positionUsing if it hasn't already been set
+      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
+
+      // Add transition
+      css(bar, barPositionCSS(n, speed, ease));
+
+      if (n === 1) {
+        // Fade out
+        css(progress, { 
+          transition: 'none', 
+          opacity: 1 
+        });
+        progress.offsetWidth; /* Repaint */
+
+        setTimeout(function() {
+          css(progress, { 
+            transition: 'all ' + speed + 'ms linear', 
+            opacity: 0 
+          });
+          setTimeout(function() {
+            NProgress.remove();
+            next();
+          }, speed);
+        }, speed);
+      } else {
+        setTimeout(next, speed);
+      }
+    });
+
+    return this;
+  };
+
+  NProgress.isStarted = function() {
+    return typeof NProgress.status === 'number';
+  };
+
+  /**
+   * Shows the progress bar.
+   * This is the same as setting the status to 0%, except that it doesn't go backwards.
+   *
+   *     NProgress.start();
+   *
+   */
+  NProgress.start = function() {
+    if (!NProgress.status) NProgress.set(0);
+
+    var work = function() {
+      setTimeout(function() {
+        if (!NProgress.status) return;
+        NProgress.trickle();
+        work();
+      }, Settings.trickleSpeed);
+    };
+
+    if (Settings.trickle) work();
+
+    return this;
+  };
+
+  /**
+   * Hides the progress bar.
+   * This is the *sort of* the same as setting the status to 100%, with the
+   * difference being `done()` makes some placebo effect of some realistic motion.
+   *
+   *     NProgress.done();
+   *
+   * If `true` is passed, it will show the progress bar even if its hidden.
+   *
+   *     NProgress.done(true);
+   */
+
+  NProgress.done = function(force) {
+    if (!force && !NProgress.status) return this;
+
+    return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
+  };
+
+  /**
+   * Increments by a random amount.
+   */
+
+  NProgress.inc = function(amount) {
+    var n = NProgress.status;
+
+    if (!n) {
+      return NProgress.start();
+    } else {
+      if (typeof amount !== 'number') {
+        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
+      }
+
+      n = clamp(n + amount, 0, 0.994);
+      return NProgress.set(n);
+    }
+  };
+
+  NProgress.trickle = function() {
+    return NProgress.inc(Math.random() * Settings.trickleRate);
+  };
+
+  /**
+   * Waits for all supplied jQuery promises and
+   * increases the progress as the promises resolve.
+   *
+   * @param $promise jQUery Promise
+   */
+  (function() {
+    var initial = 0, current = 0;
+
+    NProgress.promise = function($promise) {
+      if (!$promise || $promise.state() === "resolved") {
+        return this;
+      }
+
+      if (current === 0) {
+        NProgress.start();
+      }
+
+      initial++;
+      current++;
+
+      $promise.always(function() {
+        current--;
+        if (current === 0) {
+            initial = 0;
+            NProgress.done();
+        } else {
+            NProgress.set((initial - current) / initial);
+        }
+      });
+
+      return this;
+    };
+
+  })();
+
+  /**
+   * (Internal) renders the progress bar markup based on the `template`
+   * setting.
+   */
+
+  NProgress.render = function(fromStart) {
+    if (NProgress.isRendered()) return document.getElementById('nprogress');
+
+    addClass(document.documentElement, 'nprogress-busy');
+    
+    var progress = document.createElement('div');
+    progress.id = 'nprogress';
+    progress.innerHTML = Settings.template;
+
+    var bar      = progress.querySelector(Settings.barSelector),
+        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
+        parent   = document.querySelector(Settings.parent),
+        spinner;
+    
+    css(bar, {
+      transition: 'all 0 linear',
+      transform: 'translate3d(' + perc + '%,0,0)'
+    });
+
+    if (!Settings.showSpinner) {
+      spinner = progress.querySelector(Settings.spinnerSelector);
+      spinner && removeElement(spinner);
+    }
+
+    if (parent != document.body) {
+      addClass(parent, 'nprogress-custom-parent');
+    }
+
+    parent.appendChild(progress);
+    return progress;
+  };
+
+  /**
+   * Removes the element. Opposite of render().
+   */
+
+  NProgress.remove = function() {
+    removeClass(document.documentElement, 'nprogress-busy');
+    removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
+    var progress = document.getElementById('nprogress');
+    progress && removeElement(progress);
+  };
+
+  /**
+   * Checks if the progress bar is rendered.
+   */
+
+  NProgress.isRendered = function() {
+    return !!document.getElementById('nprogress');
+  };
+
+  /**
+   * Determine which positioning CSS rule to use.
+   */
+
+  NProgress.getPositioningCSS = function() {
+    // Sniff on document.body.style
+    var bodyStyle = document.body.style;
+
+    // Sniff prefixes
+    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
+                       ('MozTransform' in bodyStyle) ? 'Moz' :
+                       ('msTransform' in bodyStyle) ? 'ms' :
+                       ('OTransform' in bodyStyle) ? 'O' : '';
+
+    if (vendorPrefix + 'Perspective' in bodyStyle) {
+      // Modern browsers with 3D support, e.g. Webkit, IE10
+      return 'translate3d';
+    } else if (vendorPrefix + 'Transform' in bodyStyle) {
+      // Browsers without 3D support, e.g. IE9
+      return 'translate';
+    } else {
+      // Browsers without translate() support, e.g. IE7-8
+      return 'margin';
+    }
+  };
+
+  /**
+   * Helpers
+   */
+
+  function clamp(n, min, max) {
+    if (n < min) return min;
+    if (n > max) return max;
+    return n;
+  }
+
+  /**
+   * (Internal) converts a percentage (`0..1`) to a bar translateX
+   * percentage (`-100%..0%`).
+   */
+
+  function toBarPerc(n) {
+    return (-1 + n) * 100;
+  }
+
+
+  /**
+   * (Internal) returns the correct CSS for changing the bar's
+   * position given an n percentage, and speed and ease from Settings
+   */
+
+  function barPositionCSS(n, speed, ease) {
+    var barCSS;
+
+    if (Settings.positionUsing === 'translate3d') {
+      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
+    } else if (Settings.positionUsing === 'translate') {
+      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
+    } else {
+      barCSS = { 'margin-left': toBarPerc(n)+'%' };
+    }
+
+    barCSS.transition = 'all '+speed+'ms '+ease;
+
+    return barCSS;
+  }
+
+  /**
+   * (Internal) Queues a function to be executed.
+   */
+
+  var queue = (function() {
+    var pending = [];
+    
+    function next() {
+      var fn = pending.shift();
+      if (fn) {
+        fn(next);
+      }
+    }
+
+    return function(fn) {
+      pending.push(fn);
+      if (pending.length == 1) next();
+    };
+  })();
+
+  /**
+   * (Internal) Applies css properties to an element, similar to the jQuery 
+   * css method.
+   *
+   * While this helper does assist with vendor prefixed property names, it 
+   * does not perform any manipulation of values prior to setting styles.
+   */
+
+  var css = (function() {
+    var cssPrefixes = [ 'Webkit', 'O', 'Moz', 'ms' ],
+        cssProps    = {};
+
+    function camelCase(string) {
+      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function(match, letter) {
+        return letter.toUpperCase();
+      });
+    }
+
+    function getVendorProp(name) {
+      var style = document.body.style;
+      if (name in style) return name;
+
+      var i = cssPrefixes.length,
+          capName = name.charAt(0).toUpperCase() + name.slice(1),
+          vendorName;
+      while (i--) {
+        vendorName = cssPrefixes[i] + capName;
+        if (vendorName in style) return vendorName;
+      }
+
+      return name;
+    }
+
+    function getStyleProp(name) {
+      name = camelCase(name);
+      return cssProps[name] || (cssProps[name] = getVendorProp(name));
+    }
+
+    function applyCss(element, prop, value) {
+      prop = getStyleProp(prop);
+      element.style[prop] = value;
+    }
+
+    return function(element, properties) {
+      var args = arguments,
+          prop, 
+          value;
+
+      if (args.length == 2) {
+        for (prop in properties) {
+          value = properties[prop];
+          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
+        }
+      } else {
+        applyCss(element, args[1], args[2]);
+      }
+    }
+  })();
+
+  /**
+   * (Internal) Determines if an element or space separated list of class names contains a class name.
+   */
+
+  function hasClass(element, name) {
+    var list = typeof element == 'string' ? element : classList(element);
+    return list.indexOf(' ' + name + ' ') >= 0;
+  }
+
+  /**
+   * (Internal) Adds a class to an element.
+   */
+
+  function addClass(element, name) {
+    var oldList = classList(element),
+        newList = oldList + name;
+
+    if (hasClass(oldList, name)) return; 
+
+    // Trim the opening space.
+    element.className = newList.substring(1);
+  }
+
+  /**
+   * (Internal) Removes a class from an element.
+   */
+
+  function removeClass(element, name) {
+    var oldList = classList(element),
+        newList;
+
+    if (!hasClass(element, name)) return;
+
+    // Replace the class name.
+    newList = oldList.replace(' ' + name + ' ', ' ');
+
+    // Trim the opening and closing spaces.
+    element.className = newList.substring(1, newList.length - 1);
+  }
+
+  /**
+   * (Internal) Gets a space separated list of the class names on the element. 
+   * The list is wrapped with a single space on each end to facilitate finding 
+   * matches within the list.
+   */
+
+  function classList(element) {
+    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
+  }
+
+  /**
+   * (Internal) Removes an element from the DOM.
+   */
+
+  function removeElement(element) {
+    element && element.parentNode && element.parentNode.removeChild(element);
+  }
+
+  return NProgress;
+});
+
+/**
+ * jQuery Bar Rating Plugin v1.1.4
+ *
+ * http://github.com/antennaio/jquery-bar-rating
+ *
+ * Copyright (c) 2012-2015 Kazik Pietruszewski
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ */
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        // Node/CommonJS
+        module.exports = factory(require('jquery'));
+    } else {
+        // browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+
+    var BarRating = (function() {
+
+        function BarRating() {
+            var self = this;
+
+            // wrap element in a wrapper div
+            var wrapElement = function() {
+                var classes = [self.options.wrapperClass];
+
+                if (self.options.theme !== '') {
+                    classes.push('br-theme-' + self.options.theme);
+                }
+                
+                self.$elem.wrap($('<div />', {
+                    'class': classes.join(' ')
+                }));
+            };
+
+            // unwrap element
+            var unwrapElement = function() {
+                self.$elem.unwrap();
+            };
+
+            // return initial option
+            var findInitialOption = function() {
+                var option;
+
+                if (self.options.initialRating) {
+                    option = $('option[value="' + self.options.initialRating  + '"]', self.$elem);
+                } else {
+                    option = $('option:selected', self.$elem);
+                }
+
+                return option;
+            };
+
+            // get data
+            var getData = function(key) {
+                var data = self.$elem.data('barrating');
+
+                if (typeof key !== 'undefined') {
+                    return data[key];
+                }
+
+                return data;
+            };
+
+            // set data
+            var setData = function(key, value) {
+                if (value !== null && typeof value === 'object') {
+                    self.$elem.data('barrating', value);
+                } else {
+                    self.$elem.data('barrating')[key] = value;
+                }
+            };
+
+            // save data on element
+            var saveDataOnElement = function() {
+                var $opt = findInitialOption();
+
+                setData(null, {
+                    userOptions: self.options,
+
+                    // initial rating based on the OPTION value
+                    ratingValue: $opt.val(),
+                    ratingText: ($opt.data('html')) ? $opt.data('html') : $opt.text(),
+
+                    // rating will be restored by calling clear method
+                    originalRatingValue: $opt.val(),
+                    originalRatingText: ($opt.data('html')) ? $opt.data('html') : $opt.text(),
+
+                    // read-only state
+                    readOnly: self.options.readonly,
+
+                    // first OPTION empty - allow deselecting of ratings
+                    deselectable: (!self.$elem.find('option:first').val()) ? true : false
+                });
+            };
+
+            // remove data on element
+            var removeDataOnElement = function() {
+                self.$elem.removeData('barrating');
+            };
+
+            // return current rating text
+            var ratingText = function() {
+                return getData('ratingText');
+            };
+
+            // return current rating value
+            var ratingValue = function() {
+                return getData('ratingValue');
+            };
+
+            // build widget and return jQuery element
+            var buildWidget = function() {
+                var $w = $('<div />', { 'class': 'br-widget' });
+
+                // create A elements that will replace OPTIONs
+                self.$elem.find('option').each(function() {
+                    var val, text, html, $a;
+
+                    val = $(this).val();
+
+                    // create ratings - but only if val is defined
+                    if (val) {
+                        text = $(this).text();
+                        html = $(this).data('html');
+                        if (html) { text = html; }
+
+                        $a = $('<a />', {
+                            'href': '#',
+                            'data-rating-value': val,
+                            'data-rating-text': text,
+                            'html': (self.options.showValues) ? text : ''
+                        });
+
+                        $w.append($a);
+                    }
+
+                });
+
+                // append .br-current-rating div to the widget
+                if (self.options.showSelectedRating) {
+                    $w.append($('<div />', { 'text': '', 'class': 'br-current-rating' }));
+                }
+
+                // additional classes for the widget
+                if (self.options.reverse) {
+                    $w.addClass('br-reverse');
+                }
+
+                if (self.options.readonly) {
+                    $w.addClass('br-readonly');
+                }
+
+                return $w;
+            };
+
+            // return a jQuery function name depending on the 'reverse' setting
+            var nextAllorPreviousAll = function() {
+                if (getData('userOptions').reverse) {
+                    return 'nextAll';
+                } else {
+                    return 'prevAll';
+                }
+            };
+
+            // set the value of the select field
+            var setSelectFieldValue = function(value) {
+                // change selected OPTION in the select field (hidden)
+                self.$elem.find('option[value="' + value + '"]').prop('selected', true);
+                self.$elem.change();
+            };
+
+            // display the currently selected rating
+            var showSelectedRating = function(text) {
+                // text undefined?
+                text = text ? text : ratingText();
+
+                // update .br-current-rating div
+                if (self.options.showSelectedRating) {
+                    self.$elem.parent().find('.br-current-rating').text(text);
+                }
+            };
+
+            // apply style by setting classes on elements
+            var applyStyle = function() {
+                // remove classes
+                self.$widget.find('a').removeClass('br-selected br-current');
+
+                // add classes
+                self.$widget.find('a[data-rating-value="' + ratingValue() + '"]')
+                    .addClass('br-selected br-current')[nextAllorPreviousAll()]()
+                    .addClass('br-selected');
+            };
+
+            // check if the element is deselectable?
+            var isDeselectable = function($element) {
+                return ($element.hasClass('br-current') && getData('deselectable'));
+            };
+
+            // handle click events
+            var attachClickHandler = function($elements) {
+                $elements.on('click.barrating', function(event) {
+                    var $a = $(this),
+                        options = getData('userOptions'),
+                        value,
+                        text;
+
+                    event.preventDefault();
+
+                    $elements.removeClass('br-active br-selected');
+                    $a.addClass('br-selected')[nextAllorPreviousAll()]()
+                        .addClass('br-selected');
+
+                    value = $a.attr('data-rating-value');
+                    text = $a.attr('data-rating-text');
+
+                    // is current and deselectable?
+                    if (isDeselectable($a)) {
+                        $a.removeClass('br-selected br-current')[nextAllorPreviousAll()]()
+                            .removeClass('br-selected br-current');
+                        value = ''; text = '';
+                    } else {
+                        $elements.removeClass('br-current');
+                        $a.addClass('br-current');
+                    }
+
+                    // remember selected rating
+                    setData('ratingValue', value);
+                    setData('ratingText', text);
+
+                    setSelectFieldValue(value);
+                    showSelectedRating(text);
+
+                    // onSelect callback
+                    options.onSelect.call(
+                        self,
+                        ratingValue(),
+                        ratingText(),
+                        event
+                    );
+
+                    return false;
+                });
+            };
+
+            // handle mouseenter events
+            var attachMouseEnterHandler = function($elements) {
+                $elements.on('mouseenter.barrating focus.barrating', function() {
+                    var $a = $(this);
+
+                    $elements.removeClass('br-active br-selected');
+                    $a.addClass('br-active')[nextAllorPreviousAll()]()
+                        .addClass('br-active');
+
+                    showSelectedRating($a.attr('data-rating-text'));
+                });
+            };
+
+            // handle mouseleave events
+            var attachMouseLeaveHandler = function($elements) {
+                self.$widget.on('mouseleave.barrating blur.barrating', function() {
+                    $elements.removeClass('br-active');
+                    showSelectedRating();
+                    applyStyle();
+                });
+            };
+
+            // somewhat primitive way to remove 300ms click delay on touch devices
+            // for a more advanced solution consider setting `fastClicks` option to false
+            // and using a library such as fastclick (https://github.com/ftlabs/fastclick)
+            var fastClicks = function($elements) {
+                $elements.on('touchstart.barrating', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    $(this).click();
+                });
+            };
+
+            // disable clicks
+            var disableClicks = function($elements) {
+                $elements.on('click.barrating', function(event) {
+                    event.preventDefault();
+                });
+            };
+
+            var attachHandlers = function($elements) {
+                // attach click event handler
+                attachClickHandler($elements);
+
+                if (self.options.hoverState) {
+                    // attach mouseenter event handler
+                    attachMouseEnterHandler($elements);
+
+                    // attach mouseleave event handler
+                    attachMouseLeaveHandler($elements);
+                }
+            };
+
+            var detachHandlers = function($elements) {
+                // remove event handlers in the ".barrating" namespace
+                $elements.off('.barrating');
+            };
+
+            var setupHandlers = function(readonly) {
+                $elements = self.$widget.find('a');
+
+                if (fastClicks) {
+                    fastClicks($elements);
+                }
+
+                if (readonly) {
+                    detachHandlers($elements);
+                    disableClicks($elements);
+                } else {
+                    attachHandlers($elements);
+                }
+            };
+
+            this.show = function() {
+                // run only once
+                if (getData()) return;
+
+                // wrap element
+                wrapElement();
+
+                // save data
+                saveDataOnElement();
+
+                // build & append widget to the DOM
+                self.$widget = buildWidget();
+                self.$widget.insertAfter(self.$elem);
+
+                applyStyle();
+
+                showSelectedRating();
+
+                setupHandlers(self.options.readonly);
+
+                // hide the select field
+                self.$elem.hide();
+            };
+
+            this.readonly = function(state) {
+                if (typeof state !== 'boolean' || getData('readOnly') == state) return;
+
+                setupHandlers(state);
+                setData('readOnly', state);
+                self.$widget.toggleClass('br-readonly');
+            };
+
+            this.set = function(value) {
+                var options = getData('userOptions');
+
+                if (!self.$elem.find('option[value="' + value + '"]').val()) return;
+
+                // set data
+                setData('ratingValue', value);
+                setData('ratingText', self.$elem.find('option[value="' + value + '"]').text());
+
+                setSelectFieldValue(ratingValue());
+                showSelectedRating(ratingText());
+
+                applyStyle();
+
+                // onSelect callback
+                if (!options.silent) {
+                    options.onSelect.call(
+                        this,
+                        ratingValue(),
+                        ratingText()
+                    );
+                }
+            };
+
+            this.clear = function() {
+                var options = getData('userOptions');
+
+                // restore original data
+                setData('ratingValue', getData('originalRatingValue'));
+                setData('ratingText', getData('originalRatingText'));
+
+                setSelectFieldValue(ratingValue());
+                showSelectedRating(ratingText());
+
+                applyStyle();
+
+                // onClear callback
+                options.onClear.call(
+                    this,
+                    ratingValue(),
+                    ratingText()
+                );
+            };
+
+            this.destroy = function() {
+                var value = ratingValue();
+                var text = ratingText();
+                var options = getData('userOptions');
+
+                // detach handlers
+                detachHandlers(self.$widget.find('a'));
+
+                // remove widget
+                self.$widget.remove();
+
+                // remove data
+                removeDataOnElement();
+
+                // unwrap the element
+                unwrapElement();
+
+                // show the element
+                self.$elem.show();
+
+                // onDestroy callback
+                options.onDestroy.call(
+                    this,
+                    value,
+                    text
+                );
+            };
+        }
+
+        BarRating.prototype.init = function (options, elem) {
+            this.$elem = $(elem);
+            this.options = $.extend({}, $.fn.barrating.defaults, options);
+
+            return this.options;
+        };
+
+        return BarRating;
+    })();
+
+    $.fn.barrating = function (method, options) {
+        return this.each(function () {
+            var plugin = new BarRating();
+
+            // plugin works with select fields
+            if (!$(this).is('select')) {
+                $.error('Sorry, this plugin only works with select fields.');
+            }
+
+            // method supplied
+            if (plugin.hasOwnProperty(method)) {
+                plugin.init(options, this);
+                if (method === 'show') {
+                    return plugin.show(options);
+                } else {
+                    // plugin exists?
+                    if (plugin.$elem.data('barrating')) {
+                        plugin.$widget = $(this).next('.br-widget');
+                        return plugin[method](options);
+                    }
+                }
+
+            // no method supplied or only options supplied
+            } else if (typeof method === 'object' || !method) {
+                options = method;
+                plugin.init(options, this);
+                return plugin.show();
+
+            } else {
+                $.error('Method ' + method + ' does not exist on jQuery.barrating');
+            }
+        });
+    };
+
+    $.fn.barrating.defaults = {
+        theme:'',
+        initialRating:null, // initial rating
+        showValues:false, // display rating values on the bars?
+        showSelectedRating:true, // append a div with a rating to the widget?
+        reverse:false, // reverse the rating?
+        readonly:false, // make the rating ready-only?
+        fastClicks:true, // remove 300ms click delay on touch devices?
+        hoverState:true, // change state on hover?
+        silent:false, // supress callbacks when controlling ratings programatically
+        wrapperClass:'br-wrapper', // class applied to wrapper div
+        onSelect:function (value, text, event) {
+        }, // callback fired when a rating is selected
+        onClear:function (value, text) {
+        }, // callback fired when a rating is cleared
+        onDestroy:function (value, text) {
+        } // callback fired when a widget is destroyed
+    };
+
+    $.fn.barrating.BarRating = BarRating;
+
+}));
+
+
+// bootstrap-rating - v1.3.2 - (c) 2016 dreyescat 
+// https://github.com/dreyescat/bootstrap-rating MIT
+
+(function ($, undefined) {
+  'use strict';
+
+  var OFFSET = 5;
+
+  function Rating(element, options) {
+    this.$input = $(element);
+    this.$rating = $('<span></span>').css({
+      cursor: 'default'
+    }).insertBefore(this.$input);
+    // Merge data and parameter options.
+    // Those provided as parameter prevail over the data ones.
+    this.options = (function (opts) {
+      // Sanitize start, stop, step, and fractions.
+      // All of them start, stop, and step must be integers.
+      opts.start = parseInt(opts.start, 10);
+      opts.start = isNaN(opts.start) ? undefined : opts.start;
+      // In case we don't have a valid stop rate try to get a reasonable
+      // one based on the existence of a valid start rate.
+      opts.stop = parseInt(opts.stop, 10);
+      opts.stop = isNaN(opts.stop) ?
+        opts.start + OFFSET || undefined : opts.stop;
+      // 0 step is ignored.
+      opts.step = parseInt(opts.step, 10) || undefined;
+      // Symbol fractions and scale (number of significant digits).
+      // 0 is ignored and negative numbers are turned to positive.
+      opts.fractions = Math.abs(parseInt(opts.fractions, 10)) || undefined;
+      opts.scale = Math.abs(parseInt(opts.scale, 10)) || undefined;
+
+      // Extend/Override the default options with those provided either as
+      // data attributes or function parameters.
+      opts = $.extend({}, $.fn.rating.defaults, opts);
+      // Inherit default filled if none is defined for the selected symbol.
+      opts.filledSelected = opts.filledSelected || opts.filled;
+      return opts;
+    }($.extend({}, this.$input.data(), options)));
+
+    this._init();
+  };
+
+  Rating.prototype = {
+    _init: function () {
+      var rating = this,
+          $input = this.$input,
+          $rating = this.$rating;
+
+      var ifEnabled = function (f) {
+        return function (e) {
+          // According to the W3C attribute readonly is not allowed on input
+          // elements with type hidden.
+          // Keep readonly prop for legacy but its use should be deprecated.
+          if (!$input.prop('disabled') && !$input.prop('readonly') &&
+              $input.data('readonly') === undefined) {
+            f.call(this, e);
+          }
+        }
+      };
+
+      // Build the rating control.
+      for (var i = 1; i <= this._rateToIndex(this.options.stop); i++) {
+        // Create the rating symbol container.
+        var $symbol = $('<div class="rating-symbol"></div>').css({
+            display: 'inline-block',
+            position: 'relative'
+        });
+        // Add background symbol to the symbol container.
+        $('<div class="rating-symbol-background ' + this.options.empty + '"></div>')
+          .appendTo($symbol);
+        // Add foreground symbol to the symbol container.
+        // The filled icon is wrapped with a div to allow fractional selection.
+        $('<div class="rating-symbol-foreground"></div>')
+          .append('<span></span>')
+          .css({
+            display: 'inline-block',
+            position: 'absolute',
+            overflow: 'hidden',
+            left: 0,
+            // Overspecify right and left to 0 and let the container direction
+            // decide which one is going to take precedence according to the
+            // ltr/rtl direction.
+            // (https://developer.mozilla.org/en-US/docs/Web/CSS/right)
+            // When both the right CSS property and the left CSS property are
+            // defined, the position of the element is overspecified. In that
+            // case, the left value has precedence when the container is
+            // left-to-right (that is that the right computed value is set to
+            // -left), and the right value has precedence when the container is
+            // right-to-left (that is that the left computed value is set to
+            // -right).
+            right: 0,
+            width: 0
+          }).appendTo($symbol);
+        $rating.append($symbol);
+        this.options.extendSymbol.call($symbol, this._indexToRate(i));
+      }
+      // Initialize the rating control with the associated input value rate.
+      this._updateRate($input.val());
+
+      // Keep rating control and its associated input in sync.
+      $input
+        .on('change', function () {
+          rating._updateRate($(this).val());
+        });
+
+      var fractionalIndex = function (e) {
+        var $symbol = $(e.currentTarget);
+        // Calculate the distance from the mouse pointer to the origin of the
+        // symbol. We need to be careful with the CSS direction. If we are
+        // right-to-left then the symbol starts at the right. So we have to add
+        // the symbol width to the left offset to get the CSS rigth position.
+        var x = Math.abs((e.pageX || e.originalEvent.touches[0].pageX) -
+          (($symbol.css('direction') === 'rtl' && $symbol.width()) +
+          $symbol.offset().left));
+
+        // NOTE: When the mouse pointer is close to the left side of the symbol
+        // a negative x is returned. Probably some precision error in the
+        // calculation.
+        // x should never be less than 0 because this would mean that we are in
+        // the previous symbol.
+        x = x > 0 ? x : rating.options.scale * 0.1;
+        return $symbol.index() + x / $symbol.width();
+      };
+      // Keep the current highlighted index (fractional or not).
+      var index;
+      $rating
+        .on('mousedown touchstart', '.rating-symbol', ifEnabled(function (e) {
+          // Set input 'trigger' the change event.
+          $input.val(rating._indexToRate(fractionalIndex(e))).change();
+        }))
+        .on('mousemove touchmove', '.rating-symbol', ifEnabled(function (e) {
+          var current = rating._roundToFraction(fractionalIndex(e));
+          if (current !== index) {
+            // Trigger pseudo rate leave event if the mouse pointer is not
+            // leaving from another symbol (mouseleave).
+            if (index !== undefined) $(this).trigger('rating.rateleave');
+            // Update index and trigger rate enter event.
+            index = current;
+            $(this).trigger('rating.rateenter', [rating._indexToRate(index)]);
+          }
+          // Fill the symbols as fractions chunks.
+          rating._fillUntil(current);
+        }))
+        .on('mouseleave touchend', '.rating-symbol', ifEnabled(function () {
+          // When a symbol is left, reset index and trigger rate leave event.
+          index = undefined;
+          $(this).trigger('rating.rateleave');
+          // Restore on hover out.
+          rating._fillUntil(rating._rateToIndex(parseFloat($input.val())));
+        }));
+
+    },
+    // Fill rating symbols until index.
+    _fillUntil: function (index) {
+      var $rating = this.$rating;
+      // Get the index of the last whole symbol.
+      var i = Math.floor(index);
+      // Hide completely hidden symbols background.
+      $rating.find('.rating-symbol-background')
+        .css('visibility', 'visible')
+        .slice(0, i).css('visibility', 'hidden');
+      var $rates = $rating.find('.rating-symbol-foreground');
+      // Reset foreground
+      $rates.width(0);
+      // Fill all the foreground symbols up to the selected one.
+      $rates.slice(0, i).width('auto')
+        .find('span').attr('class', this.options.filled);
+      // Amend selected symbol.
+      $rates.eq(index % 1 ? i : i - 1)
+        .find('span').attr('class', this.options.filledSelected);
+      // Partially fill the fractional one.
+      $rates.eq(i).width(index % 1 * 100 + '%');
+    },
+    // Calculate the rate of an index according the the start and step.
+    _indexToRate: function (index) {
+      return this.options.start + Math.floor(index) * this.options.step +
+        this.options.step * this._roundToFraction(index % 1);
+    },
+    // Calculate the corresponding index for a rate.
+    _rateToIndex: function (rate) {
+      return (rate - this.options.start) / this.options.step;
+    },
+    // Round index to the configured opts.fractions.
+    _roundToFraction: function (index) {
+      // Get the closest top fraction.
+      var fraction = Math.ceil(index % 1 * this.options.fractions) / this.options.fractions;
+      // Truncate decimal trying to avoid float precission issues.
+      var p = Math.pow(10, this.options.scale);
+      return Math.floor(index) + Math.floor(fraction * p) / p;
+    },
+    // Check the rate is in the proper range [start..stop].
+    _contains: function (rate) {
+      var start = this.options.step > 0 ? this.options.start : this.options.stop;
+      var stop = this.options.step > 0 ? this.options.stop : this.options.start;
+      return start <= rate && rate <= stop;
+    },
+    // Update empty and filled rating symbols according to a rate.
+    _updateRate: function (rate) {
+      var value = parseFloat(rate);
+      if (this._contains(value)) {
+        this._fillUntil(this._rateToIndex(value));
+        this.$input.val(value);
+      }
+    },
+    rate: function (value) {
+      if (value === undefined) {
+        return this.$input.val();
+      }
+      this._updateRate(value);
+    }
+  };
+
+  $.fn.rating = function (options) {
+    var args = Array.prototype.slice.call(arguments, 1),
+        result;
+    this.each(function () {
+      var $input = $(this);
+      var rating = $input.data('rating');
+      if (!rating) {
+        $input.data('rating', (rating = new Rating(this, options)));
+      }
+      // Underscore are used for private methods.
+      if (typeof options === 'string' && options[0] !== '_') {
+        result = rating[options].apply(rating, args);
+      }
+    });
+    return result || this;
+  };
+
+  // Plugin defaults.
+  $.fn.rating.defaults = {
+    filled: '',
+    filledSelected: undefined,
+    empty: '',
+    start: 0,
+    stop: OFFSET,
+    step: 1,
+    fractions: 1,
+    scale: 3,
+    extendSymbol: function (rate) {},
+  };
+
+  $(function () {
+    $('input.rating').rating();
+  });
+}(jQuery));
+/**
+ * bxSlider v4.2.5
+ * Copyright 2013-2015 Steven Wanderski
+ * Written while drinking Belgian ales and listening to jazz
+
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+
+!function(a){var b={mode:"horizontal",slideSelector:"",infiniteLoop:!0,hideControlOnEnd:!1,speed:500,easing:null,slideMargin:0,startSlide:0,randomStart:!1,captions:!1,ticker:!1,tickerHover:!1,adaptiveHeight:!1,adaptiveHeightSpeed:500,video:!1,useCSS:!0,preloadImages:"visible",responsive:!0,slideZIndex:50,wrapperClass:"bx-wrapper",touchEnabled:!0,swipeThreshold:50,oneToOneTouch:!0,preventDefaultSwipeX:!0,preventDefaultSwipeY:!1,ariaLive:!0,ariaHidden:!0,keyboardEnabled:!1,pager:!0,pagerType:"full",pagerShortSeparator:" / ",pagerSelector:null,buildPager:null,pagerCustom:null,controls:!0,nextText:"Next",prevText:"Prev",nextSelector:null,prevSelector:null,autoControls:!1,startText:"Start",stopText:"Stop",autoControlsCombine:!1,autoControlsSelector:null,auto:!1,pause:4e3,autoStart:!0,autoDirection:"next",stopAutoOnClick:!1,autoHover:!1,autoDelay:0,autoSlideForOnePage:!1,minSlides:1,maxSlides:1,moveSlides:0,slideWidth:0,shrinkItems:!1,onSliderLoad:function(){return!0},onSlideBefore:function(){return!0},onSlideAfter:function(){return!0},onSlideNext:function(){return!0},onSlidePrev:function(){return!0},onSliderResize:function(){return!0}};a.fn.bxSlider=function(c){if(0===this.length)return this;if(this.length>1)return this.each(function(){a(this).bxSlider(c)}),this;var d={},e=this,f=a(window).width(),g=a(window).height();if(!a(e).data("bxSlider")){var h=function(){a(e).data("bxSlider")||(d.settings=a.extend({},b,c),d.settings.slideWidth=parseInt(d.settings.slideWidth),d.children=e.children(d.settings.slideSelector),d.children.length<d.settings.minSlides&&(d.settings.minSlides=d.children.length),d.children.length<d.settings.maxSlides&&(d.settings.maxSlides=d.children.length),d.settings.randomStart&&(d.settings.startSlide=Math.floor(Math.random()*d.children.length)),d.active={index:d.settings.startSlide},d.carousel=d.settings.minSlides>1||d.settings.maxSlides>1?!0:!1,d.carousel&&(d.settings.preloadImages="all"),d.minThreshold=d.settings.minSlides*d.settings.slideWidth+(d.settings.minSlides-1)*d.settings.slideMargin,d.maxThreshold=d.settings.maxSlides*d.settings.slideWidth+(d.settings.maxSlides-1)*d.settings.slideMargin,d.working=!1,d.controls={},d.interval=null,d.animProp="vertical"===d.settings.mode?"top":"left",d.usingCSS=d.settings.useCSS&&"fade"!==d.settings.mode&&function(){for(var a=document.createElement("div"),b=["WebkitPerspective","MozPerspective","OPerspective","msPerspective"],c=0;c<b.length;c++)if(void 0!==a.style[b[c]])return d.cssPrefix=b[c].replace("Perspective","").toLowerCase(),d.animProp="-"+d.cssPrefix+"-transform",!0;return!1}(),"vertical"===d.settings.mode&&(d.settings.maxSlides=d.settings.minSlides),e.data("origStyle",e.attr("style")),e.children(d.settings.slideSelector).each(function(){a(this).data("origStyle",a(this).attr("style"))}),j())},j=function(){var b=d.children.eq(d.settings.startSlide);e.wrap('<div class="'+d.settings.wrapperClass+'"><div class="bx-viewport"></div></div>'),d.viewport=e.parent(),d.settings.ariaLive&&!d.settings.ticker&&d.viewport.attr("aria-live","polite"),d.loader=a('<div class="bx-loading" />'),d.viewport.prepend(d.loader),e.css({width:"horizontal"===d.settings.mode?1e3*d.children.length+215+"%":"auto",position:"relative"}),d.usingCSS&&d.settings.easing?e.css("-"+d.cssPrefix+"-transition-timing-function",d.settings.easing):d.settings.easing||(d.settings.easing="swing"),d.viewport.css({width:"100%",overflow:"hidden",position:"relative"}),d.viewport.parent().css({maxWidth:n()}),d.settings.pager||d.settings.controls||d.viewport.parent().css({margin:"0 auto 0px"}),d.children.css({"float":"horizontal"===d.settings.mode?"left":"none",listStyle:"none",position:"relative"}),d.children.css("width",o()),"horizontal"===d.settings.mode&&d.settings.slideMargin>0&&d.children.css("marginRight",d.settings.slideMargin),"vertical"===d.settings.mode&&d.settings.slideMargin>0&&d.children.css("marginBottom",d.settings.slideMargin),"fade"===d.settings.mode&&(d.children.css({position:"absolute",zIndex:0,display:"none"}),d.children.eq(d.settings.startSlide).css({zIndex:d.settings.slideZIndex,display:"block"})),d.controls.el=a('<div class="bx-controls" />'),d.settings.captions&&y(),d.active.last=d.settings.startSlide===q()-1,d.settings.video&&e.fitVids(),("all"===d.settings.preloadImages||d.settings.ticker)&&(b=d.children),d.settings.ticker?d.settings.pager=!1:(d.settings.controls&&w(),d.settings.auto&&d.settings.autoControls&&x(),d.settings.pager&&v(),(d.settings.controls||d.settings.autoControls||d.settings.pager)&&d.viewport.after(d.controls.el)),k(b,l)},k=function(b,c){var d=b.find('img:not([src=""]), iframe').length,e=0;return 0===d?void c():void b.find('img:not([src=""]), iframe').each(function(){a(this).one("load error",function(){++e===d&&c()}).each(function(){this.complete&&a(this).load()})})},l=function(){if(d.settings.infiniteLoop&&"fade"!==d.settings.mode&&!d.settings.ticker){var b="vertical"===d.settings.mode?d.settings.minSlides:d.settings.maxSlides,c=d.children.slice(0,b).clone(!0).addClass("bx-clone"),f=d.children.slice(-b).clone(!0).addClass("bx-clone");d.settings.ariaHidden&&(c.attr("aria-hidden",!0),f.attr("aria-hidden",!0)),e.append(c).prepend(f)}d.loader.remove(),s(),"vertical"===d.settings.mode&&(d.settings.adaptiveHeight=!0),d.viewport.height(m()),e.redrawSlider(),d.settings.onSliderLoad.call(e,d.active.index),d.initialized=!0,d.settings.responsive&&a(window).bind("resize",S),d.settings.auto&&d.settings.autoStart&&(q()>1||d.settings.autoSlideForOnePage)&&I(),d.settings.ticker&&J(),d.settings.pager&&E(d.settings.startSlide),d.settings.controls&&H(),d.settings.touchEnabled&&!d.settings.ticker&&N(),d.settings.keyboardEnabled&&!d.settings.ticker&&a(document).keydown(M)},m=function(){var b=0,c=a();if("vertical"===d.settings.mode||d.settings.adaptiveHeight)if(d.carousel){var e=1===d.settings.moveSlides?d.active.index:d.active.index*r();for(c=d.children.eq(e),i=1;i<=d.settings.maxSlides-1;i++)c=e+i>=d.children.length?c.add(d.children.eq(i-1)):c.add(d.children.eq(e+i))}else c=d.children.eq(d.active.index);else c=d.children;return"vertical"===d.settings.mode?(c.each(function(c){b+=a(this).outerHeight()}),d.settings.slideMargin>0&&(b+=d.settings.slideMargin*(d.settings.minSlides-1))):b=Math.max.apply(Math,c.map(function(){return a(this).outerHeight(!1)}).get()),"border-box"===d.viewport.css("box-sizing")?b+=parseFloat(d.viewport.css("padding-top"))+parseFloat(d.viewport.css("padding-bottom"))+parseFloat(d.viewport.css("border-top-width"))+parseFloat(d.viewport.css("border-bottom-width")):"padding-box"===d.viewport.css("box-sizing")&&(b+=parseFloat(d.viewport.css("padding-top"))+parseFloat(d.viewport.css("padding-bottom"))),b},n=function(){var a="100%";return d.settings.slideWidth>0&&(a="horizontal"===d.settings.mode?d.settings.maxSlides*d.settings.slideWidth+(d.settings.maxSlides-1)*d.settings.slideMargin:d.settings.slideWidth),a},o=function(){var a=d.settings.slideWidth,b=d.viewport.width();if(0===d.settings.slideWidth||d.settings.slideWidth>b&&!d.carousel||"vertical"===d.settings.mode)a=b;else if(d.settings.maxSlides>1&&"horizontal"===d.settings.mode){if(b>d.maxThreshold)return a;b<d.minThreshold?a=(b-d.settings.slideMargin*(d.settings.minSlides-1))/d.settings.minSlides:d.settings.shrinkItems&&(a=Math.floor((b+d.settings.slideMargin)/Math.ceil((b+d.settings.slideMargin)/(a+d.settings.slideMargin))-d.settings.slideMargin))}return a},p=function(){var a=1,b=null;return"horizontal"===d.settings.mode&&d.settings.slideWidth>0?d.viewport.width()<d.minThreshold?a=d.settings.minSlides:d.viewport.width()>d.maxThreshold?a=d.settings.maxSlides:(b=d.children.first().width()+d.settings.slideMargin,a=Math.floor((d.viewport.width()+d.settings.slideMargin)/b)):"vertical"===d.settings.mode&&(a=d.settings.minSlides),a},q=function(){var a=0,b=0,c=0;if(d.settings.moveSlides>0)if(d.settings.infiniteLoop)a=Math.ceil(d.children.length/r());else for(;b<d.children.length;)++a,b=c+p(),c+=d.settings.moveSlides<=p()?d.settings.moveSlides:p();else a=Math.ceil(d.children.length/p());return a},r=function(){return d.settings.moveSlides>0&&d.settings.moveSlides<=p()?d.settings.moveSlides:p()},s=function(){var a,b,c;d.children.length>d.settings.maxSlides&&d.active.last&&!d.settings.infiniteLoop?"horizontal"===d.settings.mode?(b=d.children.last(),a=b.position(),t(-(a.left-(d.viewport.width()-b.outerWidth())),"reset",0)):"vertical"===d.settings.mode&&(c=d.children.length-d.settings.minSlides,a=d.children.eq(c).position(),t(-a.top,"reset",0)):(a=d.children.eq(d.active.index*r()).position(),d.active.index===q()-1&&(d.active.last=!0),void 0!==a&&("horizontal"===d.settings.mode?t(-a.left,"reset",0):"vertical"===d.settings.mode&&t(-a.top,"reset",0)))},t=function(b,c,f,g){var h,i;d.usingCSS?(i="vertical"===d.settings.mode?"translate3d(0, "+b+"px, 0)":"translate3d("+b+"px, 0, 0)",e.css("-"+d.cssPrefix+"-transition-duration",f/1e3+"s"),"slide"===c?(e.css(d.animProp,i),0!==f?e.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",function(b){a(b.target).is(e)&&(e.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"),F())}):F()):"reset"===c?e.css(d.animProp,i):"ticker"===c&&(e.css("-"+d.cssPrefix+"-transition-timing-function","linear"),e.css(d.animProp,i),0!==f?e.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",function(b){a(b.target).is(e)&&(e.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"),t(g.resetValue,"reset",0),K())}):(t(g.resetValue,"reset",0),K()))):(h={},h[d.animProp]=b,"slide"===c?e.animate(h,f,d.settings.easing,function(){F()}):"reset"===c?e.css(d.animProp,b):"ticker"===c&&e.animate(h,f,"linear",function(){t(g.resetValue,"reset",0),K()}))},u=function(){for(var b="",c="",e=q(),f=0;e>f;f++)c="",d.settings.buildPager&&a.isFunction(d.settings.buildPager)||d.settings.pagerCustom?(c=d.settings.buildPager(f),d.pagerEl.addClass("bx-custom-pager")):(c=f+1,d.pagerEl.addClass("bx-default-pager")),b+='<div class="bx-pager-item"><a href="" data-slide-index="'+f+'" class="bx-pager-link">'+c+"</a></div>";d.pagerEl.html(b)},v=function(){d.settings.pagerCustom?d.pagerEl=a(d.settings.pagerCustom):(d.pagerEl=a('<div class="bx-pager" />'),d.settings.pagerSelector?a(d.settings.pagerSelector).html(d.pagerEl):d.controls.el.addClass("bx-has-pager").append(d.pagerEl),u()),d.pagerEl.on("click touchend","a",D)},w=function(){d.controls.next=a('<a class="bx-next" href="">'+d.settings.nextText+"</a>"),d.controls.prev=a('<a class="bx-prev" href="">'+d.settings.prevText+"</a>"),d.controls.next.bind("click touchend",z),d.controls.prev.bind("click touchend",A),d.settings.nextSelector&&a(d.settings.nextSelector).append(d.controls.next),d.settings.prevSelector&&a(d.settings.prevSelector).append(d.controls.prev),d.settings.nextSelector||d.settings.prevSelector||(d.controls.directionEl=a('<div class="bx-controls-direction" />'),d.controls.directionEl.append(d.controls.prev).append(d.controls.next),d.controls.el.addClass("bx-has-controls-direction").append(d.controls.directionEl))},x=function(){d.controls.start=a('<div class="bx-controls-auto-item"><a class="bx-start" href="">'+d.settings.startText+"</a></div>"),d.controls.stop=a('<div class="bx-controls-auto-item"><a class="bx-stop" href="">'+d.settings.stopText+"</a></div>"),d.controls.autoEl=a('<div class="bx-controls-auto" />'),d.controls.autoEl.on("click",".bx-start",B),d.controls.autoEl.on("click",".bx-stop",C),d.settings.autoControlsCombine?d.controls.autoEl.append(d.controls.start):d.controls.autoEl.append(d.controls.start).append(d.controls.stop),d.settings.autoControlsSelector?a(d.settings.autoControlsSelector).html(d.controls.autoEl):d.controls.el.addClass("bx-has-controls-auto").append(d.controls.autoEl),G(d.settings.autoStart?"stop":"start")},y=function(){d.children.each(function(b){var c=a(this).find("img:first").attr("title");void 0!==c&&(""+c).length&&a(this).append('<div class="bx-caption"><span>'+c+"</span></div>")})},z=function(a){a.preventDefault(),d.controls.el.hasClass("disabled")||(d.settings.auto&&d.settings.stopAutoOnClick&&e.stopAuto(),e.goToNextSlide())},A=function(a){a.preventDefault(),d.controls.el.hasClass("disabled")||(d.settings.auto&&d.settings.stopAutoOnClick&&e.stopAuto(),e.goToPrevSlide())},B=function(a){e.startAuto(),a.preventDefault()},C=function(a){e.stopAuto(),a.preventDefault()},D=function(b){var c,f;b.preventDefault(),d.controls.el.hasClass("disabled")||(d.settings.auto&&d.settings.stopAutoOnClick&&e.stopAuto(),c=a(b.currentTarget),void 0!==c.attr("data-slide-index")&&(f=parseInt(c.attr("data-slide-index")),f!==d.active.index&&e.goToSlide(f)))},E=function(b){var c=d.children.length;return"short"===d.settings.pagerType?(d.settings.maxSlides>1&&(c=Math.ceil(d.children.length/d.settings.maxSlides)),void d.pagerEl.html(b+1+d.settings.pagerShortSeparator+c)):(d.pagerEl.find("a").removeClass("active"),void d.pagerEl.each(function(c,d){a(d).find("a").eq(b).addClass("active")}))},F=function(){if(d.settings.infiniteLoop){var a="";0===d.active.index?a=d.children.eq(0).position():d.active.index===q()-1&&d.carousel?a=d.children.eq((q()-1)*r()).position():d.active.index===d.children.length-1&&(a=d.children.eq(d.children.length-1).position()),a&&("horizontal"===d.settings.mode?t(-a.left,"reset",0):"vertical"===d.settings.mode&&t(-a.top,"reset",0))}d.working=!1,d.settings.onSlideAfter.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index)},G=function(a){d.settings.autoControlsCombine?d.controls.autoEl.html(d.controls[a]):(d.controls.autoEl.find("a").removeClass("active"),d.controls.autoEl.find("a:not(.bx-"+a+")").addClass("active"))},H=function(){1===q()?(d.controls.prev.addClass("disabled"),d.controls.next.addClass("disabled")):!d.settings.infiniteLoop&&d.settings.hideControlOnEnd&&(0===d.active.index?(d.controls.prev.addClass("disabled"),d.controls.next.removeClass("disabled")):d.active.index===q()-1?(d.controls.next.addClass("disabled"),d.controls.prev.removeClass("disabled")):(d.controls.prev.removeClass("disabled"),d.controls.next.removeClass("disabled")))},I=function(){if(d.settings.autoDelay>0){setTimeout(e.startAuto,d.settings.autoDelay)}else e.startAuto(),a(window).focus(function(){e.startAuto()}).blur(function(){e.stopAuto()});d.settings.autoHover&&e.hover(function(){d.interval&&(e.stopAuto(!0),d.autoPaused=!0)},function(){d.autoPaused&&(e.startAuto(!0),d.autoPaused=null)})},J=function(){var b,c,f,g,h,i,j,k,l=0;"next"===d.settings.autoDirection?e.append(d.children.clone().addClass("bx-clone")):(e.prepend(d.children.clone().addClass("bx-clone")),b=d.children.first().position(),l="horizontal"===d.settings.mode?-b.left:-b.top),t(l,"reset",0),d.settings.pager=!1,d.settings.controls=!1,d.settings.autoControls=!1,d.settings.tickerHover&&(d.usingCSS?(g="horizontal"===d.settings.mode?4:5,d.viewport.hover(function(){c=e.css("-"+d.cssPrefix+"-transform"),f=parseFloat(c.split(",")[g]),t(f,"reset",0)},function(){k=0,d.children.each(function(b){k+="horizontal"===d.settings.mode?a(this).outerWidth(!0):a(this).outerHeight(!0)}),h=d.settings.speed/k,i="horizontal"===d.settings.mode?"left":"top",j=h*(k-Math.abs(parseInt(f))),K(j)})):d.viewport.hover(function(){e.stop()},function(){k=0,d.children.each(function(b){k+="horizontal"===d.settings.mode?a(this).outerWidth(!0):a(this).outerHeight(!0)}),h=d.settings.speed/k,i="horizontal"===d.settings.mode?"left":"top",j=h*(k-Math.abs(parseInt(e.css(i)))),K(j)})),K()},K=function(a){var b,c,f,g=a?a:d.settings.speed,h={left:0,top:0},i={left:0,top:0};"next"===d.settings.autoDirection?h=e.find(".bx-clone").first().position():i=d.children.first().position(),b="horizontal"===d.settings.mode?-h.left:-h.top,c="horizontal"===d.settings.mode?-i.left:-i.top,f={resetValue:c},t(b,"ticker",g,f)},L=function(b){var c=a(window),d={top:c.scrollTop(),left:c.scrollLeft()},e=b.offset();return d.right=d.left+c.width(),d.bottom=d.top+c.height(),e.right=e.left+b.outerWidth(),e.bottom=e.top+b.outerHeight(),!(d.right<e.left||d.left>e.right||d.bottom<e.top||d.top>e.bottom)},M=function(a){var b=document.activeElement.tagName.toLowerCase(),c="input|textarea",d=new RegExp(b,["i"]),f=d.exec(c);if(null==f&&L(e)){if(39===a.keyCode)return z(a),!1;if(37===a.keyCode)return A(a),!1}},N=function(){d.touch={start:{x:0,y:0},end:{x:0,y:0}},d.viewport.bind("touchstart MSPointerDown pointerdown",O),d.viewport.on("click",".bxslider a",function(a){d.viewport.hasClass("click-disabled")&&(a.preventDefault(),d.viewport.removeClass("click-disabled"))})},O=function(a){if(d.controls.el.addClass("disabled"),d.working)a.preventDefault(),d.controls.el.removeClass("disabled");else{d.touch.originalPos=e.position();var b=a.originalEvent,c="undefined"!=typeof b.changedTouches?b.changedTouches:[b];d.touch.start.x=c[0].pageX,d.touch.start.y=c[0].pageY,d.viewport.get(0).setPointerCapture&&(d.pointerId=b.pointerId,d.viewport.get(0).setPointerCapture(d.pointerId)),d.viewport.bind("touchmove MSPointerMove pointermove",Q),d.viewport.bind("touchend MSPointerUp pointerup",R),d.viewport.bind("MSPointerCancel pointercancel",P)}},P=function(a){t(d.touch.originalPos.left,"reset",0),d.controls.el.removeClass("disabled"),d.viewport.unbind("MSPointerCancel pointercancel",P),d.viewport.unbind("touchmove MSPointerMove pointermove",Q),d.viewport.unbind("touchend MSPointerUp pointerup",R),d.viewport.get(0).releasePointerCapture&&d.viewport.get(0).releasePointerCapture(d.pointerId)},Q=function(a){var b=a.originalEvent,c="undefined"!=typeof b.changedTouches?b.changedTouches:[b],e=Math.abs(c[0].pageX-d.touch.start.x),f=Math.abs(c[0].pageY-d.touch.start.y),g=0,h=0;3*e>f&&d.settings.preventDefaultSwipeX?a.preventDefault():3*f>e&&d.settings.preventDefaultSwipeY&&a.preventDefault(),"fade"!==d.settings.mode&&d.settings.oneToOneTouch&&("horizontal"===d.settings.mode?(h=c[0].pageX-d.touch.start.x,g=d.touch.originalPos.left+h):(h=c[0].pageY-d.touch.start.y,g=d.touch.originalPos.top+h),t(g,"reset",0))},R=function(a){d.viewport.unbind("touchmove MSPointerMove pointermove",Q),d.controls.el.removeClass("disabled");var b=a.originalEvent,c="undefined"!=typeof b.changedTouches?b.changedTouches:[b],f=0,g=0;d.touch.end.x=c[0].pageX,d.touch.end.y=c[0].pageY,"fade"===d.settings.mode?(g=Math.abs(d.touch.start.x-d.touch.end.x),g>=d.settings.swipeThreshold&&(d.touch.start.x>d.touch.end.x?e.goToNextSlide():e.goToPrevSlide(),e.stopAuto())):("horizontal"===d.settings.mode?(g=d.touch.end.x-d.touch.start.x,f=d.touch.originalPos.left):(g=d.touch.end.y-d.touch.start.y,f=d.touch.originalPos.top),!d.settings.infiniteLoop&&(0===d.active.index&&g>0||d.active.last&&0>g)?t(f,"reset",200):Math.abs(g)>=d.settings.swipeThreshold?(0>g?e.goToNextSlide():e.goToPrevSlide(),e.stopAuto()):t(f,"reset",200)),d.viewport.unbind("touchend MSPointerUp pointerup",R),d.viewport.get(0).releasePointerCapture&&d.viewport.get(0).releasePointerCapture(d.pointerId)},S=function(b){if(d.initialized)if(d.working)window.setTimeout(S,10);else{var c=a(window).width(),h=a(window).height();(f!==c||g!==h)&&(f=c,g=h,e.redrawSlider(),d.settings.onSliderResize.call(e,d.active.index))}},T=function(a){var b=p();d.settings.ariaHidden&&!d.settings.ticker&&(d.children.attr("aria-hidden","true"),d.children.slice(a,a+b).attr("aria-hidden","false"))},U=function(a){return 0>a?d.settings.infiniteLoop?q()-1:d.active.index:a>=q()?d.settings.infiniteLoop?0:d.active.index:a};return e.goToSlide=function(b,c){var f,g,h,i,j=!0,k=0,l={left:0,top:0},n=null;if(d.oldIndex=d.active.index,d.active.index=U(b),!d.working&&d.active.index!==d.oldIndex){if(d.working=!0,j=d.settings.onSlideBefore.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index),"undefined"!=typeof j&&!j)return d.active.index=d.oldIndex,void(d.working=!1);"next"===c?d.settings.onSlideNext.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index)||(j=!1):"prev"===c&&(d.settings.onSlidePrev.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index)||(j=!1)),d.active.last=d.active.index>=q()-1,(d.settings.pager||d.settings.pagerCustom)&&E(d.active.index),d.settings.controls&&H(),"fade"===d.settings.mode?(d.settings.adaptiveHeight&&d.viewport.height()!==m()&&d.viewport.animate({height:m()},d.settings.adaptiveHeightSpeed),d.children.filter(":visible").fadeOut(d.settings.speed).css({zIndex:0}),d.children.eq(d.active.index).css("zIndex",d.settings.slideZIndex+1).fadeIn(d.settings.speed,function(){a(this).css("zIndex",d.settings.slideZIndex),F()})):(d.settings.adaptiveHeight&&d.viewport.height()!==m()&&d.viewport.animate({height:m()},d.settings.adaptiveHeightSpeed),!d.settings.infiniteLoop&&d.carousel&&d.active.last?"horizontal"===d.settings.mode?(n=d.children.eq(d.children.length-1),l=n.position(),k=d.viewport.width()-n.outerWidth()):(f=d.children.length-d.settings.minSlides,l=d.children.eq(f).position()):d.carousel&&d.active.last&&"prev"===c?(g=1===d.settings.moveSlides?d.settings.maxSlides-r():(q()-1)*r()-(d.children.length-d.settings.maxSlides),n=e.children(".bx-clone").eq(g),l=n.position()):"next"===c&&0===d.active.index?(l=e.find("> .bx-clone").eq(d.settings.maxSlides).position(),d.active.last=!1):b>=0&&(i=b*parseInt(r()),l=d.children.eq(i).position()),"undefined"!=typeof l?(h="horizontal"===d.settings.mode?-(l.left-k):-l.top,t(h,"slide",d.settings.speed)):d.working=!1),d.settings.ariaHidden&&T(d.active.index*r())}},e.goToNextSlide=function(){if(d.settings.infiniteLoop||!d.active.last){var a=parseInt(d.active.index)+1;e.goToSlide(a,"next")}},e.goToPrevSlide=function(){if(d.settings.infiniteLoop||0!==d.active.index){var a=parseInt(d.active.index)-1;e.goToSlide(a,"prev")}},e.startAuto=function(a){d.interval||(d.interval=setInterval(function(){"next"===d.settings.autoDirection?e.goToNextSlide():e.goToPrevSlide()},d.settings.pause),d.settings.autoControls&&a!==!0&&G("stop"))},e.stopAuto=function(a){d.interval&&(clearInterval(d.interval),d.interval=null,d.settings.autoControls&&a!==!0&&G("start"))},e.getCurrentSlide=function(){return d.active.index},e.getCurrentSlideElement=function(){return d.children.eq(d.active.index)},e.getSlideElement=function(a){return d.children.eq(a)},e.getSlideCount=function(){return d.children.length},e.isWorking=function(){return d.working},e.redrawSlider=function(){d.children.add(e.find(".bx-clone")).outerWidth(o()),d.viewport.css("height",m()),d.settings.ticker||s(),d.active.last&&(d.active.index=q()-1),d.active.index>=q()&&(d.active.last=!0),d.settings.pager&&!d.settings.pagerCustom&&(u(),E(d.active.index)),d.settings.ariaHidden&&T(d.active.index*r())},e.destroySlider=function(){d.initialized&&(d.initialized=!1,a(".bx-clone",this).remove(),d.children.each(function(){void 0!==a(this).data("origStyle")?a(this).attr("style",a(this).data("origStyle")):a(this).removeAttr("style")}),void 0!==a(this).data("origStyle")?this.attr("style",a(this).data("origStyle")):a(this).removeAttr("style"),a(this).unwrap().unwrap(),d.controls.el&&d.controls.el.remove(),d.controls.next&&d.controls.next.remove(),d.controls.prev&&d.controls.prev.remove(),d.pagerEl&&d.settings.controls&&!d.settings.pagerCustom&&d.pagerEl.remove(),a(".bx-caption",this).remove(),d.controls.autoEl&&d.controls.autoEl.remove(),clearInterval(d.interval),d.settings.responsive&&a(window).unbind("resize",S),d.settings.keyboardEnabled&&a(document).unbind("keydown",M),a(this).removeData("bxSlider"))},e.reloadSlider=function(b){void 0!==b&&(c=b),e.destroySlider(),h(),a(e).data("bxSlider",this)},h(),a(e).data("bxSlider",this),this}}}(jQuery);
 /*
 
 Tooltipster 3.3.0 | 2014-11-08
@@ -3406,1237 +4637,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 })( jQuery, window, document );
 
 
-/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
- * @license MIT */
-
-;(function(root, factory) {
-
-  if (typeof define === 'function' && define.amd) {
-    define(factory);
-  } else if (typeof exports === 'object') {
-    module.exports = factory();
-  } else {
-    root.NProgress = factory();
-  }
-
-})(this, function() {
-  var NProgress = {};
-
-  NProgress.version = '0.2.0';
-
-  var Settings = NProgress.settings = {
-    minimum: 0.08,
-    easing: 'ease',
-    positionUsing: '',
-    speed: 200,
-    trickle: true,
-    trickleRate: 0.02,
-    trickleSpeed: 800,
-    showSpinner: true,
-    barSelector: '[role="bar"]',
-    spinnerSelector: '[role="spinner"]',
-    parent: 'body',
-    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
-  };
-
-  /**
-   * Updates configuration.
-   *
-   *     NProgress.configure({
-   *       minimum: 0.1
-   *     });
-   */
-  NProgress.configure = function(options) {
-    var key, value;
-    for (key in options) {
-      value = options[key];
-      if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
-    }
-
-    return this;
-  };
-
-  /**
-   * Last number.
-   */
-
-  NProgress.status = null;
-
-  /**
-   * Sets the progress bar status, where `n` is a number from `0.0` to `1.0`.
-   *
-   *     NProgress.set(0.4);
-   *     NProgress.set(1.0);
-   */
-
-  NProgress.set = function(n) {
-    var started = NProgress.isStarted();
-
-    n = clamp(n, Settings.minimum, 1);
-    NProgress.status = (n === 1 ? null : n);
-
-    var progress = NProgress.render(!started),
-        bar      = progress.querySelector(Settings.barSelector),
-        speed    = Settings.speed,
-        ease     = Settings.easing;
-
-    progress.offsetWidth; /* Repaint */
-
-    queue(function(next) {
-      // Set positionUsing if it hasn't already been set
-      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
-
-      // Add transition
-      css(bar, barPositionCSS(n, speed, ease));
-
-      if (n === 1) {
-        // Fade out
-        css(progress, { 
-          transition: 'none', 
-          opacity: 1 
-        });
-        progress.offsetWidth; /* Repaint */
-
-        setTimeout(function() {
-          css(progress, { 
-            transition: 'all ' + speed + 'ms linear', 
-            opacity: 0 
-          });
-          setTimeout(function() {
-            NProgress.remove();
-            next();
-          }, speed);
-        }, speed);
-      } else {
-        setTimeout(next, speed);
-      }
-    });
-
-    return this;
-  };
-
-  NProgress.isStarted = function() {
-    return typeof NProgress.status === 'number';
-  };
-
-  /**
-   * Shows the progress bar.
-   * This is the same as setting the status to 0%, except that it doesn't go backwards.
-   *
-   *     NProgress.start();
-   *
-   */
-  NProgress.start = function() {
-    if (!NProgress.status) NProgress.set(0);
-
-    var work = function() {
-      setTimeout(function() {
-        if (!NProgress.status) return;
-        NProgress.trickle();
-        work();
-      }, Settings.trickleSpeed);
-    };
-
-    if (Settings.trickle) work();
-
-    return this;
-  };
-
-  /**
-   * Hides the progress bar.
-   * This is the *sort of* the same as setting the status to 100%, with the
-   * difference being `done()` makes some placebo effect of some realistic motion.
-   *
-   *     NProgress.done();
-   *
-   * If `true` is passed, it will show the progress bar even if its hidden.
-   *
-   *     NProgress.done(true);
-   */
-
-  NProgress.done = function(force) {
-    if (!force && !NProgress.status) return this;
-
-    return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
-  };
-
-  /**
-   * Increments by a random amount.
-   */
-
-  NProgress.inc = function(amount) {
-    var n = NProgress.status;
-
-    if (!n) {
-      return NProgress.start();
-    } else {
-      if (typeof amount !== 'number') {
-        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
-      }
-
-      n = clamp(n + amount, 0, 0.994);
-      return NProgress.set(n);
-    }
-  };
-
-  NProgress.trickle = function() {
-    return NProgress.inc(Math.random() * Settings.trickleRate);
-  };
-
-  /**
-   * Waits for all supplied jQuery promises and
-   * increases the progress as the promises resolve.
-   *
-   * @param $promise jQUery Promise
-   */
-  (function() {
-    var initial = 0, current = 0;
-
-    NProgress.promise = function($promise) {
-      if (!$promise || $promise.state() === "resolved") {
-        return this;
-      }
-
-      if (current === 0) {
-        NProgress.start();
-      }
-
-      initial++;
-      current++;
-
-      $promise.always(function() {
-        current--;
-        if (current === 0) {
-            initial = 0;
-            NProgress.done();
-        } else {
-            NProgress.set((initial - current) / initial);
-        }
-      });
-
-      return this;
-    };
-
-  })();
-
-  /**
-   * (Internal) renders the progress bar markup based on the `template`
-   * setting.
-   */
-
-  NProgress.render = function(fromStart) {
-    if (NProgress.isRendered()) return document.getElementById('nprogress');
-
-    addClass(document.documentElement, 'nprogress-busy');
-    
-    var progress = document.createElement('div');
-    progress.id = 'nprogress';
-    progress.innerHTML = Settings.template;
-
-    var bar      = progress.querySelector(Settings.barSelector),
-        perc     = fromStart ? '-100' : toBarPerc(NProgress.status || 0),
-        parent   = document.querySelector(Settings.parent),
-        spinner;
-    
-    css(bar, {
-      transition: 'all 0 linear',
-      transform: 'translate3d(' + perc + '%,0,0)'
-    });
-
-    if (!Settings.showSpinner) {
-      spinner = progress.querySelector(Settings.spinnerSelector);
-      spinner && removeElement(spinner);
-    }
-
-    if (parent != document.body) {
-      addClass(parent, 'nprogress-custom-parent');
-    }
-
-    parent.appendChild(progress);
-    return progress;
-  };
-
-  /**
-   * Removes the element. Opposite of render().
-   */
-
-  NProgress.remove = function() {
-    removeClass(document.documentElement, 'nprogress-busy');
-    removeClass(document.querySelector(Settings.parent), 'nprogress-custom-parent');
-    var progress = document.getElementById('nprogress');
-    progress && removeElement(progress);
-  };
-
-  /**
-   * Checks if the progress bar is rendered.
-   */
-
-  NProgress.isRendered = function() {
-    return !!document.getElementById('nprogress');
-  };
-
-  /**
-   * Determine which positioning CSS rule to use.
-   */
-
-  NProgress.getPositioningCSS = function() {
-    // Sniff on document.body.style
-    var bodyStyle = document.body.style;
-
-    // Sniff prefixes
-    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
-                       ('MozTransform' in bodyStyle) ? 'Moz' :
-                       ('msTransform' in bodyStyle) ? 'ms' :
-                       ('OTransform' in bodyStyle) ? 'O' : '';
-
-    if (vendorPrefix + 'Perspective' in bodyStyle) {
-      // Modern browsers with 3D support, e.g. Webkit, IE10
-      return 'translate3d';
-    } else if (vendorPrefix + 'Transform' in bodyStyle) {
-      // Browsers without 3D support, e.g. IE9
-      return 'translate';
-    } else {
-      // Browsers without translate() support, e.g. IE7-8
-      return 'margin';
-    }
-  };
-
-  /**
-   * Helpers
-   */
-
-  function clamp(n, min, max) {
-    if (n < min) return min;
-    if (n > max) return max;
-    return n;
-  }
-
-  /**
-   * (Internal) converts a percentage (`0..1`) to a bar translateX
-   * percentage (`-100%..0%`).
-   */
-
-  function toBarPerc(n) {
-    return (-1 + n) * 100;
-  }
-
-
-  /**
-   * (Internal) returns the correct CSS for changing the bar's
-   * position given an n percentage, and speed and ease from Settings
-   */
-
-  function barPositionCSS(n, speed, ease) {
-    var barCSS;
-
-    if (Settings.positionUsing === 'translate3d') {
-      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
-    } else if (Settings.positionUsing === 'translate') {
-      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
-    } else {
-      barCSS = { 'margin-left': toBarPerc(n)+'%' };
-    }
-
-    barCSS.transition = 'all '+speed+'ms '+ease;
-
-    return barCSS;
-  }
-
-  /**
-   * (Internal) Queues a function to be executed.
-   */
-
-  var queue = (function() {
-    var pending = [];
-    
-    function next() {
-      var fn = pending.shift();
-      if (fn) {
-        fn(next);
-      }
-    }
-
-    return function(fn) {
-      pending.push(fn);
-      if (pending.length == 1) next();
-    };
-  })();
-
-  /**
-   * (Internal) Applies css properties to an element, similar to the jQuery 
-   * css method.
-   *
-   * While this helper does assist with vendor prefixed property names, it 
-   * does not perform any manipulation of values prior to setting styles.
-   */
-
-  var css = (function() {
-    var cssPrefixes = [ 'Webkit', 'O', 'Moz', 'ms' ],
-        cssProps    = {};
-
-    function camelCase(string) {
-      return string.replace(/^-ms-/, 'ms-').replace(/-([\da-z])/gi, function(match, letter) {
-        return letter.toUpperCase();
-      });
-    }
-
-    function getVendorProp(name) {
-      var style = document.body.style;
-      if (name in style) return name;
-
-      var i = cssPrefixes.length,
-          capName = name.charAt(0).toUpperCase() + name.slice(1),
-          vendorName;
-      while (i--) {
-        vendorName = cssPrefixes[i] + capName;
-        if (vendorName in style) return vendorName;
-      }
-
-      return name;
-    }
-
-    function getStyleProp(name) {
-      name = camelCase(name);
-      return cssProps[name] || (cssProps[name] = getVendorProp(name));
-    }
-
-    function applyCss(element, prop, value) {
-      prop = getStyleProp(prop);
-      element.style[prop] = value;
-    }
-
-    return function(element, properties) {
-      var args = arguments,
-          prop, 
-          value;
-
-      if (args.length == 2) {
-        for (prop in properties) {
-          value = properties[prop];
-          if (value !== undefined && properties.hasOwnProperty(prop)) applyCss(element, prop, value);
-        }
-      } else {
-        applyCss(element, args[1], args[2]);
-      }
-    }
-  })();
-
-  /**
-   * (Internal) Determines if an element or space separated list of class names contains a class name.
-   */
-
-  function hasClass(element, name) {
-    var list = typeof element == 'string' ? element : classList(element);
-    return list.indexOf(' ' + name + ' ') >= 0;
-  }
-
-  /**
-   * (Internal) Adds a class to an element.
-   */
-
-  function addClass(element, name) {
-    var oldList = classList(element),
-        newList = oldList + name;
-
-    if (hasClass(oldList, name)) return; 
-
-    // Trim the opening space.
-    element.className = newList.substring(1);
-  }
-
-  /**
-   * (Internal) Removes a class from an element.
-   */
-
-  function removeClass(element, name) {
-    var oldList = classList(element),
-        newList;
-
-    if (!hasClass(element, name)) return;
-
-    // Replace the class name.
-    newList = oldList.replace(' ' + name + ' ', ' ');
-
-    // Trim the opening and closing spaces.
-    element.className = newList.substring(1, newList.length - 1);
-  }
-
-  /**
-   * (Internal) Gets a space separated list of the class names on the element. 
-   * The list is wrapped with a single space on each end to facilitate finding 
-   * matches within the list.
-   */
-
-  function classList(element) {
-    return (' ' + (element.className || '') + ' ').replace(/\s+/gi, ' ');
-  }
-
-  /**
-   * (Internal) Removes an element from the DOM.
-   */
-
-  function removeElement(element) {
-    element && element.parentNode && element.parentNode.removeChild(element);
-  }
-
-  return NProgress;
-});
-
-/**
- * jQuery Bar Rating Plugin v1.1.4
- *
- * http://github.com/antennaio/jquery-bar-rating
- *
- * Copyright (c) 2012-2015 Kazik Pietruszewski
- *
- * Dual licensed under the MIT and GPL licenses:
- * http://www.opensource.org/licenses/mit-license.php
- * http://www.gnu.org/licenses/gpl.html
- */
-(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD
-        define(['jquery'], factory);
-    } else if (typeof module === 'object' && module.exports) {
-        // Node/CommonJS
-        module.exports = factory(require('jquery'));
-    } else {
-        // browser globals
-        factory(jQuery);
-    }
-}(function ($) {
-
-    var BarRating = (function() {
-
-        function BarRating() {
-            var self = this;
-
-            // wrap element in a wrapper div
-            var wrapElement = function() {
-                var classes = [self.options.wrapperClass];
-
-                if (self.options.theme !== '') {
-                    classes.push('br-theme-' + self.options.theme);
-                }
-                
-                self.$elem.wrap($('<div />', {
-                    'class': classes.join(' ')
-                }));
-            };
-
-            // unwrap element
-            var unwrapElement = function() {
-                self.$elem.unwrap();
-            };
-
-            // return initial option
-            var findInitialOption = function() {
-                var option;
-
-                if (self.options.initialRating) {
-                    option = $('option[value="' + self.options.initialRating  + '"]', self.$elem);
-                } else {
-                    option = $('option:selected', self.$elem);
-                }
-
-                return option;
-            };
-
-            // get data
-            var getData = function(key) {
-                var data = self.$elem.data('barrating');
-
-                if (typeof key !== 'undefined') {
-                    return data[key];
-                }
-
-                return data;
-            };
-
-            // set data
-            var setData = function(key, value) {
-                if (value !== null && typeof value === 'object') {
-                    self.$elem.data('barrating', value);
-                } else {
-                    self.$elem.data('barrating')[key] = value;
-                }
-            };
-
-            // save data on element
-            var saveDataOnElement = function() {
-                var $opt = findInitialOption();
-
-                setData(null, {
-                    userOptions: self.options,
-
-                    // initial rating based on the OPTION value
-                    ratingValue: $opt.val(),
-                    ratingText: ($opt.data('html')) ? $opt.data('html') : $opt.text(),
-
-                    // rating will be restored by calling clear method
-                    originalRatingValue: $opt.val(),
-                    originalRatingText: ($opt.data('html')) ? $opt.data('html') : $opt.text(),
-
-                    // read-only state
-                    readOnly: self.options.readonly,
-
-                    // first OPTION empty - allow deselecting of ratings
-                    deselectable: (!self.$elem.find('option:first').val()) ? true : false
-                });
-            };
-
-            // remove data on element
-            var removeDataOnElement = function() {
-                self.$elem.removeData('barrating');
-            };
-
-            // return current rating text
-            var ratingText = function() {
-                return getData('ratingText');
-            };
-
-            // return current rating value
-            var ratingValue = function() {
-                return getData('ratingValue');
-            };
-
-            // build widget and return jQuery element
-            var buildWidget = function() {
-                var $w = $('<div />', { 'class': 'br-widget' });
-
-                // create A elements that will replace OPTIONs
-                self.$elem.find('option').each(function() {
-                    var val, text, html, $a;
-
-                    val = $(this).val();
-
-                    // create ratings - but only if val is defined
-                    if (val) {
-                        text = $(this).text();
-                        html = $(this).data('html');
-                        if (html) { text = html; }
-
-                        $a = $('<a />', {
-                            'href': '#',
-                            'data-rating-value': val,
-                            'data-rating-text': text,
-                            'html': (self.options.showValues) ? text : ''
-                        });
-
-                        $w.append($a);
-                    }
-
-                });
-
-                // append .br-current-rating div to the widget
-                if (self.options.showSelectedRating) {
-                    $w.append($('<div />', { 'text': '', 'class': 'br-current-rating' }));
-                }
-
-                // additional classes for the widget
-                if (self.options.reverse) {
-                    $w.addClass('br-reverse');
-                }
-
-                if (self.options.readonly) {
-                    $w.addClass('br-readonly');
-                }
-
-                return $w;
-            };
-
-            // return a jQuery function name depending on the 'reverse' setting
-            var nextAllorPreviousAll = function() {
-                if (getData('userOptions').reverse) {
-                    return 'nextAll';
-                } else {
-                    return 'prevAll';
-                }
-            };
-
-            // set the value of the select field
-            var setSelectFieldValue = function(value) {
-                // change selected OPTION in the select field (hidden)
-                self.$elem.find('option[value="' + value + '"]').prop('selected', true);
-                self.$elem.change();
-            };
-
-            // display the currently selected rating
-            var showSelectedRating = function(text) {
-                // text undefined?
-                text = text ? text : ratingText();
-
-                // update .br-current-rating div
-                if (self.options.showSelectedRating) {
-                    self.$elem.parent().find('.br-current-rating').text(text);
-                }
-            };
-
-            // apply style by setting classes on elements
-            var applyStyle = function() {
-                // remove classes
-                self.$widget.find('a').removeClass('br-selected br-current');
-
-                // add classes
-                self.$widget.find('a[data-rating-value="' + ratingValue() + '"]')
-                    .addClass('br-selected br-current')[nextAllorPreviousAll()]()
-                    .addClass('br-selected');
-            };
-
-            // check if the element is deselectable?
-            var isDeselectable = function($element) {
-                return ($element.hasClass('br-current') && getData('deselectable'));
-            };
-
-            // handle click events
-            var attachClickHandler = function($elements) {
-                $elements.on('click.barrating', function(event) {
-                    var $a = $(this),
-                        options = getData('userOptions'),
-                        value,
-                        text;
-
-                    event.preventDefault();
-
-                    $elements.removeClass('br-active br-selected');
-                    $a.addClass('br-selected')[nextAllorPreviousAll()]()
-                        .addClass('br-selected');
-
-                    value = $a.attr('data-rating-value');
-                    text = $a.attr('data-rating-text');
-
-                    // is current and deselectable?
-                    if (isDeselectable($a)) {
-                        $a.removeClass('br-selected br-current')[nextAllorPreviousAll()]()
-                            .removeClass('br-selected br-current');
-                        value = ''; text = '';
-                    } else {
-                        $elements.removeClass('br-current');
-                        $a.addClass('br-current');
-                    }
-
-                    // remember selected rating
-                    setData('ratingValue', value);
-                    setData('ratingText', text);
-
-                    setSelectFieldValue(value);
-                    showSelectedRating(text);
-
-                    // onSelect callback
-                    options.onSelect.call(
-                        self,
-                        ratingValue(),
-                        ratingText(),
-                        event
-                    );
-
-                    return false;
-                });
-            };
-
-            // handle mouseenter events
-            var attachMouseEnterHandler = function($elements) {
-                $elements.on('mouseenter.barrating focus.barrating', function() {
-                    var $a = $(this);
-
-                    $elements.removeClass('br-active br-selected');
-                    $a.addClass('br-active')[nextAllorPreviousAll()]()
-                        .addClass('br-active');
-
-                    showSelectedRating($a.attr('data-rating-text'));
-                });
-            };
-
-            // handle mouseleave events
-            var attachMouseLeaveHandler = function($elements) {
-                self.$widget.on('mouseleave.barrating blur.barrating', function() {
-                    $elements.removeClass('br-active');
-                    showSelectedRating();
-                    applyStyle();
-                });
-            };
-
-            // somewhat primitive way to remove 300ms click delay on touch devices
-            // for a more advanced solution consider setting `fastClicks` option to false
-            // and using a library such as fastclick (https://github.com/ftlabs/fastclick)
-            var fastClicks = function($elements) {
-                $elements.on('touchstart.barrating', function(event) {
-                    event.preventDefault();
-                    event.stopPropagation();
-
-                    $(this).click();
-                });
-            };
-
-            // disable clicks
-            var disableClicks = function($elements) {
-                $elements.on('click.barrating', function(event) {
-                    event.preventDefault();
-                });
-            };
-
-            var attachHandlers = function($elements) {
-                // attach click event handler
-                attachClickHandler($elements);
-
-                if (self.options.hoverState) {
-                    // attach mouseenter event handler
-                    attachMouseEnterHandler($elements);
-
-                    // attach mouseleave event handler
-                    attachMouseLeaveHandler($elements);
-                }
-            };
-
-            var detachHandlers = function($elements) {
-                // remove event handlers in the ".barrating" namespace
-                $elements.off('.barrating');
-            };
-
-            var setupHandlers = function(readonly) {
-                $elements = self.$widget.find('a');
-
-                if (fastClicks) {
-                    fastClicks($elements);
-                }
-
-                if (readonly) {
-                    detachHandlers($elements);
-                    disableClicks($elements);
-                } else {
-                    attachHandlers($elements);
-                }
-            };
-
-            this.show = function() {
-                // run only once
-                if (getData()) return;
-
-                // wrap element
-                wrapElement();
-
-                // save data
-                saveDataOnElement();
-
-                // build & append widget to the DOM
-                self.$widget = buildWidget();
-                self.$widget.insertAfter(self.$elem);
-
-                applyStyle();
-
-                showSelectedRating();
-
-                setupHandlers(self.options.readonly);
-
-                // hide the select field
-                self.$elem.hide();
-            };
-
-            this.readonly = function(state) {
-                if (typeof state !== 'boolean' || getData('readOnly') == state) return;
-
-                setupHandlers(state);
-                setData('readOnly', state);
-                self.$widget.toggleClass('br-readonly');
-            };
-
-            this.set = function(value) {
-                var options = getData('userOptions');
-
-                if (!self.$elem.find('option[value="' + value + '"]').val()) return;
-
-                // set data
-                setData('ratingValue', value);
-                setData('ratingText', self.$elem.find('option[value="' + value + '"]').text());
-
-                setSelectFieldValue(ratingValue());
-                showSelectedRating(ratingText());
-
-                applyStyle();
-
-                // onSelect callback
-                if (!options.silent) {
-                    options.onSelect.call(
-                        this,
-                        ratingValue(),
-                        ratingText()
-                    );
-                }
-            };
-
-            this.clear = function() {
-                var options = getData('userOptions');
-
-                // restore original data
-                setData('ratingValue', getData('originalRatingValue'));
-                setData('ratingText', getData('originalRatingText'));
-
-                setSelectFieldValue(ratingValue());
-                showSelectedRating(ratingText());
-
-                applyStyle();
-
-                // onClear callback
-                options.onClear.call(
-                    this,
-                    ratingValue(),
-                    ratingText()
-                );
-            };
-
-            this.destroy = function() {
-                var value = ratingValue();
-                var text = ratingText();
-                var options = getData('userOptions');
-
-                // detach handlers
-                detachHandlers(self.$widget.find('a'));
-
-                // remove widget
-                self.$widget.remove();
-
-                // remove data
-                removeDataOnElement();
-
-                // unwrap the element
-                unwrapElement();
-
-                // show the element
-                self.$elem.show();
-
-                // onDestroy callback
-                options.onDestroy.call(
-                    this,
-                    value,
-                    text
-                );
-            };
-        }
-
-        BarRating.prototype.init = function (options, elem) {
-            this.$elem = $(elem);
-            this.options = $.extend({}, $.fn.barrating.defaults, options);
-
-            return this.options;
-        };
-
-        return BarRating;
-    })();
-
-    $.fn.barrating = function (method, options) {
-        return this.each(function () {
-            var plugin = new BarRating();
-
-            // plugin works with select fields
-            if (!$(this).is('select')) {
-                $.error('Sorry, this plugin only works with select fields.');
-            }
-
-            // method supplied
-            if (plugin.hasOwnProperty(method)) {
-                plugin.init(options, this);
-                if (method === 'show') {
-                    return plugin.show(options);
-                } else {
-                    // plugin exists?
-                    if (plugin.$elem.data('barrating')) {
-                        plugin.$widget = $(this).next('.br-widget');
-                        return plugin[method](options);
-                    }
-                }
-
-            // no method supplied or only options supplied
-            } else if (typeof method === 'object' || !method) {
-                options = method;
-                plugin.init(options, this);
-                return plugin.show();
-
-            } else {
-                $.error('Method ' + method + ' does not exist on jQuery.barrating');
-            }
-        });
-    };
-
-    $.fn.barrating.defaults = {
-        theme:'',
-        initialRating:null, // initial rating
-        showValues:false, // display rating values on the bars?
-        showSelectedRating:true, // append a div with a rating to the widget?
-        reverse:false, // reverse the rating?
-        readonly:false, // make the rating ready-only?
-        fastClicks:true, // remove 300ms click delay on touch devices?
-        hoverState:true, // change state on hover?
-        silent:false, // supress callbacks when controlling ratings programatically
-        wrapperClass:'br-wrapper', // class applied to wrapper div
-        onSelect:function (value, text, event) {
-        }, // callback fired when a rating is selected
-        onClear:function (value, text) {
-        }, // callback fired when a rating is cleared
-        onDestroy:function (value, text) {
-        } // callback fired when a widget is destroyed
-    };
-
-    $.fn.barrating.BarRating = BarRating;
-
-}));
-
-
-// bootstrap-rating - v1.3.2 - (c) 2016 dreyescat 
-// https://github.com/dreyescat/bootstrap-rating MIT
-
-(function ($, undefined) {
-  'use strict';
-
-  var OFFSET = 5;
-
-  function Rating(element, options) {
-    this.$input = $(element);
-    this.$rating = $('<span></span>').css({
-      cursor: 'default'
-    }).insertBefore(this.$input);
-    // Merge data and parameter options.
-    // Those provided as parameter prevail over the data ones.
-    this.options = (function (opts) {
-      // Sanitize start, stop, step, and fractions.
-      // All of them start, stop, and step must be integers.
-      opts.start = parseInt(opts.start, 10);
-      opts.start = isNaN(opts.start) ? undefined : opts.start;
-      // In case we don't have a valid stop rate try to get a reasonable
-      // one based on the existence of a valid start rate.
-      opts.stop = parseInt(opts.stop, 10);
-      opts.stop = isNaN(opts.stop) ?
-        opts.start + OFFSET || undefined : opts.stop;
-      // 0 step is ignored.
-      opts.step = parseInt(opts.step, 10) || undefined;
-      // Symbol fractions and scale (number of significant digits).
-      // 0 is ignored and negative numbers are turned to positive.
-      opts.fractions = Math.abs(parseInt(opts.fractions, 10)) || undefined;
-      opts.scale = Math.abs(parseInt(opts.scale, 10)) || undefined;
-
-      // Extend/Override the default options with those provided either as
-      // data attributes or function parameters.
-      opts = $.extend({}, $.fn.rating.defaults, opts);
-      // Inherit default filled if none is defined for the selected symbol.
-      opts.filledSelected = opts.filledSelected || opts.filled;
-      return opts;
-    }($.extend({}, this.$input.data(), options)));
-
-    this._init();
-  };
-
-  Rating.prototype = {
-    _init: function () {
-      var rating = this,
-          $input = this.$input,
-          $rating = this.$rating;
-
-      var ifEnabled = function (f) {
-        return function (e) {
-          // According to the W3C attribute readonly is not allowed on input
-          // elements with type hidden.
-          // Keep readonly prop for legacy but its use should be deprecated.
-          if (!$input.prop('disabled') && !$input.prop('readonly') &&
-              $input.data('readonly') === undefined) {
-            f.call(this, e);
-          }
-        }
-      };
-
-      // Build the rating control.
-      for (var i = 1; i <= this._rateToIndex(this.options.stop); i++) {
-        // Create the rating symbol container.
-        var $symbol = $('<div class="rating-symbol"></div>').css({
-            display: 'inline-block',
-            position: 'relative'
-        });
-        // Add background symbol to the symbol container.
-        $('<div class="rating-symbol-background ' + this.options.empty + '"></div>')
-          .appendTo($symbol);
-        // Add foreground symbol to the symbol container.
-        // The filled icon is wrapped with a div to allow fractional selection.
-        $('<div class="rating-symbol-foreground"></div>')
-          .append('<span></span>')
-          .css({
-            display: 'inline-block',
-            position: 'absolute',
-            overflow: 'hidden',
-            left: 0,
-            // Overspecify right and left to 0 and let the container direction
-            // decide which one is going to take precedence according to the
-            // ltr/rtl direction.
-            // (https://developer.mozilla.org/en-US/docs/Web/CSS/right)
-            // When both the right CSS property and the left CSS property are
-            // defined, the position of the element is overspecified. In that
-            // case, the left value has precedence when the container is
-            // left-to-right (that is that the right computed value is set to
-            // -left), and the right value has precedence when the container is
-            // right-to-left (that is that the left computed value is set to
-            // -right).
-            right: 0,
-            width: 0
-          }).appendTo($symbol);
-        $rating.append($symbol);
-        this.options.extendSymbol.call($symbol, this._indexToRate(i));
-      }
-      // Initialize the rating control with the associated input value rate.
-      this._updateRate($input.val());
-
-      // Keep rating control and its associated input in sync.
-      $input
-        .on('change', function () {
-          rating._updateRate($(this).val());
-        });
-
-      var fractionalIndex = function (e) {
-        var $symbol = $(e.currentTarget);
-        // Calculate the distance from the mouse pointer to the origin of the
-        // symbol. We need to be careful with the CSS direction. If we are
-        // right-to-left then the symbol starts at the right. So we have to add
-        // the symbol width to the left offset to get the CSS rigth position.
-        var x = Math.abs((e.pageX || e.originalEvent.touches[0].pageX) -
-          (($symbol.css('direction') === 'rtl' && $symbol.width()) +
-          $symbol.offset().left));
-
-        // NOTE: When the mouse pointer is close to the left side of the symbol
-        // a negative x is returned. Probably some precision error in the
-        // calculation.
-        // x should never be less than 0 because this would mean that we are in
-        // the previous symbol.
-        x = x > 0 ? x : rating.options.scale * 0.1;
-        return $symbol.index() + x / $symbol.width();
-      };
-      // Keep the current highlighted index (fractional or not).
-      var index;
-      $rating
-        .on('mousedown touchstart', '.rating-symbol', ifEnabled(function (e) {
-          // Set input 'trigger' the change event.
-          $input.val(rating._indexToRate(fractionalIndex(e))).change();
-        }))
-        .on('mousemove touchmove', '.rating-symbol', ifEnabled(function (e) {
-          var current = rating._roundToFraction(fractionalIndex(e));
-          if (current !== index) {
-            // Trigger pseudo rate leave event if the mouse pointer is not
-            // leaving from another symbol (mouseleave).
-            if (index !== undefined) $(this).trigger('rating.rateleave');
-            // Update index and trigger rate enter event.
-            index = current;
-            $(this).trigger('rating.rateenter', [rating._indexToRate(index)]);
-          }
-          // Fill the symbols as fractions chunks.
-          rating._fillUntil(current);
-        }))
-        .on('mouseleave touchend', '.rating-symbol', ifEnabled(function () {
-          // When a symbol is left, reset index and trigger rate leave event.
-          index = undefined;
-          $(this).trigger('rating.rateleave');
-          // Restore on hover out.
-          rating._fillUntil(rating._rateToIndex(parseFloat($input.val())));
-        }));
-
-    },
-    // Fill rating symbols until index.
-    _fillUntil: function (index) {
-      var $rating = this.$rating;
-      // Get the index of the last whole symbol.
-      var i = Math.floor(index);
-      // Hide completely hidden symbols background.
-      $rating.find('.rating-symbol-background')
-        .css('visibility', 'visible')
-        .slice(0, i).css('visibility', 'hidden');
-      var $rates = $rating.find('.rating-symbol-foreground');
-      // Reset foreground
-      $rates.width(0);
-      // Fill all the foreground symbols up to the selected one.
-      $rates.slice(0, i).width('auto')
-        .find('span').attr('class', this.options.filled);
-      // Amend selected symbol.
-      $rates.eq(index % 1 ? i : i - 1)
-        .find('span').attr('class', this.options.filledSelected);
-      // Partially fill the fractional one.
-      $rates.eq(i).width(index % 1 * 100 + '%');
-    },
-    // Calculate the rate of an index according the the start and step.
-    _indexToRate: function (index) {
-      return this.options.start + Math.floor(index) * this.options.step +
-        this.options.step * this._roundToFraction(index % 1);
-    },
-    // Calculate the corresponding index for a rate.
-    _rateToIndex: function (rate) {
-      return (rate - this.options.start) / this.options.step;
-    },
-    // Round index to the configured opts.fractions.
-    _roundToFraction: function (index) {
-      // Get the closest top fraction.
-      var fraction = Math.ceil(index % 1 * this.options.fractions) / this.options.fractions;
-      // Truncate decimal trying to avoid float precission issues.
-      var p = Math.pow(10, this.options.scale);
-      return Math.floor(index) + Math.floor(fraction * p) / p;
-    },
-    // Check the rate is in the proper range [start..stop].
-    _contains: function (rate) {
-      var start = this.options.step > 0 ? this.options.start : this.options.stop;
-      var stop = this.options.step > 0 ? this.options.stop : this.options.start;
-      return start <= rate && rate <= stop;
-    },
-    // Update empty and filled rating symbols according to a rate.
-    _updateRate: function (rate) {
-      var value = parseFloat(rate);
-      if (this._contains(value)) {
-        this._fillUntil(this._rateToIndex(value));
-        this.$input.val(value);
-      }
-    },
-    rate: function (value) {
-      if (value === undefined) {
-        return this.$input.val();
-      }
-      this._updateRate(value);
-    }
-  };
-
-  $.fn.rating = function (options) {
-    var args = Array.prototype.slice.call(arguments, 1),
-        result;
-    this.each(function () {
-      var $input = $(this);
-      var rating = $input.data('rating');
-      if (!rating) {
-        $input.data('rating', (rating = new Rating(this, options)));
-      }
-      // Underscore are used for private methods.
-      if (typeof options === 'string' && options[0] !== '_') {
-        result = rating[options].apply(rating, args);
-      }
-    });
-    return result || this;
-  };
-
-  // Plugin defaults.
-  $.fn.rating.defaults = {
-    filled: '',
-    filledSelected: undefined,
-    empty: '',
-    start: 0,
-    stop: OFFSET,
-    step: 1,
-    fractions: 1,
-    scale: 3,
-    extendSymbol: function (rate) {},
-  };
-
-  $(function () {
-    $('input.rating').rating();
-  });
-}(jQuery));
-/**
- * bxSlider v4.2.5
- * Copyright 2013-2015 Steven Wanderski
- * Written while drinking Belgian ales and listening to jazz
-
- * Licensed under MIT (http://opensource.org/licenses/MIT)
- */
-
-!function(a){var b={mode:"horizontal",slideSelector:"",infiniteLoop:!0,hideControlOnEnd:!1,speed:500,easing:null,slideMargin:0,startSlide:0,randomStart:!1,captions:!1,ticker:!1,tickerHover:!1,adaptiveHeight:!1,adaptiveHeightSpeed:500,video:!1,useCSS:!0,preloadImages:"visible",responsive:!0,slideZIndex:50,wrapperClass:"bx-wrapper",touchEnabled:!0,swipeThreshold:50,oneToOneTouch:!0,preventDefaultSwipeX:!0,preventDefaultSwipeY:!1,ariaLive:!0,ariaHidden:!0,keyboardEnabled:!1,pager:!0,pagerType:"full",pagerShortSeparator:" / ",pagerSelector:null,buildPager:null,pagerCustom:null,controls:!0,nextText:"Next",prevText:"Prev",nextSelector:null,prevSelector:null,autoControls:!1,startText:"Start",stopText:"Stop",autoControlsCombine:!1,autoControlsSelector:null,auto:!1,pause:4e3,autoStart:!0,autoDirection:"next",stopAutoOnClick:!1,autoHover:!1,autoDelay:0,autoSlideForOnePage:!1,minSlides:1,maxSlides:1,moveSlides:0,slideWidth:0,shrinkItems:!1,onSliderLoad:function(){return!0},onSlideBefore:function(){return!0},onSlideAfter:function(){return!0},onSlideNext:function(){return!0},onSlidePrev:function(){return!0},onSliderResize:function(){return!0}};a.fn.bxSlider=function(c){if(0===this.length)return this;if(this.length>1)return this.each(function(){a(this).bxSlider(c)}),this;var d={},e=this,f=a(window).width(),g=a(window).height();if(!a(e).data("bxSlider")){var h=function(){a(e).data("bxSlider")||(d.settings=a.extend({},b,c),d.settings.slideWidth=parseInt(d.settings.slideWidth),d.children=e.children(d.settings.slideSelector),d.children.length<d.settings.minSlides&&(d.settings.minSlides=d.children.length),d.children.length<d.settings.maxSlides&&(d.settings.maxSlides=d.children.length),d.settings.randomStart&&(d.settings.startSlide=Math.floor(Math.random()*d.children.length)),d.active={index:d.settings.startSlide},d.carousel=d.settings.minSlides>1||d.settings.maxSlides>1?!0:!1,d.carousel&&(d.settings.preloadImages="all"),d.minThreshold=d.settings.minSlides*d.settings.slideWidth+(d.settings.minSlides-1)*d.settings.slideMargin,d.maxThreshold=d.settings.maxSlides*d.settings.slideWidth+(d.settings.maxSlides-1)*d.settings.slideMargin,d.working=!1,d.controls={},d.interval=null,d.animProp="vertical"===d.settings.mode?"top":"left",d.usingCSS=d.settings.useCSS&&"fade"!==d.settings.mode&&function(){for(var a=document.createElement("div"),b=["WebkitPerspective","MozPerspective","OPerspective","msPerspective"],c=0;c<b.length;c++)if(void 0!==a.style[b[c]])return d.cssPrefix=b[c].replace("Perspective","").toLowerCase(),d.animProp="-"+d.cssPrefix+"-transform",!0;return!1}(),"vertical"===d.settings.mode&&(d.settings.maxSlides=d.settings.minSlides),e.data("origStyle",e.attr("style")),e.children(d.settings.slideSelector).each(function(){a(this).data("origStyle",a(this).attr("style"))}),j())},j=function(){var b=d.children.eq(d.settings.startSlide);e.wrap('<div class="'+d.settings.wrapperClass+'"><div class="bx-viewport"></div></div>'),d.viewport=e.parent(),d.settings.ariaLive&&!d.settings.ticker&&d.viewport.attr("aria-live","polite"),d.loader=a('<div class="bx-loading" />'),d.viewport.prepend(d.loader),e.css({width:"horizontal"===d.settings.mode?1e3*d.children.length+215+"%":"auto",position:"relative"}),d.usingCSS&&d.settings.easing?e.css("-"+d.cssPrefix+"-transition-timing-function",d.settings.easing):d.settings.easing||(d.settings.easing="swing"),d.viewport.css({width:"100%",overflow:"hidden",position:"relative"}),d.viewport.parent().css({maxWidth:n()}),d.settings.pager||d.settings.controls||d.viewport.parent().css({margin:"0 auto 0px"}),d.children.css({"float":"horizontal"===d.settings.mode?"left":"none",listStyle:"none",position:"relative"}),d.children.css("width",o()),"horizontal"===d.settings.mode&&d.settings.slideMargin>0&&d.children.css("marginRight",d.settings.slideMargin),"vertical"===d.settings.mode&&d.settings.slideMargin>0&&d.children.css("marginBottom",d.settings.slideMargin),"fade"===d.settings.mode&&(d.children.css({position:"absolute",zIndex:0,display:"none"}),d.children.eq(d.settings.startSlide).css({zIndex:d.settings.slideZIndex,display:"block"})),d.controls.el=a('<div class="bx-controls" />'),d.settings.captions&&y(),d.active.last=d.settings.startSlide===q()-1,d.settings.video&&e.fitVids(),("all"===d.settings.preloadImages||d.settings.ticker)&&(b=d.children),d.settings.ticker?d.settings.pager=!1:(d.settings.controls&&w(),d.settings.auto&&d.settings.autoControls&&x(),d.settings.pager&&v(),(d.settings.controls||d.settings.autoControls||d.settings.pager)&&d.viewport.after(d.controls.el)),k(b,l)},k=function(b,c){var d=b.find('img:not([src=""]), iframe').length,e=0;return 0===d?void c():void b.find('img:not([src=""]), iframe').each(function(){a(this).one("load error",function(){++e===d&&c()}).each(function(){this.complete&&a(this).load()})})},l=function(){if(d.settings.infiniteLoop&&"fade"!==d.settings.mode&&!d.settings.ticker){var b="vertical"===d.settings.mode?d.settings.minSlides:d.settings.maxSlides,c=d.children.slice(0,b).clone(!0).addClass("bx-clone"),f=d.children.slice(-b).clone(!0).addClass("bx-clone");d.settings.ariaHidden&&(c.attr("aria-hidden",!0),f.attr("aria-hidden",!0)),e.append(c).prepend(f)}d.loader.remove(),s(),"vertical"===d.settings.mode&&(d.settings.adaptiveHeight=!0),d.viewport.height(m()),e.redrawSlider(),d.settings.onSliderLoad.call(e,d.active.index),d.initialized=!0,d.settings.responsive&&a(window).bind("resize",S),d.settings.auto&&d.settings.autoStart&&(q()>1||d.settings.autoSlideForOnePage)&&I(),d.settings.ticker&&J(),d.settings.pager&&E(d.settings.startSlide),d.settings.controls&&H(),d.settings.touchEnabled&&!d.settings.ticker&&N(),d.settings.keyboardEnabled&&!d.settings.ticker&&a(document).keydown(M)},m=function(){var b=0,c=a();if("vertical"===d.settings.mode||d.settings.adaptiveHeight)if(d.carousel){var e=1===d.settings.moveSlides?d.active.index:d.active.index*r();for(c=d.children.eq(e),i=1;i<=d.settings.maxSlides-1;i++)c=e+i>=d.children.length?c.add(d.children.eq(i-1)):c.add(d.children.eq(e+i))}else c=d.children.eq(d.active.index);else c=d.children;return"vertical"===d.settings.mode?(c.each(function(c){b+=a(this).outerHeight()}),d.settings.slideMargin>0&&(b+=d.settings.slideMargin*(d.settings.minSlides-1))):b=Math.max.apply(Math,c.map(function(){return a(this).outerHeight(!1)}).get()),"border-box"===d.viewport.css("box-sizing")?b+=parseFloat(d.viewport.css("padding-top"))+parseFloat(d.viewport.css("padding-bottom"))+parseFloat(d.viewport.css("border-top-width"))+parseFloat(d.viewport.css("border-bottom-width")):"padding-box"===d.viewport.css("box-sizing")&&(b+=parseFloat(d.viewport.css("padding-top"))+parseFloat(d.viewport.css("padding-bottom"))),b},n=function(){var a="100%";return d.settings.slideWidth>0&&(a="horizontal"===d.settings.mode?d.settings.maxSlides*d.settings.slideWidth+(d.settings.maxSlides-1)*d.settings.slideMargin:d.settings.slideWidth),a},o=function(){var a=d.settings.slideWidth,b=d.viewport.width();if(0===d.settings.slideWidth||d.settings.slideWidth>b&&!d.carousel||"vertical"===d.settings.mode)a=b;else if(d.settings.maxSlides>1&&"horizontal"===d.settings.mode){if(b>d.maxThreshold)return a;b<d.minThreshold?a=(b-d.settings.slideMargin*(d.settings.minSlides-1))/d.settings.minSlides:d.settings.shrinkItems&&(a=Math.floor((b+d.settings.slideMargin)/Math.ceil((b+d.settings.slideMargin)/(a+d.settings.slideMargin))-d.settings.slideMargin))}return a},p=function(){var a=1,b=null;return"horizontal"===d.settings.mode&&d.settings.slideWidth>0?d.viewport.width()<d.minThreshold?a=d.settings.minSlides:d.viewport.width()>d.maxThreshold?a=d.settings.maxSlides:(b=d.children.first().width()+d.settings.slideMargin,a=Math.floor((d.viewport.width()+d.settings.slideMargin)/b)):"vertical"===d.settings.mode&&(a=d.settings.minSlides),a},q=function(){var a=0,b=0,c=0;if(d.settings.moveSlides>0)if(d.settings.infiniteLoop)a=Math.ceil(d.children.length/r());else for(;b<d.children.length;)++a,b=c+p(),c+=d.settings.moveSlides<=p()?d.settings.moveSlides:p();else a=Math.ceil(d.children.length/p());return a},r=function(){return d.settings.moveSlides>0&&d.settings.moveSlides<=p()?d.settings.moveSlides:p()},s=function(){var a,b,c;d.children.length>d.settings.maxSlides&&d.active.last&&!d.settings.infiniteLoop?"horizontal"===d.settings.mode?(b=d.children.last(),a=b.position(),t(-(a.left-(d.viewport.width()-b.outerWidth())),"reset",0)):"vertical"===d.settings.mode&&(c=d.children.length-d.settings.minSlides,a=d.children.eq(c).position(),t(-a.top,"reset",0)):(a=d.children.eq(d.active.index*r()).position(),d.active.index===q()-1&&(d.active.last=!0),void 0!==a&&("horizontal"===d.settings.mode?t(-a.left,"reset",0):"vertical"===d.settings.mode&&t(-a.top,"reset",0)))},t=function(b,c,f,g){var h,i;d.usingCSS?(i="vertical"===d.settings.mode?"translate3d(0, "+b+"px, 0)":"translate3d("+b+"px, 0, 0)",e.css("-"+d.cssPrefix+"-transition-duration",f/1e3+"s"),"slide"===c?(e.css(d.animProp,i),0!==f?e.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",function(b){a(b.target).is(e)&&(e.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"),F())}):F()):"reset"===c?e.css(d.animProp,i):"ticker"===c&&(e.css("-"+d.cssPrefix+"-transition-timing-function","linear"),e.css(d.animProp,i),0!==f?e.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",function(b){a(b.target).is(e)&&(e.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"),t(g.resetValue,"reset",0),K())}):(t(g.resetValue,"reset",0),K()))):(h={},h[d.animProp]=b,"slide"===c?e.animate(h,f,d.settings.easing,function(){F()}):"reset"===c?e.css(d.animProp,b):"ticker"===c&&e.animate(h,f,"linear",function(){t(g.resetValue,"reset",0),K()}))},u=function(){for(var b="",c="",e=q(),f=0;e>f;f++)c="",d.settings.buildPager&&a.isFunction(d.settings.buildPager)||d.settings.pagerCustom?(c=d.settings.buildPager(f),d.pagerEl.addClass("bx-custom-pager")):(c=f+1,d.pagerEl.addClass("bx-default-pager")),b+='<div class="bx-pager-item"><a href="" data-slide-index="'+f+'" class="bx-pager-link">'+c+"</a></div>";d.pagerEl.html(b)},v=function(){d.settings.pagerCustom?d.pagerEl=a(d.settings.pagerCustom):(d.pagerEl=a('<div class="bx-pager" />'),d.settings.pagerSelector?a(d.settings.pagerSelector).html(d.pagerEl):d.controls.el.addClass("bx-has-pager").append(d.pagerEl),u()),d.pagerEl.on("click touchend","a",D)},w=function(){d.controls.next=a('<a class="bx-next" href="">'+d.settings.nextText+"</a>"),d.controls.prev=a('<a class="bx-prev" href="">'+d.settings.prevText+"</a>"),d.controls.next.bind("click touchend",z),d.controls.prev.bind("click touchend",A),d.settings.nextSelector&&a(d.settings.nextSelector).append(d.controls.next),d.settings.prevSelector&&a(d.settings.prevSelector).append(d.controls.prev),d.settings.nextSelector||d.settings.prevSelector||(d.controls.directionEl=a('<div class="bx-controls-direction" />'),d.controls.directionEl.append(d.controls.prev).append(d.controls.next),d.controls.el.addClass("bx-has-controls-direction").append(d.controls.directionEl))},x=function(){d.controls.start=a('<div class="bx-controls-auto-item"><a class="bx-start" href="">'+d.settings.startText+"</a></div>"),d.controls.stop=a('<div class="bx-controls-auto-item"><a class="bx-stop" href="">'+d.settings.stopText+"</a></div>"),d.controls.autoEl=a('<div class="bx-controls-auto" />'),d.controls.autoEl.on("click",".bx-start",B),d.controls.autoEl.on("click",".bx-stop",C),d.settings.autoControlsCombine?d.controls.autoEl.append(d.controls.start):d.controls.autoEl.append(d.controls.start).append(d.controls.stop),d.settings.autoControlsSelector?a(d.settings.autoControlsSelector).html(d.controls.autoEl):d.controls.el.addClass("bx-has-controls-auto").append(d.controls.autoEl),G(d.settings.autoStart?"stop":"start")},y=function(){d.children.each(function(b){var c=a(this).find("img:first").attr("title");void 0!==c&&(""+c).length&&a(this).append('<div class="bx-caption"><span>'+c+"</span></div>")})},z=function(a){a.preventDefault(),d.controls.el.hasClass("disabled")||(d.settings.auto&&d.settings.stopAutoOnClick&&e.stopAuto(),e.goToNextSlide())},A=function(a){a.preventDefault(),d.controls.el.hasClass("disabled")||(d.settings.auto&&d.settings.stopAutoOnClick&&e.stopAuto(),e.goToPrevSlide())},B=function(a){e.startAuto(),a.preventDefault()},C=function(a){e.stopAuto(),a.preventDefault()},D=function(b){var c,f;b.preventDefault(),d.controls.el.hasClass("disabled")||(d.settings.auto&&d.settings.stopAutoOnClick&&e.stopAuto(),c=a(b.currentTarget),void 0!==c.attr("data-slide-index")&&(f=parseInt(c.attr("data-slide-index")),f!==d.active.index&&e.goToSlide(f)))},E=function(b){var c=d.children.length;return"short"===d.settings.pagerType?(d.settings.maxSlides>1&&(c=Math.ceil(d.children.length/d.settings.maxSlides)),void d.pagerEl.html(b+1+d.settings.pagerShortSeparator+c)):(d.pagerEl.find("a").removeClass("active"),void d.pagerEl.each(function(c,d){a(d).find("a").eq(b).addClass("active")}))},F=function(){if(d.settings.infiniteLoop){var a="";0===d.active.index?a=d.children.eq(0).position():d.active.index===q()-1&&d.carousel?a=d.children.eq((q()-1)*r()).position():d.active.index===d.children.length-1&&(a=d.children.eq(d.children.length-1).position()),a&&("horizontal"===d.settings.mode?t(-a.left,"reset",0):"vertical"===d.settings.mode&&t(-a.top,"reset",0))}d.working=!1,d.settings.onSlideAfter.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index)},G=function(a){d.settings.autoControlsCombine?d.controls.autoEl.html(d.controls[a]):(d.controls.autoEl.find("a").removeClass("active"),d.controls.autoEl.find("a:not(.bx-"+a+")").addClass("active"))},H=function(){1===q()?(d.controls.prev.addClass("disabled"),d.controls.next.addClass("disabled")):!d.settings.infiniteLoop&&d.settings.hideControlOnEnd&&(0===d.active.index?(d.controls.prev.addClass("disabled"),d.controls.next.removeClass("disabled")):d.active.index===q()-1?(d.controls.next.addClass("disabled"),d.controls.prev.removeClass("disabled")):(d.controls.prev.removeClass("disabled"),d.controls.next.removeClass("disabled")))},I=function(){if(d.settings.autoDelay>0){setTimeout(e.startAuto,d.settings.autoDelay)}else e.startAuto(),a(window).focus(function(){e.startAuto()}).blur(function(){e.stopAuto()});d.settings.autoHover&&e.hover(function(){d.interval&&(e.stopAuto(!0),d.autoPaused=!0)},function(){d.autoPaused&&(e.startAuto(!0),d.autoPaused=null)})},J=function(){var b,c,f,g,h,i,j,k,l=0;"next"===d.settings.autoDirection?e.append(d.children.clone().addClass("bx-clone")):(e.prepend(d.children.clone().addClass("bx-clone")),b=d.children.first().position(),l="horizontal"===d.settings.mode?-b.left:-b.top),t(l,"reset",0),d.settings.pager=!1,d.settings.controls=!1,d.settings.autoControls=!1,d.settings.tickerHover&&(d.usingCSS?(g="horizontal"===d.settings.mode?4:5,d.viewport.hover(function(){c=e.css("-"+d.cssPrefix+"-transform"),f=parseFloat(c.split(",")[g]),t(f,"reset",0)},function(){k=0,d.children.each(function(b){k+="horizontal"===d.settings.mode?a(this).outerWidth(!0):a(this).outerHeight(!0)}),h=d.settings.speed/k,i="horizontal"===d.settings.mode?"left":"top",j=h*(k-Math.abs(parseInt(f))),K(j)})):d.viewport.hover(function(){e.stop()},function(){k=0,d.children.each(function(b){k+="horizontal"===d.settings.mode?a(this).outerWidth(!0):a(this).outerHeight(!0)}),h=d.settings.speed/k,i="horizontal"===d.settings.mode?"left":"top",j=h*(k-Math.abs(parseInt(e.css(i)))),K(j)})),K()},K=function(a){var b,c,f,g=a?a:d.settings.speed,h={left:0,top:0},i={left:0,top:0};"next"===d.settings.autoDirection?h=e.find(".bx-clone").first().position():i=d.children.first().position(),b="horizontal"===d.settings.mode?-h.left:-h.top,c="horizontal"===d.settings.mode?-i.left:-i.top,f={resetValue:c},t(b,"ticker",g,f)},L=function(b){var c=a(window),d={top:c.scrollTop(),left:c.scrollLeft()},e=b.offset();return d.right=d.left+c.width(),d.bottom=d.top+c.height(),e.right=e.left+b.outerWidth(),e.bottom=e.top+b.outerHeight(),!(d.right<e.left||d.left>e.right||d.bottom<e.top||d.top>e.bottom)},M=function(a){var b=document.activeElement.tagName.toLowerCase(),c="input|textarea",d=new RegExp(b,["i"]),f=d.exec(c);if(null==f&&L(e)){if(39===a.keyCode)return z(a),!1;if(37===a.keyCode)return A(a),!1}},N=function(){d.touch={start:{x:0,y:0},end:{x:0,y:0}},d.viewport.bind("touchstart MSPointerDown pointerdown",O),d.viewport.on("click",".bxslider a",function(a){d.viewport.hasClass("click-disabled")&&(a.preventDefault(),d.viewport.removeClass("click-disabled"))})},O=function(a){if(d.controls.el.addClass("disabled"),d.working)a.preventDefault(),d.controls.el.removeClass("disabled");else{d.touch.originalPos=e.position();var b=a.originalEvent,c="undefined"!=typeof b.changedTouches?b.changedTouches:[b];d.touch.start.x=c[0].pageX,d.touch.start.y=c[0].pageY,d.viewport.get(0).setPointerCapture&&(d.pointerId=b.pointerId,d.viewport.get(0).setPointerCapture(d.pointerId)),d.viewport.bind("touchmove MSPointerMove pointermove",Q),d.viewport.bind("touchend MSPointerUp pointerup",R),d.viewport.bind("MSPointerCancel pointercancel",P)}},P=function(a){t(d.touch.originalPos.left,"reset",0),d.controls.el.removeClass("disabled"),d.viewport.unbind("MSPointerCancel pointercancel",P),d.viewport.unbind("touchmove MSPointerMove pointermove",Q),d.viewport.unbind("touchend MSPointerUp pointerup",R),d.viewport.get(0).releasePointerCapture&&d.viewport.get(0).releasePointerCapture(d.pointerId)},Q=function(a){var b=a.originalEvent,c="undefined"!=typeof b.changedTouches?b.changedTouches:[b],e=Math.abs(c[0].pageX-d.touch.start.x),f=Math.abs(c[0].pageY-d.touch.start.y),g=0,h=0;3*e>f&&d.settings.preventDefaultSwipeX?a.preventDefault():3*f>e&&d.settings.preventDefaultSwipeY&&a.preventDefault(),"fade"!==d.settings.mode&&d.settings.oneToOneTouch&&("horizontal"===d.settings.mode?(h=c[0].pageX-d.touch.start.x,g=d.touch.originalPos.left+h):(h=c[0].pageY-d.touch.start.y,g=d.touch.originalPos.top+h),t(g,"reset",0))},R=function(a){d.viewport.unbind("touchmove MSPointerMove pointermove",Q),d.controls.el.removeClass("disabled");var b=a.originalEvent,c="undefined"!=typeof b.changedTouches?b.changedTouches:[b],f=0,g=0;d.touch.end.x=c[0].pageX,d.touch.end.y=c[0].pageY,"fade"===d.settings.mode?(g=Math.abs(d.touch.start.x-d.touch.end.x),g>=d.settings.swipeThreshold&&(d.touch.start.x>d.touch.end.x?e.goToNextSlide():e.goToPrevSlide(),e.stopAuto())):("horizontal"===d.settings.mode?(g=d.touch.end.x-d.touch.start.x,f=d.touch.originalPos.left):(g=d.touch.end.y-d.touch.start.y,f=d.touch.originalPos.top),!d.settings.infiniteLoop&&(0===d.active.index&&g>0||d.active.last&&0>g)?t(f,"reset",200):Math.abs(g)>=d.settings.swipeThreshold?(0>g?e.goToNextSlide():e.goToPrevSlide(),e.stopAuto()):t(f,"reset",200)),d.viewport.unbind("touchend MSPointerUp pointerup",R),d.viewport.get(0).releasePointerCapture&&d.viewport.get(0).releasePointerCapture(d.pointerId)},S=function(b){if(d.initialized)if(d.working)window.setTimeout(S,10);else{var c=a(window).width(),h=a(window).height();(f!==c||g!==h)&&(f=c,g=h,e.redrawSlider(),d.settings.onSliderResize.call(e,d.active.index))}},T=function(a){var b=p();d.settings.ariaHidden&&!d.settings.ticker&&(d.children.attr("aria-hidden","true"),d.children.slice(a,a+b).attr("aria-hidden","false"))},U=function(a){return 0>a?d.settings.infiniteLoop?q()-1:d.active.index:a>=q()?d.settings.infiniteLoop?0:d.active.index:a};return e.goToSlide=function(b,c){var f,g,h,i,j=!0,k=0,l={left:0,top:0},n=null;if(d.oldIndex=d.active.index,d.active.index=U(b),!d.working&&d.active.index!==d.oldIndex){if(d.working=!0,j=d.settings.onSlideBefore.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index),"undefined"!=typeof j&&!j)return d.active.index=d.oldIndex,void(d.working=!1);"next"===c?d.settings.onSlideNext.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index)||(j=!1):"prev"===c&&(d.settings.onSlidePrev.call(e,d.children.eq(d.active.index),d.oldIndex,d.active.index)||(j=!1)),d.active.last=d.active.index>=q()-1,(d.settings.pager||d.settings.pagerCustom)&&E(d.active.index),d.settings.controls&&H(),"fade"===d.settings.mode?(d.settings.adaptiveHeight&&d.viewport.height()!==m()&&d.viewport.animate({height:m()},d.settings.adaptiveHeightSpeed),d.children.filter(":visible").fadeOut(d.settings.speed).css({zIndex:0}),d.children.eq(d.active.index).css("zIndex",d.settings.slideZIndex+1).fadeIn(d.settings.speed,function(){a(this).css("zIndex",d.settings.slideZIndex),F()})):(d.settings.adaptiveHeight&&d.viewport.height()!==m()&&d.viewport.animate({height:m()},d.settings.adaptiveHeightSpeed),!d.settings.infiniteLoop&&d.carousel&&d.active.last?"horizontal"===d.settings.mode?(n=d.children.eq(d.children.length-1),l=n.position(),k=d.viewport.width()-n.outerWidth()):(f=d.children.length-d.settings.minSlides,l=d.children.eq(f).position()):d.carousel&&d.active.last&&"prev"===c?(g=1===d.settings.moveSlides?d.settings.maxSlides-r():(q()-1)*r()-(d.children.length-d.settings.maxSlides),n=e.children(".bx-clone").eq(g),l=n.position()):"next"===c&&0===d.active.index?(l=e.find("> .bx-clone").eq(d.settings.maxSlides).position(),d.active.last=!1):b>=0&&(i=b*parseInt(r()),l=d.children.eq(i).position()),"undefined"!=typeof l?(h="horizontal"===d.settings.mode?-(l.left-k):-l.top,t(h,"slide",d.settings.speed)):d.working=!1),d.settings.ariaHidden&&T(d.active.index*r())}},e.goToNextSlide=function(){if(d.settings.infiniteLoop||!d.active.last){var a=parseInt(d.active.index)+1;e.goToSlide(a,"next")}},e.goToPrevSlide=function(){if(d.settings.infiniteLoop||0!==d.active.index){var a=parseInt(d.active.index)-1;e.goToSlide(a,"prev")}},e.startAuto=function(a){d.interval||(d.interval=setInterval(function(){"next"===d.settings.autoDirection?e.goToNextSlide():e.goToPrevSlide()},d.settings.pause),d.settings.autoControls&&a!==!0&&G("stop"))},e.stopAuto=function(a){d.interval&&(clearInterval(d.interval),d.interval=null,d.settings.autoControls&&a!==!0&&G("start"))},e.getCurrentSlide=function(){return d.active.index},e.getCurrentSlideElement=function(){return d.children.eq(d.active.index)},e.getSlideElement=function(a){return d.children.eq(a)},e.getSlideCount=function(){return d.children.length},e.isWorking=function(){return d.working},e.redrawSlider=function(){d.children.add(e.find(".bx-clone")).outerWidth(o()),d.viewport.css("height",m()),d.settings.ticker||s(),d.active.last&&(d.active.index=q()-1),d.active.index>=q()&&(d.active.last=!0),d.settings.pager&&!d.settings.pagerCustom&&(u(),E(d.active.index)),d.settings.ariaHidden&&T(d.active.index*r())},e.destroySlider=function(){d.initialized&&(d.initialized=!1,a(".bx-clone",this).remove(),d.children.each(function(){void 0!==a(this).data("origStyle")?a(this).attr("style",a(this).data("origStyle")):a(this).removeAttr("style")}),void 0!==a(this).data("origStyle")?this.attr("style",a(this).data("origStyle")):a(this).removeAttr("style"),a(this).unwrap().unwrap(),d.controls.el&&d.controls.el.remove(),d.controls.next&&d.controls.next.remove(),d.controls.prev&&d.controls.prev.remove(),d.pagerEl&&d.settings.controls&&!d.settings.pagerCustom&&d.pagerEl.remove(),a(".bx-caption",this).remove(),d.controls.autoEl&&d.controls.autoEl.remove(),clearInterval(d.interval),d.settings.responsive&&a(window).unbind("resize",S),d.settings.keyboardEnabled&&a(document).unbind("keydown",M),a(this).removeData("bxSlider"))},e.reloadSlider=function(b){void 0!==b&&(c=b),e.destroySlider(),h(),a(e).data("bxSlider",this)},h(),a(e).data("bxSlider",this),this}}}(jQuery);
 $(document).ready(function(){
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -6621,6 +6621,37 @@ DispararForm('.admin-boton-editar',$('#form-admin-img-home-subir'));
 
 DispararForm('.boton-subir-img',$('#form-admin-subir-img-proyectos'));
 $('.bxslider').bxSlider();
+
+//Home////////////////////////////////////////////////////
+  
+  //globitos Home
+  $('.globito').tooltipster();
+  
+
+
+//navbar////////////////////////////////////////////////////
+
+  //icono-user
+  $('#icono-user-en-navbar').tooltipster(
+
+     {
+      content: $('.contenido-inicio-de-sesion-navbar'),
+      interactive:true,
+      theme:'contenedor-default-tooltips'
+     }
+
+  );
+
+  //icono-user
+  $('#icono-user-en-navbar-logeado').tooltipster(
+
+     {
+      content: $('.contenido-auth-deplegado-navbar'),
+      interactive:true,
+      theme:'contenedor-default-tooltips'
+     }
+
+  ); 
  });
 
 

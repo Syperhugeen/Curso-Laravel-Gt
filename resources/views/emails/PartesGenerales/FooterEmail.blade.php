@@ -5,7 +5,7 @@
     <tr>
     <!-- logo de Worldmaster -->
       <td>
-      <a href="{{route('home')}}">
+      <a href="{{route('get_home')}}">
       <div style=" font-size: 17px; font-family: arial; padding: 12px 12px; border-radius: 6px;
       background-color: #385dae; display: table; font-weight: 600; text-align: center; letter-spacing:1px;">
         

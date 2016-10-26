@@ -32,49 +32,13 @@
 
 
 
- <div class="contenedor-Auth">
-
-          
-
-          {!! Form::open( ['route' => 'password_recet_post',
-                            'method'   => 'Post',
-                            'files'    => true,
-                            'class'    => 'Form-Auth',
-                            'id'       => 'Form-RecetPasswordEmail'
-                            ])               !!}
-
-          
-
-            <h1 class="Titulo-Auth">
-             <span class="icon-lock_open"></span> Recuperar Contraseña</h1>
-
-             <div class="Auth-Field-Contenedor">
-              <label class="Auth-Field-Contenedor-Label">Email</label>
-              <input class="Auth-Field-Contenedor-Label-Input"  
-                          type="email"
-                          name="email" 
-                         value="{{ Input::old('email') }}"
-                      required="required"
-                  data-pattern="email"
-            data-empty-message="Ingresa Tu Email."
-            data-error-message="Ingresa un Email Valido."
-                   placeholder="Email con el cual te registrastes">
-             </div>
-    
-
-             
-           
-           
-             <input type="submit" class="boton-inicio_sesion" value="Enviar Contraseña Reset Link" >
-
-             
-               
-
-                
-              
-
-          {!! Form::close() !!}
-  </div>
+ <div class="container-fluid section-wrapper">
+     <div class="row">    
+      <div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-3 col-lg-4 col-lg-push-4 wow fadeInUp">          
+          @include('formularios.auth.reset_password_form')
+      </div>
+     </div>  
+ </div>
      
 
 @stop
