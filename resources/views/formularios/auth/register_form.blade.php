@@ -6,7 +6,7 @@
                             ])               !!}
 
 
-  <form class="form-horizontal" method="post" action="#">
+  
             
             <div class="form-group">
               <label for="username" class="cols-sm-2 control-label">Nombre de usuario</label>
@@ -53,9 +53,9 @@
             </div>
   <hr>
             <div class="login-register">
-                    <a href="index.php">Ya estoy registrado</a>
+                    <a href="{{route('auth_login_get')}}">Ya estoy registrado</a>
               </div>
-  </form>
+ 
 
 
 
