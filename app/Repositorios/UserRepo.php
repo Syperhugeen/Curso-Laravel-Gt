@@ -67,7 +67,7 @@ class UserRepo extends BaseRepo
     $user->estado               = 'si';
 
     //propiedades para crear
-    $Propiedades = ['name','email','telefono','password'];
+    $Propiedades = ['name','email','password'];
 
     $this->setEntidadDato($user,$request,$Propiedades);
     
@@ -84,7 +84,7 @@ class UserRepo extends BaseRepo
     $url = route('confirmation' , [ 'token' => $user->registration_token ]);
 
     //envio Correo usuario
-    $this->EmailsRepo()->EnviarEmailDeConfirmacion($user);
+    $this->getEmailsRepo()->EnviarEmailDeConfirmacion($user);
 
     return $user;
   }

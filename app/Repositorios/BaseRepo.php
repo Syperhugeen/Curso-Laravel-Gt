@@ -22,6 +22,10 @@ abstract class BaseRepo
       $this->entidad      = $this->getEntidad();
     }
 
+    public function getEmailsRepo()
+    {
+      return $this->EmailsRepo;
+    }
 
     public function find($id)
     {

@@ -10467,7 +10467,8 @@ img.media-object {
   top: 102px;
   left: 0;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 5px; }
 
 .Errores-Contenedor {
   display: -moz-flex;

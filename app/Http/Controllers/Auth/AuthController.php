@@ -10,6 +10,7 @@ use App\Repositorios\UserRepo;
 use App\Managers\Users\user_registro;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Repositorios\Emails\EmailsRepo;
 
 class AuthController extends Controller
 {
@@ -27,16 +28,19 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers;
 
     protected $UserRepo;
+    protected $EmailsRepo;
 
     /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
-    public function __construct(UserRepo $UserRepo)
+    public function __construct(UserRepo  $UserRepo,
+                               EmailsRepo $EmailsRepo )
     {
         $this->UserRepo   = $UserRepo;
         $this->middleware('guest', ['except' => 'getLogout']);
+        $this->EmailsRepo = $EmailsRepo;
     }
 
     /**
@@ -96,6 +100,8 @@ class AuthController extends Controller
         
         return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     }
+
+    
 
 
 
@@ -164,5 +170,10 @@ class AuthController extends Controller
                 $this->loginUsername() => $this->getFailedLoginMessage(),
             ]);
     }
+
+
+    
+
+    
 
 }

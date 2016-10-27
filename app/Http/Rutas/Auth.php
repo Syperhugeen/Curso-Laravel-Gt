@@ -35,11 +35,7 @@ Route::post('registro', [
 ]);
 
 
-//confirmacion de la cuenta
-Route::get('confirma/{token}', [
-  'uses'  => 'Auth\AuthController@getConfirmation',
-  'as'    => 'confirmation'
-]);
+
 
 
 
@@ -66,13 +62,15 @@ Route::post('password/reset', [
 
 
 //Reenvio Email De Confirmacion
-Route::get('-user_confirmacion', [
-  'uses'  => 'ReenvioEmail\ReenvioEmailController@Reenvio_De_EmailDe_Confirmacion',
-  'as'    => 'Reenvio_De_EmailDe_Confirmacion'
+Route::get('reenvioEmailConfirmacion', [
+  'uses'  => 'Auth\EnvioEmailConfirmacioController@reenvioEmailConfirmacion',
+  'as'    => 'reenvioEmailConfirmacion'
 ]);
 
-//ruta para eliminar usuario de Newslleter
-Route::get('CancelarEnvioDeNewslleter{email}' , [
-'uses' => 'Newslleter\NewslleterController@CancelarEnvioDeNewslleter',
-'as'   => 'CancelarEnvioDeNewslleter'
+
+//confirmacion de la cuenta
+Route::get('confirma/{token}', [
+  'uses'  => 'Auth\EnvioEmailConfirmacioController@getConfirmation',
+  'as'    => 'confirmation'
 ]);
+

@@ -2,10 +2,11 @@
   @include flexbox;
   @include align-items(center);
   @include flex-direction(column);
-      top: 102px;
+     top: 102px;
     left: 0;
   position:absolute;
   width:100%;
+  margin-bottom:5px;
 
 }
 

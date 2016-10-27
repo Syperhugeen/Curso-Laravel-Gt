@@ -54,6 +54,7 @@
   </div>
     
 
+  @include('emails.prueba')
 
 
 @stop

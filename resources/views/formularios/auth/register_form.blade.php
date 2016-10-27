@@ -1,6 +1,6 @@
 
 
- {!! Form::open(             ['route' => 'auth_login_post',
+ {!! Form::open(             ['route'  => 'register_post',
                             'method'   => 'post',
                             'files'    => true
                             ])               !!}
@@ -13,7 +13,9 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="username" id="username"  placeholder="Ingresa un nombre de usuario"/>
+                   {!! Form::text('name', null ,['class'       => 'form-control',
+                                                 'id'          => 'username',
+                                                 'placeholder' => 'Escribe tu nombre y apellido']) !!}
                 </div>
               </div>
             </div>
@@ -23,7 +25,9 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
-                  <input type="email" class="form-control" name="email" id="email"  placeholder="Ingresa tu dirección de correo"/>
+                  {!! Form::text('email', null ,['class'       => 'form-control',
+                                                 'id'          => 'username',
+                                                 'placeholder' => 'Escribe tu email']) !!}
                 </div>
               </div>
             </div>
@@ -33,7 +37,9 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
-                  <input type="password" class="form-control" name="password" id="password"  placeholder="Ingresa una contraseña"/>
+                  {!! Form::password('password', [ 'class'       => 'form-control',
+                                                   'id'          => 'password',
+                                                   'placeholder' => 'Escribe tu contraseña']) !!}
                 </div>
               </div>
             </div>
@@ -43,7 +49,9 @@
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-ok" aria-hidden="true"></i></span>
-                  <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Ingresa nuevamente la contraseña"/>
+                  {!! Form::password('password_confirmation', [ 'class'       => 'form-control',
+                                                   'id'          => 'password',
+                                                   'placeholder' => 'Escribe tu contraseña de nuevo']) !!}
                 </div>
               </div>
             </div>
