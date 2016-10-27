@@ -10242,9 +10242,33 @@ ul.nav-links > a > li:hover {
 .contenido-auth-deplegado-navbar {
   width: 230px; }
 
+/*carrusel*/
+.img-carousel {
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto; }
+
+.carousel-caption > h3 {
+  color: white; }
+
+.carousel-caption > p {
+  color: white;
+  text-align: center; }
+
+/*título principal de Bienvenida*/
+.section-wrapper-welcome {
+  padding-top: 40px; }
+
+.home-title-welcome {
+  font-family: Pioret;
+  font-size: 60px; }
+
 .home-box {
   text-align: justify-left; }
 
+/*globitos*/
 .contenedor-home-globitos {
   display: -moz-flex;
   display: -ms-flexbox;
@@ -10301,18 +10325,7 @@ ul.nav-links > a > li:hover {
     height: 75px;
     font-size: 150%; } }
 
-.carousel-caption > h3 {
-  color: white; }
-
-.carousel-caption > p {
-  color: white;
-  text-align: center; }
-
-/*título principal de Bienvenida*/
-.home-title-welcome {
-  font-family: Pioret;
-  font-size: 60px; }
-
+/*últimos proyectos y últimas noticias*/
 /*título de cada sección interior del Home,
 por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
 .home-section-title {
@@ -10321,30 +10334,33 @@ por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
   font-family: Pioret;
   border-bottom: 1px solid #b3b3b3; }
 
-/*el contenedor de todos los proyectos mostrados*/
+/*el contenedor que contiene a todos los items*/
 .home-section-display {
   padding: 10px; }
 
-/*el contenedor de cada proyecto individual*/
+/*el contenedor de cada item individual*/
 .home-section-display-item {
   border-radius: 8px;
   padding: 20px;
   transition: transform .3s ease; }
 
+/*línea divisora entre cada item individual*/
 .home-section-display-divider {
   margin: 4px 20px;
   width: 100%;
   color: #f8f8f8; }
 
+/*efecto hover de cada item individual*/
 a > .home-section-display-item:hover {
   background-color: #f8f8f8;
   transform: translate(20px, 0); }
 
-/*imágenes dentro de la sección de Home que muestra últimos proyectos*/
+/*imagen de cada item individual*/
 img.media-object {
   width: 200px;
   height: 200px; }
 
+/*media-body es el texto de contenido de cada item individual*/
 .media-body {
   padding-left: 20px; }
 

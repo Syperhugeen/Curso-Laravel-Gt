@@ -1,8 +1,4 @@
 
-
-
-<h3>Me frustré intentando ponerle tooltips a los globitos, ya veo que en /js tenés un plug-in de tooltips que debe estar invalidando el de bootstrap. No sé cómo hacerlos funcionar</h3>
-
 <div class="contenedor-home-globitos">
 
     <a href="#">
