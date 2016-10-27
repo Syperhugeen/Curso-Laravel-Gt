@@ -2,9 +2,9 @@
   header
 </div>
 
-@yield('contentenido')
+@yield('contenido')
 
-hollalala
+
 
 <div>
   footer
