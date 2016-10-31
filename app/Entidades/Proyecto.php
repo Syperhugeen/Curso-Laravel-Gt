@@ -45,6 +45,13 @@ class Proyecto extends Model
         
     }
 
+    public function scopeActive($query)
+    {
+                               
+           $query->where('estado', "si"); 
+                
+    }
+
 
     public function getUrlImgAttribute()
     {

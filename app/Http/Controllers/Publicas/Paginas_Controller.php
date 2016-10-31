@@ -54,7 +54,7 @@ class Paginas_Controller extends Controller
     //Proyectos
     public function get_pagina_proyecto_listado()
     {
-        $Proyectos = $this->ProyectoRepo->getEntidadActivas();
+        $Proyectos = $this->ProyectoRepo->getProyectosActivos();
         return view('paginas.proyecto.proyecto_listado', compact('Proyectos'));
     }
 

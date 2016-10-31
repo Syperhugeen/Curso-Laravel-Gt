@@ -27,7 +27,7 @@ class Home_Controller extends Controller
     {
         $Imagenes     = $this->ImgHomeRepo->getEntidadActivas();
         $Empresa      = $this->EmpresaRepo->getEmpresaDatos();
-        $Proyectos    = $this->ProyectoRepo->getEntidadActivas();
+        $Proyectos    = $this->ProyectoRepo->getProyectosActivos();
 
         return view('home.home', compact('Imagenes','Empresa','Proyectos'));
     }

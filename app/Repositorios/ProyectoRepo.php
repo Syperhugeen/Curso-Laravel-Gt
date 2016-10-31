@@ -25,6 +25,14 @@ class ProyectoRepo extends BaseRepo
                 ->orderBy('id','desc')
                 ->paginate(30);
   }
+
+  public function getProyectosActivos()
+  {
+    return $this->getEntidad()                
+                ->active()               
+                ->orderBy('id','desc')
+                ->paginate(2);
+  }
   
 
   public function setDatos($request)
