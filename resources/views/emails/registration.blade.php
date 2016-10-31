@@ -1,19 +1,26 @@
-@include('emails.styleGeneralDeEmails')
+@extends('emails.layouts.layout_principal')
 
-<div class="estilo-texto-general">
-  
-  Hola {{ $user->name}} , <strong>muchas gracias</strong> por tomar la iniciativa y registrarte. Ahora  <strong>solo te queda confirmar tu email</strong> .  
+@section('asunto_email')
+ CONTRASEÑA
+@stop
 
-</div>
+@section('texto_a_user_email')
+ Hola {{ $user->first_name}} , <strong>muchas gracias</strong> por tomar la iniciativa y registrarte. 
+@stop
 
-<!-- saltos de linea -->
-<br>
-<br>
+@section('mensaje_email')
+ Ahora <strong> solo te queda confirmar tu email</strong> . <a href="{{$url}}"> clic aquí para confirmar tu cuenta. </a>
+@stop
 
-<a href="{{ $url }}">
-  <div class="botonEmails">
-     Click Aqui Para Confirmar Email
-  </div>
-</a>
+@section('url_email')
+ {{$url}}
+@stop
 
-@include('emails.PartesGenerales.FooterEmail')
+
+@section('boton_texto_email')
+ Confirmar cuenta
+@stop
+
+@section('mensaje_secundario_email')
+ Si has recibido este correo por error, no eres la persona a quien nos dirigimos o no has solicitado ayuda concerniente al olvido de tu contraseña; haznos el favor de comunicarte con nosotros.
+@stop

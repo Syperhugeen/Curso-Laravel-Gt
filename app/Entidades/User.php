@@ -67,4 +67,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         }
 
     }
+
+
+
+    //Atributes////////////////////
+    public function getFirstNameAttribute()
+    {
+        $name = explode(" ", $this->name);
+      
+        return $name[0];
+    }
 }

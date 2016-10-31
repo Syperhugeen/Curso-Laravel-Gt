@@ -27,7 +27,7 @@
                         <tr height="40px" align="center">
                          <td width="155px"></td>
                           <td width="210px" style="font-family:Verdana, Helvetica, Arial, sans-serif; color:#FFFFFF; font-size:22px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px" valign="center" align="center" bgcolor="#4a9fff">
-                            <a href="http://todopadentro.com" style="color:#FFFFFF;">
+                            <a href="@yield('url_email')" style="color:#FFFFFF;">
                               <div width="100%" height="100%">
                                 {{-- boton texto --}}
                                 @yield('boton_texto_email')

@@ -14,18 +14,18 @@ abstract class BaseRepo
      * entidad que ingresamos por parametro
      */
     protected $entidad;
-    protected $EmailsRepo;
+    
 
-    public function __construct(EmailsRepo $EmailsRepo)
+    public function __construct()
     {
-      $this->EmailsRepo   = $EmailsRepo; 
+      
       $this->entidad      = $this->getEntidad();
     }
 
-    public function getEmailsRepo()
-    {
-      return $this->EmailsRepo;
-    }
+   public function getEmailsRepo()
+   {
+    return new EmailsRepo();
+   }
 
     public function find($id)
     {
