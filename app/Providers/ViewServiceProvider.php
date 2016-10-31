@@ -17,7 +17,8 @@ class ViewServiceProvider extends ServiceProvider
     {
         $this->app->make('view')->composer(['layouts.admin_layout.header.global',
                                             'layouts.user_layout.header.global',
-                                            'layouts.user_layout.footer.footer-general'
+                                            'layouts.user_layout.footer.footer-general',
+                                            'emails.layouts.layout_principal'
                                             ]
             , EmpresaViewComposer::class);
 
