@@ -42,8 +42,17 @@ class EmailsRepo
                    compact('user' , 'url')       ,
                    function($m) use ($user) 
                    {
-                     $m->from($this->getEmpresa()->getEmpresaDatos()->email_no_reply, $this->getEmpresa()->getEmpresaDatos()->name);
-                     $m->to($user->email , $user->name)->subject($user->first_name.' Activa tu cuenta en ' .$this->getEmpresa()->getEmpresaDatos()->name );
+                     $m->from($this->getEmpresa()
+                                   ->getEmpresaDatos()
+                                   ->email_no_reply, 
+
+                                    $this->getEmpresa()
+                                         ->getEmpresaDatos()
+                                         ->name);
+                     $m->to($user->email , $user->name)->subject($user->first_name.' Activa tu cuenta en ' .
+                        $this->getEmpresa()
+                             ->getEmpresaDatos()
+                             ->name );
                    }
         );
 
