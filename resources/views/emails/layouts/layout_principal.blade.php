@@ -15,6 +15,7 @@
 
        <!-- Footer del Email -->       
        @include('emails.layouts.partes_layout_principal.footer')
+       
       </tbody>
      </table>
    </td>
