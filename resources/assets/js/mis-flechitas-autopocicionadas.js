@@ -16,4 +16,23 @@ $(function() {
           }
           
      })
-});
+});  
+
+
+$(function() {
+
+     //urld del navegador 
+     var pgurl = window.location.href;       
+
+     $(".admin-columna-li").each(function()
+     { 
+
+          //atributo href del link
+          if(($(this).children().attr("href") == pgurl) || ( $(this).children().attr("href")+'/' == pgurl ))
+          {            
+            $(this).addClass("Helper-Class-Active");
+          }
+          
+     })
+});  
+

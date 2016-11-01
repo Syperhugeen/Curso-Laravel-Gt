@@ -29,7 +29,7 @@ class Admin_Proyectos_Controllers extends Controller
   public function get_admin_proyectos(Request $Request)
   {
 
-    $proyectos = $this->ProyectoRepo->getProyectosAll($Request);
+    $proyectos = $this->ProyectoRepo->getEntidadesAllPaginadas($Request,20);
 
     return view('admin.proyectos.proyectos_home', compact('proyectos'));
   }
@@ -48,7 +48,15 @@ class Admin_Proyectos_Controllers extends Controller
   public function set_admin_proyectos_crear(Request $Request)
   {     
       
-     $this->ProyectoRepo->setDatos($Request);
+      $Proyecto    = $this->ProyectoRepo->getEntidad();
+
+      $Proyecto->estado = 'si';      
+
+      $Propiedades = ['name','description'];
+      
+      $this->ProyectoRepo->setEntidadDato($Proyecto,$Request,$Propiedades); 
+
+      $this->ProyectoRepo->setImagen($Proyecto,$Request,'img','ProyectoImagenPrincipal/',$Proyecto->id ,'.png');        
 
      return redirect()->route('get_admin_proyectos')->with('alert', 'Proyecto Creado Correctamente');
     
@@ -66,9 +74,13 @@ class Admin_Proyectos_Controllers extends Controller
   //set edit admin proyecto
   public function set_admin_proyectos_editar($id,Request $Request)
   {
-    $proyecto = $this->ProyectoRepo->find($id);
+    $Proyecto = $this->ProyectoRepo->find($id);
 
-    $this->ProyectoRepo->setDatosEdit($proyecto,$Request); 
+    $Propiedades = ['name','description','estado'];
+      
+    $this->ProyectoRepo->setEntidadDato($Proyecto,$Request,$Propiedades); 
+
+    $this->ProyectoRepo->setImagen($Proyecto,$Request,'img','ProyectoImagenPrincipal/',$Proyecto->id ,'.png'); 
 
     return redirect()->route('get_admin_proyectos')->with('alert', 'Proyecto Editado Correctamente');  
   }
@@ -85,7 +97,6 @@ class Admin_Proyectos_Controllers extends Controller
   public function delete_admin_proyectos_img($id_img)
   {
       $this->ImgProyectoRepo->destroy_entidad($id_img);
-
 
       return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
   }

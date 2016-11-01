@@ -25,7 +25,7 @@ class Admin_Marcas_Controllers extends Controller
   //home admin User
   public function get_admin_marcas(Request $Request)
   { 
-    $marcas = $this->MarcaRepo->getMarcasAll($Request);
+    $marcas = $this->MarcaRepo->getEntidadesAllPaginadas($Request,3);
 
     return view('admin.marcas.marcas_home', compact('marcas'));
   }
@@ -39,8 +39,21 @@ class Admin_Marcas_Controllers extends Controller
   //set Crear admin User
   public function set_admin_marcas_crear(Request $Request)
   {     
-     //me traigo la funcion del repositorio UserRepo   
-     $this->MarcaRepo->setMarcaAdmin($Request);
+
+      //propiedades para crear
+      $Propiedades = ['name','description','estado'];
+
+      //traigo la entidad
+      $marca = $this->MarcaRepo->getEntidad();
+
+      //grabo todo las propiedades
+      $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
+
+      //me traigo la funcion del repositorio UserRepo   
+      $this->MarcaRepo->setMarcaAdmin($Request);
+
+      //para la imagen
+      $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png'); 
 
      return redirect()->route('get_admin_marcas')->with('alert', 'Marca Creado Correctamente');
     
@@ -57,9 +70,15 @@ class Admin_Marcas_Controllers extends Controller
   //set edit admin marca
   public function set_admin_marcas_editar($id,Request $Request)
   {
-    $marca = $this->MarcaRepo->find($id);
+    $marca = $this->MarcaRepo->find($id);    
 
-    $this->MarcaRepo->setMarcaAdminEdit($marca,$Request); 
+    //propiedades para crear
+    $Propiedades = ['name','description','estado'];    
+
+    //grabo todo las propiedades
+    $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
+
+    $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png');
 
     return redirect()->route('get_admin_marcas')->with('alert', 'Marca Editado Correctamente');  
   }

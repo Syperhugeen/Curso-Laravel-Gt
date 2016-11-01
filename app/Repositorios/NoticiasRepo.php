@@ -2,31 +2,29 @@
 
 namespace App\Repositorios;
 
-use App\Entidades\Marca;
+use App\Entidades\Noticia;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
 /**
 * Repositorio de consultas a la base de datos User
 */
-class MarcaRepo extends BaseRepo
+class NoticiasRepo extends BaseRepo
 {
   
   public function getEntidad()
   {
-    return new Marca();
+    return new Noticia();
   }
 
   //guetters/////////////////////////////////////////////////////////////////////
 
-  
+
 
 
   //setters//////////////////////////////////////////////////////////////////////
 
- 
-
- 
+  
 
 
   

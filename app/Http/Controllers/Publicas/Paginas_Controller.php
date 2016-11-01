@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Publicas;
 use App\Http\Controllers\Controller;
 use App\Repositorios\ImgHomeRepo;
 use App\Repositorios\ProyectoRepo;
+use Illuminate\Http\Request;
 
 
 class Paginas_Controller extends Controller
@@ -52,9 +53,9 @@ class Paginas_Controller extends Controller
     }
 
     //Proyectos
-    public function get_pagina_proyecto_listado()
+    public function get_pagina_proyecto_listado(Request $Request)
     {
-        $Proyectos = $this->ProyectoRepo->getProyectosActivos();
+        $Proyectos = $this->ProyectoRepo->getEntidadActivasPaginadas($Request,3) ;
         return view('paginas.proyecto.proyecto_listado', compact('Proyectos'));
     }
 

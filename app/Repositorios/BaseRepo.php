@@ -38,13 +38,61 @@ abstract class BaseRepo
       $entidad_a_borrar->delete();
     }
 
-    public function getEntidadActivas()
+    /**
+     * Entidades Activas Paginadas
+     */
+    public function getEntidadActivasPaginadas($request,$paginacion)
     {
-      return $this->entidad->where('estado','si')->get();
+      return $this->entidad
+                  ->name($request->get('name')) 
+                  ->active()               
+                  ->orderBy('id','desc')
+                  ->paginate($paginacion);
     }
 
-    
+    /**
+     * Entidades All ya paginadas Paginadas
+     */
+    public function getEntidadesAllPaginadas($request,$paginacion)
+    {
 
+    return $this->entidad
+                ->name($request->get('name'))                
+                ->orderBy('id','desc')
+                ->paginate($paginacion);
+  
+    }
+
+
+    /**
+     * Ultimas Entidades Activas
+     */
+    public function getUltimasEntidadesRegistradasRandomActive($request,$cantidad)
+    {
+
+      $cantidad_de_entidades =  $this->entidad->active()->get()->count();
+
+      if($cantidad_de_entidades >= $cantidad)
+      {
+        $entidades = $this->entidad
+                          ->name($request->get('name'))                
+                          ->active()
+                          ->orderBy('id','DESC')
+                          ->take($cantidad)
+                          ->get();
+      }
+      else
+      {
+        $entidades = $this->entidad
+                          ->name($request->get('name'))                
+                          ->active()
+                          ->orderBy('id','DESC')
+                          ->get();
+      }  
+
+    return $entidades;
+  
+    }
 
      
 
@@ -63,6 +111,8 @@ abstract class BaseRepo
         {
            $Entidad->$Propiedad = $request->input($Propiedad);
         } 
+
+        $Entidad->save();
      
     }
 

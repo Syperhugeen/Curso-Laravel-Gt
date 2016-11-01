@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Repositorios\ImgHomeRepo;
 use App\Repositorios\EmpresaRepo;
 use App\Repositorios\ProyectoRepo;
+use Illuminate\Http\Request;
 
 
 class Home_Controller extends Controller
@@ -23,13 +24,13 @@ class Home_Controller extends Controller
         $this->ProyectoRepo = $ProyectoRepo;
     }
 
-    public function get_home()
+    public function get_home(Request $Request)
     {
-        $Imagenes     = $this->ImgHomeRepo->getEntidadActivas();
+        
         $Empresa      = $this->EmpresaRepo->getEmpresaDatos();
-        $Proyectos    = $this->ProyectoRepo->getProyectosActivos();
+        $Proyectos    = $this->ProyectoRepo->getUltimasEntidadesRegistradasRandomActive($Request, 3);
 
-        return view('home.home', compact('Imagenes','Empresa','Proyectos'));
+        return view('home.home', compact('Empresa','Proyectos'));
     }
 
 

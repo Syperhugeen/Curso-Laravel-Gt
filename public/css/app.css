@@ -8915,6 +8915,10 @@ div.chosen-container-multi .result-selected img {
   -moz-justify-content: space-between;
   justify-content: space-between; }
 
+.Helper-Class-Active {
+  border: solid 3px #4a9fff;
+  font-weight: bold; }
+
 .br-theme-css-stars .br-widget {
   height: 28px;
   white-space: nowrap; }
