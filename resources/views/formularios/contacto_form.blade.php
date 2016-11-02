@@ -2,10 +2,11 @@
 
   {!! Form::open(             ['route' => 'auth_login_post',
                             'method'   => 'post',
-                            'files'    => true
+                            'files'    => true,
+                            'id'       => 'contact-form'
                             ])               !!}
 
-<form id="contact-form" method="post" action="contact.php" role="form">
+
 
     <div class="messages"></div>
 
@@ -65,6 +66,6 @@
         </div>
     </div>
 
-</form>
+
 
 {!! Form::close() !!}

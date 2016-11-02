@@ -26,6 +26,7 @@ elixir(function(mix) {
         'Plug-rating-plugin.js',
         'Plug-bxSlider.js',
         'Plug-jquery.tooltip.min.js',
+        'Plug-validator-Boostrap.js',
         'inicio.js',
         'mis-funciones_personalizadas.js',
         'mis-funciones_personalizadas_para_GoogleAnalitics.js',        

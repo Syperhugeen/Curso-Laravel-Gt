@@ -29,7 +29,7 @@ class ImgHomeRepo extends BaseRepo
     $this->setEntidadDato($ImgHome,$request,$Propiedades); 
 
     $ImgHome->home_id = 1;
-    $ImgHome->estado = 'si';
+    $ImgHome->estado  = 'si';
 
     $ImgHome->save();
 
