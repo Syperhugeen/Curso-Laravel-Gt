@@ -6,18 +6,26 @@ use App\Http\Controllers\Controller;
 use App\Repositorios\ImgHomeRepo;
 use App\Repositorios\ProyectoRepo;
 use Illuminate\Http\Request;
+use App\Repositorios\NoticiasRepo;
+use App\Repositorios\EmpresaRepo;
 
 
 class Paginas_Controller extends Controller
 {
     protected $ImgHomeRepo;
     protected $ProyectoRepo;
+    protected $NoticiasRepo;
+    protected $EmpresaRepo;
 
     public function __construct(ImgHomeRepo  $ImgHomeRepo,
-                                ProyectoRepo $ProyectoRepo     )
+                                ProyectoRepo $ProyectoRepo, 
+                                NoticiasRepo $NoticiasRepo,
+                                EmpresaRepo  $EmpresaRepo    )
     {
         $this->ProyectoRepo = $ProyectoRepo;
         $this->ImgHomeRepo  = $ImgHomeRepo;
+        $this->NoticiasRepo = $NoticiasRepo;
+        $this->EmpresaRepo  = $EmpresaRepo;
     }
 
     //Contacto
@@ -29,7 +37,8 @@ class Paginas_Controller extends Controller
     //Empresa
     public function get_pagina_empresa()
     {
-        return view('paginas.empresa.empresa');
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+        return view('paginas.empresa.empresa', compact('Empresa'));
     }
 
     
@@ -37,19 +46,26 @@ class Paginas_Controller extends Controller
     //servicios
     public function get_pagina_servicios()
     {
+
         return view('paginas.servicios.servicios');
     }
 
     //Noticias
-    public function get_pagina_noticias_noticias_listado()
+    public function get_pagina_noticias_listado(Request $Request)
     {
-        return view('paginas.noticias.noticias_listado');
+        $Noticias = $this->NoticiasRepo->getEntidadActivasPaginadas($Request,2);
+
+        return view('paginas.noticias.noticias_listado',compact('Noticias'));
     }
 
+
+
     //Noticias Individual
-    public function get_pagina_noticias_noticias_individual()
+    public function get_pagina_noticia_individual($name,$id)
     {
-        return view('paginas.noticias.noticias_individual');
+        $Noticia = $this->NoticiasRepo->find($id);
+        
+        return view('paginas.noticias.noticias_individual',compact('Noticia'));
     }
 
     //Proyectos

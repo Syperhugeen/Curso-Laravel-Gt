@@ -26,23 +26,21 @@
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
     	<div class="page-header">
-        	<h1>Acerca de V&amp;V</h1>
+        	<h1>Acerca de {{$Empresa->name}}</h1>
       	</div>
 
 
 
       	<div class="row space-bottom">
-
       		<div class="col-lg-6">
       			<h3>Misión</h3>
-      			<p>La misión de nuestra empresa es brindar Servicios de Ingeniería, con la finalidad de que cada uno de nuestros clientes obtenga la construcción que desee. Llevamos adelante trabajos profesionales, confiables y creativos, en la búsqueda de la optimización de recursos, proporcionar soluciones y desarrollar proyectos con la eficacia, seguridad y rapidez que el cliente demanda. Se pretende aplicar soluciones innovadoras, logrando resultados convenientes para cada cliente, mediante la capacitación constante en las diversas técnicas constructivas. Garantizamos responsabilidad, esfuerzo, valores y un relacionamiento tanto sociable como personalizado.</p>
+      			<p>{{$Empresa->mision}}.</p>
       		</div>
 
       		<div class="col-lg-6">
       			<h3>Visión</h3>
-      			<p>En base a un trabajo solido, buscamos ampliar nuestro campo laboral a otros Departamentos y hacia el exterior del país. Nuestro principal propósito es superarnos permanentemente para alcanzar los objetivos y lograr la satisfacción de nuestros clientes. Apuntamos asiduamente a la Responsabilidad Social y a ser prudentes con el impacto de las obras civiles en el medio ambiente.</p>
+      			<p>{{$Empresa->vision}}.</p>
       		</div>
-
       	</div>
 
 

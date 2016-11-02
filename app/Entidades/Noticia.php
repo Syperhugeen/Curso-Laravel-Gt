@@ -43,6 +43,27 @@ class Noticia extends Model
         
     }
 
+    public function scopeActive($query)
+    {
+                               
+           $query->where('estado', "si"); 
+                
+    }
+
+
+    public function getUrlImgAttribute()
+    {
+        
+        return url().'/imagenes/'.$this->img;
+    }
+
+
+    public function getRouteAttribute()
+    {
+        
+        return route('get_pagina_noticia_individual', [str_replace(" ", "_", $this->name), $this->id]);
+    }
+
     
 
     

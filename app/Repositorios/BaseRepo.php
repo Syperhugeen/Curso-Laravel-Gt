@@ -109,7 +109,14 @@ abstract class BaseRepo
     {
         foreach ($Propiedades as $Propiedad) 
         {
+          if($request->input($Propiedad) != '')
+          {            
            $Entidad->$Propiedad = $request->input($Propiedad);
+          }
+          else
+          {
+           $Entidad->$Propiedad = null;
+          }
         } 
 
         $Entidad->save();

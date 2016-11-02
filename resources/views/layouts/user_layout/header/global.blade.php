@@ -16,7 +16,7 @@
           <li><a href="{{route('get_pagina_empresa')}}">ACERCA DE V&amp;V</a></li>
           <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
           <li><a href="{{route('get_pagina_proyecto_listado')}}">PROYECTOS</a></li>
-          <li><a href="{{route('get_pagina_noticias_noticias_listado')}}">PUBLICACIONES</a></li>
+          <li><a href="{{route('get_pagina_noticias_listado')}}">PUBLICACIONES</a></li>
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
           {{-- aqui pongo el tema de inicio de sesion y datos del user --}}

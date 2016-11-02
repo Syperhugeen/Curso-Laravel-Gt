@@ -40,16 +40,14 @@
 
       		<div class="col-md-6">
       			<hr style="width:50%;left:0;">
-      			<h3>Fecha del proyecto</h3>
+      			<h3>Fecha del proyecto: {{$Proyecto->fecha}}</h3>
       			<h4>
-      			Ubicación del proyecto
-      			<br>Método de construcción del proyecto
+      			Ubicación del proyecto: {{$Proyecto->ubicacion}}
+      			<br>Método de construcción del proyecto: {{$Proyecto->metodo_de_construccion}}
       			</h4>
 
       			<h5 class="color-gris-claro">
-      			Primer autor del proyecto
-      			<br>segundo autor del proyecto
-      			<br>tercer autor del proyecto
+      			 Autores: {{$Proyecto->metodo_de_construccion}}
       			</h5>
 
       			<hr style="width:50%;left:0;">
@@ -63,10 +61,17 @@
       	</div>
 
 
+        @if($Proyecto->imagenesproyecto->count() > 0)
+          <ul class="bxslider">
+            @foreach($Proyecto->imagenesproyecto as $img)           
+                <li><img class="img-carousel" src="{{$img->url_img}}"></li>                      
+             @endforeach 
+          </ul>
+        @endif
 
-      	<!--slideshow de fotos-->
+      {{-- 	<!--slideshow de fotos-->
       	<div class="row space-bottom">
-			<div class="col-md-12">
+			  <div class="col-md-12">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->
 				  <ol class="carousel-indicators">
@@ -76,22 +81,12 @@
 				    <li data-target="#myCarousel" data-slide-to="3"></li>
 				  </ol>
 
-				  <!-- Wrapper for slides -->
+           @foreach($Proyecto->imagenesproyecto as $img)
+				    <!-- Wrapper for slides -->
 				    <div class="item">
-				      <img class="img-carousel" src="imagenes/Img/imagen_del_proyecto_1.jpg">
-				    </div>
-
-				    <div class="item">
-				      <img class="img-carousel" src="imagenes/Img/imagen_del_proyecto_2.jpg">
-				    </div>
-
-				    <div class="item">
-				      <img class="img-carousel" src="imagenes/Img/imagen_del_proyecto_3.jpg">
-				    </div>
-
-				    <div class="item">
-				      <img class="img-carousel" src="imagenes/Img/imagen_del_proyecto_4.jpg">
-				    </div>
+				      <img class="img-carousel" src="{{$img->url_img}}">
+				    </div>				    
+           @endforeach 
 
 				  <!-- Left and right controls -->
 				  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -108,7 +103,7 @@
 			<div class="col-md-12">
 				<a href="{{route('get_pagina_proyecto_listado')}}"><p><span class="glyphicon glyphicon-circle-arrow-left"></span> volver a Proyectos</p></a>
 			</div>
-		</div>
+		</div> --}}
      
 
 

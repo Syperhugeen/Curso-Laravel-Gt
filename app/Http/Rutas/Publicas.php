@@ -31,19 +31,26 @@ Route::get('/Servicios' , [
 
 //Noticias
 Route::get('/Noticias' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_noticias_noticias_listado',
-  'as'   => 'get_pagina_noticias_noticias_listado']
+  'uses' => 'Publicas\Paginas_Controller@get_pagina_noticias_listado',
+  'as'   => 'get_pagina_noticias_listado']
+);
+     //Noticia Individual
+      Route::get('/Publicacion/{name}/{id}' , [                    
+        'uses' => 'Publicas\Paginas_Controller@get_pagina_noticia_individual',
+        'as'   => 'get_pagina_noticia_individual']
+      );
+
+
+ //Proyectos
+Route::get('/Proyecto/{name}/{id}' , [                    
+  'uses' => 'Publicas\Paginas_Controller@get_pagina_proyecto_individual',
+  'as'   => 'get_pagina_proyecto_individual']
 );
 
 
-//Proyectos
+//Noticias Individuales
 Route::get('/Proyectos' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_proyecto_listado',
   'as'   => 'get_pagina_proyecto_listado']
 );
 
-   //Proyectos
-Route::get('/Proyecto/{name}/{id}' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_proyecto_individual',
-  'as'   => 'get_pagina_proyecto_individual']
-);

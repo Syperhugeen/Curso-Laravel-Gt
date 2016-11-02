@@ -52,7 +52,7 @@ class Admin_Proyectos_Controllers extends Controller
 
       $Proyecto->estado = 'si';      
 
-      $Propiedades = ['name','description'];
+      $Propiedades = ['name','description','fecha','ubicacion','metodo_de_construccion','autores'];
       
       $this->ProyectoRepo->setEntidadDato($Proyecto,$Request,$Propiedades); 
 
@@ -76,7 +76,7 @@ class Admin_Proyectos_Controllers extends Controller
   {
     $Proyecto = $this->ProyectoRepo->find($id);
 
-    $Propiedades = ['name','description','estado'];
+    $Propiedades = ['name','description','estado','fecha','ubicacion','metodo_de_construccion','autores'];
       
     $this->ProyectoRepo->setEntidadDato($Proyecto,$Request,$Propiedades); 
 

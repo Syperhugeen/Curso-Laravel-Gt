@@ -42,7 +42,7 @@ class Admin_Noticias_Controllers extends Controller
 
     $noticia = $this->NoticiasRepo->getEntidad();
 
-    $Propiedades = ['name','description','estado'];
+    $Propiedades = ['name','description','estado','header_text','url_video'];
 
     $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
 
@@ -65,7 +65,7 @@ class Admin_Noticias_Controllers extends Controller
   {
     $noticia = $this->NoticiasRepo->find($id);
 
-    $Propiedades = ['name','description','estado'];
+    $Propiedades = ['name','description','estado','header_text','url_video'];
 
     $this->NoticiasRepo->setEntidadDato($noticia,$Request,$Propiedades );
 

@@ -14,11 +14,23 @@
 
 
       <div class="col-md-6 footer-col-derecha">
+       @if($Empresa->email != null)
         <p class="footer-p-derecha"><span class="glyphicon glyphicon-envelope"></span> {{$Empresa->email}}</p>
-        <p class="footer-p-derecha"><span class="glyphicon glyphicon-earphone"></span> {{$Empresa->telefono}}
-        <span class="glyphicon glyphicon-phone" style="padding-left:8px;"></span> {{$Empresa->celular}}</p>
+       @endif
+       @if($Empresa->telefono != null) 
+        <p class="footer-p-derecha">
+          <span class="glyphicon glyphicon-earphone"></span> {{$Empresa->telefono}}
+          @if($Empresa->celular != null)
+           <span class="glyphicon glyphicon-phone" style="padding-left:8px;"></span> {{$Empresa->celular}}
+          @endif
+        </p>
+       @endif 
+       @if($Empresa->direccion != null) 
         <p class="footer-p-derecha"><span class="glyphicon glyphicon-map-marker"></span> {{$Empresa->direccion}}</p>
+       @endif
+       @if($Empresa->horarios_dias != null) 
         <p class="footer-p-derecha"><span class="glyphicon glyphicon-time"></span> {{$Empresa->horarios_dias}}</p>
+       @endif
       </div>
 
   
