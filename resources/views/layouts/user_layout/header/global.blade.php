@@ -13,10 +13,10 @@
       <div class="collapse navbar-right navbar-collapse" id="defaultNavbar1">
         <ul class="nav navbar-nav">
           <li><a href="{{route('get_home')}}"><span class="glyphicon glyphicon-home"></span> INICIO </a></li>
-          <li><a href="{{route('get_pagina_empresa')}}">LA EMPRESA</a></li>
+          <li><a href="{{route('get_pagina_empresa')}}">ACERCA DE V&amp;V</a></li>
           <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
           <li><a href="{{route('get_pagina_proyecto_listado')}}">PROYECTOS</a></li>
-          <li><a href="{{route('get_pagina_noticias_noticias_listado')}}">NOTICIAS</a></li>
+          <li><a href="{{route('get_pagina_noticias_noticias_listado')}}">PUBLICACIONES</a></li>
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
           {{-- aqui pongo el tema de inicio de sesion y datos del user --}}

@@ -60,4 +60,17 @@
   </div>
 </div>
 
+ <!--para agregar los márgenes laterales-->
+<div class="container-fluid section-wrapper">
+  <div class="row">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+
+     {{-- la parte de publicaciones  --}}
+     @include('home.partes.publicaciones')
+
+
+    </div>  
+  </div>
+</div>
+
 @stop

@@ -20,11 +20,91 @@
 
  
 
- <!--para agregar los márgenes laterales-->
- <div class="content-wrapper">   
-     
-   Aqui el contenido de empresa
+<!--para agregar los márgenes laterales-->
+<div class="container-fluid section-wrapper">
+  <div class="row">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
- </div>
+    	<div class="page-header">
+        	<h1>Acerca de V&amp;V</h1>
+      	</div>
+
+
+
+      	<div class="row space-bottom">
+
+      		<div class="col-lg-6">
+      			<h3>Misión</h3>
+      			<p>La misión de nuestra empresa es brindar Servicios de Ingeniería, con la finalidad de que cada uno de nuestros clientes obtenga la construcción que desee. Llevamos adelante trabajos profesionales, confiables y creativos, en la búsqueda de la optimización de recursos, proporcionar soluciones y desarrollar proyectos con la eficacia, seguridad y rapidez que el cliente demanda. Se pretende aplicar soluciones innovadoras, logrando resultados convenientes para cada cliente, mediante la capacitación constante en las diversas técnicas constructivas. Garantizamos responsabilidad, esfuerzo, valores y un relacionamiento tanto sociable como personalizado.</p>
+      		</div>
+
+      		<div class="col-lg-6">
+      			<h3>Visión</h3>
+      			<p>En base a un trabajo solido, buscamos ampliar nuestro campo laboral a otros Departamentos y hacia el exterior del país. Nuestro principal propósito es superarnos permanentemente para alcanzar los objetivos y lograr la satisfacción de nuestros clientes. Apuntamos asiduamente a la Responsabilidad Social y a ser prudentes con el impacto de las obras civiles en el medio ambiente.</p>
+      		</div>
+
+      	</div>
+
+
+
+
+      	<div class="row" style="padding-top:60px;padding-bottom:100px;">
+
+      		<div class="col-md-6">
+      			<img class="img-responsive center-block" style="max-width:40%;" src="imagenes/Img/team_structure.png">
+      		</div>
+
+      		<div class="col-md-6">
+      			<div class="destacado">
+	      			<h3 style="padding-bottom:10px;">Directores</h3>
+	      			<h4 class="color-gris-claro">Ing. Mariano Veiga</h4>
+	      			<h4 class="color-gris-claro">Ing. Mariano Veiga</h4>
+      			</div>
+      		</div>
+
+      	</div>
+
+
+
+
+
+      	<div class="row space-bottom">
+
+      		<div class="col-md-12">
+      			<img class="img-responsive img-rounded" src="http://cjconsultora.cl/wp-content/uploads/2015/11/consultoria-empresarial.jpg">
+      		</div>
+
+      	</div>
+
+
+
+    </div>  
+  </div>
+</div>
+
+<!--para agregar los márgenes laterales-->
+<div class="container-fluid section-wrapper section-special">
+  <div class="row">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+
+
+      	<div class="row space-bottom">
+
+      		<div class="col-md-6">
+      			<img class="img-responsive center-block" style="max-width:50%;" src="imagenes/Img/structure.png">
+      		</div>
+
+      		<div class="col-md-6">
+      			<h3 class="color-blanco" style="font-family:arial;">V&amp;V cuenta con una <span style="font-family:pioret;font-size:30px;">estructura flexible</span>, adaptable a los requerimientos de cada cliente.</h3>
+      			<h4 class="color-blanco">Contamos con experiencia en los diversos métodos constructivos y continuamos capacitándonos permanentemente.</h4>
+      		</div>
+
+      	</div>
+
+
+
+    </div>  
+  </div>
+</div>
 
 @stop

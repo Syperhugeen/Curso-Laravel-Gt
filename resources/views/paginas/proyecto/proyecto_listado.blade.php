@@ -2,7 +2,7 @@
 
 
 @section('title')
- Listado de Proyectos
+ Proyectos
 @stop
 
 @section('MetaContent')
@@ -27,7 +27,7 @@
 
 
       <div class="page-header">
-        <h1>Proyectos <small>(nota para mí mismo: este tipo de título, creo que se lo voy a poner a los individuales en cada página)</small></h1>
+        <h1>Proyectos</h1>
       </div>
 
 
@@ -43,8 +43,11 @@
                   <img class="media-object img-rounded" src="{{$Proyecto->url_img}}" alt="..."">
                 </div>
                 <div class="media-body">
-                  <h4 class="media-heading">{{$Proyecto->name}}</h4>
-                  <p>{{$Proyecto->description}}</p>
+                  <h3 class="media-heading">{{$Proyecto->name}}</h3>
+                  <p>Fecha</p>
+                  <p>Ubicación</p>
+                  <p>Método de construcción</p>
+                  <p class="home-section-display-description-wrapper">{{$Proyecto->description}}</p>
                 </div>
               </div> 
             </a>

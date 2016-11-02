@@ -123,6 +123,12 @@ por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
     transition: transform .3s ease;
   }
 
+  .home-section-display-description-wrapper{
+    height:60px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
   /*línea divisora entre cada item individual*/
   .home-section-display-divider {
     margin:4px 20px;
