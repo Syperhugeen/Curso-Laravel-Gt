@@ -72,7 +72,7 @@
             </div>
   <hr>
             <div class="login-register">
-                    <a href="{{route('auth_login_get')}}">Ya estoy registrado</a>
-              </div>
+               <a href="{{route('auth_login_get')}}">Ya estoy registrado</a>
+            </div>
 
 {!! Form::close() !!}
