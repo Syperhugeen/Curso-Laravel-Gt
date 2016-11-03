@@ -21,7 +21,10 @@ class EmailsRepo
 
     public function getEmpresa()
     {
-      return new EmpresaRepo();
+      $EmpresaDatos =  new EmpresaRepo();
+      
+      return $EmpresaDatos->getEmpresaDatos();
+
     }
 
 
@@ -43,15 +46,12 @@ class EmailsRepo
                    function($m) use ($user) 
                    {
                      $m->from($this->getEmpresa()
-                                   ->getEmpresaDatos()
                                    ->email_no_reply, 
 
                                     $this->getEmpresa()
-                                         ->getEmpresaDatos()
                                          ->name);
                      $m->to($user->email , $user->name)->subject($user->first_name.' Activa tu cuenta en ' .
                         $this->getEmpresa()
-                             ->getEmpresaDatos()
                              ->name );
                    }
         );
@@ -75,7 +75,10 @@ class EmailsRepo
 
                      $m->from($direccionEmail, $nombre);
 
-                     $m->to( 'ventas@worldmaster.com.uy', 'Worldmaster Ventas')->subject('Consulta de '.$nombre );
+                     $m->to( $this->getEmpresa()
+                                  ->email, 
+                             $this->getEmpresa()
+                                  ->name)->subject('Consulta de '.$nombre );
                    }
         );
 

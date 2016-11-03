@@ -4790,7 +4790,19 @@ function EventoDeGoogleAnalitics($Elemento,$Categoria,$Nombre,$Accion)
 
 
 
+
+//formulario de contacto
 $('#contact-form').validator();
+
+
+//formulario de registro 
+$('#form-registro').validator(); 
+
+//formulario de solicitud de trabajo 
+$('#solicitud-trabajo-form').validator(); 
+
+//formulario de solicitud del presupuesto 
+$('#solicitud-de-presupuesto-form').validator();
 //Cuando Sale Mensaje de Error (Validaciones del Servidor)
 
 $('body').on('click','.Error-iconoCerrar, .alerta-iconoCerrar',function(e){
@@ -6680,6 +6692,33 @@ $(function() {
 });  
 
 
+$(function() {
+
+  // We can attach the `fileselect` event to all file inputs on the page
+  $(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+  });
+
+  // We can watch for our custom `fileselect` event like this
+  $(document).ready( function() {
+      $(':file').on('fileselect', function(event, numFiles, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+  });
+  
+});
  });
 
 

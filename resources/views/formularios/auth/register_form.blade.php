@@ -1,8 +1,7 @@
-
-
  {!! Form::open(             ['route'  => 'register_post',
                             'method'   => 'post',
-                            'files'    => true
+                            'files'    => true,
+                            'id'       => 'form-registro'
                             ])               !!}
 
 
@@ -15,7 +14,10 @@
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
                    {!! Form::text('name', null ,['class'       => 'form-control',
                                                  'id'          => 'username',
-                                                 'placeholder' => 'Escribe tu nombre y apellido']) !!}
+                                                 'placeholder' => 'Escribe tu nombre y apellido',
+                                                 'required'    => 'required',
+                                                 'data-error'  => 'Por favor, ingresa tu nombre.']) !!}
+                   <div class="help-block with-errors"></div>                               
                 </div>
               </div>
             </div>
@@ -27,7 +29,10 @@
                   <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
                   {!! Form::text('email', null ,['class'       => 'form-control',
                                                  'id'          => 'username',
-                                                 'placeholder' => 'Escribe tu email']) !!}
+                                                 'placeholder' => 'Escribe tu email',
+                                                 'required'    => 'required',
+                                                 'data-error'  => 'Por favor, ingresa tu email.']) !!}
+                  <div class="help-block with-errors"></div>                                   
                 </div>
               </div>
             </div>
@@ -39,7 +44,9 @@
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
                   {!! Form::password('password', [ 'class'       => 'form-control',
                                                    'id'          => 'password',
-                                                   'placeholder' => 'Escribe tu contraseña']) !!}
+                                                   'placeholder' => 'Escribe tu contraseña',
+                                                   'required'    => 'required',
+                                                   'data-error'  => 'Por favor, escribe tu contraseña.']) !!}
                 </div>
               </div>
             </div>
@@ -63,9 +70,5 @@
             <div class="login-register">
                     <a href="{{route('auth_login_get')}}">Ya estoy registrado</a>
               </div>
- 
-
-
-
 
 {!! Form::close() !!}

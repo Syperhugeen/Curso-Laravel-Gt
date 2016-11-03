@@ -43,6 +43,7 @@ elixir(function(mix) {
         'mis-sliders.js',
         'mis-tooltips.js',
         'mis-flechitas-autopocicionadas.js',
+        'mis-botones_para_adjuntar.js',
         'fin.js']);
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');
