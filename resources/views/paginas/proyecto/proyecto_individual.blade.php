@@ -65,7 +65,7 @@
           <ul class="bxslider">
             @foreach($Proyecto->imagenesproyecto as $img)           
                 <li><img class="img-carousel" src="{{$img->url_img}}"></li>                      
-             @endforeach 
+            @endforeach 
           </ul>
         @endif
 
@@ -74,6 +74,8 @@
 			  <div class="col-md-12">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				  <!-- Indicators -->
+
+          
 				  <ol class="carousel-indicators">
 				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				    <li data-target="#myCarousel" data-slide-to="1"></li>
