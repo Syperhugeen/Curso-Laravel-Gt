@@ -6,7 +6,8 @@
                             'id'       => 'contact-form'
                             ])               !!}
 
-
+<h3 style="text-align:center;">este no está ni ahí prontno, tengo que analizar qué cosas son relevantes<br>
+para enviar y si son de libre expresión o de opciones limitadas</h3>
 
     <div class="messages"></div>
 
@@ -56,18 +57,21 @@
         <div class="row">
             <div class="col-md-12 space-bottom">
                 <div class="input-group">
-                    <label class="input-group-btn">
-                        <span class="btn btn-primary">
-                            Adjuntar documento&hellip; <input type="file" style="display: none;" multiple>
+                        <span>
+                            <input  type="file" 
+                                    style="visibility:hidden; width: 1px;" 
+                                    id='${multipartFilePath}' name='${multipartFilePath}'  
+                                    onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> <!-- Chrome security returns 'C:\fakepath\'  -->
+                            <input class="btn btn-primary" type="button" value="Upload File.." onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
+                            &nbsp;
+                            <span  class="badge badge-important" ></span>
                         </span>
-                    </label>
-                    <input type="text" class="form-control" readonly>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <input type="submit" class="btn btn-primary btn-lg btn-send" value="Solicitar presupuesto">
+                <input type="submit" class="btn btn-primary btn-lg btn-send" value="Enviar">
             </div>
         </div>
 

@@ -10006,6 +10006,27 @@ y las columns que agregan los márgenes laterales---*/
   border-color: #4a9fff;
   outline: none; }
 
+/*---estilizando el botón de adjuntar archivo
+del  F O R M U L A R I O ---*/
+.btn-file {
+  position: relative;
+  overflow: hidden; }
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block; }
+
 .navbar {
   border-bottom: 5px solid #DCB13F;
   border-radius: 0px;

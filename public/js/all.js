@@ -6602,12 +6602,14 @@ DispararForm('.admin-boton-editar',$('#form-admin-empresa-datos'));
 DispararForm('.admin-boton-editar',$('#form-admin-img-home-subir'));
 
 DispararForm('.boton-subir-img',$('#form-admin-subir-img-proyectos'));
+
 $('.bxslider').bxSlider({
-	mode: 'horizontal'
-	auto: 'true'
-	pause: '3000'
+	mode: 'horizontal',
+	auto: 'true',
+	pause: '3000',
 	autoHover: 'true'
 });
+
 
 //Home////////////////////////////////////////////////////
   
