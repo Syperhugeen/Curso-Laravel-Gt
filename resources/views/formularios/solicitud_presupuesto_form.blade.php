@@ -27,7 +27,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                      {!! Form::label('email', 'Email') !!}
-                    {!! Form::text('email', null ,['class'       => 'form-control',
+                     {!! Form::text('email', null ,['class'     => 'form-control',
                                                   'placeholder' => 'Escribe tu dirección de correo aquí *' ,
                                                   'required'    => 'required',
                                                   'data-error'  => 'Por favor, ingresa una dirección de correo válida.']) !!}
@@ -38,7 +38,7 @@
                 <div class="form-group">
                    {!! Form::label('telefono', 'Teléfono') !!}
                    {!! Form::text('telefono', null ,['class'       => 'form-control',
-                                                      'placeholder' => 'Escribe aquí tu número de línea o celular' ]) !!}
+                                                     'placeholder' => 'Escribe aquí tu número de línea o celular' ]) !!}
                     <div class="help-block with-errors"></div>
                 </div>
             </div>

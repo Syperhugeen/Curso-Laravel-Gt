@@ -1,4 +1,4 @@
-@include('emails.styleGeneralDeEmails')
+
 
 
 <div class="estilo-texto-general">
@@ -13,4 +13,3 @@
    <div class="botonEmails">Click aqui para resetear tu contraseña </div> 
  </a> 
 
- @include('emails.PartesGenerales.FooterEmail')
