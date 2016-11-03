@@ -2,7 +2,6 @@
 //formulario de contacto
 $('#contact-form').validator();
 
-
 //formulario de registro 
 $('#form-registro').validator(); 
 

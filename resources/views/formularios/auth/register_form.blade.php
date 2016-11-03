@@ -17,8 +17,10 @@
                                                  'placeholder' => 'Escribe tu nombre y apellido',
                                                  'required'    => 'required',
                                                  'data-error'  => 'Por favor, ingresa tu nombre.']) !!}
-                   <div class="help-block with-errors"></div>                               
+                                                 
                 </div>
+                <div class="help-block with-errors"></div> 
+
               </div>
             </div>
 
@@ -32,8 +34,9 @@
                                                  'placeholder' => 'Escribe tu email',
                                                  'required'    => 'required',
                                                  'data-error'  => 'Por favor, ingresa tu email.']) !!}
-                  <div class="help-block with-errors"></div>                                   
+                                                     
                 </div>
+                <div class="help-block with-errors"></div>
               </div>
             </div>
 
@@ -48,6 +51,7 @@
                                                    'required'    => 'required',
                                                    'data-error'  => 'Por favor, escribe tu contraseña.']) !!}
                 </div>
+                <div class="help-block with-errors"></div>
               </div>
             </div>
 

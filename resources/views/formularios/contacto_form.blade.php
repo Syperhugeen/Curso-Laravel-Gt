@@ -20,8 +20,9 @@
                                                   'placeholder' => 'Escribe tu nombre aquí *' ,
                                                   'required'    => 'required',
                                                   'data-error'  => 'Por favor, ingresa tu nombre.']) !!}
-                    <div class="help-block with-errors"></div>
+                    
                 </div>
+                <div class="help-block with-errors"></div>
             </div>            
         </div>
         <div class="row">
@@ -32,8 +33,9 @@
                                                   'placeholder' => 'Escribe tu dirección de correo aquí *' ,
                                                   'required'    => 'required',
                                                   'data-error'  => 'Por favor, ingresa una dirección de correo válida.']) !!}
-                    <div class="help-block with-errors"></div>
+                   
                 </div>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">                    
@@ -41,8 +43,9 @@
                     {!! Form::text('telefono', null ,['class'       => 'form-control',
                                                       'placeholder' => 'Escribe aquí tu número de línea o celular' ]) !!}
 
-                    <div class="help-block with-errors"></div>
+                    
                 </div>
+                <div class="help-block with-errors"></div>
             </div>
         </div>
         <div class="row">
@@ -54,8 +57,9 @@
                                                          'rows'        => '4',
                                                          'required'    => 'required',
                                                          'data-error'  => 'Por favor, escribe un mensaje.' ]) !!}
-                    <div class="help-block with-errors"></div>
+                    
                 </div>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="col-md-12">
                 <input type="submit" class="btn btn-primary btn-lg btn-send" value="Enviar">
