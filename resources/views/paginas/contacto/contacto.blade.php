@@ -52,6 +52,27 @@
       </div>
     </div>
   </div>
+
+
+      <h1>formulario de solicitud de presupuesto</h1>
+  <div class="container-fluid section-wrapper">
+    <div class="row">    
+      <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+       @include('formularios.solicitud_presupuesto_form')
+      </div>
+    </div>
+  </div>
+
+
+
+      <h1>formulario de solicitud de trabajo</h1>
+  <div class="container-fluid section-wrapper">
+    <div class="row">    
+      <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+       @include('formularios.solicitud_trabajo_form')
+      </div>
+    </div>
+  </div>
     
 
   @include('emails.prueba')
