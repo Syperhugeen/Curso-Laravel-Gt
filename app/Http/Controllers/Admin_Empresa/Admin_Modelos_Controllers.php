@@ -14,25 +14,25 @@ use Illuminate\Http\Request;
 class Admin_Modelos_Controllers extends Controller
 {
 
-  protected $ModeloRepo;
+  protected $EntidadRepo;
 
   public function __construct(ModeloRepo $ModeloRepo)
   {
-    $this->ModeloRepo = $ModeloRepo;
+    $this->EntidadRepo = $ModeloRepo;
   }
 
   //home admin User
   public function get_admin_modelos(Request $Request)
   { 
-    $modelos = $this->ModeloRepo->getEntidadesAllPaginadas($Request,3);
+    $modelos = $this->EntidadRepo->getEntidadesAllPaginadas($Request,3);
 
-    return view('admin.marcas.marcas_home', compact('modelos'));
+    return view('admin.modelos.modelos_home', compact('modelos'));
   }
 
   //get Crear admin User
   public function get_admin_modelos_crear()
   {  
-    return view('admin.marcas.marcas_crear');
+    return view('admin.modelos.modelos_crear');
   }
 
   //set Crear admin User
@@ -42,13 +42,13 @@ class Admin_Modelos_Controllers extends Controller
       $Propiedades = ['name','description','estado'];
 
       //traigo la entidad
-      $modelo = $this->ModeloRepo->getEntidad();
+      $modelo = $this->EntidadRepo->getEntidad();
 
       //grabo todo las propiedades
-      $this->ModeloRepo->setEntidadDato($modelo,$Request,$Propiedades);
+      $this->EntidadRepo->setEntidadDato($modelo,$Request,$Propiedades);
     
       //para la imagen
-      $this->ModeloRepo->setImagen($modelo,$Request,'img','Modelos/', $modelo->name,'.png'); 
+      $this->EntidadRepo->setImagen($modelo,$Request,'img','Modelos/', $modelo->name,'.png'); 
 
       return redirect()->route('get_admin_modelos')->with('alert', 'Modelo Creado Correctamente');    
   }
@@ -56,23 +56,23 @@ class Admin_Modelos_Controllers extends Controller
   //get edit admin marca
   public function get_admin_modelos_editar($id)
   {
-    $modelo = $this->ModeloRepo->find($id);
+    $modelo = $this->EntidadRepo->find($id);
 
-    return view('admin.marcas.marcas_editar',compact('modelo'));
+    return view('admin.modelos.modelos_editar',compact('modelo'));
   }
 
   //set edit admin marca
   public function set_admin_modelos_editar($id,Request $Request)
   {
-    $modelo = $this->ModeloRepo->find($id);    
+    $modelo = $this->EntidadRepo->find($id);    
 
     //propiedades para crear
     $Propiedades = ['name','description','estado'];    
 
     //grabo todo las propiedades
-    $this->ModeloRepo->setEntidadDato($modelo,$Request,$Propiedades);
+    $this->EntidadRepo->setEntidadDato($modelo,$Request,$Propiedades);
 
-    $this->ModeloRepo->setImagen($modelo,$Request,'img','Modelos/', $modelo->name,'.png');
+    $this->EntidadRepo->setImagen($modelo,$Request,'img','Modelos/', $modelo->name,'.png');
 
     return redirect()->route('get_admin_modelos')->with('alert', 'Modelo Editado Correctamente');  
   }
