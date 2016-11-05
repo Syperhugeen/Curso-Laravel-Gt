@@ -21,9 +21,13 @@
  
  <div class="content-wrapper">
 
-
     aqui va la descripcion de servicios   
 
+    {{-- boton para envio de curriculumn --}}
+    @include('paginas.servicios.partes.click_aqui_envio_curriculumn')  
+
+    {{-- boton para envio cotización de proyecto --}}
+    @include('paginas.servicios.partes.click_aqui_envio_cotizacion_proyecto')  
 
  </div>
 
