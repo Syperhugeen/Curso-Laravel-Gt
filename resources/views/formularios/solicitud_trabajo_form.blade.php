@@ -1,6 +1,6 @@
-{!! Form::open(             ['route' => 'auth_login_post',
+{!! Form::open(             ['route'   => 'post_envio_solicitud_trabajo_form',
                             'method'   => 'post',
-                            'files'    => true,
+                            'files'    =>  true,
                             'id'       => 'solicitud-trabajo-form'
                             ])               !!}
 
@@ -67,12 +67,16 @@
             <div class="col-md-12 space-bottom">
                 <div class="input-group">
                         <span>
-                            <input  type="file" 
+                           {!! Form::file('file',['class' => 'form-control']) !!} 
+
+                            {{-- <input  type="file" 
                                     style="visibility:hidden; width: 1px;" 
                                     id='${multipartFilePath}' name='${multipartFilePath}'  
-                                    onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> <!-- Chrome security returns 'C:\fakepath\'  -->
-                            <input class="btn btn-primary" type="button" value="Upload File.." onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
-                            &nbsp;
+                                    onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> Chrome security returns 'C:\fakepath\' 
+                              
+                             <input class="btn btn-primary" type="button" value="Upload File.." onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
+
+                            &nbsp; --}}
                             <span  class="badge badge-important" ></span>
                         </span>
                 </div>
