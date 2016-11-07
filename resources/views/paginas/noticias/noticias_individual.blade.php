@@ -63,7 +63,7 @@
         	<div class="row space-bottom">
     		    <div class="col-md-12">
     		      	<div class="embed-responsive embed-responsive-16by9">
-    		    		  <iframe class="embed-responsive-item" src="{{$Noticia->url_video}}"></iframe>
+    		    		  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{$Noticia->url_video}}"></iframe>
     				    </div>
   		    	</div>
   		    </div>

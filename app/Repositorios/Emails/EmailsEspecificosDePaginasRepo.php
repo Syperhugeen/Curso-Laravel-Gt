@@ -33,7 +33,7 @@ class EmailsEspecificosDePaginasRepo
                 $nombre  = $Request->get('name');
                 $email   = $Request->get('email');
                 $mensaje = $Request->get('mensaje');
-                $archivo = $Request->get('file');
+                $archivo = $Request->file('file');
 
          Mail::send('emails.solicitud_cotizacion' ,                    
 
@@ -44,7 +44,9 @@ class EmailsEspecificosDePaginasRepo
 
                      $m->from($email, $nombre);
 
-                     $m->attach($archivo);
+                     $m->attach($archivo->getRealPath(),[
+                                'as'   => $archivo->getClientOriginalName(), 
+                                'mime' => $archivo->getMimeType()]);
 
                      $m->to( $this->getEmpresa()
                                   ->email, 
