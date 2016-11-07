@@ -1,12 +1,12 @@
 
 <p>
-  Email de la persona que solicita{{$email}}
+  Email de la persona que solicita
 </p>
 
 <p>
- Nombre de la persona que solicita: {{$nombre}}
+ Nombre de la persona que solicita: 
 </p>
 
 <p>
- Nombre de la persona que mensaje {{$mensaje}}
+ Nombre de la persona que mensaje: 
 </p>
