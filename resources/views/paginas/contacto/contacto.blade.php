@@ -78,4 +78,9 @@
   @include('emails.prueba')
 
 
+  @include('emails.solicitud_cotizacion')
+
+  @include('emails.solicitud_trabajo')
+
+  
 @stop
