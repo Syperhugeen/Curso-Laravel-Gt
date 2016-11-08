@@ -32,7 +32,7 @@
       	<!--primera parte (foto a la izquierda y texto a la derecha)-->
       	<div class="row space-bottom">
       		<div class="col-md-6">
-      			<h2>{{$Noticia->header_text}}</h2>
+      			<h2 style="color:$color-grey2; text-align:right; vertical-align: middle;">{{$Noticia->header_text}}</h2>
       		</div>
       		<div class="col-md-6">
 			    	<img class="img-responsive img-rounded" src="{{$Noticia->url_img}}">

@@ -5,9 +5,7 @@
                 </div>
                 <div class="media-body">
                   <h3 class="media-heading">{{$Noticia->name}}</h3>
-                  <p>Fecha: {{$Noticia->fecha}}</p>
-                  <p>Ubicación: {{$Noticia->ubicacion}}</p>
-                  <p>Método de construcción: {{$Noticia->metodo_de_construccion}}</p>
+                  <p style="text-align:right"><small>Publicado el {{$Noticia->fecha}}</small></p>
                   <p class="home-section-display-description-wrapper">{{$Noticia->description}}</p>
                 </div>
               </div> 
