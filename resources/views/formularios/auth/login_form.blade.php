@@ -46,11 +46,11 @@
 </div>
 
    <div class="login-register">
-                    <a href="{{route('password_recet_get')}}">¿ olvidastes tu contraseña ? .. click aquí</a>
+                    <a href="{{route('password_recet_get')}}">Olvidé mi contraseña</a>
    </div>
 
    <div class="login-register">
-                    <a href="{{route('register_get')}}">¿ aun no tienes cuenta ? .. Registrate aquí</a>
+                    <a href="{{route('register_get')}}">Aún no estoy registrado</a>
    </div>
 
 

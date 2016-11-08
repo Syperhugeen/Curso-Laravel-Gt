@@ -4794,7 +4794,6 @@ function EventoDeGoogleAnalitics($Elemento,$Categoria,$Nombre,$Accion)
 //formulario de contacto
 $('#contact-form').validator();
 
-
 //formulario de registro 
 $('#form-registro').validator(); 
 
@@ -4968,6 +4967,8 @@ Contenedor.fadeOut(500);
     };
 }));
 //Aqui van todo las ventanas modals de la aplicación
+
+$('#myModal').modal('show');
 /*
  * easy-autocomplete
  * jQuery plugin for autocompletion
@@ -6707,7 +6708,7 @@ $(function() {
       $(':file').on('fileselect', function(event, numFiles, label) {
 
           var input = $(this).parents('.input-group').find(':text'),
-              log = numFiles > 1 ? numFiles + ' files selected' : label;
+                log = numFiles > 1 ? numFiles + ' files selected' : label;
 
           if( input.length ) {
               input.val(log);

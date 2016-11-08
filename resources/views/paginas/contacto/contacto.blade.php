@@ -74,7 +74,7 @@
     </div>
   </div>
     
-
+<h3> QUISE INCLUÍR LOS DEMÁS MAILS PERO ME SALTAN ERRORES, sólo deja incluir 'emails.prueba', los otros no.</h3>
   @include('emails.prueba')
 
 

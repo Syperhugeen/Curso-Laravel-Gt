@@ -5,11 +5,11 @@
 @stop
 
 @section('texto_a_user_email')
- Hola {{ $user->first_name}} , <strong>muchas gracias</strong> por tomar la iniciativa y registrarte. 
+ {{ $user->first_name}}, gracias por registrarte. 
 @stop
 
 @section('mensaje_email')
- Ahora <strong> solo te queda confirmar tu email</strong> . <a href="{{$url}}"> clic aquí para confirmar tu cuenta. </a>
+ <strong>Confirma tu dirección de correo</strong> para completar el proceso. <a href="{{$url}}"> Click aquí para confirmar tu cuenta.</a>
 @stop
 
 @section('url_email')

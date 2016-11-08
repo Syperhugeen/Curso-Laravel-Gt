@@ -4,9 +4,6 @@
                             'id'       => 'solicitud-trabajo-form'
                             ])               !!}
 
-    <h3 style="text-align:center;">este no está ni ahí prontno, tengo que analizar qué cosas son relevantes<br>
-    para enviar y si son de libre expresión o de opciones limitadas</h3>
-
     <div class="messages"></div>
 
     <div class="controls">
@@ -14,34 +11,35 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    {!! Form::label('name', 'Nombre') !!}
+                    {!! Form::label('name', 'Nombre *') !!}
                     {!! Form::text('name', null ,['class'       => 'form-control',
-                                                  'placeholder' => 'Escribe tu nombre aquí *',
+                                                  'placeholder' => 'Escribe tu nombre aquí',
                                                   'required'    => 'required' ,
                                                   'data-error'  => 'Por favor, ingresa tu nombre.' ]) !!}                   
                     
                 </div>
                 <div class="help-block with-errors"></div>
             </div>            
-        </div>
 
+        </div>  
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    {!! Form::label('email', 'Email') !!}
+                    {!! Form::label('email', 'Email *') !!}
                     {!! Form::text('email', null ,['class'       => 'form-control',
-                                                  'placeholder' => 'Escribe tu dirección de correo aquí *',
+                                                  'placeholder' => 'Escribe tu dirección de correo aquí',
                                                   'required'    => 'required' ,
                                                   'data-error'  => 'Por favor, ingresa una dirección de correo válida.' ]) !!}  
                     
                 </div>
                 <div class="help-block with-errors"></div>
             </div>
+
             <div class="col-md-6">
                 <div class="form-group">
                     {!! Form::label('telefono', 'Teléfono') !!}
                     {!! Form::text('telefono', null ,['class'       => 'form-control',
-                                                      'placeholder' => 'Escribe aquí un teléfono para contactarte' ]) !!}
+                                                      'placeholder' => 'Escribe aquí tu número de línea o celular' ]) !!}
                     
                 </div>
                 <div class="help-block with-errors"></div>
@@ -51,12 +49,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">                   
-                    {!! Form::label('mensaje', 'Mensaje *') !!}
+                    {!! Form::label('mensaje', 'Cuéntanos acerca de ti *') !!}
                     {!! Form::textarea('mensaje', null ,['class'       => 'form-control',
-                                                         'placeholder' => 'Eescribe el mensaje aquí *', 
+                                                         'placeholder' => '¿Deseas trabajar con nosotros? Cuéntanos tus razones', 
                                                          'rows'        => '4',
                                                          'required'    => 'required',
-                                                         'data-error'  => 'Por favor, escribe el mensaje.' ]) !!}
+                                                         'data-error'  => 'Por favor, nos gustaría saber acerca de ti.' ]) !!}
                     
                 </div>
                 <div class="help-block with-errors"></div>
@@ -99,7 +97,5 @@
     </div>
 
 
-<h3 style="text-align:center;">supuestamente para que funcione bien tengo que activar<br>
-el script que se llama "mis-botones_para_adjuntar.js"</h3>
 
 {!! Form::close() !!}

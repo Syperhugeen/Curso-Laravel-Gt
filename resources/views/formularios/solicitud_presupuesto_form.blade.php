@@ -22,8 +22,8 @@
                 </div>
                 <div class="help-block with-errors"></div>
             </div>
-            
-        </div>
+        </div>   
+
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -36,6 +36,9 @@
                 </div>
                 <div class="help-block with-errors"></div>
             </div>
+
+
+
             <div class="col-md-6">
                 <div class="form-group">
                    {!! Form::label('telefono', 'Teléfono') !!}
@@ -87,7 +90,4 @@
         </div>
     </div>
 
-
-<h3 style="text-align:center;">supuestamente para que funcione bien tengo que activar<br>
-el script que se llama "mis-botones_para_adjuntar.js"</h3>
 {!! Form::close() !!}

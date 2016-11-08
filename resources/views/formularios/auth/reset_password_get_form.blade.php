@@ -31,19 +31,19 @@
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>                
                   {!! Form::password('password', [ 'class'       => 'form-control',
                                                    'id'          => 'password',
-                                                   'placeholder' => 'Escribe tu contraseña']) !!}
+                                                   'placeholder' => 'Escribe una nueva contraseña']) !!}
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="password" class="cols-sm-2 control-label">Repetir Contraseña</label>
+              <label for="password" class="cols-sm-2 control-label">Confirmar contraseña</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>                
                   {!! Form::password('password_confirmation', [ 'class'       => 'form-control',
                                                    'id'          => 'password',
-                                                   'placeholder' => 'Escribe tu contraseña']) !!}
+                                                   'placeholder' => 'Confirma la nueva contraseña']) !!}
                 </div>
               </div>
             </div>
