@@ -9964,6 +9964,12 @@ y las columns que agregan los márgenes laterales---*/
 .color-blanco {
   color: white; }
 
+/*---para centar columnas dentro de un row---*/
+.col-centered {
+  text-align: center;
+  float: none;
+  margin: 0 auto; }
+
 /*---estilizando los botones con colores institucionales---*/
 .btn-primary {
   color: white;

@@ -40,7 +40,9 @@
             @endforeach
       </div>
 
+      <div class="col-centered">
       {!! $Proyectos->appends(Request::all())->render() !!}
+      </div>
 
 
 
