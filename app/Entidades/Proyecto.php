@@ -66,6 +66,13 @@ class Proyecto extends Model
         return route('get_pagina_proyecto_individual', [str_replace(" ", "_", $this->name), $this->id]);
     }
 
+    public function getDescriptionParrafoAttribute()
+    {
+        $text =  nl2br($this->description,false);
+        
+        return   stripslashes($text);  
+    }
+
    
     
 }

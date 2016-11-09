@@ -5,7 +5,7 @@
                 </div>
                 <div class="media-body">
                   <h3 class="media-heading">{{$Noticia->name}}</h3>
-                  <p style="text-align:right"><small>Publicado el {{$Noticia->fecha}}</small></p>
+                  <p style="text-align:right"><small>Publicado el {{$Noticia->created_at->format('d-m-Y')}}</small></p>
                   <p class="home-section-display-description-wrapper">{{$Noticia->description}}</p>
                 </div>
               </div> 
