@@ -55,7 +55,7 @@
 
       		<div class="col-md-12">
       			<h3>Acerca del proyecto</h3>
-      			<p>{{$Proyecto->description_parrafo}}</p>
+      			<p> {{$Proyecto->description_parrafo}} <br></p>
       		</div>
 
       	</div>

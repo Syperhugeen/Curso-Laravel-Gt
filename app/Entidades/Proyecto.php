@@ -73,6 +73,6 @@ class Proyecto extends Model
         return   stripslashes($text);  
     }
 
-   
+     
     
 }
