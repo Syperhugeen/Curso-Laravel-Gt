@@ -5,7 +5,9 @@
 
 <div class="formulario-label-fiel">
   {!! Form::label('description', 'Descripción', array('class' => 'formulario-label ')) !!}
-  {!! Form::textarea('description', null ,['class' => 'formulario-field']) !!}
+  {!! Form::textarea('description', null ,['class' => 'formulario-field',
+                                           'cols'    => '8',
+                                           'row'    => '8' ]) !!}
 </div>
 
 <div class="formulario-label-fiel">

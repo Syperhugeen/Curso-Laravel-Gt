@@ -4,6 +4,7 @@ p {
   text-decoration: none;
   cursor:default;
   text-align:justify;
+  white-space: pre-wrap;
 }
 h1 { /*para título único por página*/
 color:$color-grey1;

@@ -27,6 +27,7 @@ elixir(function(mix) {
         'Plug-bxSlider.js',
         'Plug-jquery.tooltip.min.js',
         'Plug-validator-Boostrap.js',
+        'Plug-texarea-Te_v1.js',
         'inicio.js',
         'mis-funciones_personalizadas.js',
         'mis-funciones_personalizadas_para_GoogleAnalitics.js',        
@@ -44,6 +45,7 @@ elixir(function(mix) {
         'mis-tooltips.js',
         'mis-flechitas-autopocicionadas.js',
         'mis-botones_para_adjuntar.js',
+        'mis-textareas.js',
         'fin.js']);
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');

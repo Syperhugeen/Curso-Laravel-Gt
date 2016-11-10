@@ -68,9 +68,9 @@ class Proyecto extends Model
 
     public function getDescriptionParrafoAttribute()
     {
-        $text =  nl2br($this->description,false);
-        
-        return   stripslashes($text);  
+         
+         $text =  htmlentities($this->description);
+         return   $text;  
     }
 
      
