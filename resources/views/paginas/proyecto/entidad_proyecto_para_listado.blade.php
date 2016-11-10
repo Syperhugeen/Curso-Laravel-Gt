@@ -5,10 +5,11 @@
                 </div>
                 <div class="media-body">
                   <h3 class="media-heading">{{$Proyecto->name}}</h3>
-                  <p>Fecha: {{$Proyecto->fecha}}</p>
-                  <p>Ubicación: {{$Proyecto->ubicacion}}</p>
-                  <p>Método de construcción: {{$Proyecto->metodo_de_construccion}}</p>
-                  <p class="home-section-display-description-wrapper">{{$Proyecto->description}}</p>
+                  <p><span class="glyphicon glyphicon-calendar"></span> {{$Proyecto->fecha}}</p>
+                  <p><span class="glyphicon glyphicon-map-marker"></span> {{$Proyecto->ubicacion}}</p>
+                  <p><span class="glyphicon glyphicon-wrench"></span> {{$Proyecto->metodo_de_construccion}}</p>
+                  <p class="home-section-display-description-wrapper1">{{$Proyecto->description}}</p>
+                    <p class="home-section-display-ampliar"><span class="glyphicon glyphicon-plus-sign"></span> ampliar</p>
                 </div>
               </div> 
             </a>

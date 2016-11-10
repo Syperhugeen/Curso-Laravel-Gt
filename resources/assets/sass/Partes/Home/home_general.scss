@@ -40,7 +40,6 @@ text-align:justify-left;}
 
 
 
-
 /*globitos*/
 .contenedor-home-globitos{
   @include flexbox;
@@ -116,6 +115,7 @@ por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
 
   /*el contenedor de cada item individual*/
   .home-section-display-item{
+    cursor:pointer;
     border-radius:8px;
     padding:20px;
     -webkit-transition: transform .3s ease;
@@ -123,10 +123,25 @@ por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
     transition: transform .3s ease;
   }
 
-  .home-section-display-description-wrapper{
-    height:60px;
+  .home-section-display-description-wrapper1{
+    height:40px;
     overflow:hidden;
     text-overflow:ellipsis;
+  }
+    .home-section-display-description-wrapper2{
+    height:120px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .home-section-display-ampliar{
+    text-align:right;
+    color:$color-grey1;
+    position:absolute;
+    bottom:-12px;
+    right:0;
+  }
+  a>.home-section-display-item:hover .home-section-display-ampliar{
+    color:$color-3;
   }
 
   /*línea divisora entre cada item individual*/
@@ -138,6 +153,7 @@ por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
 
   /*efecto hover de cada item individual*/
   a>.home-section-display-item:hover{
+    cursor:pointer;
     background-color:$color-grey0;
     -webkit-transform: translate(20px, 0);
     -moz-transform: translate(20px, 0);
@@ -153,4 +169,6 @@ por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
   /*media-body es el texto de contenido de cada item individual*/
   .media-body{
     padding-left:20px;
+    position:relative;
+    min-height:200px;
   }

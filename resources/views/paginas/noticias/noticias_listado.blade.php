@@ -37,6 +37,7 @@
             @endforeach
 
       </div>
+
     <div class="col-centered">
       {!! $Noticias->appends(Request::all())->render() !!}
     </div>

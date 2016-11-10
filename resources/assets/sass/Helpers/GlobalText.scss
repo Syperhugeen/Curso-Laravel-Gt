@@ -26,3 +26,7 @@ color:$color-grey1;
 textarea{
   word-break: break-all;
 }
+
+a>p:hover{
+	color:$color-3;
+}
