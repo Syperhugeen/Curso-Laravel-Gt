@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="row">
-      <div class="col-lg-10 col-lg-push-1">
+      <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
       <div class="navbar-header">
         <div class="text-center"><!-- para centrar el navbar toggle button -->
@@ -19,7 +19,8 @@
           <li><a href="{{route('get_pagina_noticias_listado')}}">PUBLICACIONES</a></li>
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
-          {{-- aqui pongo el tema de inicio de sesion y datos del user --}}
+
+          {{-- aqui pongo el tema de inicio de sesion y datos del user
           @include('layouts.user_layout.header.auth')
 
           {{-- contenidos ocultos para mostrar con tooltips --}}
@@ -30,8 +31,8 @@
              </div>
              
              {{-- contenido a mostrar de user deplsegado --}}
-             @include('layouts.user_layout.header.partes.desplegado_user_auth')
-              
+             @include('layouts.user_layout.header.partes.desplegado_user_auth') --}}
+
           </div>
 
         </ul>       

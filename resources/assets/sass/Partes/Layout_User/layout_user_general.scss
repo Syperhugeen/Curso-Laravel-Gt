@@ -7,8 +7,11 @@ del browser (si es que los tiene)---*/
 
 /*---acá ponemos la altura de la Navbar---*/
   body{
-  	padding-top:100px;
+  	padding-top:60px;
   }
+  @media (min-width:768px) {body{
+    padding-top:100px;
+  }}
 
 /*---estilizando algunas cosas básicas---*/
   a,
