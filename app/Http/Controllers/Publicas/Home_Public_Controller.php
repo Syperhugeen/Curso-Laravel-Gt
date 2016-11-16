@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use App\Repositorios\NoticiasRepo;
 
 
-class Home_Controller extends Controller
+class Home_Public_Controller extends Controller
 {
     protected $ImgHomeRepo;
     protected $EmpresaRepo;
