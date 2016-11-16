@@ -12,7 +12,7 @@ require __DIR__ . '/Formularios/Rutas_Formularios_Publicas.php';
 
 //Ruta de Home
 Route::get('/' , [                    
-  'uses' => 'Publicas\Home_Controller@get_home',
+  'uses' => 'Publicas\Home_Public_Controller@get_home',
   'as'   => 'get_home']
 );
 
