@@ -105,4 +105,24 @@
   </div>
 </div>
 
+
+<!--para agregar los márgenes laterales-->
+<div class="container-fluid section-wrapper section-special-2">
+  <div class="row">    
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+
+      <div class="row space-bottom">
+          <div class="col-sm-6 col-sm-push-6">
+            <h3 style="font-family:arial;">¿Quieres formar parte de la empresa?</h3>
+            <div> 
+            {{-- boton para envio de curriculumn --}}
+            @include('paginas.servicios.partes.click_aqui_envio_curriculumn')  
+            </div>
+          </div>
+      </div>
+
+    </div>  
+  </div>
+</div>
+
 @stop

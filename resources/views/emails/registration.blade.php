@@ -9,7 +9,7 @@
 @stop
 
 @section('mensaje_email')
- <strong>Confirma tu dirección de correo</strong> para completar el proceso. <a href="{{$url}}"> Click aquí para confirmar tu cuenta.</a>
+ Por favor <strong>confirma tu dirección de correo</strong> para completar el proceso de registro <a href="{{$url}}"> haciendo click aquí.</a>
 @stop
 
 @section('url_email')
@@ -22,5 +22,5 @@
 @stop
 
 @section('mensaje_secundario_email')
- Si has recibido este correo por error, no eres la persona a quien nos dirigimos o no has solicitado ayuda concerniente al olvido de tu contraseña; haznos el favor de comunicarte con nosotros.
+ Si has recibido este correo por error, no eres la persona a quien nos dirigimos o no has solicitado registrar un usuario en nuestro sitio web; por favor elimina este correo.
 @stop

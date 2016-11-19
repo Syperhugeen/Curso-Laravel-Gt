@@ -1,6 +1,6 @@
-<p type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-envio-cuuriculumn">
-  ¿ Quieres trabajar con nosotros ? 
-</p>
+<div type="button" class="btn btn-primary btn-lg boton-presupuesto" data-toggle="modal" data-target="#modal-envio-cuuriculumn" style="margin-top:40px;margin-bottom:40px">
+<h2 class="color-blanco"><span class="glyphicon glyphicon-new-window"></span> Enviar solicitud</h2>
+</div>
 
   {{-- escondo contenido modal --}}
   <div class="modal fade" id="modal-envio-cuuriculumn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">  
