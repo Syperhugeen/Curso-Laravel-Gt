@@ -30,6 +30,7 @@ del browser (si es que los tiene)---*/
 /*este engloba absolutamente todo el body, por ahora sin reglas*/
 .global-wrapper {
   display:block;
+  overflow-x:hidden;
 }
 
 /*---esto es para envolver cada sección de cada página

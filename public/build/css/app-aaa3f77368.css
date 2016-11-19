@@ -10490,7 +10490,8 @@ a:focus {
 
 /*este engloba absolutamente todo el body, por ahora sin reglas*/
 .global-wrapper {
-  display: block; }
+  display: block;
+  overflow-x: hidden; }
 
 /*---esto es para envolver cada sección de cada página
 se le adjudica al container-fluid que adentro contiene los rows
@@ -11044,10 +11045,14 @@ por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
   color: #b3b3b3;
   position: absolute;
   bottom: -12px;
-  right: 0; }
+  right: 15px; }
 
 a > .home-section-display-item:hover .home-section-display-ampliar {
   color: #4a9fff; }
+
+@media (max-width: 767px) {
+  .home-section-display-ampliar {
+    bottom: -32px; } }
 
 /*línea divisora entre cada item individual*/
 .home-section-display-divider {
@@ -11062,14 +11067,16 @@ a > .home-section-display-item:hover {
   transform: translate(20px, 0); }
 
 /*imagen de cada item individual*/
-img.media-object {
+img.my-media-object {
   width: 200px;
   height: 200px; }
 
+@media (max-width: 767px) {
+  img.my-media-object {
+    margin-bottom: 10px; } }
+
 /*media-body es el texto de contenido de cada item individual*/
-.media-body {
-  padding-left: 20px;
-  position: relative;
+.my-media-body {
   min-height: 200px; }
 
 .Auth-contenedor {

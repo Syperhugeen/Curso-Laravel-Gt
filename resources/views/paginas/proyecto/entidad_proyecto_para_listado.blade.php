@@ -1,9 +1,9 @@
  <a href="{{$Proyecto->route}}"> 
-              <div class="media home-section-display-item">
-                <div class="media-left">
-                  <img class="media-object img-rounded" src="{{$Proyecto->url_img}}" alt="{{$Proyecto->name}}">
+              <div class="row home-section-display-item">
+                <div class="media-left col-sm-4">
+                  <img class="my-media-object img-rounded" src="{{$Proyecto->url_img}}" alt="{{$Proyecto->name}}">
                 </div>
-                <div class="media-body">
+                <div class="my-media-body col-sm-8">
                   <h3 class="media-heading">{{$Proyecto->name}}</h3>
                   <p><span class="glyphicon glyphicon-calendar"></span> {{$Proyecto->fecha}}</p>
                   <p><span class="glyphicon glyphicon-map-marker"></span> {{$Proyecto->ubicacion}}</p>

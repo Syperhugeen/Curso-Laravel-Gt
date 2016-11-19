@@ -13,29 +13,29 @@
     <META name="robots" content="@yield('MetaRobot')">
   </head>
   <body>
+      <div class="global-wrapper">
+
+           @include('layouts.user_layout.header.global')
+
+           <div>
+
+                @yield('content')  
+           </div>
 
 
 
-     @include('layouts.user_layout.header.global')
 
-     <div>
+          <div class="container-fluid section-wrapper bg-footer">
+            <div class="row">    
+              <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
-          @yield('content')  
-     </div>
+             @include('layouts.user_layout.footer.footer-general')
 
+              </div>  
+            </div>
+          </div>
 
-
-
-    <div class="container-fluid section-wrapper bg-footer">
-      <div class="row">    
-        <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-
-       @include('layouts.user_layout.footer.footer-general')
-
-        </div>  
       </div>
-    </div>
-
 
 
     <!-- Scripts -->
