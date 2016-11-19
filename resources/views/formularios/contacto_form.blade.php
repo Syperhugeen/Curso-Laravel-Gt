@@ -1,6 +1,6 @@
 
 
-  {!! Form::open(             ['route' => 'auth_login_post',
+  {!! Form::open(             ['route' => 'post_contacto_form',
                             'method'   => 'post',
                             'files'    => true,
                             'id'       => 'contact-form'

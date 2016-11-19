@@ -64,47 +64,34 @@ class EmailsRepo
     /**
      * Email De Contacto
      */
-    public function EnvioEmailDeContacto($nombre,$direccionEmail,$consulta)
+    public function EnvioEmailDeContacto($Request)               
     {
+         $nombre   = $Request->get('name');
+         $email    = $Request->get('email');
+         $mensaje  = $Request->get('mensaje');
+         $telefono = $Request->file('telefono');
+
          Mail::send('emails.Contacto.contacto' ,
 
                    //con esta funcion le envia los datos a la vista.
-                   compact('nombre' , 'direccionEmail','consulta')       ,
-                   function($m) use ($nombre,$direccionEmail,$consulta) 
+                   compact('nombre' , '$email','mensaje','telefono')       ,
+                   function($m) use ($nombre,$email) 
                    {
 
-                     $m->from($direccionEmail, $nombre);
+                     $m->from($email, $nombre);
 
                      $m->to( $this->getEmpresa()
                                   ->email, 
                              $this->getEmpresa()
                                   ->name)->subject('Consulta de '.$nombre );
                    }
-        );
+         );
 
     }
 
 
 
-    /**
-     * Email De Contacto De usuario Conectado
-     */
-    public function EnvioEmailDeContactoUsuarioAuth($user,$consulta)
-    {
-         Mail::send('emails.Contacto.contenidoPUserAuth' ,
-
-                   //con esta funcion le envia los datos a la vista.
-                   compact('user','consulta')       ,
-                   function($m) use ($user,$consulta) 
-                   {
-
-                     $m->from($user->email, $user->name);
-
-                     $m->to( 'ventas@worldmaster.com.uy', 'Worldmaster Ventas')->subject('Consulta de '.$user->name );
-                   }
-        );
-
-    }
+   
 
 
     

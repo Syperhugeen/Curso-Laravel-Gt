@@ -31,9 +31,24 @@ class Envio_Formularios_Controller extends Controller
 
     public function post_contacto_form(Request $Request)
     {
+        $entidad = '';
+        $manager = new envio_solicitud_trabajo_manager($entidad,$Request->all());
+
+
+        if ($manager->isValid())
+        {
+         
+         //envio el email de la solciitud de trabajo
+         $this->EmailsRepo->EnvioEmailDeContacto()
+
+         return redirect()->route('get_home')
+                          ->with('alert' , 'Solicitud de contacto enviada con exíto.');      
+        }  
+
+
         
         
-        return view('home.home', compact('Empresa','Proyectos','Noticias'));
+        return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     }
 
     public function post_envio_solicitud_trabajo_form(Request $Request)
@@ -53,7 +68,7 @@ class Envio_Formularios_Controller extends Controller
                           ->with('alert' , 'Solicitud de presupuesto enviada correctamente. En breve nos contactaremos con usted. ');      
         }  
         
-        return view('home.home', compact('Empresa','Proyectos','Noticias'));
+        return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     }
 
 
