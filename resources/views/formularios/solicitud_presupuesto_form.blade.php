@@ -66,12 +66,9 @@
         <div class="row">
             <div class="col-md-12 space-bottom">
                 <div class="input-group">
-                    <label class="input-group-btn">
-                        <span class="btn btn-primary">
-                            Adjuntar documento&hellip; <input type="file" style="display: none;" multiple>
-                        </span>
-                    </label>
-                    <input type="text" class="form-control" readonly>
+                    {!! Form::label('file', 'Archivo *') !!}
+                    {!! Form::file('file',['class' => 'form-control']) !!} 
+                    
                 </div>
             </div>
         </div>

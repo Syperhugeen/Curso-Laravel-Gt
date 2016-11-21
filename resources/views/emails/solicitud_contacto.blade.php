@@ -1,6 +1,6 @@
 <br>
 
-Solicitud de cotización de proyecto de <strong>{{$nombre}}</strong> ({{$email}} / {{$telefono}})
+Solicitud de contacto de {{$nombre}} ({{$email}} / {{$telefono}})
 
 <br>
 
@@ -9,3 +9,4 @@ Solicitud de cotización de proyecto de <strong>{{$nombre}}</strong> ({{$email}}
 </div>
 
 <br>
+

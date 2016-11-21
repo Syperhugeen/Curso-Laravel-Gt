@@ -9,8 +9,15 @@ return array(
   	            'user'                            => 'Usuario',
   	            'admin_empresa'                   => 'Admin Empresa Cliente',
                 'admin_empresa_cliente'           => 'Moderador Empresa Cliente'
-                
-            ],
+                 
+              ],
+
+  'role_para_user' => [   ''                      => 'Selecciona uno',
+        'user'                            => 'Usuario',
+        'admin_empresa'                   => 'Admin Empresa Cliente',
+        'admin_empresa_cliente'           => 'Moderador Empresa Cliente'
+        
+              ],
 
   'interior-capital' => [   ' '            => 'Selecciona uno',
                             'Montevideo'   => 'Montevideo',

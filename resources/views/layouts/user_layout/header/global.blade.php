@@ -20,7 +20,7 @@
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
 
-          {{-- aqui pongo el tema de inicio de sesion y datos del user
+          {{-- aqui pongo el tema de inicio de sesion y datos del user --}}
           @include('layouts.user_layout.header.auth')
 
           {{-- contenidos ocultos para mostrar con tooltips --}}
@@ -31,7 +31,17 @@
              </div>
              
              {{-- contenido a mostrar de user deplsegado --}}
-             @include('layouts.user_layout.header.partes.desplegado_user_auth') --}}
+              @if(!Auth::guest())
+               <div class="contenido-auth-deplegado-navbar">              
+                 <ul>
+                    @if(Auth::user()->role != 'user')
+                    <li><a href="{{route('get_datos_home_web')}}">Admin</a></li>
+                    @endif
+                    <li><a href="{{route('logout')}}">Salir</a></li>
+                 </ul>
+              </div> 
+             @endif
+             
 
           </div>
 

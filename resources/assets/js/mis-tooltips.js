@@ -20,12 +20,12 @@
   );
 
   //icono-user
-  $('#icono-user-en-navbar-logeado').tooltipster(
+  $('.icono-user-en-navbar-logeado').tooltipster(
 
      {
       content: $('.contenido-auth-deplegado-navbar'),
       interactive:true,
-      theme:'contenedor-default-tooltips'
+      theme:'contenedor-default-tooltips-auth'
      }
 
-  ); 
+  );    

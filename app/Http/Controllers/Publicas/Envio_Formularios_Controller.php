@@ -38,7 +38,7 @@ class Envio_Formularios_Controller extends Controller
         if ($manager->isValid())
         {
          
-         //envio el email de la solciitud de trabajo
+         //envio el email de la contacto
          $this->EmailsRepo->EnvioEmailDeContacto()
 
          return redirect()->route('get_home')
@@ -65,7 +65,27 @@ class Envio_Formularios_Controller extends Controller
          $this->EmailsEspecificosDePaginasRepo->EnviarEmailDeSolicitudDeTrabajo($Request);
 
          return redirect()->route('get_home')
-                          ->with('alert' , 'Solicitud de presupuesto enviada correctamente. En breve nos contactaremos con usted. ');      
+                          ->with('alert' , 'Solicitud de trabajo enviada correctamente. En breve nos contactaremos con usted. ');      
+        }  
+        
+        return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
+    }
+
+    public function post_envio_solicitud_cotizacion_proyecto_form(Request $Request)
+    {
+        
+        $entidad = '';
+        $manager = new envio_solicitud_trabajo_manager($entidad,$Request->all());
+
+
+        if ($manager->isValid())
+        {
+         
+         //envio el email de la solciitud de trabajo
+         $this->EmailsEspecificosDePaginasRepo->EnviarEmailDeSolicitudDeCotizacion($Request);
+
+         return redirect()->route('get_home')
+                          ->with('alert' , 'Solicitud de cotización de proyecto enviada correctamente. En breve nos contactaremos con usted. ');      
         }  
         
         return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());

@@ -69,9 +69,9 @@ class EmailsRepo
          $nombre   = $Request->get('name');
          $email    = $Request->get('email');
          $mensaje  = $Request->get('mensaje');
-         $telefono = $Request->file('telefono');
+         $telefono = $Request->get('telefono');
 
-         Mail::send('emails.Contacto.contacto' ,
+         Mail::send('emails.solicitud_contacto' ,
 
                    //con esta funcion le envia los datos a la vista.
                    compact('nombre' , '$email','mensaje','telefono')       ,
