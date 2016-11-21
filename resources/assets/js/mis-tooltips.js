@@ -24,8 +24,8 @@
 
      {
       content: $('.contenido-auth-deplegado-navbar'),
-      interactive:true,
-      theme:'contenedor-default-tooltips-auth'
+       interactive:true,
+      theme:'contenedor-default-tooltips'
      }
 
   );    

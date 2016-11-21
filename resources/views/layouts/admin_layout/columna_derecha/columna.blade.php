@@ -1,4 +1,6 @@
 <div class="admin-columna-contenedor">
+ {{-- imagen logo --}}
+ <img class="admin-header-logo" src="{{url()}}/imagenes/{{$Empresa->logo_cuadrado}}">
  <ul>
    @if(Auth::user()->role === 'adminMcos522')
      <li class="admin-columna-li"><a href="{{route('get_admin_users')}}"><span class="icon-group"></span> Usuarios</a></li>

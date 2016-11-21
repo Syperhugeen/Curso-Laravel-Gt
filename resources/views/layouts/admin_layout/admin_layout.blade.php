@@ -11,13 +11,13 @@
   </head>
   <body>
 
-   @include('layouts.admin_layout.header.global')
+  
    <div class="admin-contiene-columna-y-content">
       @include('layouts.admin_layout.columna_derecha.columna')
       <div class="admin-contiene-content">
+        @include('layouts.admin_layout.header.global')
         @yield('content')
-      </div>
-      
+      </div>      
    </div>
       <!-- Scripts -->
       <script src="{{ asset('js/all.js')}}"></script>

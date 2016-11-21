@@ -4,20 +4,36 @@
   border: solid 1px transparent;
   border-right-color: $Color-Gris-Claro;
   border-radius: 4px;
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(column); 
+  background-color: $color-grey3;
 }
+
+.admin-header-logo{
+    height: 45px;
+    
+    margin:25px 3px;
+    border-radius: 8px;
+  }
 
   .admin-columna-ul{
      width: 100%;
+     margin-top: 40px;
   }
 
    .admin-columna-li{
     width: 100%;
     padding:5px;
     font: arial;
-    font-size: 16px;
+    font-size: 14px;
     color: $Color-texto-gris-Mercadolibre ;
     margin-top: 2px;
+    text-decoration: none;
+    list-style: none;    
    }
+
+
 
    .admin-columna-li:hover{
     background-color:$Color-Gris-Claro ;

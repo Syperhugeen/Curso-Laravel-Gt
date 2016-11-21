@@ -1,12 +1,11 @@
 
-.contenedor-default-tooltips {
-	border-radius: 4px; 
-	border: 3px solid $color-grey0;
-	background: $color-white;
-  padding:6px;
-
-	
+.contenedor-default-tooltips{
+	border-radius: 5px; 
+  border: 2px solid $color-white;
+  background-color:$color-white;
+  color:$color-2;	
 }
+
 /* Use this next selector to style things like font-size and line-height: */
 .contenedor-default-tooltips .tooltipster-content {	
 	font-size: 14px;
@@ -23,7 +22,6 @@
   background: red;
   padding:6px;
   color:red;
-
 }
 /* Use this next selector to style things like font-size and line-height: */
 .contenedor-default-tooltips-auth .tooltipster-content { 

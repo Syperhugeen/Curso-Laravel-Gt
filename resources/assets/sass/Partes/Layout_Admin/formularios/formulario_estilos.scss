@@ -38,31 +38,34 @@
              padding: 4px;
              border-radius: 4px;
              border:solid 1px transparent;
+             background-color:$color-grey0;
+             margin-top: 4px;
            }
            
            .formulario-label-fiel:hover{
-            border-color: $Color-Gris-Claro-Para-Bordes;
+            background-color: $color-3;
+            color:$color-white ;
            }
 
 
               .formulario-label{
-                width: 80px;
+                width: 120px;
                 padding:4px;
                 margin-right: 3px;
-                color: $Color-texto-gris-Mercadolibre;
-                font-weight: bold;
+                color: $color-grey1; 
+                font-weight: bold;               
                 text-align: center;
-                font-size: 11px;
+                font-size: 10px;
               }
 
               .formulario-field{
                 padding: 4px;
                 border-radius: 4px;
                 border:solid 1px $Color-Gris-Claro;
-                font-size: 14px;
+                font-size: 10px;
                 font-weight: bold;
-                color: $Color-Azul-Wm;
-                width: 380px;
+                color: $color-grey2;
+                width: 400px;
               }
 
 

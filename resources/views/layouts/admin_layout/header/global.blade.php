@@ -1,10 +1,6 @@
 <header class="admin-header">
-    {{-- imagen logo --}}
-
-    <img class="admin-header-logo" src="{{url()}}/imagenes/{{$Empresa->logo_cuadrado}}">
-    <div class="admi-header-titulo">     
-     
-    </div>
+    
+   
 
       
      <!-- errores -->
