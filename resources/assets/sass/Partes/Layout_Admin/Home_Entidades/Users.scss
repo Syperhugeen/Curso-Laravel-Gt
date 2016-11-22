@@ -5,7 +5,7 @@
  display: inline-block;
 }
 .admin-user-boton-Crear:hover{
-  background-color:$Color-Verde-MercadoLibre;
+  background-color:$color-3;
 }
 
 
@@ -69,7 +69,7 @@
        }
 
          .boton-acciones-editar{
-          @include Boton-Chico($Color-Verde-MercadoLibre);
+          @include Boton-Chico($color-3);
          }
          .boton-acciones-editar:hover{
           background-color:$Color-Verde-Google;

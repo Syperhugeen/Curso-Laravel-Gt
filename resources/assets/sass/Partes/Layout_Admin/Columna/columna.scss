@@ -8,13 +8,14 @@
   @include align-items(center);
   @include flex-direction(column); 
   background-color: $color-grey3;
+  min-height: 100vh;
 }
 
 .admin-header-logo{
-    height: 45px;
+    height: 55px;
     
     margin:25px 3px;
-    border-radius: 8px;
+    
   }
 
   .admin-columna-ul{
