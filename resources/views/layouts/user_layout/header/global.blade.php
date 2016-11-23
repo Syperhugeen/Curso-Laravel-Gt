@@ -54,9 +54,9 @@
     </div> <!-- / container fluid row -->
 
     <!-- errores -->
-     <div class="contendor-errores-header">      
-      @include('partials.Alertas_Todos_Agrupados.alertas_agrupados')   
-     </div>
+    <div class="contendor-contenedor-errores-header">         
+      @include('partials.Alertas_Todos_Agrupados.alertas_agrupados') 
+    </div> 
 
     <!-- /.container-fluid -->
   </nav>

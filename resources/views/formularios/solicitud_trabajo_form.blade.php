@@ -26,7 +26,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     {!! Form::label('email', 'Email *') !!}
-                    {!! Form::text('email', null ,['class'       => 'form-control',
+                    {!! Form::text('email', null ,['class'      => 'form-control',
                                                   'placeholder' => 'Escribe tu dirección de correo aquí',
                                                   'required'    => 'required' ,
                                                   'data-error'  => 'Por favor, ingresa una dirección de correo válida.' ]) !!}  
@@ -64,18 +64,11 @@
         <div class="row">
             <div class="col-md-12 space-bottom">
                 <div class="input-group">
-                        <span>
+                        
+                           {!! Form::label('Archivo', 'Adjunta tu curriculumn vitae *') !!}
                            {!! Form::file('file',['class' => 'form-control']) !!} 
 
-                            {{-- <input  type="file" 
-                                    style="visibility:hidden; width: 1px;" 
-                                    id='${multipartFilePath}' name='${multipartFilePath}'  
-                                    onchange="$(this).parent().find('span').html($(this).val().replace('C:\\fakepath\\', ''))"  /> Chrome security returns 'C:\fakepath\' 
-                              
-                             <input class="btn btn-primary" type="button" value="Upload File.." onclick="$(this).parent().find('input[type=file]').click();"/> <!-- on button click fire the file click event -->
-
-                            &nbsp; --}}
-                            <span  class="badge badge-important" ></span>
+                            
                         </span>
                 </div>
             </div>

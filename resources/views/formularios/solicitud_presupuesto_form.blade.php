@@ -1,11 +1,11 @@
-  {!! Form::open(             ['route' => 'auth_login_post',
+  {!! Form::open(             ['route' => 'post_envio_solicitud_trabajo_form',
                             'method'   => 'post',
                             'files'    => true,
                             'id'       => 'solicitud-de-presupuesto-form'
                             ])               !!}
 
 
-
+ 
     <div class="messages"></div>
 
     <div class="controls">
