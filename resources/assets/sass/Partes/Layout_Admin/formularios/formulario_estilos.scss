@@ -2,7 +2,7 @@
       @include flexbox; 
       @include flex-direction(row);
       @include align-items(flex-start);
-      @include justify-content(space-around);
+      @include justify-content(flex-start);
       @include flex-wrap(wrap);
       margin-top: 30px;
       width:100%;
@@ -16,6 +16,7 @@
       padding: 6px;
       border: solid 1px $Color-Gris-Claro-Para-Bordes;
       border-radius:6px;
+      margin-right: 15px;
 
    }
     .contenedor-grupo-datos-titulo{

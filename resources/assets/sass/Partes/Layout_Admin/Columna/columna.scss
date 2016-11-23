@@ -3,7 +3,7 @@
   padding: 5px 6px;
   border: solid 1px transparent;
   border-right-color: $Color-Gris-Claro;
-  border-radius: 4px;
+  
   @include flexbox;
   @include align-items(center);
   @include flex-direction(column); 
@@ -14,7 +14,7 @@
 .admin-header-logo{
     height: 55px;
     
-    margin:25px 3px;
+    margin:35px 3px;
     
   }
 

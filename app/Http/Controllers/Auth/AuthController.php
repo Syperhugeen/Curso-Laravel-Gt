@@ -123,7 +123,7 @@ class AuthController extends Controller
      */
     public function redirectPath()
     {
-        return route('get_datos_home_web');
+        return route('get_datos_corporativos');
     }
 
      /**
