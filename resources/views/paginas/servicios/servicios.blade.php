@@ -136,7 +136,7 @@
       	<div class="row space-bottom">
 
       	    <div class="col-md-6">
-      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_steelframing.jpg">
+      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_hormigon.jpg">
       		</div>
 
       		<div class="col-md-6 metodo-individual">
@@ -155,7 +155,7 @@
       	<div class="row space-bottom">
 
       	    <div class="col-md-6">
-      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_steelframing.jpg">
+      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_metalicas.jpg">
       		</div>
 
       		<div class="col-md-6 metodo-individual">
@@ -177,7 +177,7 @@
       	<div class="row space-bottom">
 
       	    <div class="col-md-6">
-      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_steelframing.jpg">
+      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_madera.jpg">
       		</div>
 
       		<div class="col-md-6 metodo-individual">
@@ -196,7 +196,7 @@
       	<div class="row space-bottom">
 
       	    <div class="col-md-6">
-      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_steelframing.jpg">
+      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_mamposteria.jpg">
       		</div>
 
       		<div class="col-md-6 metodo-individual">
@@ -236,7 +236,7 @@
       	<div class="row space-bottom">
 
       	    <div class="col-md-6">
-      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_steelframing.jpg">
+      			<img class="img-responsive img-rounded" style="margin-bottom:10px;" src="imagenes/Img/metodo_mixtas.jpg">
       		</div>
 
       		<div class="col-md-6 metodo-individual">
