@@ -10547,6 +10547,10 @@ y las columns que agregan los márgenes laterales---*/
   background-color: #4a9fff;
   color: white; }
 
+.section-special2 {
+  background-color: #f8f8f8;
+  color: #b3b3b3; }
+
 /*para agregarle espaciado entre rows o items acorde a mi criterio*/
 .space-top {
   padding-top: 40px; }
