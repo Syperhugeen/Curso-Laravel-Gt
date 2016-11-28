@@ -31,15 +31,22 @@
     color: $Color-texto-gris-Mercadolibre ;
     margin-top: 2px;
     text-decoration: none;
-    list-style: none;    
+    list-style: none;  
    }
 
 
-
+   .admin-columna-li:focus,
    .admin-columna-li:hover{
-    background-color:$Color-Gris-Claro ;
+  color: $color-white;
+  -webkit-transform: translate(5px, 0);
+  -moz-transform: translate(5px, 0);
+  transform: translate(5px, 0);
    }
 
+   .admin-columna-li .active{
+  color: $color-3;
+  text-shadow: 0 0 5px $color-3, 0 0 10px $color-3;
+}
 
       .admin-boton-registrar{
         padding: 8px;
