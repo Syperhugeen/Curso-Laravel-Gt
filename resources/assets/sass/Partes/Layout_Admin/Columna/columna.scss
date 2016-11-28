@@ -2,13 +2,13 @@
   width: 200px;
   padding: 5px 6px;
   border: solid 1px transparent;
-  border-right-color: $Color-Gris-Claro;
-  
+  border-right-color: $Color-Gris-Claro;  
   @include flexbox;
   @include align-items(center);
   @include flex-direction(column); 
   background-color: $color-grey3;
   min-height: 100vh;
+  position: fixed;
 }
 
 .admin-header-logo{
