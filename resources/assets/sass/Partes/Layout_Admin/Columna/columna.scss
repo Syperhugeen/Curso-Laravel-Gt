@@ -28,15 +28,15 @@
     padding:5px;
     font: arial;
     font-size: 14px;
-    color: $Color-texto-gris-Mercadolibre ;
+    color: $color-grey2;
     margin-top: 2px;
     text-decoration: none;
     list-style: none;  
    }
 
 
-   .admin-columna-li:focus,
-   .admin-columna-li:hover{
+   .admin-columna-li:not(.Helper-Class-Active):focus,
+   .admin-columna-li:not(.Helper-Class-Active):hover{
   color: $color-white;
   -webkit-transform: translate(5px, 0);
   -moz-transform: translate(5px, 0);
@@ -46,7 +46,7 @@
 
 .Helper-Class-Active{
   color: $color-3;
-  text-shadow: 0 0 5px $color-3, 0 0 10px $color-3;
+  text-shadow: 0 0 5px $color-3dark, 0 0 10px $color-3dark;
 }
 
       .admin-boton-registrar{
@@ -56,7 +56,16 @@
         color: white;
         border-radius: 5px;
       }
+a>.link-go-to-web{
+color:$color-grey2;
+letter-spacing:3px;
+border-top: 1px solid $color-grey2;
+margin-top:18px;
+padding-top:12px;
 
-
-    
+}
+a>.link-go-to-web:hover,
+a>.link-go-to-web:focus{
+color:$color-white;
+  }
 

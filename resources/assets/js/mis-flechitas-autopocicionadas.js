@@ -28,7 +28,7 @@ $(function() {
      { 
 
           //atributo href del link
-          if(($(this).children().attr("href") == pgurl) || ( $(this).children().attr("href")+'/' == pgurl ))
+          if(($(this).parent('a').attr("href") == pgurl) || ( $(this).parent('a').attr("href")+'/' == pgurl ))
           {            
             $(this).addClass("Helper-Class-Active");
           }
