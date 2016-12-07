@@ -55,7 +55,7 @@
       		<div class="col-md-6">
       			<div class="destacado">
 	      			<h3 style="padding-bottom:10px;">Directores</h3>
-	      			<h4 class="color-gris-claro">Ing. Mariano Veiga</h4>
+	      			<h4 class="color-gris-claro">Ing. Leandro Veiga</h4>
 	      			<h4 class="color-gris-claro">Ing. Mariano Veiga</h4>
       			</div>
       		</div>

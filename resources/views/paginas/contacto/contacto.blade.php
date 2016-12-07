@@ -58,7 +58,7 @@
       	<div class="row space-bottom">
 
       		<div class="col-md-6">
-      			<h3 class="destacado" style="font-family:arial; text-align:right; margin-top:40px">¿Deseas solicitar solicitar la cotización correspondiente a tu proyecto?</h3>
+      			<h3 class="destacado" style="font-family:arial; text-align:right; margin-top:40px">¿Deseas solicitar la cotización correspondiente a tu proyecto?</h3>
       		</div>
       		<div class="col-md-6">
       			<div>
