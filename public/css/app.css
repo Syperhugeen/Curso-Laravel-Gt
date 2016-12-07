@@ -10709,6 +10709,16 @@ div.metodo-individual > h3 {
 div.servicio-individual > h4 > span.glyphicon {
   color: #4a9fff; }
 
+/*---estilizando la parte de ACERCA DE V&V ---*/
+.empresa-individual {
+  transition: all .3s ease; }
+
+.empresa-individual:hover {
+  transform: translate(0, -20px); }
+
+.empresa-individual:hover h3 {
+  color: #4a9fff; }
+
 /*---estilizando la parte de LA EMPRESA - quieres trabajar con nosotros ---*/
 .section-special-2 {
   background: white url("../../imagenes/Img/equipo.jpg") no-repeat left;

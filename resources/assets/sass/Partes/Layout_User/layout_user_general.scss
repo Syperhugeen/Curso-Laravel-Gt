@@ -219,6 +219,20 @@ div.servicio-individual>h4>span.glyphicon{
   color:$color-3;
 }
 
+/*---estilizando la parte de ACERCA DE V&V ---*/
+.empresa-individual{
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.empresa-individual:hover{
+    -webkit-transform: translate(0, -20px);
+  -moz-transform: translate(0, -20px);
+  transform: translate(0, -20px);
+}
+.empresa-individual:hover h3{
+  color:$color-3;
+}
 /*---estilizando la parte de LA EMPRESA - quieres trabajar con nosotros ---*/
 .section-special-2{
   background: $color-white url("../../imagenes/Img/equipo.jpg") no-repeat left;

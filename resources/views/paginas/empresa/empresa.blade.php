@@ -32,12 +32,12 @@
 
 
       	<div class="row space-bottom">
-      		<div class="col-lg-6">
+      		<div class="col-lg-6 empresa-individual">
       			<h3>Misión</h3>
       			<p>{{$Empresa->mision}}.</p>
       		</div>
 
-      		<div class="col-lg-6">
+      		<div class="col-lg-6 empresa-individual">
       			<h3>Visión</h3>
       			<p>{{$Empresa->vision}}.</p>
       		</div>
@@ -46,7 +46,7 @@
 
 
 
-      	<div class="row" style="padding-top:60px;padding-bottom:100px;">
+      	<div class="row empresa-individual" style="padding-top:60px;padding-bottom:100px;">
 
       		<div class="col-md-6">
       			<img class="img-responsive center-block" style="max-width:40%;" src="imagenes/Img/team_structure.png">
