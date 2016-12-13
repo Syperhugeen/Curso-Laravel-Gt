@@ -40,22 +40,17 @@
 
       		<div class="col-md-6">
       			<hr style="width:50%;left:0;">
-      			<h3>Fecha del proyecto: {{$Proyecto->fecha}}</h3>
-      			<h4>
-      			Ubicación del proyecto: {{$Proyecto->ubicacion}}
-      			<br>Método de construcción del proyecto: {{$Proyecto->metodo_de_construccion}}
-      			</h4>
-
-      			<h5 class="color-gris-claro">
-      			 Autores: {{$Proyecto->metodo_de_construccion}}
-      			</h5>
+      			<a data-toggle="tooltip" data-placement="top" title="Fecha de realización"><h3 ><span class="glyphicon glyphicon-calendar"></span> {{$Proyecto->fecha}}</h3></a>
+      			<h4 data-toggle="tooltip" data-placement="top" title="Ubicación del proyecto"><span class="glyphicon glyphicon-map-marker"></span> {{$Proyecto->ubicacion}}</h4>
+      			<h4 data-toggle="tooltip" data-placement="top" title="Método de construcción"><span class="glyphicon glyphicon-wrench"></span> {{$Proyecto->metodo_de_construccion}}</h4>
+      			<h5 data-toggle="tooltip" data-placement="top" title="Autoría del proyecto" class="color-gris"><span class="glyphicon glyphicon-pencil"></span> {{$Proyecto->autores}}</h5>
 
       			<hr style="width:50%;left:0;">
       		</div>
 
       		<div class="col-md-12">
       			<h3>Acerca del proyecto</h3>
-      			<p> {{$Proyecto->description_parrafo}} <br></p>
+      			<p>{{$Proyecto->description_parrafo}}<br></p>
       		</div>
 
       	</div>

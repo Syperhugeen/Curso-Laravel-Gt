@@ -33,7 +33,7 @@
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
     	<div class="page-header">
-        	<h1>Servicios</h1>
+        	<h1>Contacto</h1>
       	</div>
 
       	<div class="row space-bottom">

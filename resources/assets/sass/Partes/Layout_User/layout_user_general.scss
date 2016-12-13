@@ -5,13 +5,34 @@ del browser (si es que los tiene)---*/
   padding:0;
   border:0;}
 
-/*---acá ponemos la altura de la Navbar---*/
+/*---acá debemos escribir la altura que tiene la Navbar---*/
+$navbar-altura:100px;
+$navbar-altura-xs:68px;
+
+/*---esto se cambia solo con la altura que tiene la Navbar---*/
   body{
-  	padding-top:60px;
+  	padding-top:$navbar-altura;
   }
-  @media (min-width:768px) {body{
-    padding-top:100px;
+  @media (max-width:767px) {body{
+    padding-top:$navbar-altura-xs;
   }}
+
+/*---para que los links hacia las secciones con #id sean precisas---*/
+#section-globitos,
+#section-ultimas-publicaciones,
+#section-ultimos-proyectos,
+#section-metodos{
+  padding-top:$navbar-altura;
+  margin-top:-$navbar-altura;
+}
+@media (max-width:767px){
+#section-globitos,
+#section-ultimas-publicaciones,
+#section-ultimos-proyectos,
+#section-metodos{
+  padding-top:$navbar-altura-xs;
+  margin-top:-$navbar-altura-xs;
+}}
 
 /*---estilizando algunas cosas básicas---*/
   a,
@@ -34,11 +55,17 @@ a:hover{
 
 
 
-/*este engloba absolutamente todo el body, por ahora sin reglas*/
+/*este engloba absolutamente todo el body*/
 .global-wrapper {
   display:block;
   overflow-x:hidden;
+  padding-top:$navbar-altura;
+  margin-top:-$navbar-altura;
 }
+@media (max-width:767px){.global-wrapper{
+  padding-top:$navbar-altura-xs;
+  margin-top:-$navbar-altura-xs;}}
+
 
 /*---esto es para envolver cada sección de cada página
 se le adjudica al container-fluid que adentro contiene los rows
@@ -75,10 +102,11 @@ padding-bottom:20px;
 margin-bottom:20px;
 overflow:hidden;
 }
-.page-header > h1 {
-  font-family:Pioret;
-  font-size:60px;
-}
+
+@media (max-width:767px){.page-header{
+  padding-top:0px;
+  margin-top:0px;
+  }}
 
 /*---para destacar, por ejemplo en la parte de la Empresa, los directores---*/
 .destacado{
@@ -103,6 +131,9 @@ overflow:hidden;
 }
 .color-blanco{
   color:$color-white;
+}
+.color-gris{
+  color:$color-grey2;
 }
 
 

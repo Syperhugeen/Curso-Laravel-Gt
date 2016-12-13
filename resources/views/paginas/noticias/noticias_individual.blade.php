@@ -43,9 +43,7 @@
       	<!--primera parte (foto a la izquierda y texto a la derecha)-->
       	<div class="row space-bottom">
       		<div class="col-md-12">
-      			<p>
-             {{$Noticia->description}}.
-            </p>
+      			<p>{{$Noticia->description}}</p>
       		</div>
       	</div>
 

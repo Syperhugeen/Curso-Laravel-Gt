@@ -2,7 +2,7 @@
 
 
 @section('title')
- Home Ernesto
+ Home
 @stop
 
 @section('MetaContent')
@@ -36,7 +36,7 @@
 </div>
 
  <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper">
+<div class="container-fluid section-wrapper" id="section-globitos">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
@@ -48,7 +48,7 @@
 </div>
 
  <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper">
+<div class="container-fluid section-wrapper" id="section-ultimos-proyectos">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
@@ -61,7 +61,7 @@
 </div>
 
  <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper">
+<div class="container-fluid section-wrapper" id="section-ultimas-publicaciones">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
