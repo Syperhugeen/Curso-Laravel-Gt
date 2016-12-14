@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>nombre de la empresa - @yield('title')</title>
+    <title>{{$Empresa->name}} - @yield('title')</title>
     <meta name="Description" CONTENT="@yield('MetaContent')">
 
     <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/app.css') }}">   
@@ -46,7 +46,6 @@
            @include('layouts.user_layout.header.global')
 
            <div>
-
                 @yield('content')  
            </div>
 

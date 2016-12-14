@@ -19,7 +19,8 @@ class ViewServiceProvider extends ServiceProvider
                                             'layouts.user_layout.header.global',
                                             'layouts.user_layout.footer.footer-general',
                                             'emails.layouts.layout_principal',
-                                            'layouts.admin_layout.columna_derecha.columna'
+                                            'layouts.admin_layout.columna_derecha.columna',
+                                            'layouts.user_layout.user_layout'
                                             ]
             , EmpresaViewComposer::class);
 

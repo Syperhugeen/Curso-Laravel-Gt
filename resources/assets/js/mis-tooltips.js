@@ -3,8 +3,10 @@
   
   //globitos Home
   $('.globito').tooltipster();
-  
+    
 
+  //tooltips para publicación individual y proyecto individual
+  $('.tooltip-individual').tooltipster();
 
 //navbar////////////////////////////////////////////////////
 

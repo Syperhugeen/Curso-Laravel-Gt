@@ -2,7 +2,7 @@
 
 
 @section('title')
- Proyecto Individual
+Proyecto {{$Proyecto->name}}  
 @stop
 
 @section('MetaContent')
@@ -40,10 +40,10 @@
 
       		<div class="col-md-6">
       			<hr style="width:50%;left:0;">
-      			<a data-toggle="tooltip" data-placement="top" title="Fecha de realización"><h3 ><span class="glyphicon glyphicon-calendar"></span> {{$Proyecto->fecha}}</h3></a>
-      			<h4 data-toggle="tooltip" data-placement="top" title="Ubicación del proyecto"><span class="glyphicon glyphicon-map-marker"></span> {{$Proyecto->ubicacion}}</h4>
-      			<h4 data-toggle="tooltip" data-placement="top" title="Método de construcción"><span class="glyphicon glyphicon-wrench"></span> {{$Proyecto->metodo_de_construccion}}</h4>
-      			<h5 data-toggle="tooltip" data-placement="top" title="Autoría del proyecto" class="color-gris"><span class="glyphicon glyphicon-pencil"></span> {{$Proyecto->autores}}</h5>
+      			<a><h3><span class="tooltip-individual" title="Fecha de realización"><span class="glyphicon glyphicon-calendar"></span></span> {{$Proyecto->fecha}}</h3></a>
+      			<a><h4><span class="tooltip-individual" title="Ubicación del proyecto"><span class="glyphicon glyphicon-map-marker"></span></span> {{$Proyecto->ubicacion}}</h4></a>
+      			<a><h4><span class="tooltip-individual" title="Método de construcción"><span class="glyphicon glyphicon-wrench"></span></span> {{$Proyecto->metodo_de_construccion}}</h4></a>
+      			<a><h5 class="color-gris"><span class="tooltip-individual" title="Autoría del proyecto"><span class="glyphicon glyphicon-pencil"></span></span> {{$Proyecto->autores}}</h5></a>
 
       			<hr style="width:50%;left:0;">
       		</div>

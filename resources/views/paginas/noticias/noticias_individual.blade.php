@@ -2,11 +2,11 @@
 
 
 @section('title')
- Publicación Individual
+ {{$Noticia->name}} 
 @stop
 
 @section('MetaContent')
-  Description Home 
+ {{$Noticia->name}}; {{$Noticia->header_text}}
 @stop
 
 @section('MetaRobot')
