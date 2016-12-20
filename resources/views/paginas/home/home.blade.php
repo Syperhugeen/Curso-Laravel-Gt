@@ -19,7 +19,7 @@
 @section('content')
 
  {{-- imagenes en grande --}}
- @include('home.partes.imagen_de_portada')
+ @include('paginas.home.partes.imagen_de_portada')
 
  <!--para agregar los márgenes laterales-->
 <div class="container-fluid section-wrapper">
@@ -28,7 +28,7 @@
       <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
      {{-- la parte de bienvenidad --}}
-     @include('home.partes.datos_bienvenida')
+     @include('paginas.home.partes.datos_bienvenida')
 
       </div>
     </div>  
@@ -41,7 +41,7 @@
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
      {{-- la parte de los globitos --}}
-     @include('home.partes.globitos')
+     @include('paginas.home.partes.globitos')
 
     </div>  
   </div>
@@ -53,7 +53,7 @@
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
      {{-- la parte de proyectos  --}}
-     @include('home.partes.proyectos')
+     @include('paginas.home.partes.proyectos')
 
 
     </div>  
@@ -66,7 +66,7 @@
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
      {{-- la parte de publicaciones  --}}
-     @include('home.partes.publicaciones')
+     @include('paginas.home.partes.publicaciones')
 
 
     </div>  

@@ -46,8 +46,8 @@ elixir(function(mix) {
         'mis-flechitas-autopocicionadas.js',
         'mis-botones_para_adjuntar.js',
         'mis-textareas.js',
-        'smooth_scroll.js',
-        'wow.js',
+        'Plug-smooth_scroll.js',
+        'Plug-wow.js',
         'fin.js']);
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');

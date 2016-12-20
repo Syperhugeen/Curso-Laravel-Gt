@@ -35,7 +35,7 @@ class Home_Public_Controller extends Controller
         $Proyectos    = $this->ProyectoRepo->getUltimasEntidadesRegistradasRandomActive($Request, 2);
         $Noticias     = $this->NoticiasRepo->getUltimasEntidadesRegistradasRandomActive($Request,2);
 
-        return view('home.home', compact('Empresa','Proyectos','Noticias'));
+        return view('paginas.home.home', compact('Empresa','Proyectos','Noticias'));
     }
 
 
