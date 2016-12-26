@@ -8,6 +8,9 @@
   //tooltips para publicación individual y proyecto individual
   $('.tooltip-individual').tooltipster();
 
+
+   $('.icono-establecer-imagen').tooltipster();
+
 //navbar////////////////////////////////////////////////////
 
   //icono-user

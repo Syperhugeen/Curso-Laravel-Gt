@@ -54,24 +54,28 @@
       @include align-items(center);
       @include flex-direction(row);
       margin-left:15px;
-      padding:3px;
+      padding:4px;
       border-radius:4px;
       background-color:$Color-Gris-Claro;
      }
 
-     .admin-entidad-proyecto-img-adicionales-contenedor{
-        position: relative;
-     }
+    
 
      .admin-entidad-proyecto-img-adicionales-contenedor{
         border-color: $Color-Gris-Claro-Para-Bordes;
+        position: relative;
+        
+        border: solid 1px $Color-Gris-Claro;
+        margin-right: 4px;
+     }
+
+     .admin-entidad-proyecto-img-adicionales-contenedor__show{
+        border:solid 3px $color-3;
      }
 
         .admin-entidad-proyecto-img-adicionales{
-          height: 50px;
-          padding: 8px;
-          border: solid 1px $Color-Gris-Claro;
-          margin-right: 4px;
+          height: 60px;
+          
         }
 
 
@@ -79,12 +83,27 @@
           position: absolute;
           right: 3px;
           top: 3px;
-          padding:5px;
+          padding:3px;
           border-radius:2px;
+          color:$color-grey0 ;
         }
         .icono-eleminar-imagen:hover{
           background-color: $Color-Errors-BG;
           border-color: $Color-Rojo-Texto-Error;
+          color:white;
+        }
+
+        .icono-establecer-imagen{
+          position: absolute;
+          right: 3px;
+          bottom: 3px;
+          padding:3px;
+          border-radius:2px;
+          color:$color-3;
+        }
+        .icono-establecer-imagen:hover{
+          background-color: $color-3;
+          color: white;
         }
 
       .admin-entidad-contenedor-imagenes-form-field{
