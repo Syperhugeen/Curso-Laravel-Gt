@@ -43,5 +43,12 @@ Route::get('delete_admin_proyectos_img/{id_img}',
 [
   'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@delete_admin_proyectos_img',
   'as'    => 'delete_admin_proyectos_img'
-]);
+]); 
+
+Route::get('establecer_como_imagen_principal/{id_img}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Proyectos_Controllers@establecer_como_imagen_principal',
+  'as'    => 'establecer_como_imagen_principal'
+]); 
+
 

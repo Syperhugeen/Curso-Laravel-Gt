@@ -3,11 +3,16 @@
     <div class="admin-entidad-proyecto-img-adicionales-contenedor">
       <img class="admin-entidad-proyecto-img-adicionales" src="{{$img->url_img}}">
       <a href="{{route('delete_admin_proyectos_img',$img->id)}}" class="icono-eleminar-imagen"><span class="icon-clear" ></span></a>
-      @if($img->foto_principal =! null || $img->foto_principal =! 'si') 
-        <a href="" title="Establecer como imagen principal">
-         <span class="icon-star" ></span>
+      @if($img->foto_principal != 'si')
+        <a href="{{route('establecer_como_imagen_principal',$img->id)}}" title="Establecer como imagen principal">
+         <span class="glyphicon glyphicon-star-empty" ></span>
         </a>
+      @else
+        
+         <span class="glyphicon glyphicon-star" ></span>
+       
       @endif
+
     </div>
     
    @endforeach

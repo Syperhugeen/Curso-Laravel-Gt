@@ -1,6 +1,6 @@
 <div class="admin-marca-lista-contenedor">
    
-   <img class="admin-marca-img" src="{{url()}}/imagenes/{{$proyecto->img}}">
+   <img class="admin-marca-img" src="{{$proyecto->url_img}}">
   
    <div class="admin-marca-contnedor-datos">
      

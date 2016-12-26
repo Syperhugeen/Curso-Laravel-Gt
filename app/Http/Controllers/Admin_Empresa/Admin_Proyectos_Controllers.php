@@ -100,4 +100,14 @@ class Admin_Proyectos_Controllers extends Controller
 
       return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
   }
+
+  //fijo como imagen principal 
+  public function establecer_como_imagen_principal($id_img)
+  {
+      $this->ImgProyectoRepo->cambio_a_imagen_principal($id_img);
+
+      return redirect()->back()->with('alert', 'Imagen principal cambiada');
+  }
+
+  
 }

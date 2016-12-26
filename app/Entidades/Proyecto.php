@@ -55,8 +55,33 @@ class Proyecto extends Model
 
     public function getUrlImgAttribute()
     {
+        //imagenes asoiadas al proyecto
+        $imagenesProyectos = $this->imagenesproyecto;
+
+        //veo si hay alguna que tenga el atributo
+        $cantidad_imagenes = $imagenesProyectos->where('foto_principal','si')->count();
+
+        if($cantidad_imagenes === 1)
+        {
+            $imagen_principal = $imagenesProyectos->where('foto_principal','si')->first();
+            
+
+            return $imagen_principal->url_img;
+        }
+        elseif($cantidad_imagenes === 0)
+        {
+            $imagen = $imagenesProyectos->first();
+            $imagen->foto_principal = 'si';
+            $imagen->save();
+
+            return $imagen->url_img;
+        }   
+        else
+        {
+            return url().'/imagenes/'.$this->img;
+        }    
         
-        return url().'/imagenes/'.$this->img;
+        
     }
 
 
