@@ -11,3 +11,5 @@ require __DIR__ . '/Home/Rutas_Home.php';
 require __DIR__ . '/Proyectos/Rutas_Proyectos.php';
 
 require __DIR__ . '/Noticias/Rutas_Noticias.php';
+
+require __DIR__ . '/Eventos/Rutas_Eventos.php';

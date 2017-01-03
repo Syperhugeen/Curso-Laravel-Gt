@@ -141,6 +141,50 @@ abstract class BaseRepo
          Storage::disk('local')->put($nombre,  File::get($file));
        }
     }
+
+
+    /**
+     * De vuelve las imagenes segun el campo e id a buscar de la entidad
+     */
+    public function get_imagen_principal_de_entidad_especifica($atributo_name,$id_del_atributo)
+    {
+      return $this->entidad
+                  ->where($atributo_name,$id_del_atributo)
+                  ->where('foto_principal','si')
+                  ->get();
+    }
+
+    public function set_datos_de_img($nombre_de_la_propiedad,$id_de_la_propiedad,$request,$LugarDondeSeAloja)
+    {
+      $Imagen = $this->entidad;    
+
+      $Imagen->$nombre_de_la_propiedad = $id_de_la_propiedad;
+      $Imagen->estado = 'si';
+
+      $Imagen->save();
+
+      $this->setImagen($Imagen,$request,'img',$LugarDondeSeAloja, $Imagen->id,'.png');  
+
+      $Imagen->save();   
+    }
+
+    //base Repo. Ahorro codigo
+    public function cambio_a_imagen_principal_desde_base_repo($imagen_pricipal,$imagen)
+    {
+      //cuento si es que hay
+      if($imagen_pricipal->count() > 0)
+      {
+        //agarro la imagen
+        $imagen_principal_efectiva = $imagen_pricipal->first();
+        $imagen_principal_efectiva->foto_principal = null;
+        $imagen_principal_efectiva->save();
+
+
+        //le indico que es la imagen pricnipal 
+        $imagen->foto_principal = 'si';
+        $imagen->save();
+      }
+    }
     
 
 }   

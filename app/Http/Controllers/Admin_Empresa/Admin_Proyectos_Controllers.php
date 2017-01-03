@@ -88,7 +88,7 @@ class Admin_Proyectos_Controllers extends Controller
   //subo img adicional
   public function set_admin_proyectos_img($id_proyecto,Request $Request)
   {
-      $this->ImgProyectoRepo->setDatos($id_proyecto,$Request);
+      $this->ImgProyectoRepo->set_datos_de_img('proyecto_id',$id_proyecto,$Request,'ProyectosImagenesAdicionales/') ;  
       return redirect()->back()->with('alert', 'Imagen Subida Correctamente');
   }
 

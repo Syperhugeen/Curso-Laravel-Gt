@@ -28,6 +28,7 @@ elixir(function(mix) {
         'Plug-jquery.tooltip.min.js',
         'Plug-validator-Boostrap.js',
         'Plug-texarea-Te_v1.js',
+        'Plug-bootstrap-fileinput v4.3.7.js',
         'inicio.js',
         'mis-funciones_personalizadas.js',
         'mis-funciones_personalizadas_para_GoogleAnalitics.js',        
