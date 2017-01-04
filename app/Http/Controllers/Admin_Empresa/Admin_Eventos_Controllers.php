@@ -8,7 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositorios\EventoRepo;
-use App\Repositorios\ImgProyectoRepo;
+use App\Repositorios\ImgEventoRepo;
 
 
 
@@ -17,13 +17,13 @@ class Admin_Eventos_Controllers extends Controller
 {
 
   protected $EventoRepo;
-  protected $ImgProyectoRepo;
+  protected $ImgEventoRepo;
 
   public function __construct(EventoRepo    $EventoRepo, 
-                              ImgProyectoRepo $ImgProyectoRepo)
+                              ImgEventoRepo $ImgEventoRepo)
   {
-    $this->EventoRepo    =  $EventoRepo;
-    $this->ImgProyectoRepo =  $ImgProyectoRepo;
+    $this->EventoRepo      =  $EventoRepo;
+    $this->ImgEventoRepo =  $ImgEventoRepo;
   }
 
   public function get_admin_eventos(Request $Request)
@@ -56,6 +56,8 @@ class Admin_Eventos_Controllers extends Controller
       
       $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
+      $this->ImgEventoRepo->set_datos_de_img('evento_id',$Evento->id,$Request,'EventosImagenes/'); 
+
       return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');
     
   }
@@ -83,16 +85,29 @@ class Admin_Eventos_Controllers extends Controller
 
   //subo img adicional
   public function set_admin_eventos_img($id_proyecto,Request $Request)
-  {
-      $this->ImgProyectoRepo->setDatos($id_proyecto,$Request);
+  {   //archivos imagenes
+      $files = $Request->file('img');
+
+      if(!empty($files))
+      {
+        foreach($files as $file)
+        {           
+
+          $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$id_proyecto,$Request,'EventosImagenes/' );
+                    
+        }
+        
+      }
+
       return redirect()->back()->with('alert', 'Imagen Subida Correctamente');
+      
   }
 
 
   //elimino img adicional
   public function delete_admin_eventos_img($id_img)
   {
-      $this->ImgProyectoRepo->destroy_entidad($id_img);
+      $this->ImgEventoRepo->destroy_entidad($id_img);
 
       return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
   }
@@ -100,7 +115,7 @@ class Admin_Eventos_Controllers extends Controller
   //fijo como imagen principal 
   public function establecer_como_imagen_principal($id_img)
   {
-      $this->ImgProyectoRepo->cambio_a_imagen_principal($id_img);
+      $this->ImgEventoRepo->cambio_a_imagen_principal($id_img);
 
       return redirect()->back()->with('alert', 'Imagen principal cambiada');
   }

@@ -5,7 +5,7 @@
    @if(Auth::user()->role === 'adminMcos522')
      <a href="{{route('get_admin_users')}}"><li class="admin-columna-li"><span class="icon-group"></span> Usuarios</li></a>
      <a href="{{route('get_admin_marcas')}}"><li class="admin-columna-li"><span class="icon-whatshot"></span> Marcas</li></a>
-     <li class="admin-columna-li"><span class="icon-chrome_reader_mode"></span> Eventos</li>
+     <a href="{{route('get_admin_eventos')}}"><li class="admin-columna-li"><span class="icon-chrome_reader_mode"></span> Eventos</li></a>
      <li class="admin-columna-li"><span class="icon-insert_emoticon"></span> Modelos</li>
      <a href="{{route('get_datos_home_web')}}"> <li class="admin-columna-li"><span class="icon-home"></span> Home Edit</li></a>   
    @endif

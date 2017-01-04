@@ -47,6 +47,7 @@ elixir(function(mix) {
         'mis-flechitas-autopocicionadas.js',
         'mis-botones_para_adjuntar.js',
         'mis-textareas.js',
+        'mis-file_input.js',
         'Plug-smooth_scroll.js',
         'Plug-wow.js',
         'fin.js']);

@@ -4,6 +4,7 @@ namespace App\Repositorios;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Repositorios\Emails\EmailsRepo;
+use Input;
 
 /**
 * Contiene metodos comunes para todo los repositorios
@@ -142,6 +143,22 @@ abstract class BaseRepo
        }
     }
 
+     /**
+       * Para subidas multiples  
+       */  
+    public function setImagenMultiples($Entidad,$file,$nombreDelCampoForm,$carpetaDelArchivo,$nombreDelArchivo,$ExtensionDelArchivo)
+    {   
+         //nombre del Archico / Carpeta Incluido
+         $nombre = $carpetaDelArchivo.$nombreDelArchivo.$ExtensionDelArchivo;
+         $Entidad->$nombreDelCampoForm= $nombre;              
+         
+         //indicamos que queremos guardar un nuevo archivo en el disco local
+         Storage::disk('local')->put($nombre,  File::get($file));
+         $Entidad->save();  
+         
+       
+    }
+
 
     /**
      * De vuelve las imagenes segun el campo e id a buscar de la entidad
@@ -154,19 +171,31 @@ abstract class BaseRepo
                   ->get();
     }
 
-    public function set_datos_de_img($nombre_de_la_propiedad,$id_de_la_propiedad,$request,$LugarDondeSeAloja)
+    public function set_datos_de_img($file, $Entidad,$nombre_de_la_propiedad,$id_de_la_propiedad,$request,$LugarDondeSeAloja)
     {
-      $Imagen = $this->entidad;    
+      
+       
+          $Imagen = $Entidad;    
 
-      $Imagen->$nombre_de_la_propiedad = $id_de_la_propiedad;
-      $Imagen->estado = 'si';
+          //nombre de la calve foraña y su valor  
+          $Imagen->$nombre_de_la_propiedad = $id_de_la_propiedad;
 
-      $Imagen->save();
+          //estado activo  
+          $Imagen->estado = 'si';
 
-      $this->setImagen($Imagen,$request,'img',$LugarDondeSeAloja, $Imagen->id,'.png');  
+          //guardo  
+          $Imagen->save();
 
-      $Imagen->save();   
-    }
+          $this->setImagenMultiples($Imagen,$file,'img',$LugarDondeSeAloja, $Imagen->id,'.png'); 
+
+          $Imagen->save();  
+
+        
+
+      }
+
+       
+    
 
     //base Repo. Ahorro codigo
     public function cambio_a_imagen_principal_desde_base_repo($imagen_pricipal,$imagen)

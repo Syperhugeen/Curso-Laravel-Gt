@@ -1,5 +1,5 @@
 <div class="admin-entidad-contenedor-imagenes-y-form">
-   @foreach($Evento->imagenesproyecto as $img)
+   @foreach($Evento->imagenesevento as $img)
     <div class="admin-entidad-proyecto-img-adicionales-contenedor 
       @if($img->foto_principal == 'si') admin-entidad-proyecto-img-adicionales-contenedor__show 
       @endif">
@@ -20,15 +20,20 @@
     </div>    
    @endforeach
 
-   {!! Form::open(['route' => ['set_admin_eventos_img',$proyecto->id],
-                   'method'=> 'post',
-                   'files' =>  true,
-                   'id'    => 'form-admin-subir-img-proyectos',
-                   'class' => 'admin-entidad-contenedor-imagenes-form-form'
+   {!! Form::open(['route'   => ['set_admin_eventos_img',$Evento->id],
+                   'method'  => 'post',
+                   'files'   =>  true,
+                   'id'      => 'form-admin-subir-img-proyectos',
+                   'class'   => 'admin-entidad-contenedor-imagenes-form-form',
+                   'multiple'=> true
                           ])               !!}
     
        
-     {!! Form::file('img',['class' => 'admin-entidad-contenedor-imagenes-form-field']) !!} 
+     {!! Form::file('img[]',['class'            => 'file',
+                            'id'                => 'imagenes-edicion',
+                            'multiple'          => true,
+                            'data-show-upload'  =>'false',
+                            'data-show-caption' => 'true' ]) !!} 
 
       <div class="boton-subir-img">Subir Imagen</div>   
 

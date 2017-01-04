@@ -4,7 +4,7 @@ namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Entidades\ImgHome;
-use App\Entidades\ImgProyecto;
+use App\Entidades\ImgEvento;
 
 
 
@@ -23,9 +23,9 @@ class Evento extends Model
 
 
 
-    public function imagenesproyecto()
+    public function imagenesevento()
     {
-      return $this->hasMany(ImgProyecto::class,'proyecto_id','id')->where('estado','si');
+      return $this->hasMany(ImgEvento::class,'evento_id','id')->where('estado','si');
     }
 
     
@@ -56,7 +56,7 @@ class Evento extends Model
     public function getUrlImgAttribute()
     {
         //imagenes asoiadas al proyecto
-        $imagenesProyectos = $this->imagenesproyecto;
+        $imagenesProyectos = $this->imagenesevento;
 
         //veo si hay alguna que tenga el atributo
         $cantidad_imagenes = $imagenesProyectos->where('foto_principal','si')->count();

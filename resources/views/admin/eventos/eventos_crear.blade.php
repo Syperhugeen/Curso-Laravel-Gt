@@ -33,6 +33,15 @@
                           ])               !!}
    <div class="formulario-contenedor">
 
+
+      {{-- datos imagenes --}}
+      <div class="contenedor-grupo-datos">
+        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Imagenes</div>
+        <div class="contenedor-formulario-label-fiel">                       
+          @include('admin.eventos.formularios_partes.datos_imagenes')
+        </div>
+      </div>
+
       {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Identidad</div>

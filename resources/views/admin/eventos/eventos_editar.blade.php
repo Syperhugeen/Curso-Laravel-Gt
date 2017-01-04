@@ -27,7 +27,7 @@
    <div class="admin-entidad-titulo">Editar Evento {{$Evento->name}}</div>
  </div>
  
-   @include('admin.proyectos.partes.parte_imagenes_adicionales')
+   @include('admin.eventos.partes.parte_imagenes_adicionales')
  
 
  </div>
