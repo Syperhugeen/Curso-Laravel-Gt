@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositorios\ProyectoRepo;
 use App\Repositorios\ImgProyectoRepo;
+use App\Managers\Proyecto\crear_proyecto_admin_manager;
 
 
 
@@ -52,13 +53,25 @@ class Admin_Proyectos_Controllers extends Controller
 
       $Proyecto->estado = 'si';      
 
-      $Propiedades = ['name','description','fecha','ubicacion','metodo_de_construccion','autores'];
-      
-      $this->ProyectoRepo->setEntidadDato($Proyecto,$Request,$Propiedades); 
+      $Propiedades = ['name','description','fecha','ubicacion','metodo_de_construccion','autores']; 
+     
 
-      $this->ProyectoRepo->setImagen($Proyecto,$Request,'img','ProyectoImagenPrincipal/',$Proyecto->id ,'.png');        
+      $manager = new crear_proyecto_admin_manager(null, $Request->all());
 
-     return redirect()->route('get_admin_proyectos')->with('alert', 'Proyecto Creado Correctamente');
+      if ($manager->isValid())
+      {
+       $this->ProyectoRepo->setEntidadDato($Proyecto,$Request,$Propiedades); 
+
+       //utilzo la funciona creada en el controlador para subir la imagen
+       $this->set_admin_proyectos_img($Proyecto->id, $Request);  
+
+       return redirect()->route('get_admin_proyectos')->with('alert', 'Proyecto Creado Correctamente');       
+      }  
+
+    
+      return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());        
+
+     
     
   }
 
@@ -85,11 +98,27 @@ class Admin_Proyectos_Controllers extends Controller
     return redirect()->route('get_admin_proyectos')->with('alert', 'Proyecto Editado Correctamente');  
   }
 
+ 
+
   //subo img adicional
   public function set_admin_proyectos_img($id_proyecto,Request $Request)
-  {
-      $this->ImgProyectoRepo->set_datos_de_img('proyecto_id',$id_proyecto,$Request,'ProyectosImagenesAdicionales/') ;  
+  {   
+      //archivos imagenes
+      $files = $Request->file('img');
+
+      if(!empty($files))
+      {
+        foreach($files as $file)
+        {           
+
+          $this->ImgProyectoRepo->set_datos_de_img($file,$this->ImgProyectoRepo->getEntidad(),'proyecto_id',$id_proyecto,$Request,'ProyectosImagenesAdicionales/' );
+                    
+        }
+        
+      }
+
       return redirect()->back()->with('alert', 'Imagen Subida Correctamente');
+      
   }
 
 

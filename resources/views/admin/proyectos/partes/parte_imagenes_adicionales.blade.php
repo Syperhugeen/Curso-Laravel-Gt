@@ -28,7 +28,11 @@
                           ])               !!}
     
        
-     {!! Form::file('img',['class' => 'admin-entidad-contenedor-imagenes-form-field']) !!} 
+    {!! Form::file('img[]',['class'            => 'file',
+                            'id'                => 'imagenes-edicion',
+                            'multiple'          => true,
+                            'data-show-upload'  =>'false',
+                            'data-show-caption' => 'true' ]) !!} 
 
       <div class="boton-subir-img">Subir Imagen</div>   
 

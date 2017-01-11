@@ -20,6 +20,9 @@
     </div>    
    @endforeach
 
+   
+</div>
+
    {!! Form::open(['route'   => ['set_admin_eventos_img',$Evento->id],
                    'method'  => 'post',
                    'files'   =>  true,
@@ -38,4 +41,3 @@
       <div class="boton-subir-img">Subir Imagen</div>   
 
    {!! Form::close() !!}
-</div>

@@ -53,10 +53,13 @@
       @include flexbox;
       @include align-items(center);
       @include flex-direction(row);
-      margin-left:15px;
-      padding:4px;
+      @include justify-content(center);
+      @include flex-wrap(wrap);
+      margin:15px auto;
+      padding:6px;
       border-radius:4px;
       background-color:$Color-Gris-Claro;
+      width: 800px;
      }
 
     
@@ -70,20 +73,20 @@
      }
 
      .admin-entidad-proyecto-img-adicionales-contenedor__show{
-        border:solid 3px $color-3;
+        border:solid 6px $color-3;
      }
 
         .admin-entidad-proyecto-img-adicionales{
-          height: 60px;
+          height: 75px;
           
         }
 
 
         .icono-eleminar-imagen{
           position: absolute;
-          right: 3px;
-          top: 3px;
-          padding:3px;
+          right: 2px;
+          top: 1px;
+          padding:1px;
           border-radius:2px;
           color:$color-grey0 ;
         }
@@ -95,9 +98,9 @@
 
         .icono-establecer-imagen{
           position: absolute;
-          right: 3px;
-          bottom: 3px;
-          padding:3px;
+          right: 2px;
+          bottom: 1px;
+          padding:2px;
           border-radius:2px;
           color:$color-3;
         }
@@ -115,7 +118,7 @@
 
          .boton-subir-img{
           @include Boton-Chico($color-3);
-          margin: 0 ;
+          margin: 5px ;
          }
 
          .boton-subir-img:hover{

@@ -20,15 +20,7 @@
   {!! Form::text('ubicacion', null ,['class' => 'formulario-field']) !!}
 </div>
 
-<div class="formulario-label-fiel">
-  {!! Form::label('metodo_de_construccion', 'Metodo de construcción', array('class' => 'formulario-label ')) !!}
-  {!! Form::text('metodo_de_construccion', null ,['class' => 'formulario-field']) !!}
-</div>
 
-<div class="formulario-label-fiel">
-  {!! Form::label('autores', 'Autores', array('class' => 'formulario-label ')) !!}
-  {!! Form::text('autores', null ,['class' => 'formulario-field']) !!}
-</div>
 
 
 

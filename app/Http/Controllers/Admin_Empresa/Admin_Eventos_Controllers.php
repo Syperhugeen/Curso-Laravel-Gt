@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositorios\EventoRepo;
 use App\Repositorios\ImgEventoRepo;
+use App\Managers\Evento\crear_evento_admin_manager;
 
 
 
@@ -52,13 +53,22 @@ class Admin_Eventos_Controllers extends Controller
 
       $Evento->estado = 'si';      
 
-      $Propiedades = ['name','description','fecha','ubicacion'];
+      $Propiedades = ['name','description','fecha','ubicacion'];  
       
-      $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
+      $manager = new crear_evento_admin_manager(null, $Request->all());
 
-      $this->ImgEventoRepo->set_datos_de_img('evento_id',$Evento->id,$Request,'EventosImagenes/'); 
+      if ($manager->isValid())
+      {
+       $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
-      return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');
+       //utilzo la funciona creada en el controlador para subir la imagen
+       $this->set_admin_eventos_img($Evento->id, $Request);  
+
+       return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
+      }  
+
+    
+      return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     
   }
 
@@ -84,8 +94,9 @@ class Admin_Eventos_Controllers extends Controller
   }
 
   //subo img adicional
-  public function set_admin_eventos_img($id_proyecto,Request $Request)
-  {   //archivos imagenes
+  public function set_admin_eventos_img($id_evento,Request $Request)
+  {   
+      //archivos imagenes
       $files = $Request->file('img');
 
       if(!empty($files))
@@ -93,7 +104,7 @@ class Admin_Eventos_Controllers extends Controller
         foreach($files as $file)
         {           
 
-          $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$id_proyecto,$Request,'EventosImagenes/' );
+          $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$id_evento,$Request,'EventosImagenes/' );
                     
         }
         
