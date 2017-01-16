@@ -94,7 +94,8 @@ class Admin_Eventos_Controllers extends Controller
   public function get_admin_eventos_editar($id)
   {
     $Evento = $this->EventoRepo->find($id);
-    $Marcas = $this->MarcaRepo->getEntidadActivas();  
+    $Marcas = $this->MarcaRepo->getEntidadActivas();
+
 
     return view('admin.eventos.eventos_editar',compact('Evento','Marcas'));
   }
@@ -161,6 +162,13 @@ class Admin_Eventos_Controllers extends Controller
       $this->ImgEventoRepo->cambio_a_imagen_principal($id_img);
 
       return redirect()->back()->with('alert', 'Imagen principal cambiada');
+  }
+
+  public function delete_admin_marca_eventos($id)
+  {
+      $this->Marca_de_eventoRepo->destroy_entidad($id);
+
+      return redirect()->back()->with('alert-rojo', 'Marca eliminada');
   }
 
   

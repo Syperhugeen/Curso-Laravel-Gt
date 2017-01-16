@@ -5,6 +5,7 @@ namespace App\Entidades;
 use Illuminate\Database\Eloquent\Model;
 use App\Entidades\ImgHome;
 use App\Entidades\ImgEvento;
+use App\Entidades\Marca_de_evento;
 
 
 
@@ -26,6 +27,11 @@ class Evento extends Model
     public function imagenesevento()
     {
       return $this->hasMany(ImgEvento::class,'evento_id','id')->where('estado','si');
+    }
+
+     public function marcasevento()
+    {
+      return $this->hasMany(Marca_de_evento::class,'evento_id','id');
     }
 
     

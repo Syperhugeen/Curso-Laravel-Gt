@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Entidades\Marca;
 
 
 
@@ -22,7 +23,10 @@ class Marca_de_evento extends Model
 
 
 
-
+     public function marca()
+    {
+      return $this->belongsTo(Marca::class,'marca_id','id');
+    }
 
 
 

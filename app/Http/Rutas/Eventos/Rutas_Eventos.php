@@ -44,6 +44,12 @@ Route::get('delete_admin_eventos_img/{id_img}',
 [
   'uses'  => 'Admin_Empresa\Admin_Eventos_Controllers@delete_admin_eventos_img',
   'as'    => 'delete_admin_eventos_img'
+]);
+
+Route::get('delete_admin_marca_eventos/{id}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Eventos_Controllers@delete_admin_marca_eventos',
+  'as'    => 'delete_admin_marca_eventos'
 ]); 
 
 Route::get('establecer_como_imagen_principal/{id_img}',

@@ -44,7 +44,8 @@
       {{-- datos imagenes --}}
       <div class="contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Marcas</div>
-        <div class="contenedor-formulario-label-fiel">                       
+        <div class="contenedor-formulario-label-fiel">     
+          @include('admin.eventos.partes.parte_de_marcas')                    
           @include('admin.eventos.formularios_partes.datos_marcas')
         </div>
       </div>
