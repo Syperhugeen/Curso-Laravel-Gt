@@ -70,6 +70,7 @@
         
         border: solid 1px $Color-Gris-Claro;
         margin-right: 4px;
+        margin-top: 5px;
      }
 
      .admin-entidad-proyecto-img-adicionales-contenedor__show{
@@ -78,6 +79,7 @@
 
         .admin-entidad-proyecto-img-adicionales{
           height: 75px;
+
           
         }
 
@@ -88,7 +90,7 @@
           top: 1px;
           padding:1px;
           border-radius:2px;
-          color:$color-grey0 ;
+          color:$color-grey2 ;
         }
         .icono-eleminar-imagen:hover{
           background-color: $Color-Errors-BG;
