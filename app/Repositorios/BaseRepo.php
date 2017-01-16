@@ -184,7 +184,7 @@ abstract class BaseRepo
 
     public function set_datos_de_img($file, $Entidad,$nombre_de_la_propiedad,$id_de_la_propiedad,$request,$LugarDondeSeAloja)
     {
-       if($Request->input($nombre_de_la_propiedad) != '')
+       if($request->input($nombre_de_la_propiedad) != '')
        { 
        
           $Imagen = $Entidad;    
