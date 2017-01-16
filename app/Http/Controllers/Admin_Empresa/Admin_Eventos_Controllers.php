@@ -110,10 +110,9 @@ class Admin_Eventos_Controllers extends Controller
     $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
      //utilzo la funciona creada en el controlador para subir la imagen
-    if($Request->input('img') != '')
-    {
+    
       $this->set_admin_eventos_img($Evento->id, $Request); 
-    }
+    
      
       
      //creo las marcas asociadas a este evento
