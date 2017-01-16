@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use App\Repositorios\EventoRepo;
 use App\Repositorios\ImgEventoRepo;
 use App\Managers\Evento\crear_evento_admin_manager;
+use App\Repositorios\MarcaRepo;
+use App\Repositorios\Marca_de_eventoRepo;
 
 
 
@@ -19,12 +21,19 @@ class Admin_Eventos_Controllers extends Controller
 
   protected $EventoRepo;
   protected $ImgEventoRepo;
+  protected $MarcaRepo;
+  protected $Marca_de_eventoRepo;
 
-  public function __construct(EventoRepo    $EventoRepo, 
-                              ImgEventoRepo $ImgEventoRepo)
+  public function __construct(EventoRepo            $EventoRepo, 
+                              ImgEventoRepo         $ImgEventoRepo,
+                              MarcaRepo             $MarcaRepo, 
+                              Marca_de_eventoRepo   $Marca_de_eventoRepo)
+
   {
-    $this->EventoRepo      =  $EventoRepo;
-    $this->ImgEventoRepo =  $ImgEventoRepo;
+    $this->EventoRepo           =  $EventoRepo;
+    $this->ImgEventoRepo        =  $ImgEventoRepo;
+    $this->MarcaRepo            =  $MarcaRepo;
+    $this->Marca_de_eventoRepo  =  $Marca_de_eventoRepo;
   }
 
   public function get_admin_eventos(Request $Request)
@@ -39,8 +48,9 @@ class Admin_Eventos_Controllers extends Controller
 
   //get Crear 
   public function get_admin_eventos_crear()
-  {  
-    return view('admin.eventos.eventos_crear');
+  { 
+    $Marcas = $this->MarcaRepo->getEntidadActivas();  
+    return view('admin.eventos.eventos_crear',compact('Marcas'));
   }
 
 
@@ -57,12 +67,19 @@ class Admin_Eventos_Controllers extends Controller
       
       $manager = new crear_evento_admin_manager(null, $Request->all());
 
+      //valido la data
       if ($manager->isValid())
       {
        $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
        //utilzo la funciona creada en el controlador para subir la imagen
        $this->set_admin_eventos_img($Evento->id, $Request);  
+
+       //creo las marcas asociadas a este evento
+       foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
+       {
+         $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
+       }
 
        return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
       }  
@@ -77,8 +94,9 @@ class Admin_Eventos_Controllers extends Controller
   public function get_admin_eventos_editar($id)
   {
     $Evento = $this->EventoRepo->find($id);
+    $Marcas = $this->MarcaRepo->getEntidadActivas();  
 
-    return view('admin.eventos.eventos_editar',compact('Evento'));
+    return view('admin.eventos.eventos_editar',compact('Evento','Marcas'));
   }
 
   //set edit admin 
@@ -89,6 +107,20 @@ class Admin_Eventos_Controllers extends Controller
     $Propiedades = ['name','description','estado','fecha','ubicacion'];
       
     $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
+
+     //utilzo la funciona creada en el controlador para subir la imagen
+     $this->set_admin_eventos_img($Evento->id, $Request); 
+      
+     //creo las marcas asociadas a este evento
+     if($Request->input('marca_asociado_id') != '')
+     {
+       foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
+       {
+         $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
+       }
+     }
+     
+     
 
     return redirect()->route('get_admin_eventos')->with('alert', 'Evento editado correctamente');  
   }

@@ -27,7 +27,7 @@
    <div class="admin-entidad-titulo">Editar Evento {{$Evento->name}}</div>
  </div>
  
-   @include('admin.eventos.partes.parte_imagenes_adicionales')
+   
  
 
  </div>
@@ -40,6 +40,22 @@
                             'id'    => 'form-admin-empresa-datos'
                           ])               !!}
    <div class="formulario-contenedor">
+
+      {{-- datos imagenes --}}
+      <div class="contenedor-grupo-datos">
+        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Marcas</div>
+        <div class="contenedor-formulario-label-fiel">                       
+          @include('admin.eventos.formularios_partes.datos_marcas')
+        </div>
+      </div>
+      {{-- datos imagenes --}}
+      <div class="contenedor-grupo-datos">
+        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Imagenes</div>
+        <div class="contenedor-formulario-label-fiel"> 
+          @include('admin.eventos.partes.parte_imagenes_adicionales')                      
+          @include('admin.eventos.formularios_partes.datos_imagenes')
+        </div>
+      </div>
 
       {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos">

@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
-class Marca extends Model
+class Marca_de_evento extends Model
 {
 
-    protected $table ='marcas';
+    protected $table ='marcas_de_eventos';
 
     /**
      * The attributes that are mass assignable.
@@ -42,21 +42,6 @@ class Marca extends Model
         }
         
     }
-
-    public function scopeActive($query)
-    {
-                               
-           $query->where('estado', "si"); 
-                
-    }
-
-
-
-    public function getUrlImgAttribute()
-    {
-        return url().'/imagenes/'.$this->img;
-
-    }
-    
+  
     
 }

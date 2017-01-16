@@ -58,6 +58,7 @@ class Admin_Proyectos_Controllers extends Controller
 
       $manager = new crear_proyecto_admin_manager(null, $Request->all());
 
+      //valido la data
       if ($manager->isValid())
       {
        $this->ProyectoRepo->setEntidadDato($Proyecto,$Request,$Propiedades); 

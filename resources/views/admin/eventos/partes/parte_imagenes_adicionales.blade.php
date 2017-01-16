@@ -23,21 +23,3 @@
    
 </div>
 
-   {!! Form::open(['route'   => ['set_admin_eventos_img',$Evento->id],
-                   'method'  => 'post',
-                   'files'   =>  true,
-                   'id'      => 'form-admin-subir-img-proyectos',
-                   'class'   => 'admin-entidad-contenedor-imagenes-form-form',
-                   'multiple'=> true
-                          ])               !!}
-    
-       
-     {!! Form::file('img[]',['class'            => 'file',
-                            'id'                => 'imagenes-edicion',
-                            'multiple'          => true,
-                            'data-show-upload'  =>'false',
-                            'data-show-caption' => 'true' ]) !!} 
-
-      <div class="boton-subir-img">Subir Imagen</div>   
-
-   {!! Form::close() !!}

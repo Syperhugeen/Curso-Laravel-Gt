@@ -14,11 +14,12 @@ class crear_evento_admin_manager extends ManagerBase
   public function getRules()
   {
     $rules = [
-      'img'         => 'required',
-      'name'        => 'required',
-      'description' => 'required',
-      'fecha'       => 'required',
-      'ubicacion'   => 'required'
+      'img'               => 'required',
+      'name'              => 'required',
+      'description'       => 'required',
+      'fecha'             => 'required',
+      'ubicacion'         => 'required',
+      'marca_asociado_id' => 'required'      
              ];
 
     return $rules;

@@ -40,6 +40,17 @@ abstract class BaseRepo
     }
 
     /**
+     * Entidades Activas 
+     */
+    public function getEntidadActivas()
+    {
+      return $this->entidad                  
+                  ->active()               
+                  ->orderBy('id','desc')
+                  ->get();
+    }
+
+    /**
      * Entidades Activas Paginadas
      */
     public function getEntidadActivasPaginadas($request,$paginacion)
