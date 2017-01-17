@@ -1,7 +1,8 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ *		N A V I G A T I O N   B A R     (user)     *
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-
-
-#mynavbar{
+ #mynavbar{
 }
 
 
@@ -317,3 +318,16 @@ height: 50px;
       color: $institucional3;
       background-color: $institucional1;
     }
+
+
+
+
+
+/*--- contenido de INICIO DE SESIÓN ---*/
+.contenido-inicio-de-sesion-navbar{
+  width: 230px;  
+}
+
+.contenido-auth-deplegado-navbar{
+  width: 230px;
+}

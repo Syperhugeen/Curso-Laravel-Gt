@@ -1,55 +1,101 @@
-/* C O L O R S */
 
-/*no recuerdo la sintaxis, pero esto sería para establecer
-qué color es "color-1" y cuál es "color-2", etc.*/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * *    P A L E T A    d e    C O L O R E S    * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/*para textos*/
 
-$color-grey0:#f8f8f8; /*gris SUPER claro (solo para líneas divisoras de relevancia baja)*/
-$color-grey1:#b3b3b3; /*gris más claro (párrafos y otras cosas)*/
-$color-grey2:#858585; /*gris medio (títulos por ej.)*/
-$color-grey3:#3b3b3b; /*gris más oscuro (backgrounds por ej.)*/
 
-/*básicos*/
 
-$color-white:white;
- /* (se usará en cada sección de fondo blanco, pero usaremos este
- en lugar de "white" por si decidimos cambiarlo más adelante) */
+/* COLORES INSTITUCIONALES */ 
 
-$color-black:black;
- /* (lo mismo que el blanco) */
+$color-1:#b3b3b3; /* institucional CLARO - principalmente para links de la nav-bar [no-hover]) - en este caso coincide con grises*/
 
-/*institucionales*/
+$color-2:#858585; /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
 
-$color-1:#b3b3b3; /*en este caso coincide con los grises nuestros*/
- /* (se usará principalmente para links de la nav-bar [no-hover]) */
-
-$color-2:#858585; /*en este caso coincide con los grises nuestros*/
-
-$color-3:#4a9fff;
- /* (se usará para complementar a los dos principales, para que
- no sean tan "empalagosos", alternando, ofreciendo algo diferente
- con que hacer destacar ciertas cosas como links:hover o elementos
- de diseño puntuales. No se abusará de este color tanto */
-
-$color-3light:#97c8ff;
-/* (se usará para el estado hover de los botones color-3) */
-
-$color-3dark:#0077fd;
-/* (se usará para el estado hover de los botones color-3) */
-
-$color-3superlight:#d3e8ff;
-/* (se usará para backgrounds de bloques de texto en instancia de hover) */
+$color-3:#4a9fff; /* principalmente para links p>a, botones especiales, y algún otro elemento gráfico: no abusar, un poco por página */
+$color-3dark:#0077fd; /* para interacciones dinámicas del color-3 como [hover] o [active] */
+$color-3light:#97c8ff; /* para interacciones dinámicas del color-3 como [hover] o [active] */
+$color-3superlight:#d3e8ff; /* para backgrounds de bloques de texto en instancia de hover) */
 
 
 
 
 
+/* COLORES GENERALES */
+
+$color-grey0:#f8f8f8; /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
+$color-grey1:#b3b3b3; /*gris más claro (para párrafos y otras cosas)*/
+$color-grey2:#858585; /*gris medio (para títulos por ejemplo)*/
+$color-grey3:#3b3b3b; /*gris más oscuro (para backgrounds por ejemplo)*/
+
+$color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
+$color-black:black; /*misma razón, pero para el negro */
 
 
 
 
 
+/* CLASES PARA COLOREAR DESDE EL HTML (color o background) */
+
+.color-black{color:$color-black;}
+.bgcolor-black{background:$color-black;}
+
+.color-blanco{ /* luego cambiar nombre a "color-white" ? */
+  color:$color-white;
+}
+.bgcolor-blanco{ /* luego cambiar nombre a "bgcolor-white" ? */
+  background:$color-white;
+}
+
+.color-gris{ /* luego cambiar nombre a "color-grey2" ? */
+  color:$color-grey2;
+}
+.bgcolor-gris{ /* luego cambiar nombre a "bgcolor-grey2" ? */
+  background:$color-grey2;
+}
+
+.color-gris-claro{ /* luego cambiar nombre a "color-grey1" ? */
+  color:$color-grey1;
+}
+.bgcolor-gris-claro{ /* luego cambiar nombre a "bgcolor-grey1" ? */
+  background:$color-grey1;
+}
+
+.color-1{color:$color-2;}
+.bgcolor-1{background:$color-2;}
+
+.color-2{color:$color-1;}
+.bgcolor-2{background:$color-1;}
+
+.color-3{color:$color-3;}
+.bgcolor-3{background:$color-3;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
 
 $Color-Corporativo-1:#c2c2c2;
 $Color-Corporativo-2:#c2c2c2;

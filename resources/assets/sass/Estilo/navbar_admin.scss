@@ -1,4 +1,9 @@
-.admin-columna-contenedor{
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ *		N A V I G A T I O N   B A R     (ADMIN)      *
+ *        (la famosa "columna" de Mauri)           *
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ .admin-columna-contenedor{
   width: 200px;
   padding: 5px 6px;
   border: solid 1px transparent;
@@ -13,7 +18,6 @@
 
 .admin-header-logo{
     height: 55px;
-    
     margin:35px 3px;
     
   }
