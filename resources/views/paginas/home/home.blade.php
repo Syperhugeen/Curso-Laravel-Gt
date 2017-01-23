@@ -13,9 +13,6 @@
  INDEX,FOLLOW
 @stop
 
-
- 
-
 @section('content')
 
  {{-- imagenes en grande --}}
