@@ -6,35 +6,41 @@
 }
 
 
+
+
 /* dimensiones de la navbar y visibilidad */
 .navbar {
-  border-bottom: 5px solid #DCB13F;
+  border-bottom: 5px solid $color-3;
   border-radius: 0px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+
 }
 @media (max-width: 399px){.navbar{
   display:block;
   }}
 @media (min-width: 768px){.navbar{
-  height:100px;
+  height: $navbar-altura;
   }}
+
+
 
 
 
 
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
-  background-color: $color-grey3;
   border-color: $color-3;
+  background: $color-2 url("../../imagenes/Img/bg_carbonfibre_texture.jpg") center center;
+
 }
 
 .navbar-default .navbar-text {
-  color: $color-grey1;
+  color: $color-3;
 }
 .navbar-default .navbar-nav > li > a {
   display:inline-block;
-  color: $color-grey1;
+  color: $color-3;
   -webkit-transition: transform .3s ease;
   -moz-transition: transform .3s ease;
   transition: transform .3s ease;
@@ -42,10 +48,13 @@
 
 
 
+
+
+
+
 /*--- LINKS DE LA NAVBAR (tamaños acorde al width) ---*/
 @media (min-width: 768px) {.navbar-default .navbar-nav > li > a {
-  border-bottom: 5px solid $color-3;
-  margin-top:25px;
+  margin-top:4px;
   line-height: 40px;
   }}
 
@@ -66,21 +75,26 @@
     font-size:100%;
     }}
 
+
+
+
+
+
 /*--- LINKS DE LA NAVBAR (efectos hover) ---*/
 .navbar-default .navbar-nav > li:not(.active) > a:hover,
 .navbar-default .navbar-nav > li:not(.active) > a:focus {
-  color: $color-white;
-  -webkit-transform: translate(0, -5px);
-  -moz-transform: translate(0, -5px);
-  transform: translate(0, -5px);
+  color: $color-3superlight;
+  -webkit-transform: translate(0, -3px);
+  -moz-transform: translate(0, -3px);
+  transform: translate(0, -3px);
 }
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active > a:hover,
 .navbar-default .navbar-nav > li.active > a:focus {
-  color: $color-3;
-  text-shadow: 0 0 5px $color-3, 0 0 10px $color-3;
+  color: $color-3light;
   background-color:transparent;
 }
+/*--- la flechita  de los links para cuando está colapsado para móbiles ---*/
 @media (max-width: 767px) {.navbar-default .navbar-nav > .active > a:after{
   left: 0;
   top: 50%;
@@ -90,12 +104,13 @@
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-left-color: $color-3;
-  border-width: 10px;
-  margin-top: -10px;
+  border-left-color: $color-3light;
+  border-width: 5px;
+  margin-top: -5px;
 }}
+/*--- la flechita de los links activos ---*/
 @media (min-width: 768px) {.navbar-default .navbar-nav > .active > a:after{
-  bottom: 0;
+  bottom: 18px;
   left: 50%;
   border: solid transparent;
   content: " ";
@@ -104,8 +119,8 @@
   position: absolute;
   pointer-events: none;
   border-bottom-color: $color-3;
-  border-width: 10px;
-  margin-left: -10px;
+  border-width: 5px;
+  margin-left: -5px;
 }}
 
 
@@ -116,52 +131,63 @@
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: $color-1;
+  border-color: $color-3;
 }
+
+
+
+
+
+
 
 
 
 /*--- botoncito de la Navbar (hamburguer menú) ---*/
+
 @media (max-width: 767px){.navbar-default .navbar-toggle {
   margin-top:15px;
   margin-bottom:15px;
 }}
+@media (max-width: 767px){.navbar-default .navbar-toggle {
+  margin-right:0px;
+  }}
+
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: $color-1;
+  background-color: $color-3;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: $color-1;
+  background-color: $color-3;
 }
 .navbar-default .navbar-toggle:hover .icon-bar,
 .navbar-default .navbar-toggle:focus .icon-bar {
-  background-color: $color-3;
+  background-color: $color-3superlight;
 }
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: $color-1;
+  border-color: $color-3;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
  
-  color: $color-2;
-  background-color: $color-1;
+  color: $color-3superlight;
+  background-color: $color-3dark;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: $color-1;
+    color: $color-3;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: $color-2;
-    background-color: $color-1;
+    color: $color-3superlight;
+    background-color: $color-3dark;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: $color-3;
+    color: $color-3light;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
@@ -175,149 +201,119 @@
 
 
 
+
+
+
+
 /*--- customización de extras de la Navbar, botones, dropdown menú, etc. ---*/
 .navbar-default .navbar-link {
-  color: $color-1;
+  color: $color-3;
 }
 .navbar-default .navbar-link:hover {
-  color: $color-2;
-  background-color: $color-3;
+  color: $color-3superlight;
+  background-color: $color-3dark;
 }
 .navbar-default .btn-link {
-  color: $color-1;
+  color: $color-3;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: $color-3;
+  color: $color-3superlight;
 }
 .dropdown-menu {
 background-color: $color-2;
 margin: 0;
-border: 0px solid $color-1;
+border: 0px solid $color-3;
   }
 .dropdown-menu .divider {
   background-color: $color-3;
 }
 .dropdown-menu > li > a {
-    color: $color-1;
+    color: $color-3;
   }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  color: $color-2;
-  background-color: $color-3;
+  color: $color-3superlight;
+  background-color: $color-3dark;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: $color-1;
+  color: $color-3light;
   background-color: transparent;
 }
 
 
 
 
+
+
+
+
 /* NAVBAR BRAND - L O G O */
+.navbar-header{
+  padding: 0 0;
+}
+@media (max-width: 767px) {
+  .navbar-header {
+  padding: 0 10px;
+}}
 .navbar-brand {
-  float: left;
-  height: 50px;
-  padding: 15px 15px;
+  height: 46px;
+  padding: 15px 10px 15px 0px;
   font-size: 18px;
   line-height: 20px;
-  color: $color-1;
+  color: $color-3;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
-  color: $color-3;
+  color: $color-3superlight;
 }
-.navbar-brand > img {
-  display: block;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar > .container .navbar-brand,
-  .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
-    margin-top:12px;
-  }}
 
-@media (min-width: 992px) {
-  .navbar > .container .navbar-brand,
-  .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
-    margin-top:6px;
-  }}
+@media (min-width: 768px) {
+  .navbar .container .navbar-brand,
+  .navbar .container-fluid .navbar-brand {
+    text-align:center;
+    padding: 15px 15px 15px 15px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}}
 
 .navbar-logo{
-height: 40px;
+height: 34px;
 }
 @media (min-width: 992px) {.navbar-logo{
-height: 50px;
+height: 46px;
 }}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* ¿esto qué era? */
-
-.Default-header{  
-  width: 100%;
-  background-color:$Color-Gris-CasiBlanco;
-  position:fixed;
-  height: 60px;
-  top:0; 
-  padding: 20px 0;   
-  border:solid 1px transparent;
-  border-bottom-color: $Color-Gris-Claro-Para-Bordes; 
-  background-color:$institucional4 ;
-  @include flexbox; 
-  @include flex-direction(row);
-  @include align-items(center);
-  z-index: 999;  
-}  
-
-  .Default-header-logo{
-    height: 36px;
-    width: 36px;
-    margin:0 3px;
-    border-radius: 8px;
-  }
-
-  .Default-header-titulo{
-    font-size: 16px;
-    color: $Color-texto-gris-Mercadolibre;
-    margin-left: 5px;
-  }
-
-
-  .nav-links{
-    padding: 4px;
-    @include flexbox;
-    @include align-items(center);
-    @include flex-direction(row);
-    border-radius: 4px;
-   
-  }
-
-    ul.nav-links>a>li{
-      padding:10px;
-      color: $institucional1;
-      border-radius: 4px; 
+/*--- para CENTRAR el contenido de la NAVBAR ---*/
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
     }
-    ul.nav-links>a>li:hover{
-      color: $institucional3;
-      background-color: $institucional1;
+
+
+    .navbar .navbar-collapse {
+        text-align: center;
+        margin-top:34px;
     }
+    .navbar .navbar-header {
+        text-align: center;
+        margin-top:10px;
+    }
+}
 
 
 
@@ -331,3 +327,7 @@ height: 50px;
 .contenido-auth-deplegado-navbar{
   width: 230px;
 }
+
+
+
+

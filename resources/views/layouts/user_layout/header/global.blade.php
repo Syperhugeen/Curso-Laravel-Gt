@@ -1,22 +1,27 @@
   <!--navigation bar-->
   <nav class="navbar navbar-default navbar-fixed-top" id="mynavbar">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="row">
-      <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+    
 
-      <div class="navbar-header">
+
+    <div class="container">
+      <div class="navbar-header navbar-nav">
         <div class="text-center"><!-- para centrar el navbar toggle button -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
-        <a class="navbar-brand" href="{{route('get_home')}}"><img class="navbar-logo img-responsive" src="{{url()}}/imagenes/{{$Empresa->logo_cuadrado}}"></a></div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <a class="navbar-brand" href="{{route('get_home')}}"><img class="navbar-logo" src="{{url()}}/imagenes/{{$Empresa->logo_horizontal}}"></a>
+        </div>
+      </div> <!-- / container fluid-->
+
+
+      <div class="container">
+      <div class="collapse navbar-collapse" id="defaultNavbar1">
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-right navbar-collapse" id="defaultNavbar1">
         <ul class="nav navbar-nav">
-          <li><a href="{{route('get_home')}}"><span class="glyphicon glyphicon-home"></span> INICIO </a></li>
-          <li><a href="{{route('get_pagina_empresa')}}">ACERCA DE V&amp;V</a></li>
+          <li><a href="{{route('get_home')}}"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+          <li><a href="{{route('get_pagina_empresa')}}">ACERCA DE GLOBAL</a></li>
           <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
-          <li><a href="{{route('get_pagina_proyecto_listado')}}">PROYECTOS</a></li>
-          <li><a href="{{route('get_pagina_noticias_listado')}}">PUBLICACIONES</a></li>
+          <li><a href="{{route('get_pagina_proyecto_listado')}}">CARTERA DE CLIENTES</a></li>
+          <li><a href="{{route('get_pagina_noticias_listado')}}">EVENTOS</a></li>
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
 
@@ -47,11 +52,7 @@
 
         </ul>       
       </div>    <!-- /.navbar-collapse -->
-
-
-    </div>  <!-- /.col -->
-    </div>  <!-- /.row -->
-    </div> <!-- / container fluid row -->
+    </div> <!-- / container fluid-->
 
     <!-- errores -->
     <div class="contendor-contenedor-errores-header">         
