@@ -90,6 +90,18 @@ a:hover, a:focus, a>p:hover, a>p:focus{
 
 
 
+/* R E S P O N S I V E - @media settings */
+@media (max-width:767px){
+  p{font-size:12px;}
+  h1{font-size:28px;}
+  h2{font-size:24px;}
+  h3{font-size:18px;}
+  h4{font-size:14px;}
+  h5{font-size:12px;}
+  h6{font-size:10px;}
+}
+
+
 
 
 /* L I N K s  N A V B A R */
@@ -112,27 +124,15 @@ ul.navbar-nav > li > a.active{
 
 
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
-
-.page-header > h1 {
-  font-family: Champagne;
-  font-size:60px;
+.quote {
+  font-family: HelveticaNoue37ThinOblique;
+}
+.quote:before{
+  content:" ";
 }
 
 
 
-
-
-/* R E S P O N S I V E - @media settings */
-@media (max-width:767px){
-	p{font-size:12px;}
-	h1{font-size:28px;}
-	h2{font-size:24px;}
-	h3{font-size:18px;}
-	h4{font-size:14px;}
-	h5{font-size:12px;}
-	h6{font-size:10px;}
-	.page-header > h1 {font-size:36px;}
-}
 
 
 

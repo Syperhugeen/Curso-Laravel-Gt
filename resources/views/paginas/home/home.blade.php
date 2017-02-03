@@ -15,23 +15,25 @@
 
 @section('content')
 
- {{-- imagenes en grande --}}
- @include('paginas.home.home_header')
+
+
+<!--header (carousel de imágenes)-->
+  <div id="section-1">
+    @include('paginas.home.home_header')
+  </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper">
-  <div class="section-wrapper-welcome">
+<div class="container-fluid section-wrapper" id="section-2">
     <div class="row">    
       <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
        {{-- la parte de bienvenidad --}}
        @include('paginas.home.home_brands')
       </div>
-    </div>  
   </div>
 </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper" id="section-globitos">
+<div class="container-fluid section-wrapper" id="section-3">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
      {{-- la parte de los globitos --}}

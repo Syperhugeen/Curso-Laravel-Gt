@@ -26,7 +26,7 @@
 
 
           {{-- aqui pongo el tema de inicio de sesion y datos del user --}}
-          @include('layouts.user_layout.header.auth')
+          @include('layouts.user_layout.navbar.auth')
 
           {{-- contenidos ocultos para mostrar con tooltips --}}
           <div style="display: none;">
