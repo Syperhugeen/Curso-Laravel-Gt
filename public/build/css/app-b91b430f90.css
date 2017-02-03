@@ -16,6 +16,19 @@
 /*gris más oscuro (para backgrounds por ejemplo)*/
 /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 /*misma razón, pero para el negro */
+/* COLORES DEL CAROUSEL (IMAGE SLIDER) */
+.carousel-control,
+.carousel-control:hover,
+.carousel-control:focus,
+.carousel-caption {
+  color: #e5d8bd; }
+
+.carousel-indicators li {
+  border-color: #f1e7d2; }
+
+.carousel-indicators .active {
+  background-color: #f1e7d2; }
+
 /* CLASES PARA COLOREAR DESDE EL HTML (color o background) */
 .color-black {
   color: black; }
@@ -83,32 +96,6 @@ son los titulos de la seccion */
 /* color en categorias random de home */
 /* carrito colores pagina */
 /* carrito colores desplegado */
-/*--------------------------------------------------------------------------------*/
-/* * * * *    C L A S E S   P A R A    L I N K S    Y    B O T O N E S    * * * * */
-/*--------------------------------------------------------------------------------*/
-/* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
-/*para que el cursor se transforme en el dedito al pasar sobre links
-y para quitar el subrayado de los links*/
-a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
-  cursor: pointer;
-  text-decoration: none;
-  outline: none; }
-
-a, a > p {
-  text-decoration: none;
-  outline: none;
-  color: #d4c6a5; }
-
-a:hover, a:focus, a > p:hover, a > p:focus {
-  text-decoration: none;
-  outline: none;
-  color: #e5d8bd; }
-
-/* NOTA PARA MÍ MISMO: tal vez cambie el nombre de este archivo a "botones.scss" y me llevo las propiedades
-escritas previamente para el archivo "text.scss" */
-/* L I N K s  A N I M A T I O N S */
-/* no sé si poner las animaciones de translate acá o en "mis_recursos.scss"
-creo que mejor en mis_recursos, síp. */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -175,6 +162,131 @@ creo que mejor en mis_recursos, síp. */
   display: block; }
 
 /*---  B O T Ó N E S  d e   M A U R I  ---*/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * * * *   G L O B A L    T E X T   S E T T I N G S   * * * * * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* I M P O R T I N G  t h e  F O N T S */
+@font-face {
+  font-family: Champagne;
+  src: url(../fonts/Champagne.ttf); }
+
+@font-face {
+  font-family: HelveticaNoue;
+  src: url(../fonts/Helvetica_Neue.ttf); }
+
+@font-face {
+  font-family: HelveticaNoue37Thin;
+  src: url(../fonts/HelveticaNeueLTStd-ThCn.otf); }
+
+@font-face {
+  font-family: HelveticaNoue37ThinOblique;
+  src: url(../fonts/HelveticaNeueLTStd-ThCnO.otf); }
+
+/* E S T I L O   D E   T E X T O   N O R M A L */
+p {
+  font-family: HelveticaNoue;
+  font-size: 14pt;
+  color: #302a26;
+  text-align: justify;
+  white-space: pre-wrap; }
+
+h1 {
+  /*usar para título único por página*/
+  color: #b3b3b3; }
+
+h2 {
+  /*usar para títulos de las dif. secciones de cada página*/
+  color: #b3b3b3; }
+
+h3 {
+  /*usar para títulos de cada bloque de párrafo*/
+  color: #858585; }
+
+h4 {
+  /*usar para párrafos cortos de alta relevancia*/
+  color: #858585; }
+
+h5 {
+  /*usar para items o nombres puntuales que no son textos largos*/
+  color: #b3b3b3; }
+
+h6 {
+  /*usar para algún texto especial, de tamaño menor que los p*/
+  color: #b3b3b3; }
+
+/*para que el cursor no se transforme en selector de texto*/
+p, h1, h2, h3, h4, h5, h6 {
+  cursor: default;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
+/*para que el cursor se transforme en el dedito al pasar sobre links
+y para quitar el subrayado de los links*/
+a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none; }
+
+a, a > p {
+  text-decoration: none;
+  outline: none;
+  color: #d4c6a5; }
+
+a:hover, a:focus, a > p:hover, a > p:focus {
+  text-decoration: none;
+  outline: none;
+  color: #e5d8bd; }
+
+/* L I N K s  N A V B A R */
+ul.navbar-nav > li > a {
+  font-family: Champagne;
+  font-size: 13pt;
+  color: #d4c6a5;
+  letter-spacing: 1px; }
+
+ul.navbar-nav > li > a :hover,
+ul.navbar-nav > li > a :focus {
+  color: #f1e7d2; }
+
+ul.navbar-nav > li > a.active {
+  color: #e5d8bd; }
+
+/* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
+.page-header > h1 {
+  font-family: Champagne;
+  font-size: 60px; }
+
+/* R E S P O N S I V E - @media settings */
+@media (max-width: 767px) {
+  p {
+    font-size: 12px; }
+  h1 {
+    font-size: 28px; }
+  h2 {
+    font-size: 24px; }
+  h3 {
+    font-size: 18px; }
+  h4 {
+    font-size: 14px; }
+  h5 {
+    font-size: 12px; }
+  h6 {
+    font-size: 10px; }
+  .page-header > h1 {
+    font-size: 36px; } }
+
+/* Q U É  E S   E S T O ?   N I   I D E A */
+textarea {
+  /* para qué era esto mauri??? */
+  word-break: break-all; }
+
+label {
+  /* para qué era esto mauri??? */
+  color: black; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -12104,6 +12216,19 @@ ul.bxslider {
 /*gris más oscuro (para backgrounds por ejemplo)*/
 /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 /*misma razón, pero para el negro */
+/* COLORES DEL CAROUSEL (IMAGE SLIDER) */
+.carousel-control,
+.carousel-control:hover,
+.carousel-control:focus,
+.carousel-caption {
+  color: #e5d8bd; }
+
+.carousel-indicators li {
+  border-color: #f1e7d2; }
+
+.carousel-indicators .active {
+  background-color: #f1e7d2; }
+
 /* CLASES PARA COLOREAR DESDE EL HTML (color o background) */
 .color-black {
   color: black; }
@@ -12271,32 +12396,6 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding: 5px 0 5px 30px;
   border-left: 10px solid #f8f8f8; }
 
-/*--------------------------------------------------------------------------------*/
-/* * * * *    C L A S E S   P A R A    L I N K S    Y    B O T O N E S    * * * * */
-/*--------------------------------------------------------------------------------*/
-/* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
-/*para que el cursor se transforme en el dedito al pasar sobre links
-y para quitar el subrayado de los links*/
-a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
-  cursor: pointer;
-  text-decoration: none;
-  outline: none; }
-
-a, a > p {
-  text-decoration: none;
-  outline: none;
-  color: #d4c6a5; }
-
-a:hover, a:focus, a > p:hover, a > p:focus {
-  text-decoration: none;
-  outline: none;
-  color: #e5d8bd; }
-
-/* NOTA PARA MÍ MISMO: tal vez cambie el nombre de este archivo a "botones.scss" y me llevo las propiedades
-escritas previamente para el archivo "text.scss" */
-/* L I N K s  A N I M A T I O N S */
-/* no sé si poner las animaciones de translate acá o en "mis_recursos.scss"
-creo que mejor en mis_recursos, síp. */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -12364,11 +12463,25 @@ creo que mejor en mis_recursos, síp. */
 
 /*---  B O T Ó N E S  d e   M A U R I  ---*/
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
- *  									           *
- *	  		 		  M I S 			   		   *
- *				A N I M A C I O N E S			   *
- *  									           *
+ *  									                             *
+ *	  		 		  M I S 			   		                 *
+ *				A N I M A C I O N E S			               *
+ *  									                             *
  * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * *    B& W   I M A G E   T O   C O L O R   O N   H O V E R    * * * * */
+/* para que las imágenes con esta clase se muestren en grises y se coloreen al pasar el mouse por arriba */
+.img-greyscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */ }
+
+.img-greyscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%); }
+
 /* * * * *    H O V E R   F L O A T    * * * * */
 /* para que algo se eleve un poquito durante el hover */
 .mi-float-up {
@@ -12845,10 +12958,66 @@ a > .link-go-to-web:focus {
  *	C L A S E S   E S P E C Í F I C A S            *
  *	P A R A   D I F E R E N T E S   P Á G I N A S  *
  * * * * * * * * * * * * * * * * * * * * * * * * * */
-/*--- H O M E
+/*--- * * * * H O M E * * * * * 
+
 (tiene una banda de cosas la Home,
-pero eso es porque no optimicé la escritura de código)---*/
-/*carrusel*/
+pero eso es porque no optimicé la
+escritura de código)---*/
+/* frase centrada encima del header, sobre las imágenes del carousel */
+.header-frase-container {
+  text-align: center;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  bottom: 20%; }
+
+.header-frase {
+  background-image: url("../../imagenes/Img/header-frase.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 602px;
+  height: 118px;
+  left: 50%;
+  margin: 0 auto;
+  transition: 0.3s; }
+
+.carousel-y-header:hover .header-frase {
+  opacity: 0.3; }
+
+@media (max-width: 449px) {
+  .header-frase {
+    width: 202px;
+    height: 42px; } }
+
+@media (min-width: 450px) and (max-width: 767px) {
+  .header-frase {
+    width: 302px;
+    height: 59px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-frase {
+    width: 402px;
+    height: 80px; } }
+
+/*cortina de opacidad*/
+.cortina-carousel {
+  z-index: 8;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d4c6a5;
+  opacity: 0.4;
+  transition: 0.3s; }
+
+.carousel-y-header:hover .cortina-carousel {
+  opacity: 0; }
+
+/*cambiando el z-index de los controladores*/
+.carousel-control, .carousel-indicators {
+  z-index: 10; }
+
+/* propiedades de las imágenes del carousel */
 .img-carousel {
   top: 50%;
   min-width: 100%;
@@ -12856,6 +13025,20 @@ pero eso es porque no optimicé la escritura de código)---*/
   width: auto;
   height: auto; }
 
+/* para que las imágenes del carousel (portada) se muestren en grises y se coloreen al pasar el mouse por arriba */
+/* ---------DESACTIVADO, DE MOMENTO PREFERIMOS A COLOR-----------
+
+.carousel-y-header .carousel .carousel-inner .item .img-carousel{
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+.carousel-y-header:hover .carousel .carousel-inner .item .img-carousel{
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+*/
 .carousel-caption > h3 {
   color: white; }
 
@@ -12868,23 +13051,10 @@ pero eso es porque no optimicé la escritura de código)---*/
     min-width: 200%;
     min-height: 200%;
     width: auto;
-    height: auto; } }
+    height: auto;
+    margin-left: -50%; } }
 
-/*título principal de Bienvenida*/
-.section-wrapper-welcome {
-  padding-top: 40px; }
-
-.home-contact-info {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #f8f8f8;
-  border-radius: 4px; }
-
-/*cositas de Bienvenidos*/
-.chevron-saltarin {
-  color: #d4c6a5; }
-
-/*globitos*/
+/* g l o b i t o s */
 .contenedor-home-globitos {
   display: -moz-flex;
   display: -ms-flexbox;
@@ -12941,7 +13111,7 @@ pero eso es porque no optimicé la escritura de código)---*/
     height: 75px;
     font-size: 150%; } }
 
-/*cuadraditos (solo para xs y sm)*/
+/* c u a d r a d i t o s  (solo para xs y sm)*/
 .contenedor-home-cuadraditos {
   padding: 0 0;
   margin-top: 0;
@@ -12964,77 +13134,6 @@ div.cuadradito > h2 {
 div.cuadradito > p {
   color: white;
   text-align: center; }
-
-/*últimos proyectos y últimas noticias*/
-/*título de cada sección interior del Home,
-por ejemplo ULTIMOS PROYECTOS y ULTIMOS ARTICULOS*/
-.home-section-title {
-  color: #b3b3b3;
-  text-align: right;
-  font-family: Pioret;
-  border-bottom: 1px solid #b3b3b3; }
-
-/*el contenedor que contiene a todos los items*/
-.home-section-display {
-  padding: 10px; }
-
-/*el contenedor de cada item individual*/
-.home-section-display-item {
-  cursor: pointer;
-  border-radius: 8px;
-  padding: 20px;
-  transition: transform .3s ease; }
-
-.home-section-display-description-wrapper1 {
-  height: 40px;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-.home-section-display-description-wrapper2 {
-  height: 120px;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-.home-section-display-ampliar {
-  text-align: right;
-  color: #b3b3b3;
-  position: absolute;
-  bottom: -12px;
-  right: 15px; }
-
-a > .home-section-display-item:hover .home-section-display-ampliar {
-  color: #d4c6a5; }
-
-@media (max-width: 767px) {
-  .home-section-display-ampliar {
-    bottom: -32px; }
-  .home-section-display-description-wrapper1 {
-    height: 80px; } }
-
-/*línea divisora entre cada item individual*/
-.home-section-display-divider {
-  margin: 4px 20px;
-  width: 100%;
-  color: #f8f8f8; }
-
-/*efecto hover de cada item individual*/
-a > .home-section-display-item:hover {
-  cursor: pointer;
-  background-color: #f8f8f8;
-  transform: translate(20px, 0); }
-
-/*imagen de cada item individual*/
-img.my-media-object {
-  width: 200px;
-  height: 200px; }
-
-@media (max-width: 767px) {
-  img.my-media-object {
-    margin-bottom: 10px; } }
-
-/*media-body es el texto de contenido de cada item individual*/
-.my-media-body {
-  min-height: 200px; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -13191,6 +13290,24 @@ p, h1, h2, h3, h4, h5, h6 {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+/* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
+/*para que el cursor se transforme en el dedito al pasar sobre links
+y para quitar el subrayado de los links*/
+a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none; }
+
+a, a > p {
+  text-decoration: none;
+  outline: none;
+  color: #d4c6a5; }
+
+a:hover, a:focus, a > p:hover, a > p:focus {
+  text-decoration: none;
+  outline: none;
+  color: #e5d8bd; }
 
 /* L I N K s  N A V B A R */
 ul.navbar-nav > li > a {

@@ -26,6 +26,7 @@
 
 
 
+
 /* E S T I L O   D E   T E X T O   N O R M A L */
 
 p {
@@ -56,12 +57,38 @@ color:$color-grey1;
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
-  	cursor:default;
-  	text-decoration: none;
+  cursor:default;
+  text-decoration: none;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
+
+/* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
+
+/*para que el cursor se transforme en el dedito al pasar sobre links
+y para quitar el subrayado de los links*/
+a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
+  cursor:pointer;
+  text-decoration: none;
+  outline:none;
+}
+a, a>p{
+  text-decoration:none;
+  outline:none;
+  color:$color-3;
+}
+a:hover, a:focus, a>p:hover, a>p:focus{
+    text-decoration:none;
+    outline:none;
+    color:$color-3light;
+}
+
+
 
 
 
@@ -81,13 +108,15 @@ ul.navbar-nav > li > a.active{
 }
 
 
+
+
+
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
 
 .page-header > h1 {
-  font-family:Champagne;
+  font-family: Champagne;
   font-size:60px;
 }
-
 
 
 

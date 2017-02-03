@@ -43,7 +43,7 @@
   <body>
       <div class="global-wrapper">
 
-           @include('layouts.user_layout.header.global')
+           @include('layouts.user_layout.navbar.navbar')
 
            <div>
                 @yield('content')  
@@ -56,7 +56,7 @@
             <div class="row">    
               <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
-             @include('layouts.user_layout.footer.footer-general')
+             @include('layouts.user_layout.footer.footer')
 
               </div>  
             </div>

@@ -1,6 +1,7 @@
 ////ESTILO (colores y botones precargados para evitar errores de referencias del sass)
 @import "resources/assets/sass/Estilo/colors";
-@import "resources/assets/sass/Estilo/links";
+@import "resources/assets/sass/Estilo/botones";
+@import "resources/assets/sass/Estilo/text";
 
 
 
@@ -55,8 +56,8 @@
 
 ////ESTILO
 @import "resources/assets/sass/Estilo/colors";
-@import "resources/assets/sass/Estilo/general";
-@import "resources/assets/sass/Estilo/links";
+@import "resources/assets/sass/Estilo/estructura";
+@import "resources/assets/sass/Estilo/botones";
 @import "resources/assets/sass/Estilo/mis_recursos";
 @import "resources/assets/sass/Estilo/navbar_admin";
 @import "resources/assets/sass/Estilo/navbar_user";

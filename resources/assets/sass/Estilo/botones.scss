@@ -1,47 +1,4 @@
 
-/*--------------------------------------------------------------------------------*/
-/* * * * *    C L A S E S   P A R A    L I N K S    Y    B O T O N E S    * * * * */
-/*--------------------------------------------------------------------------------*/
-
-
-
-/* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
-
-/*para que el cursor se transforme en el dedito al pasar sobre links
-y para quitar el subrayado de los links*/
-a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
-  	cursor:pointer;
-	text-decoration: none;
-	outline:none;
-}
-a, a>p{
-	text-decoration:none;
-  	outline:none;
-	color:$color-3;
-}
-a:hover, a:focus, a>p:hover, a>p:focus{
-  	text-decoration:none;
-  	outline:none;
-  	color:$color-3light;
-}
-
-/* NOTA PARA MÍ MISMO: tal vez cambie el nombre de este archivo a "botones.scss" y me llevo las propiedades
-escritas previamente para el archivo "text.scss" */
-
-
-
-
-/* L I N K s  A N I M A T I O N S */
-/* no sé si poner las animaciones de translate acá o en "mis_recursos.scss"
-creo que mejor en mis_recursos, síp. */
-
-
-
-
-
-
-
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

@@ -21,6 +21,7 @@ $color-3superlight:#f1e7d2 ; /* para backgrounds de bloques de texto en instanci
 
 
 
+
 /* COLORES GENERALES */
 
 $color-grey0:#f8f8f8; /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
@@ -31,6 +32,25 @@ $color-grey3:#3b3b3b; /*gris más oscuro (para backgrounds por ejemplo)*/
 $color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 $color-black:black; /*misma razón, pero para el negro */
 
+
+
+
+
+
+/* COLORES DEL CAROUSEL (IMAGE SLIDER) */
+
+.carousel-control,
+.carousel-control:hover,
+.carousel-control:focus,
+.carousel-caption {
+	color: $color-3light;
+}
+.carousel-indicators li {
+	border-color: $color-3superlight;
+}
+.carousel-indicators .active {
+	background-color: $color-3superlight;
+}
 
 
 

@@ -16,7 +16,7 @@
 @section('content')
 
  {{-- imagenes en grande --}}
- @include('paginas.home.partes.imagen_de_portada')
+ @include('paginas.home.home_header')
 
 <!--para agregar los márgenes laterales-->
 <div class="container-fluid section-wrapper">
@@ -24,7 +24,7 @@
     <div class="row">    
       <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
        {{-- la parte de bienvenidad --}}
-       @include('paginas.home.partes.datos_bienvenida')
+       @include('paginas.home.home_brands')
       </div>
     </div>  
   </div>
@@ -35,7 +35,7 @@
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
      {{-- la parte de los globitos --}}
-     @include('paginas.home.partes.globitos')
+     @include('paginas.home.home_globitos')
     </div>  
   </div>
 </div>
@@ -45,7 +45,7 @@
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
      {{-- la parte de proyectos  --}}
-     @include('paginas.home.partes.proyectos')
+     @include('paginas.home.home_proyectos')
     </div>  
   </div>
 </div>
@@ -55,7 +55,7 @@
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
      {{-- la parte de publicaciones  --}}
-     @include('paginas.home.partes.publicaciones')
+     @include('paginas.home.home_publicaciones')
     </div>  
   </div>
 </div>
