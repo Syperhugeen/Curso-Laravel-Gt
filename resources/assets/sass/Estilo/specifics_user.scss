@@ -68,7 +68,7 @@ escritura de código)---*/
   width:100%;
   height:100%;
   background-color: $color-3;
-  opacity: 0.4;
+  opacity: 0.5;
   transition: 0.3s;
 }
 .carousel-y-header:hover .cortina-carousel{
@@ -343,39 +343,45 @@ div.servicio-individual>h4>span.glyphicon{
 
 
 /*--- F O O T E R ---*/
-
-.footer-p-destacado{
-  letter-spacing: 8px;
+/*--- líneas divisorias del footer ---*/
+.footer-line{
 }
-.footer-p-izquierda{
-  color:$color-grey1;
-  text-align:right;
-  padding-right: 20px;
-  vertical-align: middle;
-}
-.footer-p-derecha{
-  color:$color-grey1;
-  text-align:left;
-  padding-left: 20px;
-}
-
 @media (max-width: 991px){
-.footer-p-izquierda,
-.footer-p-derecha {
-  text-align:center;
-  padding-right: 0;
-  padding-left: 0;
-}
-.footer-col-derecha{
-  border-top:1px solid $color-grey2;
-  padding-top:20px;
+.footer-line{
+    border-bottom: 1px solid $color-2light;
+    margin: 15px;
 }}
 @media (min-width: 992px){
-.footer-col-derecha{
-  border-left:2px solid $color-grey2;
-  padding-top:0;
+  .footer-line{
+    border-right: 1px solid $color-2light;
 }}
 
-.bg-footer{
-background-color: $color-grey3;
+/*--- pequeña línea divisoria que divide el copyright del autor de la web ---*/
+.footer-line2{
+}
+@media (min-width: 992px){
+  .footer-line2{
+  border-right: 1px solid $color-2light;
+}}
+#footer .col-md-4{
+  height: $altura-footer-columns;
+}
+.isologo_container{
+  padding: 0px;
+}
+.isologo{
+  width: 100%;
+  height: $altura-footer-columns;
+}
+#footer .col-md-4 .isologo{
+  background-image: url("../../imagenes/Empresa/isologo_superdark.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+#footer .col-md-4:hover .isologo{
+  background-image: url("../../imagenes/Empresa/isologo_dark.png");
+}
+#footer .column-container{
+  padding: 0px 40px;
 }

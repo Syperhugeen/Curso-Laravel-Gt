@@ -23,8 +23,8 @@ para que el contenido comience luego de la Navbar y no se pierda nada detrás de
   body{   	padding-top:$navbar-altura;  }
   @media (max-width:767px) {body{    padding-top:$navbar-altura-xs;  }}
 
-
-
+/* escribir aquí la altura de las columnas del footer, a criterio según la cantidad de info que tengan */
+$altura-footer-columns:200px;
 
 
 
@@ -72,14 +72,12 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding-top:40px;
   padding-bottom:40px;
 }
+.section-wrapper-footer{ /*envolvente sólo para el footer, con menor padding abajo*/
+  padding-top:40px;
+  padding-bottom:20px;
+}
 
-/* sections que tendrán otro background */
-.section-color-3{
-  background-color:$color-3;
-}
-.section-color-2{
-  background-color:$color-2;
-}
+
 
 /*---para agregarle espaciado entre rows o items acorde a mi criterio---*/
 .space-top{
@@ -98,10 +96,16 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
 
  /*---CENTRAR UNA COLUMNA dentro de un row---*/
-.col-centered{
+.col-hcenter{
     text-align:center;
     float: none;
     margin: 0 auto;
+}
+/*---CENTRAR UNA COLUMNA VERTICALMENTE dentro de un row---*/
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 
 /*--- DESTACADO --- | luego agregar diferentes clases de destacado, usando diferentes colores y diseños*/

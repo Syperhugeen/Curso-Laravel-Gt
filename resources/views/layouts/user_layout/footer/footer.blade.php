@@ -4,37 +4,82 @@
 
 
 
-    <div class="row" id="footer">
+<div class="row" id="footer">
+
+   <!-- primer row (el de los links de contacto y síguenos)-->
+   <div class="col-xs-12 space-bottom">
+   <div class="row">
 
 
-      <div class="col-md-6">
-        <p class="footer-p-izquierda footer-p-destacado"><strong>V&amp;V</strong>INGENIERÍA <span class="glyphicon glyphicon-copyright-mark"></span>2016</p>
-        <p class="footer-p-izquierda">Diseño de interfaz y desarrollo web: Ernesto Calvo</p>
-      </div>
+      <!-- columna del isologo -->
+      <div class="col-md-4 footer-line hidden-xs hidden-sm" style="text-align:right;"><div class="column-container">
+        <div class="isologo_container">
+          <div class="isologo">
+          </div>
+        </div>
+      </div></div>
 
 
-      <div class="col-md-6 footer-col-derecha">
+      <!-- columna de datos de contácto -->
+      <div class="col-md-4 footer-line"><div class="column-container">
+
+        <h5 class="footer-title">contáctanos</h5>
+
        @if($Empresa->email != null)
-        <p class="footer-p-derecha"><span class="glyphicon glyphicon-envelope"></span> {{$Empresa->email}}</p>
+        <h5><span class="glyphicon glyphicon-envelope"></span> {{$Empresa->email}}</h5>
        @endif
+
        @if($Empresa->telefono != null) 
-        <p class="footer-p-derecha">
-          <span class="glyphicon glyphicon-earphone"></span> {{$Empresa->telefono}}
+        <h5><span class="glyphicon glyphicon-earphone"></span> {{$Empresa->telefono}}</h5>
+      @endif
+
           @if($Empresa->celular != null)
-           <span class="glyphicon glyphicon-phone" style="padding-left:8px;"></span> {{$Empresa->celular}}
-          @endif
-        </p>
+        <h5><span class="glyphicon glyphicon-phone""></span> {{$Empresa->celular}}</h5>
+          
        @endif 
        @if($Empresa->direccion != null) 
-        <p class="footer-p-derecha"><span class="glyphicon glyphicon-map-marker"></span> {{$Empresa->direccion}}</p>
+        <h5><span class="glyphicon glyphicon-map-marker"></span> {{$Empresa->direccion}}</h5>
        @endif
+
        @if($Empresa->horarios_dias != null) 
-        <p class="footer-p-derecha"><span class="glyphicon glyphicon-time"></span> {{$Empresa->horarios_dias}}</p>
+        <h5><span class="glyphicon glyphicon-time"></span> {{$Empresa->horarios_dias}}</h5>
        @endif
-      </div>
+
+      </div></div>
 
   
-    </div>
+      <!-- columna de datos de redes sociales y mailing letters -->
+      <div class="col-md-4"><div class="column-container">
+
+        <h5 class="footer-title">síguenos</h5>
+
+        <h5><span class="glyphicon glyphicon-thumbs-up"></span> facebook.com/globaltarget</h5>
+        <h5><span class="glyphicon glyphicon-bullhorn"></span> twitter.com/globaltarget</h5> 
+        <h5><span class="glyphicon glyphicon-send"></span> subscribirse al <em>mailing-letter</em></h5>
+      </div></div>
+
+
+  </div>
+  </div>
+
+
+  <!-- primer row (el de los links de contacto y síguenos)-->
+  <div class="col-xs-12">
+  <div class="row">
+
+
+      <div class="col-md-6 footer-line2" style="text-align:right;">
+        <h5 class="logo-font kerning"><strong>GLOBALTARGET&#x24B8;2017</strong></h5>
+      </div>
+
+      <div class="col-md-6">
+        <h5>Diseño de interfaz y desarrollo web: <a>Simbionte</a></h5>
+      </div>
+
+  </div>
+  </div>
+
+</div>
         
 
 

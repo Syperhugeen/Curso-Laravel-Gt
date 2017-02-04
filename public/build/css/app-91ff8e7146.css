@@ -3,9 +3,10 @@
  * * * * *    P A L E T A    d e    C O L O R E S    * * * * *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* COLORES INSTITUCIONALES */
-/* institucional CLARO - principalmente para links de la nav-bar [no-hover]) - en este caso coincide con grises*/
+/* institucional que aún no defino para qué */
 /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
-/* principalmente para links p>a, botones especiales, y algún otro elemento gráfico: no abusar, un poco por página */
+/* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
+/* institucional PRINCIPAL */
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
 /* para backgrounds de bloques de texto en instancia de hover) */
@@ -21,7 +22,7 @@
 .carousel-control:hover,
 .carousel-control:focus,
 .carousel-caption {
-  color: #e5d8bd; }
+  color: #d4c6a5; }
 
 .carousel-indicators li {
   border-color: #f1e7d2; }
@@ -30,36 +31,40 @@
   background-color: #f1e7d2; }
 
 /* CLASES PARA COLOREAR DESDE EL HTML (color o background) */
+/* negro */
 .color-black {
   color: black; }
 
 .bgcolor-black {
   background: black; }
 
-.color-blanco {
-  /* luego cambiar nombre a "color-white" ? */
+/* blanco */
+.color-white {
   color: white; }
 
-.bgcolor-blanco {
-  /* luego cambiar nombre a "bgcolor-white" ? */
+.bgcolor-white {
   background: white; }
 
-.color-gris {
-  /* luego cambiar nombre a "color-grey2" ? */
-  color: #858585; }
-
-.bgcolor-gris {
-  /* luego cambiar nombre a "bgcolor-grey2" ? */
-  background: #858585; }
-
-.color-gris-claro {
-  /* luego cambiar nombre a "color-grey1" ? */
+/* grises */
+.color-grey1 {
   color: #b3b3b3; }
 
-.bgcolor-gris-claro {
-  /* luego cambiar nombre a "bgcolor-grey1" ? */
+.bgcolor-grey1 {
   background: #b3b3b3; }
 
+.color-grey2 {
+  color: #858585; }
+
+.bgcolor-grey2 {
+  background: #858585; }
+
+.color-grey3 {
+  color: #3b3b3b; }
+
+.bgcolor-grey3 {
+  background: #3b3b3b; }
+
+/* institucionales */
 .color-1 {
   color: #302a26; }
 
@@ -67,16 +72,16 @@
   background: #302a26; }
 
 .color-2 {
-  color: #d5c68d; }
+  color: #302a26; }
 
 .bgcolor-2 {
-  background: #d5c68d; }
+  background: #302a26; }
 
 .color-3 {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .bgcolor-3 {
-  background: #d4c6a5; }
+  background: #cebe98; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
@@ -102,29 +107,29 @@ son los titulos de la seccion */
 /*--- B O T Ó N   P R I M A R I O  |  COLOR-3 ---*/
 .btn-primary {
   color: white;
-  background-color: #d4c6a5;
-  border-color: #d4c6a5; }
+  background-color: #cebe98;
+  border-color: #cebe98; }
 
 .btn-primary:focus,
 .btn-primary.focus {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd;
+  background-color: #d4c6a5;
+  border-color: #d4c6a5;
   outline-width: 1px;
   outline-offset: 4px;
   outline-style: dotted; }
 
 .btn-primary:hover {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd; }
+  background-color: #d4c6a5;
+  border-color: #d4c6a5; }
 
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: white;
   background-color: #917e4b;
-  border-color: #d4c6a5;
+  border-color: #cebe98;
   outline: none; }
 
 .btn-primary:active:hover,
@@ -138,7 +143,7 @@ son los titulos de la seccion */
 .open > .dropdown-toggle.btn-primary.focus {
   color: white;
   background-color: #917e4b;
-  border-color: #d4c6a5;
+  border-color: #cebe98;
   outline: none; }
 
 /*--- B O T Ó N  d e  F O R M U L A R I O  p a r a  A D J U N T A R  A R C H I V O ---*/
@@ -182,6 +187,7 @@ son los titulos de la seccion */
   font-family: HelveticaNoue37ThinOblique;
   src: url(../fonts/HelveticaNeueLTStd-ThCnO.otf); }
 
+/*escribir aquí la fuente utilizada para el logo de la empresa*/
 /* E S T I L O   D E   T E X T O   N O R M A L */
 p {
   font-family: HelveticaNoue;
@@ -192,27 +198,27 @@ p {
 
 h1 {
   /*usar para título único por página*/
-  color: #b3b3b3; }
+  color: #cebe98; }
 
 h2 {
   /*usar para títulos de las dif. secciones de cada página*/
-  color: #b3b3b3; }
+  color: #917e4b; }
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #858585; }
+  color: #5b4f48; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #858585; }
+  color: #302a26; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #b3b3b3; }
+  color: #302a26; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #b3b3b3; }
+  color: #302a26; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -233,12 +239,12 @@ a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
 a, a > p {
   text-decoration: none;
   outline: none;
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 a:hover, a:focus, a > p:hover, a > p:focus {
   text-decoration: none;
   outline: none;
-  color: #e5d8bd; }
+  color: #d4c6a5; }
 
 /* R E S P O N S I V E - @media settings */
 @media (max-width: 767px) {
@@ -253,15 +259,15 @@ a:hover, a:focus, a > p:hover, a > p:focus {
   h4 {
     font-size: 14px; }
   h5 {
-    font-size: 12px; }
+    font-size: 13px; }
   h6 {
-    font-size: 10px; } }
+    font-size: 11px; } }
 
 /* L I N K s  N A V B A R */
 ul.navbar-nav > li > a {
   font-family: Champagne;
   font-size: 13pt;
-  color: #d4c6a5;
+  color: #cebe98;
   letter-spacing: 1px; }
 
 ul.navbar-nav > li > a :hover,
@@ -269,7 +275,50 @@ ul.navbar-nav > li > a :focus {
   color: #f1e7d2; }
 
 ul.navbar-nav > li > a.active {
-  color: #e5d8bd; }
+  color: #d4c6a5; }
+
+/* T E X T  F O O T E R */
+/* color general */
+#footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+  color: #cebe98; }
+
+@media (max-width: 991px) {
+  #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: HelveticaNoue37Thin; } }
+
+/* color de los títulos de las 3 columnas principales */
+#footer .col-md-4 h5.footer-title {
+  color: #d4c6a5;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-bottom: 10px; }
+
+/* color de los glyphicons */
+#footer .col-md-4 h5 span.glyphicon {
+  color: #5b4f48;
+  padding-right: 4px; }
+
+#footer .col-md-4 h5:hover span.glyphicon {
+  color: #917e4b; }
+
+/* color de los renglones que tienen glyphicons */
+#footer .col-md-4 h5 {
+  color: #917e4b; }
+
+#footer .col-md-4 h5:hover {
+  color: #cebe98; }
+
+/* color de la información que está abajo */
+#footer .col-md-6 h4, #footer .col-md-6 h5 {
+  color: #5b4f48; }
+
+#footer .col-md-6 h4 a, #footer .col-md-6 h5 a {
+  color: #917e4b; }
+
+#footer .col-md-6 h4 a:hover, #footer .col-md-6 h5 a:hover {
+  color: #cebe98; }
 
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
 .quote {
@@ -277,6 +326,12 @@ ul.navbar-nav > li > a.active {
 
 .quote:before {
   content: " "; }
+
+.kerning {
+  letter-spacing: 8px; }
+
+.logo-font {
+  font-family: Champagne; }
 
 /* Q U É  E S   E S T O ?   N I   I D E A */
 textarea {
@@ -11870,7 +11925,7 @@ ul.bxslider {
   margin-top: 5px; }
 
 .admin-entidad-proyecto-img-adicionales-contenedor__show {
-  border: solid 6px #d4c6a5; }
+  border: solid 6px #cebe98; }
 
 .admin-entidad-proyecto-img-adicionales {
   height: 75px; }
@@ -11894,10 +11949,10 @@ ul.bxslider {
   bottom: 1px;
   padding: 2px;
   border-radius: 2px;
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .icono-establecer-imagen:hover {
-  background-color: #d4c6a5;
+  background-color: #cebe98;
   color: white; }
 
 .admin-entidad-contenedor-imagenes-form-field {
@@ -11905,7 +11960,7 @@ ul.bxslider {
   margin: 0 5px; }
 
 .boton-subir-img {
-  background-color: #d4c6a5;
+  background-color: #cebe98;
   color: white;
   padding: 6px 10px;
   font-size: 14px;
@@ -11974,7 +12029,7 @@ ul.bxslider {
   display: inline-block; }
 
 .admin-user-boton-Crear:hover {
-  background-color: #d4c6a5; }
+  background-color: #cebe98; }
 
 .admin-user-lista-contenedor {
   padding: 4px;
@@ -12043,7 +12098,7 @@ ul.bxslider {
   color: #999999; }
 
 .boton-acciones-editar {
-  background-color: #d4c6a5;
+  background-color: #cebe98;
   color: white;
   padding: 6px 10px;
   font-size: 14px;
@@ -12136,7 +12191,7 @@ ul.bxslider {
   font-size: 18px;
   color: #999999;
   color: white;
-  background-color: #d4c6a5;
+  background-color: #cebe98;
   width: 100%; }
 
 .contenedor-formulario-label-fiel {
@@ -12182,7 +12237,7 @@ ul.bxslider {
   width: 100%; }
 
 .admin-boton-editar {
-  background-color: #d4c6a5;
+  background-color: #cebe98;
   color: white;
   padding: 10px 14px;
   font-size: 20px;
@@ -12203,9 +12258,10 @@ ul.bxslider {
  * * * * *    P A L E T A    d e    C O L O R E S    * * * * *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* COLORES INSTITUCIONALES */
-/* institucional CLARO - principalmente para links de la nav-bar [no-hover]) - en este caso coincide con grises*/
+/* institucional que aún no defino para qué */
 /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
-/* principalmente para links p>a, botones especiales, y algún otro elemento gráfico: no abusar, un poco por página */
+/* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
+/* institucional PRINCIPAL */
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
 /* para backgrounds de bloques de texto en instancia de hover) */
@@ -12221,7 +12277,7 @@ ul.bxslider {
 .carousel-control:hover,
 .carousel-control:focus,
 .carousel-caption {
-  color: #e5d8bd; }
+  color: #d4c6a5; }
 
 .carousel-indicators li {
   border-color: #f1e7d2; }
@@ -12230,36 +12286,40 @@ ul.bxslider {
   background-color: #f1e7d2; }
 
 /* CLASES PARA COLOREAR DESDE EL HTML (color o background) */
+/* negro */
 .color-black {
   color: black; }
 
 .bgcolor-black {
   background: black; }
 
-.color-blanco {
-  /* luego cambiar nombre a "color-white" ? */
+/* blanco */
+.color-white {
   color: white; }
 
-.bgcolor-blanco {
-  /* luego cambiar nombre a "bgcolor-white" ? */
+.bgcolor-white {
   background: white; }
 
-.color-gris {
-  /* luego cambiar nombre a "color-grey2" ? */
-  color: #858585; }
-
-.bgcolor-gris {
-  /* luego cambiar nombre a "bgcolor-grey2" ? */
-  background: #858585; }
-
-.color-gris-claro {
-  /* luego cambiar nombre a "color-grey1" ? */
+/* grises */
+.color-grey1 {
   color: #b3b3b3; }
 
-.bgcolor-gris-claro {
-  /* luego cambiar nombre a "bgcolor-grey1" ? */
+.bgcolor-grey1 {
   background: #b3b3b3; }
 
+.color-grey2 {
+  color: #858585; }
+
+.bgcolor-grey2 {
+  background: #858585; }
+
+.color-grey3 {
+  color: #3b3b3b; }
+
+.bgcolor-grey3 {
+  background: #3b3b3b; }
+
+/* institucionales */
 .color-1 {
   color: #302a26; }
 
@@ -12267,16 +12327,16 @@ ul.bxslider {
   background: #302a26; }
 
 .color-2 {
-  color: #d5c68d; }
+  color: #302a26; }
 
 .bgcolor-2 {
-  background: #d5c68d; }
+  background: #302a26; }
 
 .color-3 {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .bgcolor-3 {
-  background: #d4c6a5; }
+  background: #cebe98; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
@@ -12317,6 +12377,7 @@ body {
   body {
     padding-top: 68px; } }
 
+/* escribir aquí la altura de las columnas del footer, a criterio según la cantidad de info que tengan */
 /* B O D Y   W R A P P E R */
 .global-wrapper {
   display: block;
@@ -12355,12 +12416,10 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding-top: 40px;
   padding-bottom: 40px; }
 
-/* sections que tendrán otro background */
-.section-color-3 {
-  background-color: #d4c6a5; }
-
-.section-color-2 {
-  background-color: #302a26; }
+.section-wrapper-footer {
+  /*envolvente sólo para el footer, con menor padding abajo*/
+  padding-top: 40px;
+  padding-bottom: 20px; }
 
 /*---para agregarle espaciado entre rows o items acorde a mi criterio---*/
 .space-top {
@@ -12371,15 +12430,21 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
 /*---CENTRAR UNA COLUMNA dentro de un row---*/
-.col-centered {
+.col-hcenter {
   text-align: center;
   float: none;
   margin: 0 auto; }
 
+/*---CENTRAR UNA COLUMNA VERTICALMENTE dentro de un row---*/
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
 /*--- DESTACADO --- | luego agregar diferentes clases de destacado, usando diferentes colores y diseños*/
 .destacado {
   padding: 5px 0 5px 30px;
-  border-left: 10px solid #d4c6a5; }
+  border-left: 10px solid #cebe98; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
@@ -12387,29 +12452,29 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 /*--- B O T Ó N   P R I M A R I O  |  COLOR-3 ---*/
 .btn-primary {
   color: white;
-  background-color: #d4c6a5;
-  border-color: #d4c6a5; }
+  background-color: #cebe98;
+  border-color: #cebe98; }
 
 .btn-primary:focus,
 .btn-primary.focus {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd;
+  background-color: #d4c6a5;
+  border-color: #d4c6a5;
   outline-width: 1px;
   outline-offset: 4px;
   outline-style: dotted; }
 
 .btn-primary:hover {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd; }
+  background-color: #d4c6a5;
+  border-color: #d4c6a5; }
 
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: white;
   background-color: #917e4b;
-  border-color: #d4c6a5;
+  border-color: #cebe98;
   outline: none; }
 
 .btn-primary:active:hover,
@@ -12423,7 +12488,7 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .open > .dropdown-toggle.btn-primary.focus {
   color: white;
   background-color: #917e4b;
-  border-color: #d4c6a5;
+  border-color: #cebe98;
   outline: none; }
 
 /*--- B O T Ó N  d e  F O R M U L A R I O  p a r a  A D J U N T A R  A R C H I V O ---*/
@@ -12530,7 +12595,7 @@ ul.text-slide a li h4 {
   line-height: 20px; }
 
 ul.text-slide a:hover li h4 {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 /*estos porcentajes funcionan para slider de 4 renglones diferentes
 	(serían 5 tecnicamente porque el primer se repite al final)    */
@@ -12591,7 +12656,7 @@ ul.text-slide a:hover li h4 {
   transform: translate(5px, 0); }
 
 .Helper-Class-Active {
-  color: #d4c6a5;
+  color: #cebe98;
   text-shadow: 0 0 5px #917e4b, 0 0 10px #917e4b; }
 
 .admin-boton-registrar {
@@ -12617,7 +12682,7 @@ a > .link-go-to-web:focus {
  * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* dimensiones de la navbar y visibilidad */
 .navbar {
-  border-bottom: 5px solid #d4c6a5;
+  border-bottom: 5px solid #cebe98;
   border-radius: 0px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
@@ -12632,15 +12697,15 @@ a > .link-go-to-web:focus {
 
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
-  border-color: #d4c6a5;
+  border-color: #cebe98;
   background: #302a26 url("../../imagenes/Img/bg_carbonfibre_texture.jpg") center center; }
 
 .navbar-default .navbar-text {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .navbar-default .navbar-nav > li > a {
   display: inline-block;
-  color: #d4c6a5;
+  color: #cebe98;
   transition: transform .3s ease; }
 
 /*--- LINKS DE LA NAVBAR (tamaños acorde al width) ---*/
@@ -12678,7 +12743,7 @@ a > .link-go-to-web:focus {
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active > a:hover,
 .navbar-default .navbar-nav > li.active > a:focus {
-  color: #e5d8bd;
+  color: #d4c6a5;
   background-color: transparent; }
 
 /*--- la flechita  de los links para cuando está colapsado para móbiles ---*/
@@ -12692,7 +12757,7 @@ a > .link-go-to-web:focus {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-left-color: #e5d8bd;
+    border-left-color: #d4c6a5;
     border-width: 5px;
     margin-top: -5px; } }
 
@@ -12707,7 +12772,7 @@ a > .link-go-to-web:focus {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: #d4c6a5;
+    border-bottom-color: #cebe98;
     border-width: 5px;
     margin-left: -5px; } }
 
@@ -12718,7 +12783,7 @@ a > .link-go-to-web:focus {
   background-color: transparent; }
 
 .navbar-default .navbar-toggle {
-  border-color: #d4c6a5; }
+  border-color: #cebe98; }
 
 /*--- botoncito de la Navbar (hamburguer menú) ---*/
 @media (max-width: 767px) {
@@ -12732,10 +12797,10 @@ a > .link-go-to-web:focus {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #d4c6a5; }
+  background-color: #cebe98; }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #d4c6a5; }
+  background-color: #cebe98; }
 
 .navbar-default .navbar-toggle:hover .icon-bar,
 .navbar-default .navbar-toggle:focus .icon-bar {
@@ -12743,7 +12808,7 @@ a > .link-go-to-web:focus {
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #d4c6a5; }
+  border-color: #cebe98; }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -12753,7 +12818,7 @@ a > .link-go-to-web:focus {
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #d4c6a5; }
+    color: #cebe98; }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #f1e7d2;
@@ -12761,7 +12826,7 @@ a > .link-go-to-web:focus {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #e5d8bd;
+    color: #d4c6a5;
     background-color: transparent; }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -12771,14 +12836,14 @@ a > .link-go-to-web:focus {
 
 /*--- customización de extras de la Navbar, botones, dropdown menú, etc. ---*/
 .navbar-default .navbar-link {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .navbar-default .navbar-link:hover {
   color: #f1e7d2;
   background-color: #917e4b; }
 
 .navbar-default .btn-link {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
@@ -12787,13 +12852,13 @@ a > .link-go-to-web:focus {
 .dropdown-menu {
   background-color: #302a26;
   margin: 0;
-  border: 0px solid #d4c6a5; }
+  border: 0px solid #cebe98; }
 
 .dropdown-menu .divider {
-  background-color: #d4c6a5; }
+  background-color: #cebe98; }
 
 .dropdown-menu > li > a {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
@@ -12803,7 +12868,7 @@ a > .link-go-to-web:focus {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #e5d8bd;
+  color: #d4c6a5;
   background-color: transparent; }
 
 /* NAVBAR BRAND - L O G O */
@@ -12819,7 +12884,7 @@ a > .link-go-to-web:focus {
   padding: 15px 10px 15px 0px;
   font-size: 18px;
   line-height: 20px;
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -12991,8 +13056,8 @@ escritura de código)---*/
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #d4c6a5;
-  opacity: 0.4;
+  background-color: #cebe98;
+  opacity: 0.5;
   transition: 0.3s; }
 
 .carousel-y-header:hover .cortina-carousel {
@@ -13063,7 +13128,7 @@ escritura de código)---*/
   width: 100px;
   height: 100px;
   color: white;
-  background-color: #d4c6a5;
+  background-color: #cebe98;
   font-size: 200%;
   margin: 5px;
   display: -moz-flex;
@@ -13081,7 +13146,7 @@ escritura de código)---*/
   transition: all .3s ease; }
 
 .globito:hover {
-  background-color: #e5d8bd;
+  background-color: #d4c6a5;
   transform: translate(0, -10%); }
 
 @media (max-width: 767px) {
@@ -13106,12 +13171,12 @@ escritura de código)---*/
   height: 140px;
   border: 1px solid white;
   color: white;
-  background-color: #d4c6a5;
+  background-color: #cebe98;
   vertical-align: center;
   text-align: center; }
 
 .cuadradito:hover {
-  background-color: #e5d8bd; }
+  background-color: #d4c6a5; }
 
 div.cuadradito > h2 {
   color: white; }
@@ -13130,7 +13195,7 @@ div.cuadradito > p {
   transform: translate(0, -20px); }
 
 .empresa-individual:hover h3 {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 /*---Acerda de V&V - sección de envío de currículum ---*/
 .section-special-2 {
@@ -13151,7 +13216,7 @@ div.cuadradito > p {
 
 .section-special-1 {
   color: white;
-  background: #d4c6a5 url("../../imagenes/Img/presupuesto_background.jpg") no-repeat center;
+  background: #cebe98 url("../../imagenes/Img/presupuesto_background.jpg") no-repeat center;
   background-size: cover; }
 
 .boton-presupuesto {
@@ -13166,7 +13231,7 @@ div.metodo-individual > h3 {
   margin-top: 0px; }
 
 div.servicio-individual > h4 > span.glyphicon {
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -13184,37 +13249,42 @@ div.servicio-individual > h4 > span.glyphicon {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*--- F O O T E R ---*/
-.footer-p-destacado {
-  letter-spacing: 8px; }
-
-.footer-p-izquierda {
-  color: #b3b3b3;
-  text-align: right;
-  padding-right: 20px;
-  vertical-align: middle; }
-
-.footer-p-derecha {
-  color: #b3b3b3;
-  text-align: left;
-  padding-left: 20px; }
-
+/*--- líneas divisorias del footer ---*/
 @media (max-width: 991px) {
-  .footer-p-izquierda,
-  .footer-p-derecha {
-    text-align: center;
-    padding-right: 0;
-    padding-left: 0; }
-  .footer-col-derecha {
-    border-top: 1px solid #858585;
-    padding-top: 20px; } }
+  .footer-line {
+    border-bottom: 1px solid #5b4f48;
+    margin: 15px; } }
 
 @media (min-width: 992px) {
-  .footer-col-derecha {
-    border-left: 2px solid #858585;
-    padding-top: 0; } }
+  .footer-line {
+    border-right: 1px solid #5b4f48; } }
 
-.bg-footer {
-  background-color: #3b3b3b; }
+/*--- pequeña línea divisoria que divide el copyright del autor de la web ---*/
+@media (min-width: 992px) {
+  .footer-line2 {
+    border-right: 1px solid #5b4f48; } }
+
+#footer .col-md-4 {
+  height: 200px; }
+
+.isologo_container {
+  padding: 0px; }
+
+.isologo {
+  width: 100%;
+  height: 200px; }
+
+#footer .col-md-4 .isologo {
+  background-image: url("../../imagenes/Empresa/isologo_superdark.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right top; }
+
+#footer .col-md-4:hover .isologo {
+  background-image: url("../../imagenes/Empresa/isologo_dark.png"); }
+
+#footer .column-container {
+  padding: 0px 40px; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * * * * *   G L O B A L    T E X T   S E T T I N G S   * * * * * *
@@ -13236,6 +13306,7 @@ div.servicio-individual > h4 > span.glyphicon {
   font-family: HelveticaNoue37ThinOblique;
   src: url(../fonts/HelveticaNeueLTStd-ThCnO.otf); }
 
+/*escribir aquí la fuente utilizada para el logo de la empresa*/
 /* E S T I L O   D E   T E X T O   N O R M A L */
 p {
   font-family: HelveticaNoue;
@@ -13246,27 +13317,27 @@ p {
 
 h1 {
   /*usar para título único por página*/
-  color: #b3b3b3; }
+  color: #cebe98; }
 
 h2 {
   /*usar para títulos de las dif. secciones de cada página*/
-  color: #b3b3b3; }
+  color: #917e4b; }
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #858585; }
+  color: #5b4f48; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #858585; }
+  color: #302a26; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #b3b3b3; }
+  color: #302a26; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #b3b3b3; }
+  color: #302a26; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -13287,12 +13358,12 @@ a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
 a, a > p {
   text-decoration: none;
   outline: none;
-  color: #d4c6a5; }
+  color: #cebe98; }
 
 a:hover, a:focus, a > p:hover, a > p:focus {
   text-decoration: none;
   outline: none;
-  color: #e5d8bd; }
+  color: #d4c6a5; }
 
 /* R E S P O N S I V E - @media settings */
 @media (max-width: 767px) {
@@ -13307,15 +13378,15 @@ a:hover, a:focus, a > p:hover, a > p:focus {
   h4 {
     font-size: 14px; }
   h5 {
-    font-size: 12px; }
+    font-size: 13px; }
   h6 {
-    font-size: 10px; } }
+    font-size: 11px; } }
 
 /* L I N K s  N A V B A R */
 ul.navbar-nav > li > a {
   font-family: Champagne;
   font-size: 13pt;
-  color: #d4c6a5;
+  color: #cebe98;
   letter-spacing: 1px; }
 
 ul.navbar-nav > li > a :hover,
@@ -13323,7 +13394,50 @@ ul.navbar-nav > li > a :focus {
   color: #f1e7d2; }
 
 ul.navbar-nav > li > a.active {
-  color: #e5d8bd; }
+  color: #d4c6a5; }
+
+/* T E X T  F O O T E R */
+/* color general */
+#footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+  color: #cebe98; }
+
+@media (max-width: 991px) {
+  #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: HelveticaNoue37Thin; } }
+
+/* color de los títulos de las 3 columnas principales */
+#footer .col-md-4 h5.footer-title {
+  color: #d4c6a5;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-bottom: 10px; }
+
+/* color de los glyphicons */
+#footer .col-md-4 h5 span.glyphicon {
+  color: #5b4f48;
+  padding-right: 4px; }
+
+#footer .col-md-4 h5:hover span.glyphicon {
+  color: #917e4b; }
+
+/* color de los renglones que tienen glyphicons */
+#footer .col-md-4 h5 {
+  color: #917e4b; }
+
+#footer .col-md-4 h5:hover {
+  color: #cebe98; }
+
+/* color de la información que está abajo */
+#footer .col-md-6 h4, #footer .col-md-6 h5 {
+  color: #5b4f48; }
+
+#footer .col-md-6 h4 a, #footer .col-md-6 h5 a {
+  color: #917e4b; }
+
+#footer .col-md-6 h4 a:hover, #footer .col-md-6 h5 a:hover {
+  color: #cebe98; }
 
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
 .quote {
@@ -13331,6 +13445,12 @@ ul.navbar-nav > li > a.active {
 
 .quote:before {
   content: " "; }
+
+.kerning {
+  letter-spacing: 8px; }
+
+.logo-font {
+  font-family: Champagne; }
 
 /* Q U É  E S   E S T O ?   N I   I D E A */
 textarea {

@@ -52,9 +52,9 @@
 
 
 
-          <div class="container-fluid section-wrapper bg-footer">
+          <div class="container-fluid section-wrapper-footer bgcolor-2">
             <div class="row">    
-              <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+              <div class="col-md-10 col-md-push-1">
 
              @include('layouts.user_layout.footer.footer')
 

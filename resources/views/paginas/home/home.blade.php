@@ -18,45 +18,41 @@
 
 
 <!--header (carousel de imágenes)-->
-  <div id="section-1">
+  <div id="section1">
     @include('paginas.home.home_header')
   </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper" id="section-2">
+<div class="container-fluid section-wrapper" id="section2">
     <div class="row">    
       <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-       {{-- la parte de bienvenidad --}}
        @include('paginas.home.home_brands')
       </div>
   </div>
 </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper" id="section-3">
+<div class="container-fluid section-wrapper" id="section3">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-     {{-- la parte de los globitos --}}
      @include('paginas.home.home_globitos')
     </div>  
   </div>
 </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper" id="section-ultimos-proyectos">
+<div class="container-fluid section-wrapper" id="section4">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-     {{-- la parte de proyectos  --}}
      @include('paginas.home.home_proyectos')
     </div>  
   </div>
 </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper" id="section-ultimas-publicaciones">
+<div class="container-fluid section-wrapper" id="section5">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-     {{-- la parte de publicaciones  --}}
      @include('paginas.home.home_publicaciones')
     </div>  
   </div>

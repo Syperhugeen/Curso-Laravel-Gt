@@ -8,13 +8,14 @@
 
 /* COLORES INSTITUCIONALES */ 
 
-$color-1:#d5c68d; /* institucional CLARO - principalmente para links de la nav-bar [no-hover]) - en este caso coincide con grises*/
+$color-1:#302a26; /* institucional que aún no defino para qué */
 
 $color-2:#302a26; /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
+$color-2light:#5b4f48; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
 
-$color-3:#d4c6a5; /* principalmente para links p>a, botones especiales, y algún otro elemento gráfico: no abusar, un poco por página */
+$color-3:#cebe98; /* institucional PRINCIPAL */
 $color-3dark:#917e4b; /* para interacciones dinámicas del color-3 como [hover] o [active] */
-$color-3light:#e5d8bd; /* para interacciones dinámicas del color-3 como [hover] o [active] */
+$color-3light:#d4c6a5; /* para interacciones dinámicas del color-3 como [hover] o [active] */
 $color-3superlight:#f1e7d2 ; /* para backgrounds de bloques de texto en instancia de hover) */
 
 
@@ -56,36 +57,46 @@ $color-black:black; /*misma razón, pero para el negro */
 
 
 /* CLASES PARA COLOREAR DESDE EL HTML (color o background) */
-
-.color-black{color:$color-black;}
-.bgcolor-black{background:$color-black;}
-
-.color-blanco{ /* luego cambiar nombre a "color-white" ? */
+/* negro */
+.color-black{
+  color:$color-black;
+}
+.bgcolor-black{
+  background:$color-black;
+}
+/* blanco */
+.color-white{
   color:$color-white;
 }
-.bgcolor-blanco{ /* luego cambiar nombre a "bgcolor-white" ? */
+.bgcolor-white{
   background:$color-white;
 }
-
-.color-gris{ /* luego cambiar nombre a "color-grey2" ? */
-  color:$color-grey2;
-}
-.bgcolor-gris{ /* luego cambiar nombre a "bgcolor-grey2" ? */
-  background:$color-grey2;
-}
-
-.color-gris-claro{ /* luego cambiar nombre a "color-grey1" ? */
+/* grises */
+.color-grey1{
   color:$color-grey1;
 }
-.bgcolor-gris-claro{ /* luego cambiar nombre a "bgcolor-grey1" ? */
+.bgcolor-grey1{
   background:$color-grey1;
 }
+.color-grey2{
+  color:$color-grey2;
+}
+.bgcolor-grey2{
+  background:$color-grey2;
+}
+.color-grey3{
+  color:$color-grey3;
+}
+.bgcolor-grey3{
+  background:$color-grey3;
+}
 
-.color-1{color:$color-2;}
-.bgcolor-1{background:$color-2;}
+/* institucionales */
+.color-1{color:$color-1;}
+.bgcolor-1{background:$color-1;}
 
-.color-2{color:$color-1;}
-.bgcolor-2{background:$color-1;}
+.color-2{color:$color-2;}
+.bgcolor-2{background:$color-2;}
 
 .color-3{color:$color-3;}
 .bgcolor-3{background:$color-3;}

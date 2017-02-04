@@ -22,6 +22,9 @@
     font-family: HelveticaNoue37ThinOblique;
     src: url(../fonts/HelveticaNeueLTStd-ThCnO.otf);}
 
+/*escribir aquí la fuente utilizada para el logo de la empresa*/
+$logo-font: Champagne;
+
 
 
 
@@ -37,22 +40,22 @@ p {
   white-space: pre-wrap;
 }
 h1 { /*usar para título único por página*/
-color:$color-grey1;
+color:$color-3;
 }
 h2 { /*usar para títulos de las dif. secciones de cada página*/
-color:$color-grey1;
+color:$color-3dark;
 }
 h3 { /*usar para títulos de cada bloque de párrafo*/
-color:$color-grey2;
+color:$color-2light;
 }
 h4 { /*usar para párrafos cortos de alta relevancia*/
-color:$color-grey2;
+color:$color-2;
 }
 h5 { /*usar para items o nombres puntuales que no son textos largos*/
-color:$color-grey1;
+color:$color-2;
 }
 h6 { /*usar para algún texto especial, de tamaño menor que los p*/
-color:$color-grey1;
+color:$color-2;
 }
 
 /*para que el cursor no se transforme en selector de texto*/
@@ -97,8 +100,8 @@ a:hover, a:focus, a>p:hover, a>p:focus{
   h2{font-size:24px;}
   h3{font-size:18px;}
   h4{font-size:14px;}
-  h5{font-size:12px;}
-  h6{font-size:10px;}
+  h5{font-size:13px;}
+  h6{font-size:11px;}
 }
 
 
@@ -122,6 +125,57 @@ ul.navbar-nav > li > a.active{
 
 
 
+/* T E X T  F O O T E R */
+/* color general */
+#footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+  color: $color-3;
+}
+@media (max-width: 991px){
+  #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: HelveticaNoue37Thin;
+}}
+/* color de los títulos de las 3 columnas principales */
+.footer-title{
+}
+#footer .col-md-4 h5.footer-title {
+  color: $color-3light;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-bottom:10px;
+}
+/* color de los glyphicons */
+#footer .col-md-4 h5 span.glyphicon {
+  color: $color-2light;
+  padding-right: 4px;
+}
+#footer .col-md-4 h5:hover span.glyphicon {
+  color: $color-3dark;
+}
+/* color de los renglones que tienen glyphicons */
+#footer .col-md-4 h5 {
+  color: $color-3dark;
+}
+#footer .col-md-4 h5:hover {
+  color: $color-3;
+}
+/* color de la información que está abajo */
+#footer .col-md-6 h4, #footer .col-md-6 h5 {
+  color: $color-2light;
+}
+#footer .col-md-6 h4 a, #footer .col-md-6 h5 a{
+  color: $color-3dark;
+}
+#footer .col-md-6 h4 a:hover, #footer .col-md-6 h5 a:hover{
+  color: $color-3;
+}
+
+
+
+
+
+
 
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
 .quote {
@@ -129,6 +183,12 @@ ul.navbar-nav > li > a.active{
 }
 .quote:before{
   content:" ";
+}
+.kerning{
+  letter-spacing: 8px;
+}
+.logo-font{
+  font-family:$logo-font;
 }
 
 
