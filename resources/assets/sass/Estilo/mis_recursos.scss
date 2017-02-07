@@ -120,3 +120,251 @@ ul.text-slide a:hover li h4{
   64%,97% {transform:translateY(-25%);}
   100% {transform:translateY(-0%);}
 }
+
+
+
+
+
+
+
+
+
+/* * * S Q U A R E   P U Z Z L E  * * *
+(shown icon and hidden content on hover)*/
+
+$puzzle-box-medida:200px; /*los cuadrados tendrán esta medida de width y de height*/
+$puzzle-box-doble-medida:400px; /*escribir el doble del valor anterior (medida)*/
+
+$puzzle-padding: 20px;
+$responsive-puzzle-padding: 10px;
+
+.puzzle-container{
+  width:100%;
+  height:100%;
+  text-align:center;
+ }
+.puzzle-box{
+  position:absolute;
+  width:$puzzle-box-medida;
+  height:$puzzle-box-medida;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.puzzle-box-precontent{
+  margin:0;
+  width:$puzzle-box-medida;
+  height:$puzzle-box-medida;
+  overflow:hidden;
+}
+.puzzle-box-content-main{
+  top:0;
+  width:$puzzle-box-medida;
+  height:$puzzle-box-doble-medida;
+}
+.puzzle-box-content{
+  top:0;
+  width:$puzzle-box-medida;
+  height:$puzzle-box-doble-medida;
+  -webkit-transition: transform .3s ease;
+  -moz-transition: transform .3s ease;
+  transition: transform .3s ease;
+}
+.puzzle-box-precontent:hover .puzzle-box-content{
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.puzzle-box-content-visible1{
+  width:$puzzle-box-medida;
+  height:$puzzle-box-medida;
+  background-color: $color-3;
+  padding: $puzzle-padding;
+}
+.puzzle-box-content-hidden1{
+  width:$puzzle-box-medida;
+  height:$puzzle-box-medida;
+  background-color: $color-3light;
+  padding: $puzzle-padding;
+}
+.puzzle-box-content-visible2{
+  width:$puzzle-box-medida;
+  height:$puzzle-box-medida;
+  background-color: $color-2light;
+  padding: $puzzle-padding;
+}
+.puzzle-box-content-hidden2{
+  width:$puzzle-box-medida;
+  height:$puzzle-box-medida;
+  background-color: $color-2superlight;
+  padding: $puzzle-padding;
+}
+@media (max-width: 767px){.puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
+  padding: $responsive-puzzle-padding;
+  }}
+
+
+.puzzle-box-index10{
+  z-index:10;
+}
+.puzzle-box-index9{
+  z-index:9;
+}
+.puzzle-box-index8{
+  z-index:8;
+}
+.puzzle-box-index7{
+  z-index:7;
+}
+.puzzle-box-animation-main{
+}
+
+$puzzle-box-animations-duration:2s;
+$puzzle-box-animations-delay:1s;
+$puzzle-box-animations-fill-mode:forwards;
+
+.puzzle-box-animation-1{
+  -webkit-animation-name: puzzleboxmainanimationone;
+  -webkit-animation-duration:$puzzle-box-animations-duration;
+  -webkit-animation-delay:$puzzle-box-animations-delay;
+  -webkit-animation-fill-mode:$puzzle-box-animations-fill-mode;
+  animation-name: puzzleboxmainanimationone;
+  animation-duration:$puzzle-box-animations-duration;
+  animation-delay:$puzzle-box-animations-delay;
+  animation-fill-mode:$puzzle-box-animations-fill-mode;
+}
+.puzzle-box-animation-2{
+  -webkit-animation-name: puzzleboxmainanimationtwo;
+  -webkit-animation-duration:$puzzle-box-animations-duration;
+  -webkit-animation-delay:$puzzle-box-animations-delay;
+  -webkit-animation-fill-mode:$puzzle-box-animations-fill-mode;
+  animation-name: puzzleboxmainanimationtwo;
+  animation-duration:$puzzle-box-animations-duration;
+  animation-delay:$puzzle-box-animations-delay;
+  animation-fill-mode:$puzzle-box-animations-fill-mode;
+}
+.puzzle-box-animation-3{
+  -webkit-animation-name: puzzleboxmainanimationthree;
+  -webkit-animation-duration:$puzzle-box-animations-duration;
+  -webkit-animation-delay:$puzzle-box-animations-delay;
+  -webkit-animation-fill-mode:$puzzle-box-animations-fill-mode;
+  animation-name: puzzleboxmainanimationthree;
+  animation-duration:$puzzle-box-animations-duration;
+  animation-delay:$puzzle-box-animations-delay;
+  animation-fill-mode:$puzzle-box-animations-fill-mode;
+}
+.puzzle-box-animation-4{
+  -webkit-animation-name: puzzleboxmainanimationfour;
+  -webkit-animation-duration:$puzzle-box-animations-duration;
+  -webkit-animation-delay:$puzzle-box-animations-delay;
+  -webkit-animation-fill-mode:$puzzle-box-animations-fill-mode;
+  animation-name: puzzleboxmainanimationfour;
+  animation-duration:$puzzle-box-animations-duration;
+  animation-delay:$puzzle-box-animations-delay;
+  animation-fill-mode:$puzzle-box-animations-fill-mode;
+}
+.puzzle-box-animation-5{
+  -webkit-animation-name: puzzleboxmainanimationfive;
+  -webkit-animation-duration:$puzzle-box-animations-duration;
+  -webkit-animation-delay:$puzzle-box-animations-delay;
+  -webkit-animation-fill-mode:$puzzle-box-animations-fill-mode;
+  animation-name: puzzleboxmainanimationfive;
+  animation-duration:$puzzle-box-animations-duration;
+  animation-delay:$puzzle-box-animations-delay;
+  animation-fill-mode:$puzzle-box-animations-fill-mode;
+}
+.puzzle-box-animation-6{
+  -webkit-animation-name: puzzleboxmainanimationsix;
+  -webkit-animation-duration:$puzzle-box-animations-duration;
+  -webkit-animation-delay:$puzzle-box-animations-delay;
+  -webkit-animation-fill-mode:$puzzle-box-animations-fill-mode;
+  animation-name: puzzleboxmainanimationsix;
+  animation-duration:$puzzle-box-animations-duration;
+  animation-delay:$puzzle-box-animations-delay;
+  animation-fill-mode:$puzzle-box-animations-fill-mode;
+}
+@-webkit-keyframes puzzleboxmainanimationone {
+  0% {-webkit-transform:translate(0%, 0%);}
+  33% {-webkit-transform:translate(0%, -101%);-webkit-animation-timing-function:ease;}
+  66% {-webkit-transform:translate(0%, -101%);-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(0%, -101%);-webkit-animation-timing-function:ease;}
+}
+@keyframes puzzleboxmainanimationone {
+  0% {transform:translate(0%, 0%);}
+  33% {transform:translate(0%, -101%);animation-timing-function:ease;}
+  66% {transform:translate(0%, -101%);animation-timing-function:ease;}
+  100% {transform:translate(0%, -101%);animation-timing-function:ease;}
+}
+
+
+@-webkit-keyframes puzzleboxmainanimationtwo {
+  0% {-webkit-transform:translate(0%, 0%);}
+  33% {-webkit-transform:translate(0%, -101%);animation-timing-function:ease;}
+  66% {-webkit-transform:translate(101%, -101%);animation-timing-function:ease;}
+  100% {-webkit-transform:translate(101%, -101%);animation-timing-function:ease;}
+}
+@keyframes puzzleboxmainanimationtwo {
+  0% {transform:translate(0%, 0%);}
+  33% {transform:translate(0%, -101%);animation-timing-function:ease;}
+  66% {transform:translate(101%, -101%);animation-timing-function:ease;}
+  100% {transform:translate(101%, -101%);animation-timing-function:ease;}
+}
+
+
+@-webkit-keyframes puzzleboxmainanimationthree {
+  0% {-webkit-transform:translate(0%, 0%);}
+  33% {-webkit-transform:translate(0%, -101%);-webkit-animation-timing-function:ease;}
+  66% {-webkit-transform:translate(101%, -101%);-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(101%, 0%);-webkit-animation-timing-function:ease;}
+}
+@keyframes puzzleboxmainanimationthree {
+  0% {transform:translate(0%, 0%);}
+  33% {transform:translate(0%, -101%);animation-timing-function:ease;}
+  66% {transform:translate(101%, -101%);animation-timing-function:ease;}
+  100% {transform:translate(101%, 0%);animation-timing-function:ease;}
+}
+
+
+@-webkit-keyframes puzzleboxmainanimationfour {
+  0% {-webkit-transform:translate(0%, 0%);}
+  33% {-webkit-transform:translate(0%, 101%);-webkit-animation-timing-function:ease;}
+  66% {-webkit-transform:translate(0%, 101%);-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(0%, 101%);-webkit-animation-timing-function:ease;}
+}
+@keyframes puzzleboxmainanimationfour {
+  0% {transform:translateX(0%, 0%);}
+  33% {transform:translate(0%, 101%);animation-timing-function:ease;}
+  66% {transform:translate(0%, 101%);animation-timing-function:ease;}
+  100% {transform:translate(0%, 101%);animation-timing-function:ease;}
+}
+
+
+@-webkit-keyframes puzzleboxmainanimationfive {
+  0% {-webkit-transform:translate(0%, 0%);}
+  33% {-webkit-transform:translate(0%, 101%);-webkit-animation-timing-function:ease;}
+  66% {-webkit-transform:translate(-101%, 101%);-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(-101%, 101%);-webkit-animation-timing-function:ease;}
+}
+@keyframes puzzleboxmainanimationfive {
+  0% {transform:translate(0%, 0%);}
+  33% {transform:translate(0%, 101%);animation-timing-function:ease;}
+  66% {transform:translate(-101%, 101%);animation-timing-function:ease;}
+  100% {transform:translate(-101%, 101%);animation-timing-function:ease;}
+}
+
+
+@-webkit-keyframes puzzleboxmainanimationsix {
+  0% {-webkit-transform:translate(0%, 0%);}
+  33% {-webkit-transform:translate(0%, 101%);-webkit-animation-timing-function:ease;}
+  66% {-webkit-transform:translate(-101%, 101%);-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(-101%, 0%);-webkit-animation-timing-function:ease;}
+}
+@keyframes puzzleboxmainanimationsix {
+  0% {transform:translate(0%, 0%);}
+  33% {transform:translate(0%, 101%);animation-timing-function:ease;}
+  66% {transform:translate(-101%, 101%);animation-timing-function:ease;}
+  100% {transform:translate(-101%, 0%);animation-timing-function:ease;}
+}

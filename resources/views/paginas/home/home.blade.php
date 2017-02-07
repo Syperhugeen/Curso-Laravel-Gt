@@ -24,7 +24,7 @@
 
 <!--para agregar los márgenes laterales-->
 <div class="container-fluid section-wrapper" id="section2">
-    <div class="row">    
+  <div class="row">    
       <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
        @include('paginas.home.home_brands')
       </div>
@@ -32,10 +32,10 @@
 </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper" id="section3">
+<div class="container-fluid section-wrapper puzzle-section-bg-decoration-outlines" id="section3">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-     @include('paginas.home.home_globitos')
+     @include('paginas.home.home_puzzle')
     </div>  
   </div>
 </div>

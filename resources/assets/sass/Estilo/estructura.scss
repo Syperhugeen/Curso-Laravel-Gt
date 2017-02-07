@@ -56,7 +56,7 @@ $altura-footer-columns:200px;
 #section2,
 #section3,
 #section4{
-  padding-top:$navbar-altura;  margin-top:-$navbar-altura;}
+  padding-top:$navbar-altura;  margin-top:-$navbar-altura;} /*---creo que no es necesario porque ya está indicado en el globa-wrapper---*/
 
 @media (max-width:767px){
 #section1,
@@ -86,7 +86,9 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .space-bottom{
   padding-bottom:40px;
 }
-
+#section2, #section3{
+  min-height:800px;
+}
 
 
 

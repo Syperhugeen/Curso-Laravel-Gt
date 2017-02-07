@@ -126,95 +126,10 @@ escritura de código)---*/
 
 
 
-
-
-
-
-
-
-
-/* g l o b i t o s */
-
-.contenedor-home-globitos{
-  @include flexbox;
-  @include align-items(center);
-  @include flex-direction(row);
-  @include justify-content(space-around);
-  @include flex-wrap(wrap);
-  padding: 40px 0;
-  width: 100%;
- }
-
-  .globito{
-    border-radius: 50%;
-    width: 100px;
-    height: 100px; 
-    color:$color-white;
-    background-color:$color-3;
-    font-size:200%;
-    margin:5px;
-    @include flexbox;
-    @include align-items(center);
-    @include flex-direction(row);
-    @include justify-content(center);
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    transition: all .3s ease;
-    }
-
-  .globito:hover{
-    background-color:$color-3light;
-    -webkit-transform: translate(0, -10%);
-    -moz-transform: translate(0, -10%);
-    transform: translate(0, -10%);
-	 }
-
-   @media (max-width: 767px){.globito{
-    width:50px;
-    height:50px;
-    font-size:100%;
-    }}
-
-   @media (min-width: 768px) and (max-width: 991px){.globito{
-    width:75px;
-    height:75px;
-    font-size:150%;
-    }}
-
-
-
-/* c u a d r a d i t o s  (solo para xs y sm)*/
-
-.contenedor-home-cuadraditos{
-  padding: 0 0;
-  margin-top:0;
-  margin-bottom:0;
+.puzzle-section-bg-decoration-outlines{
+  background: $color-2 url("../../imagenes/Img/bg_decoration_outlines.png") left no-repeat;
+  background-size: auto 100%;
 }
-  .cuadradito{
-    height:140px;
-    border:1px solid $color-white;
-    color:$color-white;
-    background-color:$color-3;
-    vertical-align:center;
-    text-align:center;
-  }
-  .cuadradito:hover{
-    background-color:$color-3light;
-  }
-  div.cuadradito>h2{
-    color:$color-white;
-  }
-  div.cuadradito>p{
-    color:$color-white;
-    text-align:center;
-  }
-
-
-
-
-
-
-
 
 
 

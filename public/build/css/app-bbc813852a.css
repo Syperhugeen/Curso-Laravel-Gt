@@ -3,7 +3,7 @@
  * * * * *    P A L E T A    d e    C O L O R E S    * * * * *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* COLORES INSTITUCIONALES */
-/* institucional que aún no defino para qué */
+/* institucional similar a color-3 pero más amarillito, como el doradito del logo */
 /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
 /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
 /* institucional PRINCIPAL */
@@ -22,7 +22,7 @@
 .carousel-control:hover,
 .carousel-control:focus,
 .carousel-caption {
-  color: #d4c6a5; }
+  color: #e5d8bd; }
 
 .carousel-indicators li {
   border-color: #f1e7d2; }
@@ -66,10 +66,10 @@
 
 /* institucionales */
 .color-1 {
-  color: #302a26; }
+  color: #d5c68d; }
 
 .bgcolor-1 {
-  background: #302a26; }
+  background: #d5c68d; }
 
 .color-2 {
   color: #302a26; }
@@ -113,16 +113,16 @@ son los titulos de la seccion */
 .btn-primary:focus,
 .btn-primary.focus {
   color: white;
-  background-color: #d4c6a5;
-  border-color: #d4c6a5;
+  background-color: #e5d8bd;
+  border-color: #e5d8bd;
   outline-width: 1px;
   outline-offset: 4px;
   outline-style: dotted; }
 
 .btn-primary:hover {
   color: white;
-  background-color: #d4c6a5;
-  border-color: #d4c6a5; }
+  background-color: #e5d8bd;
+  border-color: #e5d8bd; }
 
 .btn-primary:active,
 .btn-primary.active,
@@ -244,7 +244,7 @@ a, a > p {
 a:hover, a:focus, a > p:hover, a > p:focus {
   text-decoration: none;
   outline: none;
-  color: #d4c6a5; }
+  color: #e5d8bd; }
 
 /* R E S P O N S I V E - @media settings */
 @media (max-width: 767px) {
@@ -275,7 +275,7 @@ ul.navbar-nav > li > a :focus {
   color: #f1e7d2; }
 
 ul.navbar-nav > li > a.active {
-  color: #d4c6a5; }
+  color: #e5d8bd; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -290,7 +290,7 @@ ul.navbar-nav > li > a.active {
 
 /* color de los títulos de las 3 columnas principales */
 #footer .col-md-4 h5.footer-title {
-  color: #d4c6a5;
+  color: #e5d8bd;
   text-transform: uppercase;
   letter-spacing: 4px;
   padding-bottom: 10px; }
@@ -12258,7 +12258,7 @@ ul.bxslider {
  * * * * *    P A L E T A    d e    C O L O R E S    * * * * *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* COLORES INSTITUCIONALES */
-/* institucional que aún no defino para qué */
+/* institucional similar a color-3 pero más amarillito, como el doradito del logo */
 /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
 /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
 /* institucional PRINCIPAL */
@@ -12277,7 +12277,7 @@ ul.bxslider {
 .carousel-control:hover,
 .carousel-control:focus,
 .carousel-caption {
-  color: #d4c6a5; }
+  color: #e5d8bd; }
 
 .carousel-indicators li {
   border-color: #f1e7d2; }
@@ -12321,10 +12321,10 @@ ul.bxslider {
 
 /* institucionales */
 .color-1 {
-  color: #302a26; }
+  color: #d5c68d; }
 
 .bgcolor-1 {
-  background: #302a26; }
+  background: #d5c68d; }
 
 .color-2 {
   color: #302a26; }
@@ -12401,6 +12401,7 @@ body {
   padding-top: 120px;
   margin-top: -120px; }
 
+/*---creo que no es necesario porque ya está indicado en el globa-wrapper---*/
 @media (max-width: 767px) {
   #section1,
   #section2,
@@ -12427,6 +12428,9 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 
 .space-bottom {
   padding-bottom: 40px; }
+
+#section2, #section3 {
+  min-height: 800px; }
 
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
 /*---CENTRAR UNA COLUMNA dentro de un row---*/
@@ -12458,16 +12462,16 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .btn-primary:focus,
 .btn-primary.focus {
   color: white;
-  background-color: #d4c6a5;
-  border-color: #d4c6a5;
+  background-color: #e5d8bd;
+  border-color: #e5d8bd;
   outline-width: 1px;
   outline-offset: 4px;
   outline-style: dotted; }
 
 .btn-primary:hover {
   color: white;
-  background-color: #d4c6a5;
-  border-color: #d4c6a5; }
+  background-color: #e5d8bd;
+  border-color: #e5d8bd; }
 
 .btn-primary:active,
 .btn-primary.active,
@@ -12610,6 +12614,224 @@ ul.text-slide a:hover li h4 {
   100% {
     transform: translateY(0%); } }
 
+/* * * S Q U A R E   P U Z Z L E  * * *
+(shown icon and hidden content on hover)*/
+/*los cuadrados tendrán esta medida de width y de height*/
+/*escribir el doble del valor anterior (medida)*/
+.puzzle-container {
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+
+.puzzle-box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+
+.puzzle-box-precontent {
+  margin: 0;
+  width: 200px;
+  height: 200px;
+  overflow: hidden; }
+
+.puzzle-box-content-main {
+  top: 0;
+  width: 200px;
+  height: 400px; }
+
+.puzzle-box-content {
+  top: 0;
+  width: 200px;
+  height: 400px;
+  transition: transform .3s ease; }
+
+.puzzle-box-precontent:hover .puzzle-box-content {
+  transform: translate(0, -50%); }
+
+.puzzle-box-content-visible1 {
+  width: 200px;
+  height: 200px;
+  background-color: #cebe98;
+  padding: 20px; }
+
+.puzzle-box-content-hidden1 {
+  width: 200px;
+  height: 200px;
+  background-color: #e5d8bd;
+  padding: 20px; }
+
+.puzzle-box-content-visible2 {
+  width: 200px;
+  height: 200px;
+  background-color: #5b4f48;
+  padding: 20px; }
+
+.puzzle-box-content-hidden2 {
+  width: 200px;
+  height: 200px;
+  background-color: #726259;
+  padding: 20px; }
+
+@media (max-width: 767px) {
+  .puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
+    padding: 10px; } }
+
+.puzzle-box-index10 {
+  z-index: 10; }
+
+.puzzle-box-index9 {
+  z-index: 9; }
+
+.puzzle-box-index8 {
+  z-index: 8; }
+
+.puzzle-box-index7 {
+  z-index: 7; }
+
+.puzzle-box-animation-1 {
+  -webkit-animation-name: puzzleboxmainanimationone;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleboxmainanimationone;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+
+.puzzle-box-animation-2 {
+  -webkit-animation-name: puzzleboxmainanimationtwo;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleboxmainanimationtwo;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+
+.puzzle-box-animation-3 {
+  -webkit-animation-name: puzzleboxmainanimationthree;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleboxmainanimationthree;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+
+.puzzle-box-animation-4 {
+  -webkit-animation-name: puzzleboxmainanimationfour;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleboxmainanimationfour;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+
+.puzzle-box-animation-5 {
+  -webkit-animation-name: puzzleboxmainanimationfive;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleboxmainanimationfive;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+
+.puzzle-box-animation-6 {
+  -webkit-animation-name: puzzleboxmainanimationsix;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleboxmainanimationsix;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes puzzleboxmainanimationone {
+  0% {
+    transform: translate(0%, 0%); }
+  33% {
+    transform: translate(0%, -101%);
+    animation-timing-function: ease; }
+  66% {
+    transform: translate(0%, -101%);
+    animation-timing-function: ease; }
+  100% {
+    transform: translate(0%, -101%);
+    animation-timing-function: ease; } }
+
+@keyframes puzzleboxmainanimationtwo {
+  0% {
+    transform: translate(0%, 0%); }
+  33% {
+    transform: translate(0%, -101%);
+    animation-timing-function: ease; }
+  66% {
+    transform: translate(101%, -101%);
+    animation-timing-function: ease; }
+  100% {
+    transform: translate(101%, -101%);
+    animation-timing-function: ease; } }
+
+@keyframes puzzleboxmainanimationthree {
+  0% {
+    transform: translate(0%, 0%); }
+  33% {
+    transform: translate(0%, -101%);
+    animation-timing-function: ease; }
+  66% {
+    transform: translate(101%, -101%);
+    animation-timing-function: ease; }
+  100% {
+    transform: translate(101%, 0%);
+    animation-timing-function: ease; } }
+
+@keyframes puzzleboxmainanimationfour {
+  0% {
+    transform: translateX(0%, 0%); }
+  33% {
+    transform: translate(0%, 101%);
+    animation-timing-function: ease; }
+  66% {
+    transform: translate(0%, 101%);
+    animation-timing-function: ease; }
+  100% {
+    transform: translate(0%, 101%);
+    animation-timing-function: ease; } }
+
+@keyframes puzzleboxmainanimationfive {
+  0% {
+    transform: translate(0%, 0%); }
+  33% {
+    transform: translate(0%, 101%);
+    animation-timing-function: ease; }
+  66% {
+    transform: translate(-101%, 101%);
+    animation-timing-function: ease; }
+  100% {
+    transform: translate(-101%, 101%);
+    animation-timing-function: ease; } }
+
+@keyframes puzzleboxmainanimationsix {
+  0% {
+    transform: translate(0%, 0%); }
+  33% {
+    transform: translate(0%, 101%);
+    animation-timing-function: ease; }
+  66% {
+    transform: translate(-101%, 101%);
+    animation-timing-function: ease; }
+  100% {
+    transform: translate(-101%, 0%);
+    animation-timing-function: ease; } }
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  *		N A V I G A T I O N   B A R     (ADMIN)      *
  *        (la famosa "columna" de Mauri)           *
@@ -12743,7 +12965,7 @@ a > .link-go-to-web:focus {
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active > a:hover,
 .navbar-default .navbar-nav > li.active > a:focus {
-  color: #d4c6a5;
+  color: #e5d8bd;
   background-color: transparent; }
 
 /*--- la flechita  de los links para cuando está colapsado para móbiles ---*/
@@ -12757,7 +12979,7 @@ a > .link-go-to-web:focus {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-left-color: #d4c6a5;
+    border-left-color: #e5d8bd;
     border-width: 5px;
     margin-top: -5px; } }
 
@@ -12826,7 +13048,7 @@ a > .link-go-to-web:focus {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #d4c6a5;
+    color: #e5d8bd;
     background-color: transparent; }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -12868,7 +13090,7 @@ a > .link-go-to-web:focus {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #d4c6a5;
+  color: #e5d8bd;
   background-color: transparent; }
 
 /* NAVBAR BRAND - L O G O */
@@ -13104,86 +13326,9 @@ escritura de código)---*/
     height: auto;
     margin-left: -50%; } }
 
-/* g l o b i t o s */
-.contenedor-home-globitos {
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: distribute;
-  -moz-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 40px 0;
-  width: 100%; }
-
-.globito {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  color: white;
-  background-color: #cebe98;
-  font-size: 200%;
-  margin: 5px;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  transition: all .3s ease; }
-
-.globito:hover {
-  background-color: #d4c6a5;
-  transform: translate(0, -10%); }
-
-@media (max-width: 767px) {
-  .globito {
-    width: 50px;
-    height: 50px;
-    font-size: 100%; } }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .globito {
-    width: 75px;
-    height: 75px;
-    font-size: 150%; } }
-
-/* c u a d r a d i t o s  (solo para xs y sm)*/
-.contenedor-home-cuadraditos {
-  padding: 0 0;
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.cuadradito {
-  height: 140px;
-  border: 1px solid white;
-  color: white;
-  background-color: #cebe98;
-  vertical-align: center;
-  text-align: center; }
-
-.cuadradito:hover {
-  background-color: #d4c6a5; }
-
-div.cuadradito > h2 {
-  color: white; }
-
-div.cuadradito > p {
-  color: white;
-  text-align: center; }
+.puzzle-section-bg-decoration-outlines {
+  background: #302a26 url("../../imagenes/Img/bg_decoration_outlines.png") left no-repeat;
+  background-size: auto 100%; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -13363,7 +13508,7 @@ a, a > p {
 a:hover, a:focus, a > p:hover, a > p:focus {
   text-decoration: none;
   outline: none;
-  color: #d4c6a5; }
+  color: #e5d8bd; }
 
 /* R E S P O N S I V E - @media settings */
 @media (max-width: 767px) {
@@ -13394,7 +13539,7 @@ ul.navbar-nav > li > a :focus {
   color: #f1e7d2; }
 
 ul.navbar-nav > li > a.active {
-  color: #d4c6a5; }
+  color: #e5d8bd; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -13409,7 +13554,7 @@ ul.navbar-nav > li > a.active {
 
 /* color de los títulos de las 3 columnas principales */
 #footer .col-md-4 h5.footer-title {
-  color: #d4c6a5;
+  color: #e5d8bd;
   text-transform: uppercase;
   letter-spacing: 4px;
   padding-bottom: 10px; }
