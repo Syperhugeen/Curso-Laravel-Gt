@@ -135,7 +135,7 @@ ul.text-slide a:hover li h4{
 $puzzle-box-medida:200px; /*los cuadrados tendrán esta medida de width y de height*/
 $puzzle-box-doble-medida:400px; /*escribir el doble del valor anterior (medida)*/
 
-$puzzle-padding: 20px;
+$puzzle-padding: 40px;
 $responsive-puzzle-padding: 10px;
 
 .puzzle-container{
@@ -179,24 +179,28 @@ $responsive-puzzle-padding: 10px;
   transform: translate(0, -50%);
 }
 .puzzle-box-content-visible1{
+  text-align:center;
   width:$puzzle-box-medida;
   height:$puzzle-box-medida;
   background-color: $color-3;
   padding: $puzzle-padding;
 }
 .puzzle-box-content-hidden1{
+  text-align:center;
   width:$puzzle-box-medida;
   height:$puzzle-box-medida;
   background-color: $color-3light;
   padding: $puzzle-padding;
 }
 .puzzle-box-content-visible2{
+  text-align:center;
   width:$puzzle-box-medida;
   height:$puzzle-box-medida;
   background-color: $color-2light;
   padding: $puzzle-padding;
 }
 .puzzle-box-content-hidden2{
+  text-align:center;
   width:$puzzle-box-medida;
   height:$puzzle-box-medida;
   background-color: $color-2superlight;
@@ -205,7 +209,12 @@ $responsive-puzzle-padding: 10px;
 @media (max-width: 767px){.puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   padding: $responsive-puzzle-padding;
   }}
-
+.puzzle-box-content-hidden2 > h5{
+  color:$color-3;
+}
+.puzzle-box-content-hidden1 > h5{
+  color:$color-2light;
+}
 
 .puzzle-box-index10{
   z-index:10;
@@ -367,4 +376,9 @@ $puzzle-box-animations-fill-mode:forwards;
   33% {transform:translate(0%, 101%);animation-timing-function:ease;}
   66% {transform:translate(-101%, 101%);animation-timing-function:ease;}
   100% {transform:translate(-101%, 0%);animation-timing-function:ease;}
+}
+.puzzle-img-responsive{
+  display:block;
+  width:100%;
+  height:auto;
 }

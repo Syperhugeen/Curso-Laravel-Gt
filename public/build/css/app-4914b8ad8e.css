@@ -12655,32 +12655,42 @@ ul.text-slide a:hover li h4 {
   transform: translate(0, -50%); }
 
 .puzzle-box-content-visible1 {
+  text-align: center;
   width: 200px;
   height: 200px;
   background-color: #cebe98;
-  padding: 20px; }
+  padding: 40px; }
 
 .puzzle-box-content-hidden1 {
+  text-align: center;
   width: 200px;
   height: 200px;
   background-color: #e5d8bd;
-  padding: 20px; }
+  padding: 40px; }
 
 .puzzle-box-content-visible2 {
+  text-align: center;
   width: 200px;
   height: 200px;
   background-color: #5b4f48;
-  padding: 20px; }
+  padding: 40px; }
 
 .puzzle-box-content-hidden2 {
+  text-align: center;
   width: 200px;
   height: 200px;
   background-color: #726259;
-  padding: 20px; }
+  padding: 40px; }
 
 @media (max-width: 767px) {
   .puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
     padding: 10px; } }
+
+.puzzle-box-content-hidden2 > h5 {
+  color: #cebe98; }
+
+.puzzle-box-content-hidden1 > h5 {
+  color: #5b4f48; }
 
 .puzzle-box-index10 {
   z-index: 10; }
@@ -12831,6 +12841,11 @@ ul.text-slide a:hover li h4 {
   100% {
     transform: translate(-101%, 0%);
     animation-timing-function: ease; } }
+
+.puzzle-img-responsive {
+  display: block;
+  width: 100%;
+  height: auto; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  *		N A V I G A T I O N   B A R     (ADMIN)      *
