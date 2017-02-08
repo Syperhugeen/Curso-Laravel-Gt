@@ -19,6 +19,8 @@ elixir(function(mix) {
         'Plug-jquery-1.11.3.min.js',        
         'Plug-bootstrap-notify.min.js',        
         'Plug-bootstrap.min.js',
+        'Plug-smooth_scroll.js',
+        'Plug-wow.min.js',
         'Plug-chosen.jquery.js',
         'Plug-ImageSelect.jquery.js',
         'Plug-jquery.maxcharwarning.min.js',
@@ -48,8 +50,6 @@ elixir(function(mix) {
         'mis-botones_para_adjuntar.js',
         'mis-textareas.js',
         'mis-file_input.js',
-        'Plug-smooth_scroll.js',
-        'Plug-wow.js',
         'fin.js']);
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/build/fonts/bootstrap');

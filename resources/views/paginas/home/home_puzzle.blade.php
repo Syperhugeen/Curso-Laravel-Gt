@@ -1,7 +1,7 @@
 
-<div class="puzzle-container wow fadeInUp">
+<div class="puzzle-container">
     
-
+<div class="wow fadeInUp">
 
 
     <div class="puzzle-box puzzle-box-index10">
@@ -112,7 +112,7 @@
 
 
 
-
+</div>
 
 
 </div>

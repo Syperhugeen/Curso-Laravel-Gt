@@ -16,7 +16,7 @@
 
 
 
-    <script>
+  <script>
   $(function() {
     // This will select everything with the class smoothScroll
     // This should prevent problems with carousel, scrollspy, etc...
