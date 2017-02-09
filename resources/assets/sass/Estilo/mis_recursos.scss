@@ -138,10 +138,16 @@ $puzzle-box-doble-medida:400px; /*escribir el doble del valor anterior (medida)*
 $puzzle-padding: 40px;
 $responsive-puzzle-padding: 10px;
 
+$puzzle-box-animations-duration:3s;
+$puzzle-box-animations-delay:2s;
+
 .puzzle-container{
-  width:100%;
-  height:100%;
+  position:relative;
   text-align:center;
+
+ }
+.puzzle-box-square-container{
+  position:relative;
  }
 .puzzle-box{
   position:absolute;
@@ -215,6 +221,12 @@ $responsive-puzzle-padding: 10px;
 .puzzle-box-content-hidden1 > h5{
   color:$color-2light;
 }
+.puzzle-box-content-hidden1, .puzzle-box-content-hidden2 > h5{
+  top:0;
+  bottom:0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 .puzzle-box-index10{
   z-index:10;
@@ -231,8 +243,6 @@ $responsive-puzzle-padding: 10px;
 .puzzle-box-animation-main{
 }
 
-$puzzle-box-animations-duration:2s;
-$puzzle-box-animations-delay:1s;
 $puzzle-box-animations-fill-mode:forwards;
 
 .puzzle-box-animation-1{

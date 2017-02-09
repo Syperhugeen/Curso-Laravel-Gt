@@ -20,7 +20,7 @@ elixir(function(mix) {
         'Plug-bootstrap-notify.min.js',        
         'Plug-bootstrap.min.js',
         'Plug-smooth_scroll.js',
-        'Plug-wow.min.js',
+        'Plug-wow.js',
         'Plug-chosen.jquery.js',
         'Plug-ImageSelect.jquery.js',
         'Plug-jquery.maxcharwarning.min.js',

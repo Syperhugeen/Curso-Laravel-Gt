@@ -1,7 +1,7 @@
 
 <div class="puzzle-container">
     
-<div class="wow fadeInUp">
+<div class="puzzle-box-square-container wow fadeInUp">
 
 
     <div class="puzzle-box puzzle-box-index10">
@@ -36,7 +36,7 @@
                 <div class="puzzle-box-precontent">
                     <div class="puzzle-box-content">
                         <div class="puzzle-box-content-visible1">
-                            <img class="puzzle-img-responsive" src="imagenes/Img/icon_sign(brown).png">
+                            <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(brown).png">
                         </div>
                         <div class="puzzle-box-content-hidden1">
                             <h5>+1500 promotoras contratadas</h5>
@@ -83,7 +83,7 @@
                 <div class="puzzle-box-precontent">
                     <div class="puzzle-box-content">
                         <div class="puzzle-box-content-visible1">
-                            <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(brown).png">
+                            <img class="puzzle-img-responsive" src="imagenes/Img/icon_structure(brown).png">
                         </div>
                         <div class="puzzle-box-content-hidden1">
                             <h5>equipo de 15 profesionales</h5>
@@ -97,7 +97,7 @@
                 <div class="puzzle-box-precontent">
                     <div class="puzzle-box-content">
                         <div class="puzzle-box-content-visible2">
-                            <img class="puzzle-img-responsive" src="imagenes/Img/icon_airplane(vanilla).png">
+                            <img class="puzzle-img-responsive" src="imagenes/Img/icon_world(vanilla).png">
                         </div>
                         <div class="puzzle-box-content-hidden2">
                             <h5>alcance internacional</h5>

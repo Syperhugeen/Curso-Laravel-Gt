@@ -12619,9 +12619,11 @@ ul.text-slide a:hover li h4 {
 /*los cuadrados tendrán esta medida de width y de height*/
 /*escribir el doble del valor anterior (medida)*/
 .puzzle-container {
-  width: 100%;
-  height: 100%;
+  position: relative;
   text-align: center; }
+
+.puzzle-box-square-container {
+  position: relative; }
 
 .puzzle-box {
   position: absolute;
@@ -12692,6 +12694,12 @@ ul.text-slide a:hover li h4 {
 .puzzle-box-content-hidden1 > h5 {
   color: #5b4f48; }
 
+.puzzle-box-content-hidden1, .puzzle-box-content-hidden2 > h5 {
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto; }
+
 .puzzle-box-index10 {
   z-index: 10; }
 
@@ -12706,62 +12714,62 @@ ul.text-slide a:hover li h4 {
 
 .puzzle-box-animation-1 {
   -webkit-animation-name: puzzleboxmainanimationone;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationone;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-2 {
   -webkit-animation-name: puzzleboxmainanimationtwo;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationtwo;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-3 {
   -webkit-animation-name: puzzleboxmainanimationthree;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationthree;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-4 {
   -webkit-animation-name: puzzleboxmainanimationfour;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationfour;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-5 {
   -webkit-animation-name: puzzleboxmainanimationfive;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationfive;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-6 {
   -webkit-animation-name: puzzleboxmainanimationsix;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationsix;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards; }
 
 @keyframes puzzleboxmainanimationone {
