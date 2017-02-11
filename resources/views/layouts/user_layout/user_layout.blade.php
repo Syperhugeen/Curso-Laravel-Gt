@@ -40,7 +40,8 @@
 
 
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="120">
+
       <div class="global-wrapper">
 
            @include('layouts.user_layout.navbar.navbar')
@@ -63,6 +64,7 @@
           </div>
 
       </div>
+
 
 
     <!-- Scripts -->

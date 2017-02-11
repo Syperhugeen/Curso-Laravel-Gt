@@ -8,6 +8,11 @@
 
 
 
+
+
+
+
+
 /* * * * *    B& W   I M A G E   T O   C O L O R   O N   H O V E R    * * * * */
 /* para que las imágenes con esta clase se muestren en grises y se coloreen al pasar el mouse por arriba */
 .img-greyscale{
@@ -19,6 +24,12 @@
   filter: none;
   -webkit-filter: grayscale(0%);
 }
+
+
+
+
+
+
 
 
 
@@ -49,6 +60,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* * * * *    I N F I N I T E   B O U N C E    * * * * * */
 /* para que algo rebote infinitamente */
 .mi-bounce{
@@ -71,6 +98,19 @@
   75% {  transform:translateY(-10px);}
   100% {  transform:translateY(0);}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -129,36 +169,67 @@ ul.text-slide a:hover li h4{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* * * S Q U A R E   P U Z Z L E  * * *
 (shown icon and hidden content on hover)*/
 
 $puzzle-box-medida:200px; /*los cuadrados tendrán esta medida de width y de height*/
 $puzzle-box-doble-medida:400px; /*escribir el doble del valor anterior (medida)*/
+$puzzle-box-trescuartos-doble-medida:300px; /*escribir 3/4 del doble */
+$responsive-puzzle-box: 100%; /*escribir la medida del width y height para xs */
 
 $puzzle-padding: 40px;
 $responsive-puzzle-padding: 10px;
 
-$puzzle-box-animations-duration:3s;
-$puzzle-box-animations-delay:2s;
+$puzzle-box-animations-duration:1.5s;
+$puzzle-box-animations-delay:1.5s;
+
+/* de momento no estoy usando la animation-main, en su lugar usé fadeInRight porque la entrada vertical no está funcionando*/
+$puzzle-box-animation-main-duration:1.5s;
+$puzzle-box-animation-main-delay:0.5s;
+
+/* demora de la columna izquierda en aparecer*/
+$puzzle-col-animation-delay: 2.5s;
 
 .puzzle-container{
-  position:relative;
   text-align:center;
-
+  height: $section3-altura;
  }
 .puzzle-box-square-container{
   position:relative;
+  height:100%;
+  width:100%;
+  left:6px;
  }
+ @media (min-width:1182px) and (max-width:1266px){.puzzle-box-square-container{
+  width:110%;
+  }}
 .puzzle-box{
   position:absolute;
   width:$puzzle-box-medida;
   height:$puzzle-box-medida;
-  margin-top: 200px;
-  margin-bottom: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+  top:$puzzle-box-trescuartos-doble-medida;
+  left:$puzzle-box-medida;
 }
 .puzzle-box-precontent{
   margin:0;
@@ -167,12 +238,14 @@ $puzzle-box-animations-delay:2s;
   overflow:hidden;
 }
 .puzzle-box-content-main{
-  top:0;
+  /* top:0; */
   width:$puzzle-box-medida;
   height:$puzzle-box-doble-medida;
 }
+
+/* contenido de las boxes (tiene el doble de altura porque tiene otra cara oculta abajo) */
 .puzzle-box-content{
-  top:0;
+  /* top:0; */
   width:$puzzle-box-medida;
   height:$puzzle-box-doble-medida;
   -webkit-transition: transform .3s ease;
@@ -184,50 +257,71 @@ $puzzle-box-animations-delay:2s;
   -moz-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+
+/* perte superior y parte inferior del contenido de cada box */
 .puzzle-box-content-visible1{
-  text-align:center;
-  width:$puzzle-box-medida;
-  height:$puzzle-box-medida;
   background-color: $color-3;
-  padding: $puzzle-padding;
 }
 .puzzle-box-content-hidden1{
-  text-align:center;
-  width:$puzzle-box-medida;
-  height:$puzzle-box-medida;
   background-color: $color-3light;
-  padding: $puzzle-padding;
 }
 .puzzle-box-content-visible2{
-  text-align:center;
-  width:$puzzle-box-medida;
-  height:$puzzle-box-medida;
   background-color: $color-2light;
-  padding: $puzzle-padding;
 }
 .puzzle-box-content-hidden2{
+  background-color: $color-2superlight;
+}
+.puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   text-align:center;
   width:$puzzle-box-medida;
   height:$puzzle-box-medida;
-  background-color: $color-2superlight;
   padding: $puzzle-padding;
+
 }
+/* tamaños RESPONSIVE para xs */
 @media (max-width: 767px){.puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
+  width:$responsive-puzzle-box;
+  height:$responsive-puzzle-box;
   padding: $responsive-puzzle-padding;
   }}
-.puzzle-box-content-hidden2 > h5{
-  color:$color-3;
-}
-.puzzle-box-content-hidden1 > h5{
-  color:$color-2light;
-}
-.puzzle-box-content-hidden1, .puzzle-box-content-hidden2 > h5{
-  top:0;
-  bottom:0;
-  margin-top: auto;
-  margin-bottom: auto;
+.puzzle-responsive-top-text .row .col-xs-6 .puzzle-responsive-top-text-col{
+  padding: 15px;
+  height: 100%;
+  background: rgb(91, 79, 72); /* Fall-back for browsers that don't support rgba */
+  background: rgba(91, 79, 72, .5);
 }
 
+.puzzle-box-content-hidden2 h5{
+  color:$color-3;
+}
+.puzzle-box-content-hidden1 h5{
+  color:$color-2light;
+}
+
+ /* para centrar verticalmente el elemento (h5 en este caso) que está dentro de estos divs
+ (requiere que previamente se le haya dado formato de display:table a los contenedores) */
+.puzzle-box-content-hidden1 > h5, .puzzle-box-content-hidden2 > h5{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* para que las imágenes se ajusten proporcionalmente a los cuadrados y su respectivo padding */
+.puzzle-img-responsive{
+  width:100%;
+  height:auto;
+}
+.puzzle-box-content-visible1 > img, .puzzle-box-content-visible2 > img{
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* INDEX MANAGER, para que las cajitas se desplieguen en capas */
 .puzzle-box-index10{
   z-index:10;
 }
@@ -240,11 +334,23 @@ $puzzle-box-animations-delay:2s;
 .puzzle-box-index7{
   z-index:7;
 }
-.puzzle-box-animation-main{
-}
+
 
 $puzzle-box-animations-fill-mode:forwards;
 
+/* animación de entrada principal */
+.puzzle-box-animation-main{
+  -webkit-animation-name: puzzleboxanimationmain;
+  -webkit-animation-duration: $puzzle-box-animation-main-duration;
+  -webkit-animation-delay: $puzzle-box-animation-main-delay;
+  -webkit-animation-fill-mode: $puzzle-box-animations-fill-mode;
+  animation-name: puzzleboxanimationmain;
+  animation-duration: $puzzle-box-animation-main-duration;
+  animation-delay: $puzzle-box-animation-main-delay;
+  animation-fill-mode: $puzzle-box-animations-fill-mode;
+}
+
+/* animaciones de despliegue */
 .puzzle-box-animation-1{
   -webkit-animation-name: puzzleboxmainanimationone;
   -webkit-animation-duration:$puzzle-box-animations-duration;
@@ -305,6 +411,16 @@ $puzzle-box-animations-fill-mode:forwards;
   animation-delay:$puzzle-box-animations-delay;
   animation-fill-mode:$puzzle-box-animations-fill-mode;
 }
+
+@-webkit-keyframes puzzleboxanimationmain {
+  0% {-webkit-transform:translate(0%, -400%);opacity:0;}
+  100% {-webkit-transform:translate(0%, 0%);opacity:1;-webkit-animation-timing-function:ease;}
+}
+@keyframes puzzleboxanimationmain {
+  0% {transform:translate(0%, -400%);opacity:0;}
+  100% {transform:translate(0%, 0%);opacity:1;animation-timing-function:ease;}
+}
+
 @-webkit-keyframes puzzleboxmainanimationone {
   0% {-webkit-transform:translate(0%, 0%);}
   33% {-webkit-transform:translate(0%, -101%);-webkit-animation-timing-function:ease;}
@@ -321,9 +437,9 @@ $puzzle-box-animations-fill-mode:forwards;
 
 @-webkit-keyframes puzzleboxmainanimationtwo {
   0% {-webkit-transform:translate(0%, 0%);}
-  33% {-webkit-transform:translate(0%, -101%);animation-timing-function:ease;}
-  66% {-webkit-transform:translate(101%, -101%);animation-timing-function:ease;}
-  100% {-webkit-transform:translate(101%, -101%);animation-timing-function:ease;}
+  33% {-webkit-transform:translate(0%, -101%);-webkit-animation-timing-function:ease;}
+  66% {-webkit-transform:translate(101%, -101%);-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(101%, -101%);-webkit-animation-timing-function:ease;}
 }
 @keyframes puzzleboxmainanimationtwo {
   0% {transform:translate(0%, 0%);}
@@ -387,8 +503,126 @@ $puzzle-box-animations-fill-mode:forwards;
   66% {transform:translate(-101%, 101%);animation-timing-function:ease;}
   100% {transform:translate(-101%, 0%);animation-timing-function:ease;}
 }
-.puzzle-img-responsive{
-  display:block;
+
+/* agregar a las animaciones que deben comenzar pausadas (aún sin utilizar)*/
+.animation-paused{
+  -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+  animation-play-state: paused;
+}
+
+
+/*  L E F T   C O L U M N   D E L   P U Z Z L E  */ 
+/* columna izquierda con texto (va en otra column col-lg-2, dentro del mismo row),
+mientras que el puzzle animado va en la columna derecha (col-lg-6) */
+.puzzle-left-col-container{
+  position:absolute;
+  height:100%;
   width:100%;
-  height:auto;
+  background: rgb(91, 79, 72); /* Fall-back for browsers that don't support rgba */
+  background: rgba(91, 79, 72, .5);
+  padding:20px;
+  overflow:hidden;
+}
+.puzzle-left-col-content{
+
+}
+.puzzle-left-col-content h5, .puzzle-left-col-content h4, .puzzle-responsive-top-text h4, .puzzle-responsive-top-text h5{
+  color: $color-3;
+  text-align: center;
+  font-family: Georgia, sans-serif;
+  letter-spacing:1px;
+  line-height:1.5;
+}
+.puzzle-left-col-animation{
+  -webkit-animation-name: puzzleleftcolanimation;
+  -webkit-animation-duration: $puzzle-box-animation-main-duration;
+  -webkit-animation-delay: $puzzle-box-animation-main-delay;
+  -webkit-animation-fill-mode: $puzzle-box-animations-fill-mode;
+  animation-name: puzzleleftcolanimation;
+  animation-duration: $puzzle-box-animation-main-duration;
+  animation-delay: $puzzle-col-animation-delay;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes puzzleleftcolanimation {
+  0% {-webkit-transform:translate(120%, 0%);opacity:0;height:$puzzle-box-medida;top:300px;}
+  50% {-webkit-transform:translate(0%, 0%);opacity:1;height:$puzzle-box-medida;top:300px;-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(0%, 0%);opacity:1;height:$section3-altura;top:0;-webkit-animation-timing-function:ease;}
+}
+@keyframes puzzleleftcolanimation {
+  0% {transform:translate(120%, 0%);opacity:0;height:$puzzle-box-medida;top:300px;}
+  50% {transform:translate(0%, 0%);opacity:1;height:$puzzle-box-medida;top:300px;animation-timing-function:ease;}
+  100% {transform:translate(0%, 0%);opacity:1;height:$section3-altura;top:0;animation-timing-function:ease;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   *   *   *    D  E  L  A  Y  S    *   *   *   */
+/* Delay for transformations, tienen que estar al final
+para suplantar las duraciones originales leídas antes */
+
+.delay1{
+  -webkit-animation-delay: 0.5s; /* Chrome, Safari, Opera */
+    animation-delay: 0.5s;
+}
+.delay1b{
+  -webkit-animation-delay: 0.75s; /* Chrome, Safari, Opera */
+    animation-delay: 0.75s;
+}
+.delay2{
+  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+    animation-delay: 1s;
+}
+.delay2b{
+  -webkit-animation-delay: 1.25s; /* Chrome, Safari, Opera */
+    animation-delay: 1.25s;
+}
+.delay3{
+  -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
+    animation-delay: 1.5s;
+}
+.delay3b{
+  -webkit-animation-delay: 1.75s; /* Chrome, Safari, Opera */
+    animation-delay: 1.75s;
+}
+.delay4{
+  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+    animation-delay: 2s;
+}
+.delay4b{
+  -webkit-animation-delay: 2.25s; /* Chrome, Safari, Opera */
+    animation-delay: 2.25s;
+}
+.delay5{
+  -webkit-animation-delay: 2.5s; /* Chrome, Safari, Opera */
+    animation-delay: 2.5s;
+}
+.delay5b{
+  -webkit-animation-delay: 2.75s; /* Chrome, Safari, Opera */
+    animation-delay: 2.75s;
+}
+.delay6{
+  -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
+    animation-delay: 3s;
+}
+.delay7{
+    -webkit-animation-delay: 3.5s; /* Chrome, Safari, Opera */
+    animation-delay: 3.5s;
 }

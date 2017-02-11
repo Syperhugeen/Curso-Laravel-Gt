@@ -1,8 +1,4 @@
-<div class="carousel-y-header">
-
-
-
-
+<div class="carousel-y-header super-xs-hidden">
 
 
 <!--este es el carrusel de imágenes de portada-->
@@ -119,4 +115,14 @@
 
 
 
+</div>
+
+
+
+<!-- * *  X S   R E S P O N S I V E  * * -->
+<!-- OCULTO EL CAROUSEL, SE MOSTRARÁ ESTEO PARA SUPER-XS -->
+<div class="super-xs-shown">
+  <div class="super-xs-header">
+  
+  </div>
 </div>

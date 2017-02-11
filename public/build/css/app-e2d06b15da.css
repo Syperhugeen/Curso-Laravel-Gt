@@ -83,6 +83,12 @@
 .bgcolor-3 {
   background: #cebe98; }
 
+.color-3superlight {
+  color: #f1e7d2; }
+
+.bgcolor-3superlight {
+  background: #f1e7d2; }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
 /* /////////////Links, Titulos, Descripciones///////////////// */
@@ -12338,6 +12344,12 @@ ul.bxslider {
 .bgcolor-3 {
   background: #cebe98; }
 
+.color-3superlight {
+  color: #f1e7d2; }
+
+.bgcolor-3superlight {
+  background: #f1e7d2; }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
 /* /////////////Links, Titulos, Descripciones///////////////// */
@@ -12398,17 +12410,16 @@ body {
 #section2,
 #section3,
 #section4 {
-  padding-top: 120px;
-  margin-top: -120px; }
+  overflow: hidden;
+  /* padding-top:$navbar-altura;  margin-top:-$navbar-altura; */
+  /*---creo que no es necesario porque ya está indicado en el globa-wrapper---*/ }
 
-/*---creo que no es necesario porque ya está indicado en el globa-wrapper---*/
 @media (max-width: 767px) {
   #section1,
   #section2,
   #section3,
   #section4 {
-    padding-top: 68px;
-    margin-top: -68px; } }
+    /* padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs; */ } }
 
 /*---WRAPPER para envolver cada sección dentro de cada página; esta clase se le adjudica
 al container-fluid que adentro contiene los rows y las columns que agregan los márgenes laterales---*/
@@ -12422,14 +12433,17 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding-top: 40px;
   padding-bottom: 20px; }
 
-/*---para agregarle espaciado entre rows o items acorde a mi criterio---*/
+/*---para agregarle espaciado entre rows o items acorde a mi criterio (¡no aplicar a sections, porque ya tienen padding)---*/
 .space-top {
   padding-top: 40px; }
 
 .space-bottom {
   padding-bottom: 40px; }
 
-#section2, #section3 {
+#section2 {
+  min-height: 600px; }
+
+#section3 {
   min-height: 800px; }
 
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
@@ -12449,6 +12463,33 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .destacado {
   padding: 5px 0 5px 30px;
   border-left: 10px solid #cebe98; }
+
+/*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/
+.table-outer {
+  /* agregar esta class al contenedor, CREO que tiene que tener width y height específicos */
+  display: table; }
+
+.table-inner {
+  /* agregar esta class al contenido que quiero que esté centrado */
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
+/*---para ocultar/mostrar algún elemento a partir de un width xs que no llega a ser sm
+como por ejemplo un carousel de imágenes de header---*/
+.super-xs-shown {
+  display: block; }
+
+.super-xs-hidden {
+  display: none; }
+
+@media (min-width: 345px) {
+  .super-xs-shown {
+    display: none; }
+  .super-xs-hidden {
+    display: block; } }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
@@ -12618,23 +12659,30 @@ ul.text-slide a:hover li h4 {
 (shown icon and hidden content on hover)*/
 /*los cuadrados tendrán esta medida de width y de height*/
 /*escribir el doble del valor anterior (medida)*/
+/*escribir 3/4 del doble */
+/*escribir la medida del width y height para xs */
+/* de momento no estoy usando la animation-main, en su lugar usé fadeInRight porque la entrada vertical no está funcionando*/
+/* demora de la columna izquierda en aparecer*/
 .puzzle-container {
-  position: relative;
-  text-align: center; }
+  text-align: center;
+  height: 800px; }
 
 .puzzle-box-square-container {
-  position: relative; }
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 6px; }
+
+@media (min-width: 1182px) and (max-width: 1266px) {
+  .puzzle-box-square-container {
+    width: 110%; } }
 
 .puzzle-box {
   position: absolute;
   width: 200px;
   height: 200px;
-  margin-top: 200px;
-  margin-bottom: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0; }
+  top: 300px;
+  left: 200px; }
 
 .puzzle-box-precontent {
   margin: 0;
@@ -12643,12 +12691,13 @@ ul.text-slide a:hover li h4 {
   overflow: hidden; }
 
 .puzzle-box-content-main {
-  top: 0;
+  /* top:0; */
   width: 200px;
   height: 400px; }
 
+/* contenido de las boxes (tiene el doble de altura porque tiene otra cara oculta abajo) */
 .puzzle-box-content {
-  top: 0;
+  /* top:0; */
   width: 200px;
   height: 400px;
   transition: transform .3s ease; }
@@ -12656,50 +12705,67 @@ ul.text-slide a:hover li h4 {
 .puzzle-box-precontent:hover .puzzle-box-content {
   transform: translate(0, -50%); }
 
+/* perte superior y parte inferior del contenido de cada box */
 .puzzle-box-content-visible1 {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  background-color: #cebe98;
-  padding: 40px; }
+  background-color: #cebe98; }
 
 .puzzle-box-content-hidden1 {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  background-color: #e5d8bd;
-  padding: 40px; }
+  background-color: #e5d8bd; }
 
 .puzzle-box-content-visible2 {
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  background-color: #5b4f48;
-  padding: 40px; }
+  background-color: #5b4f48; }
 
 .puzzle-box-content-hidden2 {
+  background-color: #726259; }
+
+.puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   text-align: center;
   width: 200px;
   height: 200px;
-  background-color: #726259;
   padding: 40px; }
 
+/* tamaños RESPONSIVE para xs */
 @media (max-width: 767px) {
   .puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
+    width: 100%;
+    height: 100%;
     padding: 10px; } }
 
-.puzzle-box-content-hidden2 > h5 {
+.puzzle-responsive-top-text .row .col-xs-6 .puzzle-responsive-top-text-col {
+  padding: 15px;
+  height: 100%;
+  background: #5b4f48;
+  /* Fall-back for browsers that don't support rgba */
+  background: rgba(91, 79, 72, 0.5); }
+
+.puzzle-box-content-hidden2 h5 {
   color: #cebe98; }
 
-.puzzle-box-content-hidden1 > h5 {
+.puzzle-box-content-hidden1 h5 {
   color: #5b4f48; }
 
-.puzzle-box-content-hidden1, .puzzle-box-content-hidden2 > h5 {
-  top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto; }
+/* para centrar verticalmente el elemento (h5 en este caso) que está dentro de estos divs
+ (requiere que previamente se le haya dado formato de display:table a los contenedores) */
+.puzzle-box-content-hidden1 > h5, .puzzle-box-content-hidden2 > h5 {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
 
+/* para que las imágenes se ajusten proporcionalmente a los cuadrados y su respectivo padding */
+.puzzle-img-responsive {
+  width: 100%;
+  height: auto; }
+
+.puzzle-box-content-visible1 > img, .puzzle-box-content-visible2 > img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
+/* INDEX MANAGER, para que las cajitas se desplieguen en capas */
 .puzzle-box-index10 {
   z-index: 10; }
 
@@ -12712,65 +12778,86 @@ ul.text-slide a:hover li h4 {
 .puzzle-box-index7 {
   z-index: 7; }
 
+/* animación de entrada principal */
+.puzzle-box-animation-main {
+  -webkit-animation-name: puzzleboxanimationmain;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleboxanimationmain;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards; }
+
+/* animaciones de despliegue */
 .puzzle-box-animation-1 {
   -webkit-animation-name: puzzleboxmainanimationone;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationone;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-2 {
   -webkit-animation-name: puzzleboxmainanimationtwo;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationtwo;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-3 {
   -webkit-animation-name: puzzleboxmainanimationthree;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationthree;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-4 {
   -webkit-animation-name: puzzleboxmainanimationfour;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationfour;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-5 {
   -webkit-animation-name: puzzleboxmainanimationfive;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationfive;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards; }
 
 .puzzle-box-animation-6 {
   -webkit-animation-name: puzzleboxmainanimationsix;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
   animation-name: puzzleboxmainanimationsix;
-  animation-duration: 3s;
-  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards; }
+
+@keyframes puzzleboxanimationmain {
+  0% {
+    transform: translate(0%, -400%);
+    opacity: 0; }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    animation-timing-function: ease; } }
 
 @keyframes puzzleboxmainanimationone {
   0% {
@@ -12850,10 +12937,110 @@ ul.text-slide a:hover li h4 {
     transform: translate(-101%, 0%);
     animation-timing-function: ease; } }
 
-.puzzle-img-responsive {
-  display: block;
+/* agregar a las animaciones que deben comenzar pausadas (aún sin utilizar)*/
+.animation-paused {
+  /* Safari 4.0 - 8.0 */
+  animation-play-state: paused; }
+
+/*  L E F T   C O L U M N   D E L   P U Z Z L E  */
+/* columna izquierda con texto (va en otra column col-lg-2, dentro del mismo row),
+mientras que el puzzle animado va en la columna derecha (col-lg-6) */
+.puzzle-left-col-container {
+  position: absolute;
+  height: 100%;
   width: 100%;
-  height: auto; }
+  background: #5b4f48;
+  /* Fall-back for browsers that don't support rgba */
+  background: rgba(91, 79, 72, 0.5);
+  padding: 20px;
+  overflow: hidden; }
+
+.puzzle-left-col-content h5, .puzzle-left-col-content h4, .puzzle-responsive-top-text h4, .puzzle-responsive-top-text h5 {
+  color: #cebe98;
+  text-align: center;
+  font-family: Georgia, sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5; }
+
+.puzzle-left-col-animation {
+  -webkit-animation-name: puzzleleftcolanimation;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: puzzleleftcolanimation;
+  animation-duration: 1.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both; }
+
+@keyframes puzzleleftcolanimation {
+  0% {
+    transform: translate(120%, 0%);
+    opacity: 0;
+    height: 200px;
+    top: 300px; }
+  50% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    height: 200px;
+    top: 300px;
+    animation-timing-function: ease; }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    height: 800px;
+    top: 0;
+    animation-timing-function: ease; } }
+
+/*   *   *   *    D  E  L  A  Y  S    *   *   *   */
+/* Delay for transformations, tienen que estar al final
+para suplantar las duraciones originales leídas antes */
+.delay1 {
+  /* Chrome, Safari, Opera */
+  animation-delay: 0.5s; }
+
+.delay1b {
+  /* Chrome, Safari, Opera */
+  animation-delay: 0.75s; }
+
+.delay2 {
+  /* Chrome, Safari, Opera */
+  animation-delay: 1s; }
+
+.delay2b {
+  /* Chrome, Safari, Opera */
+  animation-delay: 1.25s; }
+
+.delay3 {
+  /* Chrome, Safari, Opera */
+  animation-delay: 1.5s; }
+
+.delay3b {
+  /* Chrome, Safari, Opera */
+  animation-delay: 1.75s; }
+
+.delay4 {
+  /* Chrome, Safari, Opera */
+  animation-delay: 2s; }
+
+.delay4b {
+  /* Chrome, Safari, Opera */
+  animation-delay: 2.25s; }
+
+.delay5 {
+  /* Chrome, Safari, Opera */
+  animation-delay: 2.5s; }
+
+.delay5b {
+  /* Chrome, Safari, Opera */
+  animation-delay: 2.75s; }
+
+.delay6 {
+  /* Chrome, Safari, Opera */
+  animation-delay: 3s; }
+
+.delay7 {
+  /* Chrome, Safari, Opera */
+  animation-delay: 3.5s; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  *		N A V I G A T I O N   B A R     (ADMIN)      *
@@ -13349,6 +13536,14 @@ escritura de código)---*/
     height: auto;
     margin-left: -50%; } }
 
+/* responsive header foto de portada */
+.super-xs-header {
+  width: 100%;
+  height: 400px;
+  background: #302a26 url("../../imagenes/Img/header_mobile_xs.jpg") center no-repeat;
+  background-size: cover; }
+
+/* contornos del logo (GT) en color gris, un poquito más claritos que color-2, tirados hacia la izquierda */
 .puzzle-section-bg-decoration-outlines {
   background: #302a26 url("../../imagenes/Img/bg_decoration_outlines.png") left no-repeat;
   background-size: auto 100%; }
