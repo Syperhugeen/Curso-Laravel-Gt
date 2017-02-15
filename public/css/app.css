@@ -83,6 +83,12 @@
 .bgcolor-3 {
   background: #cebe98; }
 
+.color-3light {
+  color: #e5d8bd; }
+
+.bgcolor-3light {
+  background: #e5d8bd; }
+
 .color-3superlight {
   color: #f1e7d2; }
 
@@ -110,6 +116,56 @@ son los titulos de la seccion */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  B O T Ó N   A M P L I A R
+(para todos esos links de "ver más") con triángulo */
+.ampliar {
+  color: #917e4b;
+  padding-left: 16px;
+  line-height: 4;
+  transition: all .3s ease; }
+
+.ampliar:before {
+  left: 0;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #d5c68d;
+  border-width: 8px;
+  margin-left: 16px;
+  margin-top: 20px;
+  -webkit-animation-name: mibounceleft;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-play-state: paused;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+  animation-name: mibounceleft;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none; }
+
+.ampliar:hover {
+  color: #d5c68d;
+  padding-left: 20px; }
+
+.ampliar:hover:before {
+  animation-play-state: running; }
+
+@keyframes mibounceleft {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(-6px, 0);
+    animation-timing-function: ease-out; }
+  100% {
+    transform: translate(0, 0);
+    animation-timing-function: ease-in; } }
+
 /*--- B O T Ó N   P R I M A R I O  |  COLOR-3 ---*/
 .btn-primary {
   color: white;
@@ -328,10 +384,22 @@ ul.navbar-nav > li > a.active {
 
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
 .quote {
-  font-family: HelveticaNoue37ThinOblique; }
+  font-family: HelveticaNoue37ThinOblique;
+  /* font-family: Georgia,serif; */
+  color: #917e4b;
+  letter-spacing: 1px; }
 
 .quote:before {
-  content: " "; }
+  content: "“";
+  font-family: HelveticaNoue;
+  color: #d5c68d;
+  font-weight: 600; }
+
+.quote:after {
+  content: "”";
+  font-family: HelveticaNoue;
+  color: #d5c68d;
+  font-weight: 600; }
 
 .kerning {
   letter-spacing: 8px; }
@@ -11511,6 +11579,94 @@ ul.bxslider {
   width: 100%;
   height: 100%; }
 
+/* Slider */
+.slick-slide {
+  margin: 0px 20px; }
+
+.slick-slide img {
+  width: 100%; }
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+.slick-list:focus {
+  outline: none; }
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block; }
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: ''; }
+
+.slick-track:after {
+  clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide img {
+  display: block; }
+
+.slick-slide.slick-loading img {
+  display: none; }
+
+.slick-slide.dragging img {
+  pointer-events: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 .Auth-contenedor {
   width: 80%;
   display: -moz-flex;
@@ -12344,6 +12500,12 @@ ul.bxslider {
 .bgcolor-3 {
   background: #cebe98; }
 
+.color-3light {
+  color: #e5d8bd; }
+
+.bgcolor-3light {
+  background: #e5d8bd; }
+
 .color-3superlight {
   color: #f1e7d2; }
 
@@ -12440,6 +12602,7 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .space-bottom {
   padding-bottom: 40px; }
 
+/*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section2 {
   min-height: 600px; }
 
@@ -12494,6 +12657,56 @@ como por ejemplo un carousel de imágenes de header---*/
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  B O T Ó N   A M P L I A R
+(para todos esos links de "ver más") con triángulo */
+.ampliar {
+  color: #917e4b;
+  padding-left: 16px;
+  line-height: 4;
+  transition: all .3s ease; }
+
+.ampliar:before {
+  left: 0;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #d5c68d;
+  border-width: 8px;
+  margin-left: 16px;
+  margin-top: 20px;
+  -webkit-animation-name: mibounceleft;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-play-state: paused;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+  animation-name: mibounceleft;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none; }
+
+.ampliar:hover {
+  color: #d5c68d;
+  padding-left: 20px; }
+
+.ampliar:hover:before {
+  animation-play-state: running; }
+
+@keyframes mibounceleft {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(-6px, 0);
+    animation-timing-function: ease-out; }
+  100% {
+    transform: translate(0, 0);
+    animation-timing-function: ease-in; } }
+
 /*--- B O T Ó N   P R I M A R I O  |  COLOR-3 ---*/
 .btn-primary {
   color: white;
@@ -12671,7 +12884,7 @@ ul.text-slide a:hover li h4 {
   position: relative;
   height: 100%;
   width: 100%;
-  left: 6px; }
+  left: 20px; }
 
 @media (min-width: 1182px) and (max-width: 1266px) {
   .puzzle-box-square-container {
@@ -13545,8 +13758,12 @@ escritura de código)---*/
 
 /* contornos del logo (GT) en color gris, un poquito más claritos que color-2, tirados hacia la izquierda */
 .puzzle-section-bg-decoration-outlines {
-  background: #302a26 url("../../imagenes/Img/bg_decoration_outlines.png") left no-repeat;
-  background-size: auto 100%; }
+  background: #302a26; }
+
+@media (min-width: 992px) {
+  .puzzle-section-bg-decoration-outlines {
+    background: #302a26 url("../../imagenes/Img/bg_decoration_outlines.png") left no-repeat;
+    background-size: auto 100%; } }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -13804,10 +14021,22 @@ ul.navbar-nav > li > a.active {
 
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
 .quote {
-  font-family: HelveticaNoue37ThinOblique; }
+  font-family: HelveticaNoue37ThinOblique;
+  /* font-family: Georgia,serif; */
+  color: #917e4b;
+  letter-spacing: 1px; }
 
 .quote:before {
-  content: " "; }
+  content: "“";
+  font-family: HelveticaNoue;
+  color: #d5c68d;
+  font-weight: 600; }
+
+.quote:after {
+  content: "”";
+  font-family: HelveticaNoue;
+  color: #d5c68d;
+  font-weight: 600; }
 
 .kerning {
   letter-spacing: 8px; }

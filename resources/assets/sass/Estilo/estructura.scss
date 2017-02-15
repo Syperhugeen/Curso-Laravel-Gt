@@ -88,6 +88,8 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .space-bottom{
   padding-bottom:40px;
 }
+
+/*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section2{
   min-height: 600px;
 }

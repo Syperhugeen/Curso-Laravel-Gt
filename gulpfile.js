@@ -33,6 +33,7 @@ elixir(function(mix) {
         'Plug-validator-Boostrap.js',
         'Plug-texarea-Te_v1.js',
         'Plug-bootstrap-fileinput v4.3.7.js',
+        'Plug-slick.min.js',
         'inicio.js',
         'mis-animations.js',
         'mis-funciones_personalizadas.js',

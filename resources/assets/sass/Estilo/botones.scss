@@ -5,6 +5,67 @@
 
 
 
+
+/*  B O T Ó N   A M P L I A R
+(para todos esos links de "ver más") con triángulo */
+.ampliar {
+  color: $color-3dark;
+  padding-left: 16px;
+  line-height:4;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.ampliar:before{
+  left: 0;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: $color-1;
+  border-width: 8px;
+  margin-left:16px;
+  margin-top:20px;
+  -webkit-animation-name: mibounceleft;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-play-state: paused;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: none;
+  animation-name: mibounceleft;
+  animation-duration: 0.5s;
+  animation-play-state: paused;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+}
+.ampliar:hover {
+  color: $color-1;
+  padding-left: 20px;
+}
+.ampliar:hover:before{
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+@-webkit-keyframes mibounceleft {
+  0% {-webkit-transform:translate(0, 0);}
+  50% {-webkit-transform:translate(-8px, 0);-webkit-animation-timing-function:ease-out;}
+  100% {-webkit-transform:translate(0, 0);-webkit-animation-timing-function:ease-in;}
+}
+@keyframes mibounceleft {
+  0% {transform:translate(0, 0);}
+  50% {transform:translate(-6px, 0);animation-timing-function:ease-out;}
+  100% {transform:translate(0, 0);animation-timing-function:ease-in;}
+}
+
+
+
+
+
+
+
 /*--- B O T Ó N   P R I M A R I O  |  COLOR-3 ---*/
 .btn-primary {
   color: $color-white;
@@ -47,6 +108,8 @@
   border-color: $color-3;
   outline:none;
 }
+
+
 
 
 

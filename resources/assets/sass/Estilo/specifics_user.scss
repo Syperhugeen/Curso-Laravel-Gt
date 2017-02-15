@@ -133,9 +133,12 @@ escritura de código)---*/
 
 /* contornos del logo (GT) en color gris, un poquito más claritos que color-2, tirados hacia la izquierda */
 .puzzle-section-bg-decoration-outlines{
+  background: $color-2;
+}
+@media (min-width:992px) {.puzzle-section-bg-decoration-outlines{
   background: $color-2 url("../../imagenes/Img/bg_decoration_outlines.png") left no-repeat;
   background-size: auto 100%;
-}
+}}
 
 
 

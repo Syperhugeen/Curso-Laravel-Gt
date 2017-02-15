@@ -1,3 +1,34 @@
+<!--columna izquierda con texto-->
+  <div class="row">
+    <div class="col-md-2 col-md-push-1 col-lg-2 col-lg-push-2">
+
+      <!--para md y lg-->
+        <div class="puzzle-left-col-container wow puzzle-left-col-animation table-outer hidden-sm hidden-xs">
+          <div class="puzzle-left-col-content wow fadeInUp delay7 table-inner">
+            <h5 class="space-bottom">La búsqueda de la excelencia es el principal &laquo;<em>leit motiv</em>&raquo; de<span class="logo-font" style="font-weight:600;"><br>Global Target</span>.</h5>
+            <h5><span class="color-3superlight">Profesionalismo</span> y <span class="color-3superlight">constante innovación</span> a lo largo de 15 años de experiencia nos han convertido en la agencia más prestigiosa del Uruguay.</h5>
+          </div>
+        </div>
+
+        <!--para xs y sm-->
+        <div class="puzzle-responsive-top-text space-top hidden-md hidden-lg">
+          <div class="row wow fadeInUp">
+          <div class="col-xs-6"><div class="puzzle-responsive-top-text-col">
+            <h5>La búsqueda de la excelencia es el principal &laquo;<em>leit motiv</em>&raquo; de<span class="logo-font" style="font-weight:600;"> Global Target</span>.</h5>
+          </div></div>
+          <div class="col-xs-6"><div class="puzzle-responsive-top-text-col">
+            <h5><span class="color-3superlight">Profesionalismo</span> y <span class="color-3superlight">constante innovación</span> a lo largo de 15 años de experiencia nos han convertido en la agencia más prestigiosa del Uruguay.</h5>
+          </div></div>
+          </div>
+        </div>
+        <!--/termina la columna izquierda de texto-->
+    </div>
+
+
+
+<!--columna derecha con los cuadrados de puzle-->
+<div class="col-md-10 col-md-push-1 col-lg-6 col-lg-push-2">
+
 <!--para md y lg-->
 <div class="puzzle-container hidden-sm hidden-xs">
     
@@ -117,6 +148,8 @@
 
 
 
+
+
     <!--para xs y sm-->
     <div class="row space-bottom hidden-md hidden-lg">
 <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
@@ -177,3 +210,10 @@
 </div>
 
     </div>
+
+    <!--/cierro columna derecha con cuadrados de puzle-->
+</div>
+
+
+    <!--/cierro el row-->
+</div>

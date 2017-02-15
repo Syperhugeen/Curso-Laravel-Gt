@@ -180,9 +180,21 @@ ul.navbar-nav > li > a.active{
 /* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
 .quote {
   font-family: HelveticaNoue37ThinOblique;
+  /* font-family: Georgia,serif; */
+  color:$color-3dark;
+  letter-spacing: 1px;
 }
 .quote:before{
-  content:" ";
+  content:"“";
+  font-family:HelveticaNoue;
+  color:$color-1;
+  font-weight:600;
+}
+.quote:after{
+  content:"”";
+  font-family:HelveticaNoue;
+  color:$color-1;
+  font-weight:600;
 }
 .kerning{
   letter-spacing: 8px;
