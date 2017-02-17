@@ -131,14 +131,109 @@ escritura de código)---*/
 }
 
 
-/* contornos del logo (GT) en color gris, un poquito más claritos que color-2, tirados hacia la izquierda */
-.puzzle-section-bg-decoration-outlines{
-  background: $color-2;
+
+
+/*--- introducción y servicios icons (home)---*/
+/* home service icons */
+
+.home-service-col{
+  height:480px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
 }
-@media (min-width:992px) {.puzzle-section-bg-decoration-outlines{
-  background: $color-2 url("../../imagenes/Img/bg_decoration_outlines.png") left no-repeat;
-  background-size: auto 100%;
+
+.home-service-icon{
+  width:200px;
+  height:auto;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.home-service-name{
+  text-align:center;
+  position:absolute;
+  top:52%;
+  left:0;
+  width:100%;
+  margin: auto 0;
+  color: $color-3;
+  letter-spacing:8px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+@media (min-width:992px){
+  .col-sm-4:hover img.home-service-icon{
+  width:240px;
+  }
+  .col-sm-4:hover .home-service-name{
+  color: $color-3light;
+  letter-spacing: 16px;
+  font-size:150%;
 }}
+
+@media (max-width:991px){
+  .home-service-col.col-sm-4:hover{
+    -webkit-transform: translate(0, -10px);
+    -moz-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+  }
+  .col-sm-4:hover .home-service-name{
+  color: $color-3light;
+  letter-spacing: 12px;
+}}
+@media (max-width:767px){
+  .home-service-icon{
+    width:100px;}
+  .home-service-name{
+    font-size:10px;}
+  .home-service-col{
+  height:auto;}
+}
+
+.col-sm-4:hover #icon-models{
+  content: url('../../imagenes/Img/icon_service_models(light).png');
+}
+.col-sm-4:hover #icon-promotions{
+  content: url('../../imagenes/Img/icon_service_promotions(light).png');
+}
+.col-sm-4:hover #icon-events{
+  content: url('../../imagenes/Img/icon_service_events(light).png');
+}
+
+
+
+
+/*--- brands carousel (home)---*/
+.logos-carousel-row{
+  background-color: $color-3hyperlight;
+  width:100%;
+  height:300px;
+  position:absolute;
+}
+.logos-carousel-col{
+  background-color: $color-3hyperlight;
+}
+.logos-carousel-ribbon-left{
+  left:0;
+  margin-left:-5%;
+}
+.logos-carousel-ribbon-right{
+  right:0;
+  margin-right:-5%;
+}
+.logos-carousel-ribbon-left, .logos-carousel-ribbon-right{
+  position:absolute;
+  height:117%;
+  width:auto;
+  z-index: 10;
+  margin-top:-3%;
+}
+
+
 
 
 

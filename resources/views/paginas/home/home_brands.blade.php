@@ -1,28 +1,28 @@
 
 <!--row para anunciar título de las best brands y mini-link para ampliar (ver más brands)-->
-<div class="row">
+<div class="row space-top space-bottom">
+<div class="logos-carousel-row"></div>
 
-<!--columna izquierda-->
-<div class="col-md-6 home-brands-title"><!--crear la clase home-brands-title-->
-<div><h1 class="quote">Nuestro prestigio<br>yace en la grandeza<br>de aquellos que<br>nos eligen.</h1></div>
-<div><h5 class="ampliar">ver todas las marcas</h5></div>
+<!--ribbon bolt of cloth (red or golden)-->
+<div class="col-md-4 col-md-push-1 text-center space-bottom wow fadeInUp delay1">
+<div><h1 class="quote">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h1></div>
 </div>
 
-<div class="col-md-6 home-brands-title">
-	<div class="row">
-		<div class="container">
-			<section class="customer-logos slider">
-				<div class="slide"><img src="imagenes/Img/icon_airplane(brown).png"></div>
-				<div class="slide"><img src="imagenes/Img/icon_enlaces(brown).png"></div>
-				<div class="slide"><img src="imagenes/Img/icon_handshake(brown).png"></div>
-				<div class="slide"><img src="imagenes/Img/icon_sign(vanilla).png"></div>
-				<div class="slide"><img src="imagenes/Img/icon_team(vanilla).png"></div>
-				<div class="slide"><img src="imagenes/Img/icon_world(vanilla).png"></div>
-				<div class="slide"><img src="imagenes/Img/icon_portfolio(vanilla).png"></div>
-				<div class="slide"><img src="imagenes/Img/icon_graphics(brown).png"></div>
-			</section>
-		</div>
-	</div>
+
+<div class="col-md-6 col-md-push-1 logos-carousel-col">
+	<img class="logos-carousel-ribbon-left" src="imagenes/Img/detail_ribbon_left.png">
+	<img class="logos-carousel-ribbon-right" src="imagenes/Img/detail_ribbon_right.png">
+	<section class="customer-logos slider wow fadeInUp delay1b">
+		<div class="slide"><img src="imagenes/Img/icon_airplane(brown).png"></div>
+		<div class="slide"><img src="imagenes/Img/icon_enlaces(brown).png"></div>
+		<div class="slide"><img src="imagenes/Img/icon_handshake(brown).png"></div>
+		<div class="slide"><img src="imagenes/Img/icon_sign(vanilla).png"></div>
+		<div class="slide"><img src="imagenes/Img/icon_team(vanilla).png"></div>
+		<div class="slide"><img src="imagenes/Img/icon_world(vanilla).png"></div>
+		<div class="slide"><img src="imagenes/Img/icon_portfolio(vanilla).png"></div>
+		<div class="slide"><img src="imagenes/Img/icon_graphics(brown).png"></div>
+	</section>
+	<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todas las marcas</h5>
 </div>
 
 <!-- /row-->
@@ -31,21 +31,12 @@
 
 
 
-<!--este row es para el slider, probablemente le quite la clase "row", pero por ahora la dejo para acordarme-->
-<div class="row">
-
-<!--slider de los logos de las marcas (clientes) más prestigiosas-->
-<div>
-</div>
-
-<!--/cierra el row-->
-</div>
 
 
 
 
 
-
+<!-- ESTO E VA A BORRAR, POR AHORA LO VOY GUARDANDO ACÁ-->
 
 <!--text slide vertical, lo dejo acá mientras decido donde irá-->
 <div class="text-slide-container">

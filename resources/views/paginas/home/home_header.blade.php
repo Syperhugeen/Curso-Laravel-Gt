@@ -13,7 +13,7 @@
   <div style="position:relative;">
     <div class="row">
       <div class="col-centered">
-          <div class="header-frase"></div>
+          <div class="header-frase wow fadeInUp"></div>
       </div>
     </div>
   </div>

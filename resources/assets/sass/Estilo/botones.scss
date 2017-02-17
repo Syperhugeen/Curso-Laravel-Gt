@@ -10,24 +10,15 @@
 (para todos esos links de "ver más") con triángulo */
 .ampliar {
   color: $color-3dark;
+  /* text-transform:uppercase; */
   padding-left: 16px;
   line-height:4;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
 }
-.ampliar:before{
-  left: 0;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-left-color: $color-1;
-  border-width: 8px;
-  margin-left:16px;
-  margin-top:20px;
+.ampliar span.glyphicon{
+  color: $color-1;
   -webkit-animation-name: mibounceleft;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-play-state: paused;
@@ -45,7 +36,7 @@
   color: $color-1;
   padding-left: 20px;
 }
-.ampliar:hover:before{
+.ampliar:hover span.glyphicon{
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }

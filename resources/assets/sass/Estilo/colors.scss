@@ -100,6 +100,9 @@ $color-black:black; /*misma razón, pero para el negro */
 .color-2{color:$color-2;}
 .bgcolor-2{background:$color-2;}
 
+.color-2light{color:$color-2light;}
+.bgcolor-2light{background:$color-2light;}
+
 .color-3{color:$color-3;}
 .bgcolor-3{background:$color-3;}
 
@@ -110,7 +113,14 @@ $color-black:black; /*misma razón, pero para el negro */
 .bgcolor-3superlight{background:$color-3superlight;}
 
 
-
+/* background colors con img decorativa (outlines del Logo o patrones) */
+.bgdecoratedcolor-2{
+  background: $color-2;
+}
+@media (min-width:992px) {.bgdecoratedcolor-2{
+  background: $color-2 url("../../imagenes/Img/bg_decorated_color-2.png") left no-repeat;
+  background-size: auto 100%;
+}}
 
 
 

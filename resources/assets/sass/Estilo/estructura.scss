@@ -90,8 +90,10 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 }
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
+#section0{
+  border-bottom: 5px solid $color-3;
+}
 #section2{
-  min-height: 600px;
 }
 $section3-altura:800px;
 #section3{
@@ -121,7 +123,7 @@ $section3-altura:800px;
 /*--- DESTACADO --- | luego agregar diferentes clases de destacado, usando diferentes colores y diseños*/
 .destacado{
   padding:5px 0 5px 30px;
-  border-left:10px solid $color-3;
+  border-left:4px solid $color-3;
 }
 
 /*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/
@@ -153,4 +155,16 @@ como por ejemplo un carousel de imágenes de header---*/
   .super-xs-hidden{
     display:block;
   }
+}
+
+
+
+
+/* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1000;
+    content:url('../../imagenes/Img/icon_service_models(light).png')
+            url('../../imagenes/Img/icon_service_promotions(light).png')
+            url('../../imagenes/Img/icon_service_events(light).png')
+            url('../../imagenes/Img/icon_service_(light).png');
 }

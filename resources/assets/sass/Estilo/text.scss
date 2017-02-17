@@ -107,6 +107,15 @@ a:hover, a:focus, a>p:hover, a>p:focus{
 
 
 
+/* ------------------------------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------*/
+/* * * * *    P E R S O N A L I Z A N D O   T E X T O S     * * * * */
+/* * * * *         D E   L A S   S E C C I O N E S         * * * * */
+/* * * * * * *  son generales, por eso no van en specifics_user * * * * * * */
+
+
+
 /* L I N K s  N A V B A R */
 ul.navbar-nav > li > a {
   font-family: Champagne;
@@ -121,6 +130,7 @@ ul.navbar-nav > li > a :focus{
 ul.navbar-nav > li > a.active{
   color: $color-3light;
 }
+
 
 
 
@@ -177,24 +187,39 @@ ul.navbar-nav > li > a.active{
 
 
 
-/* M I S   C L A S E S   P E R S O N A L I Z A D A S  (categorías de texto que se repetirán) */
+
+
+/* ------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* ------------------------------------------------------------------*/
+/* * * * *   M I S   C L A S E S   P E R S O N A L I Z A D A S    * * * * */
+/* * * * * * *  categorías de texto que se repetirán * * * * * * */
+
+
+
 .quote {
   font-family: HelveticaNoue37ThinOblique;
-  /* font-family: Georgia,serif; */
   color:$color-3dark;
   letter-spacing: 1px;
+  line-height:60px;
 }
 .quote:before{
   content:"“";
   font-family:HelveticaNoue;
   color:$color-1;
   font-weight:600;
+  font-size:120%;
 }
 .quote:after{
   content:"”";
   font-family:HelveticaNoue;
   color:$color-1;
   font-weight:600;
+  font-size:120%;
 }
 .kerning{
   letter-spacing: 8px;
@@ -208,10 +233,49 @@ ul.navbar-nav > li > a.active{
 
 
 
+/* ------------------------------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------*/
+/* * * * *    V  I  S  U  A  L     E  F  F  E  C  T  S    * * * * */
+/* * * * * * *  algunos FX para meterle onda al texto  * * * * * * */
+
+
+
+/* * * * *   E F E C T O   D E   3D (texto con volúmen)   * * * * */
+.text-fx-3d{
+text-shadow: 0 1px 0 #ccc, 
+             0 2px 0 #c9c9c9,
+             0 3px 0 #bbb,
+             0 4px 0 #b9b9b9,
+             0 5px 0 #aaa,
+             0 6px 1px rgba(0,0,0,.1),
+             0 0 5px rgba(0,0,0,.1),
+             0 1px 3px rgba(0,0,0,.3),
+             0 3px 5px rgba(0,0,0,.2),
+             0 5px 10px rgba(0,0,0,.25),
+             0 10px 10px rgba(0,0,0,.2),
+             0 20px 20px rgba(0,0,0,.15);
+}
+
+/* * * * *   E F E C T O   D E   P R O F U N D I D A D (hundido sobre el background)   * * * * */
+.text-fx-inset{
+  background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255,255,255,0.3) 0px 3px 3px, rgba(0,0,0,0.2) 0px -3px 2px;
+}
 
 
 
 
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------*/
 /* Q U É  E S   E S T O ?   N I   I D E A */
 textarea{ /* para qué era esto mauri??? */
   word-break: break-all;
