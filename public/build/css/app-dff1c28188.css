@@ -89,6 +89,12 @@
 .bgcolor-3 {
   background: #cebe98; }
 
+.color-3dark {
+  color: #917e4b; }
+
+.bgcolor-3dark {
+  background: #917e4b; }
+
 .color-3light {
   color: #e5d8bd; }
 
@@ -315,7 +321,7 @@ a:hover, a:focus, a > p:hover, a > p:focus {
   color: #e5d8bd; }
 
 /* R E S P O N S I V E - @media settings */
-@media (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   p {
     font-size: 12px; }
   h1 {
@@ -330,6 +336,22 @@ a:hover, a:focus, a > p:hover, a > p:focus {
     font-size: 13px; }
   h6 {
     font-size: 11px; } }
+
+@media (max-width: 449px) {
+  p {
+    font-size: 10px; }
+  h1 {
+    font-size: 24px; }
+  h2 {
+    font-size: 20px; }
+  h3 {
+    font-size: 15px; }
+  h4 {
+    font-size: 12px; }
+  h5 {
+    font-size: 11px; }
+  h6 {
+    font-size: 10px; } }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------*/
@@ -12539,6 +12561,12 @@ ul.bxslider {
 .bgcolor-3 {
   background: #cebe98; }
 
+.color-3dark {
+  color: #917e4b; }
+
+.bgcolor-3dark {
+  background: #917e4b; }
+
 .color-3light {
   color: #e5d8bd; }
 
@@ -12614,7 +12642,7 @@ body {
     margin-top: -68px; } }
 
 /* S E C C I O N E S  d e  C A D A  P Á G I N A */
-/* SECTIONS #IDs */
+/* S E C T I O N S   # I D s */
 /*---escribir aquí las #id de las secciones para que el desplazamiento de los links hacia las secciones sean precisas---*/
 #section1,
 #section2,
@@ -12631,6 +12659,8 @@ body {
   #section4 {
     /* padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs; */ } }
 
+/* S E C T I O N   W R A P P E R S */
+/*escribir aquí el padding (superior e inferior) de cada sección dentro de una pág*/
 /*---WRAPPER para envolver cada sección dentro de cada página; esta clase se le adjudica
 al container-fluid que adentro contiene los rows y las columns que agregan los márgenes laterales---*/
 .section-wrapper {
@@ -12653,6 +12683,10 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section0 {
   border-bottom: 5px solid #cebe98; }
+
+@media (min-width: 992px) {
+  #section2 {
+    height: 400px; } }
 
 #section3 {
   min-height: 800px; }
@@ -12919,9 +12953,10 @@ ul.text-slide a:hover li h4 {
 /* * * S Q U A R E   P U Z Z L E  * * *
 (shown icon and hidden content on hover)*/
 /*los cuadrados tendrán esta medida de width y de height*/
-/*escribir el doble del valor anterior (medida)*/
-/*escribir 3/4 del doble */
+/*se calcula el doble del valor anterior (medida)*/
+/*se calculan 3/4 del doble */
 /*escribir la medida del width y height para xs */
+/*espacio entre el perímetro de cada cuadradito y su contenido (icono o textito)*/
 /* de momento no estoy usando la animation-main, en su lugar usé fadeInRight porque la entrada vertical no está funcionando*/
 /* demora de la columna izquierda en aparecer*/
 .puzzle-container {
@@ -13252,56 +13287,179 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
     top: 0;
     animation-timing-function: ease; } }
 
+/* * * * * * * * * * * * * * *    C S S   R I B B O N S    * * * * * * * * * * * * * * */
+/* * *   R I B B O N   * * *
+(css ribbons that use z-index)*/
+/* example of use:
+
+  <div class="non-semantic-protector"> <---para cuidar que el z-index del parent no cague todo
+    <h1 class="ribbon">
+       <strong class="ribbon-content"> Texto aquí </strong>
+    </h1>
+  </div>
+
+*/
+.ribbon {
+  font-size: 16px !important;
+  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+  width: 50%;
+  position: relative;
+  background: #ba89b6;
+  color: #fff;
+  text-align: center;
+  padding: 1em 2em;
+  /* Adjust to suit */
+  margin: 2em auto 3em;
+  /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */ }
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #986794;
+  z-index: -1; }
+
+.ribbon:before {
+  left: -2em;
+  border-right-width: 1.5em;
+  border-left-color: transparent; }
+
+.ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent; }
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #804f7c transparent transparent transparent;
+  bottom: -1em; }
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 1em 0 0 1em; }
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 1em 1em 0 0; }
+
+.non-semantic-protector {
+  position: relative;
+  z-index: 1; }
+
+/* * *   C O R N E R   R I B B O N   * * *
+(para etiquetar divs, como clientes premium por antigüedad > 10 años)*/
+/* ejemplo:
+
+    <div>
+        <div class="ribbon-corner"><span>ANTIGÜEDAD</span></div>
+    </div>
+*/
+.ribbon-corner {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right; }
+
+.ribbon-corner span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#2989D8 0%, #1e5799 100%);
+  box-shadow: 0 3px 10px -5px black;
+  position: absolute;
+  top: 19px;
+  left: -21px; }
+
+.ribbon-corner span::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #1e5799;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1e5799; }
+
+.ribbon-corner span::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #1e5799;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1e5799; }
+
+/* vertical attached RIBBON */
 /*   *   *   *    D  E  L  A  Y  S    *   *   *   */
 /* Delay for transformations, tienen que estar al final
 para suplantar las duraciones originales leídas antes */
+/*insertar el valor por el cual se calcularán los múltiplos*/
 .delay1 {
   /* Chrome, Safari, Opera */
-  animation-delay: 0.5s; }
+  animation-delay: 0.25s; }
 
 .delay1b {
   /* Chrome, Safari, Opera */
-  animation-delay: 0.75s; }
+  animation-delay: 0.5s; }
 
 .delay2 {
   /* Chrome, Safari, Opera */
-  animation-delay: 1s; }
+  animation-delay: 0.75s; }
 
 .delay2b {
   /* Chrome, Safari, Opera */
-  animation-delay: 1.25s; }
+  animation-delay: 1s; }
 
 .delay3 {
   /* Chrome, Safari, Opera */
-  animation-delay: 1.5s; }
+  animation-delay: 1.25s; }
 
 .delay3b {
   /* Chrome, Safari, Opera */
-  animation-delay: 1.75s; }
+  animation-delay: 1.5s; }
 
 .delay4 {
   /* Chrome, Safari, Opera */
-  animation-delay: 2s; }
+  animation-delay: 1.75s; }
 
 .delay4b {
   /* Chrome, Safari, Opera */
-  animation-delay: 2.25s; }
+  animation-delay: 2s; }
 
 .delay5 {
   /* Chrome, Safari, Opera */
-  animation-delay: 2.5s; }
+  animation-delay: 2.25s; }
 
 .delay5b {
   /* Chrome, Safari, Opera */
-  animation-delay: 2.75s; }
+  animation-delay: 2.5s; }
 
 .delay6 {
   /* Chrome, Safari, Opera */
-  animation-delay: 3s; }
+  animation-delay: 2.75s; }
 
 .delay7 {
   /* Chrome, Safari, Opera */
-  animation-delay: 3.5s; }
+  animation-delay: 3s; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  *		N A V I G A T I O N   B A R     (ADMIN)      *
@@ -13859,29 +14017,16 @@ escritura de código)---*/
   content: url("../../imagenes/Img/icon_service_events(light).png"); }
 
 /*--- brands carousel (home)---*/
-.logos-carousel-row {
-  background-color: #f8f1e3;
-  width: 100%;
-  height: 300px;
-  position: absolute; }
-
-.logos-carousel-col {
-  background-color: #f8f1e3; }
-
-.logos-carousel-ribbon-left {
-  left: 0;
-  margin-left: -5%; }
-
-.logos-carousel-ribbon-right {
-  right: 0;
-  margin-right: -5%; }
-
-.logos-carousel-ribbon-left, .logos-carousel-ribbon-right {
+.destacado-pliegues {
+  /*luego pasar a mis_recursos*/
   position: absolute;
-  height: 117%;
-  width: auto;
+  top: -40px;
+  margin-top: -20px;
+  height: 440px;
+  background: #302a26 url("../../imagenes/Img/ribbon_pergamino_brown.png") center center;
+  background-size: cover;
   z-index: 10;
-  margin-top: -3%; }
+  overflow: visible; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -14064,7 +14209,7 @@ a:hover, a:focus, a > p:hover, a > p:focus {
   color: #e5d8bd; }
 
 /* R E S P O N S I V E - @media settings */
-@media (max-width: 767px) {
+@media (min-width: 450px) and (max-width: 767px) {
   p {
     font-size: 12px; }
   h1 {
@@ -14079,6 +14224,22 @@ a:hover, a:focus, a > p:hover, a > p:focus {
     font-size: 13px; }
   h6 {
     font-size: 11px; } }
+
+@media (max-width: 449px) {
+  p {
+    font-size: 10px; }
+  h1 {
+    font-size: 24px; }
+  h2 {
+    font-size: 20px; }
+  h3 {
+    font-size: 15px; }
+  h4 {
+    font-size: 12px; }
+  h5 {
+    font-size: 11px; }
+  h6 {
+    font-size: 10px; } }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------*/

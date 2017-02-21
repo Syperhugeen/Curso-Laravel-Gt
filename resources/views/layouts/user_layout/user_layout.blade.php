@@ -74,7 +74,7 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.customer-logos').slick({
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1000,

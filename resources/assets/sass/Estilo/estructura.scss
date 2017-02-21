@@ -49,7 +49,7 @@ $altura-footer-columns:200px;
 /* S E C C I O N E S  d e  C A D A  P Á G I N A */
 
 
-/* SECTIONS #IDs */
+/* S E C T I O N S   # I D s */
 
 /*---escribir aquí las #id de las secciones para que el desplazamiento de los links hacia las secciones sean precisas---*/
 #section1,
@@ -68,33 +68,41 @@ $altura-footer-columns:200px;
 }}
 
 
+ /* S E C T I O N   W R A P P E R S */
+$padding-section-wrapper:40px; /*escribir aquí el padding (superior e inferior) de cada sección dentro de una pág*/
+
 /*---WRAPPER para envolver cada sección dentro de cada página; esta clase se le adjudica
 al container-fluid que adentro contiene los rows y las columns que agregan los márgenes laterales---*/
 .section-wrapper{ /*envolvente de cada sección de cada página*/
-  padding-top:40px;
-  padding-bottom:40px;
+  padding-top:$padding-section-wrapper;
+  padding-bottom:$padding-section-wrapper;
 }
 .section-wrapper-footer{ /*envolvente sólo para el footer, con menor padding abajo*/
-  padding-top:40px;
-  padding-bottom:20px;
+  padding-top:$padding-section-wrapper;
+  padding-bottom:$padding-section-wrapper / 2;
 }
-
-
-
 /*---para agregarle espaciado entre rows o items acorde a mi criterio (¡no aplicar a sections, porque ya tienen padding)---*/
 .space-top{
-  padding-top:40px;
+  padding-top:$padding-section-wrapper;
 }
 .space-bottom{
-  padding-bottom:40px;
+  padding-bottom:$padding-section-wrapper;
 }
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section0{
   border-bottom: 5px solid $color-3;
 }
+
+$section2-altura:400px;
 #section2{
 }
+@media (min-width:992px){
+  #section2{
+    height: $section2-altura;
+  }
+}
+
 $section3-altura:800px;
 #section3{
   min-height: $section3-altura;

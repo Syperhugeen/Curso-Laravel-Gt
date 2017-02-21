@@ -208,30 +208,19 @@ escritura de código)---*/
 
 
 /*--- brands carousel (home)---*/
-.logos-carousel-row{
-  background-color: $color-3hyperlight;
-  width:100%;
-  height:300px;
-  position:absolute;
-}
 .logos-carousel-col{
-  background-color: $color-3hyperlight;
 }
-.logos-carousel-ribbon-left{
-  left:0;
-  margin-left:-5%;
-}
-.logos-carousel-ribbon-right{
-  right:0;
-  margin-right:-5%;
-}
-.logos-carousel-ribbon-left, .logos-carousel-ribbon-right{
+.destacado-pliegues{ /*luego pasar a mis_recursos*/
   position:absolute;
-  height:117%;
-  width:auto;
-  z-index: 10;
-  margin-top:-3%;
+  top:-40px;
+  margin-top:-20px;
+  height:$section2-altura + 40;
+  background:$color-2 url('../../imagenes/Img/ribbon_pergamino_brown.png') center center;
+  background-size: cover;
+  z-index:10;
+  overflow:visible;
 }
+
 
 
 

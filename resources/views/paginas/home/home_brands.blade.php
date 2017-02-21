@@ -1,18 +1,17 @@
-
 <!--row para anunciar título de las best brands y mini-link para ampliar (ver más brands)-->
-<div class="row space-top space-bottom">
-<div class="logos-carousel-row"></div>
+<div class="row space-bottom">
 
 <!--ribbon bolt of cloth (red or golden)-->
-<div class="col-md-4 col-md-push-1 text-center space-bottom wow fadeInUp delay1">
+<div class="col-md-3 col-md-push-2  hidden-xs hidden-sm text-center">
+<div class="destacado-pliegues"><h1 class="quote">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h1></div>
+</div>
+
+<div class="col-sm-10 col-sm-push-1 hidden-md hidden-lg text-center space-bottom">
 <div><h1 class="quote">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h1></div>
 </div>
 
-
-<div class="col-md-6 col-md-push-1 logos-carousel-col">
-	<img class="logos-carousel-ribbon-left" src="imagenes/Img/detail_ribbon_left.png">
-	<img class="logos-carousel-ribbon-right" src="imagenes/Img/detail_ribbon_right.png">
-	<section class="customer-logos slider wow fadeInUp delay1b">
+<div class="col-xs-12 logos-carousel-col"><!--logos slider-->
+	<section class="customer-logos slider">
 		<div class="slide"><img src="imagenes/Img/icon_airplane(brown).png"></div>
 		<div class="slide"><img src="imagenes/Img/icon_enlaces(brown).png"></div>
 		<div class="slide"><img src="imagenes/Img/icon_handshake(brown).png"></div>
@@ -22,6 +21,9 @@
 		<div class="slide"><img src="imagenes/Img/icon_portfolio(vanilla).png"></div>
 		<div class="slide"><img src="imagenes/Img/icon_graphics(brown).png"></div>
 	</section>
+</div>
+
+<div class="col-xs-12"><!-- ver más / ampliar / explorar -->
 	<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todas las marcas</h5>
 </div>
 

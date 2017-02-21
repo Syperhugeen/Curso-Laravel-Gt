@@ -32,7 +32,7 @@
 </div>
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper bgcolor-2" id="section2">
+<div class="container-fluid section-wrapper bgcolor-3light" id="section2">
       <div>
        @include('paginas.home.home_brands')
       </div>

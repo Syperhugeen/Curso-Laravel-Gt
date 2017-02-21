@@ -191,11 +191,11 @@ ul.text-slide a:hover li h4{
 (shown icon and hidden content on hover)*/
 
 $puzzle-box-medida:200px; /*los cuadrados tendrán esta medida de width y de height*/
-$puzzle-box-doble-medida:400px; /*escribir el doble del valor anterior (medida)*/
-$puzzle-box-trescuartos-doble-medida:300px; /*escribir 3/4 del doble */
+$puzzle-box-doble-medida: $puzzle-box-medida * 2; /*se calcula el doble del valor anterior (medida)*/
+$puzzle-box-trescuartos-doble-medida: $puzzle-box-doble-medida * 0.75; /*se calculan 3/4 del doble */
 $responsive-puzzle-box: 100%; /*escribir la medida del width y height para xs */
 
-$puzzle-padding: 40px;
+$puzzle-padding: 40px; /*espacio entre el perímetro de cada cuadradito y su contenido (icono o textito)*/
 $responsive-puzzle-padding: 10px;
 
 $puzzle-box-animations-duration:1.5s;
@@ -564,6 +564,145 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
 
 
 
+/* * * * * * * * * * * * * * *    C S S   R I B B O N S    * * * * * * * * * * * * * * */ 
+
+
+
+/* * *   R I B B O N   * * *
+(css ribbons that use z-index)*/
+
+/* example of use:
+
+  <div class="non-semantic-protector"> <---para cuidar que el z-index del parent no cague todo
+    <h1 class="ribbon">
+       <strong class="ribbon-content"> Texto aquí </strong>
+    </h1>
+  </div>
+
+*/
+
+.ribbon {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+    
+ position: relative;
+ background: #ba89b6;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #986794;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #804f7c transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+.non-semantic-protector { position: relative; z-index: 1; }
+
+
+
+
+
+
+
+/* * *   C O R N E R   R I B B O N   * * *
+(para etiquetar divs, como clientes premium por antigüedad > 10 años)*/
+
+/* ejemplo:
+
+    <div>
+        <div class="ribbon-corner"><span>ANTIGÜEDAD</span></div>
+    </div>
+*/
+
+.ribbon-corner {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon-corner span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#2989D8 0%, #1e5799 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon-corner span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #1e5799;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1e5799;
+}
+.ribbon-corner span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #1e5799;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1e5799;
+}
+
+
+
+
+
+
+
+
+/* vertical attached RIBBON */
+
+
+
+
+
 
 
 
@@ -575,51 +714,53 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
 /* Delay for transformations, tienen que estar al final
 para suplantar las duraciones originales leídas antes */
 
+$delay-value:0.25s; /*insertar el valor por el cual se calcularán los múltiplos*/
+
 .delay1{
-  -webkit-animation-delay: 0.5s; /* Chrome, Safari, Opera */
-    animation-delay: 0.5s;
+  -webkit-animation-delay: $delay-value; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value;
 }
 .delay1b{
-  -webkit-animation-delay: 0.75s; /* Chrome, Safari, Opera */
-    animation-delay: 0.75s;
+  -webkit-animation-delay: $delay-value * 2; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 2;
 }
 .delay2{
-  -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-    animation-delay: 1s;
+  -webkit-animation-delay: $delay-value * 3; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 3;
 }
 .delay2b{
-  -webkit-animation-delay: 1.25s; /* Chrome, Safari, Opera */
-    animation-delay: 1.25s;
+  -webkit-animation-delay: $delay-value * 4; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 4;
 }
 .delay3{
-  -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
-    animation-delay: 1.5s;
+  -webkit-animation-delay: $delay-value * 5; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 5;
 }
 .delay3b{
-  -webkit-animation-delay: 1.75s; /* Chrome, Safari, Opera */
-    animation-delay: 1.75s;
+  -webkit-animation-delay: $delay-value * 6; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 6;
 }
 .delay4{
-  -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
-    animation-delay: 2s;
+  -webkit-animation-delay: $delay-value * 7; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 7;
 }
 .delay4b{
-  -webkit-animation-delay: 2.25s; /* Chrome, Safari, Opera */
-    animation-delay: 2.25s;
+  -webkit-animation-delay: $delay-value * 8; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 8;
 }
 .delay5{
-  -webkit-animation-delay: 2.5s; /* Chrome, Safari, Opera */
-    animation-delay: 2.5s;
+  -webkit-animation-delay: $delay-value * 9; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 9;
 }
 .delay5b{
-  -webkit-animation-delay: 2.75s; /* Chrome, Safari, Opera */
-    animation-delay: 2.75s;
+  -webkit-animation-delay: $delay-value * 10; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 10;
 }
 .delay6{
-  -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
-    animation-delay: 3s;
+  -webkit-animation-delay: $delay-value * 11; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 11;
 }
 .delay7{
-    -webkit-animation-delay: 3.5s; /* Chrome, Safari, Opera */
-    animation-delay: 3.5s;
+    -webkit-animation-delay: $delay-value * 12; /* Chrome, Safari, Opera */
+    animation-delay: $delay-value * 12;
 }
