@@ -116,7 +116,6 @@ abstract class BaseRepo
 
 
     //setters
-
     public function setEntidadDato($Entidad,$request,$Propiedades)
     {
         foreach ($Propiedades as $Propiedad) 
@@ -131,8 +130,7 @@ abstract class BaseRepo
           }
         } 
 
-        $Entidad->save();
-     
+        $Entidad->save();     
     }
 
 
