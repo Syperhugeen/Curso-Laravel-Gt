@@ -12,6 +12,18 @@
 
 <div class="col-xs-12 logos-carousel-col"><!--logos slider-->
 	<section class="customer-logos slider">
+
+		{{-- las marcas de la base de datos --}}
+	  @foreach($Marcas as $Marca)
+		 <div class="slide"><img src="{{$Marca->url_img}}"></div>
+		@endforeach 
+
+		{{-- 
+		  *
+		  * son las imagenes que tenias de muestra te las deje muteadas 
+		  *		 
+		--}}
+
 		<div class="slide"><img src="imagenes/Img/icon_airplane(brown).png"></div>
 		<div class="slide"><img src="imagenes/Img/icon_enlaces(brown).png"></div>
 		<div class="slide"><img src="imagenes/Img/icon_handshake(brown).png"></div>
@@ -20,6 +32,7 @@
 		<div class="slide"><img src="imagenes/Img/icon_world(vanilla).png"></div>
 		<div class="slide"><img src="imagenes/Img/icon_portfolio(vanilla).png"></div>
 		<div class="slide"><img src="imagenes/Img/icon_graphics(brown).png"></div>
+
 	</section>
 </div>
 
