@@ -37,7 +37,12 @@
 </div>
 
 <div class="col-xs-12"><!-- ver más / ampliar / explorar -->
-	<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todas las marcas</h5>
+	<a href="{{route('get_pagina_marcas')}}">
+		<h5 class="ampliar text-center">
+		 <span class="glyphicon glyphicon-triangle-right"></span> 
+		  ver todas las marcas
+		</h5>
+	</a> 
 </div>
 
 <!-- /row-->

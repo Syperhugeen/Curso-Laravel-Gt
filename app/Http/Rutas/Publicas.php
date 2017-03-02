@@ -7,6 +7,8 @@ require __DIR__ . '/Proyectos/Rutas_Proyectos_Publicas.php';
 
 require __DIR__ . '/Eventos/Rutas_Eventos_Publicas.php';
 
+require __DIR__ . '/Marcas/Rutas_Marcas_Publicas.php';
+
 require __DIR__ . '/Formularios/Rutas_Formularios_Publicas.php';
 
 

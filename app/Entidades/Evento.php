@@ -29,7 +29,7 @@ class Evento extends Model
       return $this->hasMany(ImgEvento::class,'evento_id','id')->where('estado','si');
     }
 
-     public function marcasevento()
+    public function marcasevento()
     {
       return $this->hasMany(Marca_de_evento::class,'evento_id','id');
     }

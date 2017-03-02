@@ -24,7 +24,10 @@ class Marca extends Model
 
 
 
-
+    public function eventos_de_marca()
+    {
+      return $this->hasMany(Marca_de_evento::class,'marca_id','id');
+    }
 
 
     /**
@@ -55,6 +58,12 @@ class Marca extends Model
     public function getUrlImgAttribute()
     {
         return url().'/imagenes/'.$this->img;
+
+    }
+
+    public function getRouteAttribute()
+    {
+        return route('get_pagina_marca_individual',[$this->name, $this->id]);
 
     }
     

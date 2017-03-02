@@ -8,6 +8,8 @@ use App\Repositorios\ProyectoRepo;
 use Illuminate\Http\Request;
 use App\Repositorios\NoticiasRepo;
 use App\Repositorios\EmpresaRepo;
+use App\Repositorios\MarcaRepo;
+use App\Repositorios\EventoRepo;
 
 
 class Paginas_Controller extends Controller
@@ -16,23 +18,59 @@ class Paginas_Controller extends Controller
     protected $ProyectoRepo;
     protected $NoticiasRepo;
     protected $EmpresaRepo;
+    protected $MarcaRepo;
+    protected $EventoRepo;
 
     public function __construct(ImgHomeRepo  $ImgHomeRepo,
                                 ProyectoRepo $ProyectoRepo, 
                                 NoticiasRepo $NoticiasRepo,
-                                EmpresaRepo  $EmpresaRepo    )
+                                EmpresaRepo  $EmpresaRepo, 
+                                MarcaRepo    $MarcaRepo,
+                                EventoRepo   $EventoRepo   )
     {
         $this->ProyectoRepo = $ProyectoRepo;
         $this->ImgHomeRepo  = $ImgHomeRepo;
         $this->NoticiasRepo = $NoticiasRepo;
         $this->EmpresaRepo  = $EmpresaRepo;
+        $this->MarcaRepo    = $MarcaRepo;
+        $this->EventoRepo   = $EventoRepo;
     }
 
     //Contacto
     public function get_pagina_contacto()
     {
+
         return view('paginas.contacto.contacto');
     }
+
+    //pagina donde estan las marcas
+    public function get_pagina_marcas(Request $Request)
+    {
+        $Marcas = $this->MarcaRepo->getEntidadActivasPaginadas($Request,5);
+        return view('paginas.marcas.marcas', compact('Marcas'));
+    }
+        //pagina de la marca individual
+        public function get_pagina_marca_individual($id,Request $Request)
+        {
+            $Marca   = $this->MarcaRepo->find($id);
+           
+            return view('paginas.marcas.marca_individual', compact('Marca'));
+        }
+
+
+    //pagina donde estan los eventos de esa
+    public function get_pagina_eventos(Request $Request)
+    {
+        $Eventos = $this->EventoRepo->getEntidadActivasPaginadas($Request,5);
+        return view('paginas.eventos.eventos', compact('Eventos'));
+    }
+        //pagina de evento individual
+        public function get_pagina_evento_individual($id,Request $Request)
+        {
+            $Evento = $this->EventoRepo->find($id);
+            return view('paginas.evento.evento_individual', compact('Evento'));
+        }
+
 
     //Empresa
     public function get_pagina_empresa()
@@ -46,7 +84,6 @@ class Paginas_Controller extends Controller
     //servicios
     public function get_pagina_servicios()
     {
-
         return view('paginas.servicios.servicios');
     }
 

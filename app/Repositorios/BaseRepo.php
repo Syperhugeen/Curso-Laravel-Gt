@@ -75,6 +75,17 @@ abstract class BaseRepo
   
     }
 
+    /**
+     * Devuelve una coleccion de una entidad segun un atributo variable y ordenada como queramos y Paginadas.
+     */
+    public function getEntidadActivasAll_Segun_Atributo_y_Ordenadas($atributo,$valor_atributo,$orden,$paginacion)
+    {
+      return $this->entidad
+                  ->where($atributo,$valor_atributo,$orden,$paginacion)             
+                  ->orderBy('id',$orden)
+                  ->paginate($paginacion);
+    }
+
 
     /**
      * Ultimas Entidades Activas
