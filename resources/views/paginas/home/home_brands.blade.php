@@ -2,7 +2,7 @@
 <div class="row space-bottom">
 
 <!--ribbon bolt of cloth (red or golden)-->
-<div class="col-md-3 col-md-push-2 col-lg-2 col-lg-push-2 puzzle-box-index10 wow slideInLeft hidden-xs hidden-sm text-center">
+<div class="col-md-3 col-md-push-2 col-lg-2 col-lg-push-2 puzzle-box-index10 wow slideInLeft delay2b hidden-xs hidden-sm text-center">
 <div class="destacado-pliegues"><h2 class="quote">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h2></div>
 </div>
 
@@ -11,7 +11,7 @@
 </div>
 
 <div class="col-xs-12 logos-carousel-col"><!--logos slider-->
-	<section class="customer-logos slider">
+	<section class="customer-logos slider wow fadeIn delay1b">
 
 		{{-- las marcas de la base de datos --}}
 	  @foreach($Marcas as $Marca)
@@ -36,9 +36,13 @@
 	</section>
 </div>
 
-<div class="col-xs-12"><!-- ver más / ampliar / explorar -->
-	<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todas las marcas</h5>
-</div>
+	<div class="col-xs-12">
+		<div class="row"><!-- ver más / ampliar / explorar -->
+			<div class="special-col">
+				<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todas las marcas</h5>
+			</div>
+		</div>
+	</div>
 
 <!-- /row-->
 </div>

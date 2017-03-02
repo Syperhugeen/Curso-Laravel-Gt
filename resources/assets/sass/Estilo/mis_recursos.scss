@@ -24,10 +24,31 @@
 
 
 
-
-
-
-
+.decorative-divider{
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: -18px;
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  z-index: 10;
+  background-color: $color-3superlight;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+.decorative-divider > img {
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+#section1 .decorative-divider{
+  margin-top: -58px;
+  background-color: $color-3;
+}
 
 
 /* * * * *    H O V E R   F L O A T    * * * * */
@@ -526,7 +547,7 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
 .puzzle-left-col-content h5, .puzzle-left-col-content h4, .puzzle-responsive-top-text h4, .puzzle-responsive-top-text h5{
   color: $color-3;
   text-align: center;
-  font-family: Georgia, sans-serif;
+  font-family: HelveticaNoue;
   letter-spacing:1px;
   line-height:1.5;
 }

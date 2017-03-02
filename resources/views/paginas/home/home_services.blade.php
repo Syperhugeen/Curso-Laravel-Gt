@@ -1,3 +1,6 @@
+{{-- rombo divisor con el logo de GT --}}
+<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+
 <!--flecha guía hacia abajo (indicando que hay más contenido)-->
 <div class="row space-bottom hidden-xs">
 	<div class="text-center">
@@ -11,7 +14,7 @@
 <div class="row space-bottom">
 
 	<div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-6">
-		<p class="destacado color-3 text-left">Somos una agencia dedicada al rubro de <em>modelos, promociones y eventos</em>; creada en el año 2002 y en contínuo crecimiento.</p>
+		<h3 class="destacado color-3 text-left">Somos una agencia dedicada al rubro de <em><span class="color-3superlight">modelos</span>, <span class="color-3superlight">promociones</span> y <span class="color-3superlight">eventos</span>;</em> creada en el año 2002 y en contínuo crecimiento.</h3>
 	</div>
 
 <!-- /row-->

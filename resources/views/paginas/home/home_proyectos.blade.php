@@ -13,7 +13,9 @@
       @endforeach
 
 
-        <a href="{{route('get_pagina_proyecto_listado')}}"><p class="text-center"><small><span class="glyphicon glyphicon-list"></span> ver lista completa de proyectos</small></p></a>
+	<div class="col-xs-12"><!-- ver más / ampliar / explorar -->
+		<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todos los eventos</h5>
+	</div>
 
 
 </div>

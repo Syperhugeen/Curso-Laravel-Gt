@@ -53,19 +53,25 @@ $altura-footer-columns:200px;
 
 /*---escribir aquí las #id de las secciones para que el desplazamiento de los links hacia las secciones sean precisas---*/
 #section1,
-/*#section2,*/
+#section2,
 #section3,
 #section4{
-  overflow:hidden;
- /* padding-top:$navbar-altura;  margin-top:-$navbar-altura; */ /*---creo que no es necesario porque ya está indicado en el globa-wrapper---*/
+ padding-top:$navbar-altura;  margin-top:-$navbar-altura;
+ /*---creo que el padding no es necesario porque ya está indicado en el globa-wrapper---*/
 }
+
 @media (max-width:767px){
 #section1,
 #section2,
 #section3,
 #section4{
- /* padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs; */
+padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs;
 }}
+
+#section0,
+#section1{
+overflow:hidden;}
+
 
 
  /* S E C T I O N   W R A P P E R S */
@@ -90,24 +96,27 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 }
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
-#section0{
+#section0 > div{
   border-bottom: 5px solid $color-3;
 }
 
 $section2-altura:400px;
-#section2{
+#section2 > .container-fluid{
 }
 @media (min-width:992px){
-  #section2{
+  #section2 > .container-fluid{
     height: $section2-altura;
   }
 }
 
 $section3-altura:800px;
-#section3{
+#section3 > .container-fluid{
   min-height: $section3-altura;
 }
 
+#section4 > .container-fluid{
+  padding-top: 3px;
+}
 
 
 
@@ -132,6 +141,10 @@ $section3-altura:800px;
 .destacado{
   padding:5px 0 5px 30px;
   border-left:4px solid $color-3;
+}
+#section1 .destacado{
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
 }
 
 /*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/
@@ -168,11 +181,89 @@ como por ejemplo un carousel de imágenes de header---*/
 
 
 
+
+
+/* para utilizar libremente al incluír cols dentro de un row que está dentro de otra col */
+.no-padding{
+  padding:0!important;
+}
+.no-margin{
+  margin:0!important;
+}
+
+
+
+/* cols cuadradotas con fondo, minimal elegantes */
+.special-col{
+  background-color: $color-3;
+  padding: 60px;
+  border: 1px solid $color-3superlight;
+  overflow:hidden;
+}
+.special-col:hover{
+  background-color: $color-3light;
+}
+.special-col h2 {
+  font-family: Champagne;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: $color-3dark;
+}
+.special-col p {
+  font-family: HelveticaNoue;
+  font-size: 14px;
+  color: $color-2;
+}
+.special-col .ampliar {
+  color: $color-3dark;
+  font-family: HelveticaNoue37Thin;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform:uppercase;
+}
+.special-col .ampliar:hover {
+  color: $color-3;
+}
+.special-col .ampliar span.glyphicon{
+  color: $color-3superlight;
+}
+/*escribir el valor que quiero que tengan las special col de altura*/
+
+$special-col-altura: 300px;
+
+.col-xs-12.special-col{
+  height: $special-col-altura;
+}
+.col-md-6.special-col{
+  height: $special-col-altura * 2;
+}
+.col-md-6.special-col > img {
+  min-height:100%;
+  width:auto;
+}
+#section2 .col-xs-12.special-col{
+  margin-top: 40px;
+  height: $special-col-altura;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1000;
     content:url('../../imagenes/Img/icon_service_models(light).png')
             url('../../imagenes/Img/icon_service_promotions(light).png')
             url('../../imagenes/Img/icon_service_events(light).png')
-            url('../../imagenes/Img/icon_service_(light).png');
+            url('../../imagenes/Empresa/isologo_dark.png');
 }
