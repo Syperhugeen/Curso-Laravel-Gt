@@ -210,17 +210,44 @@ escritura de código)---*/
 /*--- brands carousel (home)---*/
 .logos-carousel-col{
 }
+/*asignar esta clase a un div insertado dentro de una columna*/
+/*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
 .destacado-pliegues{ /*luego pasar a mis_recursos*/
   position:absolute;
   top:-40px;
   margin-top:-20px;
-  height:$section2-altura + 40;
-  background:$color-2 url('../../imagenes/Img/ribbon_pergamino_brown.png') center center;
-  background-size: cover;
-  z-index:10;
-  overflow:visible;
+  height:$section2-altura - 60px;
+  padding: 40px 40px;
+  background:$color-2superlight;
+  z-index:1;
 }
-
+.destacado-pliegues:after {
+  content: "";
+  position: absolute;
+  height: $section2-altura + 40px;
+  width: 100%;
+  border: 100px solid $color-2superlight;
+  z-index: -1;
+  top: 0;
+  border-top-width: 20px;
+  border-bottom-color: transparent;
+  right: 0;
+}
+.destacado-pliegues:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent $color-2light transparent;
+  top: 0;
+  left: -20px;
+  border-width: 0 0 20px 20px;
+  z-index: -1;
+}
+@media (min-width:1200px){
+  .destacado-pliegues{
+    padding:10px 20px;
+  }
+}
 
 
 

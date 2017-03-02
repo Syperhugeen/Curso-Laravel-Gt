@@ -11,7 +11,7 @@
 .ampliar {
   color: $color-3dark;
   /* text-transform:uppercase; */
-  padding-left: 16px;
+  padding-left: 0px;
   line-height:4;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -34,7 +34,7 @@
 }
 .ampliar:hover {
   color: $color-1;
-  padding-left: 20px;
+  padding-left: 5px;
 }
 .ampliar:hover span.glyphicon{
   -webkit-animation-play-state: running;

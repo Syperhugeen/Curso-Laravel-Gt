@@ -67,10 +67,13 @@
 
 
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/all.js')}}"></script>    
-     <!-- activate WOW.js (ya está cargada al principio del html code) --> 
-    <script> new WOW().init(); </script>
+  <!-- Scripts -->
+  <script src="{{ asset('js/all.js')}}"></script>    
+
+  <!-- activate WOW.js (ya está cargada al principio del html code) --> 
+  <script> new WOW().init(); </script>
+
+  <!-- carrousel de logos customizer -->
   <script type="text/javascript">
     $(document).ready(function(){
       $('.customer-logos').slick({

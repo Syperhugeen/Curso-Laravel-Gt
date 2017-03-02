@@ -142,7 +142,7 @@ son los titulos de la seccion */
 .ampliar {
   color: #917e4b;
   /* text-transform:uppercase; */
-  padding-left: 16px;
+  padding-left: 0px;
   line-height: 4;
   transition: all .3s ease; }
 
@@ -163,7 +163,7 @@ son los titulos de la seccion */
 
 .ampliar:hover {
   color: #d5c68d;
-  padding-left: 20px; }
+  padding-left: 5px; }
 
 .ampliar:hover span.glyphicon {
   animation-play-state: running; }
@@ -265,7 +265,7 @@ son los titulos de la seccion */
 /* E S T I L O   D E   T E X T O   N O R M A L */
 p {
   font-family: HelveticaNoue;
-  font-size: 14pt;
+  font-size: 14px;
   color: #302a26;
   text-align: justify;
   white-space: pre-wrap; }
@@ -300,7 +300,8 @@ p, h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  /* letter-spacing:1px; */ }
 
 /* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
 /*para que el cursor se transforme en el dedito al pasar sobre links
@@ -421,9 +422,10 @@ ul.navbar-nav > li > a.active {
 /* * * * * * *  categorías de texto que se repetirán * * * * * * */
 .quote {
   font-family: HelveticaNoue37ThinOblique;
-  color: #917e4b;
+  color: #cebe98;
   letter-spacing: 1px;
-  line-height: 60px; }
+  line-height: 1.4em;
+  z-index: 2; }
 
 .quote:before {
   content: "“";
@@ -12432,7 +12434,7 @@ ul.bxslider {
   -ms-flex-align: start;
   -moz-align-items: flex-start;
   align-items: flex-start;
-  width: 450px;
+  width: 320px;
   padding: 4px;
   border-radius: 4px;
   border: solid 1px transparent;
@@ -12648,16 +12650,21 @@ body {
 #section2,
 #section3,
 #section4 {
-  overflow: hidden;
-  /* padding-top:$navbar-altura;  margin-top:-$navbar-altura; */
-  /*---creo que no es necesario porque ya está indicado en el globa-wrapper---*/ }
+  padding-top: 120px;
+  margin-top: -120px;
+  /*---creo que el padding no es necesario porque ya está indicado en el globa-wrapper---*/ }
 
 @media (max-width: 767px) {
   #section1,
   #section2,
   #section3,
   #section4 {
-    /* padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs; */ } }
+    padding-top: 68px;
+    margin-top: -68px; } }
+
+#section0,
+#section1 {
+  overflow: hidden; }
 
 /* S E C T I O N   W R A P P E R S */
 /*escribir aquí el padding (superior e inferior) de cada sección dentro de una pág*/
@@ -12681,15 +12688,18 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding-bottom: 40px; }
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
-#section0 {
+#section0 > div {
   border-bottom: 5px solid #cebe98; }
 
 @media (min-width: 992px) {
-  #section2 {
+  #section2 > .container-fluid {
     height: 400px; } }
 
-#section3 {
+#section3 > .container-fluid {
   min-height: 800px; }
+
+#section4 > .container-fluid {
+  padding-top: 3px; }
 
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
 /*---CENTRAR UNA COLUMNA dentro de un row---*/
@@ -12708,6 +12718,10 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .destacado {
   padding: 5px 0 5px 30px;
   border-left: 4px solid #cebe98; }
+
+#section1 .destacado {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px; }
 
 /*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/
 .table-outer {
@@ -12736,6 +12750,62 @@ como por ejemplo un carousel de imágenes de header---*/
   .super-xs-hidden {
     display: block; } }
 
+/* para utilizar libremente al incluír cols dentro de un row que está dentro de otra col */
+.no-padding {
+  padding: 0 !important; }
+
+.no-margin {
+  margin: 0 !important; }
+
+/* cols cuadradotas con fondo, minimal elegantes */
+.special-col {
+  background-color: #cebe98;
+  padding: 60px;
+  border: 1px solid #f1e7d2;
+  overflow: hidden; }
+
+.special-col:hover {
+  background-color: #e5d8bd; }
+
+.special-col h2 {
+  font-family: Champagne;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #917e4b; }
+
+.special-col p {
+  font-family: HelveticaNoue;
+  font-size: 14px;
+  color: #302a26; }
+
+.special-col .ampliar {
+  color: #917e4b;
+  font-family: HelveticaNoue37Thin;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+
+.special-col .ampliar:hover {
+  color: #cebe98; }
+
+.special-col .ampliar span.glyphicon {
+  color: #f1e7d2; }
+
+/*escribir el valor que quiero que tengan las special col de altura*/
+.col-xs-12.special-col {
+  height: 300px; }
+
+.col-md-6.special-col {
+  height: 600px; }
+
+.col-md-6.special-col > img {
+  min-height: 100%;
+  width: auto; }
+
+#section2 .col-xs-12.special-col {
+  margin-top: 40px;
+  height: 300px; }
+
 /* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
 body::after {
   position: absolute;
@@ -12743,7 +12813,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1000;
-  content: url("../../imagenes/Img/icon_service_models(light).png") url("../../imagenes/Img/icon_service_promotions(light).png") url("../../imagenes/Img/icon_service_events(light).png") url("../../imagenes/Img/icon_service_(light).png"); }
+  content: url("../../imagenes/Img/icon_service_models(light).png") url("../../imagenes/Img/icon_service_promotions(light).png") url("../../imagenes/Img/icon_service_events(light).png") url("../../imagenes/Empresa/isologo_dark.png"); }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
@@ -12753,7 +12823,7 @@ body::after {
 .ampliar {
   color: #917e4b;
   /* text-transform:uppercase; */
-  padding-left: 16px;
+  padding-left: 0px;
   line-height: 4;
   transition: all .3s ease; }
 
@@ -12774,7 +12844,7 @@ body::after {
 
 .ampliar:hover {
   color: #d5c68d;
-  padding-left: 20px; }
+  padding-left: 5px; }
 
 .ampliar:hover span.glyphicon {
   animation-play-state: running; }
@@ -12871,6 +12941,31 @@ body::after {
 .img-greyscale:hover {
   filter: none;
   -webkit-filter: grayscale(0%); }
+
+.decorative-divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -18px;
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  z-index: 10;
+  background-color: #f1e7d2;
+  /* IE 9 */
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg); }
+
+.decorative-divider > img {
+  /* IE 9 */
+  /* Chrome, Safari, Opera */
+  transform: rotate(-45deg); }
+
+#section1 .decorative-divider {
+  margin-top: -58px;
+  background-color: #cebe98; }
 
 /* * * * *    H O V E R   F L O A T    * * * * */
 /* para que algo se eleve un poquito durante el hover */
@@ -13254,7 +13349,7 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
 .puzzle-left-col-content h5, .puzzle-left-col-content h4, .puzzle-responsive-top-text h4, .puzzle-responsive-top-text h5 {
   color: #cebe98;
   text-align: center;
-  font-family: Georgia, sans-serif;
+  font-family: HelveticaNoue;
   letter-spacing: 1px;
   line-height: 1.5; }
 
@@ -14017,16 +14112,43 @@ escritura de código)---*/
   content: url("../../imagenes/Img/icon_service_events(light).png"); }
 
 /*--- brands carousel (home)---*/
+/*asignar esta clase a un div insertado dentro de una columna*/
+/*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
 .destacado-pliegues {
   /*luego pasar a mis_recursos*/
   position: absolute;
   top: -40px;
   margin-top: -20px;
+  height: 340px;
+  padding: 40px 40px;
+  background: #726259;
+  z-index: 1; }
+
+.destacado-pliegues:after {
+  content: "";
+  position: absolute;
   height: 440px;
-  background: #302a26 url("../../imagenes/Img/ribbon_pergamino_brown.png") center center;
-  background-size: cover;
-  z-index: 10;
-  overflow: visible; }
+  width: 100%;
+  border: 100px solid #726259;
+  z-index: -1;
+  top: 0;
+  border-top-width: 20px;
+  border-bottom-color: transparent;
+  right: 0; }
+
+.destacado-pliegues:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent #5b4f48 transparent;
+  top: 0;
+  left: -20px;
+  border-width: 0 0 20px 20px;
+  z-index: -1; }
+
+@media (min-width: 1200px) {
+  .destacado-pliegues {
+    padding: 10px 20px; } }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -14153,7 +14275,7 @@ div.servicio-individual > h4 > span.glyphicon {
 /* E S T I L O   D E   T E X T O   N O R M A L */
 p {
   font-family: HelveticaNoue;
-  font-size: 14pt;
+  font-size: 14px;
   color: #302a26;
   text-align: justify;
   white-space: pre-wrap; }
@@ -14188,7 +14310,8 @@ p, h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  /* letter-spacing:1px; */ }
 
 /* E S T I L I Z A N D O   C O M P O R T A M I E N T O S   D E   H I P E R V Í N C U L O S */
 /*para que el cursor se transforme en el dedito al pasar sobre links
@@ -14309,9 +14432,10 @@ ul.navbar-nav > li > a.active {
 /* * * * * * *  categorías de texto que se repetirán * * * * * * */
 .quote {
   font-family: HelveticaNoue37ThinOblique;
-  color: #917e4b;
+  color: #cebe98;
   letter-spacing: 1px;
-  line-height: 60px; }
+  line-height: 1.4em;
+  z-index: 2; }
 
 .quote:before {
   content: "“";
