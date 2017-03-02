@@ -421,9 +421,10 @@ ul.navbar-nav > li > a.active {
 /* * * * * * *  categorías de texto que se repetirán * * * * * * */
 .quote {
   font-family: HelveticaNoue37ThinOblique;
-  color: #917e4b;
+  color: #cebe98;
   letter-spacing: 1px;
-  line-height: 60px; }
+  line-height: 1.4em;
+  z-index: 2; }
 
 .quote:before {
   content: "“";
@@ -12432,7 +12433,7 @@ ul.bxslider {
   -ms-flex-align: start;
   -moz-align-items: flex-start;
   align-items: flex-start;
-  width: 450px;
+  width: 320px;
   padding: 4px;
   border-radius: 4px;
   border: solid 1px transparent;
@@ -12645,7 +12646,6 @@ body {
 /* S E C T I O N S   # I D s */
 /*---escribir aquí las #id de las secciones para que el desplazamiento de los links hacia las secciones sean precisas---*/
 #section1,
-#section2,
 #section3,
 #section4 {
   overflow: hidden;
@@ -14017,16 +14017,43 @@ escritura de código)---*/
   content: url("../../imagenes/Img/icon_service_events(light).png"); }
 
 /*--- brands carousel (home)---*/
+/*asignar esta clase a un div insertado dentro de una columna*/
+/*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
 .destacado-pliegues {
   /*luego pasar a mis_recursos*/
   position: absolute;
   top: -40px;
   margin-top: -20px;
+  height: 340px;
+  padding: 40px 40px;
+  background: #726259;
+  z-index: 1; }
+
+.destacado-pliegues:after {
+  content: "";
+  position: absolute;
   height: 440px;
-  background: #302a26 url("../../imagenes/Img/ribbon_pergamino_brown.png") center center;
-  background-size: cover;
-  z-index: 10;
-  overflow: visible; }
+  width: 100%;
+  border: 100px solid #726259;
+  z-index: -1;
+  top: 0;
+  border-top-width: 20px;
+  border-bottom-color: transparent;
+  right: 0; }
+
+.destacado-pliegues:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent #5b4f48 transparent;
+  top: 0;
+  left: -20px;
+  border-width: 0 0 20px 20px;
+  z-index: -1; }
+
+@media (min-width: 1200px) {
+  .destacado-pliegues {
+    padding: 10px 20px; } }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -14309,9 +14336,10 @@ ul.navbar-nav > li > a.active {
 /* * * * * * *  categorías de texto que se repetirán * * * * * * */
 .quote {
   font-family: HelveticaNoue37ThinOblique;
-  color: #917e4b;
+  color: #cebe98;
   letter-spacing: 1px;
-  line-height: 60px; }
+  line-height: 1.4em;
+  z-index: 2; }
 
 .quote:before {
   content: "“";

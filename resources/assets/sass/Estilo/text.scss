@@ -211,9 +211,10 @@ ul.navbar-nav > li > a.active{
 
 .quote {
   font-family: HelveticaNoue37ThinOblique;
-  color:$color-3dark;
+  color:$color-3;
   letter-spacing: 1px;
-  line-height:60px;
+  line-height:1.4em;
+  z-index:2;
 }
 .quote:before{
   content:"“";
