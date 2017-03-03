@@ -81,7 +81,7 @@ abstract class BaseRepo
     public function getEntidadActivasAll_Segun_Atributo_y_Ordenadas($atributo,$valor_atributo,$orden,$paginacion)
     {
       return $this->entidad
-                  ->where($atributo,$valor_atributo,$orden,$paginacion)             
+                  ->where($atributo,$valor_atributo)             
                   ->orderBy('id',$orden)
                   ->paginate($paginacion);
     }

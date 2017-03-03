@@ -25,7 +25,7 @@
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
       <div class="page-header">
-        <h1>Marcas</h1>
+        <h1>Marcas que trabajan con Global</h1>
       </div>
 
       <!--contenedor de publicaciones individuales-->

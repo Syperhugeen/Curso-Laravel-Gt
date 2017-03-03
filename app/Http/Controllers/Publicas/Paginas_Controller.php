@@ -10,6 +10,7 @@ use App\Repositorios\NoticiasRepo;
 use App\Repositorios\EmpresaRepo;
 use App\Repositorios\MarcaRepo;
 use App\Repositorios\EventoRepo;
+use App\Repositorios\Marca_de_eventoRepo;
 
 
 class Paginas_Controller extends Controller
@@ -20,20 +21,23 @@ class Paginas_Controller extends Controller
     protected $EmpresaRepo;
     protected $MarcaRepo;
     protected $EventoRepo;
+    protected $Marca_de_eventoRepo;
 
-    public function __construct(ImgHomeRepo  $ImgHomeRepo,
-                                ProyectoRepo $ProyectoRepo, 
-                                NoticiasRepo $NoticiasRepo,
-                                EmpresaRepo  $EmpresaRepo, 
-                                MarcaRepo    $MarcaRepo,
-                                EventoRepo   $EventoRepo   )
+    public function __construct(ImgHomeRepo         $ImgHomeRepo,
+                                ProyectoRepo        $ProyectoRepo, 
+                                NoticiasRepo        $NoticiasRepo,
+                                EmpresaRepo         $EmpresaRepo, 
+                                MarcaRepo           $MarcaRepo,
+                                EventoRepo          $EventoRepo,
+                                Marca_de_eventoRepo $Marca_de_eventoRepo   )
     {
-        $this->ProyectoRepo = $ProyectoRepo;
-        $this->ImgHomeRepo  = $ImgHomeRepo;
-        $this->NoticiasRepo = $NoticiasRepo;
-        $this->EmpresaRepo  = $EmpresaRepo;
-        $this->MarcaRepo    = $MarcaRepo;
-        $this->EventoRepo   = $EventoRepo;
+        $this->ProyectoRepo        = $ProyectoRepo;
+        $this->ImgHomeRepo         = $ImgHomeRepo;
+        $this->NoticiasRepo        = $NoticiasRepo;
+        $this->EmpresaRepo         = $EmpresaRepo;
+        $this->MarcaRepo           = $MarcaRepo;
+        $this->EventoRepo          = $EventoRepo;
+        $this->Marca_de_eventoRepo = $Marca_de_eventoRepo;
     }
 
     //Contacto
@@ -50,11 +54,16 @@ class Paginas_Controller extends Controller
         return view('paginas.marcas.marcas', compact('Marcas'));
     }
         //pagina de la marca individual
-        public function get_pagina_marca_individual($id,Request $Request)
+        public function get_pagina_marca_individual($name,$id,Request $Request)
         {
             $Marca   = $this->MarcaRepo->find($id);
+
+            //le envio los eventos de esa marca
+            $Eventos = $this->Marca_de_eventoRepo->getEntidadActivasAll_Segun_Atributo_y_Ordenadas('marca_id',$id,'desc',5);
+
+            
            
-            return view('paginas.marcas.marca_individual', compact('Marca'));
+            return view('paginas.marcas.marca_individual', compact('Marca','Eventos'));
         }
 
 

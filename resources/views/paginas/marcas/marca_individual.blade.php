@@ -30,12 +30,15 @@
 
       <h1>Pagina de la marca ...  {{$Marca->name}} .</h1>
 
+
       {{-- aqui se muestra todos los eventos asociados a esa marca --}}
-      @foreach($Marca->eventos_de_marca as $Evento)
-
-       {{$Evento->name}} - -
-
-      @endforeach
+      @if($Eventos->count() > 0)
+        @foreach($Eventos as $Evento)
+         {{$Evento->evento->name}} 
+        @endforeach
+      @else
+       <h2>No hay eventos asociados a esta marca</h2>
+      @endif
     
 
     </div>  

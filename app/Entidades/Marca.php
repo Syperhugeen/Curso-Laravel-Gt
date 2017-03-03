@@ -3,6 +3,7 @@
 namespace App\Entidades;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Entidades\Marca_de_evento;
 
 
 
@@ -26,7 +27,7 @@ class Marca extends Model
 
     public function eventos_de_marca()
     {
-      return $this->hasMany(Marca_de_evento::class,'marca_id','id');
+      return $this->hasMany(Marca_de_evento::class,'id','evento_id');
     }
 
 
