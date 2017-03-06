@@ -20,7 +20,20 @@ class EventoRepo extends BaseRepo
 
 
  
-  
+  /**
+   *  Devuelve el ultimo evento
+   */
+  public function getUltimoEvento()
+  {
+    return $this->getEntidad()->active()->get()->first();
+  }
 
+  /**
+    *  Devulve el Penultimo evento
+    */  
+  public function getPenultimoEvento()
+  {
+      return $this->getEntidad()->active()->take(2)->get()->last();
+  }
   
 }

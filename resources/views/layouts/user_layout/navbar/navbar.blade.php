@@ -20,8 +20,8 @@
           <li><a href="{{route('get_home')}}">HOME</a></li>
           <li><a href="{{route('get_pagina_empresa')}}">ACERCA DE GLOBAL</a></li>
           <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
-          <li><a href="{{route('get_pagina_proyecto_listado')}}">CARTERA DE CLIENTES</a></li>
-          <li><a href="{{route('get_pagina_noticias_listado')}}">EVENTOS</a></li>
+          <li><a href="{{route('get_pagina_marcas')}}">CARTERA DE CLIENTES</a></li>
+          <li><a href="{{route('get_pagina_eventos')}}">EVENTOS</a></li>
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
 

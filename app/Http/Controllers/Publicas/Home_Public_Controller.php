@@ -9,25 +9,26 @@ use App\Repositorios\ProyectoRepo;
 use Illuminate\Http\Request;
 use App\Repositorios\NoticiasRepo;
 use App\Repositorios\MarcaRepo;
+use App\Repositorios\EventoRepo;
 
 
 class Home_Public_Controller extends Controller
 {
     protected $ImgHomeRepo;
     protected $EmpresaRepo;
-    protected $ProyectoRepo;
+    protected $EventoRepo;  
     protected $NoticiasRepo;
     protected $MarcaRepo;
 
     public function __construct(ImgHomeRepo  $ImgHomeRepo,
                                 EmpresaRepo  $EmpresaRepo, 
-                                ProyectoRepo $ProyectoRepo, 
+                                EventoRepo   $EventoRepo,   
                                 NoticiasRepo $NoticiasRepo, 
                                 MarcaRepo    $MarcaRepo)
     {
         $this->ImgHomeRepo  = $ImgHomeRepo;
         $this->EmpresaRepo  = $EmpresaRepo;
-        $this->ProyectoRepo = $ProyectoRepo;
+        $this->EventoRepo   = $EventoRepo;  
         $this->NoticiasRepo = $NoticiasRepo;
         $this->MarcaRepo    = $MarcaRepo;
     }
@@ -35,12 +36,14 @@ class Home_Public_Controller extends Controller
     public function get_home(Request $Request)
     {
         
-        $Empresa      = $this->EmpresaRepo->getEmpresaDatos();
-        $Proyectos    = $this->ProyectoRepo->getUltimasEntidadesRegistradasRandomActive($Request, 2);
-        $Noticias     = $this->NoticiasRepo->getUltimasEntidadesRegistradasRandomActive($Request,2);
-        $Marcas       = $this->MarcaRepo->getUltimasEntidadesRegistradasRandomActive($Request,2);
+        $Empresa               = $this->EmpresaRepo->getEmpresaDatos();        
+        $Marcas                = $this->MarcaRepo->getUltimasEntidadesRegistradasRandomActive($Request,2);
+        $UltimoEvento          = $this->EventoRepo->getUltimoEvento();
+        $PenultimoEvento       = $this->EventoRepo->getPenultimoEvento();
 
-        return view('paginas.home.home', compact('Empresa','Proyectos','Noticias','Marcas'));
+
+
+        return view('paginas.home.home', compact('Empresa','Marcas','UltimoEvento','PenultimoEvento'));
     }
 
 

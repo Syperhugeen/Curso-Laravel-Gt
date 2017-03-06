@@ -43,7 +43,6 @@ class Paginas_Controller extends Controller
     //Contacto
     public function get_pagina_contacto()
     {
-
         return view('paginas.contacto.contacto');
     }
 
@@ -74,10 +73,10 @@ class Paginas_Controller extends Controller
         return view('paginas.eventos.eventos', compact('Eventos'));
     }
         //pagina de evento individual
-        public function get_pagina_evento_individual($id,Request $Request)
+        public function get_pagina_evento_individual($name,$id,Request $Request)
         {
             $Evento = $this->EventoRepo->find($id);
-            return view('paginas.evento.evento_individual', compact('Evento'));
+            return view('paginas.eventos.evento_individual', compact('Evento'));
         }
 
 

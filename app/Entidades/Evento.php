@@ -94,7 +94,7 @@ class Evento extends Model
     public function getRouteAttribute()
     {
         
-        return route('get_pagina_proyecto_individual', [str_replace(" ", "_", $this->name), $this->id]);
+        return route('get_pagina_evento_individual', [str_replace(" ", "_", $this->name), $this->id]);
     }
 
     public function getDescriptionParrafoAttribute()
