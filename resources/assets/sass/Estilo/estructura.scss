@@ -238,13 +238,23 @@ $special-col-altura: 300px;
   height: $special-col-altura * 2;
 }
 .col-md-6.special-col > img {
-  min-height:100%;
-  width:auto;
+  min-height:inherit;
+  min-width:inherit;
 }
 #section2 .col-xs-12.special-col{
   margin-top: 40px;
   height: $special-col-altura;
 }
+
+
+/* special-cols de eventos */
+.event-col{
+  background-color: $color-3;
+  padding: 60px;
+  border: 1px solid $color-3superlight;
+  overflow:hidden;
+}
+
 
 
 

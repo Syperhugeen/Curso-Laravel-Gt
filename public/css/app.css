@@ -12799,12 +12799,19 @@ como por ejemplo un carousel de imágenes de header---*/
   height: 600px; }
 
 .col-md-6.special-col > img {
-  min-height: 100%;
-  width: auto; }
+  min-height: inherit;
+  min-width: inherit; }
 
 #section2 .col-xs-12.special-col {
   margin-top: 40px;
   height: 300px; }
+
+/* special-cols de eventos */
+.event-col {
+  background-color: #cebe98;
+  padding: 60px;
+  border: 1px solid #f1e7d2;
+  overflow: hidden; }
 
 /* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
 body::after {
