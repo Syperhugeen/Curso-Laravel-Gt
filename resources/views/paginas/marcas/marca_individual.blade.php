@@ -29,8 +29,7 @@
       </div>
 
       <h1>Pagina de la marca ...  {{$Marca->name}} .</h1>
-
-
+      
       {{-- aqui se muestra todos los eventos asociados a esa marca --}}
       @if($Eventos->count() > 0)
         @foreach($Eventos as $Evento)

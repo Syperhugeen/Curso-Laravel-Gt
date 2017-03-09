@@ -27,11 +27,7 @@
       <div class="page-header">
         <h1>{{$Evento->name}}</h1>
       </div>
-
       <h1>Pagina del Evento ...  {{$Evento->name}} .</h1>
-      
-    
-
     </div>  
   </div>
 </div>
