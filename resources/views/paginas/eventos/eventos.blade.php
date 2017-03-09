@@ -33,6 +33,9 @@
 	<div class="row">
 
 		{{-- for each... insertar aquí las entidades --}}
+    @foreach($Eventos as $Evento)
+     @include('paginas.eventos.entidad_evento_para_listado')
+    @endforeach
 
  	</div>
 </div>
