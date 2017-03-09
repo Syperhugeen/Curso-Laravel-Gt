@@ -66,6 +66,7 @@ class Evento extends Model
 
         //veo si hay alguna que tenga el atributo
         $cantidad_imagenes = $imagenesProyectos->where('foto_principal','si')->count();
+        
 
         if($cantidad_imagenes === 1)
         {

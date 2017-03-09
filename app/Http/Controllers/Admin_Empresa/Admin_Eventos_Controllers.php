@@ -110,8 +110,24 @@ class Admin_Eventos_Controllers extends Controller
     $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
      //utilzo la funciona creada en el controlador para subir la imagen
+     //archivos imagenes
+      $files = $Request->file('img');
+
+      if(!empty($files))
+      {
+
+        foreach($files as $file)
+        {           
+          
+          $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$Evento->id,$Request,'EventosImagenes/' );
+
+          
+                    
+        }
+        
+      }
     
-      $this->set_admin_eventos_img($Evento->id, $Request); 
+      
     
      
       
