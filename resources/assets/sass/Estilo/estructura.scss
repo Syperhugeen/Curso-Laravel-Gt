@@ -94,6 +94,12 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .space-bottom{
   padding-bottom:$padding-section-wrapper;
 }
+.super-space-top{
+  padding-top:$padding-section-wrapper * 2;
+}
+.super-space-bottom{
+  padding-bottom:$padding-section-wrapper * 2;
+}
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section0 > div{
@@ -103,6 +109,7 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 $section2-altura:400px;
 #section2 > .container-fluid{
 }
+
 @media (min-width:992px){
   #section2 > .container-fluid{
     height: $section2-altura;
@@ -193,10 +200,25 @@ como por ejemplo un carousel de imágenes de header---*/
 
 
 
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - -*/
+/* * *  S P E C I A L - C O L S  * * *  */
+/* - - - - - - - - - - - - - - - - - - -*/
+
 /* cols cuadradotas con fondo, minimal elegantes */
+
+/* escribir valor del padding, se ajustará responsive solo */
+$special-col-padding: 20px 60px;
+/*escribir el valor que quiero que tengan las special col de altura*/
+$special-col-altura: 400px;
+
 .special-col{
   background-color: $color-3;
-  padding: 60px;
+  padding: $special-col-padding;
   border: 1px solid $color-3superlight;
   overflow:hidden;
 }
@@ -205,13 +227,17 @@ como por ejemplo un carousel de imágenes de header---*/
 }
 .special-col h2 {
   font-family: Champagne;
-  font-size: 28px;
   letter-spacing: 3px;
   color: $color-3dark;
 }
+.p-container {
+  max-height:120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
 .special-col p {
   font-family: HelveticaNoue;
-  font-size: 14px;
   color: $color-2;
 }
 .special-col .ampliar {
@@ -227,40 +253,72 @@ como por ejemplo un carousel de imágenes de header---*/
 .special-col .ampliar span.glyphicon{
   color: $color-3superlight;
 }
-/*escribir el valor que quiero que tengan las special col de altura*/
 
-$special-col-altura: 300px;
-
-.col-xs-12.special-col{
+/* special-cols de home */
+#home #section4 .col-sm-6 .col-xs-12.special-col{
   height: $special-col-altura;
 }
-.col-md-6.special-col{
+#home #section4 .col-sm-6.special-col{
   height: $special-col-altura * 2;
 }
-.col-md-6.special-col > img {
-  min-height:inherit;
-  min-width:inherit;
-}
-#section2 .col-xs-12.special-col{
-  margin-top: 40px;
-  height: $special-col-altura;
-}
-
 
 /* special-cols de eventos */
-.event-col{
-  background-color: $color-3;
-  padding: 60px;
-  border: 1px solid $color-3superlight;
-  overflow:hidden;
+#eventos .special-col .col-sm-6{
+  height: $special-col-altura;
+  padding: $special-col-padding;
+  overflow: hidden;
 }
 
 
+/* img de todas las special-cols */
+.special-col img.horizontal{
+  min-height:100%;
+  height:auto;
+  width:60vw;
+}
+.special-col img :not(.horizontal){
+  height:auto;
+  width:60vw;
+}
+/* para que los greyscale-hover tomen color cuando se pasa por arriba de la special-col que es parent */
+.special-col:hover .img-greyscale-hover{
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+/* img de las special-cols de #home */
+#home #section4 .col-sm-6.special-col img.horizontal{
+  height:inherit;
+  width:auto;
+}
+#home #section4 .col-sm-6.special-col img :not(.horizontal){
+  height:auto;
+  width:60vw;
+}
+/* para que se agranden un poquito on-hover */
+#eventos .special-col img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#eventos .special-col:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 
-
-
-
+/* tamanio de las special-cols responsive */
+@media (max-width:767px) {
+  #eventos .special-col .col-sm-6{
+    height: $special-col-altura / 2;}
+  #home #section4 .special-col.col-sm-6{
+    height: $special-col-altura / 4;}
+  #home #section4 .col-sm-6 .special-col.col-xs-12{
+    height: $special-col-altura / 4;}
+  .special-col img{
+    width:100% !important;
+    height:auto !important;
+    min-height:none !important;
+  }
+}
 
 
 

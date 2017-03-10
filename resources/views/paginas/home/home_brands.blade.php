@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-sm-10 col-sm-push-1 hidden-md hidden-lg text-center space-bottom">
-<div><h1 class="quote">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h1></div>
+<div><h1 class="quote color-2light">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h1></div>
 </div>
 
 <div class="col-xs-12 logos-carousel-col"><!--logos slider-->
@@ -61,6 +61,7 @@
 <!-- ESTO E VA A BORRAR, POR AHORA LO VOY GUARDANDO ACÁ-->
 
 <!--text slide vertical, lo dejo acá mientras decido donde irá-->
+<!--
 <div class="text-slide-container">
 <ul class="text-slide">
 <a class="smoothScroll" href="#section-globitos"><li><h4><span class="chevron-saltarin"><span class="glyphicon glyphicon-chevron-down"></span></span> Explora el contenido</h4></li></a>
@@ -69,3 +70,4 @@
 <a class="smoothScroll" href="#section-globitos"><li><h4><span class="chevron-saltarin"><span class="glyphicon glyphicon-chevron-down"></span></span> Explora el contenido</h4></li></a>
 </ul>
 </div>
+-->

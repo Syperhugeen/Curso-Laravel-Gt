@@ -40,7 +40,7 @@ p {
   white-space: pre-wrap;
 }
 h1 { /*usar para título único por página*/
-color:$color-3;
+color:$color-3dark;
 }
 h2 { /*usar para títulos de las dif. secciones de cada página*/
 color:$color-3dark;
@@ -140,9 +140,11 @@ ul.navbar-nav > li > a.active{
   color: $color-3light;
 }
 
-
-
-
+/* T Í T U L O S */
+h1{
+  font-family: Champagne;
+  letter-spacing: 2px;
+}
 
 /* T E X T  F O O T E R */
 /* color general */

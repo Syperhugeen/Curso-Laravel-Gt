@@ -100,7 +100,7 @@ $color-black:black; /*misma razón, pero para el negro */
 .color-2{color:$color-2;}
 .bgcolor-2{background:$color-2;}
 
-.color-2light{color:$color-2light;}
+.color-2light{color:$color-2light !important;}
 .bgcolor-2light{background:$color-2light;}
 
 .color-3{color:$color-3;}

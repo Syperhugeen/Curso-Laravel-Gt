@@ -98,5 +98,18 @@
       });
     });
   </script>
+
+  <!-- agregar class "horizontal" a las img con width mayor que height -->
+  <script type="text/javascript">
+  $(window).load(function(){
+     $("img").each(function(){
+        var $this = $(this);
+        if ($this.width() > $this.height()) {
+            $this.addClass("horizontal");
+        }
+     });
+    });
+  </script>
+
   </body>
 </html>   

@@ -16,7 +16,7 @@
 @section('content')
 
 
-
+<div id="home">
 <!--header (carousel de imágenes)-->
 <div id="section0">
   <div class="bgcolor-3">
@@ -58,6 +58,8 @@
        @include('paginas.home.home_eventos')
 
   </div>
+</div>
+
 </div>
 
 @stop
