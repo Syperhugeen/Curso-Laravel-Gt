@@ -26,8 +26,8 @@
 
     <div class="col-sm-6 special-col table-outer">
         <div class="table-inner">
-			<h2>{{$UltimoEvento->name}}</h2>
-			<p>{{$UltimoEvento->description}}</p>
+			<h2>{{$Evento->name}}</h2>
+			<p>{{$Evento->description}}</p>
 		</div>
     </div> 
 
