@@ -37,7 +37,7 @@
 
 <!--para agregar los márgenes laterales-->
 <div id="section2">
-  <div class="container-fluid section-wrapper bgcolor-3light">
+  <div class="container-fluid section-wrapper bgcolor-3">
         <div>
          @include('paginas.home.home_brands')
         </div>

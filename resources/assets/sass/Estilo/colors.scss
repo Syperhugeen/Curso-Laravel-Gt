@@ -8,7 +8,7 @@
 
 /* COLORES INSTITUCIONALES */ 
 
-$color-1:#d5c68d; /* institucional similar a color-3 pero más amarillito, como el doradito del logo */
+$color-1:#f1e7d2; /* institucional similar a color-3 pero más amarillito, como el doradito del logo */
 
 $color-2:#302a26; /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
 $color-2light:#5b4f48; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
@@ -16,7 +16,8 @@ $color-2superlight:#726259;
 
 $color-3:#cebe98; /* institucional PRINCIPAL */
 $color-3dark:#917e4b; /* para interacciones dinámicas del color-3 como [hover] o [active] */
-$color-3light:#e5d8bd; /* para interacciones dinámicas del color-3 como [hover] o [active] */
+/*$color-3light:#e5d8bd;*/ /* para interacciones dinámicas del color-3 como [hover] o [active] */
+$color-3light:#decdab; /* probando uno mas oscurito */
 $color-3superlight:#f1e7d2; /* para backgrounds de bloques de texto en instancia de hover) */
 $color-3hyperlight:#f8f1e3;
 

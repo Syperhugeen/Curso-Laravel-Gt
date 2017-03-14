@@ -13,10 +13,10 @@
         <!--para xs y sm-->
         <div class="puzzle-responsive-top-text space-top hidden-md hidden-lg">
           <div class="row wow fadeInUp">
-          <div class="col-xs-6"><div class="puzzle-responsive-top-text-col">
+          <div class="col-sm-6"><div class="puzzle-responsive-top-text-col">
             <h5>La búsqueda de la excelencia es el principal &laquo;<em>leit motiv</em>&raquo; de<span class="logo-font" style="font-weight:600;"> Global Target</span>.</h5>
           </div></div>
-          <div class="col-xs-6"><div class="puzzle-responsive-top-text-col">
+          <div class="col-sm-6"><div class="puzzle-responsive-top-text-col">
             <h5><span class="color-3superlight">Profesionalismo</span> y <span class="color-3superlight">constante innovación</span> a lo largo de 15 años de experiencia nos han convertido en la agencia más prestigiosa del Uruguay.</h5>
           </div></div>
           </div>

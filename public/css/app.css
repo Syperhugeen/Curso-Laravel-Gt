@@ -8,7 +8,9 @@
 /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
 /* institucional PRINCIPAL */
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
+/*$color-3light:#e5d8bd;*/
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
+/* probando uno mas oscurito */
 /* para backgrounds de bloques de texto en instancia de hover) */
 /* COLORES GENERALES */
 /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
@@ -22,7 +24,7 @@
 .carousel-control:hover,
 .carousel-control:focus,
 .carousel-caption {
-  color: #e5d8bd; }
+  color: #decdab; }
 
 .carousel-indicators li {
   border-color: #f1e7d2; }
@@ -66,10 +68,10 @@
 
 /* institucionales */
 .color-1 {
-  color: #d5c68d; }
+  color: #f1e7d2; }
 
 .bgcolor-1 {
-  background: #d5c68d; }
+  background: #f1e7d2; }
 
 .color-2 {
   color: #302a26; }
@@ -96,10 +98,10 @@
   background: #917e4b; }
 
 .color-3light {
-  color: #e5d8bd; }
+  color: #decdab; }
 
 .bgcolor-3light {
-  background: #e5d8bd; }
+  background: #decdab; }
 
 .color-3superlight {
   color: #f1e7d2; }
@@ -141,13 +143,11 @@ son los titulos de la seccion */
 (para todos esos links de "ver más") con triángulo */
 .ampliar {
   color: #917e4b;
-  /* text-transform:uppercase; */
   padding-left: 0px;
-  line-height: 4;
   transition: all .3s ease; }
 
 .ampliar span.glyphicon {
-  color: #d5c68d;
+  color: #f1e7d2;
   -webkit-animation-name: mibounceleft;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-play-state: paused;
@@ -162,7 +162,7 @@ son los titulos de la seccion */
   animation-fill-mode: none; }
 
 .ampliar:hover {
-  color: #d5c68d;
+  color: #f1e7d2;
   padding-left: 5px; }
 
 .ampliar:hover span.glyphicon {
@@ -187,16 +187,16 @@ son los titulos de la seccion */
 .btn-primary:focus,
 .btn-primary.focus {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd;
+  background-color: #decdab;
+  border-color: #decdab;
   outline-width: 1px;
   outline-offset: 4px;
   outline-style: dotted; }
 
 .btn-primary:hover {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd; }
+  background-color: #decdab;
+  border-color: #decdab; }
 
 .btn-primary:active,
 .btn-primary.active,
@@ -319,7 +319,7 @@ a, a > p {
 a:hover, a:focus, a > p:hover, a > p:focus {
   text-decoration: none;
   outline: none;
-  color: #e5d8bd; }
+  color: #decdab; }
 
 /* R E S P O N S I V E - @media settings */
 @media (min-width: 450px) and (max-width: 767px) {
@@ -371,7 +371,7 @@ ul.navbar-nav > li > a :focus {
   color: #f1e7d2; }
 
 ul.navbar-nav > li > a.active {
-  color: #e5d8bd; }
+  color: #decdab; }
 
 /* T Í T U L O S */
 h1 {
@@ -391,7 +391,7 @@ h1 {
 
 /* color de los títulos de las 3 columnas principales */
 #footer .col-md-4 h5.footer-title {
-  color: #e5d8bd;
+  color: #decdab;
   text-transform: uppercase;
   letter-spacing: 4px;
   padding-bottom: 10px; }
@@ -435,14 +435,14 @@ h1 {
 .quote:before {
   content: "“";
   font-family: HelveticaNoue;
-  color: #d5c68d;
+  color: #f1e7d2;
   font-weight: 600;
   font-size: 120%; }
 
 .quote:after {
   content: "”";
   font-family: HelveticaNoue;
-  color: #d5c68d;
+  color: #f1e7d2;
   font-weight: 600;
   font-size: 120%; }
 
@@ -11643,7 +11643,7 @@ ul.bxslider {
 
 /* Slider */
 .slick-slide {
-  margin: 0px 20px; }
+  margin: 0px 30px; }
 
 .slick-slide img {
   width: 100%; }
@@ -12487,7 +12487,9 @@ ul.bxslider {
 /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
 /* institucional PRINCIPAL */
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
+/*$color-3light:#e5d8bd;*/
 /* para interacciones dinámicas del color-3 como [hover] o [active] */
+/* probando uno mas oscurito */
 /* para backgrounds de bloques de texto en instancia de hover) */
 /* COLORES GENERALES */
 /*gris SUPER claro (solo para líneas divisoras de relevancia baja o backgrounds de bloques de texto)*/
@@ -12501,7 +12503,7 @@ ul.bxslider {
 .carousel-control:hover,
 .carousel-control:focus,
 .carousel-caption {
-  color: #e5d8bd; }
+  color: #decdab; }
 
 .carousel-indicators li {
   border-color: #f1e7d2; }
@@ -12545,10 +12547,10 @@ ul.bxslider {
 
 /* institucionales */
 .color-1 {
-  color: #d5c68d; }
+  color: #f1e7d2; }
 
 .bgcolor-1 {
-  background: #d5c68d; }
+  background: #f1e7d2; }
 
 .color-2 {
   color: #302a26; }
@@ -12575,10 +12577,10 @@ ul.bxslider {
   background: #917e4b; }
 
 .color-3light {
-  color: #e5d8bd; }
+  color: #decdab; }
 
 .bgcolor-3light {
-  background: #e5d8bd; }
+  background: #decdab; }
 
 .color-3superlight {
   color: #f1e7d2; }
@@ -12704,7 +12706,7 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 
 @media (min-width: 992px) {
   #section2 > .container-fluid {
-    height: 400px; } }
+    height: 300px; } }
 
 #section3 > .container-fluid {
   min-height: 800px; }
@@ -12781,7 +12783,12 @@ como por ejemplo un carousel de imágenes de header---*/
   overflow: hidden; }
 
 .special-col:hover {
-  background-color: #e5d8bd; }
+  background-color: #decdab; }
+
+.special-col-fake {
+  background-color: #cebe98;
+  padding: 20px 60px;
+  border: 1px solid #f1e7d2; }
 
 .special-col h2 {
   font-family: Champagne;
@@ -12804,6 +12811,15 @@ como por ejemplo un carousel de imágenes de header---*/
   font-size: 15px;
   letter-spacing: 3px;
   text-transform: uppercase; }
+
+.special-col .quote {
+  color: #917e4b; }
+
+.special-col .quote:before {
+  color: #f1e7d2; }
+
+.special-col .quote:after {
+  color: #f1e7d2; }
 
 .special-col .ampliar:hover {
   color: #cebe98; }
@@ -12868,6 +12884,22 @@ como por ejemplo un carousel de imágenes de header---*/
     height: auto !important;
     min-height: none !important; } }
 
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+/* * * T H U M B N A I L   G A L L E R Y * * *  */
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+.thumbnail-gallery-parent {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+@media all and (max-width: 767px) {
+  .thumbnail-gallery-parent {
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
 /* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
 body::after {
   position: absolute;
@@ -12884,13 +12916,11 @@ body::after {
 (para todos esos links de "ver más") con triángulo */
 .ampliar {
   color: #917e4b;
-  /* text-transform:uppercase; */
   padding-left: 0px;
-  line-height: 4;
   transition: all .3s ease; }
 
 .ampliar span.glyphicon {
-  color: #d5c68d;
+  color: #f1e7d2;
   -webkit-animation-name: mibounceleft;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-play-state: paused;
@@ -12905,7 +12935,7 @@ body::after {
   animation-fill-mode: none; }
 
 .ampliar:hover {
-  color: #d5c68d;
+  color: #f1e7d2;
   padding-left: 5px; }
 
 .ampliar:hover span.glyphicon {
@@ -12930,16 +12960,16 @@ body::after {
 .btn-primary:focus,
 .btn-primary.focus {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd;
+  background-color: #decdab;
+  border-color: #decdab;
   outline-width: 1px;
   outline-offset: 4px;
   outline-style: dotted; }
 
 .btn-primary:hover {
   color: white;
-  background-color: #e5d8bd;
-  border-color: #e5d8bd; }
+  background-color: #decdab;
+  border-color: #decdab; }
 
 .btn-primary:active,
 .btn-primary.active,
@@ -13010,6 +13040,18 @@ body::after {
 
 .grow:hover {
   transform: scale(1.1); }
+
+.sepia {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%); }
+
+.blur {
+  -webkit-filter: blur(3px);
+  filter: blur(3px); }
+
+.myfilter {
+  -webkit-filter: url(#monochrome);
+  filter: url(#monochrome); }
 
 .ease {
   /*para que las transiciones sea más smooth*/
@@ -13174,7 +13216,7 @@ ul.text-slide a:hover li h4 {
   background-color: #cebe98; }
 
 .puzzle-box-content-hidden1 {
-  background-color: #e5d8bd; }
+  background-color: #decdab; }
 
 .puzzle-box-content-visible2 {
   background-color: #5b4f48; }
@@ -13762,7 +13804,7 @@ a > .link-go-to-web:focus {
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active > a:hover,
 .navbar-default .navbar-nav > li.active > a:focus {
-  color: #e5d8bd;
+  color: #decdab;
   background-color: transparent; }
 
 /*--- la flechita  de los links para cuando está colapsado para móbiles ---*/
@@ -13776,7 +13818,7 @@ a > .link-go-to-web:focus {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-left-color: #e5d8bd;
+    border-left-color: #decdab;
     border-width: 5px;
     margin-top: -5px; } }
 
@@ -13845,7 +13887,7 @@ a > .link-go-to-web:focus {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #e5d8bd;
+    color: #decdab;
     background-color: transparent; }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -13887,7 +13929,7 @@ a > .link-go-to-web:focus {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #e5d8bd;
+  color: #decdab;
   background-color: transparent; }
 
 /* NAVBAR BRAND - L O G O */
@@ -14156,7 +14198,7 @@ escritura de código)---*/
   .col-sm-4:hover img.home-service-icon {
     width: 240px; }
   .col-sm-4:hover .home-service-name {
-    color: #e5d8bd;
+    color: #decdab;
     letter-spacing: 16px;
     font-size: 150%; } }
 
@@ -14164,7 +14206,7 @@ escritura de código)---*/
   .home-service-col.col-sm-4:hover {
     transform: translate(0, -10px); }
   .col-sm-4:hover .home-service-name {
-    color: #e5d8bd;
+    color: #decdab;
     letter-spacing: 12px; } }
 
 @media (max-width: 767px) {
@@ -14185,6 +14227,9 @@ escritura de código)---*/
   content: url("../../imagenes/Img/icon_service_events(light).png"); }
 
 /*--- brands carousel (home)---*/
+.logos-carousel-col {
+  overflow: hidden; }
+
 /*asignar esta clase a un div insertado dentro de una columna*/
 /*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
 .destacado-pliegues {
@@ -14402,7 +14447,7 @@ a, a > p {
 a:hover, a:focus, a > p:hover, a > p:focus {
   text-decoration: none;
   outline: none;
-  color: #e5d8bd; }
+  color: #decdab; }
 
 /* R E S P O N S I V E - @media settings */
 @media (min-width: 450px) and (max-width: 767px) {
@@ -14454,7 +14499,7 @@ ul.navbar-nav > li > a :focus {
   color: #f1e7d2; }
 
 ul.navbar-nav > li > a.active {
-  color: #e5d8bd; }
+  color: #decdab; }
 
 /* T Í T U L O S */
 h1 {
@@ -14474,7 +14519,7 @@ h1 {
 
 /* color de los títulos de las 3 columnas principales */
 #footer .col-md-4 h5.footer-title {
-  color: #e5d8bd;
+  color: #decdab;
   text-transform: uppercase;
   letter-spacing: 4px;
   padding-bottom: 10px; }
@@ -14518,14 +14563,14 @@ h1 {
 .quote:before {
   content: "“";
   font-family: HelveticaNoue;
-  color: #d5c68d;
+  color: #f1e7d2;
   font-weight: 600;
   font-size: 120%; }
 
 .quote:after {
   content: "”";
   font-family: HelveticaNoue;
-  color: #d5c68d;
+  color: #f1e7d2;
   font-weight: 600;
   font-size: 120%; }
 

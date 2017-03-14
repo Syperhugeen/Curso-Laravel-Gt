@@ -1,5 +1,5 @@
 <!--row para anunciar título de las best brands y mini-link para ampliar (ver más brands)-->
-<div class="row space-bottom">
+<div class="row">
 
 <!--ribbon bolt of cloth (red or golden)-->
 <div class="col-md-3 col-md-push-2 col-lg-2 col-lg-push-2 puzzle-box-index10 wow slideInLeft delay2b hidden-xs hidden-sm text-center">
@@ -10,12 +10,12 @@
 <div><h1 class="quote color-2light">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h1></div>
 </div>
 
-<div class="col-xs-12 logos-carousel-col"><!--logos slider-->
-	<section class="customer-logos slider wow fadeIn delay1b">
+<div class="col-xs-12 logos-carousel-col space-bottom"><!--logos slider-->
+	<section class="customer-logos wow fadeIn delay1b">
 
 		{{-- las marcas de la base de datos --}}
 	  @foreach($Marcas as $Marca)
-		 <a href="{{$Marca->route}}"><div class="slide"><img src="{{$Marca->url_img}}"></div></a> 
+		 <a href="{{$Marca->route}}"><img src="{{$Marca->url_img}}"></a> 
 		@endforeach 
 
 		{{-- 
@@ -24,20 +24,21 @@
 		  *		 
 		--}}
 
-		<div class="slide"><img src="imagenes/Img/icon_airplane(brown).png"></div>
-		<div class="slide"><img src="imagenes/Img/icon_enlaces(brown).png"></div>
-		<div class="slide"><img src="imagenes/Img/icon_handshake(brown).png"></div>
-		<div class="slide"><img src="imagenes/Img/icon_sign(vanilla).png"></div>
-		<div class="slide"><img src="imagenes/Img/icon_team(vanilla).png"></div>
-		<div class="slide"><img src="imagenes/Img/icon_world(vanilla).png"></div>
-		<div class="slide"><img src="imagenes/Img/icon_portfolio(vanilla).png"></div>
-		<div class="slide"><img src="imagenes/Img/icon_graphics(brown).png"></div>
+	<img src="imagenes/marcas/logo-01.png">
+	<img src="imagenes/marcas/logo-02.png">
+	<img src="imagenes/marcas/logo-03.png">
+	<img src="imagenes/marcas/logo-04.png">
+	<img src="imagenes/marcas/logo-05.png">
+	<img src="imagenes/marcas/logo-06.png">
 
 	</section>
 </div>
 
+<!-- /row-->
+</div>
 
-<div class="col-xs-12"><!-- ver más / ampliar / explorar -->
+<div class="row">
+<div class="col-xs-12 special-col"><!-- ver más / ampliar / explorar -->
 	<a href="{{route('get_pagina_marcas')}}">
 		<h5 class="ampliar text-center">
 		 <span class="glyphicon glyphicon-triangle-right"></span> 

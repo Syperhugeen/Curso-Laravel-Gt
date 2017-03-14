@@ -106,7 +106,7 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   border-bottom: 5px solid $color-3;
 }
 
-$section2-altura:400px;
+$section2-altura:300px;
 #section2 > .container-fluid{
 }
 
@@ -225,6 +225,11 @@ $special-col-altura: 400px;
 .special-col:hover{
   background-color: $color-3light;
 }
+.special-col-fake{
+  background-color: $color-3;
+  padding: $special-col-padding;
+  border: 1px solid $color-3superlight;
+}
 .special-col h2 {
   font-family: Champagne;
   letter-spacing: 3px;
@@ -246,6 +251,15 @@ $special-col-altura: 400px;
   font-size: 15px;
   letter-spacing: 3px;
   text-transform:uppercase;
+}
+.special-col .quote {
+  color:$color-3dark;
+}
+.special-col .quote:before{
+  color:$color-3superlight;
+}
+.special-col .quote:after{
+  color:$color-3superlight;
 }
 .special-col .ampliar:hover {
   color: $color-3;
@@ -319,6 +333,36 @@ $special-col-altura: 400px;
     min-height:none !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+/* * * T H U M B N A I L   G A L L E R Y * * *  */
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+.thumbnail-gallery-parent{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+@media all and (max-width: 767px) {
+  .thumbnail-gallery-parent{
+    justify-content: space-between;
+  }}
+
+.thumbnail-gallery-child{
+
+}
+
 
 
 
