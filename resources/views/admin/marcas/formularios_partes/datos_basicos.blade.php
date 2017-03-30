@@ -9,6 +9,14 @@
 </div>
 
 <div class="formulario-label-fiel">
+  {!! Form::label('rank', 'Rango', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('rank',  [''=> 'Elige el rango',
+                             1 => '1',
+                             2 => '2',
+                             3 => '3'] , null )          !!}
+</div>
+
+<div class="formulario-label-fiel">
   {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
   {!! Form::select('estado',['si' => 'Activo',
                              'no' => 'Desactivar'] , null )          !!}

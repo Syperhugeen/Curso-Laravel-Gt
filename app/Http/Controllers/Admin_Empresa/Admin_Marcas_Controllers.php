@@ -41,7 +41,7 @@ class Admin_Marcas_Controllers extends Controller
   {     
 
       //propiedades para crear
-      $Propiedades = ['name','description','estado'];
+      $Propiedades = ['name','description','estado','rank'];
 
       //traigo la entidad
       $marca = $this->MarcaRepo->getEntidad();
@@ -70,7 +70,7 @@ class Admin_Marcas_Controllers extends Controller
     $marca = $this->MarcaRepo->find($id);    
 
     //propiedades para crear
-    $Propiedades = ['name','description','estado'];    
+    $Propiedades = ['name','description','estado','rank'];    
 
     //grabo todo las propiedades
     $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
