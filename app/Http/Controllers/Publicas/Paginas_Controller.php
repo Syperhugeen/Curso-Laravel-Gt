@@ -49,7 +49,7 @@ class Paginas_Controller extends Controller
     //pagina donde estan las marcas
     public function get_pagina_marcas(Request $Request)
     {
-        $Marcas = $this->MarcaRepo->getEntidadActivasPaginadas($Request,5);
+        $Marcas = $this->MarcaRepo->getEntidadActivasPaginadas($Request,20);
         return view('paginas.marcas.marcas', compact('Marcas'));
     }
         //pagina de la marca individual
@@ -67,7 +67,7 @@ class Paginas_Controller extends Controller
     //pagina donde estan los eventos de esa
     public function get_pagina_eventos(Request $Request)
     {
-        $Eventos = $this->EventoRepo->getEntidadActivasPaginadas($Request,5);
+        $Eventos = $this->EventoRepo->getEntidadActivasPaginadas($Request,10);
         return view('paginas.eventos.eventos', compact('Eventos'));
     }
         //pagina de evento individual

@@ -25,7 +25,7 @@ class Admin_Marcas_Controllers extends Controller
   //home admin User
   public function get_admin_marcas(Request $Request)
   { 
-    $marcas = $this->MarcaRepo->getEntidadesAllPaginadas($Request,3);
+    $marcas = $this->MarcaRepo->getEntidadesAllPaginadas($Request,30);
 
     return view('admin.marcas.marcas_home', compact('marcas'));
   }
