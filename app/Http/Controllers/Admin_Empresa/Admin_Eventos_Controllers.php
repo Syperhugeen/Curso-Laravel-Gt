@@ -111,25 +111,21 @@ class Admin_Eventos_Controllers extends Controller
 
      //utilzo la funciona creada en el controlador para subir la imagen
      //archivos imagenes
+
+      //imagenes
       $files = $Request->file('img');
 
-      if(!empty($files))
-      {
+      
+      //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
+      if($files[0] != null )
+      {        
 
         foreach($files as $file)
-        {           
-          
+        { 
           $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$Evento->id,$Request,'EventosImagenes/' );
-
-          
-                    
         }
         
       }
-    
-      
-    
-     
       
      //creo las marcas asociadas a este evento
      if($Request->input('marca_asociado_id') != '')
