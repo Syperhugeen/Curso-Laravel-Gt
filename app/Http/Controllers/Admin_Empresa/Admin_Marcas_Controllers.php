@@ -27,6 +27,8 @@ class Admin_Marcas_Controllers extends Controller
   { 
     $marcas = $this->MarcaRepo->getEntidadesAllPaginadas($Request,30);
 
+    //mostrar marcas de la a a la z (orden)
+
     return view('admin.marcas.marcas_home', compact('marcas'));
   }
 
