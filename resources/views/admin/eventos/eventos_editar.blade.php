@@ -43,7 +43,7 @@
 
       {{-- datos imagenes --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Marcas</div>
+        <div class="contenedor-grupo-datos-titulo"> Marcas asociadas</div>
         <div class="contenedor-formulario-label-fiel">     
           @include('admin.eventos.partes.parte_de_marcas')                    
           @include('admin.eventos.formularios_partes.datos_marcas')
@@ -51,7 +51,7 @@
       </div>
       {{-- datos imagenes --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Imagenes</div>
+        <div class="contenedor-grupo-datos-titulo"> Imagenes</div>
         <div class="contenedor-formulario-label-fiel"> 
           @include('admin.eventos.partes.parte_imagenes_adicionales')                      
           @include('admin.eventos.formularios_partes.datos_imagenes')
@@ -60,7 +60,7 @@
 
       {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Datos</div>
+        <div class="contenedor-grupo-datos-titulo"> Datos</div>
         <div class="contenedor-formulario-label-fiel">                       
          @include('admin.eventos.formularios_partes.datos_basicos')
 
@@ -79,7 +79,7 @@
       
    </div>
    <div class="admin-boton-editar">
-     Editar evento
+     Guardar
    </div> 
 
 

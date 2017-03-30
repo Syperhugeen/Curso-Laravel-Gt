@@ -1,13 +1,17 @@
-<div class="admin-marca-lista-contenedor">
+@if($marca->estado != 'si')
+ <div class="admin-marca-lista-contenedor admin-marca-lista-contenedor-desactivado">
+@else
+ <div class="admin-marca-lista-contenedor">
+@endif
+
+
    
    <img class="admin-marca-img" src="{{url()}}/imagenes/{{$marca->img}}">
   
    <div class="admin-marca-contnedor-datos">
-     
-     <div class="admin-user-name-y-mas">
-       <div class="admin-lista-dato-primario"> {{$marca->name}}</div>
-            
-       
+     <div>
+        <div class="admin-marca-fecha">{{$marca->created_at->format('d-m-Y')}}</div>     
+        <div class="admin-marca-titulo"> {{$marca->name}}      </div>
      </div>
      <div class="admin-user-lista-contenedor-acciones">
         <a href="{{route('get_admin_marcas_editar', $marca->id)}}">
@@ -16,8 +20,6 @@
           </span>
         </a>
      </div>
-      
-   
    </div>
    
   

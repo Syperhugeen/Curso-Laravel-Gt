@@ -47,10 +47,7 @@ class Admin_Marcas_Controllers extends Controller
       $marca = $this->MarcaRepo->getEntidad();
 
       //grabo todo las propiedades
-      $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);
-
-      //me traigo la funcion del repositorio UserRepo   
-      $this->MarcaRepo->setMarcaAdmin($Request);
+      $this->MarcaRepo->setEntidadDato($marca,$Request,$Propiedades);     
 
       //para la imagen
       $this->MarcaRepo->setImagen($marca,$Request,'img','Marcas/', $marca->name,'.png'); 

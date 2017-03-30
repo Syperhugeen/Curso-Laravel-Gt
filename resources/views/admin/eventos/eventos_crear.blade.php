@@ -36,14 +36,14 @@
 
       {{-- datos imagenes --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Marcas</div>
+        <div class="contenedor-grupo-datos-titulo"> Marcas asociadas</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.eventos.formularios_partes.datos_marcas')
         </div>
       </div>
       {{-- datos imagenes --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Imagenes</div>
+        <div class="contenedor-grupo-datos-titulo">Imagenes</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.eventos.formularios_partes.datos_imagenes')
         </div>
@@ -51,7 +51,7 @@
 
       {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Identidad</div>
+        <div class="contenedor-grupo-datos-titulo"> Datos</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.eventos.formularios_partes.datos_basicos')
         </div>
@@ -64,7 +64,7 @@
       
    </div>
    <div class="admin-boton-editar">
-     Crear Evento
+     Crear 
    </div> 
 
 
