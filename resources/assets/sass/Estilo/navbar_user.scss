@@ -328,6 +328,32 @@ height: 46px;
   width: 230px;
 }
 
-
-
-
+.user-menu{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+}
+.user-menu h4 {
+  font-family:Champagne;
+  color: $color-3;
+  letter-spacing: 3px;
+  }
+.user-menu h6 {
+  font-family: HelveticaNoue, Helvetica, sans-serif;
+  color: $color-3dark;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.user-menu h4 a {
+  color: $color-3;
+}
+.user-menu h4 a:hover {
+  color: $color-3light;
+}
+.user-menu h6 a {
+  color: $color-2light;
+}
+.user-menu h6 a:hover {
+  color: $color-3;
+}

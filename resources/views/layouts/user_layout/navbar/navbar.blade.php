@@ -25,9 +25,6 @@
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
 
-          {{-- aqui pongo el tema de inicio de sesion y datos del user --}}
-          @include('layouts.user_layout.navbar.auth')
-
           {{-- contenidos ocultos para mostrar con tooltips --}}
           <div style="display: none;">
              <div class="contenido-inicio-de-sesion-navbar">
@@ -50,7 +47,13 @@
 
           </div>
 
-        </ul>       
+        </ul>
+
+
+        <!-- aqui pongo el tema de inicio de sesion y datos del user -->
+        @include('layouts.user_layout.navbar.auth')       
+
+
       </div>    <!-- /.navbar-collapse -->
     </div> <!-- / container fluid-->
 
