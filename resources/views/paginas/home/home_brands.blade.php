@@ -18,19 +18,6 @@
 		 <a href="{{$Marca->route}}"><img src="{{$Marca->url_img}}"></a> 
 		@endforeach 
 
-		{{-- 
-		  *
-		  * son las imagenes que tenias de muestra te las deje muteadas 
-		  *		 
-		--}}
-
-	<img src="imagenes/marcas/logo-01.png">
-	<img src="imagenes/marcas/logo-02.png">
-	<img src="imagenes/marcas/logo-03.png">
-	<img src="imagenes/marcas/logo-04.png">
-	<img src="imagenes/marcas/logo-05.png">
-	<img src="imagenes/marcas/logo-06.png">
-
 	</section>
 </div>
 
