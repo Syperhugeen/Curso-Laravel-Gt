@@ -34,7 +34,14 @@
     <div class="col-sm-6 special-col">
         <div class="thumbnail-gallery-parent">
         	<div class="thumbnail-gallery-child">
-				  <!-- insertar aqui las fotos de este evento -->
+          
+          {{-- solo la imagen pricnipal --}}
+          <img src="{{$Evento->url_img}}">
+				  
+          {{-- todas las imagenes asociadas al evento --}}
+          @foreach($Evento->imagenesevento as $img)
+            <img src="{{$img->url_img}}">
+          @endforeach
 			</div>
 		</div>
     </div> 
@@ -53,7 +60,7 @@
                {{-- imagen de la marca --}}
                <img src="{{$Marca->marca->url_img}}">
                <span class="glyphicon glyphicon-triangle-right"></span> ver todos los eventos relacionados a {{$Marca->marca->name}}
-               
+
             </h5>
   				</a>
   		</div>

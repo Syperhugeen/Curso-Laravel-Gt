@@ -2,11 +2,11 @@
 
 
 @section('title')
- {{$Marca->name}}
+ Eventos asociados a {{$Marca->name}} | Global Target - Uruguay
 @stop
 
 @section('MetaContent')
-  {{$Marca->description}}
+   A lo largo su trayectoria, Global Target ha organizado y representado a sus clientes en una amplia gama de eventos y promociones en Uruguay. En esta página puedes encontrar aquellos relacionados a {{$Marca->name}}.
 @stop
 
 @section('MetaRobot')
