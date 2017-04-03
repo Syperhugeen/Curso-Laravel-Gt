@@ -42,6 +42,8 @@
           @foreach($Evento->imagenesevento as $img)
             <img src="{{$img->url_img}}">
           @endforeach
+
+          
 			</div>
 		</div>
     </div> 

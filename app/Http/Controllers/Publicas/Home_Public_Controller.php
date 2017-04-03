@@ -37,7 +37,7 @@ class Home_Public_Controller extends Controller
     {
         
         $Empresa               = $this->EmpresaRepo->getEmpresaDatos();        
-        $Marcas                = $this->MarcaRepo->getUltimasEntidadesRegistradasRandomActive($Request,2);
+        $Marcas                = $this->MarcaRepo->getMarcasHome();
         $UltimoEvento          = $this->EventoRepo->getUltimoEvento();
         $PenultimoEvento       = $this->EventoRepo->getPenultimoEvento();
 

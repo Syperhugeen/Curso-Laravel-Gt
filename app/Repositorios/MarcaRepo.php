@@ -19,7 +19,14 @@ class MarcaRepo extends BaseRepo
 
   //guetters/////////////////////////////////////////////////////////////////////
 
-  
+  public function getMarcasHome()
+  {
+    return $this->getEntidad()
+                ->where('rank', 3 )
+                ->active()
+                ->get()
+                ->random(5);
+  }
 
 
   //setters//////////////////////////////////////////////////////////////////////
