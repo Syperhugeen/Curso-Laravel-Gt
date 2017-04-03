@@ -34,22 +34,32 @@
     <div class="col-sm-6 special-col">
         <div class="thumbnail-gallery-parent">
         	<div class="thumbnail-gallery-child">
-				<!-- insertar aqui las fotos de este evento -->
+				  <!-- insertar aqui las fotos de este evento -->
 			</div>
 		</div>
     </div> 
 
   </div>
 
-  	<!-- ver más todos los eventos de esta misma marca (link a estamarca.blade.php) -->
+  
+  @if($Evento->marcasevento->count() > 0) 
+    @foreach($Evento->marcasevento as $Marca)
+    <!-- ver más todos los eventos de esta misma marca (link a estamarca.blade.php) --> 
+  	<div class="row"><!-- ver más / ampliar / explorar -->
+  		<div class="col-xs-12 special-col">
+  				<a href="{{$Marca->marca->route}}">
+  					<h5 class="ampliar text-center">
 
-	<div class="row"><!-- ver más / ampliar / explorar -->
-		<div class="col-xs-12 special-col">
-				<a href="{{route('get_pagina_eventos')}}">
-					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todos los eventos relacionados a [esta marca]</h5>
-				</a>
-		</div>
-	</div>
+               {{-- imagen de la marca --}}
+               <img src="{{$Marca->marca->url_img}}">
+               <span class="glyphicon glyphicon-triangle-right"></span> ver todos los eventos relacionados a {{$Marca->marca->name}}
+               
+            </h5>
+  				</a>
+  		</div>
+  	</div>
+    @endforeach
+  @endif
 
 	<!-- ver el listado completo de eventos (link a eventos.blade.php) -->
 	<div class="row"><!-- ver más / ampliar / explorar -->

@@ -33,7 +33,7 @@
       {{-- aqui se muestra todos los eventos asociados a esa marca --}}
       @if($Eventos->count() > 0)
         @foreach($Eventos as $Evento)
-         {{$Evento->evento->name}} 
+         {{$Evento->name}} 
         @endforeach
       @else
        <h2>No hay eventos asociados a esta marca</h2>
