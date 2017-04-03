@@ -19,7 +19,7 @@
 			{{-- contiene el último evento --}}
 			<div class="col-xs-12 special-col table-outer"><div class="table-inner">
 				<h2>{{$UltimoEvento->name}}</h2>
-				<div class="p-container"><p>{{$UltimoEvento->description}}</p></div>
+				<div class="p-container"><p class="text-center">{{$UltimoEvento->description}}</p></div>
 				<a href="{{$UltimoEvento->route}}">
 					<h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
 				</a>
@@ -28,7 +28,7 @@
 			{{-- contiene el penúltimo evento --}}
 			<div class="col-xs-12 special-col table-outer"><div class="table-inner">
 				<h2>{{$PenultimoEvento->name}}</h2>
-				<div class="p-container"><p>{{$PenultimoEvento->description}}</p></div>
+				<div class="p-container"><p class="text-center">{{$PenultimoEvento->description}}</p></div>
 				<a href="{{$PenultimoEvento->route}}">
 					<h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
 				</a>			

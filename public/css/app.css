@@ -12644,7 +12644,8 @@ son los titulos de la seccion */
 /*---esto se cambia automáticamente acorde a la altura ingresada de la Navbar
 para que el contenido comience luego de la Navbar y no se pierda nada detrás de ella---*/
 body {
-  padding-top: 120px; }
+  padding-top: 120px;
+  background-color: #302a26; }
 
 @media (max-width: 767px) {
   body {
@@ -12657,7 +12658,7 @@ body {
   overflow-x: hidden;
   padding-top: 120px;
   margin-top: -120px;
-  background-color: #f1e7d2; }
+  background-color: #f8f1e3; }
 
 @media (max-width: 767px) {
   .global-wrapper {
@@ -12855,12 +12856,12 @@ como por ejemplo un carousel de imágenes de header---*/
   overflow: hidden; }
 
 /* img de todas las special-cols */
-.special-col img.horizontal {
+#eventos .special-col img.horizontal {
   min-height: 100%;
   height: auto;
   width: 60vw; }
 
-.special-col img :not(.horizontal) {
+#eventos .special-col img:not(.horizontal) {
   height: auto;
   width: 60vw; }
 
@@ -12874,15 +12875,17 @@ como por ejemplo un carousel de imágenes de header---*/
   height: inherit;
   width: auto; }
 
-#home #section4 .col-sm-6.special-col img :not(.horizontal) {
+#home #section4 .col-sm-6.special-col img:not(.horizontal) {
   height: auto;
   width: 60vw; }
 
 /* para que se agranden un poquito on-hover */
-#eventos .special-col img {
-  transition: all .3s ease-in-out; }
+#eventos .special-col img,
+#marcas .special-col img {
+  transition: transform 1s ease-in-out; }
 
-#eventos .special-col:hover img {
+#eventos .special-col:hover img,
+#marcas .special-col:hover img {
   transform: scale(1.1); }
 
 /* tamanio de las special-cols responsive */
@@ -14000,12 +14003,14 @@ a > .link-go-to-web:focus {
     margin-top: 10px; } }
 
 /*--- contenido de INICIO DE SESIÓN ---*/
+/*--- código doe mauri (creo que está fuera de uso) ---*/
 .contenido-inicio-de-sesion-navbar {
   width: 230px; }
 
 .contenido-auth-deplegado-navbar {
   width: 230px; }
 
+/*--- este es mí código ---*/
 .user-menu {
   position: absolute;
   top: 20px;
@@ -14313,18 +14318,13 @@ escritura de código)---*/
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*--- A C E R C A   D E   V & V  ---*/
-.empresa-individual {
-  transition: all .3s ease; }
+/*---   M A R C A S   //   C A R T E R A   D E   C L I E N T E S   ---*/
+img.marca-col {
+  width: 300px;
+  height: auto; }
 
-.empresa-individual:hover {
-  transform: translate(0, -20px); }
-
-.empresa-individual:hover h3 {
-  color: #cebe98; }
-
-/*---Acerda de V&V - sección de envío de currículum ---*/
-.section-special-2 {
+.marca-header {
+  /*---   aun sin usar, podria ser un header para la seccion marcas, con una foto de empresarios dandose las manos   ---*/
   background: white url("../../imagenes/Img/equipo.jpg") no-repeat left;
   background-size: cover; }
 

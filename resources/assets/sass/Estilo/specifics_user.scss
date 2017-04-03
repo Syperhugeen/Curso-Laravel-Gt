@@ -272,23 +272,14 @@ escritura de código)---*/
 
 
 
-/*--- A C E R C A   D E   V & V  ---*/
+/*---   M A R C A S   //   C A R T E R A   D E   C L I E N T E S   ---*/
 
-.empresa-individual{
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
+img.marca-col{
+  width:300px;
+  height:auto;
 }
-.empresa-individual:hover{
-    -webkit-transform: translate(0, -20px);
-  -moz-transform: translate(0, -20px);
-  transform: translate(0, -20px);
-}
-.empresa-individual:hover h3{
-  color:$color-3;
-}
-/*---Acerda de V&V - sección de envío de currículum ---*/
-.section-special-2{
+
+.marca-header{ /*---   aun sin usar, podria ser un header para la seccion marcas, con una foto de empresarios dandose las manos   ---*/
   background: $color-white url("../../imagenes/Img/equipo.jpg") no-repeat left;
   background-size:cover;
 }

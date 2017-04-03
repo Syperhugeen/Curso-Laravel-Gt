@@ -2,11 +2,11 @@
 
 
 @section('title')
- Marcas
+ Cartera de Clientes
 @stop
 
 @section('MetaContent')
-  Descripcion de pagina de marcas
+  Cartera de Clientes de Global Target
 @stop
 
 @section('MetaRobot')
@@ -20,30 +20,44 @@
 
  
 
+    <div id="marcas">
+    
+    
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper">
-  <div class="row">    
-    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-      <div class="page-header">
-        <h1>Marcas que trabajan con Global</h1>
-      </div>
+<div class="container-fluid section-wrapper no-padding bgcolor-3light">
 
-      <!--contenedor de publicaciones individuales-->
-      {{-- contiene hasta séis publicaciones como máximo --}}
-      <div class="home-section-display">
+{{-- contiene hasta diez eventos como máximo --}}
+  <div class="row">
+
+  <div class="col-xs-12 no-padding">
+  {{-- rombo divisor con el logo de GT --}}
+  <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+  </div>
+
+    <div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
+      <h1 class="text-center">Marcas con las que trabajamos</h1>
+      <p class="text-center super-space-bottom">Aquí alguna frase con respecto a nuestros clientes.</p>
+    </div>
 
             @foreach($Marcas as $Marca)
              @include('paginas.marcas.entidad_marca_para_listado')
             @endforeach
 
-      </div>
+  </div>
+</div>
 
+
+
+   </div> 
+
+
+
+
+
+<!--¿qué es esto? no lo borré porque no sé ni qué es ni dónde tiene que ir -->
     <div class="col-centered">
       {!! $Marcas->appends(Request::all())->render() !!}
     </div>
 
-    </div>  
-  </div>
-</div>
 
 @stop

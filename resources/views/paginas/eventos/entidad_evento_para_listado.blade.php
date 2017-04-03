@@ -7,7 +7,7 @@
 		</div>
 
 		<div class="col-sm-6 table-outer">
-			{{-- contiene el último evento --}}
+
 			<div class="table-inner">
 				<h2>{{$Evento->name}}</h2>
 				<div class="p-container"><p class="text-center">{{$Evento->description}}</p></div>
