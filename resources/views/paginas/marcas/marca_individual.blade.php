@@ -54,12 +54,12 @@
           <div class="col-xs-12 special-col no-padding">
             <div class="row">
               <div class="col-sm-6 no-padding eventos-imagen">
-                <img class="img-greyscale" src="{{$Evento->evento->url_img}}">
+                <img class="img-greyscale" src="">
               </div>
               <div class="col-sm-6 table-outer">
                 <div class="table-inner">
                   <h2>{{$Evento->evento->name}}</h2>
-                  <div class="p-container"><p class="text-center"></p></div>
+                  <div class="p-container"><p class="text-center">{{$Evento->evento->description}}</p></div>
                   <a href="{{$Evento->evento->route}}">
                     <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
                   </a>
