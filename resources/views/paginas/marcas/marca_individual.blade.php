@@ -78,7 +78,7 @@
 
               {{-- es la paginacio --}}
               <div class="col-centered">
-                {!! $Eventos->appends(Request::all())->render() !!}
+                
               </div>    
 
           </div>
