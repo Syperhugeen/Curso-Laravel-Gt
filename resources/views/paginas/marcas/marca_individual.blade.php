@@ -68,13 +68,19 @@
             </div>
           </div>                
         @endforeach
-
+ 
 
       <!-- pagination -->
       <div class="col-xs-12 special-col">
         <div class="row">
           <div class="">          
-              <h5 class="ampliar text-center">aqui ira la paginacion</h5>                  
+              <h5 class="ampliar text-center">aqui ira la paginacion</h5>  
+
+              {{-- es la paginacio --}}
+              <div class="col-centered">
+                {!! $Eventos->appends(Request::all())->render() !!}
+              </div>    
+
           </div>
         </div>
       </div>
@@ -120,7 +126,7 @@
       {{-- aqui se muestra todos los eventos asociados a esa marca --}}
       @if($Eventos->count() > 0)
         @foreach($Eventos as $Evento)
-         {{$Evento->name}} 
+         {{$Evento->evento->name}} 
         @endforeach
       @else
        <h2>No hay eventos asociados a esta marca</h2>
