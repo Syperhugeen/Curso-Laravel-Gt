@@ -47,7 +47,7 @@
       {{-- rombo divisor con el logo de GT --}}
       <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
     </div>
-    @if($Eventos->count() > 0)
+    @if(count($Eventos) > 0)
 
         <!-- aquí se muestra cada evento relacionado a la marca -->
         @foreach($Eventos as $Evento)
@@ -78,7 +78,7 @@
 
               {{-- es la paginacio --}}
               <div class="col-centered">
-                
+                {!! $Eventos->appends(Request::all())->render() !!}
               </div>    
 
           </div>
