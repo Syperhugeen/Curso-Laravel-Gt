@@ -6,10 +6,25 @@
 
 
 
-
-
-
-
+/*  D E C O R A T I V E - D I V I D E R  */
+/* rombito diamante decorativo */
+#section1 .decorative-divider{
+  margin-top: -58px;
+  background-color: $color-3;
+}
+#section4 .decorative-divider{
+  margin-top: -18px;
+}
+#marcas .decorative-divider,
+#eventos .decorative-divider{
+  bottom: 0;
+  margin-bottom: -18px;
+}
+#servicios .decorative-divider{
+  top: 0;
+  margin-top: -20px;
+  z-index: 100;
+}
 
 
 /*--- * * * * H O M E * * * * * 
@@ -17,7 +32,6 @@
 (tiene una banda de cosas la Home,
 pero eso es porque no optimicé la
 escritura de código)---*/
-
 
 
 
@@ -258,8 +272,15 @@ escritura de código)---*/
 
 
 
+
+
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
 
 
 
@@ -288,50 +309,73 @@ img.marca-col{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
 
 
-/*--- S E R V I C I O S ---*/
 
-.servicio-individual{
-  border-bottom:1px solid $color-grey0;
-  padding-bottom:10px;
-  margin-bottom:20px;
 
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-.servicio-individual:hover{
-  -webkit-transform: translate(0, -20px);
-  -moz-transform: translate(0, -20px);
-  transform: translate(0, -20px);
-}
-.section-special-1{
-  color:$color-white;
-  background: $color-3 url("../../imagenes/Img/presupuesto_background.jpg") no-repeat center;
-  background-size:cover;
-}
-.boton-presupuesto{
-  padding-bottom:20px;
-}
-.metodo-individual{
-  border-bottom:1px solid $color-grey0;
-  padding-bottom:10px;
-  margin-bottom:20px;
-}
-div.metodo-individual>h3{
-  margin-top:0px;
-}
-div.servicio-individual>h4>span.glyphicon{
-  color:$color-3;
+
+
+
+
+
+/*---   E V E N T O S    ---*/
+.eventos-imagen{
+  border-right:1px solid $color-3superlight;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+
+
+
+
+
+
+/*---   S E R V I C I O S   ---*/
+
+#servicios h4 a {
+  color:$color-3dark;
+}
+#servicios h4 a:hover {
+  color:$color-3superlight;
+}
+#servicios .header-pic {
+    width: 100vw;
+    height: auto;
+    border-top: 1px solid $color-3superlight;
+    border-bottom: 1px solid $color-3superlight;
+}
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

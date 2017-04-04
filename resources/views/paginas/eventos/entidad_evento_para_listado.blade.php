@@ -2,7 +2,7 @@
 	<div class="col-xs-12 special-col no-padding">
 	<div class="row">
 
-		<div class="col-sm-6 no-padding">
+		<div class="col-sm-6 no-padding eventos-imagen">
 			<img class="img-greyscale" src="{{$Evento->url_img}}">
 		</div>
 
