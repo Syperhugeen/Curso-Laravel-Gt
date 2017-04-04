@@ -54,7 +54,7 @@
           <div class="col-xs-12 special-col no-padding">
             <div class="row">
               <div class="col-sm-6 no-padding eventos-imagen">
-                <img class="img-greyscale" src="">
+                <img class="img-greyscale" src="{{$Evento->evento->url_img}}">
               </div>
               <div class="col-sm-6 table-outer">
                 <div class="table-inner">
