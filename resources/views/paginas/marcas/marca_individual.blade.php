@@ -114,7 +114,9 @@
 
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper">
+
+
+{{-- <div class="container-fluid section-wrapper">
   <div class="row">    
     <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
       <div class="page-header">
@@ -123,7 +125,7 @@
 
       <h1>Pagina de la marca ...  {{$Marca->name}} .</h1>
       
-      {{-- aqui se muestra todos los eventos asociados a esa marca --}}
+      aqui se muestra todos los eventos asociados a esa marca
       @if($Eventos->count() > 0)
         @foreach($Eventos as $Evento)
          {{$Evento->evento->name}} 
@@ -135,7 +137,7 @@
 
     </div>  
   </div>
-</div>
+</div> --}}
 
   </div>
 
