@@ -51,7 +51,7 @@
 
         <!-- aquí se muestra cada evento relacionado a la marca -->
         @foreach($Eventos as $Evento)
-          <div class="col-xs-12 special-col no-padding">
+          {{-- <div class="col-xs-12 special-col no-padding">
             <div class="row">
               <div class="col-sm-6 no-padding eventos-imagen">
                 <img class="img-greyscale" src="{{$Evento->evento->url_img}}">
@@ -66,7 +66,7 @@
                 </div>
               </div>
             </div>
-          </div>                
+          </div>           --}}      
         @endforeach
  
 
