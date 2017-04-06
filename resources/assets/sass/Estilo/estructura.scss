@@ -21,7 +21,7 @@ $navbar-altura-xs:68px;
 /*---esto se cambia automáticamente acorde a la altura ingresada de la Navbar
 para que el contenido comience luego de la Navbar y no se pierda nada detrás de ella---*/
   body{   	padding-top:$navbar-altura; background-color:$color-2;}
-  @media (max-width:767px) {body{    padding-top:$navbar-altura-xs;  }}
+  @media (max-width:767px) {body{    padding-top:$navbar-altura-xs; }}
 
 /* escribir aquí la altura de las columnas del footer, a criterio según la cantidad de info que tengan */
 $altura-footer-columns:200px;
@@ -212,9 +212,9 @@ como por ejemplo un carousel de imágenes de header---*/
 /* cols cuadradotas con fondo, minimal elegantes */
 
 /* escribir valor del padding, se ajustará responsive solo */
-$special-col-padding: 20px 60px;
+$special-col-padding:20px 60px;
 /*escribir el valor que quiero que tengan las special col de altura*/
-$special-col-altura: 400px;
+$special-col-altura:400px;
 
 .special-col{
   background-color: $color-3;
@@ -288,19 +288,26 @@ $special-col-altura: 400px;
   padding: 20px 140px;
   overflow: hidden;
 }
-
+/* special-cols de eventos individuales */
+#evento-individual .special-col .col-sm-6{
+  height: $special-col-altura * 1.33;
+  padding: 20px 140px;
+  overflow: hidden;
+}
 
 /* img de todas las special-cols */
+#evento-individual .special-col.special-col-img img.horizontal,
 #eventos .special-col img.horizontal,
 #servicios .special-col img.horizontal{
   min-height:100%;
   height:auto;
   width:60vw;
 }
+#evento-individual .special-col.special-col-img img:not(.horizontal),
 #eventos .special-col img:not(.horizontal),
 #servicios .special-col img:not(.horizontal){
   height:auto;
-  width:60vw;
+  width:100%; /* testeando con 100%, antes era 60vw */
 }
 /* para que los greyscale-hover tomen color cuando se pasa por arriba de la special-col que es parent */
 .special-col:hover .img-greyscale-hover{
@@ -319,8 +326,8 @@ $special-col-altura: 400px;
 /* para que se agranden un poquito on-hover */
 #eventos .special-col img,
 #marcas .special-col img {
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
 }
 #eventos .special-col:hover img,
 #marcas .special-col:hover img {
@@ -332,9 +339,9 @@ $special-col-altura: 400px;
 /* tamanio de las special-cols responsive */
 @media (max-width:767px) {
   #eventos .special-col .col-sm-6,
-  #servicios .special-col .col-sm-6{
-    height: $special-col-altura / 2;
-    padding: $special-col-padding;}
+  #servicios .special-col .col-sm-6,
+  #evento-individual .special-col .col-sm-6{
+    height: $special-col-altura / 2;}
   #home #section4 .special-col.col-sm-6{
     height: $special-col-altura / 4;}
   #home #section4 .col-sm-6 .special-col.col-xs-12{
@@ -345,9 +352,12 @@ $special-col-altura: 400px;
     min-height:none !important;
   }
 }
-
-
-
+@media (max-width:991px) {
+  #eventos .special-col .col-sm-6,
+  #servicios .special-col .col-sm-6,
+  #evento-individual .special-col .col-sm-6{
+    padding: $special-col-padding;
+  }}
 
 
 
@@ -362,20 +372,34 @@ $special-col-altura: 400px;
 /* * * T H U M B N A I L   G A L L E R Y * * *  */
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 .thumbnail-gallery-parent{
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap; 
+  flex-flow: row wrap; 
+  display: -webkit-box;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
 }
-@media all and (max-width: 767px) {
-  .thumbnail-gallery-parent{
-    justify-content: space-between;
-  }}
 
 .thumbnail-gallery-child{
-
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto; 
+  width: 200px; 
+  margin: .5vw; 
+}
+.thumbnail-gallery-child img {
+  width: 100%; 
+  height: auto; 
 }
 
-
+@media screen and (max-width: 400px) {
+  .thumbnail-gallery-parent { padding: 10; }
+  .thumbnail-gallery-child { margin: 4; }
+  
+}
 
 
 

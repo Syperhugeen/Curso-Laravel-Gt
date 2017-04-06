@@ -12861,17 +12861,26 @@ como por ejemplo un carousel de imágenes de header---*/
   padding: 20px 140px;
   overflow: hidden; }
 
+/* special-cols de eventos individuales */
+#evento-individual .special-col .col-sm-6 {
+  height: 532px;
+  padding: 20px 140px;
+  overflow: hidden; }
+
 /* img de todas las special-cols */
+#evento-individual .special-col.special-col-img img.horizontal,
 #eventos .special-col img.horizontal,
 #servicios .special-col img.horizontal {
   min-height: 100%;
   height: auto;
   width: 60vw; }
 
+#evento-individual .special-col.special-col-img img:not(.horizontal),
 #eventos .special-col img:not(.horizontal),
 #servicios .special-col img:not(.horizontal) {
   height: auto;
-  width: 60vw; }
+  width: 100%;
+  /* testeando con 100%, antes era 60vw */ }
 
 /* para que los greyscale-hover tomen color cuando se pasa por arriba de la special-col que es parent */
 .special-col:hover .img-greyscale-hover {
@@ -12890,7 +12899,7 @@ como por ejemplo un carousel de imágenes de header---*/
 /* para que se agranden un poquito on-hover */
 #eventos .special-col img,
 #marcas .special-col img {
-  transition: transform 1s ease-in-out; }
+  transition: transform 2s ease-in-out; }
 
 #eventos .special-col:hover img,
 #marcas .special-col:hover img {
@@ -12899,9 +12908,9 @@ como por ejemplo un carousel de imágenes de header---*/
 /* tamanio de las special-cols responsive */
 @media (max-width: 767px) {
   #eventos .special-col .col-sm-6,
-  #servicios .special-col .col-sm-6 {
-    height: 200px;
-    padding: 20px 60px; }
+  #servicios .special-col .col-sm-6,
+  #evento-individual .special-col .col-sm-6 {
+    height: 200px; }
   #home #section4 .special-col.col-sm-6 {
     height: 100px; }
   #home #section4 .col-sm-6 .special-col.col-xs-12 {
@@ -12911,21 +12920,40 @@ como por ejemplo un carousel de imágenes de header---*/
     height: auto !important;
     min-height: none !important; } }
 
+@media (max-width: 991px) {
+  #eventos .special-col .col-sm-6,
+  #servicios .special-col .col-sm-6,
+  #evento-individual .special-col .col-sm-6 {
+    padding: 20px 60px; } }
+
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 /* * * T H U M B N A I L   G A L L E R Y * * *  */
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 .thumbnail-gallery-parent {
+  padding: .5vw;
+  font-size: 0;
   display: -ms-flexbox;
-  display: flex;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  display: flex; }
 
-@media all and (max-width: 767px) {
+.thumbnail-gallery-child {
+  -ms-flex: auto;
+  flex: auto;
+  width: 200px;
+  margin: .5vw; }
+
+.thumbnail-gallery-child img {
+  width: 100%;
+  height: auto; }
+
+@media screen and (max-width: 400px) {
   .thumbnail-gallery-parent {
-    -ms-flex-pack: justify;
-    justify-content: space-between; } }
+    padding: 10; }
+  .thumbnail-gallery-child {
+    margin: 4; } }
 
 /* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
 body::after {
@@ -13694,73 +13722,6 @@ para suplantar las duraciones originales leídas antes */
   animation-delay: 3s; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
- *		N A V I G A T I O N   B A R     (ADMIN)      *
- *        (la famosa "columna" de Mauri)           *
- * * * * * * * * * * * * * * * * * * * * * * * * * */
-.admin-columna-contenedor {
-  width: 200px;
-  padding: 5px 6px;
-  border: solid 1px transparent;
-  border-right-color: #EFEEEE;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-color: #3b3b3b;
-  min-height: 100vh;
-  position: fixed; }
-
-.admin-header-logo {
-  height: 55px;
-  margin: 35px 3px; }
-
-.admin-columna-ul {
-  width: 100%;
-  margin-top: 40px; }
-
-.admin-columna-li {
-  width: 100%;
-  padding: 5px;
-  font: arial;
-  font-size: 14px;
-  color: #858585;
-  margin-top: 2px;
-  text-decoration: none;
-  list-style: none; }
-
-.admin-columna-li:not(.Helper-Class-Active):focus,
-.admin-columna-li:not(.Helper-Class-Active):hover {
-  color: white;
-  transform: translate(5px, 0); }
-
-.Helper-Class-Active {
-  color: #cebe98;
-  text-shadow: 0 0 5px #917e4b, 0 0 10px #917e4b; }
-
-.admin-boton-registrar {
-  padding: 8px;
-  background-color: #385dae;
-  font-size: 18px;
-  color: white;
-  border-radius: 5px; }
-
-a > .link-go-to-web {
-  color: #858585;
-  letter-spacing: 3px;
-  border-top: 1px solid #858585;
-  margin-top: 18px;
-  padding-top: 12px; }
-
-a > .link-go-to-web:hover,
-a > .link-go-to-web:focus {
-  color: white; }
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * *
  *		N A V I G A T I O N   B A R     (user)     *
  * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* dimensiones de la navbar y visibilidad */
@@ -14051,6 +14012,21 @@ a > .link-go-to-web:focus {
  *  (pertenecientes al panel de ADMIN)             *
  * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * *  - - - - -    L A Y O U T   G E N E R A L    - - - - - * * * * */
+/* ---  W R A P P E R  --- */
+.admin-content-wrapper {
+  margin-top: -120px; }
+
+@media (max-width: 767px) {
+  .admin-content-wrapper {
+    margin-top: -68px; } }
+
+.admin-content-background-color {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f1e3;
+  z-index: -100; }
+
 /* --- H E A D E R --- */
 .admin-header {
   width: 100%;
@@ -14117,7 +14093,80 @@ a > .link-go-to-web:focus {
 .spam-separador {
   margin: 0 2px; }
 
-/* * * * *  - - - - -    L A Y O U T   G E N E R A L    - - - - - * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ *    N A V I G A T I O N   S L I D E   B A R (Admin)*
+ *        (la "columna" de la izquierda)            *
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+.admin-columna-contenedor {
+  width: 200px;
+  padding: 5px 6px;
+  border-right: 1px solid #cebe98;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #302a26;
+  min-height: 100vh;
+  position: fixed; }
+
+.admin-boton-registrar {
+  padding: 8px;
+  background-color: #385dae;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px; }
+
+.admin-header-logo {
+  height: 55px;
+  margin: 35px 3px; }
+
+#admin-col-admin,
+#admin-col-superadmin,
+#admin-col-backtoweb {
+  padding: 14px 0; }
+
+#admin-col-admin,
+#admin-col-superadmin {
+  border-bottom: 1px solid #726259; }
+
+.admin-columna-contenedor ul {
+  margin-top: 40px; }
+
+.admin-columna-contenedor a li:not(.Helper-Class-Active),
+.admin-columna-contenedor #admin-col-backtoweb a p {
+  color: #917e4b; }
+
+.admin-columna-contenedor a li:not(.Helper-Class-Active):hover,
+.admin-columna-contenedor #admin-col-backtoweb a p:hover {
+  color: #cebe98; }
+
+.admin-columna-contenedor a li.admin-columna-li.mi-float-right.Helper-Class-Active {
+  color: #cebe98;
+  text-shadow: 0 0 5px #917e4b, 0 0 10px #917e4b;
+  /*cambiar "all" por "translate" si quiero que los demás cambios se hagan instantáneamente*/
+  transition: none; }
+
+.admin-columna-contenedor a:hover li.admin-columna-li.mi-float-right.Helper-Class-Active {
+  transform: none; }
+
+.admin-columna-contenedor #admin-col-superadmin a li,
+.admin-columna-contenedor #admin-col-admin a li {
+  width: 100%;
+  padding: 5px;
+  font: arial;
+  font-size: 14px;
+  margin-top: 2px;
+  text-decoration: none;
+  list-style: none; }
+
+.admin-columna-contenedor #admin-col-backtoweb a p {
+  letter-spacing: 3px; }
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  *	C L A S E S   E S P E C Í F I C A S            *
  *	P A R A   D I F E R E N T E S   P Á G I N A S  *

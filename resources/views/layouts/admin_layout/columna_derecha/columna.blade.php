@@ -1,19 +1,39 @@
 <div class="admin-columna-contenedor">
+
  {{-- imagen logo --}}
  <a href="{{route('get_home')}}"><img class="admin-header-logo" src="{{url()}}/imagenes/Empresa/isologo.png"></a>
+
  <ul>
    @if(Auth::user()->role === 'adminMcos522')
-     <a href="{{route('get_admin_users')}}"><li class="admin-columna-li"><span class="icon-group"></span> Usuarios</li></a>
-     <a href="{{route('get_admin_marcas')}}"><li class="admin-columna-li"><span class="icon-whatshot"></span> Marcas</li></a>
-     <a href="{{route('get_admin_eventos')}}"><li class="admin-columna-li"><span class="icon-chrome_reader_mode"></span> Eventos</li></a>
-     <li class="admin-columna-li"><span class="icon-insert_emoticon"></span> Modelos</li>
-     <a href="{{route('get_datos_home_web')}}"> <li class="admin-columna-li"><span class="icon-home"></span> Home Edit</li></a>   
+   <div id="admin-col-superadmin">
+        <a href="{{route('get_datos_home_web')}}">
+            <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> Admin Panel</li>
+        </a> 
+        <a href="{{route('get_admin_users')}}">
+          <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> Usuarios</li>
+        </a>
+    </div>
    @endif
-     <a href="{{route('get_datos_corporativos')}}"><li class="admin-columna-li"><span class="icon-domain"></span> Empresa</li></a>
-     <a href="{{route('get_admin_proyectos')}}"><li class="admin-columna-li"><span class="icon-web"></span> Proyectos</li></a>
-     <a href="{{route('get_admin_noticias')}}"><li class="admin-columna-li"><span class="icon-drafts"></span> Noticias</li></a>
- </ul>
- 
-<a href="{{route('get_home')}}"><p class="link-go-to-web"><small>ir a la web</small></p></a>
 
+   <div id="admin-col-admin">
+        <a href="{{route('get_datos_corporativos')}}">
+            <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> La Empresa</li>
+        </a>
+        <a href="{{route('get_admin_marcas')}}">
+            <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> Clientes</li>
+        </a>
+        <a href="{{route('get_admin_eventos')}}">
+            <li class="admin-columna-li mi-float-right"><span class="glyphicon glyphicon-triangle-right"></span> Eventos</li>
+        </a>
+    </div>
+
+</ul>
+
+    <div id="admin-col-backtoweb">
+        <a href="{{route('get_home')}}">
+            <p><small>globaltarget.com.uy</small></p>
+        </a>
+    </div>
+
+    
 </div>

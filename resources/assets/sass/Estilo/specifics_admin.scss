@@ -10,6 +10,24 @@
 
 /* * * * *  - - - - -    L A Y O U T   G E N E R A L    - - - - - * * * * */
 
+/* ---  W R A P P E R  --- */
+.admin-content-wrapper{
+  margin-top: (-$navbar-altura);
+}
+@media (max-width:767px) {.admin-content-wrapper{
+  margin-top: (-$navbar-altura-xs);
+}}
+
+.admin-content-background-color{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color: $color-3hyperlight;
+  z-index: -100;
+}
+
+
+
 
 /* --- H E A D E R --- */
 
@@ -77,4 +95,89 @@
 
 
 
-/* * * * *  - - - - -    L A Y O U T   G E N E R A L    - - - - - * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ *    N A V I G A T I O N   S L I D E   B A R (Admin)*
+ *        (la "columna" de la izquierda)            *
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+ // columna
+ .admin-columna-contenedor{
+  width: 200px;
+  padding: 5px 6px;
+  border-right: 1px solid $color-3;  
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(column); 
+  background-color: $color-2;
+  min-height: 100vh;
+  position: fixed;
+}
+
+      // y esto???? que es???
+      .admin-boton-registrar{
+        padding: 8px;
+        background-color:$Color-Azul-Wm;
+        font-size: 18px;
+        color: white;
+        border-radius: 5px;
+      }
+
+// logo o isologo de la marca
+.admin-header-logo{
+    height: 55px;
+    margin:35px 3px;
+  }
+
+// secciones de la columna con diferentes permisos y sus lineas separadoras
+#admin-col-admin,
+#admin-col-superadmin,
+#admin-col-backtoweb{
+  padding: 14px 0;
+}
+#admin-col-admin,
+#admin-col-superadmin{
+  border-bottom: 1px solid $color-2superlight;
+}
+
+
+// estilos de los links de la columna
+.admin-columna-contenedor ul{
+  margin-top: 40px;
+}
+.admin-columna-contenedor a li:not(.Helper-Class-Active),
+.admin-columna-contenedor #admin-col-backtoweb a p {
+  color: $color-3dark;
+}
+.admin-columna-contenedor a li:not(.Helper-Class-Active):hover,
+.admin-columna-contenedor #admin-col-backtoweb a p:hover {
+  color: $color-3;
+}
+.admin-columna-contenedor a li.admin-columna-li.mi-float-right.Helper-Class-Active{
+  color: $color-3;
+  text-shadow: 0 0 5px $color-3dark, 0 0 10px $color-3dark;
+  -webkit-transition: none; /*cambiar "all" por "translate" si quiero que los demás cambios se hagan instantáneamente*/
+  -moz-transition: none;
+  transition: none;
+}
+.admin-columna-contenedor a:hover li.admin-columna-li.mi-float-right.Helper-Class-Active{
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+}
+// links que llevan a secciones del admin panel
+.admin-columna-contenedor #admin-col-superadmin a li,
+.admin-columna-contenedor #admin-col-admin a li{
+  width: 100%;
+  padding:5px;
+  font: arial;
+  font-size: 14px;
+  margin-top: 2px;
+  text-decoration: none;
+  list-style: none; 
+}
+
+// link que lleva de vuelta al sitio web para ver los cambios
+.admin-columna-contenedor #admin-col-backtoweb a p{
+letter-spacing:3px;
+}
+
+

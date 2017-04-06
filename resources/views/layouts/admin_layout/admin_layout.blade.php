@@ -9,8 +9,11 @@
     <link rel="stylesheet" type="text/css" href=" {{ asset('Iconos/fonts/style.css')}}">
     <META name="robots" content="NOINDEX,NOFOLLOW">
   </head>
-  <body>
 
+  <body>
+  
+  <div class="admin-content-wrapper">
+  <div class="admin-content-background-color"></div>
   
    <div class="admin-contiene-columna-y-content">
       @include('layouts.admin_layout.columna_derecha.columna')
@@ -19,8 +22,13 @@
         @yield('content')
       </div>      
    </div>
+
+   
+   </div>
+
       <!-- Scripts -->
       <script src="{{ asset('js/all.js')}}"></script>
       <script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>    
   </body>
+
 </html>
