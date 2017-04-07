@@ -25,7 +25,7 @@ class Admin_Marcas_Controllers extends Controller
   //home admin User
   public function get_admin_marcas(Request $Request)
   { 
-    $marcas = $this->MarcaRepo->getEntidadesAllPaginadas($Request,30);
+    $marcas = $this->MarcaRepo->getMarcasParaAdminOrdenadasAlfabeticamente($Request,30);
 
     //mostrar marcas de la a a la z (orden)
 

@@ -19,6 +19,9 @@ class MarcaRepo extends BaseRepo
 
   //guetters/////////////////////////////////////////////////////////////////////
 
+  /**
+   * son las marcas para mostrar en la home
+   */
   public function getMarcasHome()
   {
     return $this->getEntidad()
@@ -26,6 +29,18 @@ class MarcaRepo extends BaseRepo
                 ->active()
                 ->get()
                 ->random(5);
+  }
+
+
+  /**
+   * son las marcas para admin
+   */
+  public function getMarcasParaAdminOrdenadasAlfabeticamente($request,$paginacion)
+  {
+      return $this->getEntidad()
+                  ->name($request->get('name'))                                 
+                  ->orderBy('name','asc')
+                  ->paginate($paginacion);
   }
 
 
