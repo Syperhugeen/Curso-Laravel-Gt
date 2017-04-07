@@ -18,6 +18,6 @@
 <div class="formulario-label-fiel">
   {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
   {!! Form::select('estado',['si' => 'Activo',
-                             'no' => 'Desactivar'] , null )          !!}
+                             'no' => 'Inactivo'] , null )          !!}
 </div>
 

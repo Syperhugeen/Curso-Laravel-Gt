@@ -7,7 +7,7 @@
   <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
 
   {{-- separador --}}
-  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
+  <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
   <span>La Home de Mi Web</span>

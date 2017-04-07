@@ -10,7 +10,8 @@
   
    <div class="admin-marca-contnedor-datos">
      <div>
-        <div class="admin-marca-fecha">{{$marca->created_at->format('d-m-Y')}}</div>     
+        {{-- quito la fecha --}}
+        {{-- <div class="admin-marca-fecha">{{$marca->created_at->format('d-m-Y')}}</div>  --}}    
         <div class="admin-marca-titulo"> {{$marca->name}}      </div>
      </div>
      <div class="admin-user-lista-contenedor-acciones">

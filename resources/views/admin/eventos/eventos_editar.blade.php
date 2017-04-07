@@ -7,13 +7,13 @@
   <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
 
   {{-- separador --}}
-  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
+  <span class="spam-separador">|</span> 
 
   {{-- lugar atras --}}
   <a href="{{route('get_admin_eventos')}}"><span>Eventos</span></a>
 
   {{-- separador --}}
-  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
+  <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
   <span>Editar evento: {{$Evento->name}}</span>
@@ -41,24 +41,8 @@
                           ])               !!}
    <div class="formulario-contenedor">
 
-      {{-- datos imagenes --}}
-      <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"> Marcas asociadas</div>
-        <div class="contenedor-formulario-label-fiel">     
-          @include('admin.eventos.partes.parte_de_marcas')                    
-          @include('admin.eventos.formularios_partes.datos_marcas')
-        </div>
-      </div>
-      {{-- datos imagenes --}}
-      <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"> Imagenes</div>
-        <div class="contenedor-formulario-label-fiel"> 
-          @include('admin.eventos.partes.parte_imagenes_adicionales')                      
-          @include('admin.eventos.formularios_partes.datos_imagenes')
-        </div>
-      </div>
 
-      {{-- datos corporativos --}}
+    {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos">
         <div class="contenedor-grupo-datos-titulo"> Datos</div>
         <div class="contenedor-formulario-label-fiel">                       
@@ -67,16 +51,29 @@
          <div class="formulario-label-fiel">
             {!! Form::label('estado', 'Estado', array('class' => 'formulario-label ')) !!}
             {!! Form::select('estado',['si' => 'Activo',
-                                       'no' => 'Desactivar'] , null )          !!}
+                                       'no' => 'Inactivo'] , null )          !!}
          </div>
         </div>
       </div>
 
-      
+      {{-- datos imagenes --}}
+      <div class="contenedor-grupo-datos">
+        <div class="contenedor-grupo-datos-titulo"> Marcas asociadas</div>
+        <div class="contenedor-formulario-label-fiel">     
+          @include('admin.eventos.partes.parte_de_marcas')                    
+          @include('admin.eventos.formularios_partes.datos_marcas')
+        </div>
+      </div>
 
-      
 
-      
+      {{-- datos imagenes --}}
+      <div class="contenedor-grupo-datos">
+        <div class="contenedor-grupo-datos-titulo"> Imagenes</div>
+        <div class="contenedor-formulario-label-fiel"> 
+          @include('admin.eventos.partes.parte_imagenes_adicionales')                      
+          @include('admin.eventos.formularios_partes.datos_imagenes')
+        </div>
+      </div>
    </div>
    <div class="admin-boton-editar">
      Guardar

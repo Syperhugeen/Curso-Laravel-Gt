@@ -7,13 +7,13 @@
   <a href="{{route('get_admin_home')}}"><span class="icon-home"></span></a>
 
   {{-- separador --}}
-  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
+  <span class="spam-separador">|</span></span> 
 
   {{-- lugar atras --}}
   <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
 
   {{-- separador --}}
-  <span class="spam-separador"><span class="icon-keyboard_arrow_right"></span></span> 
+  <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
   <span>Crear Marca</span>
