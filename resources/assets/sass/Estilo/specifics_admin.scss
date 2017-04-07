@@ -135,25 +135,34 @@
 }
 #admin-col-admin,
 #admin-col-superadmin{
-  border-bottom: 1px solid $color-2superlight;
+  border-bottom: 1px solid $color-3dark;
 }
 
 
-// estilos de los links de la columna
+// E S T I L O S   D E   L O S   L I N K S   D E   L A   C O L U M N A
+
 .admin-columna-contenedor ul{
   margin-top: 40px;
 }
-.admin-columna-contenedor a li:not(.Helper-Class-Active),
+
+// links a secciones de la admin
+.admin-columna-contenedor a li:not(.Helper-Class-Active){
+  color: $color-3;
+}
+.admin-columna-contenedor a li:not(.Helper-Class-Active):hover {
+  color: $color-3superlight;
+}
+
+// link inferior (para volver a la pagina)
 .admin-columna-contenedor #admin-col-backtoweb a p {
   color: $color-3dark;
 }
-.admin-columna-contenedor a li:not(.Helper-Class-Active):hover,
 .admin-columna-contenedor #admin-col-backtoweb a p:hover {
   color: $color-3;
 }
 .admin-columna-contenedor a li.admin-columna-li.mi-float-right.Helper-Class-Active{
-  color: $color-3;
-  text-shadow: 0 0 5px $color-3dark, 0 0 10px $color-3dark;
+  color: $color-3superlight;
+  text-shadow: 0 0 5px $color-3, 0 0 10px $color-3;
   -webkit-transition: none; /*cambiar "all" por "translate" si quiero que los demás cambios se hagan instantáneamente*/
   -moz-transition: none;
   transition: none;
@@ -163,6 +172,7 @@
   -moz-transform: none;
   transform: none;
 }
+
 // links que llevan a secciones del admin panel
 .admin-columna-contenedor #admin-col-superadmin a li,
 .admin-columna-contenedor #admin-col-admin a li{
