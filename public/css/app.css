@@ -12752,13 +12752,16 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 /*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/
 .table-outer {
   /* agregar esta class al contenedor, CREO que tiene que tener width y height específicos */
-  display: table; }
+  display: table;
+  width: 100%;
+  height: 100%; }
 
 .table-inner {
   /* agregar esta class al contenido que quiero que esté centrado */
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   text-align: center; }
 
@@ -12865,8 +12868,15 @@ como por ejemplo un carousel de imágenes de header---*/
   padding: 20px 140px;
   overflow: hidden; }
 
+/* special-cols de eventos individuales */
+#marca-individual .special-col .col-sm-6 {
+  height: 532px;
+  padding: 20px 140px;
+  overflow: hidden; }
+
 /* img de todas las special-cols */
 #evento-individual .special-col.special-col-img img.horizontal,
+#marca-individual .special-col.special-col-img img.horizontal,
 #eventos .special-col img.horizontal,
 #servicios .special-col img.horizontal {
   min-height: 100%;
@@ -12874,6 +12884,7 @@ como por ejemplo un carousel de imágenes de header---*/
   width: 60vw; }
 
 #evento-individual .special-col.special-col-img img:not(.horizontal),
+#marca-individual .special-col.special-col-img img:not(.horizontal),
 #eventos .special-col img:not(.horizontal),
 #servicios .special-col img:not(.horizontal) {
   height: auto;
@@ -12881,7 +12892,9 @@ como por ejemplo un carousel de imágenes de header---*/
   /* testeando con 100%, antes era 60vw */ }
 
 /* para que los greyscale-hover tomen color cuando se pasa por arriba de la special-col que es parent */
-.special-col:hover .img-greyscale-hover {
+#eventos .special-col:hover .img-greyscale-hover,
+#home .special-col:hover .img-greyscale-hover,
+#marca-individual .special-col:hover .img-greyscale-hover {
   filter: none;
   -webkit-filter: grayscale(0%); }
 
@@ -12896,18 +12909,21 @@ como por ejemplo un carousel de imágenes de header---*/
 
 /* para que se agranden un poquito on-hover */
 #eventos .special-col img,
-#marcas .special-col img {
+#marcas .special-col img,
+#marca-individual .special-col img {
   transition: transform 2s ease-in-out; }
 
 #eventos .special-col:hover img,
-#marcas .special-col:hover img {
+#marcas .special-col:hover img,
+#marca-individual .special-col:hover img {
   transform: scale(1.1); }
 
 /* tamanio de las special-cols responsive */
 @media (max-width: 767px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
-  #evento-individual .special-col .col-sm-6 {
+  #evento-individual .special-col .col-sm-6,
+  #marca-individual .special-col .col-sm-6 {
     height: 200px; }
   #home #section4 .special-col.col-sm-6 {
     height: 100px; }
@@ -12921,8 +12937,29 @@ como por ejemplo un carousel de imágenes de header---*/
 @media (max-width: 991px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
-  #evento-individual .special-col .col-sm-6 {
+  #evento-individual .special-col .col-sm-6,
+  #marca-individual .special-col .col-sm-6 {
     padding: 20px 60px; } }
+
+.inline-logos {
+  width: 100%;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-pack: distribute;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+#marca-individual .inline-logos img {
+  width: 200px;
+  height: auto; }
+
+#evento-individual .inline-logos img {
+  width: 100px;
+  height: auto; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 /* * * T H U M B N A I L   G A L L E R Y * * *  */
@@ -14192,8 +14229,10 @@ para suplantar las duraciones originales leídas antes */
 #section4 .decorative-divider {
   margin-top: -18px; }
 
+/* colocar dentro de la col que no es special col, la que seria el Header */
 #marcas .decorative-divider,
-#eventos .decorative-divider {
+#eventos .decorative-divider,
+#marca-individual .decorative-divider {
   bottom: 0;
   margin-bottom: -18px; }
 

@@ -1,13 +1,13 @@
 <a href="{{$Marca->route}}">
 
-    <div class="col-sm-6 table-outer special-col">
+	    <div class="col-sm-6 special-col">
+	      <div class="table-outer">
+			<div class="table-inner">
 
-      <div class="table-inner text-center">
+        		<img class="marca-col" src="{{$Marca->url_img}}" alt="{{$Marca->name}}">
 
-        <img class="marca-col" src="{{$Marca->url_img}}" alt="{{$Marca->name}}">
-
-      </div>
-
+      		</div>
+		</div>
     </div>
 
   </a>

@@ -157,11 +157,14 @@ $section3-altura:800px;
 /*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/
 .table-outer{ /* agregar esta class al contenedor, CREO que tiene que tener width y height específicos */
   display: table;
+  width: 100%;
+  height: 100%;
 }
 .table-inner{ /* agregar esta class al contenido que quiero que esté centrado */
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -268,6 +271,7 @@ $special-col-altura:400px;
   color: $color-3superlight;
 }
 
+
 /* special-cols de home */
 #home #section4 .col-sm-6 .col-xs-12.special-col{
   height: $special-col-altura;
@@ -294,9 +298,17 @@ $special-col-altura:400px;
   padding: 20px 140px;
   overflow: hidden;
 }
+/* special-cols de eventos individuales */
+#marca-individual .special-col .col-sm-6{
+  height: $special-col-altura * 1.33;
+  padding: 20px 140px;
+  overflow: hidden;
+}
+
 
 /* img de todas las special-cols */
 #evento-individual .special-col.special-col-img img.horizontal,
+#marca-individual .special-col.special-col-img img.horizontal,
 #eventos .special-col img.horizontal,
 #servicios .special-col img.horizontal{
   min-height:100%;
@@ -304,13 +316,16 @@ $special-col-altura:400px;
   width:60vw;
 }
 #evento-individual .special-col.special-col-img img:not(.horizontal),
+#marca-individual .special-col.special-col-img img:not(.horizontal),
 #eventos .special-col img:not(.horizontal),
 #servicios .special-col img:not(.horizontal){
   height:auto;
   width:100%; /* testeando con 100%, antes era 60vw */
 }
 /* para que los greyscale-hover tomen color cuando se pasa por arriba de la special-col que es parent */
-.special-col:hover .img-greyscale-hover{
+#eventos .special-col:hover .img-greyscale-hover,
+#home .special-col:hover .img-greyscale-hover,
+#marca-individual .special-col:hover .img-greyscale-hover{
   filter: none;
   -webkit-filter: grayscale(0%);
 }
@@ -325,12 +340,14 @@ $special-col-altura:400px;
 }
 /* para que se agranden un poquito on-hover */
 #eventos .special-col img,
-#marcas .special-col img {
+#marcas .special-col img,
+#marca-individual .special-col img {
   -webkit-transition: -webkit-transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
 }
 #eventos .special-col:hover img,
-#marcas .special-col:hover img {
+#marcas .special-col:hover img,
+#marca-individual .special-col:hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -340,7 +357,8 @@ $special-col-altura:400px;
 @media (max-width:767px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
-  #evento-individual .special-col .col-sm-6{
+  #evento-individual .special-col .col-sm-6,
+  #marca-individual .special-col .col-sm-6{
     height: $special-col-altura / 2;}
   #home #section4 .special-col.col-sm-6{
     height: $special-col-altura / 4;}
@@ -355,12 +373,23 @@ $special-col-altura:400px;
 @media (max-width:991px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
-  #evento-individual .special-col .col-sm-6{
+  #evento-individual .special-col .col-sm-6,
+  #marca-individual .special-col .col-sm-6{
     padding: $special-col-padding;
   }}
 
-
-
+.inline-logos{
+  width: 100%;  
+  @include flex;
+  @include justify-content(space-around);
+  @include align-items(center);
+}
+#marca-individual .inline-logos img{
+  width: 200px; height: auto;
+}
+#evento-individual .inline-logos img{
+  width: 100px; height: auto;
+}
 
 
 

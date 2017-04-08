@@ -60,7 +60,7 @@
         <div class="thumbnail-gallery-parent">
           @foreach($Evento->imagenesevento as $img)
             <div class="thumbnail-gallery-child">
-              <img src="{{$img->url_img}}">
+              <img class="img-greyscale-hover" src="{{$img->url_img}}">
             </div>
           @endforeach
         </div>

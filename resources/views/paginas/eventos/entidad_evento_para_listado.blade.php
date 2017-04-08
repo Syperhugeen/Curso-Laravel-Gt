@@ -6,8 +6,8 @@
 			<img class="img-greyscale" src="{{$Evento->url_img}}">
 		</div>
 
-		<div class="col-sm-6 table-outer">
-
+	    <div class="col-sm-6 no-margin">
+	      <div class="table-outer">
 			<div class="table-inner">
 				<h2>{{$Evento->name}}</h2>
 				<div class="p-container"><p class="text-center">{{$Evento->description}}</p></div>
@@ -15,6 +15,7 @@
 					<h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
 				</a>
 			</div>
+		  </div>
 		</div>
 
 	</div>

@@ -26,27 +26,33 @@
 <div class="row space-top space-bottom hidden-xs">
 
 <!--columna-->
-<div class="col-sm-4 home-service-col text-center table-outer wow fadeInUp delay1"><!--crear la clase home-brands-title-->
+<div class="col-sm-4 home-service-col text-center wow fadeInUp delay1"><!--crear la clase home-brands-title-->
+<div class="table-outer">
 	<div class="table-inner">
 		<img class="home-service-icon" src="imagenes/Img/icon_service_models.png" id="icon-models"><br><img class="home-service-icon" src="imagenes/Img/icon_service_models(reflect).png">
 		<h4 class="home-service-name">Modelos</h4>
 	</div>
 </div>
+</div>
 
 <!--columna-->
-<div class="col-sm-4 home-service-col text-center table-outer wow fadeInUp delay1b"><!--crear la clase home-brands-title-->
+<div class="col-sm-4 home-service-col text-center wow fadeInUp delay1b"><!--crear la clase home-brands-title-->
+<div class="table-outer">
 	<div class="table-inner">
 		<img class="home-service-icon" src="imagenes/Img/icon_service_promotions.png" id="icon-promotions"><br><img class="home-service-icon" src="imagenes/Img/icon_service_promotions(reflect).png">
 		<h4 class="home-service-name">Promociones</h4>
 	</div>
 </div>
+</div>
 
 <!--columna-->
-<div class="col-sm-4 home-service-col text-center table-outer wow fadeInUp delay2"><!--crear la clase home-brands-title-->
+<div class="col-sm-4 home-service-col text-center wow fadeInUp delay2"><!--crear la clase home-brands-title-->
+<div class="table-outer">
 	<div class="table-inner">
 		<img class="home-service-icon" src="imagenes/Img/icon_service_events.png" id="icon-events"><br><img class="home-service-icon" src="imagenes/Img/icon_service_events(reflect).png">
 		<h4 class="home-service-name">Eventos</h4>
 	</div>
+</div>
 </div>
 
 <!-- /row-->

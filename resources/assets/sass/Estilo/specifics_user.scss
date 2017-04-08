@@ -15,11 +15,14 @@
 #section4 .decorative-divider{
   margin-top: -18px;
 }
+/* colocar dentro de la col que no es special col, la que seria el Header */
 #marcas .decorative-divider,
-#eventos .decorative-divider{
+#eventos .decorative-divider,
+#marca-individual .decorative-divider{
   bottom: 0;
   margin-bottom: -18px;
 }
+
 #servicios .decorative-divider{
   top: 0;
   margin-top: -20px;
