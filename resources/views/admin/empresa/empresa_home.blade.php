@@ -28,7 +28,7 @@
 
       {{-- datos corporativos --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Identidad</div>
+        <div class="contenedor-grupo-datos-titulo"> Identidad</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.empresa.formularios_partes.datos_basicos')
         </div>
@@ -36,7 +36,7 @@
 
       {{-- imagenes corporativos --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Imagen Corporativa</div>
+        <div class="contenedor-grupo-datos-titulo"> Imagen Corporativa</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.empresa.formularios_partes.datos_imagenes')
         </div>
@@ -44,7 +44,7 @@
 
       {{-- datos de contacto --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"><span class="icon-person"></span> Contacto</div>
+        <div class="contenedor-grupo-datos-titulo"> Contacto</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.empresa.formularios_partes.datos_contactos')
         </div>

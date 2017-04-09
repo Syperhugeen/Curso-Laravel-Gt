@@ -32,8 +32,9 @@
    }
 
    .admin-entidad-titulo{
-    font-size: 24px;
-    margin-left: 5px;
+    font-size: 20px;
+    margin-left: 15px;
+    border-radius:4px;
     
    }
 
@@ -42,10 +43,11 @@
      @include align-items(center);
      @include flex-direction(row);
      width: 100%;
-     @include justify-content(flex-start);
+     @include justify-content(space-around);
      @include flex-wrap(wrap);
-     padding:2px;
-     border: solid 1px $Color-Gris-Claro-Para-Bordes;
+     padding:6px;
+     border-radius: 4px;
+     background-color: $color-grey0;
 
    }
 

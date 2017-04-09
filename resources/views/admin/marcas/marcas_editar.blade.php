@@ -22,7 +22,9 @@
 <div class="contenedor-admin-entidad">
 
  {{-- titulo --}}
- <div class="admin-entidad-titulo">Editar Marca {{$marca->name}}
+ <div class="admin-entidad-titulo">
+ <img class="admin-entidad-img" src="{{$marca->url_img}}">
+ Editar Marca {{$marca->name}}
  </div>
 
  {{-- formulario --}}

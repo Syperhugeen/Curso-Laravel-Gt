@@ -68,7 +68,7 @@
 
       {{-- datos imagenes --}}
       <div class="contenedor-grupo-datos">
-        <div class="contenedor-grupo-datos-titulo"> Imagenes</div>
+        <div class="contenedor-grupo-datos-titulo"> Imágenes</div>
         <div class="contenedor-formulario-label-fiel"> 
           @include('admin.eventos.partes.parte_imagenes_adicionales')                      
           @include('admin.eventos.formularios_partes.datos_imagenes')
