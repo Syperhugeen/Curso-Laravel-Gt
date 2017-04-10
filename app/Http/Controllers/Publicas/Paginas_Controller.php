@@ -60,7 +60,7 @@ class Paginas_Controller extends Controller
             //le envio los eventos de esa marca
             $Eventos = $this->Marca_de_eventoRepo->getEntidadActivasAll_Segun_Atributo_y_Ordenadas('marca_id',$id,'desc',5);
 
-           
+          
            
             return view('paginas.marcas.marca_individual', compact('Marca','Eventos'));
         }

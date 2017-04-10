@@ -63,7 +63,15 @@
           <div class="table-inner">
             <div>
               <h2>{{$Evento->evento->name}}</h2>
-              <div class="p-container"><p class="text-center">{{$Evento->evento->description}}</p></div>
+
+             
+              <div class="p-container">
+                <p class="text-center">
+                  @if(isset($Evento->evento->description))
+                   {{$Evento->evento->description}}
+                  @endif
+                </p>
+              </div>
               <a href="{{$Evento->evento->route}}">
                 <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
               </a>
