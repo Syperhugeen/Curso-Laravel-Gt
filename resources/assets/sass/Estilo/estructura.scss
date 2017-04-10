@@ -381,6 +381,7 @@ $special-col-altura:400px;
 .inline-logos{
   width: 100%;  
   @include flex;
+  @include flex-direction(row);
   @include justify-content(space-around);
   @include align-items(center);
 }
