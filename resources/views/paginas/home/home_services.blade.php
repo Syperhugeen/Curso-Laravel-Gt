@@ -11,10 +11,24 @@
 
 
 <!--row para un texto introductorio-->
-<div class="row space-bottom">
+<div class="row space-bottom home-header-row">
 
-	<div class="col-sm-8 col-sm-push-2 col-md-6 col-md-push-6">
-		<h3 class="destacado color-3 text-left">Somos una agencia dedicada al rubro de <em><span class="color-3superlight">modelos</span>, <span class="color-3superlight">promociones</span> y <span class="color-3superlight">eventos</span>;</em> creada en el año 2002 y en contínuo crecimiento.</h3>
+	<div class="col-sm-6">
+		<div class="table-outer">
+			<div class="table-inner">
+				<div class="home-isologo-container">
+					<img class="home-isologo" src="imagenes/Empresa/isologo_color3.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-6">
+		<div class="table-outer">
+			<div class="table-inner">
+				<h3 class="destacado color-3 text-left">Somos una agencia dedicada al rubro de <em><span class="color-3superlight">modelos</span>, <span class="color-3superlight">promociones</span> y <span class="color-3superlight">eventos</span>;</em> creada en el año 2002 y en contínuo crecimiento.</h3>
+			</div>
+		</div>
 	</div>
 
 <!-- /row-->

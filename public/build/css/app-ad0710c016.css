@@ -378,6 +378,12 @@ h1 {
   font-family: Champagne;
   letter-spacing: 2px; }
 
+.text-header-big {
+  font-family: HelveticaNoue37Thin;
+  font-size: 60pt;
+  letter-spacing: 1px;
+  color: #cebe98; }
+
 /* T E X T  F O O T E R */
 /* color general */
 #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
@@ -14361,6 +14367,39 @@ escritura de código)---*/
   background: #302a26 url("../../imagenes/Img/header_mobile_xs.jpg") center no-repeat;
   background-size: cover; }
 
+/* Home Service header */
+.home-isologo-container {
+  width: 100%;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  text-align: right; }
+
+.home-isologo {
+  height: 120px;
+  width: auto;
+  text-align: right;
+  padding-right: 40px; }
+
+.home-header-row .destacado {
+  margin-left: -16px;
+  padding-left: 40px; }
+
+@media (max-width: 767px) {
+  .home-isologo-container,
+  .home-isologo {
+    text-align: center;
+    padding-right: 0; }
+  .home-header-row .destacado {
+    margin-left: 20px;
+    padding-left: 20px; } }
+
 /*--- introducción y servicios icons (home)---*/
 /* home service icons */
 .home-service-col {
@@ -14679,6 +14718,12 @@ ul.navbar-nav > li > a.active {
 h1 {
   font-family: Champagne;
   letter-spacing: 2px; }
+
+.text-header-big {
+  font-family: HelveticaNoue37Thin;
+  font-size: 60pt;
+  letter-spacing: 1px;
+  color: #cebe98; }
 
 /* T E X T  F O O T E R */
 /* color general */

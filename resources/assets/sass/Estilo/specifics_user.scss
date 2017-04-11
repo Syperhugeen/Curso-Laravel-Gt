@@ -39,7 +39,6 @@ escritura de código)---*/
 
 
 
-
 //* C A R O U S E L */
 
 /* frase centrada encima del header, sobre las imágenes del carousel */
@@ -147,7 +146,36 @@ escritura de código)---*/
   background-size: cover;
 }
 
-
+/* Home Service header */
+.home-header-row{
+}
+.home-isologo-container{
+  width: 100%;  
+  @include flex;
+  @include flex-direction(row);
+  @include align-items(center);
+  text-align: right;
+}
+.home-isologo {
+  height: 120px;
+  width: auto;
+  text-align: right;
+  padding-right:40px;
+}
+.home-header-row .destacado{
+  margin-left:-16px;
+  padding-left:40px;
+}
+@media (max-width:767px){
+  .home-isologo-container,
+  .home-isologo{
+    text-align: center;
+    padding-right:0;}
+  .home-header-row .destacado{
+    margin-left:20px;
+    padding-left:20px;
+  }
+}
 
 
 /*--- introducción y servicios icons (home)---*/

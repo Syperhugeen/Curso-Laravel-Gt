@@ -145,8 +145,8 @@
 
 </div>
 </div>
-
-
+</div>
+</div>
 
 
 
@@ -210,10 +210,3 @@
 </div>
 
     </div>
-
-    <!--/cierro columna derecha con cuadrados de puzle-->
-</div>
-
-
-    <!--/cierro el row-->
-</div>
