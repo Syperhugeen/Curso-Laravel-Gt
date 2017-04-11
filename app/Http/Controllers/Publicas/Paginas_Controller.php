@@ -43,7 +43,8 @@ class Paginas_Controller extends Controller
     //Contacto
     public function get_pagina_contacto()
     {
-        return view('paginas.contacto.contacto');
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+        return view('paginas.contacto.contacto', compact('Empresa'));
     }
 
     //pagina donde estan las marcas
