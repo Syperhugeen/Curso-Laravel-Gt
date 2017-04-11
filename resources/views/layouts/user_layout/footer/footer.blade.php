@@ -25,18 +25,19 @@
 
         <h5 class="footer-title">contáctanos</h5>
 
-       @if($Empresa->email != null)
-        <h5><span class="glyphicon glyphicon-envelope"></span> {{$Empresa->email}}</h5>
-       @endif
-
        @if($Empresa->telefono != null) 
         <h5><span class="glyphicon glyphicon-earphone"></span> {{$Empresa->telefono}}</h5>
       @endif
 
           @if($Empresa->celular != null)
         <h5><span class="glyphicon glyphicon-phone""></span> {{$Empresa->celular}}</h5>
-          
        @endif 
+
+       @if($Empresa->email != null)
+        <h5><span class="glyphicon glyphicon-envelope"></span> {{$Empresa->email}}</h5>
+       @endif
+
+       
        @if($Empresa->direccion != null) 
         <h5><span class="glyphicon glyphicon-map-marker"></span> {{$Empresa->direccion}}</h5>
        @endif

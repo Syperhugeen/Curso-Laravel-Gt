@@ -46,16 +46,17 @@
 
 
   <div class="col-xs-12 special-col no-padding">
-    <div class="row" id="personal">
+    
 
     {{-- rombo divisor con el logo de GT --}}
     <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
-
+<div class="row" id="personal">
       <div class="col-sm-6 no-padding eventos-imagen">
-        <img class="img-greyscale-hover" src="imagenes/Img/servicios-personal.jpg">
+        <img class="img-greyscale-hover img-main" src="imagenes/Img/servicios-personal.jpg">
       </div>
 
-      <div class="col-sm-6 table-outer">
+      <div class="col-sm-6">
+        <div class="table-outer">
         <div class="table-inner">
           <h2 class="text-left">Personal</h2>
           <h5 class="text-left"><strong>Personal de reposición para todo el país. Selección y captación de personal vía fotográfica o en directo.</strong></h5>
@@ -66,6 +67,7 @@
           <p><span class="color-2light">·</span> Modelos publicitarias</p>
           <p><span class="color-2light">·</span> Modelos de pasarela</p>
           <p><span class="color-2light">·</span> Promovendedoras</p>
+          </div>
           </div>
       </div>
 
@@ -80,18 +82,18 @@
   <div class="col-xs-12 special-col no-padding">
     <div class="row" id="entrenamiento">
 
-      <div class="col-sm-6 table-outer">
-        <div class="table-inner">
+      <div class="col-sm-6">
+        <div class="table-outer"><div class="table-inner">
           <h2 class="text-right">Entrenamiento</h2>
           <p class="text-right"><span class="color-2light">·</span> Asesoría en actitúd laboral</p>
           <p class="text-right"><span class="color-2light">·</span> Asesoramiento técnico y de imagen</p>
           <p class="text-right"><span class="color-2light">·</span> Selección y capacitación de personal tercerizado</p>
           <p class="text-right"><span class="color-2light">·</span> Yoga laboral</p>
-        </div>
+        </div></div>
       </div>
 
       <div class="col-sm-6 no-padding eventos-imagen">
-        <img class="img-greyscale-hover" src="imagenes/Img/servicios-entrenamiento.jpg">
+        <img class="img-greyscale-hover img-main" src="imagenes/Img/servicios-entrenamiento.jpg">
       </div>
 
     </div>
@@ -107,11 +109,11 @@
     <div class="row" id="organizacion">
 
       <div class="col-sm-6 no-padding eventos-imagen">
-        <img class="img-greyscale-hover" src="imagenes/Img/servicios-organizacion.jpg">
+        <img class="img-greyscale-hover img-main" src="imagenes/Img/servicios-organizacion.jpg">
       </div>
 
-      <div class="col-sm-6 table-outer">
-        <div class="table-inner">
+      <div class="col-sm-6">
+        <div class="table-outer"><div class="table-inner">
           <h2 class="text-left">Organización</h2>
           <p><span class="color-2light">·</span> Campañas de publicidad directas</p>
           <p><span class="color-2light">·</span> Contratación de personal zafral capacitado para acciones a término</p>
@@ -121,7 +123,7 @@
           <p><span class="color-2light">·</span> Reactivación de marcas</p>
           <p><span class="color-2light">·</span> Recepción, traslados y óptima coordinación de actividades con clientes del exterior</p>
           <p><span class="color-2light">·</span> Redacción de informes destinados a marcas con presencia local</p>
-        </div>
+        </div></div>
       </div>
 
     </div>

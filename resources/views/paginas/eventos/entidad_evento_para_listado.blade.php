@@ -3,7 +3,7 @@
 	<div class="row">
 
 		<div class="col-sm-6 no-padding eventos-imagen">
-			<img class="img-greyscale" src="{{$Evento->url_img}}">
+			<img class="img-greyscale img-main" src="{{$Evento->url_img}}">
 		</div>
 
 	    <div class="col-sm-6 no-margin">

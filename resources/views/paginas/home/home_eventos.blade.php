@@ -8,7 +8,7 @@
 
 	{{-- contiene la imagen principal del último evento --}}
 	<div class="col-sm-6 special-col no-padding">
-		<img class="img-greyscale" src="{{$UltimoEvento->url_img}}">
+		<img class="img-greyscale img-main" src="{{$UltimoEvento->url_img}}">
 	</div>
 
 	<div class="col-sm-6 no-padding">

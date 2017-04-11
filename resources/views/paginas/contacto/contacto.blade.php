@@ -22,61 +22,106 @@
 
  
 
+<div id="contacto">
 
 
-    
-    
-    
-<!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper">
-  <div class="row">    
-    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+  <!--para agregar los márgenes laterales-->
+  <div class="container-fluid section-wrapper no-padding bgcolor-3light">
 
-    	<div class="page-header">
-        	<h1>...en construcción</h1>
-      	</div>
-
-      	<div class="row space-bottom">
-
-      		<div class="col-sm-12">
-      			<h3 style="text-align:justify">Puedes contactarnos rellenando el siguiente formulario o, si lo prefieres, a través de nuestros <a href="#footer">datos de contacto</a> situados en la sección inferior de la página.</h3>
-      		</div>
-      	</div>
+    <div class="row">
 
 
-       @include('formularios.contacto_form')
 
-      </div>
+      <div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
+        <h1 class="text-center">Ponte en contacto</h1>
+        <h2 class="text-center quote super-space-bottom">Una frase aquí, de no más de un renglón de longitud.</h2>
+            {{-- rombo divisor con el logo de GT --}}
+            <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+      </div> 
+
+
+
+      <div class="col-sm-6 special-col">
+        <div class="table-outer">
+          <div class="table-inner">
+
+            <h5 class="text-center"><strong>Comunícate directamente</strong></h5>
+
+            @if($Empresa->telefono != null) 
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->telefono}}</p>
+            @endif
+
+            @if($Empresa->celular != null)
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->celular}}</p>
+            @endif
+
+            @if($Empresa->email != null)
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->email}}</p>
+            @endif
+
+            @if($Empresa->direccion != null) 
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->direccion}}</p>
+            @endif
+
+            @if($Empresa->horarios_dias != null)
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->horarios_dias}}</p>
+            @endif
+
+          </div>
+        </div>
+      </div> 
+
+
+
+      <div class="col-sm-6 special-col">
+        <div class="table-outer">
+          <div class="table-inner">
+
+            <h5 class="text-center"><strong>Síguenos en las redes</strong></h5>
+
+            @if($Empresa->telefono != null) 
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->telefono}}</p>
+            @endif
+
+            @if($Empresa->celular != null)
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->celular}}</p>
+            @endif
+
+            @if($Empresa->email != null)
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->email}}</p>
+            @endif
+
+            @if($Empresa->direccion != null) 
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->direccion}}</p>
+            @endif
+
+            @if($Empresa->horarios_dias != null)
+            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->horarios_dias}}</p>
+            @endif
+            
+          </div>
+        </div>
+      </div> 
+
+
+
+      <div class="col-sm-12 special-col">
+        <div class="table-outer">
+          <div class="table-inner">
+
+            <h5 class="text-center"><strong>...o bien, escríbenos ahora mismo</strong></h5>
+
+            @include('formularios.contacto_form')
+            
+          </div>
+        </div>
+      </div> 
+
+
+
     </div>
   </div>
-
-<!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper section-special2">
-  <div class="row">    
-    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
-
-      	<div class="row space-bottom">
-
-      		<div class="col-md-6">
-      			<h3 class="destacado" style="font-family:arial; text-align:right; margin-top:40px">¿Solicitar cotización?</h3>
-      		</div>
-      		<div class="col-md-6">
-      			<div>
-				    {{-- boton para envio cotización de proyecto --}}
-				    @include('paginas.servicios.partes.click_aqui_envio_cotizacion_proyecto')
-				</div>
-      		</div>
-
-      	</div>
-
-      </div>
-    </div>
-  </div>
+</div>
 
 
-
-    
-
-
-  
 @stop

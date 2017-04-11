@@ -33,11 +33,11 @@
           <div>
       			<h2>{{$Evento->name}}</h2>
       			<p class="text-center">{{$Evento->description}}</p>
-            <div class="center-block" style="width: 100px; height: auto; text-align: center;">
+            <div class="inline-logos">
               @foreach($Evento->marcasevento as $Marca)
                 <a href="{{$Marca->marca->route}}">
                   <!-- logo de la(s) marca(s) asociada(s) al evento -->
-                  <img class="img-responsive" src="{{$Marca->marca->url_img}}">
+                  <img src="{{$Marca->marca->url_img}}">
                 </a>
               @endforeach
             </div>
@@ -48,7 +48,7 @@
 
     <div class="col-sm-6 special-col special-col-img no-padding">
       <!-- solo la imagen principal -->
-      <img src="{{$Evento->url_img}}">
+      <img class="img-main" src="{{$Evento->url_img}}">
     </div>
 
   </div>

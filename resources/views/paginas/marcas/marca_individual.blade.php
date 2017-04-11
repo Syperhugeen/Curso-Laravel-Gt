@@ -55,7 +55,7 @@
     <div class="row special-col no-padding">
         
       <div class="col-sm-6 no-padding eventos-imagen">
-        <img class="img-greyscale" src="{{$Evento->evento->url_img}}">
+        <img class="img-greyscale img-main" src="{{$Evento->evento->url_img}}">
       </div>
           
       <div class="col-sm-6 no-margin">
@@ -103,7 +103,7 @@
       <!-- cuando no hay eventos asociados a la marca -->
       <div class="row special-col-fake">
         <div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
-            <h3 class="text-center">Lo sentimos, pero de momento no hay eventos para mostrar relacionados a la marca.</h3>
+            <h3 class="text-center space-bottom">Lo sentimos, pero de momento no hay eventos para mostrar relacionados a la marca.</h3>
             <p class="text-center">Debido a que recientemente hemos re-diseñado nuestro sitio web desde sus cimientos para poder brindarte una mejor experiencia como usuario, estamos limpiando nuestro antiguo banco de imágenes para ofrecerte la mejor calidad de contenido.</p>       
         </div>
       </div>
