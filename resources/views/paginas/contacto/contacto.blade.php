@@ -28,7 +28,7 @@
   <!--para agregar los márgenes laterales-->
   <div class="container-fluid section-wrapper no-padding bgcolor-3light">
 
-    <div class="row">
+    <div class="row special-col no-padding no-margin">
 
 
 
@@ -45,31 +45,31 @@
         <div class="table-outer">
           <div class="table-inner">
 
-            <h5 class="text-center"><strong>Comunícate directamente</strong></h5>
+            <h1 class="text-center space-bottom">Comunícate directamente</h1>
 
             @if($Empresa->telefono != null) 
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->telefono}}</p>
+            <p><span class="glyphicon glyphicon-earphone color-3dark"></span> {{$Empresa->telefono}}</p>
             @endif
 
             @if($Empresa->celular != null)
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->celular}}</p>
+            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->celular}}</p>
             @endif
 
             @if($Empresa->email != null)
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->email}}</p>
+            <p><span class="glyphicon glyphicon-envelope color-3dark"></span> {{$Empresa->email}}</p>
             @endif
 
             @if($Empresa->direccion != null) 
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->direccion}}</p>
+            <p><span class="glyphicon glyphicon-map-marker color-3dark"></span> {{$Empresa->direccion}}</p>
             @endif
 
             @if($Empresa->horarios_dias != null)
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->horarios_dias}}</p>
+            <p><span class="glyphicon glyphicon-time color-3dark"></span> {{$Empresa->horarios_dias}}</p>
             @endif
 
           </div>
         </div>
-      </div> 
+      </div>
 
 
 
@@ -77,31 +77,31 @@
         <div class="table-outer">
           <div class="table-inner">
 
-            <h5 class="text-center"><strong>Síguenos en las redes</strong></h5>
+            <h1 class="text-center space-bottom">Síguenos en las redes</h1>
 
             @if($Empresa->telefono != null) 
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->telefono}}</p>
+            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->telefono}}</p>
             @endif
 
             @if($Empresa->celular != null)
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->celular}}</p>
+            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->celular}}</p>
             @endif
 
             @if($Empresa->email != null)
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->email}}</p>
+            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->email}}</p>
             @endif
 
             @if($Empresa->direccion != null) 
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->direccion}}</p>
+            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->direccion}}</p>
             @endif
 
             @if($Empresa->horarios_dias != null)
-            <p><span class="glyphicon glyphicon-phone color-2light">·</span> {{$Empresa->horarios_dias}}</p>
+            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->horarios_dias}}</p>
             @endif
             
           </div>
         </div>
-      </div> 
+      </div>
 
 
 
@@ -109,7 +109,7 @@
         <div class="table-outer">
           <div class="table-inner">
 
-            <h5 class="text-center"><strong>...o bien, escríbenos ahora mismo</strong></h5>
+            <h1 class="text-center space-top space-bottom">...o bien, escríbenos ahora mismo</h1>
 
             @include('formularios.contacto_form')
             

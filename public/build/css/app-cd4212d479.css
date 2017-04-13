@@ -12886,6 +12886,28 @@ como por ejemplo un carousel de imágenes de header---*/
   padding: 20px 140px;
   overflow: hidden; }
 
+/* special-cols de eventos individuales */
+#contacto .special-col .col-sm-6 {
+  height: 532px;
+  padding: 20px 140px;
+  overflow: hidden; }
+
+#contacto .special-col .col-sm-12 {
+  padding: 20px 140px; }
+
+#contacto .special-col .col-sm-6 h1,
+#contacto .special-col .col-sm-12 h1 {
+  font-size: 30px; }
+
+#contacto .special-col .col-sm-6 p,
+#contacto .special-col .col-sm-12 p {
+  text-align: center; }
+
+#contacto .special-col #contacto-form .col-sm-12,
+#contacto .special-col #contacto-form .col-sm-6 {
+  height: auto;
+  padding: 20px; }
+
 /* img de todas las special-cols */
 #evento-individual .special-col.special-col-img img.horizontal.img-main,
 #marca-individual .special-col.special-col-img img.horizontal.img-main,
@@ -12933,10 +12955,11 @@ como por ejemplo un carousel de imágenes de header---*/
 #servicios .special-col:hover img.img-main {
   transform: scale(1.1); }
 
-/* tamanio de las special-cols responsive */
+/* altura de las special-cols responsive */
 @media (max-width: 767px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
+  #contacto .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6 {
     height: 200px; }
@@ -12949,11 +12972,14 @@ como por ejemplo un carousel de imágenes de header---*/
     height: auto !important;
     min-height: none !important; } }
 
+/* padding de las special-cols responsive */
 @media (max-width: 991px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
-  #marca-individual .special-col .col-sm-6 {
+  #marca-individual .special-col .col-sm-6,
+  #contacto .special-col .col-sm-6,
+  #contacto .special-col .col-sm-12 {
     padding: 20px 60px; } }
 
 .inline-logos {
@@ -14255,7 +14281,8 @@ para suplantar las duraciones originales leídas antes */
 /* colocar dentro de la col que no es special col, la que seria el Header */
 #marcas .decorative-divider,
 #eventos .decorative-divider,
-#marca-individual .decorative-divider {
+#marca-individual .decorative-divider,
+#contacto .decorative-divider {
   bottom: 0;
   margin-bottom: -18px; }
 
@@ -14541,6 +14568,130 @@ img.marca-col {
 .noticia-comillas {
   color: #b3b3b3;
   font-family: Pioret; }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  ---   C O N T A C T O    ---  */
+#contacto .quote {
+  color: #5b4f48; }
+
+/*  contact form */
+#contacto #contacto-form .form-control {
+  background-color: #f1e7d2;
+  color: #917e4b;
+  border: none;
+  border-radius: 0; }
+
+#contacto #contacto-form .form-control:focus {
+  border-color: #726259;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(248, 241, 227, 0.6); }
+
+#contacto #contacto-form .form-control::-moz-placeholder {
+  color: #cebe98;
+  opacity: 1; }
+
+#contacto #contacto-form .form-control:-ms-input-placeholder {
+  color: #cebe98; }
+
+#contacto #contacto-form .form-control::-webkit-input-placeholder {
+  color: #cebe98; }
+
+#contacto #contacto-form .form-control::-ms-expand {
+  background-color: transparent;
+  border: 1px solid #917e4b; }
+
+#contacto #contacto-form .has-error .help-block,
+#contacto #contacto-form .has-error .control-label,
+#contacto #contacto-form .has-error .radio,
+#contacto #contacto-form .has-error .checkbox,
+#contacto #contacto-form .has-error .radio-inline,
+#contacto #contacto-form .has-error .checkbox-inline,
+#contacto #contacto-form .has-error.radio label,
+#contacto #contacto-form .has-error.checkbox label,
+#contacto #contacto-form .has-error.radio-inline label,
+#contacto #contacto-form .has-error.checkbox-inline label {
+  color: #5b4f48; }
+
+#contacto #contacto-form .has-error .form-control {
+  border-color: #5b4f48;
+  box-shadow: none; }
+
+#contacto #contacto-form .has-error .form-control:focus {
+  border-color: #5b4f48;
+  box-shadow: none, none; }
+
+#contacto #contacto-form .has-error .input-group-addon {
+  color: #5b4f48;
+  background-color: #726259;
+  border-color: #5b4f48; }
+
+#contacto #contacto-form .has-error .form-control-feedback {
+  color: #5b4f48; }
+
+#contacto #contacto-form .has-success .help-block,
+#contacto #contacto-form .has-success .control-label,
+#contacto #contacto-form .has-success .radio,
+#contacto #contacto-form .has-success .checkbox,
+#contacto #contacto-form .has-success .radio-inline,
+#contacto #contacto-form .has-success .checkbox-inline,
+#contacto #contacto-form .has-success.radio label,
+#contacto #contacto-form .has-success.checkbox label,
+#contacto #contacto-form .has-success.radio-inline label,
+#contacto #contacto-form .has-success.checkbox-inline label {
+  color: #f1e7d2; }
+
+#contacto #contacto-form .has-success .form-control {
+  border-color: #decdab;
+  box-shadow: none; }
+
+#contacto #contacto-form .has-success .form-control:focus {
+  border-color: #cebe98;
+  box-shadow: none, none; }
+
+#contacto #contacto-form .has-success .input-group-addon {
+  color: #f1e7d2;
+  background-color: #f8f1e3;
+  border-color: #f1e7d2; }
+
+#contacto #contacto-form .has-success .form-control-feedback {
+  color: #f1e7d2; }
+
+#contacto #contacto-form label {
+  color: #cebe98;
+  background-color: #5b4f48;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  padding: 6px;
+  width: 100%;
+  font-weight: normal; }
+
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send, #contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send,
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send.disabled,
+#contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send.disabled {
+  width: 100%;
+  padding: 40px;
+  background-color: #cebe98;
+  color: #f1e7d2;
+  font-family: HelveticaNoue37Thin;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 0;
+  border-color: #f8f1e3;
+  font-weight: 600; }
+
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover, #contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send:hover,
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover.disabled,
+#contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send:hover.disabled {
+  background-color: #decdab;
+  color: #f8f1e3; }
+
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send.disabled, #contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send.disabled {
+  border-color: #decdab; }
+
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover.disabled, #contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send:hover.disabled {
+  border-color: #f1e7d2; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

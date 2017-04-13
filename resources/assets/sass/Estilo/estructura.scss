@@ -307,7 +307,28 @@ $special-col-altura:400px;
   padding: 20px 140px;
   overflow: hidden;
 }
-
+/* special-cols de eventos individuales */
+#contacto .special-col .col-sm-6{
+  height: $special-col-altura * 1.33;
+  padding: 20px 140px;
+  overflow: hidden;
+}
+#contacto .special-col .col-sm-12{
+  padding: 20px 140px;
+}
+#contacto .special-col .col-sm-6 h1,
+#contacto .special-col .col-sm-12 h1 {
+  font-size: 30px;
+}
+#contacto .special-col .col-sm-6 p,
+#contacto .special-col .col-sm-12 p{
+  text-align: center;
+}
+#contacto .special-col #contacto-form .col-sm-12,
+#contacto .special-col #contacto-form .col-sm-6{
+  height: auto;
+  padding: 20px;
+}
 
 /* img de todas las special-cols */
 #evento-individual .special-col.special-col-img img.horizontal.img-main,
@@ -359,10 +380,11 @@ $special-col-altura:400px;
 }
 
 
-/* tamanio de las special-cols responsive */
+/* altura de las special-cols responsive */
 @media (max-width:767px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
+  #contacto .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6{
     height: $special-col-altura / 2;}
@@ -376,11 +398,14 @@ $special-col-altura:400px;
     min-height:none !important;
   }
 }
+/* padding de las special-cols responsive */
 @media (max-width:991px) {
   #eventos .special-col .col-sm-6,
   #servicios .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
-  #marca-individual .special-col .col-sm-6{
+  #marca-individual .special-col .col-sm-6,
+  #contacto .special-col .col-sm-6,
+  #contacto .special-col .col-sm-12,{
     padding: $special-col-padding;
   }}
 

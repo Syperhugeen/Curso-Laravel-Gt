@@ -18,7 +18,8 @@
 /* colocar dentro de la col que no es special col, la que seria el Header */
 #marcas .decorative-divider,
 #eventos .decorative-divider,
-#marca-individual .decorative-divider{
+#marca-individual .decorative-divider,
+#contacto .decorative-divider{
   bottom: 0;
   margin-bottom: -18px;
 }
@@ -439,6 +440,138 @@ img.marca-col{
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
+
+/*  ---   C O N T A C T O    ---  */
+#contacto .quote{
+  color: $color-2light;
+}
+
+/*  contact form */
+#contacto #contacto-form .form-control {
+  background-color: $color-3superlight;
+  color: $color-3dark;
+  border: none;
+  border-radius: 0;
+}
+#contacto #contacto-form .form-control:focus {
+  border-color: $color-2superlight;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(248, 241, 227, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(248, 241, 227, .6);
+}
+#contacto #contacto-form .form-control::-moz-placeholder {
+  color: $color-3;
+  opacity: 1;
+}
+#contacto #contacto-form .form-control:-ms-input-placeholder {
+  color: $color-3;
+}
+#contacto #contacto-form .form-control::-webkit-input-placeholder {
+  color: $color-3;
+}
+#contacto #contacto-form .form-control::-ms-expand {
+  background-color: transparent;
+  border: 1px solid $color-3dark;
+}
+#contacto #contacto-form .has-error .help-block,
+#contacto #contacto-form .has-error .control-label,
+#contacto #contacto-form .has-error .radio,
+#contacto #contacto-form .has-error .checkbox,
+#contacto #contacto-form .has-error .radio-inline,
+#contacto #contacto-form .has-error .checkbox-inline,
+#contacto #contacto-form .has-error.radio label,
+#contacto #contacto-form .has-error.checkbox label,
+#contacto #contacto-form .has-error.radio-inline label,
+#contacto #contacto-form .has-error.checkbox-inline label {
+  color: $color-2light;
+}
+#contacto #contacto-form .has-error .form-control {
+  border-color: $color-2light;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#contacto #contacto-form .has-error .form-control:focus {
+  border-color: $color-2light;
+  -webkit-box-shadow: none, none;
+          box-shadow: none, none;
+}
+#contacto #contacto-form .has-error .input-group-addon {
+  color: $color-2light;
+  background-color: $color-2superlight;
+  border-color: $color-2light;
+}
+#contacto #contacto-form .has-error .form-control-feedback {
+  color: $color-2light;
+}
+
+#contacto #contacto-form .has-success .help-block,
+#contacto #contacto-form .has-success .control-label,
+#contacto #contacto-form .has-success .radio,
+#contacto #contacto-form .has-success .checkbox,
+#contacto #contacto-form .has-success .radio-inline,
+#contacto #contacto-form .has-success .checkbox-inline,
+#contacto #contacto-form .has-success.radio label,
+#contacto #contacto-form .has-success.checkbox label,
+#contacto #contacto-form .has-success.radio-inline label,
+#contacto #contacto-form .has-success.checkbox-inline label {
+  color: $color-3superlight;
+}
+#contacto #contacto-form .has-success .form-control {
+  border-color: $color-3light;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#contacto #contacto-form .has-success .form-control:focus {
+  border-color: $color-3;
+  -webkit-box-shadow: none, none;
+          box-shadow: none, none;
+}
+#contacto #contacto-form .has-success .input-group-addon {
+  color: $color-3superlight;
+  background-color: $color-3hyperlight;
+  border-color: $color-3superlight;
+}
+#contacto #contacto-form .has-success .form-control-feedback {
+  color: $color-3superlight;
+}
+#contacto #contacto-form label{
+  color: $color-3;
+  background-color: $color-2light;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  padding:6px;
+  width:100%;
+  font-weight: normal;
+}
+
+
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send,
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send.disabled {
+  width:100%;
+  padding: 40px;
+  background-color: $color-3;
+  color: $color-3superlight;
+  font-family: HelveticaNoue37Thin;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform:uppercase;
+  border-radius:0;
+  border-color:$color-3hyperlight;
+  font-weight: 600;
+}
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover,
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover.disabled {
+  background-color: $color-3light;
+  color: $color-3hyperlight;
+}
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send.disabled {
+  border-color:$color-3light;
+}
+#contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover.disabled {
+  border-color:$color-3superlight;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
 
