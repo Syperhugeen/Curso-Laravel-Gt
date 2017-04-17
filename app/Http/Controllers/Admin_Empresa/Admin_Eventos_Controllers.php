@@ -166,9 +166,23 @@ class Admin_Eventos_Controllers extends Controller
   //elimino img adicional
   public function delete_admin_eventos_img($id_img)
   {
-      $this->ImgEventoRepo->destroy_entidad($id_img);
+      $imagen = $this->ImgEventoRepo->find($id_img); 
 
-      return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
+      $evento = $this->EventoRepo->find($imagen->evento_id);
+
+      //me fijo si hay mas imagenes
+      if($evento->ImgEventoRepo->count() > 1)
+      {
+        $this->ImgEventoRepo->destroy_entidad($id_img);
+
+        return redirect()->back()->with('alert-rojo', 'Imagen Eliminada');
+      }
+      else
+      {
+        return redirect()->back()->with('alert-rojo', 'No puedes elminiar porque es la única');
+      }  
+
+      
   }
 
   //fijo como imagen principal 
