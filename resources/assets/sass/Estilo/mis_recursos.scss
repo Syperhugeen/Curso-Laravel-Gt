@@ -334,8 +334,7 @@ $puzzle-col-animation-delay: 2.5s;
 .puzzle-responsive-top-text .row .col-xs-6 .puzzle-responsive-top-text-col{
   padding: 15px;
   height: 100%;
-  background: rgb(91, 79, 72); /* Fall-back for browsers that don't support rgba */
-  background: rgba(91, 79, 72, .5);
+  background: $color-2light;
 }
 
 .puzzle-box-content-hidden2 h5{
@@ -565,8 +564,7 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   position:absolute;
   height:100%;
   width:100%;
-  background: rgb(91, 79, 72); /* Fall-back for browsers that don't support rgba */
-  background: rgba(91, 79, 72, .5);
+  background: $color-2light;
   padding:20px;
   overflow:hidden;
 }

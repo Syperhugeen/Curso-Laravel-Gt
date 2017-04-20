@@ -37,7 +37,9 @@
 pero eso es porque no optimicé la
 escritura de código)---*/
 
-
+.navbar-logo {
+  padding-bottom: 10px; 
+}
 
 
 //* C A R O U S E L */
@@ -265,7 +267,7 @@ escritura de código)---*/
   margin-top:-20px;
   height:$section2-altura + 40px;
   padding: 40px 40px;
-  background:$color-2superlight;
+  background:$color-2light;
   z-index:1;
 }
 .destacado-pliegues:after {
@@ -273,7 +275,7 @@ escritura de código)---*/
   position: absolute;
   height: $section2-altura + 140px;
   width: 100%;
-  border: 100px solid $color-2superlight;
+  border: 100px solid $color-2light;
   z-index: -1;
   top: 0;
   border-top-width: 20px;
@@ -284,7 +286,7 @@ escritura de código)---*/
   content: "";
   position: absolute;
   border-style: solid;
-  border-color: transparent transparent $color-2light transparent;
+  border-color: transparent transparent $color-2 transparent;
   top: 0;
   left: -20px;
   border-width: 0 0 20px 20px;

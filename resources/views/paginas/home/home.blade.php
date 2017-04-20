@@ -26,7 +26,7 @@
 
 <!--para agregar los márgenes laterales-->
 <div id="section1">
-  <div class="container-fluid section-wrapper bgcolor-2">
+  <div class="container-fluid section-wrapper bgcolor-white">
     <div class="row">    
         <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
          @include('paginas.home.home_services')
@@ -46,7 +46,7 @@
 
 <!--para agregar los márgenes laterales-->
 <div id="section3">
-  <div class="container-fluid bgdecoratedcolor-2">
+  <div class="container-fluid bgcolor-white">
        @include('paginas.home.home_puzzle')
   </div>
 </div>

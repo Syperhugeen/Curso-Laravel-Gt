@@ -10,9 +10,9 @@
 
 $color-1:#f1e7d2; /* institucional similar a color-3 pero más amarillito, como el doradito del logo */
 
-$color-2:#302a26; /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
-$color-2light:#5b4f48; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
-$color-2superlight:#726259;
+$color-2:#1a1a1a; /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
+$color-2light:#3b3b3b; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
+$color-2superlight:#808080;
 
 $color-3:#cebe98; /* institucional PRINCIPAL */
 $color-3dark:#917e4b; /* para interacciones dinámicas del color-3 como [hover] o [active] */
@@ -116,16 +116,8 @@ $color-black:black; /*misma razón, pero para el negro */
 .color-3superlight{color:$color-3superlight;}
 .bgcolor-3superlight{background:$color-3superlight;}
 
-
-/* background colors con img decorativa (outlines del Logo o patrones) */
-.bgdecoratedcolor-2{
-  background: $color-2;
-}
-@media (min-width:992px) {.bgdecoratedcolor-2{
-  background: $color-2 url("../../imagenes/Img/bg_decorated_color-2.png") left no-repeat;
-  background-size: auto 100%;
-}}
-
+.color-3hyperlight{color:$color-3hyperlight;}
+.bgcolor-3hyperlight{background:$color-3hyperlight;}
 
 
 

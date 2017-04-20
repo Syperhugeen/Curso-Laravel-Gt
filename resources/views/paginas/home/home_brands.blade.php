@@ -2,7 +2,7 @@
 <div class="row">
 
 <!--ribbon bolt of cloth (red or golden)-->
-<div class="col-md-3 col-md-push-2 col-lg-2 col-lg-push-2 puzzle-box-index10 wow slideInLeft delay2b hidden-xs hidden-sm text-center">
+<div class="col-md-3 col-md-push-2 col-lg-2 col-lg-push-2 puzzle-box-index10 wow slideInLeft hidden-xs hidden-sm text-center">
 <div class="destacado-pliegues"><h2 class="quote">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h2></div>
 </div>
 

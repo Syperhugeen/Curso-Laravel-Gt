@@ -74,16 +74,16 @@
   background: #f1e7d2; }
 
 .color-2 {
-  color: #302a26; }
+  color: #1a1a1a; }
 
 .bgcolor-2 {
-  background: #302a26; }
+  background: #1a1a1a; }
 
 .color-2light {
-  color: #5b4f48 !important; }
+  color: #3b3b3b !important; }
 
 .bgcolor-2light {
-  background: #5b4f48; }
+  background: #3b3b3b; }
 
 .color-3 {
   color: #cebe98; }
@@ -109,14 +109,11 @@
 .bgcolor-3superlight {
   background: #f1e7d2; }
 
-/* background colors con img decorativa (outlines del Logo o patrones) */
-.bgdecoratedcolor-2 {
-  background: #302a26; }
+.color-3hyperlight {
+  color: #f8f1e3; }
 
-@media (min-width: 992px) {
-  .bgdecoratedcolor-2 {
-    background: #302a26 url("../../imagenes/Img/bg_decorated_color-2.png") left no-repeat;
-    background-size: auto 100%; } }
+.bgcolor-3hyperlight {
+  background: #f8f1e3; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
@@ -266,7 +263,7 @@ son los titulos de la seccion */
 p {
   font-family: HelveticaNoue;
   font-size: 14px;
-  color: #302a26;
+  color: #1a1a1a;
   text-align: justify;
   white-space: pre-wrap; }
 
@@ -280,19 +277,19 @@ h2 {
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #302a26; }
+  color: #1a1a1a; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #302a26; }
+  color: #1a1a1a; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #302a26; }
+  color: #1a1a1a; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -404,7 +401,7 @@ h1 {
 
 /* color de los glyphicons */
 #footer .col-md-4 h5 span.glyphicon {
-  color: #5b4f48;
+  color: #3b3b3b;
   padding-right: 4px; }
 
 #footer .col-md-4 h5:hover span.glyphicon {
@@ -419,7 +416,7 @@ h1 {
 
 /* color de la información que está abajo */
 #footer .col-md-6 h4, #footer .col-md-6 h5 {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 #footer .col-md-6 h4 a, #footer .col-md-6 h5 a {
   color: #917e4b; }
@@ -11324,7 +11321,7 @@ ul.bxslider {
   border-radius: 5px;
   border: 2px solid white;
   background-color: white;
-  color: #302a26; }
+  color: #1a1a1a; }
 
 /* Use this next selector to style things like font-size and line-height: */
 .contenedor-default-tooltips .tooltipster-content {
@@ -12573,16 +12570,16 @@ ul.bxslider {
   background: #f1e7d2; }
 
 .color-2 {
-  color: #302a26; }
+  color: #1a1a1a; }
 
 .bgcolor-2 {
-  background: #302a26; }
+  background: #1a1a1a; }
 
 .color-2light {
-  color: #5b4f48 !important; }
+  color: #3b3b3b !important; }
 
 .bgcolor-2light {
-  background: #5b4f48; }
+  background: #3b3b3b; }
 
 .color-3 {
   color: #cebe98; }
@@ -12608,14 +12605,11 @@ ul.bxslider {
 .bgcolor-3superlight {
   background: #f1e7d2; }
 
-/* background colors con img decorativa (outlines del Logo o patrones) */
-.bgdecoratedcolor-2 {
-  background: #302a26; }
+.color-3hyperlight {
+  color: #f8f1e3; }
 
-@media (min-width: 992px) {
-  .bgdecoratedcolor-2 {
-    background: #302a26 url("../../imagenes/Img/bg_decorated_color-2.png") left no-repeat;
-    background-size: auto 100%; } }
+.bgcolor-3hyperlight {
+  background: #f8f1e3; }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
@@ -12651,7 +12645,7 @@ son los titulos de la seccion */
 para que el contenido comience luego de la Navbar y no se pierda nada detrás de ella---*/
 body {
   padding-top: 120px;
-  background-color: #302a26; }
+  background-color: #1a1a1a; }
 
 @media (max-width: 767px) {
   body {
@@ -12831,7 +12825,7 @@ como por ejemplo un carousel de imágenes de header---*/
 
 .special-col p {
   font-family: HelveticaNoue;
-  color: #302a26; }
+  color: #1a1a1a; }
 
 .special-col .ampliar {
   color: #917e4b;
@@ -13352,10 +13346,10 @@ ul.text-slide a:hover li h4 {
   background-color: #decdab; }
 
 .puzzle-box-content-visible2 {
-  background-color: #5b4f48; }
+  background-color: #3b3b3b; }
 
 .puzzle-box-content-hidden2 {
-  background-color: #726259; }
+  background-color: #808080; }
 
 .puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   text-align: center;
@@ -13373,15 +13367,13 @@ ul.text-slide a:hover li h4 {
 .puzzle-responsive-top-text .row .col-xs-6 .puzzle-responsive-top-text-col {
   padding: 15px;
   height: 100%;
-  background: #5b4f48;
-  /* Fall-back for browsers that don't support rgba */
-  background: rgba(91, 79, 72, 0.5); }
+  background: #3b3b3b; }
 
 .puzzle-box-content-hidden2 h5 {
   color: #cebe98; }
 
 .puzzle-box-content-hidden1 h5 {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 /* para centrar verticalmente el elemento (h5 en este caso) que está dentro de estos divs
  (requiere que previamente se le haya dado formato de display:table a los contenedores) */
@@ -13588,9 +13580,7 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #5b4f48;
-  /* Fall-back for browsers that don't support rgba */
-  background: rgba(91, 79, 72, 0.5);
+  background: #3b3b3b;
   padding: 20px;
   overflow: hidden; }
 
@@ -13825,7 +13815,7 @@ para suplantar las duraciones originales leídas antes */
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
   border-color: #cebe98;
-  background: #302a26 url("../../imagenes/Img/bg_carbonfibre_texture.jpg") center center; }
+  background: #1a1a1a; }
 
 .navbar-default .navbar-text {
   color: #cebe98; }
@@ -13977,7 +13967,7 @@ para suplantar las duraciones originales leídas antes */
   color: #f1e7d2; }
 
 .dropdown-menu {
-  background-color: #302a26;
+  background-color: #1a1a1a;
   margin: 0;
   border: 0px solid #cebe98; }
 
@@ -14084,7 +14074,7 @@ para suplantar las duraciones originales leídas antes */
   color: #decdab; }
 
 .user-menu h6 a {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 .user-menu h6 a:hover {
   color: #cebe98; }
@@ -14194,7 +14184,7 @@ para suplantar las duraciones originales leídas antes */
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #302a26;
+  background-color: #1a1a1a;
   min-height: 100vh;
   position: fixed; }
 
@@ -14216,7 +14206,7 @@ para suplantar las duraciones originales leídas antes */
 
 #admin-col-admin,
 #admin-col-superadmin {
-  border-bottom: 1px solid #5b4f48; }
+  border-bottom: 1px solid #3b3b3b; }
 
 .admin-columna-contenedor ul {
   margin-top: 40px; }
@@ -14228,10 +14218,10 @@ para suplantar las duraciones originales leídas antes */
   color: #f1e7d2; }
 
 .admin-columna-contenedor a li:not(.Helper-Class-Active) span {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 .admin-columna-contenedor a li:not(.Helper-Class-Active):hover span {
-  color: #726259; }
+  color: #808080; }
 
 .admin-columna-contenedor #admin-col-backtoweb a p {
   color: #917e4b; }
@@ -14249,8 +14239,8 @@ para suplantar las duraciones originales leídas antes */
   transform: none; }
 
 .admin-columna-contenedor a li.admin-columna-li.mi-float-right.Helper-Class-Active span {
-  color: #726259;
-  text-shadow: 0 0 5px #5b4f48, 0 0 10px #5b4f48; }
+  color: #808080;
+  text-shadow: 0 0 5px #3b3b3b, 0 0 10px #3b3b3b; }
 
 .admin-columna-contenedor #admin-col-superadmin a li,
 .admin-columna-contenedor #admin-col-admin a li {
@@ -14296,6 +14286,9 @@ para suplantar las duraciones originales leídas antes */
 (tiene una banda de cosas la Home,
 pero eso es porque no optimicé la
 escritura de código)---*/
+.navbar-logo {
+  padding-bottom: 10px; }
+
 /* frase centrada encima del header, sobre las imágenes del carousel */
 .header-frase-container {
   text-align: center;
@@ -14391,7 +14384,7 @@ escritura de código)---*/
 .super-xs-header {
   width: 100%;
   height: 400px;
-  background: #302a26 url("../../imagenes/Img/header_mobile_xs.jpg") center no-repeat;
+  background: #1a1a1a url("../../imagenes/Img/header_mobile_xs.jpg") center no-repeat;
   background-size: cover; }
 
 /* Home Service header */
@@ -14494,7 +14487,7 @@ escritura de código)---*/
   margin-top: -20px;
   height: 340px;
   padding: 40px 40px;
-  background: #726259;
+  background: #3b3b3b;
   z-index: 1; }
 
 .destacado-pliegues:after {
@@ -14502,7 +14495,7 @@ escritura de código)---*/
   position: absolute;
   height: 440px;
   width: 100%;
-  border: 100px solid #726259;
+  border: 100px solid #3b3b3b;
   z-index: -1;
   top: 0;
   border-top-width: 20px;
@@ -14513,7 +14506,7 @@ escritura de código)---*/
   content: "";
   position: absolute;
   border-style: solid;
-  border-color: transparent transparent #5b4f48 transparent;
+  border-color: transparent transparent #1a1a1a transparent;
   top: 0;
   left: -20px;
   border-width: 0 0 20px 20px;
@@ -14573,7 +14566,7 @@ img.marca-col {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  ---   C O N T A C T O    ---  */
 #contacto .quote {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 /*  contact form */
 #contacto #contacto-form .form-control {
@@ -14583,7 +14576,7 @@ img.marca-col {
   border-radius: 0; }
 
 #contacto #contacto-form .form-control:focus {
-  border-color: #726259;
+  border-color: #808080;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(248, 241, 227, 0.6); }
 
@@ -14611,23 +14604,23 @@ img.marca-col {
 #contacto #contacto-form .has-error.checkbox label,
 #contacto #contacto-form .has-error.radio-inline label,
 #contacto #contacto-form .has-error.checkbox-inline label {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 #contacto #contacto-form .has-error .form-control {
-  border-color: #5b4f48;
+  border-color: #3b3b3b;
   box-shadow: none; }
 
 #contacto #contacto-form .has-error .form-control:focus {
-  border-color: #5b4f48;
+  border-color: #3b3b3b;
   box-shadow: none, none; }
 
 #contacto #contacto-form .has-error .input-group-addon {
-  color: #5b4f48;
-  background-color: #726259;
-  border-color: #5b4f48; }
+  color: #3b3b3b;
+  background-color: #808080;
+  border-color: #3b3b3b; }
 
 #contacto #contacto-form .has-error .form-control-feedback {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 #contacto #contacto-form .has-success .help-block,
 #contacto #contacto-form .has-success .control-label,
@@ -14659,7 +14652,7 @@ img.marca-col {
 
 #contacto #contacto-form label {
   color: #cebe98;
-  background-color: #5b4f48;
+  background-color: #3b3b3b;
   letter-spacing: 2px;
   margin-bottom: 0;
   padding: 6px;
@@ -14699,17 +14692,17 @@ img.marca-col {
 /*--- líneas divisorias del footer ---*/
 @media (max-width: 991px) {
   .footer-line {
-    border-bottom: 1px solid #5b4f48;
+    border-bottom: 1px solid #3b3b3b;
     margin: 15px; } }
 
 @media (min-width: 992px) {
   .footer-line {
-    border-right: 1px solid #5b4f48; } }
+    border-right: 1px solid #3b3b3b; } }
 
 /*--- pequeña línea divisoria que divide el copyright del autor de la web ---*/
 @media (min-width: 992px) {
   .footer-line2 {
-    border-right: 1px solid #5b4f48; } }
+    border-right: 1px solid #3b3b3b; } }
 
 #footer .col-md-4 {
   height: 200px; }
@@ -14758,7 +14751,7 @@ img.marca-col {
 p {
   font-family: HelveticaNoue;
   font-size: 14px;
-  color: #302a26;
+  color: #1a1a1a;
   text-align: justify;
   white-space: pre-wrap; }
 
@@ -14772,19 +14765,19 @@ h2 {
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #302a26; }
+  color: #1a1a1a; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #302a26; }
+  color: #1a1a1a; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #302a26; }
+  color: #1a1a1a; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -14896,7 +14889,7 @@ h1 {
 
 /* color de los glyphicons */
 #footer .col-md-4 h5 span.glyphicon {
-  color: #5b4f48;
+  color: #3b3b3b;
   padding-right: 4px; }
 
 #footer .col-md-4 h5:hover span.glyphicon {
@@ -14911,7 +14904,7 @@ h1 {
 
 /* color de la información que está abajo */
 #footer .col-md-6 h4, #footer .col-md-6 h5 {
-  color: #5b4f48; }
+  color: #3b3b3b; }
 
 #footer .col-md-6 h4 a, #footer .col-md-6 h5 a {
   color: #917e4b; }
