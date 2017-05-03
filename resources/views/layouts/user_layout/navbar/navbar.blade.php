@@ -32,7 +32,7 @@
               @include('formularios.auth.login_form')
              </div>
              
-             {{-- contenido a mostrar de user deplsegado --}}
+             {{-- contenido a mostrar de user desplegado --}}
               @if(!Auth::guest())
                <div class="contenido-auth-deplegado-navbar">              
                  <ul>
