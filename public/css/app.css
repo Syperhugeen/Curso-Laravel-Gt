@@ -19,6 +19,7 @@
 /*gris más oscuro (para backgrounds por ejemplo)*/
 /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 /*misma razón, pero para el negro */
+/*para el ribbon llamado destacado despliegue*/
 /* COLORES DEL CAROUSEL (IMAGE SLIDER) */
 .carousel-control,
 .carousel-control:hover,
@@ -12515,6 +12516,7 @@ ul.bxslider {
 /*gris más oscuro (para backgrounds por ejemplo)*/
 /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 /*misma razón, pero para el negro */
+/*para el ribbon llamado destacado despliegue*/
 /* COLORES DEL CAROUSEL (IMAGE SLIDER) */
 .carousel-control,
 .carousel-control:hover,
@@ -13306,10 +13308,6 @@ ul.text-slide a:hover li h4 {
   width: 100%;
   left: 20px; }
 
-@media (min-width: 1182px) and (max-width: 1266px) {
-  .puzzle-box-square-container {
-    width: 110%; } }
-
 .puzzle-box {
   position: absolute;
   width: 200px;
@@ -13324,13 +13322,11 @@ ul.text-slide a:hover li h4 {
   overflow: hidden; }
 
 .puzzle-box-content-main {
-  /* top:0; */
   width: 200px;
   height: 400px; }
 
 /* contenido de las boxes (tiene el doble de altura porque tiene otra cara oculta abajo) */
 .puzzle-box-content {
-  /* top:0; */
   width: 200px;
   height: 400px;
   transition: transform .3s ease; }
@@ -13355,7 +13351,7 @@ ul.text-slide a:hover li h4 {
   text-align: center;
   width: 200px;
   height: 200px;
-  padding: 40px; }
+  padding: 36px; }
 
 /* tamaños RESPONSIVE para xs */
 @media (max-width: 767px) {
@@ -13377,7 +13373,7 @@ ul.text-slide a:hover li h4 {
 
 /* para centrar verticalmente el elemento (h5 en este caso) que está dentro de estos divs
  (requiere que previamente se le haya dado formato de display:table a los contenedores) */
-.puzzle-box-content-hidden1 > h5, .puzzle-box-content-hidden2 > h5 {
+.puzzle-box-content-hidden1 .table-outer h5, .puzzle-box-content-hidden2 .table-outer h5 {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
@@ -13389,7 +13385,7 @@ ul.text-slide a:hover li h4 {
   width: 100%;
   height: auto; }
 
-.puzzle-box-content-visible1 > img, .puzzle-box-content-visible2 > img {
+.puzzle-box-content-visible1 .table-outer img, .puzzle-box-content-visible2 .table-outer img {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
@@ -13409,86 +13405,66 @@ ul.text-slide a:hover li h4 {
 .puzzle-box-index7 {
   z-index: 7; }
 
-/* animación de entrada principal */
-.puzzle-box-animation-main {
-  -webkit-animation-name: puzzleboxanimationmain;
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-delay: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-name: puzzleboxanimationmain;
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards; }
-
 /* animaciones de despliegue */
 .puzzle-box-animation-1 {
   -webkit-animation-name: puzzleboxmainanimationone;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: both;
   animation-name: puzzleboxmainanimationone;
   animation-duration: 1.5s;
   animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: both; }
 
 .puzzle-box-animation-2 {
   -webkit-animation-name: puzzleboxmainanimationtwo;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: both;
   animation-name: puzzleboxmainanimationtwo;
   animation-duration: 1.5s;
   animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: both; }
 
 .puzzle-box-animation-3 {
   -webkit-animation-name: puzzleboxmainanimationthree;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: both;
   animation-name: puzzleboxmainanimationthree;
   animation-duration: 1.5s;
   animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: both; }
 
 .puzzle-box-animation-4 {
   -webkit-animation-name: puzzleboxmainanimationfour;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: both;
   animation-name: puzzleboxmainanimationfour;
   animation-duration: 1.5s;
   animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: both; }
 
 .puzzle-box-animation-5 {
   -webkit-animation-name: puzzleboxmainanimationfive;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: both;
   animation-name: puzzleboxmainanimationfive;
   animation-duration: 1.5s;
   animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: both; }
 
 .puzzle-box-animation-6 {
   -webkit-animation-name: puzzleboxmainanimationsix;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 1.5s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: both;
   animation-name: puzzleboxmainanimationsix;
   animation-duration: 1.5s;
   animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
-
-@keyframes puzzleboxanimationmain {
-  0% {
-    transform: translate(0%, -400%);
-    opacity: 0; }
-  100% {
-    transform: translate(0%, 0%);
-    opacity: 1;
-    animation-timing-function: ease; } }
+  animation-fill-mode: both; }
 
 @keyframes puzzleboxmainanimationone {
   0% {
@@ -13531,7 +13507,7 @@ ul.text-slide a:hover li h4 {
 
 @keyframes puzzleboxmainanimationfour {
   0% {
-    transform: translateX(0%, 0%); }
+    transform: translate(0%, 0%); }
   33% {
     transform: translate(0%, 101%);
     animation-timing-function: ease; }
@@ -13581,8 +13557,10 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   height: 100%;
   width: 100%;
   background: #3b3b3b;
-  padding: 20px;
   overflow: hidden; }
+
+.puzzle-left-col-content {
+  padding: 80px; }
 
 .puzzle-left-col-content h5, .puzzle-left-col-content h4, .puzzle-responsive-top-text h4, .puzzle-responsive-top-text h5 {
   color: #cebe98;
@@ -13595,29 +13573,26 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   -webkit-animation-name: puzzleleftcolanimation;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-delay: 0.5s;
-  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: both;
   animation-name: puzzleleftcolanimation;
   animation-duration: 1.5s;
-  animation-delay: 2.5s;
+  animation-delay: 0.5s;
   animation-fill-mode: both; }
 
 @keyframes puzzleleftcolanimation {
   0% {
-    transform: translate(120%, 0%);
+    transform: translate(-120%, 0%);
     opacity: 0;
-    height: 200px;
-    top: 300px; }
+    height: 800px; }
   50% {
     transform: translate(0%, 0%);
     opacity: 1;
-    height: 200px;
-    top: 300px;
+    height: 800px;
     animation-timing-function: ease; }
   100% {
     transform: translate(0%, 0%);
     opacity: 1;
     height: 800px;
-    top: 0;
     animation-timing-function: ease; } }
 
 /* * * * * * * * * * * * * * *    C S S   R I B B O N S    * * * * * * * * * * * * * * */
@@ -14483,11 +14458,11 @@ escritura de código)---*/
 .destacado-pliegues {
   /*luego pasar a mis_recursos*/
   position: absolute;
-  top: -40px;
+  top: 0px;
   margin-top: -20px;
   height: 340px;
   padding: 40px 40px;
-  background: #3b3b3b;
+  background: #5F021F;
   z-index: 1; }
 
 .destacado-pliegues:after {
@@ -14495,7 +14470,7 @@ escritura de código)---*/
   position: absolute;
   height: 440px;
   width: 100%;
-  border: 100px solid #3b3b3b;
+  border: 100px solid #5F021F;
   z-index: -1;
   top: 0;
   border-top-width: 20px;
@@ -14506,7 +14481,7 @@ escritura de código)---*/
   content: "";
   position: absolute;
   border-style: solid;
-  border-color: transparent transparent #1a1a1a transparent;
+  border-color: transparent transparent #2d010f transparent;
   top: 0;
   left: -20px;
   border-width: 0 0 20px 20px;

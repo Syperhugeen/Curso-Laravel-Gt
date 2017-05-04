@@ -245,7 +245,7 @@ $puzzle-box-doble-medida: $puzzle-box-medida * 2; /*se calcula el doble del valo
 $puzzle-box-trescuartos-doble-medida: $puzzle-box-doble-medida * 0.75; /*se calculan 3/4 del doble */
 $responsive-puzzle-box: 100%; /*escribir la medida del width y height para xs */
 
-$puzzle-padding: 40px; /*espacio entre el perímetro de cada cuadradito y su contenido (icono o textito)*/
+$puzzle-padding: 36px; /*espacio entre el perímetro de cada cuadradito y su contenido (icono o textito)*/
 $responsive-puzzle-padding: 10px;
 
 $puzzle-box-animations-duration:1.5s;
@@ -268,9 +268,6 @@ $puzzle-col-animation-delay: 2.5s;
   width:100%;
   left:20px;
  }
- @media (min-width:1182px) and (max-width:1266px){.puzzle-box-square-container{
-  width:110%;
-  }}
 .puzzle-box{
   position:absolute;
   width:$puzzle-box-medida;
@@ -285,14 +282,12 @@ $puzzle-col-animation-delay: 2.5s;
   overflow:hidden;
 }
 .puzzle-box-content-main{
-  /* top:0; */
   width:$puzzle-box-medida;
   height:$puzzle-box-doble-medida;
 }
 
 /* contenido de las boxes (tiene el doble de altura porque tiene otra cara oculta abajo) */
 .puzzle-box-content{
-  /* top:0; */
   width:$puzzle-box-medida;
   height:$puzzle-box-doble-medida;
   -webkit-transition: transform .3s ease;
@@ -346,7 +341,7 @@ $puzzle-col-animation-delay: 2.5s;
 
  /* para centrar verticalmente el elemento (h5 en este caso) que está dentro de estos divs
  (requiere que previamente se le haya dado formato de display:table a los contenedores) */
-.puzzle-box-content-hidden1 > h5, .puzzle-box-content-hidden2 > h5{
+.puzzle-box-content-hidden1 .table-outer h5, .puzzle-box-content-hidden2 .table-outer h5{
   display: table-cell;
   vertical-align: middle;
   width: 100%;
@@ -359,7 +354,7 @@ $puzzle-col-animation-delay: 2.5s;
   width:100%;
   height:auto;
 }
-.puzzle-box-content-visible1 > img, .puzzle-box-content-visible2 > img{
+.puzzle-box-content-visible1 .table-outer img, .puzzle-box-content-visible2 .table-outer img{
   display: table-cell;
   vertical-align: middle;
   width: 100%;
@@ -382,19 +377,7 @@ $puzzle-col-animation-delay: 2.5s;
 }
 
 
-$puzzle-box-animations-fill-mode:forwards;
-
-/* animación de entrada principal */
-.puzzle-box-animation-main{
-  -webkit-animation-name: puzzleboxanimationmain;
-  -webkit-animation-duration: $puzzle-box-animation-main-duration;
-  -webkit-animation-delay: $puzzle-box-animation-main-delay;
-  -webkit-animation-fill-mode: $puzzle-box-animations-fill-mode;
-  animation-name: puzzleboxanimationmain;
-  animation-duration: $puzzle-box-animation-main-duration;
-  animation-delay: $puzzle-box-animation-main-delay;
-  animation-fill-mode: $puzzle-box-animations-fill-mode;
-}
+$puzzle-box-animations-fill-mode:both;
 
 /* animaciones de despliegue */
 .puzzle-box-animation-1{
@@ -458,14 +441,6 @@ $puzzle-box-animations-fill-mode:forwards;
   animation-fill-mode:$puzzle-box-animations-fill-mode;
 }
 
-@-webkit-keyframes puzzleboxanimationmain {
-  0% {-webkit-transform:translate(0%, -400%);opacity:0;}
-  100% {-webkit-transform:translate(0%, 0%);opacity:1;-webkit-animation-timing-function:ease;}
-}
-@keyframes puzzleboxanimationmain {
-  0% {transform:translate(0%, -400%);opacity:0;}
-  100% {transform:translate(0%, 0%);opacity:1;animation-timing-function:ease;}
-}
 
 @-webkit-keyframes puzzleboxmainanimationone {
   0% {-webkit-transform:translate(0%, 0%);}
@@ -516,7 +491,7 @@ $puzzle-box-animations-fill-mode:forwards;
   100% {-webkit-transform:translate(0%, 101%);-webkit-animation-timing-function:ease;}
 }
 @keyframes puzzleboxmainanimationfour {
-  0% {transform:translateX(0%, 0%);}
+  0% {transform:translate(0%, 0%);}
   33% {transform:translate(0%, 101%);animation-timing-function:ease;}
   66% {transform:translate(0%, 101%);animation-timing-function:ease;}
   100% {transform:translate(0%, 101%);animation-timing-function:ease;}
@@ -565,11 +540,10 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   height:100%;
   width:100%;
   background: $color-2light;
-  padding:20px;
   overflow:hidden;
 }
 .puzzle-left-col-content{
-
+  padding:80px;
 }
 .puzzle-left-col-content h5, .puzzle-left-col-content h4, .puzzle-responsive-top-text h4, .puzzle-responsive-top-text h5{
   color: $color-3;
@@ -581,22 +555,22 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
 .puzzle-left-col-animation{
   -webkit-animation-name: puzzleleftcolanimation;
   -webkit-animation-duration: $puzzle-box-animation-main-duration;
-  -webkit-animation-delay: $puzzle-box-animation-main-delay;
+  -webkit-animation-delay: 0.5s;
   -webkit-animation-fill-mode: $puzzle-box-animations-fill-mode;
   animation-name: puzzleleftcolanimation;
   animation-duration: $puzzle-box-animation-main-duration;
-  animation-delay: $puzzle-col-animation-delay;
+  animation-delay: 0.5s;
   animation-fill-mode: both;
 }
 @-webkit-keyframes puzzleleftcolanimation {
-  0% {-webkit-transform:translate(120%, 0%);opacity:0;height:$puzzle-box-medida;top:300px;}
-  50% {-webkit-transform:translate(0%, 0%);opacity:1;height:$puzzle-box-medida;top:300px;-webkit-animation-timing-function:ease;}
-  100% {-webkit-transform:translate(0%, 0%);opacity:1;height:$section3-altura;top:0;-webkit-animation-timing-function:ease;}
+  0% {-webkit-transform:translate(-120%, 0%);opacity:0;height:$section3-altura;}
+  50% {-webkit-transform:translate(0%, 0%);opacity:1;height:$section3-altura;-webkit-animation-timing-function:ease;}
+  100% {-webkit-transform:translate(0%, 0%);opacity:1;height:$section3-altura;-webkit-animation-timing-function:ease;}
 }
 @keyframes puzzleleftcolanimation {
-  0% {transform:translate(120%, 0%);opacity:0;height:$puzzle-box-medida;top:300px;}
-  50% {transform:translate(0%, 0%);opacity:1;height:$puzzle-box-medida;top:300px;animation-timing-function:ease;}
-  100% {transform:translate(0%, 0%);opacity:1;height:$section3-altura;top:0;animation-timing-function:ease;}
+  0% {transform:translate(-120%, 0%);opacity:0;height:$section3-altura;}
+  50% {transform:translate(0%, 0%);opacity:1;height:$section3-altura;animation-timing-function:ease;}
+  100% {transform:translate(0%, 0%);opacity:1;height:$section3-altura;animation-timing-function:ease;}
 }
 
 

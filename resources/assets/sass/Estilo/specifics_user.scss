@@ -263,11 +263,11 @@ escritura de código)---*/
 /*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
 .destacado-pliegues{ /*luego pasar a mis_recursos*/
   position:absolute;
-  top:-40px;
+  top:0px;
   margin-top:-20px;
   height:$section2-altura + 40px;
   padding: 40px 40px;
-  background:$color-2light;
+  background:$color-bordeaux;
   z-index:1;
 }
 .destacado-pliegues:after {
@@ -275,7 +275,7 @@ escritura de código)---*/
   position: absolute;
   height: $section2-altura + 140px;
   width: 100%;
-  border: 100px solid $color-2light;
+  border: 100px solid $color-bordeaux;
   z-index: -1;
   top: 0;
   border-top-width: 20px;
@@ -286,7 +286,7 @@ escritura de código)---*/
   content: "";
   position: absolute;
   border-style: solid;
-  border-color: transparent transparent $color-2 transparent;
+  border-color: transparent transparent $color-bordeauxdark transparent;
   top: 0;
   left: -20px;
   border-width: 0 0 20px 20px;
