@@ -85,7 +85,8 @@
                                     <div class="puzzle-box-content-visible1">
                                         <div class="table-outer">
                                         <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(brown).png">
-                                    </div></div>
+                                        </div>
+                                    </div>
                                     <div class="puzzle-box-content-hidden1">
                                         <div class="table-outer">
                                         <h5>+1500 promotoras contratadas</h5>
@@ -102,7 +103,8 @@
                                     <div class="puzzle-box-content-visible2">
                                         <div class="table-outer">
                                         <img class="puzzle-img-responsive" src="imagenes/Img/icon_calendar(vanilla).png">
-                                    </div></div>
+                                        </div>
+                                    </div>
                                     <div class="puzzle-box-content-hidden2">
                                         <div class="table-outer">
                                         <h5>+3000 acciones y eventos</h5>

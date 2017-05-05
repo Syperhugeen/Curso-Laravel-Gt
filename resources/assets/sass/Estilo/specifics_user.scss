@@ -611,13 +611,10 @@ img.marca-col{
   height: $altura-footer-columns;
 }
 #footer .col-md-4 .isologo{
-  background-image: url("../../imagenes/Empresa/isologo_superdark.png");
+  background-image: url("../../imagenes/Empresa/isologo_golden.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: right top;
-}
-#footer .col-md-4:hover .isologo{
-  background-image: url("../../imagenes/Empresa/isologo_dark.png");
 }
 #footer .column-container{
   padding: 0px 40px;
