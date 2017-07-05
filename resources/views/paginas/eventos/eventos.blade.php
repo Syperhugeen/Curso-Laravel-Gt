@@ -28,7 +28,7 @@
     
     
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper no-padding bgcolor-3light">
+<div class="container-fluid section-wrapper no-padding bgcolor-white">
 
 {{-- contiene hasta diez eventos como máximo --}}
 	<div class="row">
