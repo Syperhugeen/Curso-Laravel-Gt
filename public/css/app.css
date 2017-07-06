@@ -12738,6 +12738,25 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 #section4 > .container-fluid {
   padding-top: 3px; }
 
+/* I M A G E N   D E   P O R T A D A  de altura acorde al viewport */
+div.wrapper-portada {
+  height: 70vh;
+  width: 100%;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+div.wrapper-portada > img.portada {
+  max-height: 100%;
+  width: auto;
+  max-width: 200%;
+  text-align: center;
+  margin: 0 auto; }
+
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
 /*---CENTRAR UNA COLUMNA dentro de un row---*/
 .col-hcenter {

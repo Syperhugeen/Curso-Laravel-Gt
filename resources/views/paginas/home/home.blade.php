@@ -19,7 +19,7 @@
 <div id="home">
 <!--header (carousel de imágenes)-->
 <div id="section0">
-  <div class="bgcolor-3">
+  <div class="bgcolor-black">
     @include('paginas.home.home_header')
   </div>
 </div>
