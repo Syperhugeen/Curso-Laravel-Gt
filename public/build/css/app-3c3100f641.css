@@ -75,10 +75,10 @@
   background: #f1e7d2; }
 
 .color-2 {
-  color: #1a1a1a; }
+  color: #080808; }
 
 .bgcolor-2 {
-  background: #1a1a1a; }
+  background: #080808; }
 
 .color-2light {
   color: #3b3b3b !important; }
@@ -264,7 +264,7 @@ son los titulos de la seccion */
 p {
   font-family: HelveticaNoue;
   font-size: 14px;
-  color: #1a1a1a;
+  color: #080808;
   text-align: justify;
   white-space: pre-wrap; }
 
@@ -282,15 +282,15 @@ h3 {
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #1a1a1a; }
+  color: #080808; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #1a1a1a; }
+  color: #080808; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #1a1a1a; }
+  color: #080808; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -375,6 +375,11 @@ ul.navbar-nav > li > a.active {
 h1 {
   font-family: Champagne;
   letter-spacing: 2px; }
+
+h1.section-title {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  color: #080808; }
 
 .text-header-big {
   font-family: HelveticaNoue37Thin;
@@ -11321,7 +11326,7 @@ ul.bxslider {
   border-radius: 5px;
   border: 2px solid white;
   background-color: white;
-  color: #1a1a1a; }
+  color: #080808; }
 
 /* Use this next selector to style things like font-size and line-height: */
 .contenedor-default-tooltips .tooltipster-content {
@@ -12571,10 +12576,10 @@ ul.bxslider {
   background: #f1e7d2; }
 
 .color-2 {
-  color: #1a1a1a; }
+  color: #080808; }
 
 .bgcolor-2 {
-  background: #1a1a1a; }
+  background: #080808; }
 
 .color-2light {
   color: #3b3b3b !important; }
@@ -12645,8 +12650,8 @@ son los titulos de la seccion */
 /*---esto se cambia automáticamente acorde a la altura ingresada de la Navbar
 para que el contenido comience luego de la Navbar y no se pierda nada detrás de ella---*/
 body {
-  padding-top: 120px;
-  background-color: #1a1a1a; }
+  padding-top: 140px;
+  background-color: #080808; }
 
 @media (max-width: 767px) {
   body {
@@ -12657,9 +12662,9 @@ body {
 .global-wrapper {
   display: block;
   overflow-x: hidden;
-  padding-top: 120px;
-  margin-top: -120px;
-  background-color: #decdab; }
+  padding-top: 140px;
+  margin-top: -140px;
+  background-color: black; }
 
 @media (max-width: 767px) {
   .global-wrapper {
@@ -12673,8 +12678,8 @@ body {
 #section2,
 #section3,
 #section4 {
-  padding-top: 120px;
-  margin-top: -120px;
+  padding-top: 140px;
+  margin-top: -140px;
   /*---creo que el padding no es necesario porque ya está indicado en el globa-wrapper---*/ }
 
 @media (max-width: 767px) {
@@ -12688,14 +12693,6 @@ body {
 #section0,
 #section1 {
   overflow: hidden; }
-
-.bg-services {
-  background-color: white;
-  background-image: url("../../imagenes/Img/probando.jpg");
-  background-size: auto 80%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  height: 800px; }
 
 /* S E C T I O N   W R A P P E R S */
 /*escribir aquí el padding (superior e inferior) de cada sección dentro de una pág*/
@@ -12743,12 +12740,15 @@ div.wrapper-portada {
   height: 70vh;
   width: 100%;
   text-align: center;
+  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
+  -moz-align-items: center;
   align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  -ms-flex-pack: row;
+  -moz-justify-content: row;
+  justify-content: row; }
 
 div.wrapper-portada > img.portada {
   max-height: 100%;
@@ -12756,6 +12756,22 @@ div.wrapper-portada > img.portada {
   max-width: 200%;
   text-align: center;
   margin: 0 auto; }
+
+/* B A C K G R O U N D   I M A G E  size: cover */
+div.bg-home-puzzle {
+  background-image: url("../../imagenes/Img/bg-home-puzzle.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
+.bg-services {
+  background-color: white;
+  background-image: url("../../imagenes/Img/probando.jpg");
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  height: 800px; }
 
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
 /*---CENTRAR UNA COLUMNA dentro de un row---*/
@@ -12853,7 +12869,7 @@ como por ejemplo un carousel de imágenes de header---*/
 
 .special-col p {
   font-family: HelveticaNoue;
-  color: #1a1a1a; }
+  color: #080808; }
 
 .special-col .ampliar {
   color: #917e4b;
@@ -13322,14 +13338,26 @@ ul.text-slide a:hover li h4 {
 /* de momento no estoy usando la animation-main, en su lugar usé fadeInRight porque la entrada vertical no está funcionando*/
 /* demora de la columna izquierda en aparecer*/
 .puzzle-container {
-  text-align: center;
-  height: 800px; }
+  width: 100%;
+  height: 800px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center; }
 
 .puzzle-box-square-container {
+  float: none;
+  display: inline-block;
   position: relative;
   height: 100%;
-  width: 100%;
-  left: 20px; }
+  left: -300px;
+  margin: 0 auto; }
 
 .puzzle-box {
   position: absolute;
@@ -13362,13 +13390,13 @@ ul.text-slide a:hover li h4 {
   background-color: #cebe98; }
 
 .puzzle-box-content-hidden1 {
-  background-color: #decdab; }
+  background-color: #f1e7d2; }
 
 .puzzle-box-content-visible2 {
-  background-color: #3b3b3b; }
+  background-color: #080808; }
 
 .puzzle-box-content-hidden2 {
-  background-color: #808080; }
+  background-color: #3b3b3b; }
 
 .puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   text-align: center;
@@ -13810,12 +13838,16 @@ para suplantar las duraciones originales leídas antes */
 
 @media (min-width: 768px) {
   .navbar {
-    height: 120px; } }
+    height: 140px; } }
 
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
   border-color: #cebe98;
-  background: #1a1a1a; }
+  background-image: url("../../imagenes/Img/navbar-rays-of-light.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #080808; }
 
 .navbar-default .navbar-text {
   color: #cebe98; }
@@ -13823,12 +13855,14 @@ para suplantar las duraciones originales leídas antes */
 .navbar-default .navbar-nav > li > a {
   display: inline-block;
   color: #cebe98;
+  letter-spacing: 1px;
   transition: transform .3s ease; }
 
 /*--- LINKS DE LA NAVBAR (tamaños acorde al width) ---*/
 @media (min-width: 768px) {
   .navbar-default .navbar-nav > li > a {
-    margin-top: 4px;
+    margin-top: 16px;
+    /*--- separación del logo ---*/
     line-height: 40px; } }
 
 @media (max-width: 991px) {
@@ -13967,7 +14001,7 @@ para suplantar las duraciones originales leídas antes */
   color: #f1e7d2; }
 
 .dropdown-menu {
-  background-color: #1a1a1a;
+  background-color: #080808;
   margin: 0;
   border: 0px solid #cebe98; }
 
@@ -13997,7 +14031,7 @@ para suplantar las duraciones originales leídas antes */
     padding: 0 10px; } }
 
 .navbar-brand {
-  height: 46px;
+  height: 50px;
   padding: 15px 10px 15px 0px;
   font-size: 18px;
   line-height: 20px;
@@ -14012,7 +14046,7 @@ para suplantar las duraciones originales leídas antes */
   .navbar .container .navbar-brand,
   .navbar .container-fluid .navbar-brand {
     text-align: center;
-    padding: 15px 15px 15px 15px;
+    padding: 10px 14px 14px 14px;
     display: inline-block;
     float: none;
     vertical-align: top; }
@@ -14022,11 +14056,11 @@ para suplantar las duraciones originales leídas antes */
     position: absolute; } }
 
 .navbar-logo {
-  height: 34px; }
+  height: 50px; }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .navbar-logo {
-    height: 46px; } }
+    height: 65px; } }
 
 /*--- para CENTRAR el contenido de la NAVBAR ---*/
 @media (min-width: 768px) {
@@ -14039,7 +14073,7 @@ para suplantar las duraciones originales leídas antes */
     margin-top: 34px; }
   .navbar .navbar-header {
     text-align: center;
-    margin-top: 10px; } }
+    margin-top: 20px; } }
 
 /*--- contenido de INICIO DE SESIÓN ---*/
 /*--- código doe mauri (creo que está fuera de uso) ---*/
@@ -14087,7 +14121,7 @@ para suplantar las duraciones originales leídas antes */
 /* * * * *  - - - - -    L A Y O U T   G E N E R A L    - - - - - * * * * */
 /* ---  W R A P P E R  --- */
 .admin-content-wrapper {
-  margin-top: -120px; }
+  margin-top: -140px; }
 
 @media (max-width: 767px) {
   .admin-content-wrapper {
@@ -14184,7 +14218,7 @@ para suplantar las duraciones originales leídas antes */
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #1a1a1a;
+  background-color: #080808;
   min-height: 100vh;
   position: fixed; }
 
@@ -14384,7 +14418,7 @@ escritura de código)---*/
 .super-xs-header {
   width: 100%;
   height: 400px;
-  background: #1a1a1a url("../../imagenes/Img/header_mobile_xs.jpg") center no-repeat;
+  background: #080808 url("../../imagenes/Img/header_mobile_xs.jpg") center no-repeat;
   background-size: cover; }
 
 /* Home Service header */
@@ -14748,7 +14782,7 @@ img.marca-col {
 p {
   font-family: HelveticaNoue;
   font-size: 14px;
-  color: #1a1a1a;
+  color: #080808;
   text-align: justify;
   white-space: pre-wrap; }
 
@@ -14766,15 +14800,15 @@ h3 {
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #1a1a1a; }
+  color: #080808; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #1a1a1a; }
+  color: #080808; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #1a1a1a; }
+  color: #080808; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -14859,6 +14893,11 @@ ul.navbar-nav > li > a.active {
 h1 {
   font-family: Champagne;
   letter-spacing: 2px; }
+
+h1.section-title {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  color: #080808; }
 
 .text-header-big {
   font-family: HelveticaNoue37Thin;

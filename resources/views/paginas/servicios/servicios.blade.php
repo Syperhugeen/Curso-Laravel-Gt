@@ -49,7 +49,7 @@
     
 
     {{-- rombo divisor con el logo de GT --}}
-    <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+    <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 <div class="row" id="personal">
       <div class="col-sm-6 no-padding eventos-imagen">
         <img class="img-greyscale-hover img-main" src="imagenes/Img/servicios-personal.jpg">

@@ -1,7 +1,7 @@
 
 
 <div class="wrapper-portada">
-  <img src="imagenes/img/header_15years(smaller_logo).jpg" alt="Celebrando 15 años de trayectoria" class="portada">
+  <img src="imagenes/img/header_15years(smaller_logo).jpg" alt="Celebrando 15 años de trayectoria" class="portada wow fadeIn delay1b">
 </div>
 
 <!-- CAROUSEL SLIDER - TODO ESTO QUEDA AFUERA DE MOMENTO-->

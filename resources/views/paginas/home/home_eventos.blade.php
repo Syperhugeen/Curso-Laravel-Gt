@@ -1,5 +1,5 @@
 {{-- rombo divisor con el logo de GT --}}
-<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 
 {{-- contenedor de la parte de eventos de la home --}}
 

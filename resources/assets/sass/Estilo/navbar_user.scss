@@ -31,8 +31,11 @@
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
   border-color: $color-3;
-  background: $color-2;
-
+  background-image: url('../../imagenes/Img/navbar-rays-of-light.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-2;
 }
 
 .navbar-default .navbar-text {
@@ -41,6 +44,7 @@
 .navbar-default .navbar-nav > li > a {
   display:inline-block;
   color: $color-3;
+  letter-spacing: 1px;
   -webkit-transition: transform .3s ease;
   -moz-transition: transform .3s ease;
   transition: transform .3s ease;
@@ -54,7 +58,7 @@
 
 /*--- LINKS DE LA NAVBAR (tamaños acorde al width) ---*/
 @media (min-width: 768px) {.navbar-default .navbar-nav > li > a {
-  margin-top:4px;
+  margin-top:16px; /*--- separación del logo ---*/
   line-height: 40px;
   }}
 
@@ -77,9 +81,6 @@
 
 
 
-
-
-
 /*--- LINKS DE LA NAVBAR (efectos hover) ---*/
 .navbar-default .navbar-nav > li:not(.active) > a:hover,
 .navbar-default .navbar-nav > li:not(.active) > a:focus {
@@ -94,6 +95,7 @@
   color: $color-3light;
   background-color:transparent;
 }
+
 /*--- la flechita  de los links para cuando está colapsado para móbiles ---*/
 @media (max-width: 767px) {.navbar-default .navbar-nav > .active > a:after{
   left: 0;
@@ -259,7 +261,7 @@ border: 0px solid $color-3;
   padding: 0 10px;
 }}
 .navbar-brand {
-  height: 46px;
+  height: 50px;
   padding: 15px 10px 15px 0px;
   font-size: 18px;
   line-height: 20px;
@@ -275,7 +277,7 @@ border: 0px solid $color-3;
   .navbar .container .navbar-brand,
   .navbar .container-fluid .navbar-brand {
     text-align:center;
-    padding: 15px 15px 15px 15px;
+    padding: 10px 14px 14px 14px;
     display: inline-block;
     float: none;
     vertical-align: top;
@@ -287,10 +289,10 @@ border: 0px solid $color-3;
 }}
 
 .navbar-logo{
-height: 34px;
+height: 50px;
 }
-@media (min-width: 992px) {.navbar-logo{
-height: 46px;
+@media (min-width: 768px) {.navbar-logo{
+height: 65px;
 }}
 
 
@@ -311,7 +313,7 @@ height: 46px;
     }
     .navbar .navbar-header {
         text-align: center;
-        margin-top:10px;
+        margin-top:20px;
     }
 }
 

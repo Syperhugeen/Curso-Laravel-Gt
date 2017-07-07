@@ -36,7 +36,7 @@
         <h1 class="text-center">Ponte en contacto</h1>
         <h2 class="text-center quote super-space-bottom">Una frase aquí, de no más de un renglón de longitud.</h2>
             {{-- rombo divisor con el logo de GT --}}
-            <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+            <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
       </div> 
 
 

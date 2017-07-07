@@ -1,46 +1,18 @@
+<div class="row">
+    <div class="col-md-12 space-top">
+        <h1 class="section-title text-center no-margin">Números</h1>
+        <h1 class="text-center no-margin">GLOBAL TARGET hoy</h1>
+    </div>
+</div>
 
 <div class="row no-padding no-margin">
-    
-    <!--columna izquierda con texto-->
-    <div class="col-md-3 col-lg-4 no-padding no-margin">
-
-      <!--para md y lg-->
-        <div class="puzzle-left-col-container wow puzzle-left-col-animation hidden-sm hidden-xs">
-            <div class="table-outer"> 
-              <div class="table-inner">
-                <div class="puzzle-left-col-content wow fadeInUp delay4"> 
-                    <h5 class="space-bottom">La búsqueda de la excelencia es el principal &laquo;<em>leit motiv</em>&raquo; de<span class="logo-font" style="font-weight:600;"><br>Global Target</span>.</h5>
-                    <h5><span class="color-3superlight">Profesionalismo</span> y <span class="color-3superlight">constante innovación</span> a lo largo de 15 años de experiencia nos han convertido en la agencia más prestigiosa del Uruguay.</h5>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!--para xs y sm-->
-        <div class="puzzle-responsive-top-text space-top hidden-md hidden-lg">
-          <div class="row wow fadeInUp">
-            <div class="col-sm-6">
-                    <div class="puzzle-responsive-top-text-col">
-                        <h5>La búsqueda de la excelencia es el principal &laquo;<em>leit motiv</em>&raquo; de<span class="logo-font" style="font-weight:600;"> Global Target</span>.</h5>
-                    </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="puzzle-responsive-top-text-col">
-                <h5><span class="color-3superlight">Profesionalismo</span> y <span class="color-3superlight">constante innovación</span> a lo largo de 15 años de experiencia nos han convertido en la agencia más prestigiosa del Uruguay.</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/termina la columna izquierda de texto-->
-    </div>
-
-
 
     <!--columna derecha con los cuadrados de puzle-->
-    <div class="col-md-9 col-lg-8 no-padding no-margin">
+    <div class="col-md-12 col-lg-12 no-padding no-margin">
 
         <!--para md y lg-->
         <div class="puzzle-container hidden-sm hidden-xs">
+
         
             <div class="puzzle-box-square-container wow fadeInUp delay1">
 
@@ -84,7 +56,7 @@
                                 <div class="puzzle-box-content">
                                     <div class="puzzle-box-content-visible1">
                                         <div class="table-outer">
-                                        <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(brown).png">
+                                        <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(080808).png">
                                         </div>
                                     </div>
                                     <div class="puzzle-box-content-hidden1">
@@ -143,7 +115,7 @@
                                 <div class="puzzle-box-content">
                                     <div class="puzzle-box-content-visible1">
                                         <div class="table-outer">
-                                        <img class="puzzle-img-responsive" src="imagenes/Img/icon_structure(brown).png">
+                                        <img class="puzzle-img-responsive" src="imagenes/Img/icon_structure(080808).png">
                                     </div></div>
                                     <div class="puzzle-box-content-hidden1">
                                         <div class="table-outer">
@@ -194,7 +166,7 @@
 
     <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
             <div class="puzzle-box-content-visible1 table-outer">
-                <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(brown).png">
+                <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(080808).png">
             </div>
             <div class="puzzle-box-content-hidden1 table-outer">
                 <h5>+1500 promotoras contratadas</h5>
@@ -226,7 +198,7 @@
     <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
             <div>
                 <div class="puzzle-box-content-visible1 table-outer">
-                    <img class="puzzle-img-responsive" src="imagenes/Img/icon_structure(brown).png">
+                    <img class="puzzle-img-responsive" src="imagenes/Img/icon_structure(080808).png">
                 </div>
                 <div class="puzzle-box-content-hidden1 table-outer">
                     <h5>equipo de 15 profesionales</h5>
