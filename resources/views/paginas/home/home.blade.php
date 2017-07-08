@@ -17,14 +17,14 @@
 
 
 <div id="home">
-<!--header (carousel de imágenes)-->
+<!--PORTADA / header , previamente carousel/slider-->
 <div id="section0">
   <div class="bgcolor-black">
     @include('paginas.home.home_header')
   </div>
 </div>
 
-<!--para agregar los márgenes laterales-->
+<!--BRIEF INTRODUCTION TO GLOBAL / descripción breve de servicios y de la empresa-->
 <div id="section1">
   <div class="container-fluid section-wrapper bg-services">
     <div class="row">    
@@ -35,23 +35,23 @@
   </div>
 </div>
 
-<!--para agregar los márgenes laterales-->
+<!--PREMIUM BRANDS / logos de clientes prestigiosos-->
 <div id="section2">
-  <div class="container-fluid no-padding section-wrapper bgcolor-3 index-2">
+  <div class="container-fluid no-padding section-wrapper bgcolor-3">
         <div>
          @include('paginas.home.home_brands')
         </div>
   </div>
 </div>
 
-<!--para agregar los márgenes laterales-->
+<!--PUZZLE (GT en números / cuadraditos-->
 <div id="section3">
   <div class="container-fluid no-padding bg-home-puzzle">
        @include('paginas.home.home_puzzle')
   </div>
 </div>
 
-<!--para agregar los márgenes laterales-->
+<!--ÚLTIMOS EVENTOS-->
 <div id="section4">
   <div class="container-fluid bgcolor-3superlight">
 

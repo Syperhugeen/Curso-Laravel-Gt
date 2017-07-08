@@ -12725,10 +12725,6 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 #section0 > div {
   border-bottom: 5px solid #cebe98; }
 
-@media (min-width: 992px) {
-  #section2 > .container-fluid {
-    height: 300px; } }
-
 #section3 > .container-fluid {
   min-height: 800px; }
 

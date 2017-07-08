@@ -111,16 +111,6 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   border-bottom: 5px solid $color-3;
 }
 
-$section2-altura:300px;
-#section2 > .container-fluid{
-}
-
-@media (min-width:992px){
-  #section2 > .container-fluid{
-    height: $section2-altura;
-  }
-}
-
 $section3-altura:800px;
 #section3 > .container-fluid{
   min-height: $section3-altura;
@@ -168,7 +158,6 @@ div.bg-home-puzzle{
   background-size: cover;
   background-color: $color-white;
 }
-
 .bg-services {
   background-color: white;
   background-image: url("../../imagenes/Img/probando.jpg");
