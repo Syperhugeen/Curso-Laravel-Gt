@@ -174,7 +174,7 @@ $section2-altura:300px;
   top:0px;
   margin-top:-20px;
   height:$section2-altura + 40px;
-  padding: 40px 40px;
+  padding: 0px 14px;
   background:$color-bordeaux;
   z-index:1;
 }
@@ -200,9 +200,9 @@ $section2-altura:300px;
   border-width: 0 0 20px 20px;
   z-index: -1;
 }
-@media (min-width:1200px){
+@media (min-width:1600px){
   .destacado-pliegues{
-    padding:10px 20px;
+  padding: 0px 30px;
   }
 }
 

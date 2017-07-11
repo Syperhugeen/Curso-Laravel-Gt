@@ -3,11 +3,15 @@
 
 <!--ribbon bolt of cloth (red or golden)-->
 <div class="col-md-3 col-md-push-1 col-lg-2 col-lg-push-2 puzzle-box-index10 wow slideInLeft hidden-xs hidden-sm text-center">
-<div class="destacado-pliegues"><h2 class="quote">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h2></div>
+	<div class="destacado-pliegues">
+		<h2 class="quote">La búsqueda de la excelencia es el principal <em>&laquo;leit motiv&raquo;</em> de <span class="color-3 logo-font">GLOBAL TARGET</span>.</h2>
+	</div>
 </div>
 
-<div class="col-sm-10 col-sm-push-1 hidden-md hidden-lg text-center space-bottom">
-<div><h1 class="quote color-2light">Nuestro prestigio yace en la grandeza de aquellos que nos eligen.</h1></div>
+<div class="col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2 hidden-md hidden-lg text-center space-top">
+	<div>
+		<h2 class="quote"><span class="color-2light">La búsqueda de la excelencia es el principal <em>&laquo;leit motiv&raquo;</em> de <span class="logo-font">GLOBAL TARGET</span>.</span></h2>
+	</div>
 </div>
 
 <div class="col-xs-12 logos-carousel-col"><!--logos slider-->
@@ -29,7 +33,7 @@
 	<a href="{{route('get_pagina_marcas')}}">
 		<h5 class="ampliar text-center">
 		 <span class="glyphicon glyphicon-triangle-right"></span> 
-		  ver todas las marcas
+		  ver todos los clientes
 		</h5>
 	</a> 
 </div>

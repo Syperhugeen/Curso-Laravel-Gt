@@ -105,6 +105,13 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .super-space-bottom{
   padding-bottom:$padding-section-wrapper * 2;
 }
+.half-space-bottom{
+  padding-bottom: $padding-section-wrapper * 0.5;
+}
+.half-space-top{
+  padding-top: $padding-section-wrapper * 0.5;
+}
+
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section0 > div{

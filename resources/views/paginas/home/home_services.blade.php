@@ -19,9 +19,9 @@
 					<img class="home-isologo center-block" src="imagenes/Empresa/isologo_color3.png">
 				</div>
 				<div class="home-service-text super-space-bottom">
-					<h3>Somos una agencia dedicada al rubro de <em><span class="color-3">modelos</span>, <span class="color-3">promociones</span> y <span class="color-3">eventos</span>;</em> creada en el año 2002 y en contínuo crecimiento.</h3>
-					<h4>La búsqueda de la excelencia es el principal <em>&laquo;leit motiv&raquo;</em> de <span class="color-3">GLOBAL TARGET</span>.</h4>
-					<h4>Profesionalismo y constante innovación a lo largo de 15 años de experiencia nos han convertido en la agencia más prestigiosa del Uruguay.</h4>
+					<h3 class="half-space-bottom">Somos una agencia dedicada al rubro de <em><span class="color-3">modelos</span>, <span class="color-3">promociones</span> y <span class="color-3">eventos</span>;</em> en contínuo crecimiento desde el año 2002.</h3>
+					<h4 class="half-space-bottom">La expertise generada en más de una década de trabajo con clientes de los más diversos sectores de actividad la han convertido en la principal agencia del país y de referencia a nivel regional.</h4>
+					<h4>Estos logros, únicamente posibles gracias a la confianza que día a día depositan nuestros clientes en <span class="color-3dark logo-font">GLOBAL TARGET</span>.</h4>
 				</div>
 
 	</div>

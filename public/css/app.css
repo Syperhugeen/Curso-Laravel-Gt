@@ -116,6 +116,12 @@
 .bgcolor-3hyperlight {
   background: #f8f1e3; }
 
+.color-bordeaux {
+  color: #5F021F; }
+
+.bgcolor-bordeaux {
+  backgroundcolor: #5F021F; }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
 /* /////////////Links, Titulos, Descripciones///////////////// */
@@ -12629,6 +12635,12 @@ ul.bxslider {
 .bgcolor-3hyperlight {
   background: #f8f1e3; }
 
+.color-bordeaux {
+  color: #5F021F; }
+
+.bgcolor-bordeaux {
+  backgroundcolor: #5F021F; }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* BORRAR TODO ESTO QUE VIENE A CONTINUACIÓN (ojo que alguno tal vez lo usó mauri en el admin panel) */
 /* /////////////Links, Titulos, Descripciones///////////////// */
@@ -12732,6 +12744,12 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 
 .super-space-bottom {
   padding-bottom: 80px; }
+
+.half-space-bottom {
+  padding-bottom: 20px; }
+
+.half-space-top {
+  padding-top: 20px; }
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section0 > div {
@@ -14451,7 +14469,7 @@ escritura de código)---*/
   top: 0px;
   margin-top: -20px;
   height: 340px;
-  padding: 40px 40px;
+  padding: 0px 14px;
   background: #5F021F;
   z-index: 1; }
 
@@ -14477,9 +14495,9 @@ escritura de código)---*/
   border-width: 0 0 20px 20px;
   z-index: -1; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .destacado-pliegues {
-    padding: 10px 20px; } }
+    padding: 0px 30px; } }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
