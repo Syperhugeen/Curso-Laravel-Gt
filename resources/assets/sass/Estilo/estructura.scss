@@ -158,14 +158,17 @@ div.bg-home-puzzle{
   background-size: cover;
   background-color: $color-white;
 }
-.bg-services {
+.bg-home-service {
   background-color: white;
-  background-image: url("../../imagenes/Img/probando.jpg");
-  background-size: auto 80%;
+  background-image: url("../../imagenes/Img/bg-home-servicios.jpg");
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: left bottom;
-  height: 800px;
 }
+@media (max-width:767px) {
+  .bg-home-service {
+  background-image: none;
+  padding: 15px;}}
 
 
 
@@ -196,10 +199,6 @@ div.bg-home-puzzle{
 .destacado{
   padding:5px 0 5px 30px;
   border-left:4px solid $color-3;
-}
-#section1 .destacado{
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
 }
 
 /*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/

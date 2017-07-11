@@ -26,7 +26,7 @@
 
 <!--BRIEF INTRODUCTION TO GLOBAL / descripción breve de servicios y de la empresa-->
 <div id="section1">
-  <div class="container-fluid section-wrapper bg-services">
+  <div class="container-fluid no-padding section-wrapper bgcolor-white">
     <div class="row">    
         <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
          @include('paginas.home.home_services')

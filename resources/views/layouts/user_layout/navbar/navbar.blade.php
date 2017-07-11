@@ -22,7 +22,7 @@
           <li><a href="{{route('get_pagina_empresa')}}">NOSOTROS</a></li>
           <li><a href="{{route('get_pagina_servicios')}}">SERVICIOS</a></li>
           <li><a href="{{route('get_pagina_marcas')}}">CLIENTES</a></li>
-          <li><a href="{{route('get_pagina_eventos')}}">EVENTOS</a></li>
+          <li><a href="{{route('get_pagina_eventos')}}">GALERÍA</a></li>
           <li><a href="{{route('get_pagina_contacto')}}">CONTACTO</a></li>
 
 

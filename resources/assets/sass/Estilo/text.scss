@@ -162,7 +162,19 @@ h1.section-title{
 }
 
 
+/*--- H O M E   S E R V I C E  text---*/
 
+#section1 .home-service-text{
+  padding-top: 20px;
+  border-top: 1px solid $color-3;
+}
+#section1 .home-service-text h3,
+#section1 .home-service-text h4{
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: $color-2light;
+  text-align: justify;
+}
 
 
 /* T E X T  F O O T E R */
