@@ -15,7 +15,7 @@
 
 
 /* A L T U R A  D E  L A  N A V B A R  (escribir aquí la altura que queremos que tenga) */
-$navbar-altura:120px;
+$navbar-altura:140px;
 $navbar-altura-xs:68px;
 
 /*---esto se cambia automáticamente acorde a la altura ingresada de la Navbar
@@ -35,7 +35,7 @@ $altura-footer-columns:200px;
   overflow-x:hidden;
   padding-top:$navbar-altura;
   margin-top:-$navbar-altura;
-  background-color:$color-3light;
+  background-color:$color-black;
 }
 @media (max-width:767px){.global-wrapper{
   padding-top:$navbar-altura-xs;
@@ -72,14 +72,7 @@ padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs;
 #section1{
 overflow:hidden;}
 
-.bg-services {
-  background-color: white;
-  background-image: url("../../imagenes/Img/probando.jpg");
-  background-size: auto 80%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  height: 800px;
-}
+
 
 
 
@@ -112,20 +105,17 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 .super-space-bottom{
   padding-bottom:$padding-section-wrapper * 2;
 }
+.half-space-bottom{
+  padding-bottom: $padding-section-wrapper * 0.5;
+}
+.half-space-top{
+  padding-top: $padding-section-wrapper * 0.5;
+}
+
 
 /*---particulares de estas secciones (porque el contenido tiene posición absoluta y es necesario esto)---*/
 #section0 > div{
   border-bottom: 5px solid $color-3;
-}
-
-$section2-altura:300px;
-#section2 > .container-fluid{
-}
-
-@media (min-width:992px){
-  #section2 > .container-fluid{
-    height: $section2-altura;
-  }
 }
 
 $section3-altura:800px;
@@ -136,6 +126,62 @@ $section3-altura:800px;
 #section4 > .container-fluid{
   padding-top: 3px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* I M A G E N   D E   P O R T A D A  de altura acorde al viewport */
+div.wrapper-portada{
+  height: 70vh;
+  width: 100%;
+  text-align: center;
+ @include flexbox;
+ @include align-items(center);
+ @include justify-content(row); 
+}
+
+div.wrapper-portada>img.portada{
+  max-height: 100%;
+  width: auto;
+  max-width: 200%;
+  text-align:center;
+  margin: 0 auto;
+}
+
+
+/* B A C K G R O U N D   I M A G E  size: cover */
+div.bg-home-puzzle{
+  background-image: url('../../imagenes/Img/bg-home-puzzle.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}
+.bg-home-service {
+  background-color: white;
+  background-image: url("../../imagenes/Img/bg-home-servicios.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+@media (max-width:767px) {
+  .bg-home-service {
+  background-image: none;
+  padding: 15px;}}
+
+
+
+
+
+
 
 
 
@@ -160,10 +206,6 @@ $section3-altura:800px;
 .destacado{
   padding:5px 0 5px 30px;
   border-left:4px solid $color-3;
-}
-#section1 .destacado{
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
 }
 
 /*---CENTRAR VERTICAL (Y HORIZONTALMENTE) EL CONTENIDO DENTRO DE UN DIV---*/

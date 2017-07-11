@@ -1,5 +1,5 @@
 {{-- rombo divisor con el logo de GT --}}
-<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 
 {{-- contenedor de la parte de eventos de la home --}}
 
@@ -8,7 +8,7 @@
 
 	{{-- contiene la imagen principal del último evento --}}
 	<div class="col-sm-6 special-col no-padding">
-		<img class="img-greyscale img-main" src="{{$UltimoEvento->url_img}}">
+		<img class="img-main" src="{{$UltimoEvento->url_img}}">
 	</div>
 
 	<div class="col-sm-6 no-padding">

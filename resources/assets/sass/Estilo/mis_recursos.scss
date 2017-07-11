@@ -259,14 +259,20 @@ $puzzle-box-animation-main-delay:0.5s;
 $puzzle-col-animation-delay: 2.5s;
 
 .puzzle-container{
-  text-align:center;
+  width: 100%;
   height: $section3-altura;
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row);
+  text-align: center;
  }
 .puzzle-box-square-container{
+  float: none;
+  display: inline-block;
   position:relative;
   height:100%;
-  width:100%;
-  left:20px;
+  left: (-$puzzle-box-medida) * 1.50;
+  margin: 0 auto;
  }
 .puzzle-box{
   position:absolute;
@@ -305,13 +311,13 @@ $puzzle-col-animation-delay: 2.5s;
   background-color: $color-3;
 }
 .puzzle-box-content-hidden1{
-  background-color: $color-3light;
+  background-color: $color-3superlight;
 }
 .puzzle-box-content-visible2{
-  background-color: $color-2light;
+  background-color: $color-2;
 }
 .puzzle-box-content-hidden2{
-  background-color: $color-2superlight;
+  background-color: $color-2light;
 }
 .puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   text-align:center;

@@ -28,7 +28,7 @@
     
     
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper no-padding bgcolor-3light">
+<div class="container-fluid section-wrapper no-padding bgcolor-white">
 
 {{-- contiene hasta diez eventos como máximo --}}
 	<div class="row">
@@ -37,7 +37,7 @@
 				<h1 class="text-center">Eventos en los que participamos</h1>
 				<p class="text-center super-space-bottom">A lo largo de nuestra trayectoria hemos sido organizadores y representantes de nuestros clientes en una amplia gama de eventos.</p>
 		      	{{-- rombo divisor con el logo de GT --}}
-		      	<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+		      	<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 			</div>
 
 			{{-- for each... insertar aquí las entidades --}}

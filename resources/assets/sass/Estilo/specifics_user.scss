@@ -9,7 +9,7 @@
 /*  D E C O R A T I V E - D I V I D E R  */
 /* rombito diamante decorativo */
 #section1 .decorative-divider{
-  margin-top: -58px;
+  margin-top: -18px;
   background-color: $color-3;
 }
 #section4 .decorative-divider{
@@ -149,112 +149,20 @@ escritura de código)---*/
   background-size: cover;
 }
 
-/* Home Service header */
-.home-header-row{
-}
+/* Home Services */
 .home-isologo-container{
-  width: 100%;  
-  @include flex;
-  @include flex-direction(row);
-  @include align-items(center);
-  text-align: right;
+  width: 100%;
+  text-align: center;
 }
 .home-isologo {
+  display: block;
   height: 120px;
   width: auto;
-  text-align: right;
-  padding-right:40px;
-}
-.home-header-row .destacado{
-  margin-left:-16px;
-  padding-left:40px;
-}
-@media (max-width:767px){
-  .home-isologo-container,
-  .home-isologo{
-    text-align: center;
-    padding-right:0;}
-  .home-header-row .destacado{
-    margin-left:20px;
-    padding-left:20px;
-  }
-}
-
-
-/*--- introducción y servicios icons (home)---*/
-/* home service icons */
-
-.home-service-col{
-  height:480px;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.home-service-icon{
-  width:200px;
-  height:auto;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.home-service-name{
-  text-align:center;
-  position:absolute;
-  top:52%;
-  left:0;
-  width:100%;
-  margin: auto 0;
-  color: $color-3;
-  letter-spacing:8px;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-@media (min-width:992px){
-  .col-sm-4:hover img.home-service-icon{
-  width:240px;
-  }
-  .col-sm-4:hover .home-service-name{
-  color: $color-3light;
-  letter-spacing: 16px;
-  font-size:150%;
-}}
-
-@media (max-width:991px){
-  .home-service-col.col-sm-4:hover{
-    -webkit-transform: translate(0, -10px);
-    -moz-transform: translate(0, -10px);
-    transform: translate(0, -10px);
-  }
-  .col-sm-4:hover .home-service-name{
-  color: $color-3light;
-  letter-spacing: 12px;
-}}
-@media (max-width:767px){
-  .home-service-icon{
-    width:100px;}
-  .home-service-name{
-    font-size:10px;}
-  .home-service-col{
-  height:auto;}
-}
-
-.col-sm-4:hover #icon-models{
-  content: url('../../imagenes/Img/icon_service_models(light).png');
-}
-.col-sm-4:hover #icon-promotions{
-  content: url('../../imagenes/Img/icon_service_promotions(light).png');
-}
-.col-sm-4:hover #icon-events{
-  content: url('../../imagenes/Img/icon_service_events(light).png');
 }
 
 
 
-
+$section2-altura:300px;
 /*--- brands carousel (home)---*/
 .logos-carousel-col{
   overflow:hidden;
@@ -266,7 +174,7 @@ escritura de código)---*/
   top:0px;
   margin-top:-20px;
   height:$section2-altura + 40px;
-  padding: 40px 40px;
+  padding: 0px 14px;
   background:$color-bordeaux;
   z-index:1;
 }
@@ -292,9 +200,9 @@ escritura de código)---*/
   border-width: 0 0 20px 20px;
   z-index: -1;
 }
-@media (min-width:1200px){
+@media (min-width:1600px){
   .destacado-pliegues{
-    padding:10px 20px;
+  padding: 0px 30px;
   }
 }
 
@@ -611,7 +519,7 @@ img.marca-col{
   height: $altura-footer-columns;
 }
 #footer .col-md-4 .isologo{
-  background-image: url("../../imagenes/Empresa/isologo_golden.png");
+  background-image: url("../../imagenes/Empresa/isologo_golden_bright_big.png");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: right top;

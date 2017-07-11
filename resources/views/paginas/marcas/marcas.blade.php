@@ -33,7 +33,7 @@
       <h1 class="text-center">Marcas con las que trabajamos</h1>
       <p class="text-center super-space-bottom">Aquí alguna frase con respecto a nuestros clientes.</p>
       {{-- rombo divisor con el logo de GT --}}
-      <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+      <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
     </div>
 
             @foreach($Marcas as $Marca)
