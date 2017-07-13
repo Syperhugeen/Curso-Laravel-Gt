@@ -327,24 +327,23 @@ img.marca-col{
 
 
 
-/*--- P U B L I C A C I O N E S (Noticias) ---*/
+/*--- N O S O T R O S  (la empresa) ---*/
 
 /*---para destacar una frase de una noticia, que luego se repetirá en el texto de la misma---*/
-.noticia-encabezado{
-  color:$color-grey2;
-  text-align:right;
-  vertical-align: middle;
+.nosotros-logo{
+  padding: 20px 40px;
 }
-.noticia-comillas{
-  color:$color-grey1;
-  font-family:Pioret;
+.mision-vision h1{
+  color: $color-3dark;
 }
-
-
-
-
-
-
+.mision-vision h4{
+  color: $color-2light;
+  text-align: justify;
+}
+.mision-vision h4 span.glyphicon{
+  color: $color-3dark;
+  padding-right: 10px;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
