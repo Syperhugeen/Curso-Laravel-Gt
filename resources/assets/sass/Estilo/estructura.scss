@@ -35,7 +35,7 @@ $altura-footer-columns:200px;
   overflow-x:hidden;
   padding-top:$navbar-altura;
   margin-top:-$navbar-altura;
-  background-color:$color-black;
+  background-color:$color-2;
 }
 @media (max-width:767px){.global-wrapper{
   padding-top:$navbar-altura-xs;
@@ -272,6 +272,13 @@ como por ejemplo un carousel de imágenes de header---*/
 $special-col-padding:20px 60px;
 /*escribir el valor que quiero que tengan las special col de altura*/
 $special-col-altura:400px;
+
+.hr-border-top-pegado{
+  border-top: 2px solid $color-3superlight;
+}
+.hr-border-bottom-pegado{
+  border-bottom: 2px solid $color-3superlight;
+}
 
 .special-col{
   background-color: $color-3;

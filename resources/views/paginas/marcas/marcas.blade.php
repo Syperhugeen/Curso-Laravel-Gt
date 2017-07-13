@@ -30,16 +30,17 @@
   <div class="row">
 
     <div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
-      <h1 class="text-center">Marcas con las que trabajamos</h1>
-      <p class="text-center super-space-bottom">Aquí alguna frase con respecto a nuestros clientes.</p>
+      <h1 class="text-center">Repertorio de clientes</h1>
+      <p class="text-center super-space-bottom">Elegidos por las mejores marcas del mundo.</p>
       {{-- rombo divisor con el logo de GT --}}
       <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
     </div>
 
-            @foreach($Marcas as $Marca)
-             @include('paginas.marcas.entidad_marca_para_listado')
-            @endforeach
-
+   
+                @foreach($Marcas as $Marca)
+                 @include('paginas.marcas.entidad_marca_para_listado')
+                @endforeach
+ 
 
     <!-- pagination -->
       <div class="col-xs-12 special-col">

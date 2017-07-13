@@ -1,6 +1,6 @@
  
   <!--navigation bar-->
-  <nav class="navbar navbar-default navbar-fixed-top wow fadeInDown delay3" id="mynavbar">
+  <nav class="navbar navbar-default navbar-fixed-top" id="mynavbar">
     
 
 

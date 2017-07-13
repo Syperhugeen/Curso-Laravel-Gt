@@ -5,8 +5,6 @@
                             'files'    => true
                             ])               !!}
 
-
-
             
 
             <div class="form-group">
@@ -37,7 +35,7 @@
             <div class="form-group ">
               <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
             </div>
-            <hr>
+            
 <div class="checkbox">
   <label>
     <input type="checkbox" value="">
@@ -45,12 +43,9 @@
   </label>
 </div>
 
+    <hr>
    <div class="login-register">
-                    <a href="{{route('password_recet_get')}}">Olvidé mi contraseña</a>
-   </div>
-
-   <div class="login-register">
-                    <a href="{{route('register_get')}}">Aún no estoy registrado</a>
+                    <p class="text-center"><a href="{{route('password_recet_get')}}">Olvidé mi contraseña</a> | <a href="{{route('register_get')}}">Aún no estoy registrado</a></p>
    </div>
 
 

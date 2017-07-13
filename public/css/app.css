@@ -377,22 +377,6 @@ ul.navbar-nav > li > a :focus {
 ul.navbar-nav > li > a.active {
   color: #decdab; }
 
-/* T Í T U L O S */
-h1 {
-  font-family: Champagne;
-  letter-spacing: 2px; }
-
-h1.section-title {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 3px;
-  color: #080808; }
-
-.text-header-big {
-  font-family: HelveticaNoue37Thin;
-  font-size: 60pt;
-  letter-spacing: 1px;
-  color: #cebe98; }
-
 /*--- H O M E   S E R V I C E  text---*/
 #section1 .home-service-text {
   padding-top: 20px;
@@ -404,6 +388,44 @@ h1.section-title {
   letter-spacing: 2px;
   color: #3b3b3b;
   text-align: justify; }
+
+/*--- * * * *  S E C T I O N S  t e x t  * * * * * ---*/
+/* T Í T U L O S   y  S U B T I T U L O S */
+.section-title {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  color: #080808;
+  margin-bottom: 0; }
+
+.section-subtitle {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #cebe98;
+  margin-top: 0; }
+
+/* T E X T O   T I P O   H E A D E R  H3 Y H4 */
+.section-text {
+  border-top: 1px solid #cebe98; }
+
+.section-text h3,
+.section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: justify;
+  padding-bottom: 20px; }
+
+.quote-firma {
+  text-align: right !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important; }
+
+.quote-degree {
+  font-family: Champagne;
+  text-align: right !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  color: #cebe98 !important; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -424,19 +446,21 @@ h1.section-title {
   padding-bottom: 10px; }
 
 /* color de los glyphicons */
+#footer .col-md-4 h5 span.socicon,
 #footer .col-md-4 h5 span.glyphicon {
-  color: #3b3b3b;
+  color: #917e4b;
   padding-right: 4px; }
 
-#footer .col-md-4 h5:hover span.glyphicon {
-  color: #917e4b; }
+#footer .col-md-4 a h5:hover span.socicon,
+#footer .col-md-4 a h5:hover span.glyphicon {
+  color: #cebe98; }
 
 /* color de los renglones que tienen glyphicons */
 #footer .col-md-4 h5 {
-  color: #917e4b; }
+  color: #3b3b3b; }
 
-#footer .col-md-4 h5:hover {
-  color: #cebe98; }
+#footer .col-md-4 a h5:hover {
+  color: #917e4b; }
 
 /* color de la información que está abajo */
 #footer .col-md-6 h4, #footer .col-md-6 h5 {
@@ -11340,6 +11364,535 @@ ul.bxslider {
   font-size: .85em;
   padding: 10px; }
 
+@font-face {
+  font-family: 'Socicon';
+  src: url("../fonts/socicon/Socicon.eot?3i0ff0#iefix") format("embedded-opentype"), url("../fonts/socicon/Socicon.woff2?3i0ff0") format("woff2"), url("../fonts/socicon/Socicon.ttf?3i0ff0") format("truetype"), url("../fonts/socicon/Socicon.woff?3i0ff0") format("woff"), url("../fonts/socicon/Socicon.svg?3i0ff0#Socicon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="socicon-"], [class*=" socicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Socicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.socicon-500px:before {
+  content: "\e000"; }
+
+.socicon-8tracks:before {
+  content: "\e001"; }
+
+.socicon-airbnb:before {
+  content: "\e002"; }
+
+.socicon-alliance:before {
+  content: "\e003"; }
+
+.socicon-amazon:before {
+  content: "\e004"; }
+
+.socicon-amplement:before {
+  content: "\e005"; }
+
+.socicon-android:before {
+  content: "\e006"; }
+
+.socicon-angellist:before {
+  content: "\e007"; }
+
+.socicon-apple:before {
+  content: "\e008"; }
+
+.socicon-appnet:before {
+  content: "\e009"; }
+
+.socicon-baidu:before {
+  content: "\e00a"; }
+
+.socicon-bandcamp:before {
+  content: "\e00b"; }
+
+.socicon-battlenet:before {
+  content: "\e00c"; }
+
+.socicon-beam:before {
+  content: "\e00d"; }
+
+.socicon-bebee:before {
+  content: "\e00e"; }
+
+.socicon-bebo:before {
+  content: "\e00f"; }
+
+.socicon-behance:before {
+  content: "\e010"; }
+
+.socicon-blizzard:before {
+  content: "\e011"; }
+
+.socicon-blogger:before {
+  content: "\e012"; }
+
+.socicon-buffer:before {
+  content: "\e013"; }
+
+.socicon-chrome:before {
+  content: "\e014"; }
+
+.socicon-coderwall:before {
+  content: "\e015"; }
+
+.socicon-curse:before {
+  content: "\e016"; }
+
+.socicon-dailymotion:before {
+  content: "\e017"; }
+
+.socicon-deezer:before {
+  content: "\e018"; }
+
+.socicon-delicious:before {
+  content: "\e019"; }
+
+.socicon-deviantart:before {
+  content: "\e01a"; }
+
+.socicon-diablo:before {
+  content: "\e01b"; }
+
+.socicon-digg:before {
+  content: "\e01c"; }
+
+.socicon-discord:before {
+  content: "\e01d"; }
+
+.socicon-disqus:before {
+  content: "\e01e"; }
+
+.socicon-douban:before {
+  content: "\e01f"; }
+
+.socicon-draugiem:before {
+  content: "\e020"; }
+
+.socicon-dribbble:before {
+  content: "\e021"; }
+
+.socicon-drupal:before {
+  content: "\e022"; }
+
+.socicon-ebay:before {
+  content: "\e023"; }
+
+.socicon-ello:before {
+  content: "\e024"; }
+
+.socicon-endomodo:before {
+  content: "\e025"; }
+
+.socicon-envato:before {
+  content: "\e026"; }
+
+.socicon-etsy:before {
+  content: "\e027"; }
+
+.socicon-facebook:before {
+  content: "\e028"; }
+
+.socicon-feedburner:before {
+  content: "\e029"; }
+
+.socicon-filmweb:before {
+  content: "\e02a"; }
+
+.socicon-firefox:before {
+  content: "\e02b"; }
+
+.socicon-flattr:before {
+  content: "\e02c"; }
+
+.socicon-flickr:before {
+  content: "\e02d"; }
+
+.socicon-formulr:before {
+  content: "\e02e"; }
+
+.socicon-forrst:before {
+  content: "\e02f"; }
+
+.socicon-foursquare:before {
+  content: "\e030"; }
+
+.socicon-friendfeed:before {
+  content: "\e031"; }
+
+.socicon-github:before {
+  content: "\e032"; }
+
+.socicon-goodreads:before {
+  content: "\e033"; }
+
+.socicon-google:before {
+  content: "\e034"; }
+
+.socicon-google-scholar:before {
+  content: "\e035"; }
+
+.socicon-googlegroups:before {
+  content: "\e036"; }
+
+.socicon-googlephotos:before {
+  content: "\e037"; }
+
+.socicon-googleplus:before {
+  content: "\e038"; }
+
+.socicon-grooveshark:before {
+  content: "\e039"; }
+
+.socicon-hackerrank:before {
+  content: "\e03a"; }
+
+.socicon-hearthstone:before {
+  content: "\e03b"; }
+
+.socicon-hellocoton:before {
+  content: "\e03c"; }
+
+.socicon-heroes:before {
+  content: "\e03d"; }
+
+.socicon-hitbox:before {
+  content: "\e03e"; }
+
+.socicon-horde:before {
+  content: "\e03f"; }
+
+.socicon-houzz:before {
+  content: "\e040"; }
+
+.socicon-icq:before {
+  content: "\e041"; }
+
+.socicon-identica:before {
+  content: "\e042"; }
+
+.socicon-imdb:before {
+  content: "\e043"; }
+
+.socicon-instagram:before {
+  content: "\e044"; }
+
+.socicon-issuu:before {
+  content: "\e045"; }
+
+.socicon-istock:before {
+  content: "\e046"; }
+
+.socicon-itunes:before {
+  content: "\e047"; }
+
+.socicon-keybase:before {
+  content: "\e048"; }
+
+.socicon-lanyrd:before {
+  content: "\e049"; }
+
+.socicon-lastfm:before {
+  content: "\e04a"; }
+
+.socicon-line:before {
+  content: "\e04b"; }
+
+.socicon-linkedin:before {
+  content: "\e04c"; }
+
+.socicon-livejournal:before {
+  content: "\e04d"; }
+
+.socicon-lyft:before {
+  content: "\e04e"; }
+
+.socicon-macos:before {
+  content: "\e04f"; }
+
+.socicon-mail:before {
+  content: "\e050"; }
+
+.socicon-medium:before {
+  content: "\e051"; }
+
+.socicon-meetup:before {
+  content: "\e052"; }
+
+.socicon-mixcloud:before {
+  content: "\e053"; }
+
+.socicon-modelmayhem:before {
+  content: "\e054"; }
+
+.socicon-mumble:before {
+  content: "\e055"; }
+
+.socicon-myspace:before {
+  content: "\e056"; }
+
+.socicon-newsvine:before {
+  content: "\e057"; }
+
+.socicon-nintendo:before {
+  content: "\e058"; }
+
+.socicon-npm:before {
+  content: "\e059"; }
+
+.socicon-odnoklassniki:before {
+  content: "\e05a"; }
+
+.socicon-openid:before {
+  content: "\e05b"; }
+
+.socicon-opera:before {
+  content: "\e05c"; }
+
+.socicon-outlook:before {
+  content: "\e05d"; }
+
+.socicon-overwatch:before {
+  content: "\e05e"; }
+
+.socicon-patreon:before {
+  content: "\e05f"; }
+
+.socicon-paypal:before {
+  content: "\e060"; }
+
+.socicon-periscope:before {
+  content: "\e061"; }
+
+.socicon-persona:before {
+  content: "\e062"; }
+
+.socicon-pinterest:before {
+  content: "\e063"; }
+
+.socicon-play:before {
+  content: "\e064"; }
+
+.socicon-player:before {
+  content: "\e065"; }
+
+.socicon-playstation:before {
+  content: "\e066"; }
+
+.socicon-pocket:before {
+  content: "\e067"; }
+
+.socicon-qq:before {
+  content: "\e068"; }
+
+.socicon-quora:before {
+  content: "\e069"; }
+
+.socicon-raidcall:before {
+  content: "\e06a"; }
+
+.socicon-ravelry:before {
+  content: "\e06b"; }
+
+.socicon-reddit:before {
+  content: "\e06c"; }
+
+.socicon-renren:before {
+  content: "\e06d"; }
+
+.socicon-researchgate:before {
+  content: "\e06e"; }
+
+.socicon-residentadvisor:before {
+  content: "\e06f"; }
+
+.socicon-reverbnation:before {
+  content: "\e070"; }
+
+.socicon-rss:before {
+  content: "\e071"; }
+
+.socicon-sharethis:before {
+  content: "\e072"; }
+
+.socicon-skype:before {
+  content: "\e073"; }
+
+.socicon-slideshare:before {
+  content: "\e074"; }
+
+.socicon-smugmug:before {
+  content: "\e075"; }
+
+.socicon-snapchat:before {
+  content: "\e076"; }
+
+.socicon-songkick:before {
+  content: "\e077"; }
+
+.socicon-soundcloud:before {
+  content: "\e078"; }
+
+.socicon-spotify:before {
+  content: "\e079"; }
+
+.socicon-stackexchange:before {
+  content: "\e07a"; }
+
+.socicon-stackoverflow:before {
+  content: "\e07b"; }
+
+.socicon-starcraft:before {
+  content: "\e07c"; }
+
+.socicon-stayfriends:before {
+  content: "\e07d"; }
+
+.socicon-steam:before {
+  content: "\e07e"; }
+
+.socicon-storehouse:before {
+  content: "\e07f"; }
+
+.socicon-strava:before {
+  content: "\e080"; }
+
+.socicon-streamjar:before {
+  content: "\e081"; }
+
+.socicon-stumbleupon:before {
+  content: "\e082"; }
+
+.socicon-swarm:before {
+  content: "\e083"; }
+
+.socicon-teamspeak:before {
+  content: "\e084"; }
+
+.socicon-teamviewer:before {
+  content: "\e085"; }
+
+.socicon-technorati:before {
+  content: "\e086"; }
+
+.socicon-telegram:before {
+  content: "\e087"; }
+
+.socicon-tripadvisor:before {
+  content: "\e088"; }
+
+.socicon-tripit:before {
+  content: "\e089"; }
+
+.socicon-triplej:before {
+  content: "\e08a"; }
+
+.socicon-tumblr:before {
+  content: "\e08b"; }
+
+.socicon-twitch:before {
+  content: "\e08c"; }
+
+.socicon-twitter:before {
+  content: "\e08d"; }
+
+.socicon-uber:before {
+  content: "\e08e"; }
+
+.socicon-ventrilo:before {
+  content: "\e08f"; }
+
+.socicon-viadeo:before {
+  content: "\e090"; }
+
+.socicon-viber:before {
+  content: "\e091"; }
+
+.socicon-viewbug:before {
+  content: "\e092"; }
+
+.socicon-vimeo:before {
+  content: "\e093"; }
+
+.socicon-vine:before {
+  content: "\e094"; }
+
+.socicon-vkontakte:before {
+  content: "\e095"; }
+
+.socicon-warcraft:before {
+  content: "\e096"; }
+
+.socicon-wechat:before {
+  content: "\e097"; }
+
+.socicon-weibo:before {
+  content: "\e098"; }
+
+.socicon-whatsapp:before {
+  content: "\e099"; }
+
+.socicon-wikipedia:before {
+  content: "\e09a"; }
+
+.socicon-windows:before {
+  content: "\e09b"; }
+
+.socicon-wordpress:before {
+  content: "\e09c"; }
+
+.socicon-wykop:before {
+  content: "\e09d"; }
+
+.socicon-xbox:before {
+  content: "\e09e"; }
+
+.socicon-xing:before {
+  content: "\e09f"; }
+
+.socicon-yahoo:before {
+  content: "\e0a0"; }
+
+.socicon-yammer:before {
+  content: "\e0a1"; }
+
+.socicon-yandex:before {
+  content: "\e0a2"; }
+
+.socicon-yelp:before {
+  content: "\e0a3"; }
+
+.socicon-younow:before {
+  content: "\e0a4"; }
+
+.socicon-youtube:before {
+  content: "\e0a5"; }
+
+.socicon-zapier:before {
+  content: "\e0a6"; }
+
+.socicon-zerply:before {
+  content: "\e0a7"; }
+
+.socicon-zomato:before {
+  content: "\e0a8"; }
+
+.socicon-zynga:before {
+  content: "\e0a9"; }
+
 .contenedor-default-tooltips {
   border-radius: 5px;
   border: 2px solid white;
@@ -12688,7 +13241,7 @@ body {
   overflow-x: hidden;
   padding-top: 140px;
   margin-top: -140px;
-  background-color: black; }
+  background-color: #080808; }
 
 @media (max-width: 767px) {
   .global-wrapper {
@@ -12864,6 +13417,12 @@ como por ejemplo un carousel de imágenes de header---*/
 /* cols cuadradotas con fondo, minimal elegantes */
 /* escribir valor del padding, se ajustará responsive solo */
 /*escribir el valor que quiero que tengan las special col de altura*/
+.hr-border-top-pegado {
+  border-top: 2px solid #f1e7d2; }
+
+.hr-border-bottom-pegado {
+  border-bottom: 2px solid #f1e7d2; }
+
 .special-col {
   background-color: #cebe98;
   padding: 20px 60px;
@@ -14534,16 +15093,21 @@ img.marca-col {
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*--- P U B L I C A C I O N E S (Noticias) ---*/
+/*--- N O S O T R O S  (la empresa) ---*/
 /*---para destacar una frase de una noticia, que luego se repetirá en el texto de la misma---*/
-.noticia-encabezado {
-  color: #858585;
-  text-align: right;
-  vertical-align: middle; }
+.nosotros-logo {
+  padding: 20px 40px; }
 
-.noticia-comillas {
-  color: #b3b3b3;
-  font-family: Pioret; }
+.mision-vision h1 {
+  color: #917e4b; }
+
+.mision-vision h4 {
+  color: #3b3b3b;
+  text-align: justify; }
+
+.mision-vision h4 span.glyphicon {
+  color: #917e4b;
+  padding-right: 10px; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -14838,22 +15402,6 @@ ul.navbar-nav > li > a :focus {
 ul.navbar-nav > li > a.active {
   color: #decdab; }
 
-/* T Í T U L O S */
-h1 {
-  font-family: Champagne;
-  letter-spacing: 2px; }
-
-h1.section-title {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 3px;
-  color: #080808; }
-
-.text-header-big {
-  font-family: HelveticaNoue37Thin;
-  font-size: 60pt;
-  letter-spacing: 1px;
-  color: #cebe98; }
-
 /*--- H O M E   S E R V I C E  text---*/
 #section1 .home-service-text {
   padding-top: 20px;
@@ -14865,6 +15413,44 @@ h1.section-title {
   letter-spacing: 2px;
   color: #3b3b3b;
   text-align: justify; }
+
+/*--- * * * *  S E C T I O N S  t e x t  * * * * * ---*/
+/* T Í T U L O S   y  S U B T I T U L O S */
+.section-title {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  color: #080808;
+  margin-bottom: 0; }
+
+.section-subtitle {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #cebe98;
+  margin-top: 0; }
+
+/* T E X T O   T I P O   H E A D E R  H3 Y H4 */
+.section-text {
+  border-top: 1px solid #cebe98; }
+
+.section-text h3,
+.section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: justify;
+  padding-bottom: 20px; }
+
+.quote-firma {
+  text-align: right !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important; }
+
+.quote-degree {
+  font-family: Champagne;
+  text-align: right !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  color: #cebe98 !important; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -14885,19 +15471,21 @@ h1.section-title {
   padding-bottom: 10px; }
 
 /* color de los glyphicons */
+#footer .col-md-4 h5 span.socicon,
 #footer .col-md-4 h5 span.glyphicon {
-  color: #3b3b3b;
+  color: #917e4b;
   padding-right: 4px; }
 
-#footer .col-md-4 h5:hover span.glyphicon {
-  color: #917e4b; }
+#footer .col-md-4 a h5:hover span.socicon,
+#footer .col-md-4 a h5:hover span.glyphicon {
+  color: #cebe98; }
 
 /* color de los renglones que tienen glyphicons */
 #footer .col-md-4 h5 {
-  color: #917e4b; }
+  color: #3b3b3b; }
 
-#footer .col-md-4 h5:hover {
-  color: #cebe98; }
+#footer .col-md-4 a h5:hover {
+  color: #917e4b; }
 
 /* color de la información que está abajo */
 #footer .col-md-6 h4, #footer .col-md-6 h5 {
