@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12 space-top">
         <h1 class="section-title text-center no-margin">Trayectoria</h1>
-        <h1 class="text-center no-margin">GLOBAL TARGET hoy</h1>
+        <h1 class="section-subtitle text-center no-margin">GLOBAL TARGET hoy</h1>
     </div>
 </div>
 

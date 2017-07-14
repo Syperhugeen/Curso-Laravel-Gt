@@ -377,19 +377,9 @@ ul.navbar-nav > li > a :focus {
 ul.navbar-nav > li > a.active {
   color: #decdab; }
 
-/*--- H O M E   S E R V I C E  text---*/
-#section1 .home-service-text {
-  padding-top: 20px;
-  border-top: 1px solid #cebe98; }
-
-#section1 .home-service-text h3,
-#section1 .home-service-text h4 {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
-  color: #3b3b3b;
-  text-align: justify; }
-
-/*--- * * * *  S E C T I O N S  t e x t  * * * * * ---*/
+/* ----------------------------------------------------*/
+/*--- * * * *  S E C T I O N S  t e x t  * * * * * ----*/
+/* ----------------------------------------------------*/
 /* T Í T U L O S   y  S U B T I T U L O S */
 .section-title {
   font-family: HelveticaNoue37Thin;
@@ -426,6 +416,23 @@ ul.navbar-nav > li > a.active {
   margin-top: 0 !important;
   padding-top: 0 !important;
   color: #cebe98 !important; }
+
+/*--- S P E C I F I C S ---*/
+/*--- H O M E  text---*/
+#section1 .home-service-text {
+  padding-top: 20px;
+  border-top: 1px solid #cebe98; }
+
+#section1 .home-service-text h3,
+#section1 .home-service-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: justify; }
+
+#section3 h1.section-subtitle {
+  color: #cebe98;
+  text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 2px; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -518,6 +525,10 @@ ul.navbar-nav > li > a.active {
   background-clip: text;
   color: transparent;
   text-shadow: rgba(255, 255, 255, 0.3) 0px 3px 3px, rgba(0, 0, 0, 0.2) 0px -3px 2px; }
+
+/* * * * *   E F E C T O   D E   S O M B R A  (simple)   * * * * */
+.text-fx-shadow {
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px; }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* Q U É  E S   E S T O ?   N I   I D E A */
@@ -13338,7 +13349,7 @@ div.wrapper-portada > img.portada {
 
 /* B A C K G R O U N D   I M A G E  size: cover */
 div.bg-home-puzzle {
-  background-image: url("../../imagenes/Img/bg-home-puzzle.jpg");
+  background-image: url("../../imagenes/Img/bg-home-puzzle2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13800,7 +13811,7 @@ body::after {
   transition: all .3s ease-in-out; }
 
 .grow:hover {
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 .sepia {
   filter: sepia(100%); }
@@ -13988,6 +13999,10 @@ ul.text-slide a:hover li h4 {
   width: 200px;
   height: 200px;
   padding: 36px; }
+
+/* aumento el padding (espacio entre el icon y el borde del cuadrado) para los visibles*/
+.puzzle-box-content-visible1, .puzzle-box-content-visible2 {
+  padding: 54px; }
 
 /* tamaños RESPONSIVE para xs */
 @media (max-width: 767px) {
@@ -15402,19 +15417,9 @@ ul.navbar-nav > li > a :focus {
 ul.navbar-nav > li > a.active {
   color: #decdab; }
 
-/*--- H O M E   S E R V I C E  text---*/
-#section1 .home-service-text {
-  padding-top: 20px;
-  border-top: 1px solid #cebe98; }
-
-#section1 .home-service-text h3,
-#section1 .home-service-text h4 {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
-  color: #3b3b3b;
-  text-align: justify; }
-
-/*--- * * * *  S E C T I O N S  t e x t  * * * * * ---*/
+/* ----------------------------------------------------*/
+/*--- * * * *  S E C T I O N S  t e x t  * * * * * ----*/
+/* ----------------------------------------------------*/
 /* T Í T U L O S   y  S U B T I T U L O S */
 .section-title {
   font-family: HelveticaNoue37Thin;
@@ -15451,6 +15456,23 @@ ul.navbar-nav > li > a.active {
   margin-top: 0 !important;
   padding-top: 0 !important;
   color: #cebe98 !important; }
+
+/*--- S P E C I F I C S ---*/
+/*--- H O M E  text---*/
+#section1 .home-service-text {
+  padding-top: 20px;
+  border-top: 1px solid #cebe98; }
+
+#section1 .home-service-text h3,
+#section1 .home-service-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: justify; }
+
+#section3 h1.section-subtitle {
+  color: #cebe98;
+  text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 2px; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -15543,6 +15565,10 @@ ul.navbar-nav > li > a.active {
   background-clip: text;
   color: transparent;
   text-shadow: rgba(255, 255, 255, 0.3) 0px 3px 3px, rgba(0, 0, 0, 0.2) 0px -3px 2px; }
+
+/* * * * *   E F E C T O   D E   S O M B R A  (simple)   * * * * */
+.text-fx-shadow {
+  text-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px; }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* Q U É  E S   E S T O ?   N I   I D E A */

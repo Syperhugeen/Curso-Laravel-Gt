@@ -95,24 +95,23 @@
 			<div class="row mision-vision">
 				<div class="col-sm-4">
 					<h1 class="section-title">Misión</h1>
-					<h4>Establecer, conjuntamente con los clientes, estrategias de 
-acercamiento y publicidad innovadoras, para promover el desarrollo de sus marcas y el éxito en sus negocios. Para esto, se ponen a disposición todos los recursos con los que cuenta Global Target y la experiencia generada en más de diez años de trabajo.</h4>
+					<h4>Establecer, conjuntamente con los clientes, estrategias de acercamiento y publicidad innovadoras, para promover el desarrollo de sus marcas y el éxito en sus negocios. Para esto, se ponen a disposición todos los recursos con los que cuenta <span class="color-3dark logo-font">GLOBAL TARGET</span> y la experiencia generada en más de diez años de trabajo.</h4>
 				</div>
 				<div class="col-sm-4">
-					<h1 class="section-title">Misión</h1>
+					<h1 class="section-title">Visión</h1>
 					<h4>Ser reconocidos como la empresa líder en el mercado de modelos, promociones y eventos. Para ello, debe mantenerse inquebrantable en el trabajo diario, para superar las expectativas de los clientes.</h4>
 				</div>
 				<div class="col-sm-4">
 					<h1 class="section-title">Valores</h1>
 					<h4>
-							<span class="glyphicon glyphicon-ok"></span>Responsabilidad<br>
-							<span class="glyphicon glyphicon-ok"></span>Trabajo en equipo<br>
-							<span class="glyphicon glyphicon-ok"></span>Honestidad<br>
-							<span class="glyphicon glyphicon-ok"></span>Respeto<br>
-							<span class="glyphicon glyphicon-ok"></span>Calidad<br>
-							<span class="glyphicon glyphicon-ok"></span>Eficiencia<br>
-							<span class="glyphicon glyphicon-ok"></span>Compromiso<br>
-							<span class="glyphicon glyphicon-ok"></span>Mejora contínua
+							<small><span class="glyphicon glyphicon-ok"></span></small>Responsabilidad<br>
+							<small><span class="glyphicon glyphicon-ok"></span></small>Trabajo en equipo<br>
+							<small><span class="glyphicon glyphicon-ok"></span></small>Honestidad<br>
+							<small><span class="glyphicon glyphicon-ok"></span></small>Respeto<br>
+							<small><span class="glyphicon glyphicon-ok"></span></small>Calidad<br>
+							<small><span class="glyphicon glyphicon-ok"></span></small>Eficiencia<br>
+							<small><span class="glyphicon glyphicon-ok"></span></small>Compromiso<br>
+							<small><span class="glyphicon glyphicon-ok"></span></small>Mejora contínua
 					</h4>
 				</div>
 			</div>
