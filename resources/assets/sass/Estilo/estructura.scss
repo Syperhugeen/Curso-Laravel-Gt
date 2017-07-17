@@ -1,17 +1,19 @@
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-* 		E S T I L O   G E N E R A L 							   *
-*			P A R A   A R M A R   L A   E S T R U C T U R A        *
-*					D E L   S I T I O  W E B                       *
+* 		E S T I L O   G E N E R A L 							                   *
+*			P A R A   A R M A R   L A   E S T R U C T U R A              *
+*					D E L   S I T I O  W E B                                 *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 
+/*--------------------------------------------------------------------------------------------------*/
 
 
 /* R E S E T  B R O W S E R  S T Y L E: resetear los inherit styles del browser (si es que los tiene) */
 *{  margin:0;  padding:0;  border:0;}
 
 
+/*--------------------------------------------------------------------------------------------------*/
 
 
 /* A L T U R A  D E  L A  N A V B A R  (escribir aquí la altura que queremos que tenga) */
@@ -27,6 +29,8 @@ para que el contenido comience luego de la Navbar y no se pierda nada detrás de
 $altura-footer-columns:200px;
 
 
+/*--------------------------------------------------------------------------------------------------*/
+
 
 /* B O D Y   W R A P P E R */
 
@@ -40,6 +44,11 @@ $altura-footer-columns:200px;
 @media (max-width:767px){.global-wrapper{
   padding-top:$navbar-altura-xs;
   margin-top:-$navbar-altura-xs;}}
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
 
 
 
@@ -71,6 +80,7 @@ padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs;
 #section0,
 #section1{
 overflow:hidden;}
+
 
 
 
@@ -138,6 +148,26 @@ $section3-altura:800px;
 
 
 
+
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* I M A G E N   D E   P O R T A D A  de altura acorde al viewport */
 div.wrapper-portada{
   height: 70vh;
@@ -158,7 +188,7 @@ div.wrapper-portada>img.portada{
 
 
 /* B A C K G R O U N D   I M A G E  size: cover */
-div.bg-home-puzzle{
+.bg-home-puzzle{
   background-image: url('../../imagenes/Img/bg-home-puzzle2.jpg');
   background-position: center center;
   background-repeat: no-repeat;
@@ -175,7 +205,40 @@ div.bg-home-puzzle{
 @media (max-width:767px) {
   .bg-home-service {
   background-image: none;
-  padding: 15px;}}
+  padding: 15px;
+}}
+.bg-nosotros-valores{
+  background-image: url('../../imagenes/Img/bg-nosotros-valores.jpg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-3superlight;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
 
 
 
@@ -254,6 +317,49 @@ como por ejemplo un carousel de imágenes de header---*/
 .no-margin{
   margin:0!important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -496,6 +602,47 @@ $special-col-altura:400px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 /* * * T H U M B N A I L   G A L L E R Y * * *  */
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -528,6 +675,18 @@ $special-col-altura:400px;
   .thumbnail-gallery-child { margin: 4; }
   
 }
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+
 
 
 

@@ -417,7 +417,8 @@ ul.navbar-nav > li > a.active {
   padding-top: 0 !important;
   color: #cebe98 !important; }
 
-/*--- S P E C I F I C S ---*/
+/*---  T E X T  S P E C I F I C S ---*/
+/*---       de cada página       ---*/
 /*--- H O M E  text---*/
 #section1 .home-service-text {
   padding-top: 20px;
@@ -433,6 +434,34 @@ ul.navbar-nav > li > a.active {
 #section3 h1.section-subtitle {
   color: #cebe98;
   text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 2px; }
+
+/*--- N O S O T R O S  text---*/
+#nosotros #mision-vision .section-text {
+  border-top: 1px solid #decdab; }
+
+#nosotros #mision-vision .section-title,
+#nosotros #valores .section-title {
+  padding-bottom: 10px; }
+
+#nosotros #valores .section-text h3,
+#nosotros #valores .section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #cebe98;
+  text-align: justify; }
+
+#nosotros #valores .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#nosotros #valores .section-title {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  color: #cebe98; }
+
+#nosotros #valores .section-text {
+  border-top: 1px solid #917e4b; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -13224,16 +13253,18 @@ son los titulos de la seccion */
 /* carrito colores pagina */
 /* carrito colores desplegado */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-* 		E S T I L O   G E N E R A L 							   *
-*			P A R A   A R M A R   L A   E S T R U C T U R A        *
-*					D E L   S I T I O  W E B                       *
+* 		E S T I L O   G E N E R A L 							                   *
+*			P A R A   A R M A R   L A   E S T R U C T U R A              *
+*					D E L   S I T I O  W E B                                 *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*--------------------------------------------------------------------------------------------------*/
 /* R E S E T  B R O W S E R  S T Y L E: resetear los inherit styles del browser (si es que los tiene) */
 * {
   margin: 0;
   padding: 0;
   border: 0; }
 
+/*--------------------------------------------------------------------------------------------------*/
 /* A L T U R A  D E  L A  N A V B A R  (escribir aquí la altura que queremos que tenga) */
 /*---esto se cambia automáticamente acorde a la altura ingresada de la Navbar
 para que el contenido comience luego de la Navbar y no se pierda nada detrás de ella---*/
@@ -13246,6 +13277,7 @@ body {
     padding-top: 68px; } }
 
 /* escribir aquí la altura de las columnas del footer, a criterio según la cantidad de info que tengan */
+/*--------------------------------------------------------------------------------------------------*/
 /* B O D Y   W R A P P E R */
 .global-wrapper {
   display: block;
@@ -13259,6 +13291,7 @@ body {
     padding-top: 68px;
     margin-top: -68px; } }
 
+/*--------------------------------------------------------------------------------------------------*/
 /* S E C C I O N E S  d e  C A D A  P Á G I N A */
 /* S E C T I O N S   # I D s */
 /*---escribir aquí las #id de las secciones para que el desplazamiento de los links hacia las secciones sean precisas---*/
@@ -13325,6 +13358,7 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
 #section4 > .container-fluid {
   padding-top: 3px; }
 
+/*--------------------------------------------------------------------------------------------------*/
 /* I M A G E N   D E   P O R T A D A  de altura acorde al viewport */
 div.wrapper-portada {
   height: 70vh;
@@ -13348,7 +13382,7 @@ div.wrapper-portada > img.portada {
   margin: 0 auto; }
 
 /* B A C K G R O U N D   I M A G E  size: cover */
-div.bg-home-puzzle {
+.bg-home-puzzle {
   background-image: url("../../imagenes/Img/bg-home-puzzle2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -13367,6 +13401,14 @@ div.bg-home-puzzle {
     background-image: none;
     padding: 15px; } }
 
+.bg-nosotros-valores {
+  background-image: url("../../imagenes/Img/bg-nosotros-valores.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f1e7d2; }
+
+/*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
 /*---CENTRAR UNA COLUMNA dentro de un row---*/
 .col-hcenter {
@@ -13422,6 +13464,7 @@ como por ejemplo un carousel de imágenes de header---*/
 .no-margin {
   margin: 0 !important; }
 
+/*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - -*/
 /* * *  S P E C I A L - C O L S  * * *  */
 /* - - - - - - - - - - - - - - - - - - -*/
@@ -13643,6 +13686,7 @@ como por ejemplo un carousel de imágenes de header---*/
   margin-left: 10px;
   margin-right: 10px; }
 
+/*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 /* * * T H U M B N A I L   G A L L E R Y * * *  */
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -13672,6 +13716,7 @@ como por ejemplo un carousel de imágenes de header---*/
   .thumbnail-gallery-child {
     margin: 4; } }
 
+/*--------------------------------------------------------------------------------------------------*/
 /* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
 body::after {
   position: absolute;
@@ -15457,7 +15502,8 @@ ul.navbar-nav > li > a.active {
   padding-top: 0 !important;
   color: #cebe98 !important; }
 
-/*--- S P E C I F I C S ---*/
+/*---  T E X T  S P E C I F I C S ---*/
+/*---       de cada página       ---*/
 /*--- H O M E  text---*/
 #section1 .home-service-text {
   padding-top: 20px;
@@ -15473,6 +15519,34 @@ ul.navbar-nav > li > a.active {
 #section3 h1.section-subtitle {
   color: #cebe98;
   text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 2px; }
+
+/*--- N O S O T R O S  text---*/
+#nosotros #mision-vision .section-text {
+  border-top: 1px solid #decdab; }
+
+#nosotros #mision-vision .section-title,
+#nosotros #valores .section-title {
+  padding-bottom: 10px; }
+
+#nosotros #valores .section-text h3,
+#nosotros #valores .section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #cebe98;
+  text-align: justify; }
+
+#nosotros #valores .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#nosotros #valores .section-title {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  color: #cebe98; }
+
+#nosotros #valores .section-text {
+  border-top: 1px solid #917e4b; }
 
 /* T E X T  F O O T E R */
 /* color general */

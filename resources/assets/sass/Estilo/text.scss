@@ -210,7 +210,10 @@ ul.navbar-nav > li > a.active{
   color: $color-3 !important;
 }
 
-/*--- S P E C I F I C S ---*/
+
+/*---  T E X T  S P E C I F I C S ---*/
+/*---       de cada página       ---*/
+
 /*--- H O M E  text---*/
 #section1 .home-service-text{
   padding-top: 20px;
@@ -228,10 +231,34 @@ ul.navbar-nav > li > a.active{
   text-shadow: rgba(255,255,255,0.3) 0px 0px 2px;
 }
 
-
-
-
-
+/*--- N O S O T R O S  text---*/
+#nosotros  #mision-vision .section-text{
+  border-top: 1px solid $color-3light;
+}
+#nosotros  #mision-vision .section-title,
+#nosotros  #valores .section-title{
+  padding-bottom: 10px;
+}
+#nosotros  #valores .section-text h3,
+#nosotros  #valores .section-text h4{
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: $color-3;
+  text-align: justify;
+}
+#nosotros  #valores .glyphicon{
+    color: $color-3dark;
+    padding-right: 20px;
+}
+#nosotros  #valores .section-title{
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  color: $color-3;
+}
+#nosotros  #valores .section-text{
+  border-top: 1px solid $color-3dark;
+}
 
 
 
