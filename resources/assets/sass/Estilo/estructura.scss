@@ -190,7 +190,7 @@ div.wrapper-portada>img.portada{
 /* B A C K G R O U N D   I M A G E  size: cover */
 .bg-home-puzzle{
   background-image: url('../../imagenes/Img/bg-home-puzzle2.jpg');
-  background-position: center center;
+  background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-white;
@@ -202,11 +202,6 @@ div.wrapper-portada>img.portada{
   background-repeat: no-repeat;
   background-position: left bottom;
 }
-@media (max-width:767px) {
-  .bg-home-service {
-  background-image: none;
-  padding: 15px;
-}}
 .bg-nosotros-valores{
   background-image: url('../../imagenes/Img/bg-nosotros-valores.jpg');
   background-position: left top;
@@ -215,7 +210,16 @@ div.wrapper-portada>img.portada{
   background-color: $color-3superlight;
 }
 
-
+/* backgrounds responsive changes */
+@media (max-width:767px) {
+  .bg-home-service {
+  background-image: none;
+  padding: 15px;}
+  .bg-nosotros-valores {
+    background-image: url('../../imagenes/Img/bg-nosotros-valores(responsive).jpg');}
+  .bg-home-puzzle{
+    background-image: url('../../imagenes/Img/bg-home-puzzle(responsive).jpg');}
+  }
 
 
 

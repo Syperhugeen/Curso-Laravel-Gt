@@ -170,5 +170,36 @@
 </div>
 
 
+
+
+
+
+
+<!--para agregar los márgenes laterales-->
+<div class="section-wrapper bg-nosotros-filosofia">
+	<div class="container-fluid">
+	  <div class="row space-bottom space-top" id="filosofia">
+	      <div class="col-md-8 col-md-push-2">
+
+
+
+
+
+
+<!--fin de los márgenes laterales-->
+	     </div>
+	  </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
 </div>
 @stop

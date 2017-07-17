@@ -13384,7 +13384,7 @@ div.wrapper-portada > img.portada {
 /* B A C K G R O U N D   I M A G E  size: cover */
 .bg-home-puzzle {
   background-image: url("../../imagenes/Img/bg-home-puzzle2.jpg");
-  background-position: center center;
+  background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white; }
@@ -13396,17 +13396,22 @@ div.wrapper-portada > img.portada {
   background-repeat: no-repeat;
   background-position: left bottom; }
 
-@media (max-width: 767px) {
-  .bg-home-service {
-    background-image: none;
-    padding: 15px; } }
-
 .bg-nosotros-valores {
   background-image: url("../../imagenes/Img/bg-nosotros-valores.jpg");
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f1e7d2; }
+
+/* backgrounds responsive changes */
+@media (max-width: 767px) {
+  .bg-home-service {
+    background-image: none;
+    padding: 15px; }
+  .bg-nosotros-valores {
+    background-image: url("../../imagenes/Img/bg-nosotros-valores(responsive).jpg"); }
+  .bg-home-puzzle {
+    background-image: url("../../imagenes/Img/bg-home-puzzle(responsive).jpg"); } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
