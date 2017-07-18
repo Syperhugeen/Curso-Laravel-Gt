@@ -536,8 +536,16 @@ ul.navbar-nav > li > a.active {
 .kerning {
   letter-spacing: 8px; }
 
+/*  L O G O   F O N T  */
+/* para que cada vez que se nombre la empresa, aparezca con la font institucional */
 .logo-font {
   font-family: Champagne; }
+
+/* para agregar el espacio entre las dos palabras (global y target) */
+/* es para que el salto de línea o renglón no separe el nombre en dos */
+.logo-font-space {
+  padding-right: 4px;
+  font-weight: 600; }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------*/
@@ -15626,8 +15634,16 @@ ul.navbar-nav > li > a.active {
 .kerning {
   letter-spacing: 8px; }
 
+/*  L O G O   F O N T  */
+/* para que cada vez que se nombre la empresa, aparezca con la font institucional */
 .logo-font {
   font-family: Champagne; }
+
+/* para agregar el espacio entre las dos palabras (global y target) */
+/* es para que el salto de línea o renglón no separe el nombre en dos */
+.logo-font-space {
+  padding-right: 4px;
+  font-weight: 600; }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------*/
