@@ -209,6 +209,13 @@ div.wrapper-portada>img.portada{
   background-size: cover;
   background-color: $color-3superlight;
 }
+.bg-nosotros-filosofia{
+  background-image: url('../../imagenes/Img/bg-nosotros-filosofia.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}
 
 /* backgrounds responsive changes */
 @media (max-width:767px) {
