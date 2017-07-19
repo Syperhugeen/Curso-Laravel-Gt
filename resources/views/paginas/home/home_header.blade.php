@@ -1,11 +1,11 @@
 
 
 <div class="wrapper-portada hidden-xs hidden-sm">
-  <img src="{{url()}}/imagenes/img/header_15years(smaller_logo).jpg" alt="Celebrando 15 años de trayectoria" class="portada wow fadeIn delay1b">
+  <img src="{{url()}}/imagenes/Img/header_15years(smaller_logo).jpg" alt="Celebrando 15 años de trayectoria" class="portada wow fadeIn delay1b">
 </div>
 
 <div class="hidden-md hidden-lg">
-  <img src="{{url()}}/imagenes/img/header_15years(responsive).jpg" alt="Celebrando 15 años de trayectoria" class="img-responsive wow fadeIn delay1b">
+  <img src="{{url()}}/imagenes/Img/header_15years(responsive).jpg" alt="Celebrando 15 años de trayectoria" class="img-responsive wow fadeIn delay1b">
 </div>
 
 <!-- CAROUSEL SLIDER - TODO ESTO QUEDA AFUERA DE MOMENTO-->
