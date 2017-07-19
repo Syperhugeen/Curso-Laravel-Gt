@@ -92,28 +92,18 @@
 	      <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
 
 
-			<div class="row mision-vision">
-				<div class="col-sm-4">
+			<div class="row" id="mision-vision">
+				<div class="col-sm-6">
 					<h1 class="section-title">Misión</h1>
-					<h4>Establecer, conjuntamente con los clientes, estrategias de 
-acercamiento y publicidad innovadoras, para promover el desarrollo de sus marcas y el éxito en sus negocios. Para esto, se ponen a disposición todos los recursos con los que cuenta Global Target y la experiencia generada en más de diez años de trabajo.</h4>
+					<div class="section-text">
+						<h3>Establecer, conjuntamente con los clientes, estrategias de acercamiento y publicidad innovadoras, para promover el desarrollo de sus marcas y el éxito en sus negocios. Para esto, se ponen a disposición todos los recursos con los que cuenta <span class="color-3dark logo-font">GLOBAL TARGET</span> y la experiencia generada en más de diez años de trabajo.</h3>
+					</div>
 				</div>
-				<div class="col-sm-4">
-					<h1 class="section-title">Misión</h1>
-					<h4>Ser reconocidos como la empresa líder en el mercado de modelos, promociones y eventos. Para ello, debe mantenerse inquebrantable en el trabajo diario, para superar las expectativas de los clientes.</h4>
-				</div>
-				<div class="col-sm-4">
-					<h1 class="section-title">Valores</h1>
-					<h4>
-							<span class="glyphicon glyphicon-ok"></span>Responsabilidad<br>
-							<span class="glyphicon glyphicon-ok"></span>Trabajo en equipo<br>
-							<span class="glyphicon glyphicon-ok"></span>Honestidad<br>
-							<span class="glyphicon glyphicon-ok"></span>Respeto<br>
-							<span class="glyphicon glyphicon-ok"></span>Calidad<br>
-							<span class="glyphicon glyphicon-ok"></span>Eficiencia<br>
-							<span class="glyphicon glyphicon-ok"></span>Compromiso<br>
-							<span class="glyphicon glyphicon-ok"></span>Mejora contínua
-					</h4>
+				<div class="col-sm-6">
+					<h1 class="section-title">Visión</h1>
+					<div class="section-text">
+						<h3>Ser reconocidos como la empresa líder en el mercado de modelos, promociones y eventos. Para ello, debe mantenerse inquebrantable en el trabajo diario, para superar las expectativas de los clientes.</h3>
+					</div>
 				</div>
 			</div>
 
@@ -124,6 +114,83 @@ acercamiento y publicidad innovadoras, para promover el desarrollo de sus marcas
 	</div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--para agregar los márgenes laterales-->
+<div class="section-wrapper bg-nosotros-valores">
+	<div class="container-fluid">
+	  <div class="row space-bottom space-top" id="valores">
+	      <div class="col-md-8 col-md-push-2">
+
+
+	      <div class="row">
+	      	<div class="col-sm-6 col-sm-push-6">
+				<h1 class="section-title">Valores</h1>
+				<div class="section-text">
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Responsabilidad</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Trabajo en equipo</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Honestidad</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Respeto</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Calidad</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Eficiencia</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Compromiso</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Mejora contínua</h4>
+				</div>
+	      	</div>
+	      </div>
+
+
+<!--fin de los márgenes laterales-->
+	     </div>
+	  </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--para agregar los márgenes laterales-->
+<div class="section-wrapper bg-nosotros-filosofia">
+	<div class="container-fluid">
+	  <div class="row space-bottom space-top" id="filosofia">
+	      <div class="col-md-8 col-md-push-2">
+
+
+
+
+
+
+<!--fin de los márgenes laterales-->
+	     </div>
+	  </div>
+	</div>
+</div>
 
 
 

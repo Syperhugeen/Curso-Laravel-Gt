@@ -147,25 +147,27 @@ ul.navbar-nav > li > a.active{
 
 
 
-/*--- H O M E   S E R V I C E  text---*/
-
-#section1 .home-service-text{
-  padding-top: 20px;
-  border-top: 1px solid $color-3;
-}
-#section1 .home-service-text h3,
-#section1 .home-service-text h4{
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
-  color: $color-2light;
-  text-align: justify;
-}
 
 
-/*--- * * * *  S E C T I O N S  t e x t  * * * * * ---*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------*/
+/*--- * * * *  S E C T I O N S  t e x t  * * * * * ----*/
+/* ----------------------------------------------------*/
 
 /* T Í T U L O S   y  S U B T I T U L O S */
-
 // titulos dentro de una h1 y subtitulos tambien, pero sin clase .section-title
 .section-title{
   font-family: HelveticaNoue37Thin;
@@ -209,11 +211,54 @@ ul.navbar-nav > li > a.active{
 }
 
 
+/*---  T E X T  S P E C I F I C S ---*/
+/*---       de cada página       ---*/
 
+/*--- H O M E  text---*/
+#section1 .home-service-text{
+  padding-top: 20px;
+  border-top: 1px solid $color-3;
+}
+#section1 .home-service-text h3,
+#section1 .home-service-text h4{
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: $color-2light;
+  text-align: justify;
+}
+#section3 h1.section-subtitle{
+  color: $color-3;
+  text-shadow: rgba(255,255,255,0.3) 0px 0px 2px;
+}
 
-
-
-
+/*--- N O S O T R O S  text---*/
+#nosotros  #mision-vision .section-text{
+  border-top: 1px solid $color-3light;
+}
+#nosotros  #mision-vision .section-title,
+#nosotros  #valores .section-title{
+  padding-bottom: 10px;
+}
+#nosotros  #valores .section-text h3,
+#nosotros  #valores .section-text h4{
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: $color-3;
+  text-align: justify;
+}
+#nosotros  #valores .glyphicon{
+    color: $color-3dark;
+    padding-right: 20px;
+}
+#nosotros  #valores .section-title{
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  color: $color-3;
+}
+#nosotros  #valores .section-text{
+  border-top: 1px solid $color-3dark;
+}
 
 
 
@@ -326,9 +371,17 @@ ul.navbar-nav > li > a.active{
 .kerning{
   letter-spacing: 8px;
 }
+
+/*  L O G O   F O N T  */
+/* para que cada vez que se nombre la empresa, aparezca con la font institucional */
 .logo-font{
-  font-family:$logo-font;
-}
+  font-family:$logo-font;}
+/* para agregar el espacio entre las dos palabras (global y target) */
+/* es para que el salto de línea o renglón no separe el nombre en dos */
+.logo-font-space{
+  padding-right: 4px;
+  font-weight: 600;}
+
 
 
 
@@ -369,8 +422,10 @@ text-shadow: 0 1px 0 #ccc,
   text-shadow: rgba(255,255,255,0.3) 0px 3px 3px, rgba(0,0,0,0.2) 0px -3px 2px;
 }
 
-
-
+/* * * * *   E F E C T O   D E   S O M B R A  (simple)   * * * * */
+.text-fx-shadow{
+  text-shadow: rgba(0,0,0,0.2) 0px 3px 2px;
+}
 
 
 

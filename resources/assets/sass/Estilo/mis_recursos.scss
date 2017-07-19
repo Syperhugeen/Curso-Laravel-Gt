@@ -27,8 +27,8 @@
   transition: all .3s ease-in-out;
 }
 .grow:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .sepia {
@@ -324,8 +324,12 @@ $puzzle-col-animation-delay: 2.5s;
   width:$puzzle-box-medida;
   height:$puzzle-box-medida;
   padding: $puzzle-padding;
-
 }
+/* aumento el padding (espacio entre el icon y el borde del cuadrado) para los visibles*/
+.puzzle-box-content-visible1, .puzzle-box-content-visible2{
+  padding: $puzzle-padding * 1.5;
+}
+
 /* tamaños RESPONSIVE para xs */
 @media (max-width: 767px){.puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   width:$responsive-puzzle-box;
