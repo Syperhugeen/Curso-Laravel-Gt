@@ -385,7 +385,8 @@ ul.navbar-nav > li > a.active {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px;
   color: #080808;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-transform: uppercase; }
 
 .section-subtitle {
   font-family: HelveticaNoue37Thin;
@@ -440,7 +441,8 @@ ul.navbar-nav > li > a.active {
   border-top: 1px solid #decdab; }
 
 #nosotros #mision-vision .section-title,
-#nosotros #valores .section-title {
+#nosotros #valores .section-title,
+#nosotros #filosofia-intro .section-title {
   padding-bottom: 10px; }
 
 #nosotros #valores .section-text h3,
@@ -462,6 +464,21 @@ ul.navbar-nav > li > a.active {
 
 #nosotros #valores .section-text {
   border-top: 1px solid #917e4b; }
+
+#nosotros #filosofia-intro .section-text.hidden-xs {
+  border-top: none;
+  border-left: 1px solid #cebe98;
+  padding-left: 20px;
+  margin-left: -20px; }
+
+#nosotros #filosofia-intro .section-title.hidden-xs {
+  padding-bottom: 0;
+  padding-right: 20px;
+  text-align: right; }
+
+#nosotros #filosofia-intro .section-text.hidden-xs h3:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -544,7 +561,7 @@ ul.navbar-nav > li > a.active {
 /* para agregar el espacio entre las dos palabras (global y target) */
 /* es para que el salto de línea o renglón no separe el nombre en dos */
 .logo-font-space {
-  padding-right: 4px;
+  padding-right: 1px;
   font-weight: 600; }
 
 /* ------------------------------------------------------------------------------------------------*/
@@ -13411,6 +13428,13 @@ div.wrapper-portada > img.portada {
   background-size: cover;
   background-color: #f1e7d2; }
 
+.bg-nosotros-filosofia {
+  background-image: url("../../imagenes/Img/bg-nosotros-filosofia.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
 /* backgrounds responsive changes */
 @media (max-width: 767px) {
   .bg-home-service {
@@ -15483,7 +15507,8 @@ ul.navbar-nav > li > a.active {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px;
   color: #080808;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-transform: uppercase; }
 
 .section-subtitle {
   font-family: HelveticaNoue37Thin;
@@ -15538,7 +15563,8 @@ ul.navbar-nav > li > a.active {
   border-top: 1px solid #decdab; }
 
 #nosotros #mision-vision .section-title,
-#nosotros #valores .section-title {
+#nosotros #valores .section-title,
+#nosotros #filosofia-intro .section-title {
   padding-bottom: 10px; }
 
 #nosotros #valores .section-text h3,
@@ -15560,6 +15586,21 @@ ul.navbar-nav > li > a.active {
 
 #nosotros #valores .section-text {
   border-top: 1px solid #917e4b; }
+
+#nosotros #filosofia-intro .section-text.hidden-xs {
+  border-top: none;
+  border-left: 1px solid #cebe98;
+  padding-left: 20px;
+  margin-left: -20px; }
+
+#nosotros #filosofia-intro .section-title.hidden-xs {
+  padding-bottom: 0;
+  padding-right: 20px;
+  text-align: right; }
+
+#nosotros #filosofia-intro .section-text.hidden-xs h3:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -15642,7 +15683,7 @@ ul.navbar-nav > li > a.active {
 /* para agregar el espacio entre las dos palabras (global y target) */
 /* es para que el salto de línea o renglón no separe el nombre en dos */
 .logo-font-space {
-  padding-right: 4px;
+  padding-right: 1px;
   font-weight: 600; }
 
 /* ------------------------------------------------------------------------------------------------*/
