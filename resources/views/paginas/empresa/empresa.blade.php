@@ -37,10 +37,10 @@
 
 
 	<!--row para el titulo-->        
-	<div class="row half-space-bottom">
+	<div class="row half-space-bottom hidden-xs">
 		<div class="col-sm-6 col-sm-push-6">
-			<h1 class="section-title text-center">Nosotros</h1>
-			<h2 class="section-subtitle text-center">En el momento justo</h2>
+			<h1 class="section-title">Nosotros</h1>
+			<h2 class="section-subtitle">En el momento justo</h2>
 		</div>
 	</div>
 
@@ -51,6 +51,11 @@
 					<img class="nosotros-logo img-responsive" src="imagenes/Empresa/logo_GT_squaresize_golden.png">
 		</div>
 
+		<!--titulo (responsive) que sólo aparece en xs y sm-->
+		<div class="col-sm-6 col-sm-push-6 visible-xs">
+			<h1 class="section-title">Nosotros</h1>
+			<h2 class="section-subtitle">En el momento justo</h2>
+		</div>
  
 		<!--texto introductorio-->
 		<div class="col-sm-6">
@@ -146,7 +151,7 @@
 	      <div class="col-md-8 col-md-push-2">
 
 
-	      <div class="row">
+	      <div class="row space-bottom">
 	      	<div class="col-sm-6 col-sm-push-6">
 				<h1 class="section-title">Valores</h1>
 				<div class="section-text">
@@ -175,14 +180,93 @@
 
 
 
-<!--para agregar los márgenes laterales-->
+
+
+
+
+
+
+<!--filosofia empresarial intro-->
+<div class="container-fluid no-padding section-wrapper bgcolor-white">
+	<div class="container-fluid">
+	  <div class="row super-space-bottom">
+	      <div class="col-md-8 col-md-push-2 space-bottom super-space-top">
+
+
+			<div class="row" id="filosofia-intro">
+				<div class="col-sm-6">
+					<h1 class="section-title hidden-xs">Filosofía<br>empresarial</h1>
+					<h1 class="section-title visible-xs">Filosofía empresarial</h1>
+					<div class="section-text visible-xs">
+						<h3>El trabajo, así como el equipo de profesionales, la honestidad y el compromiso son los parámetros que rigen a <span class="color-3 logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span>. Para alcanzar el éxito, es menester entablar relaciones duraderas y basadas en la confianza con los clientes. De esta forma, satisfacer todas sus necesidades que estén comprendidas dentro del rubro de modelos, promociones y eventos, generando valor agregado a sus marcas, productos y servicios.</h3>
+						<h3>En esa línea, el objetivo central es brindar un servicio de excelencia y crear relaciones de proximidad, a largo plazo, y caracterizadas por la estrategia de “ganar - ganar”. Esto contribuye con crecimiento mutuo y sostenido en el tiempo, pues posibilita la comprensión de las políticas intrínsecas de cada cliente, y actuar conforme a éstas.</h3>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="section-text hidden-xs">
+						<h3>El trabajo, así como el equipo de profesionales, la honestidad y el compromiso son los parámetros que rigen a <span class="color-3 logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span>. Para alcanzar el éxito, es menester entablar relaciones duraderas y basadas en la confianza con los clientes. De esta forma, satisfacer todas sus necesidades que estén comprendidas dentro del rubro de modelos, promociones y eventos, generando valor agregado a sus marcas, productos y servicios.</h3>
+						<h3>En esa línea, el objetivo central es brindar un servicio de excelencia y crear relaciones de proximidad, a largo plazo, y caracterizadas por la estrategia de “ganar - ganar”. Esto contribuye con crecimiento mutuo y sostenido en el tiempo, pues posibilita la comprensión de las políticas intrínsecas de cada cliente, y actuar conforme a éstas.</h3>
+					</div>
+				</div>
+			</div>
+
+
+<!--fin de los márgenes laterales-->
+	     </div>
+	  </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--filosofia empresarial background pibe, pilares y objetivos-->
 <div class="section-wrapper bg-nosotros-filosofia">
 	<div class="container-fluid">
-	  <div class="row space-bottom space-top" id="filosofia">
+	  <div class="row space-bottom space-top" id="filosofia-pilares">
 	      <div class="col-md-8 col-md-push-2">
 
 
-
+	      <div class="row space-bottom">
+	      	<div class="col-sm-6 col-sm-push-6">
+				<h2 class="section-title">Acorde, <span class="color-3 logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span> se sostiene y afirma su crecimiento sobre una serie de pilares clave:</h2>
+				<div class="section-text">
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Responsabilidad</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Trabajo en equipo</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Honestidad</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Respeto</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Calidad</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Eficiencia</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Compromiso</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Mejora contínua</h4>
+				</div>
+				<div class="row super-space-top">
+					<div class="col-xs-12 info-box">
+						<h2 class="section-title">OBJETIVOS</h2>
+						<div class="section-text space-bottom">
+						<h4>Dotar de valor agregado a los clientes a través del desarrollo de actividades y acciones promocionales.</h4>
+						<h4>Garantizar un servicio de utilidad, estratégico y alineado con los requisitos  de comunicación de cada empresa.</h4>
+						</div>
+					</div>
+				</div>
+	      	</div>
+	      </div>
 
 
 

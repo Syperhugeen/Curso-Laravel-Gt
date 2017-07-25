@@ -307,16 +307,10 @@ img.marca-col{
 /*---   S E R V I C I O S   ---*/
 
 #servicios h4 a {
-  color:$color-3dark;
+  color:$color-2superlight !important;
 }
 #servicios h4 a:hover {
-  color:$color-3superlight;
-}
-#servicios .header-pic {
-    width: 100vw;
-    height: auto;
-    border-top: 2px solid $color-3superlight;
-    border-bottom: 1px solid $color-3superlight;
+  color:$color-3 !important;
 }
 
 
@@ -333,6 +327,9 @@ img.marca-col{
 .nosotros-logo{
   padding: 20px 40px;
 }
+@media (min-width:450px) and (max-width:767px){.nosotros-logo{
+  padding: 20px 100px;
+}}
 .mision-vision h1{
   color: $color-3dark;
 }
