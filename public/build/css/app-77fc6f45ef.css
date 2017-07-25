@@ -499,6 +499,10 @@ h1.section-title {
   margin: 0;
   color: #080808; }
 
+.ribbon-contentenido {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px; }
+
 /* T E X T  F O O T E R */
 /* color general */
 #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
@@ -13454,6 +13458,15 @@ div.wrapper-portada > img.portada {
   background-size: cover;
   background-color: white; }
 
+.bg-servicios-header {
+  background-image: url("../../imagenes/Img/bg-servicios-chicas.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  position: fixed;
+  height: 400px; }
+
 /* backgrounds responsive changes */
 @media (max-width: 767px) {
   .bg-home-service {
@@ -14470,7 +14483,51 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   border-bottom: 3px solid transparent;
   border-top: 3px solid #1e5799; }
 
-/* vertical attached RIBBON */
+/* another RIBBON (suplantando el anterior, seguro hay lío) */
+.ribbon {
+  font-size: 16px !important;
+  width: 50%;
+  position: relative;
+  background: #5F021F;
+  color: #cebe98;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 2em auto 3em; }
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1em;
+  border: 1.5em solid #5F021F;
+  z-index: -1; }
+
+.ribbon:before {
+  left: -2em;
+  border-right-width: 1.5em;
+  border-left-color: transparent; }
+
+.ribbon:after {
+  right: -2em;
+  border-left-width: 1.5em;
+  border-right-color: transparent; }
+
+.ribbon .ribbon-contentenido:before, .ribbon .ribbon-contentenido:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #2d010f transparent transparent transparent;
+  bottom: -1em; }
+
+.ribbon .ribbon-contentenido:before {
+  left: 0;
+  border-width: 1em 0 0 1em; }
+
+.ribbon .ribbon-contentenido:after {
+  right: 0;
+  border-width: 1em 1em 0 0; }
+
 /*   *   *   *    D  E  L  A  Y  S    *   *   *   */
 /* Delay for transformations, tienen que estar al final
 para suplantar las duraciones originales leídas antes */
@@ -15196,16 +15253,10 @@ img.marca-col {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*---   S E R V I C I O S   ---*/
 #servicios h4 a {
-  color: #917e4b; }
+  color: #808080 !important; }
 
 #servicios h4 a:hover {
-  color: #f1e7d2; }
-
-#servicios .header-pic {
-  width: 100vw;
-  height: auto;
-  border-top: 2px solid #f1e7d2;
-  border-bottom: 1px solid #f1e7d2; }
+  color: #cebe98 !important; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -15643,6 +15694,10 @@ h1.section-title {
 #nosotros #filosofia-pilares .info-box .section-text h3 {
   margin: 0;
   color: #080808; }
+
+.ribbon-contentenido {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 3px; }
 
 /* T E X T  F O O T E R */
 /* color general */

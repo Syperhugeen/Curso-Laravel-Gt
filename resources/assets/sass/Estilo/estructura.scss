@@ -216,6 +216,15 @@ div.wrapper-portada>img.portada{
   background-size: cover;
   background-color: $color-white;
 }
+.bg-servicios-header{
+  background-image: url('../../imagenes/Img/bg-servicios-chicas.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+  position: fixed;
+  height: 400px;
+}
 
 /* backgrounds responsive changes */
 @media (max-width:767px) {
