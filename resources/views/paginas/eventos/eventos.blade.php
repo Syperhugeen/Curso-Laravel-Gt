@@ -31,14 +31,17 @@
 <div class="container-fluid no-padding section-wrapper bgcolor-white">
 
 {{-- contiene hasta diez eventos como máximo --}}
-	<div class="row">
+	<div class="row hr-border-bottom-pegado">
 
-			<div class="col-md-8 col-md-push-2 super-space-top super-space-bottom hr-border-bottom-pegado">
+			<div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
 				<h1 class="text-center">Acciones y eventos destacados</h1>
 				<h3 class="text-center super-space-bottom">A lo largo de nuestra trayectoria hemos sido organizadores y representantes de nuestros clientes en una amplia gama de eventos.</h3>
 		      	{{-- rombo divisor con el logo de GT --}}
 		      	<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 			</div>
+	</div>
+
+	<div class="row">
 
 			{{-- for each... insertar aquí las entidades --}}
 	    @foreach($Eventos as $Evento)
@@ -57,8 +60,8 @@
 			</div>
 		</div>
 
-
  	</div>
+
 </div>
 
 

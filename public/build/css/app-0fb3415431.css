@@ -334,13 +334,13 @@ a:hover, a:focus, a > p:hover, a > p:focus {
   h2 {
     font-size: 24px; }
   h3 {
-    font-size: 18px; }
+    font-size: 19px; }
   h4 {
-    font-size: 14px; }
+    font-size: 15px; }
   h5 {
-    font-size: 13px; }
+    font-size: 14px; }
   h6 {
-    font-size: 11px; } }
+    font-size: 12px; } }
 
 @media (max-width: 449px) {
   p {
@@ -384,8 +384,9 @@ ul.navbar-nav > li > a.active {
 .section-title {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px;
-  color: #080808;
-  margin-bottom: 0;
+  color: #080808; }
+
+h1.section-title {
   text-transform: uppercase; }
 
 .section-subtitle {
@@ -405,6 +406,11 @@ ul.navbar-nav > li > a.active {
   color: #3b3b3b;
   text-align: justify;
   padding-bottom: 20px; }
+
+.section-text h3:last-child,
+.section-text h4:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0px; }
 
 .quote-firma {
   text-align: right !important;
@@ -440,17 +446,14 @@ ul.navbar-nav > li > a.active {
 #nosotros #mision-vision .section-text {
   border-top: 1px solid #decdab; }
 
-#nosotros #mision-vision .section-title,
-#nosotros #valores .section-title,
-#nosotros #filosofia-intro .section-title {
-  padding-bottom: 10px; }
-
 #nosotros #valores .section-text h3,
-#nosotros #valores .section-text h4 {
+#nosotros #valores .section-text h4,
+#nosotros #filosofia-pilares .section-text h3,
+#nosotros #filosofia-pilares .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
   color: #cebe98;
-  text-align: justify; }
+  text-align: left; }
 
 #nosotros #valores .glyphicon {
   color: #917e4b;
@@ -459,11 +462,11 @@ ul.navbar-nav > li > a.active {
 #nosotros #valores .section-title {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px;
-  margin-bottom: 0;
   color: #cebe98; }
 
 #nosotros #valores .section-text {
-  border-top: 1px solid #917e4b; }
+  border-top: 1px solid #917e4b;
+  padding-top: 10px; }
 
 #nosotros #filosofia-intro .section-text.hidden-xs {
   border-top: none;
@@ -472,13 +475,29 @@ ul.navbar-nav > li > a.active {
   margin-left: -20px; }
 
 #nosotros #filosofia-intro .section-title.hidden-xs {
-  padding-bottom: 0;
   padding-right: 20px;
   text-align: right; }
 
-#nosotros #filosofia-intro .section-text.hidden-xs h3:last-child {
-  padding-bottom: 0px;
-  margin-bottom: 0; }
+#nosotros #filosofia-pilares .glyphicon {
+  color: #cebe98;
+  padding-right: 20px; }
+
+#nosotros #filosofia-pilares .section-text {
+  color: #080808;
+  padding-top: 10px; }
+
+#nosotros #filosofia-pilares .section-text h4,
+#nosotros #filosofia-pilares .section-text h3 {
+  color: #080808; }
+
+#nosotros #filosofia-pilares .info-box {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+#nosotros #filosofia-pilares .info-box .section-text h4,
+#nosotros #filosofia-pilares .info-box .section-text h3 {
+  margin: 0;
+  color: #080808; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -13416,7 +13435,7 @@ div.wrapper-portada > img.portada {
 
 .bg-home-service {
   background-color: white;
-  background-image: url("../../imagenes/Img/bg-home-servicios.jpg");
+  background-image: url("../../imagenes/Img/bg-home-servicios2.jpg");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: left bottom; }
@@ -13429,7 +13448,7 @@ div.wrapper-portada > img.portada {
   background-color: #f1e7d2; }
 
 .bg-nosotros-filosofia {
-  background-image: url("../../imagenes/Img/bg-nosotros-filosofia.jpg");
+  background-image: url("../../imagenes/Img/bg-nosotros-filosofia2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15195,6 +15214,10 @@ img.marca-col {
 .nosotros-logo {
   padding: 20px 40px; }
 
+@media (min-width: 450px) and (max-width: 767px) {
+  .nosotros-logo {
+    padding: 20px 100px; } }
+
 .mision-vision h1 {
   color: #917e4b; }
 
@@ -15456,13 +15479,13 @@ a:hover, a:focus, a > p:hover, a > p:focus {
   h2 {
     font-size: 24px; }
   h3 {
-    font-size: 18px; }
+    font-size: 19px; }
   h4 {
-    font-size: 14px; }
+    font-size: 15px; }
   h5 {
-    font-size: 13px; }
+    font-size: 14px; }
   h6 {
-    font-size: 11px; } }
+    font-size: 12px; } }
 
 @media (max-width: 449px) {
   p {
@@ -15506,8 +15529,9 @@ ul.navbar-nav > li > a.active {
 .section-title {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px;
-  color: #080808;
-  margin-bottom: 0;
+  color: #080808; }
+
+h1.section-title {
   text-transform: uppercase; }
 
 .section-subtitle {
@@ -15527,6 +15551,11 @@ ul.navbar-nav > li > a.active {
   color: #3b3b3b;
   text-align: justify;
   padding-bottom: 20px; }
+
+.section-text h3:last-child,
+.section-text h4:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0px; }
 
 .quote-firma {
   text-align: right !important;
@@ -15562,17 +15591,14 @@ ul.navbar-nav > li > a.active {
 #nosotros #mision-vision .section-text {
   border-top: 1px solid #decdab; }
 
-#nosotros #mision-vision .section-title,
-#nosotros #valores .section-title,
-#nosotros #filosofia-intro .section-title {
-  padding-bottom: 10px; }
-
 #nosotros #valores .section-text h3,
-#nosotros #valores .section-text h4 {
+#nosotros #valores .section-text h4,
+#nosotros #filosofia-pilares .section-text h3,
+#nosotros #filosofia-pilares .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
   color: #cebe98;
-  text-align: justify; }
+  text-align: left; }
 
 #nosotros #valores .glyphicon {
   color: #917e4b;
@@ -15581,11 +15607,11 @@ ul.navbar-nav > li > a.active {
 #nosotros #valores .section-title {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px;
-  margin-bottom: 0;
   color: #cebe98; }
 
 #nosotros #valores .section-text {
-  border-top: 1px solid #917e4b; }
+  border-top: 1px solid #917e4b;
+  padding-top: 10px; }
 
 #nosotros #filosofia-intro .section-text.hidden-xs {
   border-top: none;
@@ -15594,13 +15620,29 @@ ul.navbar-nav > li > a.active {
   margin-left: -20px; }
 
 #nosotros #filosofia-intro .section-title.hidden-xs {
-  padding-bottom: 0;
   padding-right: 20px;
   text-align: right; }
 
-#nosotros #filosofia-intro .section-text.hidden-xs h3:last-child {
-  padding-bottom: 0px;
-  margin-bottom: 0; }
+#nosotros #filosofia-pilares .glyphicon {
+  color: #cebe98;
+  padding-right: 20px; }
+
+#nosotros #filosofia-pilares .section-text {
+  color: #080808;
+  padding-top: 10px; }
+
+#nosotros #filosofia-pilares .section-text h4,
+#nosotros #filosofia-pilares .section-text h3 {
+  color: #080808; }
+
+#nosotros #filosofia-pilares .info-box {
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+#nosotros #filosofia-pilares .info-box .section-text h4,
+#nosotros #filosofia-pilares .info-box .section-text h3 {
+  margin: 0;
+  color: #080808; }
 
 /* T E X T  F O O T E R */
 /* color general */

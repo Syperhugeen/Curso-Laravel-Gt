@@ -333,6 +333,9 @@ img.marca-col{
 .nosotros-logo{
   padding: 20px 40px;
 }
+@media (min-width:450px) and (max-width:767px){.nosotros-logo{
+  padding: 20px 100px;
+}}
 .mision-vision h1{
   color: $color-3dark;
 }
