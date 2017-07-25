@@ -50,7 +50,7 @@
 
 
 
-<div class="row">
+<div class="row hr-border-top-pegado">
   <div class="col-xs-12 special-col no-padding">
     
     {{-- rombo divisor con el logo de GT --}}
