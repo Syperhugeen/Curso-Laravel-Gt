@@ -65,17 +65,7 @@ $altura-footer-columns:200px;
 #section2,
 #section3,
 #section4{
- padding-top:$navbar-altura;  margin-top:-$navbar-altura;
- /*---creo que el padding no es necesario porque ya está indicado en el globa-wrapper---*/
 }
-
-@media (max-width:767px){
-#section1,
-#section2,
-#section3,
-#section4{
-padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs;
-}}
 
 #section0,
 #section1{
@@ -210,21 +200,21 @@ div.wrapper-portada>img.portada{
   background-color: $color-3superlight;
 }
 .bg-nosotros-filosofia{
-  background-image: url('../../imagenes/Img/bg-nosotros-filosofia2.jpg');
+  background-image: url('../../imagenes/Img/bg-nosotros-filosofia.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-white;
 }
-.bg-servicios-header{
-  background-image: url('../../imagenes/Img/bg-servicios-chicas.jpg');
+.bg-servicios-listado{
+  background-image: url('../../imagenes/Img/bg-servicios-triada.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-white;
-  position: fixed;
-  height: 400px;
 }
+
+
 
 /* backgrounds responsive changes */
 @media (max-width:767px) {
@@ -235,6 +225,10 @@ div.wrapper-portada>img.portada{
     background-image: url('../../imagenes/Img/bg-nosotros-valores(responsive).jpg');}
   .bg-home-puzzle{
     background-image: url('../../imagenes/Img/bg-home-puzzle(responsive).jpg');}
+  .bg-nosotros-filosofia {
+    background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
+  .bg-servicios-listado {
+    background-image: url('../../imagenes/Img/bg-servicios-triada(responsive).jpg');}
   }
 
 

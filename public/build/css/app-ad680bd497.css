@@ -450,8 +450,6 @@ h1.section-title {
 #nosotros #valores .section-text h4,
 #nosotros #filosofia-pilares .section-text h3,
 #nosotros #filosofia-pilares .section-text h4 {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
   color: #cebe98;
   text-align: left; }
 
@@ -459,10 +457,9 @@ h1.section-title {
   color: #917e4b;
   padding-right: 20px; }
 
-#nosotros #valores .section-title {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 3px;
-  color: #cebe98; }
+#nosotros #valores .section-title,
+#nosotros #filosofia-pilares .section-title {
+  color: #decdab; }
 
 #nosotros #valores .section-text {
   border-top: 1px solid #917e4b;
@@ -479,29 +476,50 @@ h1.section-title {
   text-align: right; }
 
 #nosotros #filosofia-pilares .glyphicon {
-  color: #cebe98;
+  color: #917e4b;
   padding-right: 20px; }
 
 #nosotros #filosofia-pilares .section-text {
-  color: #080808;
+  color: #cebe98;
   padding-top: 10px; }
 
 #nosotros #filosofia-pilares .section-text h4,
 #nosotros #filosofia-pilares .section-text h3 {
-  color: #080808; }
+  color: #cebe98; }
+
+#nosotros #filosofia-pilares .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 10px; }
 
 #nosotros #filosofia-pilares .info-box {
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.3); }
+  padding: 0 40px;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 #nosotros #filosofia-pilares .info-box .section-text h4,
 #nosotros #filosofia-pilares .info-box .section-text h3 {
   margin: 0;
-  color: #080808; }
+  color: #cebe98; }
 
-.ribbon-contentenido {
+.ribbon-contenido {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px; }
+
+#servicios #listado .section-title {
+  color: #decdab; }
+
+#servicios #listado .section-subtitle {
+  color: #917e4b; }
+
+#servicios #listado .section-text h3,
+#servicios #listado .section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: left; }
+
+#servicios #listado .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -13343,22 +13361,6 @@ body {
 /* S E C C I O N E S  d e  C A D A  P Á G I N A */
 /* S E C T I O N S   # I D s */
 /*---escribir aquí las #id de las secciones para que el desplazamiento de los links hacia las secciones sean precisas---*/
-#section1,
-#section2,
-#section3,
-#section4 {
-  padding-top: 140px;
-  margin-top: -140px;
-  /*---creo que el padding no es necesario porque ya está indicado en el globa-wrapper---*/ }
-
-@media (max-width: 767px) {
-  #section1,
-  #section2,
-  #section3,
-  #section4 {
-    padding-top: 68px;
-    margin-top: -68px; } }
-
 #section0,
 #section1 {
   overflow: hidden; }
@@ -13452,20 +13454,18 @@ div.wrapper-portada > img.portada {
   background-color: #f1e7d2; }
 
 .bg-nosotros-filosofia {
-  background-image: url("../../imagenes/Img/bg-nosotros-filosofia2.jpg");
+  background-image: url("../../imagenes/Img/bg-nosotros-filosofia.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white; }
 
-.bg-servicios-header {
-  background-image: url("../../imagenes/Img/bg-servicios-chicas.jpg");
+.bg-servicios-listado {
+  background-image: url("../../imagenes/Img/bg-servicios-triada.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
-  position: fixed;
-  height: 400px; }
+  background-color: white; }
 
 /* backgrounds responsive changes */
 @media (max-width: 767px) {
@@ -13475,7 +13475,11 @@ div.wrapper-portada > img.portada {
   .bg-nosotros-valores {
     background-image: url("../../imagenes/Img/bg-nosotros-valores(responsive).jpg"); }
   .bg-home-puzzle {
-    background-image: url("../../imagenes/Img/bg-home-puzzle(responsive).jpg"); } }
+    background-image: url("../../imagenes/Img/bg-home-puzzle(responsive).jpg"); }
+  .bg-nosotros-filosofia {
+    background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
+  .bg-servicios-listado {
+    background-image: url("../../imagenes/Img/bg-servicios-triada(responsive).jpg"); } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
@@ -15070,7 +15074,7 @@ para suplantar las duraciones originales leídas antes */
 
 #servicios .decorative-divider {
   top: 0;
-  margin-top: -20px;
+  margin-top: -18px;
   z-index: 10; }
 
 /*--- * * * * H O M E * * * * * 
@@ -15646,8 +15650,6 @@ h1.section-title {
 #nosotros #valores .section-text h4,
 #nosotros #filosofia-pilares .section-text h3,
 #nosotros #filosofia-pilares .section-text h4 {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
   color: #cebe98;
   text-align: left; }
 
@@ -15655,10 +15657,9 @@ h1.section-title {
   color: #917e4b;
   padding-right: 20px; }
 
-#nosotros #valores .section-title {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 3px;
-  color: #cebe98; }
+#nosotros #valores .section-title,
+#nosotros #filosofia-pilares .section-title {
+  color: #decdab; }
 
 #nosotros #valores .section-text {
   border-top: 1px solid #917e4b;
@@ -15675,29 +15676,50 @@ h1.section-title {
   text-align: right; }
 
 #nosotros #filosofia-pilares .glyphicon {
-  color: #cebe98;
+  color: #917e4b;
   padding-right: 20px; }
 
 #nosotros #filosofia-pilares .section-text {
-  color: #080808;
+  color: #cebe98;
   padding-top: 10px; }
 
 #nosotros #filosofia-pilares .section-text h4,
 #nosotros #filosofia-pilares .section-text h3 {
-  color: #080808; }
+  color: #cebe98; }
+
+#nosotros #filosofia-pilares .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 10px; }
 
 #nosotros #filosofia-pilares .info-box {
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.3); }
+  padding: 0 40px;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 #nosotros #filosofia-pilares .info-box .section-text h4,
 #nosotros #filosofia-pilares .info-box .section-text h3 {
   margin: 0;
-  color: #080808; }
+  color: #cebe98; }
 
-.ribbon-contentenido {
+.ribbon-contenido {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px; }
+
+#servicios #listado .section-title {
+  color: #decdab; }
+
+#servicios #listado .section-subtitle {
+  color: #917e4b; }
+
+#servicios #listado .section-text h3,
+#servicios #listado .section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: left; }
+
+#servicios #listado .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
 
 /* T E X T  F O O T E R */
 /* color general */

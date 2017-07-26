@@ -243,18 +243,16 @@
 	      <div class="col-md-8 col-md-push-2">
 
 
-	      <div class="row space-bottom">
+	      <div class="row">
 	      	<div class="col-sm-6 col-sm-push-6">
-				<h2 class="section-title">Acorde, <span class="color-3 logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span> se sostiene y afirma su crecimiento sobre una serie de pilares clave:</h2>
-				<div class="section-text">
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Responsabilidad</h4>
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Trabajo en equipo</h4>
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Honestidad</h4>
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Respeto</h4>
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Calidad</h4>
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Eficiencia</h4>
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Compromiso</h4>
-					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Mejora contínua</h4>
+				<h2 class="section-title">Para ello, <span class="color-3dark logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span> se sostiene y afirma su crecimiento sobre una serie de pilares clave:</h2>
+				<div class="section-text super-space-bottom">
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Excelencia profesional</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Capital humano</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Conjunto de normas y pautas claras</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Estrategia económica que permita la adaptación a las  políticas y diferentes necesidades de cada cliente</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Comunicación: cercanía y buen trato  con los distintos públicos</h4>
+					<h4><small><span class="glyphicon glyphicon-ok"></span></small>Visión holística</h4>
 				</div>
 				<div class="row super-space-top">
 					<div class="col-xs-12 info-box">
