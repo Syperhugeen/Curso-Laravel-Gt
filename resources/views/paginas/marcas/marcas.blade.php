@@ -24,19 +24,44 @@
     
     
 <!--para agregar los márgenes laterales-->
+<div class="section-wrapper bg-marcas-header" id="marcas-header">
+  <div class="container-fluid">
+    <div class="row space-bottom space-top">
+        <div class="col-md-8 col-md-push-3 col-lg-8 col-lg-push-2">
+
+
+        <div class="row super-space-bottom">
+          <div class="col-sm-6 col-sm-push-6">
+            <h1 class="section-title">Repertorio de clientes</h1>
+            <h2 class="section-title">Elegidos por las mejores marcas del mundo</h2>
+            <div class="section-text">
+              <h3>A lo largo de nuestra trayectoria hemos representado a las más grandes marcas, tanto locales como internacionales.</h3>
+              <h3>La calidad y profesionalidad de nuestro personal brinda distinción y prestigio en cada acción promocional o evento organizado.</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row super-space-bottom hidden-xs">
+          <div class="col-sm-6 col-sm-push-6 space-bottom">
+          </div>
+        </div>
+
+<!--fin de los márgenes laterales-->
+       </div> <!--/ fin de la col-->
+    </div> <!--/ fin del row-->
+  </div>
+</div>
+
+
+
+<!--para agregar los márgenes laterales-->
 <div class="container-fluid section-wrapper no-padding bgcolor-3light">
+        {{-- rombo divisor con el logo de GT --}}
+        <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 
 {{-- contiene hasta diez eventos como máximo --}}
-  <div class="row">
+  <div class="row hr-border-top-pegado">
 
-    <div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
-      <h1 class="text-center">Repertorio de clientes</h1>
-      <p class="text-center super-space-bottom">Elegidos por las mejores marcas del mundo.</p>
-      {{-- rombo divisor con el logo de GT --}}
-      <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
-    </div>
-
-   
                 @foreach($Marcas as $Marca)
                  @include('paginas.marcas.entidad_marca_para_listado')
                 @endforeach

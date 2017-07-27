@@ -65,17 +65,7 @@ $altura-footer-columns:200px;
 #section2,
 #section3,
 #section4{
- padding-top:$navbar-altura;  margin-top:-$navbar-altura;
- /*---creo que el padding no es necesario porque ya está indicado en el globa-wrapper---*/
 }
-
-@media (max-width:767px){
-#section1,
-#section2,
-#section3,
-#section4{
-padding-top:$navbar-altura-xs;  margin-top:-$navbar-altura-xs;
-}}
 
 #section0,
 #section1{
@@ -210,20 +200,39 @@ div.wrapper-portada>img.portada{
   background-color: $color-3superlight;
 }
 .bg-nosotros-filosofia{
-  background-image: url('../../imagenes/Img/bg-nosotros-filosofia2.jpg');
+  background-image: url('../../imagenes/Img/bg-nosotros-filosofia.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-white;
 }
-.bg-servicios-header{
-  background-image: url('../../imagenes/Img/bg-servicios-chicas.jpg');
+.bg-servicios-listado{
+  background-image: url('../../imagenes/Img/bg-servicios-triada.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}
+.bg-servicios-diferencial{
+  background-image: url('../../imagenes/Img/bg-servicios-diferencial.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}
+.bg-marcas-header{
+  background-image: url('../../imagenes/Img/bg-marcas-header2.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-white;
-  position: fixed;
-  height: 400px;
+}
+.bg-eventos-header{
+  background-image: url('../../imagenes/Img/bg-eventos-header.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-2;
 }
 
 /* backgrounds responsive changes */
@@ -235,6 +244,16 @@ div.wrapper-portada>img.portada{
     background-image: url('../../imagenes/Img/bg-nosotros-valores(responsive).jpg');}
   .bg-home-puzzle{
     background-image: url('../../imagenes/Img/bg-home-puzzle(responsive).jpg');}
+  .bg-nosotros-filosofia {
+    background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
+  .bg-servicios-listado {
+    background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
+  .bg-servicios-diferencial {
+    background-image: url('../../imagenes/Img/bg-servicios-diferencial(responsive).jpg');}
+  .bg-marcas-header {
+    background-image: url('../../imagenes/Img/bg-marcas-header(responsive).jpg');}
+  .bg-eventos-header {
+    background-image: url('../../imagenes/Img/bg-eventos-header(responsive).jpg');}
   }
 
 
@@ -616,13 +635,30 @@ $special-col-altura:400px;
   margin-right:10px;
 }
 
-
-
-
-
-
-
-
+// Servicios - Intro (botones special-col)
+#servicios #servicios-intro .special-col a h4{
+  text-align: center;
+  color: $color-3dark;
+  letter-spacing: 4px;
+  line-height: 2;
+}
+#servicios #servicios-intro .special-col{
+  padding:0;
+}
+#servicios #servicios-listado .special-col-fake{
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+#servicios #servicios-listado.row:hover .special-col-fake{
+  background-color: $color-3light;
+}
+#servicios #servicios-listado.row:hover{
+  background-color: $color-3light;
+}
+@media (min-width:767px) {
+  #servicios #servicios-listado .col-sm-6{
+    height: 1384px;}}
 
 
 

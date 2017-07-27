@@ -450,8 +450,6 @@ h1.section-title {
 #nosotros #valores .section-text h4,
 #nosotros #filosofia-pilares .section-text h3,
 #nosotros #filosofia-pilares .section-text h4 {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
   color: #cebe98;
   text-align: left; }
 
@@ -459,10 +457,9 @@ h1.section-title {
   color: #917e4b;
   padding-right: 20px; }
 
-#nosotros #valores .section-title {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 3px;
-  color: #cebe98; }
+#nosotros #valores .section-title,
+#nosotros #filosofia-pilares .section-title {
+  color: #decdab; }
 
 #nosotros #valores .section-text {
   border-top: 1px solid #917e4b;
@@ -479,29 +476,125 @@ h1.section-title {
   text-align: right; }
 
 #nosotros #filosofia-pilares .glyphicon {
-  color: #cebe98;
+  color: #917e4b;
   padding-right: 20px; }
 
 #nosotros #filosofia-pilares .section-text {
-  color: #080808;
+  color: #cebe98;
   padding-top: 10px; }
 
 #nosotros #filosofia-pilares .section-text h4,
 #nosotros #filosofia-pilares .section-text h3 {
-  color: #080808; }
+  color: #cebe98; }
+
+#nosotros #filosofia-pilares .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 10px; }
 
 #nosotros #filosofia-pilares .info-box {
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.3); }
+  padding: 0 40px;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 #nosotros #filosofia-pilares .info-box .section-text h4,
 #nosotros #filosofia-pilares .info-box .section-text h3 {
   margin: 0;
-  color: #080808; }
+  color: #cebe98; }
 
-.ribbon-contentenido {
+.ribbon-contenido {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px; }
+
+#servicios #servicios-listado .section-title {
+  color: #decdab; }
+
+#servicios #servicios-listado .section-subtitle {
+  color: #917e4b; }
+
+#servicios #servicios-listado .section-text h3,
+#servicios #servicios-listado .section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: left;
+  padding: 0; }
+
+#servicios #servicios-listado .section-text {
+  border-top-color: #f1e7d2; }
+
+#servicios #servicios-listado .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#servicios #servicios-listado .special-col-fake h1 {
+  color: #080808; }
+
+#servicios #servicios-diferencial .section-subtitle {
+  color: #917e4b;
+  padding-bottom: 8px; }
+
+#servicios #servicios-diferencial .section-text h3,
+#servicios #servicios-diferencial .section-text h4 {
+  color: #080808;
+  text-align: center;
+  padding: 4px; }
+
+#servicios #servicios-diferencial .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#servicios #servicios-diferencial .section-text {
+  border-top-color: #917e4b;
+  padding-top: 10px; }
+
+#marcas #marcas-header .section-title {
+  text-align: right; }
+
+#marcas #marcas-header .section-subtitle {
+  color: #917e4b;
+  text-align: right;
+  padding-bottom: 8px; }
+
+#marcas #marcas-header .section-text h3,
+#marcas #marcas-header .section-text h4 {
+  color: #080808;
+  text-align: right;
+  padding: 4px; }
+
+#marcas #marcas-header .glyphicon {
+  color: #cebe98;
+  padding-right: 20px; }
+
+#marcas #marcas-header .section-text {
+  border-top-color: #cebe98;
+  padding-top: 10px;
+  text-align: right; }
+
+@media (max-width: 767px) {
+  #marcas #marcas-header .section-title,
+  #marcas #marcas-header .section-subtitle,
+  #marcas #marcas-header .section-text h3,
+  #marcas #marcas-header .section-text h4 {
+    text-align: center; } }
+
+#eventos #eventos-header .section-text h3,
+#eventos #eventos-header .section-text h4 {
+  color: #cebe98;
+  text-align: left; }
+
+#eventos #eventos-header .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#eventos #eventos-header .section-title {
+  color: #f8f1e3; }
+
+#eventos #eventos-header .section-subtitle {
+  color: #decdab;
+  padding-bottom: 20px; }
+
+#eventos #eventos-header .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 0px; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -13343,22 +13436,6 @@ body {
 /* S E C C I O N E S  d e  C A D A  P Á G I N A */
 /* S E C T I O N S   # I D s */
 /*---escribir aquí las #id de las secciones para que el desplazamiento de los links hacia las secciones sean precisas---*/
-#section1,
-#section2,
-#section3,
-#section4 {
-  padding-top: 140px;
-  margin-top: -140px;
-  /*---creo que el padding no es necesario porque ya está indicado en el globa-wrapper---*/ }
-
-@media (max-width: 767px) {
-  #section1,
-  #section2,
-  #section3,
-  #section4 {
-    padding-top: 68px;
-    margin-top: -68px; } }
-
 #section0,
 #section1 {
   overflow: hidden; }
@@ -13452,20 +13529,39 @@ div.wrapper-portada > img.portada {
   background-color: #f1e7d2; }
 
 .bg-nosotros-filosofia {
-  background-image: url("../../imagenes/Img/bg-nosotros-filosofia2.jpg");
+  background-image: url("../../imagenes/Img/bg-nosotros-filosofia.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white; }
 
-.bg-servicios-header {
-  background-image: url("../../imagenes/Img/bg-servicios-chicas.jpg");
+.bg-servicios-listado {
+  background-image: url("../../imagenes/Img/bg-servicios-triada.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
+.bg-servicios-diferencial {
+  background-image: url("../../imagenes/Img/bg-servicios-diferencial.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
+.bg-marcas-header {
+  background-image: url("../../imagenes/Img/bg-marcas-header2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
-  position: fixed;
-  height: 400px; }
+  background-color: white; }
+
+.bg-eventos-header {
+  background-image: url("../../imagenes/Img/bg-eventos-header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #080808; }
 
 /* backgrounds responsive changes */
 @media (max-width: 767px) {
@@ -13475,7 +13571,17 @@ div.wrapper-portada > img.portada {
   .bg-nosotros-valores {
     background-image: url("../../imagenes/Img/bg-nosotros-valores(responsive).jpg"); }
   .bg-home-puzzle {
-    background-image: url("../../imagenes/Img/bg-home-puzzle(responsive).jpg"); } }
+    background-image: url("../../imagenes/Img/bg-home-puzzle(responsive).jpg"); }
+  .bg-nosotros-filosofia {
+    background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
+  .bg-servicios-listado {
+    background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
+  .bg-servicios-diferencial {
+    background-image: url("../../imagenes/Img/bg-servicios-diferencial(responsive).jpg"); }
+  .bg-marcas-header {
+    background-image: url("../../imagenes/Img/bg-marcas-header(responsive).jpg"); }
+  .bg-eventos-header {
+    background-image: url("../../imagenes/Img/bg-eventos-header(responsive).jpg"); } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
@@ -13754,6 +13860,30 @@ como por ejemplo un carousel de imágenes de header---*/
   height: auto;
   margin-left: 10px;
   margin-right: 10px; }
+
+#servicios #servicios-intro .special-col a h4 {
+  text-align: center;
+  color: #917e4b;
+  letter-spacing: 4px;
+  line-height: 2; }
+
+#servicios #servicios-intro .special-col {
+  padding: 0; }
+
+#servicios #servicios-listado .special-col-fake {
+  border-top: none;
+  border-right: none;
+  border-bottom: none; }
+
+#servicios #servicios-listado.row:hover .special-col-fake {
+  background-color: #decdab; }
+
+#servicios #servicios-listado.row:hover {
+  background-color: #decdab; }
+
+@media (min-width: 767px) {
+  #servicios #servicios-listado .col-sm-6 {
+    height: 1384px; } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -15053,16 +15183,22 @@ para suplantar las duraciones originales leídas antes */
  * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*  D E C O R A T I V E - D I V I D E R  */
 /* rombito diamante decorativo */
-#section1 .decorative-divider {
-  margin-top: -18px;
+.decorative-divider {
+  z-index: 10; }
+
+#section0 .decorative-divider,
+#marcas .decorative-divider,
+#eventos .decorative-divider {
+  margin-top: -15px;
+  z-index: 10; }
+
+#section0 .decorative-divider {
   background-color: #cebe98; }
 
 #section4 .decorative-divider {
   margin-top: -18px; }
 
 /* colocar dentro de la col que no es special col, la que seria el Header */
-#marcas .decorative-divider,
-#eventos .decorative-divider,
 #marca-individual .decorative-divider,
 #contacto .decorative-divider {
   bottom: 0;
@@ -15070,7 +15206,7 @@ para suplantar las duraciones originales leídas antes */
 
 #servicios .decorative-divider {
   top: 0;
-  margin-top: -20px;
+  margin-top: -18px;
   z-index: 10; }
 
 /*--- * * * * H O M E * * * * * 
@@ -15646,8 +15782,6 @@ h1.section-title {
 #nosotros #valores .section-text h4,
 #nosotros #filosofia-pilares .section-text h3,
 #nosotros #filosofia-pilares .section-text h4 {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 2px;
   color: #cebe98;
   text-align: left; }
 
@@ -15655,10 +15789,9 @@ h1.section-title {
   color: #917e4b;
   padding-right: 20px; }
 
-#nosotros #valores .section-title {
-  font-family: HelveticaNoue37Thin;
-  letter-spacing: 3px;
-  color: #cebe98; }
+#nosotros #valores .section-title,
+#nosotros #filosofia-pilares .section-title {
+  color: #decdab; }
 
 #nosotros #valores .section-text {
   border-top: 1px solid #917e4b;
@@ -15675,29 +15808,125 @@ h1.section-title {
   text-align: right; }
 
 #nosotros #filosofia-pilares .glyphicon {
-  color: #cebe98;
+  color: #917e4b;
   padding-right: 20px; }
 
 #nosotros #filosofia-pilares .section-text {
-  color: #080808;
+  color: #cebe98;
   padding-top: 10px; }
 
 #nosotros #filosofia-pilares .section-text h4,
 #nosotros #filosofia-pilares .section-text h3 {
-  color: #080808; }
+  color: #cebe98; }
+
+#nosotros #filosofia-pilares .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 10px; }
 
 #nosotros #filosofia-pilares .info-box {
-  padding: 40px;
-  background-color: rgba(255, 255, 255, 0.3); }
+  padding: 0 40px;
+  background-color: rgba(0, 0, 0, 0.3); }
 
 #nosotros #filosofia-pilares .info-box .section-text h4,
 #nosotros #filosofia-pilares .info-box .section-text h3 {
   margin: 0;
-  color: #080808; }
+  color: #cebe98; }
 
-.ribbon-contentenido {
+.ribbon-contenido {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px; }
+
+#servicios #servicios-listado .section-title {
+  color: #decdab; }
+
+#servicios #servicios-listado .section-subtitle {
+  color: #917e4b; }
+
+#servicios #servicios-listado .section-text h3,
+#servicios #servicios-listado .section-text h4 {
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 2px;
+  color: #3b3b3b;
+  text-align: left;
+  padding: 0; }
+
+#servicios #servicios-listado .section-text {
+  border-top-color: #f1e7d2; }
+
+#servicios #servicios-listado .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#servicios #servicios-listado .special-col-fake h1 {
+  color: #080808; }
+
+#servicios #servicios-diferencial .section-subtitle {
+  color: #917e4b;
+  padding-bottom: 8px; }
+
+#servicios #servicios-diferencial .section-text h3,
+#servicios #servicios-diferencial .section-text h4 {
+  color: #080808;
+  text-align: center;
+  padding: 4px; }
+
+#servicios #servicios-diferencial .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#servicios #servicios-diferencial .section-text {
+  border-top-color: #917e4b;
+  padding-top: 10px; }
+
+#marcas #marcas-header .section-title {
+  text-align: right; }
+
+#marcas #marcas-header .section-subtitle {
+  color: #917e4b;
+  text-align: right;
+  padding-bottom: 8px; }
+
+#marcas #marcas-header .section-text h3,
+#marcas #marcas-header .section-text h4 {
+  color: #080808;
+  text-align: right;
+  padding: 4px; }
+
+#marcas #marcas-header .glyphicon {
+  color: #cebe98;
+  padding-right: 20px; }
+
+#marcas #marcas-header .section-text {
+  border-top-color: #cebe98;
+  padding-top: 10px;
+  text-align: right; }
+
+@media (max-width: 767px) {
+  #marcas #marcas-header .section-title,
+  #marcas #marcas-header .section-subtitle,
+  #marcas #marcas-header .section-text h3,
+  #marcas #marcas-header .section-text h4 {
+    text-align: center; } }
+
+#eventos #eventos-header .section-text h3,
+#eventos #eventos-header .section-text h4 {
+  color: #cebe98;
+  text-align: left; }
+
+#eventos #eventos-header .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#eventos #eventos-header .section-title {
+  color: #f8f1e3; }
+
+#eventos #eventos-header .section-subtitle {
+  color: #decdab;
+  padding-bottom: 20px; }
+
+#eventos #eventos-header .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 0px; }
 
 /* T E X T  F O O T E R */
 /* color general */

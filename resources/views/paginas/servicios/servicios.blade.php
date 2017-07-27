@@ -23,21 +23,34 @@
 <!--para agregar los márgenes laterales-->
 <div class="container-fluid section-wrapper no-padding bgcolor-white">
 
-  <div class="row">
+  <div class="row" id="servicios-intro">
 
     <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
       <h1 class="section-title text-center">Servicios</h1>
       <h2 class="section-subtitle text-center">Ofrecemos soluciones adaptadas a las necesidades de cada cliente.</h2>
       <div class="non-semantic-protector">
         <h1 class="ribbon"> 
-          <span class="ribbon-contentenido">Superar sus expectativas es nuestro objetivo principal.</span>
+          <span class="ribbon-contenido">Superar sus expectativas es nuestro objetivo principal.</span>
         </h1>
       </div>
 
-      <h4 class="text-center kerning space-bottom">
-        <a class="smoothScroll" href="#personal">listado</a> <span class="color-2">|</span> 
-        <a class="smoothScroll" href="#entrenamiento">diferencial</a>
-      </h4>
+      <div class="row super-space-bottom">
+        <div class="col-xs-6 col-xs-push-3">
+         <div class="row">
+            <div class="col-sm-6 special-col">
+                <a class="smoothScroll" href="#servicios-listado">
+                <h4>listado</h4>
+                </a>
+            </div>
+            <div class="col-sm-6 special-col">
+                <a class="smoothScroll" href="#servicios-diferencial">
+                <h4>diferencial</h4>
+                </a>
+            </div>
+          </div>
+        </div>
+       </div>
+
     </div>
 
   </div>
@@ -45,81 +58,122 @@
 
 
 
-  <div class="bg-servicios-header">
+  <div>
+    <img class="img-responsive hidden-xs" src="imagenes/Img/bg-servicios-chicas.jpg">
+    <img class="img-responsive visible-xs" src="imagenes/Img/bg-servicios-chicas(responsive).jpg">
   </div>
 
 
 
-<div class="row hr-border-top-pegado">
-  <div class="col-xs-12 special-col no-padding">
-    
-    {{-- rombo divisor con el logo de GT --}}
-    <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
+  <div class="row hr-border-top-pegado">
+    <div class="col-xs-12 special-col-fake no-padding">
+      
+      {{-- rombo divisor con el logo de GT --}}
+      <div class="decorative-divider">
+        <img class="img-responsive" src="imagenes/Empresa/isologo_color3.png">
+      </div>
 
 
-    <div class="row" id="listado">
-          <div class="col-sm-6 no-padding eventos-imagen">
-            <img class="img-greyscale-hover img-main" src="imagenes/Img/servicios-personal.jpg">
-          </div>
-
-          <div class="col-sm-6">
-            <div class="table-outer">
-              <div class="table-inner">
-
-                <h2 class="text-left">Personal</h2>
-                <h5 class="text-left"><strong>Personal de reposición para todo el país. Selección y captación de personal vía fotográfica o en directo.</strong></h5>
-                <p><span class="color-2light">·</span> Actores y actrices para campañas y comerciales</p>
-                <p><span class="color-2light">·</span> Azafatas de eventos</p>
-                <p><span class="color-2light">·</span> Bartenders profesionales</p>
-                <p><span class="color-2light">·</span> Maquilladoras y cosmetólogas</p>
-                <p><span class="color-2light">·</span> Modelos publicitarias</p>
-                <p><span class="color-2light">·</span> Modelos de pasarela</p>
-                <p><span class="color-2light">·</span> Promovendedoras</p>
-
-                <h2 class="text-right">Entrenamiento</h2>
-                <p class="text-right"><span class="color-2light">·</span> Asesoría en actitúd laboral</p>
-                <p class="text-right"><span class="color-2light">·</span> Asesoramiento técnico y de imagen</p>
-                <p class="text-right"><span class="color-2light">·</span> Selección y capacitación de personal tercerizado</p>
-                <p class="text-right"><span class="color-2light">·</span> Yoga laboral</p>
-
-                <h2 class="text-left">Organización</h2>
-                <p><span class="color-2light">·</span> Campañas de publicidad directas</p>
-                <p><span class="color-2light">·</span> Contratación de personal zafral capacitado para acciones a término</p>
-                <p><span class="color-2light">·</span> Diseño y confección de uniformes</p>
-                <p><span class="color-2light">·</span> Diseño y producción de stands, folletería, banners, ploteos, etc.</p>
-                <p><span class="color-2light">·</span> Organización de fiestas y eventos</p>
-                <p><span class="color-2light">·</span> Reactivación de marcas</p>
-                <p><span class="color-2light">·</span> Recepción, traslados y óptima coordinación de actividades con clientes del exterior</p>
-                <p><span class="color-2light">·</span> Redacción de informes destinados a marcas con presencia local</p>
-
-              </div>
+      <div class="row" id="servicios-listado">
+            <div class="col-sm-6 no-padding bg-servicios-listado">
             </div>
-          </div>
+
+            <div class="col-sm-6 special-col-fake">
+                  <h1 class="section-title super-space-top">Personal</h1>
+                  <h3 class="section-subtitle">Personal de reposición para todo el país. Selección y captación de personal vía fotográfica o en directo.</h3>
+                  <div class="section-text">
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Actores y actrices para campañas y comerciales</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Azafatas de eventos</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Bartenders profesionales</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Maquilladoras y cosmetólogas</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Modelos publicitarias</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Modelos de pasarela</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Promovendedoras</h4>
+                  </div>
+
+
+                  <h1 class="section-title super-space-top">Entrenamiento</h1>
+                  <div class="section-text">
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Asesoría en actitúd laboral</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Asesoramiento técnico y de imagen</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Selección y capacitación de personal tercerizado</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Yoga laboral</h4>
+                  </div>
 
 
 
+                  <h1 class="section-title super-space-top">Organización</h1>
+                  <div class="section-text space-bottom">
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Campañas de publicidad directas</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Contratación de personal zafral capacitado para acciones a término</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Diseño y confección de uniformes</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Diseño y producción de stands, folletería, banners, ploteos, etc.</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Organización de fiestas y eventos</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Reactivación de marcas</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Recepción, traslados y óptima coordinación de actividades con clientes del exterior</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Redacción de informes destinados a marcas con presencia local</h4>
+                  </div>
+            </div>
+      </div>
 
-
-
-            <!-- ultimo boton -->
-            <div class="col-xs-12 special-col">
-              <div class="row">
-                <div class="">
-                  <a href="{{route('get_pagina_contacto')}}">
-                    <h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>Contáctanos</h5>
-                  </a>       
+      <div class="row">
+              <!-- ultimo boton -->
+              <div class="col-xs-12 special-col">
+                <div class="row">
+                  <div class="">
+                    <a href="{{route('get_pagina_contacto')}}">
+                      <h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>Contáctanos</h5>
+                    </a>       
+                  </div>
                 </div>
               </div>
-            </div>
+      </div>
+
 
 
     </div>
+  </div><!-- fin de row que contiene la special-col-fake filosofia-listado -->
+
+
+  <!--DIFERENCIAL-->
+  <!--para agregar los márgenes laterales-->
+  <div class="container-fluid no-padding section-wrapper bg-servicios-diferencial" id="servicios-diferencial">
+    <div class="container-fluid">
+      <div class="row space-bottom">
+          <div class="col-sm-6 col-sm-push-3 col-lg-4 col-lg-push-4 super-space-top space-bottom">
+
+
+                <div class="space-top">
+                  <div>
+                    <h1 class="section-title text-center no-margin">Diferencial</h1>
+                    <h1 class="section-subtitle text-center no-margin">Está en la profesionalidad, eficiencia y calidad de nuestro trabajo.</h1>
+                  </div>
+
+                  <div class="section-text space-bottom">
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Confianza generada a partir de más de diez años de trayectoria ininterrumpida, forjada a partir del trabajo contínuo con organizaciones de distintos tamaños, tanto en nuestro país como en el exterior.</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Amplio conocimiento del mercado local y regional</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Personal con formación académica y conocimiento de idiomas (inglés y portugués)</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Capacitación constante a todo el personal</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Staff capacitado para suplencias, de acuerdo al perfil buscado</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Estricto cumplimiento de contratos y normas vigente</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Vasta experiencia en publicidad directa y acciones promocionales</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Atención personalizada: calidez y contacto directo con cada uno de nuestros clientes</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Flexibilidad organizacional, que permite la rápida adaptación ante cualquier eventualidad o cambio solicitado por el cliente</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Seguimiento constante, con el objetivo de generar el mejor clima laboral</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Miembros de la Asociación de Marketing Promocional del Uruguay (AMPRO)</h4>
+                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>En proceso de certificación de calidad</h4>
+                  </div>
+                </div>
+
+
+  <!--fin de los márgenes laterales-->
+         </div>
+      </div>
+    </div>
+  </div><!-- / DIFERENCIAL-->
 
 
 
-  </div>
-</div>
-
-</div> 
+</div> <!-- page.ID -->
 
 @stop
