@@ -504,22 +504,97 @@ h1.section-title {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px; }
 
-#servicios #listado .section-title {
+#servicios #servicios-listado .section-title {
   color: #decdab; }
 
-#servicios #listado .section-subtitle {
+#servicios #servicios-listado .section-subtitle {
   color: #917e4b; }
 
-#servicios #listado .section-text h3,
-#servicios #listado .section-text h4 {
+#servicios #servicios-listado .section-text h3,
+#servicios #servicios-listado .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
   color: #3b3b3b;
-  text-align: left; }
+  text-align: left;
+  padding: 0; }
 
-#servicios #listado .glyphicon {
+#servicios #servicios-listado .section-text {
+  border-top-color: #f1e7d2; }
+
+#servicios #servicios-listado .glyphicon {
   color: #917e4b;
   padding-right: 20px; }
+
+#servicios #servicios-listado .special-col-fake h1 {
+  color: #080808; }
+
+#servicios #servicios-diferencial .section-subtitle {
+  color: #917e4b;
+  padding-bottom: 8px; }
+
+#servicios #servicios-diferencial .section-text h3,
+#servicios #servicios-diferencial .section-text h4 {
+  color: #080808;
+  text-align: center;
+  padding: 4px; }
+
+#servicios #servicios-diferencial .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#servicios #servicios-diferencial .section-text {
+  border-top-color: #917e4b;
+  padding-top: 10px; }
+
+#marcas #marcas-header .section-title {
+  text-align: right; }
+
+#marcas #marcas-header .section-subtitle {
+  color: #917e4b;
+  text-align: right;
+  padding-bottom: 8px; }
+
+#marcas #marcas-header .section-text h3,
+#marcas #marcas-header .section-text h4 {
+  color: #080808;
+  text-align: right;
+  padding: 4px; }
+
+#marcas #marcas-header .glyphicon {
+  color: #cebe98;
+  padding-right: 20px; }
+
+#marcas #marcas-header .section-text {
+  border-top-color: #cebe98;
+  padding-top: 10px;
+  text-align: right; }
+
+@media (max-width: 767px) {
+  #marcas #marcas-header .section-title,
+  #marcas #marcas-header .section-subtitle,
+  #marcas #marcas-header .section-text h3,
+  #marcas #marcas-header .section-text h4 {
+    text-align: center; } }
+
+#eventos #eventos-header .section-text h3,
+#eventos #eventos-header .section-text h4 {
+  color: #cebe98;
+  text-align: left; }
+
+#eventos #eventos-header .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#eventos #eventos-header .section-title {
+  color: #f8f1e3; }
+
+#eventos #eventos-header .section-subtitle {
+  color: #decdab;
+  padding-bottom: 20px; }
+
+#eventos #eventos-header .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 0px; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -13462,10 +13537,31 @@ div.wrapper-portada > img.portada {
 
 .bg-servicios-listado {
   background-image: url("../../imagenes/Img/bg-servicios-triada.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
+.bg-servicios-diferencial {
+  background-image: url("../../imagenes/Img/bg-servicios-diferencial.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
+.bg-marcas-header {
+  background-image: url("../../imagenes/Img/bg-marcas-header2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white; }
+
+.bg-eventos-header {
+  background-image: url("../../imagenes/Img/bg-eventos-header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #080808; }
 
 /* backgrounds responsive changes */
 @media (max-width: 767px) {
@@ -13479,7 +13575,13 @@ div.wrapper-portada > img.portada {
   .bg-nosotros-filosofia {
     background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
   .bg-servicios-listado {
-    background-image: url("../../imagenes/Img/bg-servicios-triada(responsive).jpg"); } }
+    background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
+  .bg-servicios-diferencial {
+    background-image: url("../../imagenes/Img/bg-servicios-diferencial(responsive).jpg"); }
+  .bg-marcas-header {
+    background-image: url("../../imagenes/Img/bg-marcas-header(responsive).jpg"); }
+  .bg-eventos-header {
+    background-image: url("../../imagenes/Img/bg-eventos-header(responsive).jpg"); } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
@@ -13758,6 +13860,30 @@ como por ejemplo un carousel de imágenes de header---*/
   height: auto;
   margin-left: 10px;
   margin-right: 10px; }
+
+#servicios #servicios-intro .special-col a h4 {
+  text-align: center;
+  color: #917e4b;
+  letter-spacing: 4px;
+  line-height: 2; }
+
+#servicios #servicios-intro .special-col {
+  padding: 0; }
+
+#servicios #servicios-listado .special-col-fake {
+  border-top: none;
+  border-right: none;
+  border-bottom: none; }
+
+#servicios #servicios-listado.row:hover .special-col-fake {
+  background-color: #decdab; }
+
+#servicios #servicios-listado.row:hover {
+  background-color: #decdab; }
+
+@media (min-width: 767px) {
+  #servicios #servicios-listado .col-sm-6 {
+    height: 1384px; } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -15057,16 +15183,22 @@ para suplantar las duraciones originales leídas antes */
  * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*  D E C O R A T I V E - D I V I D E R  */
 /* rombito diamante decorativo */
-#section1 .decorative-divider {
-  margin-top: -18px;
+.decorative-divider {
+  z-index: 10; }
+
+#section0 .decorative-divider,
+#marcas .decorative-divider,
+#eventos .decorative-divider {
+  margin-top: -15px;
+  z-index: 10; }
+
+#section0 .decorative-divider {
   background-color: #cebe98; }
 
 #section4 .decorative-divider {
   margin-top: -18px; }
 
 /* colocar dentro de la col que no es special col, la que seria el Header */
-#marcas .decorative-divider,
-#eventos .decorative-divider,
 #marca-individual .decorative-divider,
 #contacto .decorative-divider {
   bottom: 0;
@@ -15704,22 +15836,97 @@ h1.section-title {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 3px; }
 
-#servicios #listado .section-title {
+#servicios #servicios-listado .section-title {
   color: #decdab; }
 
-#servicios #listado .section-subtitle {
+#servicios #servicios-listado .section-subtitle {
   color: #917e4b; }
 
-#servicios #listado .section-text h3,
-#servicios #listado .section-text h4 {
+#servicios #servicios-listado .section-text h3,
+#servicios #servicios-listado .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
   color: #3b3b3b;
-  text-align: left; }
+  text-align: left;
+  padding: 0; }
 
-#servicios #listado .glyphicon {
+#servicios #servicios-listado .section-text {
+  border-top-color: #f1e7d2; }
+
+#servicios #servicios-listado .glyphicon {
   color: #917e4b;
   padding-right: 20px; }
+
+#servicios #servicios-listado .special-col-fake h1 {
+  color: #080808; }
+
+#servicios #servicios-diferencial .section-subtitle {
+  color: #917e4b;
+  padding-bottom: 8px; }
+
+#servicios #servicios-diferencial .section-text h3,
+#servicios #servicios-diferencial .section-text h4 {
+  color: #080808;
+  text-align: center;
+  padding: 4px; }
+
+#servicios #servicios-diferencial .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#servicios #servicios-diferencial .section-text {
+  border-top-color: #917e4b;
+  padding-top: 10px; }
+
+#marcas #marcas-header .section-title {
+  text-align: right; }
+
+#marcas #marcas-header .section-subtitle {
+  color: #917e4b;
+  text-align: right;
+  padding-bottom: 8px; }
+
+#marcas #marcas-header .section-text h3,
+#marcas #marcas-header .section-text h4 {
+  color: #080808;
+  text-align: right;
+  padding: 4px; }
+
+#marcas #marcas-header .glyphicon {
+  color: #cebe98;
+  padding-right: 20px; }
+
+#marcas #marcas-header .section-text {
+  border-top-color: #cebe98;
+  padding-top: 10px;
+  text-align: right; }
+
+@media (max-width: 767px) {
+  #marcas #marcas-header .section-title,
+  #marcas #marcas-header .section-subtitle,
+  #marcas #marcas-header .section-text h3,
+  #marcas #marcas-header .section-text h4 {
+    text-align: center; } }
+
+#eventos #eventos-header .section-text h3,
+#eventos #eventos-header .section-text h4 {
+  color: #cebe98;
+  text-align: left; }
+
+#eventos #eventos-header .glyphicon {
+  color: #917e4b;
+  padding-right: 20px; }
+
+#eventos #eventos-header .section-title {
+  color: #f8f1e3; }
+
+#eventos #eventos-header .section-subtitle {
+  color: #decdab;
+  padding-bottom: 20px; }
+
+#eventos #eventos-header .section-text {
+  border-top: 1px solid #917e4b;
+  padding-top: 0px; }
 
 /* T E X T  F O O T E R */
 /* color general */

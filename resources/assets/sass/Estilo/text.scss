@@ -303,23 +303,114 @@ h1.section-title{
 }
 
 // pág. Servicios - sección Listado
-#servicios #listado .section-title{
+#servicios #servicios-listado .section-title{
   color: $color-3light;
 }
-#servicios #listado .section-subtitle{
+#servicios #servicios-listado .section-subtitle{
   color: $color-3dark;
 }
-#servicios #listado .section-text h3,
-#servicios #listado .section-text h4{
+#servicios #servicios-listado .section-text h3,
+#servicios #servicios-listado .section-text h4{
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
   color: $color-2light;
   text-align: left;
+  padding:0;
 }
-#servicios #listado .glyphicon{
+#servicios #servicios-listado .section-text{
+  border-top-color: $color-3superlight;
+}
+#servicios #servicios-listado .glyphicon{
     color: $color-3dark;
     padding-right: 20px;
 }
+#servicios #servicios-listado .special-col-fake h1{
+  color: $color-2;
+}
+
+// pág. Servicios - sección diferencial
+#servicios #servicios-diferencial .section-subtitle{
+  color: $color-3dark;
+  padding-bottom:8px;
+}
+#servicios #servicios-diferencial .section-text h3,
+#servicios #servicios-diferencial .section-text h4{
+  color: $color-2;
+  text-align: center;
+  padding:4px;
+}
+#servicios #servicios-diferencial .glyphicon{
+    color: $color-3dark;
+    padding-right: 20px;
+}
+#servicios #servicios-diferencial .section-text{
+  border-top-color: $color-3dark;
+  padding-top: 10px;
+}
+
+// pág. Marcas (clientes) - header
+#marcas #marcas-header .section-title{
+  text-align: right;
+}
+#marcas #marcas-header .section-subtitle{
+  color: $color-3dark;
+  text-align: right;
+  padding-bottom:8px;
+}
+#marcas #marcas-header .section-text h3,
+#marcas #marcas-header .section-text h4{
+  color: $color-2;
+  text-align: right;
+  padding:4px;
+}
+#marcas #marcas-header .glyphicon{
+    color: $color-3;
+    padding-right: 20px;
+}
+#marcas #marcas-header .section-text{
+  border-top-color: $color-3;
+  padding-top: 10px;
+  text-align: right;
+}
+@media (max-width:767px) {
+  #marcas #marcas-header .section-title,
+  #marcas #marcas-header .section-subtitle,
+  #marcas #marcas-header .section-text h3,
+  #marcas #marcas-header .section-text h4{
+    text-align: center;
+  }}
+
+// pág. Eventos - header
+#eventos  #eventos-header .section-text h3,
+#eventos  #eventos-header .section-text h4{
+  color: $color-3;
+  text-align: left;
+}
+#eventos  #eventos-header .glyphicon{
+    color: $color-3dark;
+    padding-right: 20px;
+}
+#eventos  #eventos-header .section-title{
+  color: $color-3hyperlight;
+}
+#eventos  #eventos-header .section-subtitle{
+  color: $color-3light;
+  padding-bottom: 20px;
+}
+#eventos  #eventos-header .section-text{
+  border-top: 1px solid $color-3dark;
+  padding-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

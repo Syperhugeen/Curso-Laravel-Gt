@@ -27,21 +27,48 @@
     <div id="eventos">
     
     
+
+
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid no-padding section-wrapper bgcolor-white">
+<div class="section-wrapper bg-eventos-header" id="eventos-header">
+  <div class="container-fluid">
+    <div class="row super-space-bottom space-top">
+        <div class="col-md-8 col-md-push-3 col-lg-8 col-lg-push-2">
 
-{{-- contiene hasta diez eventos como máximo --}}
-	<div class="row hr-border-bottom-pegado">
 
-			<div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
-				<h1 class="text-center">Acciones y eventos destacados</h1>
-				<h3 class="text-center super-space-bottom">A lo largo de nuestra trayectoria hemos sido organizadores y representantes de nuestros clientes en una amplia gama de eventos.</h3>
-		      	{{-- rombo divisor con el logo de GT --}}
-		      	<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
-			</div>
-	</div>
+        <div class="row super-space-bottom">
+          <div class="col-sm-6 col-sm-push-6">
+            <h1 class="section-title">Galería</h1>
+            <h2 class="section-subtitle">Acciones y eventos destacados</h2>
+            <div class="section-text">
+              <h3>Reseñas e imágenes de acciones promocionales y eventos transcurridos a lo largo de estos 15 años de crecimiento en conjunto con nuestros clientes.</h3>
+            </div>
+          </div>
+        </div>
 
-	<div class="row">
+        <div class="row super-space-bottom hidden-xs">
+          <div class="col-sm-6 col-sm-push-6 space-bottom">
+          </div>
+        </div>
+
+
+
+<!--fin de los márgenes laterales-->
+       </div> <!--/ fin de la col-->
+    </div> <!--/ fin del row-->
+  </div>
+</div>
+
+
+
+
+
+<!--para agregar los márgenes laterales-->
+<div class="container-fluid no-padding section-wrapper" id="eventos-listado">
+	{{-- rombo divisor con el logo de GT --}}
+	<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
+
+	<div class="row hr-border-top-pegado">
 
 			{{-- for each... insertar aquí las entidades --}}
 	    @foreach($Eventos as $Evento)

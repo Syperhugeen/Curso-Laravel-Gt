@@ -208,13 +208,32 @@ div.wrapper-portada>img.portada{
 }
 .bg-servicios-listado{
   background-image: url('../../imagenes/Img/bg-servicios-triada.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}
+.bg-servicios-diferencial{
+  background-image: url('../../imagenes/Img/bg-servicios-diferencial.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}
+.bg-marcas-header{
+  background-image: url('../../imagenes/Img/bg-marcas-header2.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-white;
 }
-
-
+.bg-eventos-header{
+  background-image: url('../../imagenes/Img/bg-eventos-header.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-2;
+}
 
 /* backgrounds responsive changes */
 @media (max-width:767px) {
@@ -228,7 +247,13 @@ div.wrapper-portada>img.portada{
   .bg-nosotros-filosofia {
     background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
   .bg-servicios-listado {
-    background-image: url('../../imagenes/Img/bg-servicios-triada(responsive).jpg');}
+    background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
+  .bg-servicios-diferencial {
+    background-image: url('../../imagenes/Img/bg-servicios-diferencial(responsive).jpg');}
+  .bg-marcas-header {
+    background-image: url('../../imagenes/Img/bg-marcas-header(responsive).jpg');}
+  .bg-eventos-header {
+    background-image: url('../../imagenes/Img/bg-eventos-header(responsive).jpg');}
   }
 
 
@@ -610,13 +635,30 @@ $special-col-altura:400px;
   margin-right:10px;
 }
 
-
-
-
-
-
-
-
+// Servicios - Intro (botones special-col)
+#servicios #servicios-intro .special-col a h4{
+  text-align: center;
+  color: $color-3dark;
+  letter-spacing: 4px;
+  line-height: 2;
+}
+#servicios #servicios-intro .special-col{
+  padding:0;
+}
+#servicios #servicios-listado .special-col-fake{
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+#servicios #servicios-listado.row:hover .special-col-fake{
+  background-color: $color-3light;
+}
+#servicios #servicios-listado.row:hover{
+  background-color: $color-3light;
+}
+@media (min-width:767px) {
+  #servicios #servicios-listado .col-sm-6{
+    height: 1384px;}}
 
 
 

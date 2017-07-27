@@ -8,6 +8,10 @@
   <img src="imagenes/img/header_15years(responsive).jpg" alt="Celebrando 15 años de trayectoria" class="img-responsive wow fadeIn delay1b">
 </div>
 
+
+{{-- rombo divisor con el logo de GT --}}
+<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
+
 <!-- CAROUSEL SLIDER - TODO ESTO QUEDA AFUERA DE MOMENTO-->
 
 <!-- <div class="carousel-y-header super-xs-hidden">

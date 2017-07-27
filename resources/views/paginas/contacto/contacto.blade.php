@@ -106,13 +106,17 @@
 
 
       <div class="col-sm-12 special-col">
-        <div class="table-outer">
-          <div class="table-inner">
+        <div class="row">
+          <div class="col-md-8 col-md-push-2">
+            <div class="table-outer">
+              <div class="table-inner">
 
-            <h1 class="text-center space-top space-bottom">...o bien, escríbenos ahora mismo</h1>
+                <h1 class="text-center space-top space-bottom">...o bien, escríbenos ahora mismo</h1>
 
-            @include('formularios.contacto_form')
-            
+                @include('formularios.contacto_form')
+                
+              </div>
+            </div>
           </div>
         </div>
       </div> 

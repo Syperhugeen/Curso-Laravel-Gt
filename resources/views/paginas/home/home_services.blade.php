@@ -1,6 +1,3 @@
-{{-- rombo divisor con el logo de GT --}}
-<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo.png"></div>
-
 <!--flecha guía hacia abajo (indicando que hay más contenido)-->
 <div class="row hidden-xs space-top">
 	<div class="text-center">
