@@ -58,7 +58,7 @@
                     {!! Form::text('telefono', null ,['class'       => 'form-control',
                                                       'placeholder' => 'Escribe aquí un número para contactarte',
                                                       'required'    => 'required',
-                                                      'data-error'  => 'Por favor, ingresa número para contactarte.']) !!}
+                                                      'data-error'  => 'Por favor, ingresa un número para contactarte.']) !!}
 
                 <div class="help-block with-errors"></div>    
                 </div>

@@ -11,6 +11,7 @@
 $color-1:#f1e7d2; /* institucional similar a color-3 pero más amarillito, como el doradito del logo */
 
 $color-2:#080808; /* institucional OSCURO - para el background de la nav-bar por ejemplo - en este caso coincide con los grises nuestros */
+$color-2semilight:#2e2e2e;
 $color-2light:#3b3b3b; /* para textos de baja relevancia que están sobre fondo oscuro (como en el footer) */
 $color-2superlight:#808080;
 
@@ -32,6 +33,7 @@ $color-grey0:#f8f8f8; /*gris SUPER claro (solo para líneas divisoras de relevan
 $color-grey1:#b3b3b3; /*gris más claro (para párrafos y otras cosas)*/
 $color-grey2:#858585; /*gris medio (para títulos por ejemplo)*/
 $color-grey3:#3b3b3b; /*gris más oscuro (para backgrounds por ejemplo)*/
+$color-grey3:#2a2a2a; /*gris más oscuro (para backgrounds por ejemplo)*/
 
 $color-white:white; /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 $color-black:black; /*misma razón, pero para el negro */

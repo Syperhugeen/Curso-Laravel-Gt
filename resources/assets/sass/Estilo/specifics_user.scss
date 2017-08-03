@@ -13,7 +13,8 @@
 }
 #section0 .decorative-divider,
 #marcas .decorative-divider,
-#eventos .decorative-divider{
+#eventos .decorative-divider,
+#contacto .decorative-divider{
   margin-top: -15px;
   z-index: 10;
 }
@@ -24,8 +25,7 @@
   margin-top: -18px;
 }
 /* colocar dentro de la col que no es special col, la que seria el Header */
-#marca-individual .decorative-divider,
-#contacto .decorative-divider,{
+#marca-individual .decorative-divider{
   bottom: 0;
   margin-bottom: -18px;
 }
@@ -394,15 +394,15 @@ img.marca-col{
 #contacto #contacto-form .has-error.checkbox label,
 #contacto #contacto-form .has-error.radio-inline label,
 #contacto #contacto-form .has-error.checkbox-inline label {
-  color: $color-2light;
+  color: $color-2;
 }
 #contacto #contacto-form .has-error .form-control {
-  border-color: $color-2light;
+  border-color: $color-2;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 #contacto #contacto-form .has-error .form-control:focus {
-  border-color: $color-2light;
+  border-color: $color-2;
   -webkit-box-shadow: none, none;
           box-shadow: none, none;
 }
@@ -447,12 +447,13 @@ img.marca-col{
 }
 #contacto #contacto-form label{
   color: $color-3;
-  background-color: $color-2light;
+  background-color: $color-2;
   letter-spacing: 2px;
   margin-bottom: 0;
   padding:6px;
   width:100%;
   font-weight: normal;
+  opacity: 1;
 }
 
 
@@ -469,6 +470,7 @@ img.marca-col{
   border-radius:0;
   border-color:$color-3hyperlight;
   font-weight: 600;
+  opacity: 1;
 }
 #contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover,
 #contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover.disabled {

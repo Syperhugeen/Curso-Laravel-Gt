@@ -17,6 +17,7 @@
 /*gris más claro (para párrafos y otras cosas)*/
 /*gris medio (para títulos por ejemplo)*/
 /*gris más oscuro (para backgrounds por ejemplo)*/
+/*gris más oscuro (para backgrounds por ejemplo)*/
 /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 /*misma razón, pero para el negro */
 /*para el ribbon llamado destacado despliegue*/
@@ -62,10 +63,10 @@
   background: #858585; }
 
 .color-grey3 {
-  color: #3b3b3b; }
+  color: #2a2a2a; }
 
 .bgcolor-grey3 {
-  background: #3b3b3b; }
+  background: #2a2a2a; }
 
 /* institucionales */
 .color-1 {
@@ -595,6 +596,33 @@ h1.section-title {
 #eventos #eventos-header .section-text {
   border-top: 1px solid #917e4b;
   padding-top: 0px; }
+
+#contacto #contacto-formulario .section-subtitle {
+  color: #917e4b; }
+
+#contacto .quote {
+  color: #cebe98; }
+
+#contacto #contacto-datos .glyphicon,
+#contacto #contacto-datos .socicon {
+  color: #917e4b;
+  padding-right: 10px; }
+
+#contacto #contacto-datos h3,
+#contacto #contacto-datos h4 {
+  color: #3b3b3b;
+  padding-top: 10px; }
+
+#contacto #contacto-datos a:hover h3,
+#contacto #contacto-datos a:hover h4 {
+  color: #808080; }
+
+#contacto #contacto-datos a:hover h3 .socicon,
+#contacto #contacto-datos a:hover h4 .socicon {
+  color: #f1e7d2; }
+
+#contacto #contacto-header h1.section-title {
+  color: #f1e7d2; }
 
 /* T E X T  F O O T E R */
 /* color general */
@@ -13270,6 +13298,7 @@ ul.bxslider {
 /*gris más claro (para párrafos y otras cosas)*/
 /*gris medio (para títulos por ejemplo)*/
 /*gris más oscuro (para backgrounds por ejemplo)*/
+/*gris más oscuro (para backgrounds por ejemplo)*/
 /*usamos esto en lugar de "white" por si decidimos cambiarlo todos los blancos más adelante*/
 /*misma razón, pero para el negro */
 /*para el ribbon llamado destacado despliegue*/
@@ -13315,10 +13344,10 @@ ul.bxslider {
   background: #858585; }
 
 .color-grey3 {
-  color: #3b3b3b; }
+  color: #2a2a2a; }
 
 .bgcolor-grey3 {
-  background: #3b3b3b; }
+  background: #2a2a2a; }
 
 /* institucionales */
 .color-1 {
@@ -13563,6 +13592,20 @@ div.wrapper-portada > img.portada {
   background-size: cover;
   background-color: #080808; }
 
+.bg-contacto-formulario {
+  background-image: url("../../imagenes/Img/bg-contacto-formulario.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
+.bg-contacto-header {
+  background-image: url("../../imagenes/Img/bg-contacto-header2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
 /* backgrounds responsive changes */
 @media (max-width: 767px) {
   .bg-home-service {
@@ -13581,7 +13624,11 @@ div.wrapper-portada > img.portada {
   .bg-marcas-header {
     background-image: url("../../imagenes/Img/bg-marcas-header(responsive).jpg"); }
   .bg-eventos-header {
-    background-image: url("../../imagenes/Img/bg-eventos-header(responsive).jpg"); } }
+    background-image: url("../../imagenes/Img/bg-eventos-header(responsive).jpg"); }
+  .bg-contacto-formulario {
+    background-image: url("../../imagenes/Img/bg-contacto-formulario(responsive).jpg"); }
+  .bg-contacto-header {
+    background-image: url("../../imagenes/Img/bg-contacto-header(responsive).jpg"); } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
@@ -13885,7 +13932,62 @@ como por ejemplo un carousel de imágenes de header---*/
   #servicios #servicios-listado .col-sm-6 {
     height: 1384px; } }
 
+#contacto #contacto-datos .special-col-fake {
+  height: 400px; }
+
+#contacto #contacto-datos .special-col-fake:hover {
+  background-color: #decdab; }
+
+@media (min-width: 767px) {
+  #contacto #contacto-datos .special-col-fake {
+    height: 500px; } }
+
 /*--------------------------------------------------------------------------------------------------*/
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+/* * *      B U S C A D O R  (input)     * * *  */
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+.buscador {
+  display: block;
+  text-align: center;
+  float: right;
+  height: 40px; }
+
+.buscador .buscador-boton {
+  display: inline-block;
+  background-color: #2e2e2e;
+  color: #cebe98;
+  margin: 0;
+  height: 100%; }
+
+.buscador .buscador-boton:hover {
+  background-color: #2e2e2e;
+  color: #f1e7d2; }
+
+.buscador .buscador-input {
+  display: inline-block;
+  background-color: #080808;
+  color: #3b3b3b;
+  width: 80px;
+  margin: 0;
+  padding: 10px;
+  height: 100%;
+  /*cambiar "all" por "translate" si quiero que los demás cambios se hagan instantáneamente*/
+  transition: all .3s ease; }
+
+.buscador .buscador-input:focus {
+  width: 200px;
+  color: #808080;
+  border-radius: 0;
+  border-color: #cebe98; }
+
+.buscador .buscador-boton h4 .glyphicon {
+  padding: 0 10px;
+  margin-right: -4px;
+  color: #917e4b; }
+
+.buscador .buscador-boton:hover h4 .glyphicon {
+  color: #f1e7d2; }
+
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 /* * * T H U M B N A I L   G A L L E R Y * * *  */
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -15188,7 +15290,8 @@ para suplantar las duraciones originales leídas antes */
 
 #section0 .decorative-divider,
 #marcas .decorative-divider,
-#eventos .decorative-divider {
+#eventos .decorative-divider,
+#contacto .decorative-divider {
   margin-top: -15px;
   z-index: 10; }
 
@@ -15199,8 +15302,7 @@ para suplantar las duraciones originales leídas antes */
   margin-top: -18px; }
 
 /* colocar dentro de la col que no es special col, la que seria el Header */
-#marca-individual .decorative-divider,
-#contacto .decorative-divider {
+#marca-individual .decorative-divider {
   bottom: 0;
   margin-bottom: -18px; }
 
@@ -15458,14 +15560,14 @@ img.marca-col {
 #contacto #contacto-form .has-error.checkbox label,
 #contacto #contacto-form .has-error.radio-inline label,
 #contacto #contacto-form .has-error.checkbox-inline label {
-  color: #3b3b3b; }
+  color: #080808; }
 
 #contacto #contacto-form .has-error .form-control {
-  border-color: #3b3b3b;
+  border-color: #080808;
   box-shadow: none; }
 
 #contacto #contacto-form .has-error .form-control:focus {
-  border-color: #3b3b3b;
+  border-color: #080808;
   box-shadow: none, none; }
 
 #contacto #contacto-form .has-error .input-group-addon {
@@ -15506,12 +15608,13 @@ img.marca-col {
 
 #contacto #contacto-form label {
   color: #cebe98;
-  background-color: #3b3b3b;
+  background-color: #080808;
   letter-spacing: 2px;
   margin-bottom: 0;
   padding: 6px;
   width: 100%;
-  font-weight: normal; }
+  font-weight: normal;
+  opacity: 1; }
 
 #contacto #contacto-form .btn.btn-primary.btn-lg.btn-send, #contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send,
 #contacto #contacto-form .btn.btn-primary.btn-lg.btn-send.disabled,
@@ -15526,7 +15629,8 @@ img.marca-col {
   text-transform: uppercase;
   border-radius: 0;
   border-color: #f8f1e3;
-  font-weight: 600; }
+  font-weight: 600;
+  opacity: 1; }
 
 #contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover, #contacto #contacto-form .btn-group-lg > .btn.btn-primary.btn-send:hover,
 #contacto #contacto-form .btn.btn-primary.btn-lg.btn-send:hover.disabled,
@@ -15927,6 +16031,33 @@ h1.section-title {
 #eventos #eventos-header .section-text {
   border-top: 1px solid #917e4b;
   padding-top: 0px; }
+
+#contacto #contacto-formulario .section-subtitle {
+  color: #917e4b; }
+
+#contacto .quote {
+  color: #cebe98; }
+
+#contacto #contacto-datos .glyphicon,
+#contacto #contacto-datos .socicon {
+  color: #917e4b;
+  padding-right: 10px; }
+
+#contacto #contacto-datos h3,
+#contacto #contacto-datos h4 {
+  color: #3b3b3b;
+  padding-top: 10px; }
+
+#contacto #contacto-datos a:hover h3,
+#contacto #contacto-datos a:hover h4 {
+  color: #808080; }
+
+#contacto #contacto-datos a:hover h3 .socicon,
+#contacto #contacto-datos a:hover h4 .socicon {
+  color: #f1e7d2; }
+
+#contacto #contacto-header h1.section-title {
+  color: #f1e7d2; }
 
 /* T E X T  F O O T E R */
 /* color general */
