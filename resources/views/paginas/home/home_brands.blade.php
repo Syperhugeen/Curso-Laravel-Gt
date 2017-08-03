@@ -8,11 +8,13 @@
 	</div>
 </div>
 
-<div class="col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2 hidden-md hidden-lg text-center space-top">
-	<div>
-		<h2 class="quote"><span class="color-2light">La búsqueda de la excelencia es el principal <em>&laquo;leit motiv&raquo;</em> de <span class="logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span>.</span></h2>
-	</div>
+<div class="col-xs-12 hidden-md hidden-lg text-center space-top">
+	<div class="non-semantic-protector"><div class="ribbon">
+		<span class="ribbon-contenido"><h2 class="quote"><span class="color-3">La búsqueda de la excelencia es el principal <em>&laquo;leit motiv&raquo;</em> de <span class="logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span>.</span></h2></span>
+	</div></div>
 </div>
+
+
 
 <div class="col-xs-12 logos-carousel-col"><!--logos slider-->
 	<section class="customer-logos wow fadeIn delay1b">

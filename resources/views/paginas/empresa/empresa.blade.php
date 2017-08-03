@@ -53,8 +53,7 @@
 
 		<!--titulo (responsive) que sólo aparece en xs y sm-->
 		<div class="col-sm-6 col-sm-push-6 visible-xs">
-			<h1 class="section-title">Nosotros</h1>
-			<h2 class="section-subtitle">En el momento justo</h2>
+			<h1 class="section-title space-top color-2">En el momento justo</h1>
 		</div>
  
 		<!--texto introductorio-->

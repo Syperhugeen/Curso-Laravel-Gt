@@ -179,7 +179,7 @@ div.wrapper-portada>img.portada{
 
 /* B A C K G R O U N D   I M A G E  size: cover */
 .bg-home-puzzle{
-  background-image: url('../../imagenes/Img/bg-home-puzzle2.jpg');
+  background-image: url('../../imagenes/Img/bg-home-puzzle3.jpg');
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -613,9 +613,9 @@ $special-col-altura:400px;
   #marca-individual .special-col .col-sm-6{
     height: $special-col-altura / 2;}
   #home #section4 .special-col.col-sm-6{
-    height: $special-col-altura / 4;}
+    height: $special-col-altura / 2;}
   #home #section4 .col-sm-6 .special-col.col-xs-12{
-    height: $special-col-altura / 4;}
+    height: $special-col-altura / 2;}
   .special-col img{
     width:100% !important;
     height:auto !important;
