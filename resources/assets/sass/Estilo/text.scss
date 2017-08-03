@@ -402,13 +402,34 @@ h1.section-title{
   padding-top: 0px;
 }
 
-
-
-
-
-
-
-
+// pág. Contacto - formulario
+#contacto  #contacto-formulario .section-subtitle{
+  color: $color-3dark;
+}
+#contacto .quote {
+  color: $color-3;
+}
+#contacto #contacto-datos .glyphicon,
+#contacto #contacto-datos .socicon{
+    color: $color-3dark;
+    padding-right: 10px;
+}
+#contacto #contacto-datos h3,
+#contacto #contacto-datos h4{
+  color: $color-2light;
+  padding-top: 10px;
+}
+#contacto #contacto-datos a:hover h3,
+#contacto #contacto-datos a:hover h4{
+  color: $color-2superlight;
+}
+#contacto #contacto-datos a:hover h3 .socicon,
+#contacto #contacto-datos a:hover h4 .socicon{
+  color: $color-3superlight;
+}
+#contacto #contacto-header h1.section-title{
+  color: $color-3superlight;
+}
 
 
 

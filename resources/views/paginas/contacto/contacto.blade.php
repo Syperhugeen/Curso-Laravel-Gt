@@ -28,43 +28,49 @@
   <!--para agregar los márgenes laterales-->
   <div class="container-fluid section-wrapper no-padding bgcolor-3light">
 
-    <div class="row special-col no-padding no-margin">
+    <!--para agregar los márgenes laterales-->
+    <div class="container-fluid no-padding section-wrapper bg-contacto-header">
+
+      <div class="container-fluid" id="contacto-header">
+        <div class="row space-bottom">
+            <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
+            <h1 class="text-center section-title">Ponte en contacto</h1>
+            <h2 class="text-center quote super-space-bottom">Su satisfacción es nuestro objetivo; superar sus expectativas, nuestro deber.</h2>
+
+          </div> 
+        </div>
+      </div>
+              {{-- rombo divisor con el logo de GT --}}
+        <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
+    </div>
 
 
+    <div class="row special-col no-padding no-margin" id="contacto-datos">
 
-      <div class="col-md-8 col-md-push-2 super-space-top super-space-bottom">
-        <h1 class="text-center">Ponte en contacto</h1>
-        <h2 class="text-center quote super-space-bottom">Una frase aquí, de no más de un renglón de longitud.</h2>
-            {{-- rombo divisor con el logo de GT --}}
-            <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
-      </div> 
-
-
-
-      <div class="col-sm-6 special-col">
+      <div class="col-md-6 special-col-fake">
         <div class="table-outer">
           <div class="table-inner">
 
-            <h1 class="text-center space-bottom">Comunícate directamente</h1>
+            <h2 class="text-center section-title half-space-bottom">Comunícate directamente</h2>
 
             @if($Empresa->telefono != null) 
-            <p><span class="glyphicon glyphicon-earphone color-3dark"></span> {{$Empresa->telefono}}</p>
+            <h4><span class="glyphicon glyphicon-earphone color-3dark"></span> {{$Empresa->telefono}}</h4>
             @endif
 
             @if($Empresa->celular != null)
-            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->celular}}</p>
+            <h4><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->celular}}</h4>
             @endif
 
             @if($Empresa->email != null)
-            <p><span class="glyphicon glyphicon-envelope color-3dark"></span> {{$Empresa->email}}</p>
+            <h4><span class="glyphicon glyphicon-envelope color-3dark"></span> {{$Empresa->email}}</h4>
             @endif
 
             @if($Empresa->direccion != null) 
-            <p><span class="glyphicon glyphicon-map-marker color-3dark"></span> {{$Empresa->direccion}}</p>
+            <h4><span class="glyphicon glyphicon-map-marker color-3dark"></span> {{$Empresa->direccion}}</h4>
             @endif
 
             @if($Empresa->horarios_dias != null)
-            <p><span class="glyphicon glyphicon-time color-3dark"></span> {{$Empresa->horarios_dias}}</p>
+            <h4><span class="glyphicon glyphicon-time color-3dark"></span> {{$Empresa->horarios_dias}}</h4>
             @endif
 
           </div>
@@ -73,53 +79,39 @@
 
 
 
-      <div class="col-sm-6 special-col">
+      <div class="col-md-6 special-col-fake">
         <div class="table-outer">
           <div class="table-inner">
 
-            <h1 class="text-center space-bottom">Síguenos en las redes</h1>
+            <h2 class="text-center section-title half-space-bottom">Síguenos en las redes sociales</h2>
 
-            @if($Empresa->telefono != null) 
-            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->telefono}}</p>
-            @endif
-
-            @if($Empresa->celular != null)
-            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->celular}}</p>
-            @endif
-
-            @if($Empresa->email != null)
-            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->email}}</p>
-            @endif
-
-            @if($Empresa->direccion != null) 
-            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->direccion}}</p>
-            @endif
-
-            @if($Empresa->horarios_dias != null)
-            <p><span class="glyphicon glyphicon-phone color-3dark"></span> {{$Empresa->horarios_dias}}</p>
-            @endif
+          <a href="https://www.facebook.com/GLOBALTARGET/" target="_blank" alt="Global Target social media"><h4><span class="socicon socicon-facebook"></span> /globaltarget</h4></a>
+          <a href="https://instme.com/profile/globaltarget_agencia" target="_blank" alt="Global Target social media"><h4><span class="socicon socicon-instagram"></span> /globaltarget_agencia</h4> </a>
+          <a href="https://www.linkedin.com/company/agencia-global-target" target="_blank" alt="Global Target social media"><h4><span class="socicon socicon-linkedin"></span> /agencia-global-target</h4></a>
             
           </div>
         </div>
       </div>
 
+<!-- cierro row -->
+</div>
 
 
-      <div class="col-sm-12 special-col">
-        <div class="row">
-          <div class="col-md-8 col-md-push-2">
-            <div class="table-outer">
-              <div class="table-inner">
+<!--para agregar los márgenes laterales-->
+<div class="section-wrapper bg-contacto-formulario">
+  <div class="container-fluid">
+    <div class="row space-bottom space-top" id="contacto-formulario">
+        <div class="col-md-8 col-md-push-2 space-top">
 
-                <h1 class="text-center space-top space-bottom">...o bien, escríbenos ahora mismo</h1>
+                <h1 class="section-title text-center space-bottom">Formulario de contacto</h1>
 
                 @include('formularios.contacto_form')
                 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

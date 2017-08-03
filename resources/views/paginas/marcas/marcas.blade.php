@@ -41,8 +41,12 @@
           </div>
         </div>
 
-        <div class="row super-space-bottom hidden-xs">
+        <div class="row super-space-top space-bottom hidden-xs">
           <div class="col-sm-6 col-sm-push-6 space-bottom">
+            <div class="buscador wow fadeInRight">
+              <input type="text" class="buscador-input" placeholder="Buscar">
+              <a href=""><div class="buscador-boton"><h4 class="text-center"><span class="glyphicon glyphicon-search"></span></h4></div></a>
+            </div>
           </div>
         </div>
 
