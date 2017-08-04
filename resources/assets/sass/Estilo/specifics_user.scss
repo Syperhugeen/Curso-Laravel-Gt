@@ -12,6 +12,7 @@
   z-index: 10;
 }
 #section0 .decorative-divider,
+#section4 .decorative-divider,
 #marcas .decorative-divider,
 #eventos .decorative-divider,
 #contacto .decorative-divider{
@@ -21,9 +22,7 @@
 #section0 .decorative-divider{
   background-color: $color-3;
 }
-#section4 .decorative-divider{
-  margin-top: -18px;
-}
+
 /* colocar dentro de la col que no es special col, la que seria el Header */
 #marca-individual .decorative-divider{
   bottom: 0;

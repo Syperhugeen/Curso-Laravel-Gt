@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12 space-top">
         <h1 class="section-title text-center no-margin">Trayectoria</h1>
-        <h1 class="section-subtitle text-center no-margin"><span class="color-3 logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span> hoy</h1>
+        <h1 class="section-subtitle text-center no-margin"><span class="logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span> hoy</h1>
     </div>
 </div>
 
@@ -167,78 +167,74 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <!--para xs y sm-->
-<div class="row space-bottom hidden-md hidden-lg">
-
-    <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
-            <div class="puzzle-box-content-visible2 table-outer">
-                <img class="puzzle-img-responsive" src="imagenes/Img/icon_handshake(vanilla).png">
-            </div>
-            <div class="puzzle-box-content-hidden2 table-outer">
-                <h5>+200 clientes</h5>
-            </div>
-    </div>
-
-    <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
-            <div class="puzzle-box-content-visible1 table-outer">
-                <img class="puzzle-img-responsive" src="imagenes/Img/icon_team(080808).png">
-            </div>
-            <div class="puzzle-box-content-hidden1 table-outer">
-                <h5>+1500 promotoras contratadas</h5>
-            </div>
-    </div>
-
-    <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
-            <div>
-                <div class="puzzle-box-content-visible2 table-outer">
-                    <img class="puzzle-img-responsive" src="imagenes/Img/icon_calendar(vanilla).png">
+<div class="container-fluid">
+    <div class="row home-puzzle-responsive-design super-space-bottom hidden-md hidden-lg">
+        <div class="col-xs-12 space-top">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="imagenes/Img/icon_handshake(080808).png">
                 </div>
-                <div class="puzzle-box-content-hidden2 table-outer">
-                    <h5>+3000 acciones y eventos</h5>
+                <div class="col-xs-9">
+                    <h3 class="section-subtitle">+200 clientes</h3>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
-            <div>
-                <div class="puzzle-box-content-visible2 table-outer">
-                    <img class="puzzle-img-responsive" src="imagenes/Img/icon_graphics(vanilla).png">
+        <div class="col-xs-12 half-space-top">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="imagenes/Img/icon_team(080808).png">
                 </div>
-                <div class="puzzle-box-content-hidden2 table-outer">
-                    <h5>15 años de experiencia</h5>
-                </div>
-            </div>
-    </div>
-
-    <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
-            <div>
-                <div class="puzzle-box-content-visible1 table-outer">
-                    <img class="puzzle-img-responsive" src="imagenes/Img/icon_structure(080808).png">
-                </div>
-                <div class="puzzle-box-content-hidden1 table-outer">
-                    <h5>equipo de 15 profesionales</h5>
+                <div class="col-xs-9">
+                    <h3 class="section-subtitle">+1500 promotoras contratadas</h3>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <div class="col-xs-6 col-sm-4 space-top wow fadeInUp">
-            <div>
-                    <div class="puzzle-box-content-visible2 table-outer">
-                        <img class="puzzle-img-responsive" src="imagenes/Img/icon_world(vanilla).png">
-                    </div>
-                    <div class="puzzle-box-content-hidden2 table-outer">
-                        <h5>alcance internacional</h5>
-                    </div>
+        <div class="col-xs-12 half-space-top">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="imagenes/Img/icon_calendar(080808).png">
+                </div>
+                <div class="col-xs-9">
+                    <h3 class="section-subtitle">+3000 acciones y eventos</h3>
+                </div>
             </div>
-    </div>
+        </div>
 
+        <div class="col-xs-12 half-space-top">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="imagenes/Img/icon_graphics(080808).png">
+                </div>
+                <div class="col-xs-9">
+                    <h3 class="section-subtitle">15 años de experiencia</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 half-space-top">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="imagenes/Img/icon_structure(080808).png">
+                </div>
+                <div class="col-xs-9">
+                    <h3 class="section-subtitle">equipo de 15 profesionales</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 half-space-top">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="imagenes/Img/icon_world(080808).png">
+                </div>
+                <div class="col-xs-9">
+                    <h3 class="section-subtitle">alcance internacional</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

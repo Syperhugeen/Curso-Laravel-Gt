@@ -440,8 +440,7 @@ h1.section-title {
   text-align: justify; }
 
 #section3 h1.section-subtitle {
-  color: #cebe98;
-  text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 2px; }
+  color: #917e4b; }
 
 /*--- N O S O T R O S  text---*/
 #nosotros #mision-vision .section-text {
@@ -13537,7 +13536,7 @@ div.wrapper-portada > img.portada {
 
 /* B A C K G R O U N D   I M A G E  size: cover */
 .bg-home-puzzle {
-  background-image: url("../../imagenes/Img/bg-home-puzzle2.jpg");
+  background-image: url("../../imagenes/Img/bg-home-puzzle3.jpg");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13754,15 +13753,9 @@ como por ejemplo un carousel de imágenes de header---*/
 .special-col .ampliar span.glyphicon {
   color: #f1e7d2; }
 
-/* special-cols de home */
-#home #section4 .col-sm-6 .col-xs-12.special-col {
-  height: 400px; }
-
-#home #section4 .col-sm-6.special-col {
-  height: 800px; }
-
 /* special-cols de eventos */
-#eventos .special-col .col-sm-6 {
+#eventos .special-col .col-sm-6,
+#home #section4 .special-col .col-sm-6 {
   height: 400px;
   padding: 20px 60px;
   overflow: hidden; }
@@ -13811,6 +13804,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #evento-individual .special-col.special-col-img img.horizontal.img-main,
 #marca-individual .special-col.special-col-img img.horizontal.img-main,
 #eventos .special-col img.horizontal.img-main,
+#home #section4 .special-col img.horizontal.img-main,
 #servicios .special-col img.horizontal.img-main {
   min-height: 100%;
   height: auto;
@@ -13819,6 +13813,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #evento-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #marca-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #eventos .special-col img:not(.horizontal).img-main,
+#home #section4 .special-col img:not(.horizontal).img-main,
 #servicios .special-col img:not(.horizontal).img-main {
   height: auto;
   width: 100%;
@@ -13832,23 +13827,16 @@ como por ejemplo un carousel de imágenes de header---*/
   filter: none;
   -webkit-filter: grayscale(0%); }
 
-/* img de las special-cols de #home */
-#home #section4 .col-sm-6.special-col img.horizontal.img-main {
-  height: inherit;
-  width: auto; }
-
-#home #section4 .col-sm-6.special-col img:not(.horizontal).img-main {
-  height: auto;
-  width: 60vw; }
-
 /* para que se agranden un poquito on-hover */
 #eventos .special-col img.img-main,
+#home #section4 .special-col img.img-main,
 #marcas .special-col img.img-main,
 #marca-individual .special-col img.img-main,
 #servicios .special-col img.img-main {
   transition: transform 2s ease-in-out; }
 
 #eventos .special-col:hover img.img-main,
+#home #section4 .special-col:hover img.img-main,
 #marcas .special-col:hover img.img-main,
 #marca-individual .special-col:hover img.img-main,
 #servicios .special-col:hover img.img-main {
@@ -13857,15 +13845,12 @@ como por ejemplo un carousel de imágenes de header---*/
 /* altura de las special-cols responsive */
 @media (max-width: 767px) {
   #eventos .special-col .col-sm-6,
+  #home #section4 .special-col.col-sm-6,
   #servicios .special-col .col-sm-6,
   #contacto .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6 {
     height: 200px; }
-  #home #section4 .special-col.col-sm-6 {
-    height: 100px; }
-  #home #section4 .col-sm-6 .special-col.col-xs-12 {
-    height: 100px; }
   .special-col img {
     width: 100% !important;
     height: auto !important;
@@ -13874,6 +13859,7 @@ como por ejemplo un carousel de imágenes de header---*/
 /* padding de las special-cols responsive */
 @media (max-width: 991px) {
   #eventos .special-col .col-sm-6,
+  #home #section4 .special-col.col-sm-6,
   #servicios .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6,
@@ -14594,6 +14580,54 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
     height: 800px;
     animation-timing-function: ease; } }
 
+/* * *   RESPONSIVE PUZZLE SECTION   * * * */
+.row.home-puzzle-responsive-design .row {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.row.home-puzzle-responsive-design .col-xs-3 {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  background-color: #cebe98; }
+
+.row.home-puzzle-responsive-design .col-xs-9 {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -ms-flex-pack: left;
+  -moz-justify-content: left;
+  justify-content: left;
+  background-color: rgba(3, 3, 3, 0.7);
+  color: #cebe98; }
+
+@media (max-width: 449px) {
+  .row.home-puzzle-responsive-design .col-xs-3,
+  .row.home-puzzle-responsive-design .col-xs-9 {
+    padding: 15px; } }
+
+@media (min-width: 450px) and (max-width: 767px) {
+  .row.home-puzzle-responsive-design .col-xs-3,
+  .row.home-puzzle-responsive-design .col-xs-9 {
+    padding: 30px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .row.home-puzzle-responsive-design .col-xs-3,
+  .row.home-puzzle-responsive-design .col-xs-9 {
+    padding: 40px; } }
+
 /* * * * * * * * * * * * * * *    C S S   R I B B O N S    * * * * * * * * * * * * * * */
 /* * *   R I B B O N   * * *
 (css ribbons that use z-index)*/
@@ -14731,34 +14765,45 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   position: absolute;
   display: block;
   bottom: -1em;
-  border: 1.5em solid #5F021F;
+  border: 1.5em solid #2d010f;
   z-index: -1; }
 
 .ribbon:before {
   left: -2em;
   border-right-width: 1.5em;
-  border-left-color: transparent; }
+  border-left-color: transparent;
+  z-index: -1; }
 
 .ribbon:after {
   right: -2em;
   border-left-width: 1.5em;
-  border-right-color: transparent; }
+  border-right-color: transparent;
+  z-index: -1; }
 
 .ribbon .ribbon-contentenido:before, .ribbon .ribbon-contentenido:after {
   content: "";
   position: absolute;
   display: block;
   border-style: solid;
-  border-color: #2d010f transparent transparent transparent;
-  bottom: -1em; }
+  border-color: #5F021F transparent transparent transparent;
+  bottom: -1em;
+  z-index: -1; }
 
 .ribbon .ribbon-contentenido:before {
   left: 0;
-  border-width: 1em 0 0 1em; }
+  border-width: 1em 0 0 1em;
+  z-index: -1; }
 
 .ribbon .ribbon-contentenido:after {
   right: 0;
-  border-width: 1em 1em 0 0; }
+  border-width: 1em 1em 0 0;
+  z-index: -1; }
+
+/*especificacion responsive*/
+@media (max-width: 991px) {
+  .ribbon {
+    font-size: 16px !important;
+    width: 80%; } }
 
 /*   *   *   *    D  E  L  A  Y  S    *   *   *   */
 /* Delay for transformations, tienen que estar al final
@@ -15289,6 +15334,7 @@ para suplantar las duraciones originales leídas antes */
   z-index: 10; }
 
 #section0 .decorative-divider,
+#section4 .decorative-divider,
 #marcas .decorative-divider,
 #eventos .decorative-divider,
 #contacto .decorative-divider {
@@ -15297,9 +15343,6 @@ para suplantar las duraciones originales leídas antes */
 
 #section0 .decorative-divider {
   background-color: #cebe98; }
-
-#section4 .decorative-divider {
-  margin-top: -18px; }
 
 /* colocar dentro de la col que no es special col, la que seria el Header */
 #marca-individual .decorative-divider {
@@ -15875,8 +15918,7 @@ h1.section-title {
   text-align: justify; }
 
 #section3 h1.section-subtitle {
-  color: #cebe98;
-  text-shadow: rgba(255, 255, 255, 0.3) 0px 0px 2px; }
+  color: #917e4b; }
 
 /*--- N O S O T R O S  text---*/
 #nosotros #mision-vision .section-text {
