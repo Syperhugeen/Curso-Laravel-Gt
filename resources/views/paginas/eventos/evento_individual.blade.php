@@ -27,6 +27,11 @@
 
   <div class="row special-col no-padding">  
 
+    <div class="col-sm-6 special-col special-col-img no-padding">
+      <!-- solo la imagen principal -->
+      <img class="img-main" src="{{$Evento->url_img}}">
+    </div>
+
     <div class="col-sm-6 no-margin">
       <div class="table-outer">
         <div class="table-inner">
@@ -46,16 +51,11 @@
 		  </div>
     </div> 
 
-    <div class="col-sm-6 special-col special-col-img no-padding">
-      <!-- solo la imagen principal -->
-      <img class="img-main" src="{{$Evento->url_img}}">
-    </div>
-
   </div>
 
-
+  
     <div class="row">  
-      <div class="col-sm-12 special-col no-padding">
+      <div class="col-sm-12 no-padding bgcolor-2">
         <!-- todas las imagenes asociadas al evento -->
         <div class="thumbnail-gallery-parent">
           @foreach($Evento->imagenesevento as $img)
@@ -67,8 +67,16 @@
       </div>
     </div>
 
+
+
+
+
+
+
+
+
  
-    @if($Evento->marcasevento->count() > 0) 
+    @if($Evento->marcasevento->count() > 1) 
       @foreach($Evento->marcasevento as $Marca)
       <!-- ver más todos los eventos de esta misma marca (link a estamarca.blade.php) --> 
     	<div class="row"><!-- ver más / ampliar / explorar -->
@@ -77,7 +85,7 @@
     					<h5 class="ampliar text-center">
 
                  <!-- logo de la marca -->
-                 <span class="glyphicon glyphicon-triangle-right"></span> ver todos los eventos relacionados a {{$Marca->marca->name}}
+                 <span class="glyphicon glyphicon-triangle-right"></span> ver todos los eventos y promociones asociados a {{$Marca->marca->name}}
 
               </h5>
     				</a>
@@ -87,18 +95,24 @@
     @endif
 
 
+
+
+
+
+
+
+
     <!-- ver el listado completo de eventos (link a eventos.blade.php) -->
   	<div class="row"><!-- ver más / ampliar / explorar -->
   		<div class="col-xs-12 special-col">
   				<a href="{{route('get_pagina_eventos')}}">
-  					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver listado completo de eventos</h5>
+  					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver listado completo de eventos y promociones</h5>
   				</a>
   		</div>
   	</div>
 
 
   </div>
-
 
 </div>
 

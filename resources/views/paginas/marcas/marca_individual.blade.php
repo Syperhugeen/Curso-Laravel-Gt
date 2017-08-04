@@ -22,13 +22,13 @@
 
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper no-padding bgcolor-3light">
+<div class="container-fluid section-wrapper no-padding bgcolor-white">
 
 {{-- contiene hasta diez eventos como máximo --}}
   <div class="row">
 
     <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
-      <h1 class="text-center">Eventos y promociones asociados a {{$Marca->name}}</h1>
+      <h1 class="section-title text-center">Eventos y promociones asociados a {{$Marca->name}}</h1>
       <div class="table-outer">
         <div class="table-inner">
           <div class="inline-logos">
@@ -55,7 +55,7 @@
     <div class="row special-col no-padding">
         
       <div class="col-sm-6 no-padding eventos-imagen">
-        <img class="img-greyscale img-main" src="{{$Evento->evento->url_img}}">
+        <img class="img-main" src="{{$Evento->evento->url_img}}">
       </div>
           
       <div class="col-sm-6 no-margin">

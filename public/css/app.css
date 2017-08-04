@@ -13753,15 +13753,9 @@ como por ejemplo un carousel de imágenes de header---*/
 .special-col .ampliar span.glyphicon {
   color: #f1e7d2; }
 
-/* special-cols de home */
-#home #section4 .col-sm-6 .col-xs-12.special-col {
-  height: 400px; }
-
-#home #section4 .col-sm-6.special-col {
-  height: 800px; }
-
 /* special-cols de eventos */
-#eventos .special-col .col-sm-6 {
+#eventos .special-col .col-sm-6,
+#home #section4 .special-col .col-sm-6 {
   height: 400px;
   padding: 20px 60px;
   overflow: hidden; }
@@ -13810,6 +13804,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #evento-individual .special-col.special-col-img img.horizontal.img-main,
 #marca-individual .special-col.special-col-img img.horizontal.img-main,
 #eventos .special-col img.horizontal.img-main,
+#home #section4 .special-col img.horizontal.img-main,
 #servicios .special-col img.horizontal.img-main {
   min-height: 100%;
   height: auto;
@@ -13818,6 +13813,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #evento-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #marca-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #eventos .special-col img:not(.horizontal).img-main,
+#home #section4 .special-col img:not(.horizontal).img-main,
 #servicios .special-col img:not(.horizontal).img-main {
   height: auto;
   width: 100%;
@@ -13831,23 +13827,16 @@ como por ejemplo un carousel de imágenes de header---*/
   filter: none;
   -webkit-filter: grayscale(0%); }
 
-/* img de las special-cols de #home */
-#home #section4 .col-sm-6.special-col img.horizontal.img-main {
-  height: inherit;
-  width: auto; }
-
-#home #section4 .col-sm-6.special-col img:not(.horizontal).img-main {
-  height: auto;
-  width: 60vw; }
-
 /* para que se agranden un poquito on-hover */
 #eventos .special-col img.img-main,
+#home #section4 .special-col img.img-main,
 #marcas .special-col img.img-main,
 #marca-individual .special-col img.img-main,
 #servicios .special-col img.img-main {
   transition: transform 2s ease-in-out; }
 
 #eventos .special-col:hover img.img-main,
+#home #section4 .special-col:hover img.img-main,
 #marcas .special-col:hover img.img-main,
 #marca-individual .special-col:hover img.img-main,
 #servicios .special-col:hover img.img-main {
@@ -13856,14 +13845,11 @@ como por ejemplo un carousel de imágenes de header---*/
 /* altura de las special-cols responsive */
 @media (max-width: 767px) {
   #eventos .special-col .col-sm-6,
+  #home #section4 .special-col.col-sm-6,
   #servicios .special-col .col-sm-6,
   #contacto .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6 {
-    height: 200px; }
-  #home #section4 .special-col.col-sm-6 {
-    height: 200px; }
-  #home #section4 .col-sm-6 .special-col.col-xs-12 {
     height: 200px; }
   .special-col img {
     width: 100% !important;
@@ -13873,6 +13859,7 @@ como por ejemplo un carousel de imágenes de header---*/
 /* padding de las special-cols responsive */
 @media (max-width: 991px) {
   #eventos .special-col .col-sm-6,
+  #home #section4 .special-col.col-sm-6,
   #servicios .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6,
@@ -15347,6 +15334,7 @@ para suplantar las duraciones originales leídas antes */
   z-index: 10; }
 
 #section0 .decorative-divider,
+#section4 .decorative-divider,
 #marcas .decorative-divider,
 #eventos .decorative-divider,
 #contacto .decorative-divider {
@@ -15355,9 +15343,6 @@ para suplantar las duraciones originales leídas antes */
 
 #section0 .decorative-divider {
   background-color: #cebe98; }
-
-#section4 .decorative-divider {
-  margin-top: -18px; }
 
 /* colocar dentro de la col que no es special col, la que seria el Header */
 #marca-individual .decorative-divider {

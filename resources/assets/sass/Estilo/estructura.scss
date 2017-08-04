@@ -499,16 +499,10 @@ $special-col-altura:400px;
 }
 
 
-/* special-cols de home */
-#home #section4 .col-sm-6 .col-xs-12.special-col{
-  height: $special-col-altura;
-}
-#home #section4 .col-sm-6.special-col{
-  height: $special-col-altura * 2;
-}
 
 /* special-cols de eventos */
-#eventos .special-col .col-sm-6{
+#eventos .special-col .col-sm-6,
+#home #section4 .special-col .col-sm-6,{
   height: $special-col-altura;
   padding: $special-col-padding;
   overflow: hidden;
@@ -558,6 +552,7 @@ $special-col-altura:400px;
 #evento-individual .special-col.special-col-img img.horizontal.img-main,
 #marca-individual .special-col.special-col-img img.horizontal.img-main,
 #eventos .special-col img.horizontal.img-main,
+#home #section4 .special-col img.horizontal.img-main,
 #servicios .special-col img.horizontal.img-main{
   min-height:100%;
   height:auto;
@@ -566,6 +561,7 @@ $special-col-altura:400px;
 #evento-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #marca-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #eventos .special-col img:not(.horizontal).img-main,
+#home #section4 .special-col img:not(.horizontal).img-main,
 #servicios .special-col img:not(.horizontal).img-main{
   height:auto;
   width:100%; /* testeando con 100%, antes era 60vw */
@@ -578,17 +574,10 @@ $special-col-altura:400px;
   filter: none;
   -webkit-filter: grayscale(0%);
 }
-/* img de las special-cols de #home */
-#home #section4 .col-sm-6.special-col img.horizontal.img-main{
-  height:inherit;
-  width:auto;
-}
-#home #section4 .col-sm-6.special-col img:not(.horizontal).img-main{
-  height:auto;
-  width:60vw;
-}
+
 /* para que se agranden un poquito on-hover */
 #eventos .special-col img.img-main,
+#home #section4 .special-col img.img-main,
 #marcas .special-col img.img-main,
 #marca-individual .special-col img.img-main,
 #servicios .special-col img.img-main {
@@ -596,6 +585,7 @@ $special-col-altura:400px;
   transition: transform 2s ease-in-out;
 }
 #eventos .special-col:hover img.img-main,
+#home #section4 .special-col:hover img.img-main,
 #marcas .special-col:hover img.img-main,
 #marca-individual .special-col:hover img.img-main,
 #servicios .special-col:hover img.img-main {
@@ -607,14 +597,11 @@ $special-col-altura:400px;
 /* altura de las special-cols responsive */
 @media (max-width:767px) {
   #eventos .special-col .col-sm-6,
+  #home #section4 .special-col.col-sm-6,
   #servicios .special-col .col-sm-6,
   #contacto .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6{
-    height: $special-col-altura / 2;}
-  #home #section4 .special-col.col-sm-6{
-    height: $special-col-altura / 2;}
-  #home #section4 .col-sm-6 .special-col.col-xs-12{
     height: $special-col-altura / 2;}
   .special-col img{
     width:100% !important;
@@ -625,6 +612,7 @@ $special-col-altura:400px;
 /* padding de las special-cols responsive */
 @media (max-width:991px) {
   #eventos .special-col .col-sm-6,
+  #home #section4 .special-col.col-sm-6,
   #servicios .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6,
