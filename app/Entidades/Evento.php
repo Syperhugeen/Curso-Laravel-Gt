@@ -105,6 +105,10 @@ class Evento extends Model
          return   $text;  
     }
 
+    public function getFechaDeRealizacionAttribute()
+    {
+         return \Carbon\Carbon::parse($this->fecha);  
+    }
      
     
 }

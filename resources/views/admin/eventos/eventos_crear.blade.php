@@ -37,6 +37,11 @@
         <div class="contenedor-grupo-datos-titulo"> Datos</div>
         <div class="contenedor-formulario-label-fiel">                       
           @include('admin.eventos.formularios_partes.datos_basicos')
+          {{-- fecha del evento --}}
+         <div class="formulario-label-fiel">
+          {!! Form::label('fecha', 'Fecha', array('class' => 'formulario-label ')) !!}
+          {!! Form::date('fecha',\Carbon\Carbon::now()) !!}          
+        </div>
         </div>
       </div>
 

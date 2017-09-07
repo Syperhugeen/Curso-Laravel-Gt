@@ -10,10 +10,6 @@
                                            'row'    => '8' ]) !!}
 </div>
 
-<div class="formulario-label-fiel">
-  {!! Form::label('fecha', 'Fecha', array('class' => 'formulario-label ')) !!}
-  {!! Form::text('fecha', null ,['class' => 'formulario-field']) !!}
-</div>
 
 <div class="formulario-label-fiel">
   {!! Form::label('ubicacion', 'Ubicación', array('class' => 'formulario-label ')) !!}

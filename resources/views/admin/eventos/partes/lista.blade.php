@@ -9,7 +9,7 @@
    <div class="admin-marca-contnedor-datos">
     
     <div>
-     <div class="admin-marca-fecha">{{$Evento->created_at->format('d-m-Y')}}</div>     
+     <div class="admin-marca-fecha">{{$Evento->fecha_de_realizacion->format('d-m-Y')}}</div>     
      <div class="admin-marca-titulo"> {{$Evento->name}}      </div>
     </div>
      
