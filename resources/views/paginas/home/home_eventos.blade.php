@@ -1,6 +1,6 @@
 <div class="row bgcolor-white space-bottom">
 	<div class="col-md-8 col-md-push-2 space-top">
-	  <h2 class="section-title text-center">Recientes eventos y promociones destacados</h2>
+	  <h2 class="section-title text-center">Recientes lanzamientos</h2>
 	</div>
 
 	<!--flecha guía hacia abajo (indicando que hay más contenido)-->

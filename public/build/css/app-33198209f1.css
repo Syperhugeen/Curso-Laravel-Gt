@@ -82,10 +82,10 @@
   background: #080808; }
 
 .color-2light {
-  color: #3b3b3b !important; }
+  color: #4e4e4e !important; }
 
 .bgcolor-2light {
-  background: #3b3b3b; }
+  background: #4e4e4e; }
 
 .color-3 {
   color: #cebe98; }
@@ -285,7 +285,7 @@ h2 {
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
@@ -404,7 +404,7 @@ h1.section-title {
 .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
-  color: #3b3b3b;
+  color: #4e4e4e;
   text-align: justify;
   padding-bottom: 20px; }
 
@@ -436,7 +436,7 @@ h1.section-title {
 #section1 .home-service-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
-  color: #3b3b3b;
+  color: #4e4e4e;
   text-align: justify; }
 
 #section3 h1.section-subtitle {
@@ -514,7 +514,7 @@ h1.section-title {
 #servicios #servicios-listado .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
-  color: #3b3b3b;
+  color: #4e4e4e;
   text-align: left;
   padding: 0; }
 
@@ -604,17 +604,17 @@ h1.section-title {
 
 #contacto #contacto-datos .glyphicon,
 #contacto #contacto-datos .socicon {
-  color: #917e4b;
+  color: #cebe98;
   padding-right: 10px; }
 
 #contacto #contacto-datos h3,
 #contacto #contacto-datos h4 {
-  color: #3b3b3b;
+  color: #4e4e4e;
   padding-top: 10px; }
 
 #contacto #contacto-datos a:hover h3,
 #contacto #contacto-datos a:hover h4 {
-  color: #808080; }
+  color: #cebe98; }
 
 #contacto #contacto-datos a:hover h3 .socicon,
 #contacto #contacto-datos a:hover h4 .socicon {
@@ -653,14 +653,14 @@ h1.section-title {
 
 /* color de los renglones que tienen glyphicons */
 #footer .col-md-4 h5 {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 #footer .col-md-4 a h5:hover {
   color: #917e4b; }
 
 /* color de la información que está abajo */
 #footer .col-md-6 h4, #footer .col-md-6 h5 {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 #footer .col-md-6 h4 a, #footer .col-md-6 h5 a {
   color: #917e4b; }
@@ -13362,10 +13362,10 @@ ul.bxslider {
   background: #080808; }
 
 .color-2light {
-  color: #3b3b3b !important; }
+  color: #4e4e4e !important; }
 
 .bgcolor-2light {
-  background: #3b3b3b; }
+  background: #4e4e4e; }
 
 .color-3 {
   color: #cebe98; }
@@ -13544,7 +13544,7 @@ div.wrapper-portada > img.portada {
 
 .bg-home-service {
   background-color: white;
-  background-image: url("../../imagenes/Img/bg-home-servicios2.jpg");
+  background-image: url("../../imagenes/Img/bg-home-servicios3.jpg");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: left bottom; }
@@ -13571,7 +13571,7 @@ div.wrapper-portada > img.portada {
   background-color: white; }
 
 .bg-servicios-diferencial {
-  background-image: url("../../imagenes/Img/bg-servicios-diferencial.jpg");
+  background-image: url("../../imagenes/Img/bg-servicios-diferencial2.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13605,6 +13605,15 @@ div.wrapper-portada > img.portada {
   background-size: cover;
   background-color: white; }
 
+.bg-home-header {
+  background-image: url("../../imagenes/Img/bg-home-header-new.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  height: 80vh;
+  width: 100%; }
+
 /* backgrounds responsive changes */
 @media (max-width: 767px) {
   .bg-home-service {
@@ -13619,7 +13628,7 @@ div.wrapper-portada > img.portada {
   .bg-servicios-listado {
     background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
   .bg-servicios-diferencial {
-    background-image: url("../../imagenes/Img/bg-servicios-diferencial(responsive).jpg"); }
+    background-image: url("../../imagenes/Img/bg-servicios-diferencial(responsive)2.jpg"); }
   .bg-marcas-header {
     background-image: url("../../imagenes/Img/bg-marcas-header(responsive).jpg"); }
   .bg-eventos-header {
@@ -13699,7 +13708,7 @@ como por ejemplo un carousel de imágenes de header---*/
   border-bottom: 2px solid #f1e7d2; }
 
 .special-col {
-  background-color: #cebe98;
+  background-color: white;
   padding: 20px 60px;
   border: 1px solid #f1e7d2;
   overflow: hidden; }
@@ -13709,10 +13718,10 @@ como por ejemplo un carousel de imágenes de header---*/
   /*para que el decorative-divider no quede mitad oculto*/ }
 
 .special-col:hover {
-  background-color: #decdab; }
+  background-color: #f8f8f8; }
 
 .special-col-fake {
-  background-color: #cebe98;
+  background-color: white;
   padding: 20px 60px;
   border: 1px solid #f1e7d2; }
 
@@ -13742,16 +13751,16 @@ como por ejemplo un carousel de imágenes de header---*/
   color: #917e4b; }
 
 .special-col .quote:before {
-  color: #f1e7d2; }
+  color: #decdab; }
 
 .special-col .quote:after {
-  color: #f1e7d2; }
+  color: #decdab; }
 
 .special-col .ampliar:hover {
-  color: #f8f1e3; }
+  color: #cebe98; }
 
 .special-col .ampliar span.glyphicon {
-  color: #f1e7d2; }
+  color: #decdab; }
 
 /* special-cols de eventos */
 #eventos .special-col .col-sm-6,
@@ -13922,7 +13931,7 @@ como por ejemplo un carousel de imágenes de header---*/
   height: 400px; }
 
 #contacto #contacto-datos .special-col-fake:hover {
-  background-color: #decdab; }
+  background-color: #f8f8f8; }
 
 @media (min-width: 767px) {
   #contacto #contacto-datos .special-col-fake {
@@ -13935,7 +13944,7 @@ como por ejemplo un carousel de imágenes de header---*/
 .buscador {
   display: block;
   text-align: center;
-  float: right;
+  float: center;
   height: 40px; }
 
 .buscador .buscador-boton {
@@ -13952,7 +13961,7 @@ como por ejemplo un carousel de imágenes de header---*/
 .buscador .buscador-input {
   display: inline-block;
   background-color: #080808;
-  color: #3b3b3b;
+  color: #4e4e4e;
   width: 80px;
   margin: 0;
   padding: 10px;
@@ -14324,7 +14333,7 @@ ul.text-slide a:hover li h4 {
   background-color: #080808; }
 
 .puzzle-box-content-hidden2 {
-  background-color: #3b3b3b; }
+  background-color: #4e4e4e; }
 
 .puzzle-box-content-visible1, .puzzle-box-content-hidden1, .puzzle-box-content-visible2, .puzzle-box-content-hidden2 {
   text-align: center;
@@ -14346,13 +14355,13 @@ ul.text-slide a:hover li h4 {
 .puzzle-responsive-top-text .row .col-xs-6 .puzzle-responsive-top-text-col {
   padding: 15px;
   height: 100%;
-  background: #3b3b3b; }
+  background: #4e4e4e; }
 
 .puzzle-box-content-hidden2 h5 {
   color: #cebe98; }
 
 .puzzle-box-content-hidden1 h5 {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 /* para centrar verticalmente el elemento (h5 en este caso) que está dentro de estos divs
  (requiere que previamente se le haya dado formato de display:table a los contenedores) */
@@ -14541,7 +14550,7 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #3b3b3b;
+  background: #4e4e4e;
   overflow: hidden; }
 
 .puzzle-left-col-content {
@@ -14878,7 +14887,7 @@ para suplantar las duraciones originales leídas antes */
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
   border-color: #cebe98;
-  background-image: url("../../imagenes/Img/navbar-rays-of-light.jpg");
+  /*background-image: url('../../imagenes/Img/navbar-rays-of-light.jpg');*/
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15091,11 +15100,11 @@ para suplantar las duraciones originales leídas antes */
     position: absolute; } }
 
 .navbar-logo {
-  height: 50px; }
+  height: 44px; }
 
 @media (min-width: 768px) {
   .navbar-logo {
-    height: 65px; } }
+    height: 54px; } }
 
 /*--- para CENTRAR el contenido de la NAVBAR ---*/
 @media (min-width: 768px) {
@@ -15143,7 +15152,7 @@ para suplantar las duraciones originales leídas antes */
   color: #decdab; }
 
 .user-menu h6 a {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 .user-menu h6 a:hover {
   color: #cebe98; }
@@ -15275,7 +15284,7 @@ para suplantar las duraciones originales leídas antes */
 
 #admin-col-admin,
 #admin-col-superadmin {
-  border-bottom: 1px solid #3b3b3b; }
+  border-bottom: 1px solid #4e4e4e; }
 
 .admin-columna-contenedor ul {
   margin-top: 40px; }
@@ -15287,7 +15296,7 @@ para suplantar las duraciones originales leídas antes */
   color: #f1e7d2; }
 
 .admin-columna-contenedor a li:not(.Helper-Class-Active) span {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 .admin-columna-contenedor a li:not(.Helper-Class-Active):hover span {
   color: #808080; }
@@ -15309,7 +15318,7 @@ para suplantar las duraciones originales leídas antes */
 
 .admin-columna-contenedor a li.admin-columna-li.mi-float-right.Helper-Class-Active span {
   color: #808080;
-  text-shadow: 0 0 5px #3b3b3b, 0 0 10px #3b3b3b; }
+  text-shadow: 0 0 5px #4e4e4e, 0 0 10px #4e4e4e; }
 
 .admin-columna-contenedor #admin-col-superadmin a li,
 .admin-columna-contenedor #admin-col-admin a li {
@@ -15472,7 +15481,8 @@ escritura de código)---*/
 
 /*--- brands carousel (home)---*/
 .logos-carousel-col {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #080808; }
 
 /*asignar esta clase a un div insertado dentro de una columna*/
 /*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
@@ -15554,7 +15564,7 @@ img.marca-col {
   color: #917e4b; }
 
 .mision-vision h4 {
-  color: #3b3b3b;
+  color: #4e4e4e;
   text-align: justify; }
 
 .mision-vision h4 span.glyphicon {
@@ -15565,33 +15575,33 @@ img.marca-col {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  ---   C O N T A C T O    ---  */
 #contacto .quote {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 /*  contact form */
 #contacto #contacto-form .form-control {
-  background-color: #f1e7d2;
-  color: #917e4b;
+  background-color: white;
+  color: #4e4e4e;
   border: none;
   border-radius: 0; }
 
 #contacto #contacto-form .form-control:focus {
-  border-color: #808080;
+  border-color: #b3b3b3;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(248, 241, 227, 0.6); }
 
 #contacto #contacto-form .form-control::-moz-placeholder {
-  color: #cebe98;
+  color: #b3b3b3;
   opacity: 1; }
 
 #contacto #contacto-form .form-control:-ms-input-placeholder {
-  color: #cebe98; }
+  color: #b3b3b3; }
 
 #contacto #contacto-form .form-control::-webkit-input-placeholder {
-  color: #cebe98; }
+  color: #b3b3b3; }
 
 #contacto #contacto-form .form-control::-ms-expand {
   background-color: transparent;
-  border: 1px solid #917e4b; }
+  border: 1px solid #cebe98; }
 
 #contacto #contacto-form .has-error .help-block,
 #contacto #contacto-form .has-error .control-label,
@@ -15603,23 +15613,23 @@ img.marca-col {
 #contacto #contacto-form .has-error.checkbox label,
 #contacto #contacto-form .has-error.radio-inline label,
 #contacto #contacto-form .has-error.checkbox-inline label {
-  color: #080808; }
+  color: white; }
 
 #contacto #contacto-form .has-error .form-control {
-  border-color: #080808;
+  border-color: #cebe98;
   box-shadow: none; }
 
 #contacto #contacto-form .has-error .form-control:focus {
-  border-color: #080808;
+  border-color: #cebe98;
   box-shadow: none, none; }
 
 #contacto #contacto-form .has-error .input-group-addon {
-  color: #3b3b3b;
+  color: #cebe98;
   background-color: #808080;
-  border-color: #3b3b3b; }
+  border-color: #4e4e4e; }
 
 #contacto #contacto-form .has-error .form-control-feedback {
-  color: #3b3b3b; }
+  color: #cebe98; }
 
 #contacto #contacto-form .has-success .help-block,
 #contacto #contacto-form .has-success .control-label,
@@ -15642,16 +15652,16 @@ img.marca-col {
   box-shadow: none, none; }
 
 #contacto #contacto-form .has-success .input-group-addon {
-  color: #f1e7d2;
-  background-color: #f8f1e3;
+  color: #808080;
+  background-color: white;
   border-color: #f1e7d2; }
 
 #contacto #contacto-form .has-success .form-control-feedback {
   color: #f1e7d2; }
 
 #contacto #contacto-form label {
-  color: #cebe98;
-  background-color: #080808;
+  color: #917e4b;
+  background-color: #cebe98;
   letter-spacing: 2px;
   margin-bottom: 0;
   padding: 6px;
@@ -15693,17 +15703,17 @@ img.marca-col {
 /*--- líneas divisorias del footer ---*/
 @media (max-width: 991px) {
   .footer-line {
-    border-bottom: 1px solid #3b3b3b;
+    border-bottom: 1px solid #4e4e4e;
     margin: 15px; } }
 
 @media (min-width: 992px) {
   .footer-line {
-    border-right: 1px solid #3b3b3b; } }
+    border-right: 1px solid #4e4e4e; } }
 
 /*--- pequeña línea divisoria que divide el copyright del autor de la web ---*/
 @media (min-width: 992px) {
   .footer-line2 {
-    border-right: 1px solid #3b3b3b; } }
+    border-right: 1px solid #4e4e4e; } }
 
 #footer .col-md-4 {
   height: 200px; }
@@ -15763,7 +15773,7 @@ h2 {
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
@@ -15882,7 +15892,7 @@ h1.section-title {
 .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
-  color: #3b3b3b;
+  color: #4e4e4e;
   text-align: justify;
   padding-bottom: 20px; }
 
@@ -15914,7 +15924,7 @@ h1.section-title {
 #section1 .home-service-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
-  color: #3b3b3b;
+  color: #4e4e4e;
   text-align: justify; }
 
 #section3 h1.section-subtitle {
@@ -15992,7 +16002,7 @@ h1.section-title {
 #servicios #servicios-listado .section-text h4 {
   font-family: HelveticaNoue37Thin;
   letter-spacing: 2px;
-  color: #3b3b3b;
+  color: #4e4e4e;
   text-align: left;
   padding: 0; }
 
@@ -16082,17 +16092,17 @@ h1.section-title {
 
 #contacto #contacto-datos .glyphicon,
 #contacto #contacto-datos .socicon {
-  color: #917e4b;
+  color: #cebe98;
   padding-right: 10px; }
 
 #contacto #contacto-datos h3,
 #contacto #contacto-datos h4 {
-  color: #3b3b3b;
+  color: #4e4e4e;
   padding-top: 10px; }
 
 #contacto #contacto-datos a:hover h3,
 #contacto #contacto-datos a:hover h4 {
-  color: #808080; }
+  color: #cebe98; }
 
 #contacto #contacto-datos a:hover h3 .socicon,
 #contacto #contacto-datos a:hover h4 .socicon {
@@ -16131,14 +16141,14 @@ h1.section-title {
 
 /* color de los renglones que tienen glyphicons */
 #footer .col-md-4 h5 {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 #footer .col-md-4 a h5:hover {
   color: #917e4b; }
 
 /* color de la información que está abajo */
 #footer .col-md-6 h4, #footer .col-md-6 h5 {
-  color: #3b3b3b; }
+  color: #4e4e4e; }
 
 #footer .col-md-6 h4 a, #footer .col-md-6 h5 a {
   color: #917e4b; }

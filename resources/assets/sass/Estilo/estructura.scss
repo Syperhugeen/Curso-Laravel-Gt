@@ -187,7 +187,7 @@ div.wrapper-portada>img.portada{
 }
 .bg-home-service {
   background-color: white;
-  background-image: url("../../imagenes/Img/bg-home-servicios2.jpg");
+  background-image: url("../../imagenes/Img/bg-home-servicios3.jpg");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -214,7 +214,7 @@ div.wrapper-portada>img.portada{
   background-color: $color-white;
 }
 .bg-servicios-diferencial{
-  background-image: url('../../imagenes/Img/bg-servicios-diferencial.jpg');
+  background-image: url('../../imagenes/Img/bg-servicios-diferencial2.jpg');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -248,6 +248,15 @@ div.wrapper-portada>img.portada{
   background-size: cover;
   background-color: $color-white;
 }
+.bg-home-header{
+  background-image: url('../../imagenes/Img/bg-home-header-new.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+  height: 80vh;
+  width: 100%;
+}
 
 /* backgrounds responsive changes */
 @media (max-width:767px) {
@@ -263,7 +272,7 @@ div.wrapper-portada>img.portada{
   .bg-servicios-listado {
     background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
   .bg-servicios-diferencial {
-    background-image: url('../../imagenes/Img/bg-servicios-diferencial(responsive).jpg');}
+    background-image: url('../../imagenes/Img/bg-servicios-diferencial(responsive)2.jpg');}
   .bg-marcas-header {
     background-image: url('../../imagenes/Img/bg-marcas-header(responsive).jpg');}
   .bg-eventos-header {
@@ -444,7 +453,7 @@ $special-col-altura:400px;
 }
 
 .special-col{
-  background-color: $color-3;
+  background-color: $color-white;
   padding: $special-col-padding;
   border: 1px solid $color-3superlight;
   overflow:hidden;
@@ -453,10 +462,10 @@ $special-col-altura:400px;
   overflow: visible; /*para que el decorative-divider no quede mitad oculto*/
 }
 .special-col:hover{
-  background-color: $color-3light;
+  background-color: $color-grey0;
 }
 .special-col-fake{
-  background-color: $color-3;
+  background-color: $color-white;
   padding: $special-col-padding;
   border: 1px solid $color-3superlight;
 }
@@ -486,16 +495,16 @@ $special-col-altura:400px;
   color:$color-3dark;
 }
 .special-col .quote:before{
-  color:$color-3superlight;
+  color:$color-3light;
 }
 .special-col .quote:after{
-  color:$color-3superlight;
+  color:$color-3light;
 }
 .special-col .ampliar:hover {
-  color: $color-3hyperlight;
+  color: $color-3;
 }
 .special-col .ampliar span.glyphicon{
-  color: $color-3superlight;
+  color: $color-3light;
 }
 
 
@@ -671,7 +680,7 @@ $special-col-altura:400px;
   height: 400px;
 }
 #contacto #contacto-datos .special-col-fake:hover{
-  background-color: $color-3light;
+  background-color: $color-grey0;
 }
 @media (min-width:767px) {
   #contacto #contacto-datos .special-col-fake{
@@ -703,7 +712,7 @@ $special-col-altura:400px;
 .buscador{
   display: block;
   text-align: center;
-  float: right;
+  float: center;
   height: 40px;
 }
 .buscador .buscador-boton{

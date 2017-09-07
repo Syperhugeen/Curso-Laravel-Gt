@@ -55,7 +55,7 @@
         <h5 class="footer-title">síguenos</h5>
 
         <a href="https://www.facebook.com/GLOBALTARGET/" target="_blank" alt="Global Target social media"><h5><span class="socicon socicon-facebook"></span> /globaltarget</h5></a>
-        <a href="https://instme.com/profile/globaltarget_agencia" target="_blank" alt="Global Target social media"><h5><span class="socicon socicon-instagram"></span> /globaltarget_agencia</h5> </a>
+        <a href="https://www.instagram.com/agencia_globaltarget/" target="_blank" alt="Global Target social media"><h5><span class="socicon socicon-instagram"></span> /agencia_globaltarget</h5> </a>
         <a href="https://www.linkedin.com/company/agencia-global-target" target="_blank" alt="Global Target social media"><h5><span class="socicon socicon-linkedin"></span> /agencia-global-target</h5></a>
       </div></div>
 

@@ -26,11 +26,12 @@
   <div class="row" id="servicios-intro">
 
     <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
-      <h1 class="section-title text-center">Servicios</h1>
-      <h2 class="section-subtitle text-center">Ofrecemos soluciones adaptadas a las necesidades de cada cliente.</h2>
+      <!--<h1 class="section-title text-center">Servicios</h1>-->
+      <!--<h2 class="section-subtitle text-center">Ofrecemos soluciones adaptadas a las necesidades de cada cliente.</h2>-->
       <div class="non-semantic-protector">
         <h1 class="ribbon"> 
-          <span class="ribbon-contenido">Superar sus expectativas es nuestro objetivo principal.</span>
+          <!--<span class="ribbon-contenido">Superar sus expectativas es nuestro objetivo principal.</span>-->
+          <span class="ribbon-contenido">Ofrecemos soluciones adaptadas a sus necesidades.</span>
         </h1>
       </div>
 
@@ -39,7 +40,7 @@
          <div class="row">
             <div class="col-sm-6 special-col">
                 <a class="smoothScroll" href="#servicios-listado">
-                <h4>listado</h4>
+                <h4>servicios</h4>
                 </a>
             </div>
             <div class="col-sm-6 special-col">
@@ -82,36 +83,36 @@
                   <h1 class="section-title super-space-top">Personal</h1>
                   <h3 class="section-subtitle">Personal de reposición para todo el país. Selección y captación de personal vía fotográfica o en directo.</h3>
                   <div class="section-text">
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Actores y actrices para campañas y comerciales</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Azafatas de eventos</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Bartenders profesionales</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Maquilladoras y cosmetólogas</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Modelos publicitarias</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Modelos de pasarela</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Promovendedoras</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Actores y actrices para campañas y comerciales</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Azafatas de eventos</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Bartenders profesionales</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Maquilladoras y cosmetólogas</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Modelos publicitarias</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Modelos de pasarela</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Promovendedoras</h4>
                   </div>
 
 
                   <h1 class="section-title super-space-top">Entrenamiento</h1>
                   <div class="section-text">
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Asesoría en actitúd laboral</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Asesoramiento técnico y de imagen</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Selección y capacitación de personal tercerizado</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Yoga laboral</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Asesoría en actitúd laboral</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Asesoramiento técnico y de imagen</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Selección y capacitación de personal tercerizado</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Yoga laboral</h4>
                   </div>
 
 
 
                   <h1 class="section-title super-space-top">Organización</h1>
                   <div class="section-text space-bottom">
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Campañas de publicidad directas</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Contratación de personal zafral capacitado para acciones a término</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Diseño y confección de uniformes</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Diseño y producción de stands, folletería, banners, ploteos, etc.</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Organización de fiestas y eventos</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Reactivación de marcas</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Recepción, traslados y óptima coordinación de actividades con clientes del exterior</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Redacción de informes destinados a marcas con presencia local</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Campañas de publicidad directas</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Contratación de personal zafral capacitado para acciones a término</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Diseño y confección de uniformes</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Diseño y producción de stands, folletería, banners, ploteos, etc.</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Organización de fiestas y eventos</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Reactivación de marcas</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Recepción, traslados y óptima coordinación de actividades con clientes del exterior</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Redacción de informes destinados a marcas con presencia local</h4>
                   </div>
             </div>
       </div>
@@ -150,18 +151,18 @@
                   </div>
 
                   <div class="section-text space-bottom">
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Confianza generada a partir de más de diez años de trayectoria ininterrumpida, forjada a partir del trabajo contínuo con organizaciones de distintos tamaños, tanto en nuestro país como en el exterior.</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Amplio conocimiento del mercado local y regional</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Personal con formación académica y conocimiento de idiomas (inglés y portugués)</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Capacitación constante a todo el personal</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Staff capacitado para suplencias, de acuerdo al perfil buscado</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Estricto cumplimiento de contratos y normas vigente</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Vasta experiencia en publicidad directa y acciones promocionales</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Atención personalizada: calidez y contacto directo con cada uno de nuestros clientes</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Flexibilidad organizacional, que permite la rápida adaptación ante cualquier eventualidad o cambio solicitado por el cliente</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Seguimiento constante, con el objetivo de generar el mejor clima laboral</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>Miembros de la Asociación de Marketing Promocional del Uruguay (AMPRO)</h4>
-                  <h4><small><span class="glyphicon glyphicon-ok"></span></small>En proceso de certificación de calidad</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Confianza generada a partir de más de diez años de trayectoria ininterrumpida, forjada a partir del trabajo contínuo con organizaciones de distintos tamaños, tanto en nuestro país como en el exterior.</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Amplio conocimiento del mercado local y regional</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Personal con formación académica y conocimiento de idiomas (inglés y portugués)</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Capacitación constante a todo el personal</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Staff capacitado para suplencias, de acuerdo al perfil buscado</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Estricto cumplimiento de contratos y normas vigente</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Vasta experiencia en publicidad directa y acciones promocionales</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Atención personalizada: calidez y contacto directo con cada uno de nuestros clientes</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Flexibilidad organizacional, que permite la rápida adaptación ante cualquier eventualidad o cambio solicitado por el cliente</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Seguimiento constante, con el objetivo de generar el mejor clima laboral</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Miembros de la Asociación de Marketing Promocional del Uruguay (AMPRO)</h4>
+                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>En proceso de certificación de calidad</h4>
                   </div>
                 </div>
 

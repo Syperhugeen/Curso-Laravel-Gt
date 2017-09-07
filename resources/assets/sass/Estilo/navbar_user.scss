@@ -31,7 +31,7 @@
 /*--- COLORES NAVBAR Y LINKS ---*/
 .navbar-default {
   border-color: $color-3;
-  background-image: url('../../imagenes/Img/navbar-rays-of-light.jpg');
+  /*background-image: url('../../imagenes/Img/navbar-rays-of-light.jpg');*/
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -289,10 +289,10 @@ border: 0px solid $color-3;
 }}
 
 .navbar-logo{
-height: 50px;
+height: 44px;
 }
 @media (min-width: 768px) {.navbar-logo{
-height: 65px;
+height: 54px;
 }}
 
 
