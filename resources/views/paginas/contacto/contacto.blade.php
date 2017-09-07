@@ -32,10 +32,11 @@
     <div class="container-fluid no-padding section-wrapper bg-contacto-header">
 
       <div class="container-fluid" id="contacto-header">
-        <div class="row space-bottom">
+        <div class="row super-space-top super-space-bottom">
             <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
-            <h1 class="text-center section-title">Ponte en contacto</h1>
-            <h2 class="text-center quote super-space-bottom">Su satisfacción es nuestro objetivo; superar sus expectativas, nuestro deber.</h2>
+            <div class="super-space-top"><img class="home-isologo center-block" src="imagenes/Empresa/isologo_color3.png"></div>
+            <!--<h1 class="text-center section-title">Ponte en contacto</h1>-->
+            <h2 class="text-center quote space-bottom">Su satisfacción es nuestro objetivo;<br>superar sus expectativas, nuestro deber.</h2>
 
           </div> 
         </div>

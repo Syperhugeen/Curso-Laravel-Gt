@@ -31,26 +31,17 @@
 
 <!--para agregar los márgenes laterales-->
 <div class="section-wrapper bg-eventos-header" id="eventos-header">
-  <div class="container-fluid">
+  <div class="container-fluid super-space-bottom">
     <div class="row super-space-bottom space-top">
         <div class="col-md-8 col-md-push-3 col-lg-8 col-lg-push-2">
 
 
         <div class="row super-space-bottom">
           <div class="col-sm-6 col-sm-push-6">
-            <h1 class="section-title">Galería</h1>
+            <!--<h1 class="section-title">Galería</h1>-->
             <h2 class="section-subtitle">Acciones y eventos destacados</h2>
-            <div class="section-text">
+            <div class="section-text super-space-bottom">
               <h3>Reseñas e imágenes de acciones promocionales y eventos transcurridos a lo largo de estos 15 años de crecimiento en conjunto con nuestros clientes.</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="row super-space-top space-bottom hidden-xs">
-          <div class="col-sm-6 col-sm-push-6 space-bottom">
-            <div class="buscador wow fadeInRight">
-              <input type="text" class="buscador-input" placeholder="Buscar">
-              <a href=""><div class="buscador-boton"><h4 class="text-center"><span class="glyphicon glyphicon-search"></span></h4></div></a>
             </div>
           </div>
         </div>
@@ -62,6 +53,22 @@
     </div> <!--/ fin del row-->
   </div>
 </div>
+
+
+<!--para agregar los márgenes laterales-->
+<div class="section-wrapper bgcolor-3 hr-border-top-pegado" id="eventos-buscador">
+  <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="buscador wow fadeInRight">
+              <input type="text" class="buscador-input" placeholder="Buscar">
+              <a href=""><div class="buscador-boton"><h4 class="text-center"><span class="glyphicon glyphicon-search"></span></h4></div></a>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
 
 
 
