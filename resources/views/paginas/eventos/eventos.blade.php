@@ -31,7 +31,7 @@
 
 <!--para agregar los márgenes laterales-->
 <div class="section-wrapper bg-eventos-header" id="eventos-header">
-  <div class="container-fluid super-space-bottom">
+  <div class="container-fluid">
     <div class="row super-space-bottom space-top">
         <div class="col-md-8 col-md-push-3 col-lg-8 col-lg-push-2">
 
@@ -47,25 +47,22 @@
         </div>
 
 
-
-<!--fin de los márgenes laterales-->
-       </div> <!--/ fin de la col-->
-    </div> <!--/ fin del row-->
-  </div>
-</div>
-
-
-<!--para agregar los márgenes laterales-->
-<div class="section-wrapper bgcolor-3 hr-border-top-pegado" id="eventos-buscador">
-  <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <div class="buscador wow fadeInRight">
-              <input type="text" class="buscador-input" placeholder="Buscar">
+        <div class="row super-space-top space-bottom hidden-xs">
+          <div class="col-sm-6 col-sm-push-6 space-bottom">
+            <div>
+              <h4 class="buscador-predescription">¿Buscas los eventos relacionados a una marca en particular?</h4>
+            </div>
+            <div class="buscador wow fadeInRight" id="eventos-buscador">
+              <input type="text" class="buscador-input" placeholder="Escribe el nombre aquí">
               <a href=""><div class="buscador-boton"><h4 class="text-center"><span class="glyphicon glyphicon-search"></span></h4></div></a>
             </div>
           </div>
         </div>
+
+
+<!--fin de los márgenes laterales-->
+       </div> <!--/ fin de la col-->
+    </div> <!--/ fin del row-->
   </div>
 </div>
 

@@ -715,6 +715,20 @@ $special-col-altura:400px;
   float: center;
   height: 40px;
 }
+#eventos #eventos-buscador.buscador{
+  float: left;
+}
+#eventos .buscador-predescription{
+  color: $color-3;
+  text-align: left;
+}
+#marcas #marcas-buscador.buscador{
+  float: right;
+}
+#marcas .buscador-predescription{
+  color: $color-2;
+  text-align: right;
+}
 .buscador .buscador-boton{
   display: inline-block;
   background-color: $color-2semilight;
@@ -752,8 +766,6 @@ $special-col-altura:400px;
 .buscador .buscador-boton:hover h4 .glyphicon{
   color: $color-3superlight;
 }
-
-
 
 
 
@@ -820,8 +832,6 @@ $special-col-altura:400px;
 /* P R E L O A D I N G   O N - H O V E R   I M A G E S  to speed up the effect */
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1000;
-    content:url('../../imagenes/Img/icon_service_models(light).png')
-            url('../../imagenes/Img/icon_service_promotions(light).png')
-            url('../../imagenes/Img/icon_service_events(light).png')
-            url('../../imagenes/Empresa/isologo_dark.png');
+    content:url('../../imagenes/Img/bg-home-header-new.jpg')
+            url('../../imagenes/Empresa/isologo_golden_bright_big.png');
 }

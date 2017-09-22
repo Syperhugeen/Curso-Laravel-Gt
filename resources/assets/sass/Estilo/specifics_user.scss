@@ -497,12 +497,21 @@ img.marca-col{
 @media (max-width: 991px){
 .footer-line{
     border-bottom: 1px solid $color-2light;
-    margin: 15px;
 }}
 @media (min-width: 992px){
   .footer-line{
     border-right: 1px solid $color-2light;
 }}
+
+
+/*--- última línea divisoria del footer (que sólo divide verticalmente) ---*/
+.footer-line3{
+}
+@media (max-width: 991px){
+.footer-line3{
+    border-bottom: 1px solid $color-2light;
+}}
+
 
 /*--- pequeña línea divisoria que divide el copyright del autor de la web ---*/
 .footer-line2{
@@ -511,22 +520,12 @@ img.marca-col{
   .footer-line2{
   border-right: 1px solid $color-2light;
 }}
-#footer .col-md-4{
-  height: $altura-footer-columns;
+
+/*--- padding vertical del isologo para que coincida con la altura de los titles ---*/
+.footer-isologo-container{
+  padding: 10px 0;
 }
-.isologo_container{
-  padding: 0px;
-}
-.isologo{
-  width: 100%;
-  height: $altura-footer-columns;
-}
-#footer .col-md-4 .isologo{
-  background-image: url("../../imagenes/Empresa/isologo_golden_bright_big.png");
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: right top;
-}
-#footer .column-container{
-  padding: 0px 40px;
-}
+
+@media (min-width: 992px) and (max-width: 1150px){.footer-col-height{
+  height: 200px;
+  }}

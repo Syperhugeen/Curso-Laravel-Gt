@@ -41,21 +41,29 @@ p {
 }
 h1 { /*usar para título único por página*/
 color:$color-3dark;
+font-family: HelveticaNoue37Thin;
 }
 h2 { /*usar para títulos de las dif. secciones de cada página*/
 color:$color-3dark;
+font-family: HelveticaNoue37Thin;
 }
 h3 { /*usar para títulos de cada bloque de párrafo*/
 color:$color-2light;
+font-family: HelveticaNoue37Thin;
+letter-spacing: 1px;
 }
 h4 { /*usar para párrafos cortos de alta relevancia*/
 color:$color-2;
+font-family: HelveticaNoue37Thin;
+letter-spacing: 1px;
 }
 h5 { /*usar para items o nombres puntuales que no son textos largos*/
 color:$color-2;
+font-family: HelveticaNoue;
 }
 h6 { /*usar para algún texto especial, de tamaño menor que los p*/
 color:$color-2;
+font-family: HelveticaNoue;
 }
 
 /*para que el cursor no se transforme en selector de texto*/
@@ -490,6 +498,11 @@ h1.section-title{
 #footer .col-md-6 h4 a:hover, #footer .col-md-6 h5 a:hover{
   color: $color-3;
 }
+@media (max-width: 991px){
+#footer .footer-responsive-vertical-space{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}}
 
 
 
