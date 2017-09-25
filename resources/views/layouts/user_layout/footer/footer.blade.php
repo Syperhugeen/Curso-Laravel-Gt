@@ -1,18 +1,18 @@
+<div class="container-fluid section-wrapper-footer bgcolor-2" id="footer">
+  <div class="row">
+    <div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 
 
 
 
-
-
-<div class="container-fluid" id="footer">
 
    <!-- primer row (el de los links de contacto y síguenos)-->
    <div class="row">
 
     <!-- columna del isologo -->
     <div class="col-md-4 footer-line hidden-xs hidden-sm footer-col-height" style="text-align:right;">
-      <div class="footer-isologo-container">
-        <img class="img-responsive" src="imagenes/Empresa/isologo_golden_bright_big.png">
+      <div class="footer-isologo-container footer-col-height">
+        <img class="img-responsive footer-isologo" src="imagenes/Empresa/isologo_golden_bright_big.png">
       </div>
     </div>
 
@@ -64,7 +64,7 @@
 
 
   <!-- segundo row (copyright y diseñado por)-->
-  <div class="row footer-responsive-vertical-space">
+  <div class="row footer-responsive-vertical-space footer-last-row">
 
 
       <div class="col-md-6 footer-line2" style="text-align:right;">
@@ -82,8 +82,9 @@
 
 
 
-</div>
-        
+    </div>
+  </div>
+</div>      
 
 
 

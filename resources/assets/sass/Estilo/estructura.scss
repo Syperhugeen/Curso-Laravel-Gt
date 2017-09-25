@@ -88,10 +88,11 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding-top:$padding-section-wrapper;
   padding-bottom:$padding-section-wrapper;
 }
+@media (min-width: 992px){
 .section-wrapper-footer{ /*envolvente sólo para el footer, con menor padding abajo*/
   padding-top:$padding-section-wrapper;
   padding-bottom:$padding-section-wrapper / 2;
-}
+}}
 /*---para agregarle espaciado entre rows o items acorde a mi criterio (¡no aplicar a sections, porque ya tienen padding)---*/
 .space-top{
   padding-top:$padding-section-wrapper;

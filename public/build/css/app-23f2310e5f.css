@@ -13490,10 +13490,11 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding-top: 40px;
   padding-bottom: 40px; }
 
-.section-wrapper-footer {
-  /*envolvente sólo para el footer, con menor padding abajo*/
-  padding-top: 40px;
-  padding-bottom: 20px; }
+@media (min-width: 992px) {
+  .section-wrapper-footer {
+    /*envolvente sólo para el footer, con menor padding abajo*/
+    padding-top: 40px;
+    padding-bottom: 20px; } }
 
 /*---para agregarle espaciado entre rows o items acorde a mi criterio (¡no aplicar a sections, porque ya tienen padding)---*/
 .space-top {
@@ -15748,12 +15749,27 @@ img.marca-col {
 
 /*--- padding vertical del isologo para que coincida con la altura de los titles ---*/
 .footer-isologo-container {
-  display: block;
-  padding: 10px 0; }
+  padding: 10px 0;
+  width: 100%;
+  right: 0; }
 
-@media (min-width: 992px) and (max-width: 1150px) {
+.footer-isologo-container .footer-isologo {
+  display: block;
+  float: right;
+  width: auto;
+  max-height: 100%;
+  right: 0; }
+
+@media (min-width: 992px) {
   .footer-col-height {
-    height: 200px; } }
+    height: 200px; }
+  .footer-last-row {
+    padding-top: 20px; } }
+
+@media (min-width: 1440px) {
+  .col-md-4 {
+    padding-left: 40px;
+    padding-right: 40px; } }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * * * * *   G L O B A L    T E X T   S E T T I N G S   * * * * * *

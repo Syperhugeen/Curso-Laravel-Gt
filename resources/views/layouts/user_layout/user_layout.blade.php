@@ -53,14 +53,8 @@
 
 
 
-          <div class="container-fluid section-wrapper-footer bgcolor-2">
-            <div class="row">    
-              <div class="col-md-10 col-md-push-1">
-
+          <div>
              @include('layouts.user_layout.footer.footer')
-
-              </div>  
-            </div>
           </div>
 
       </div>

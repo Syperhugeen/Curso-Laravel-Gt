@@ -524,8 +524,31 @@ img.marca-col{
 /*--- padding vertical del isologo para que coincida con la altura de los titles ---*/
 .footer-isologo-container{
   padding: 10px 0;
+  width: 100%;
+  right: 0;
+}
+.footer-isologo-container .footer-isologo{
+display: block;
+float: right;
+width: auto;
+max-height: 100%;
+right: 0;
 }
 
-@media (min-width: 992px) and (max-width: 1150px){.footer-col-height{
+.footer-col-height{
+}
+@media (min-width: 992px){
+  .footer-col-height{
   height: 200px;
-  }}
+  }
+ .footer-last-row{
+  padding-top: 20px;
+  }
+}
+
+@media (min-width: 1440px){
+  .col-md-4{
+  padding-left: 40px;
+  padding-right: 40px;
+  }
+}
