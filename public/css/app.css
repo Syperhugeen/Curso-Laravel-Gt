@@ -277,27 +277,35 @@ p {
 
 h1 {
   /*usar para título único por página*/
-  color: #917e4b; }
+  color: #917e4b;
+  font-family: HelveticaNoue37Thin; }
 
 h2 {
   /*usar para títulos de las dif. secciones de cada página*/
-  color: #917e4b; }
+  color: #917e4b;
+  font-family: HelveticaNoue37Thin; }
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #4e4e4e; }
+  color: #4e4e4e;
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 1px; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #080808; }
+  color: #080808;
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 1px; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #080808; }
+  color: #080808;
+  font-family: HelveticaNoue; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #080808; }
+  color: #080808;
+  font-family: HelveticaNoue; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -623,6 +631,9 @@ h1.section-title {
 #contacto #contacto-header h1.section-title {
   color: #f1e7d2; }
 
+.contacto-mapa-texto-negrita {
+  font-family: HelveticaNoue; }
+
 /* T E X T  F O O T E R */
 /* color general */
 #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
@@ -667,6 +678,11 @@ h1.section-title {
 
 #footer .col-md-6 h4 a:hover, #footer .col-md-6 h5 a:hover {
   color: #cebe98; }
+
+@media (max-width: 991px) {
+  #footer .footer-responsive-vertical-space {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------*/
@@ -13477,10 +13493,11 @@ al container-fluid que adentro contiene los rows y las columns que agregan los m
   padding-top: 40px;
   padding-bottom: 40px; }
 
-.section-wrapper-footer {
-  /*envolvente sólo para el footer, con menor padding abajo*/
-  padding-top: 40px;
-  padding-bottom: 20px; }
+@media (min-width: 992px) {
+  .section-wrapper-footer {
+    /*envolvente sólo para el footer, con menor padding abajo*/
+    padding-top: 40px;
+    padding-bottom: 20px; } }
 
 /*---para agregarle espaciado entre rows o items acorde a mi criterio (¡no aplicar a sections, porque ya tienen padding)---*/
 .space-top {
@@ -13947,6 +13964,20 @@ como por ejemplo un carousel de imágenes de header---*/
   float: center;
   height: 40px; }
 
+#eventos #eventos-buscador.buscador {
+  float: left; }
+
+#eventos .buscador-predescription {
+  color: #cebe98;
+  text-align: left; }
+
+#marcas #marcas-buscador.buscador {
+  float: right; }
+
+#marcas .buscador-predescription {
+  color: #080808;
+  text-align: right; }
+
 .buscador .buscador-boton {
   display: inline-block;
   background-color: #2e2e2e;
@@ -14020,7 +14051,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1000;
-  content: url("../../imagenes/Img/icon_service_models(light).png") url("../../imagenes/Img/icon_service_promotions(light).png") url("../../imagenes/Img/icon_service_events(light).png") url("../../imagenes/Empresa/isologo_dark.png"); }
+  content: url("../../imagenes/Img/bg-home-header-new.jpg") url("../../imagenes/Empresa/isologo_golden_bright_big.png"); }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* * * * * * * - - - - - - -                           B O T O N E S                                - - - - - - -  * * * * * * * */
@@ -14813,6 +14844,43 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   .ribbon {
     font-size: 16px !important;
     width: 80%; } }
+
+/*   *   *   *    S o c i a l   M e d i a   W i d g e t    *   *   *   */
+.social-media-widget {
+  position: fixed;
+  right: -220px;
+  top: 30vh;
+  z-index: 100;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.social-media-widget .social-media-item {
+  background-color: #cebe98;
+  padding: 10px 20px;
+  border-bottom: solid 1px #917e4b; }
+
+.social-media-widget .social-media-item h3 {
+  color: #808080;
+  padding: 0;
+  margin: 0; }
+
+.social-media-widget .social-media-item h3 .socicon {
+  color: #917e4b;
+  padding-right: 10px; }
+
+.social-media-widget .social-media-item:hover h3 .socicon {
+  color: #cebe98; }
+
+.social-media-widget .social-media-item:hover {
+  background-color: #f1e7d2; }
+
+.social-media-widget .social-media-item.social-media-item-top {
+  border-top-left-radius: 10px; }
+
+.social-media-widget .social-media-item.social-media-item-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom: none; }
 
 /*   *   *   *    D  E  L  A  Y  S    *   *   *   */
 /* Delay for transformations, tienen que estar al final
@@ -15703,36 +15771,45 @@ img.marca-col {
 /*--- líneas divisorias del footer ---*/
 @media (max-width: 991px) {
   .footer-line {
-    border-bottom: 1px solid #4e4e4e;
-    margin: 15px; } }
+    border-bottom: 1px solid #4e4e4e; } }
 
 @media (min-width: 992px) {
   .footer-line {
     border-right: 1px solid #4e4e4e; } }
+
+/*--- última línea divisoria del footer (que sólo divide verticalmente) ---*/
+@media (max-width: 991px) {
+  .footer-line3 {
+    border-bottom: 1px solid #4e4e4e; } }
 
 /*--- pequeña línea divisoria que divide el copyright del autor de la web ---*/
 @media (min-width: 992px) {
   .footer-line2 {
     border-right: 1px solid #4e4e4e; } }
 
-#footer .col-md-4 {
-  height: 200px; }
-
-.isologo_container {
-  padding: 0px; }
-
-.isologo {
+/*--- padding vertical del isologo para que coincida con la altura de los titles ---*/
+.footer-isologo-container {
+  padding: 10px 0;
   width: 100%;
-  height: 200px; }
+  right: 0; }
 
-#footer .col-md-4 .isologo {
-  background-image: url("../../imagenes/Empresa/isologo_golden_bright_big.png");
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: right top; }
+.footer-isologo-container .footer-isologo {
+  display: block;
+  float: right;
+  width: auto;
+  max-height: 100%;
+  right: 0; }
 
-#footer .column-container {
-  padding: 0px 40px; }
+@media (min-width: 992px) {
+  .footer-col-height {
+    height: 200px; }
+  .footer-last-row {
+    padding-top: 20px; } }
+
+@media (min-width: 1440px) {
+  .col-md-4 {
+    padding-left: 40px;
+    padding-right: 40px; } }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * * * * *   G L O B A L    T E X T   S E T T I N G S   * * * * * *
@@ -15765,27 +15842,35 @@ p {
 
 h1 {
   /*usar para título único por página*/
-  color: #917e4b; }
+  color: #917e4b;
+  font-family: HelveticaNoue37Thin; }
 
 h2 {
   /*usar para títulos de las dif. secciones de cada página*/
-  color: #917e4b; }
+  color: #917e4b;
+  font-family: HelveticaNoue37Thin; }
 
 h3 {
   /*usar para títulos de cada bloque de párrafo*/
-  color: #4e4e4e; }
+  color: #4e4e4e;
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 1px; }
 
 h4 {
   /*usar para párrafos cortos de alta relevancia*/
-  color: #080808; }
+  color: #080808;
+  font-family: HelveticaNoue37Thin;
+  letter-spacing: 1px; }
 
 h5 {
   /*usar para items o nombres puntuales que no son textos largos*/
-  color: #080808; }
+  color: #080808;
+  font-family: HelveticaNoue; }
 
 h6 {
   /*usar para algún texto especial, de tamaño menor que los p*/
-  color: #080808; }
+  color: #080808;
+  font-family: HelveticaNoue; }
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
@@ -16111,6 +16196,9 @@ h1.section-title {
 #contacto #contacto-header h1.section-title {
   color: #f1e7d2; }
 
+.contacto-mapa-texto-negrita {
+  font-family: HelveticaNoue; }
+
 /* T E X T  F O O T E R */
 /* color general */
 #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
@@ -16155,6 +16243,11 @@ h1.section-title {
 
 #footer .col-md-6 h4 a:hover, #footer .col-md-6 h5 a:hover {
   color: #cebe98; }
+
+@media (max-width: 991px) {
+  #footer .footer-responsive-vertical-space {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
 
 /* ------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------*/
