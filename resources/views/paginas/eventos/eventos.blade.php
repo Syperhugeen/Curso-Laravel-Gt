@@ -31,7 +31,7 @@
 
 <!--para agregar los márgenes laterales-->
 <div class="section-wrapper bg-eventos-header" id="eventos-header">
-  <div class="container-fluid super-space-bottom">
+  <div class="container-fluid">
     <div class="row super-space-bottom space-top">
         <div class="col-md-8 col-md-push-3 col-lg-8 col-lg-push-2">
 
@@ -48,21 +48,19 @@
 
 
 
-<!--fin de los márgenes laterales-->
-       </div> <!--/ fin de la col-->
-    </div> <!--/ fin del row-->
-  </div>
-</div>
 
 
 <!--para agregar los márgenes laterales-->
 <div class="section-wrapper bgcolor-3 hr-border-top-pegado" id="eventos-buscador">
   <div class="container-fluid">
-        <div class="row">
-          
-            @include('paginas.eventos.partes.select_buscador')
-          
+        <div class="row">          
+            @include('paginas.eventos.partes.select_buscador')    
+
         </div>
+
+<!--fin de los márgenes laterales-->
+       </div> <!--/ fin de la col-->
+    </div> <!--/ fin del row-->
   </div>
 </div>
 
