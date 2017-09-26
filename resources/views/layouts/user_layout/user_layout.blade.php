@@ -44,6 +44,32 @@
 
       <div class="global-wrapper">
 
+         <!-- social media right widget -->
+        <div class="social-media-widget wow fadeInRight delay2 hidden-xs">
+          
+            <a href="https://www.facebook.com/GLOBALTARGET/" target="_blank" alt="Global Target social media">
+              <div class="social-media-item social-media-item-top">
+                <h3><span class="socicon socicon-facebook"></span> /globaltarget</h3>
+              </div>
+            </a>
+          
+          
+            <a href="https://www.instagram.com/agencia_globaltarget/" target="_blank" alt="Global Target social media">
+              <div class="social-media-item">
+                <h3><span class="socicon socicon-instagram"></span> /agencia_globaltarget</h3>
+              </div>
+            </a>
+          
+          
+            <a href="https://www.linkedin.com/company/agencia-global-target" target="_blank" alt="Global Target social media">
+              <div class="social-media-item social-media-item-bottom">
+                <h3><span class="socicon socicon-linkedin"></span> /agencia-global-target</h3>
+              </div>  
+            </a>
+          
+        </div>
+
+
            @include('layouts.user_layout.navbar.navbar')
 
            <div>

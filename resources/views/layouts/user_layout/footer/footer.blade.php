@@ -7,6 +7,7 @@
 
 
    <!-- primer row (el de los links de contacto y síguenos)-->
+   <div class="container-fluid">
    <div class="row">
 
     <!-- columna del isologo -->
@@ -58,7 +59,7 @@
 
 
   </div>
-
+ </div>
 
 
 

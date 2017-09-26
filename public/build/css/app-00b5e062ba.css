@@ -631,6 +631,9 @@ h1.section-title {
 #contacto #contacto-header h1.section-title {
   color: #f1e7d2; }
 
+.contacto-mapa-texto-negrita {
+  font-family: HelveticaNoue; }
+
 /* T E X T  F O O T E R */
 /* color general */
 #footer p, #footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
@@ -14842,6 +14845,43 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
     font-size: 16px !important;
     width: 80%; } }
 
+/*   *   *   *    S o c i a l   M e d i a   W i d g e t    *   *   *   */
+.social-media-widget {
+  position: fixed;
+  right: -220px;
+  top: 30vh;
+  z-index: 100;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.social-media-widget .social-media-item {
+  background-color: #cebe98;
+  padding: 10px 20px;
+  border-bottom: solid 1px #917e4b; }
+
+.social-media-widget .social-media-item h3 {
+  color: #808080;
+  padding: 0;
+  margin: 0; }
+
+.social-media-widget .social-media-item h3 .socicon {
+  color: #917e4b;
+  padding-right: 10px; }
+
+.social-media-widget .social-media-item:hover h3 .socicon {
+  color: #cebe98; }
+
+.social-media-widget .social-media-item:hover {
+  background-color: #f1e7d2; }
+
+.social-media-widget .social-media-item.social-media-item-top {
+  border-top-left-radius: 10px; }
+
+.social-media-widget .social-media-item.social-media-item-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom: none; }
+
 /*   *   *   *    D  E  L  A  Y  S    *   *   *   */
 /* Delay for transformations, tienen que estar al final
 para suplantar las duraciones originales leídas antes */
@@ -16155,6 +16195,9 @@ h1.section-title {
 
 #contacto #contacto-header h1.section-title {
   color: #f1e7d2; }
+
+.contacto-mapa-texto-negrita {
+  font-family: HelveticaNoue; }
 
 /* T E X T  F O O T E R */
 /* color general */

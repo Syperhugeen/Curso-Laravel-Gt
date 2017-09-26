@@ -98,25 +98,60 @@
 </div>
 
 
-<!--para agregar los márgenes laterales-->
-<div class="section-wrapper bg-contacto-formulario">
-  <div class="container-fluid">
-    <div class="row space-bottom space-top" id="contacto-formulario">
-        <div class="col-md-8 col-md-push-2 col-lg-6 col-lg-push-3 space-top">
 
-                <h1 class="section-title text-center space-bottom">Formulario de contacto</h1>
 
-                @include('formularios.contacto_form')
-                
+
+
+    <!--para agregar los márgenes laterales-->
+    <div class="section-wrapper bg-contacto-formulario">
+      <div class="container-fluid">
+        <div class="row space-bottom space-top" id="contacto-formulario">
+            <div class="col-md-8 col-md-push-2 col-lg-6 col-lg-push-3 space-top">
+
+                    <h1 class="section-title text-center space-bottom">Formulario de contacto</h1>
+
+                    @include('formularios.contacto_form')
+                    
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 
 
 
+    <!--para agregar los márgenes laterales-->
+    <div class="section-wrapper special-col no-margin no-padding">
+      <div class="container-fluid">
+        <div class="row space-bottom space-top" id="contacto-mapa">
+          <div class="col-md-8 col-md-push-2 col-lg-6 col-lg-push-3 space-top">
+
+            <h1 class="section-title text-center space-bottom">Nuestra oficina</h1>
+              <div class="row space-bottom space-top">
+                <div class="col-md-4">
+                  <div>
+                   <h4 class="color-2light">Puedes encontrarnos en:</h4>
+                   <h4 class="color-3 contacto-mapa-texto-negrita"><span class="glyphicon glyphicon-map-marker"></span> Punta Carretas - Montevideo, Uruguay</h4>
+                   </div>
+                   <div class="hr-border-top-pegado">
+                     <h3>Bulevar Artigas 76, esquina Héctor Miranda<br>(Torre A - Oficina 302, Golf Tower's)</h3>
+                   </div>
+                </div>
+
+             
+              <div class="col-md-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7780.706513329086!2d-56.16507737661393!3d-34.92190253851426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f819c496366d5%3A0xcf28002ebeb53842!2sBulevar+General+Artigas+%26+Dr+H%C3%A9ctor+Miranda%2C+11200+Montevideo!5e0!3m2!1ses!2suy!4v1506380541374" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+
+                    
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
   </div>
 </div>
 
