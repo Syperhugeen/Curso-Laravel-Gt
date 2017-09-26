@@ -51,7 +51,7 @@
 
 
 <!--para agregar los márgenes laterales-->
-<div class="section-wrapper bgcolor-3 hr-border-top-pegado" id="eventos-buscador">
+<div class="section-wrapper {{-- bgcolor-3 hr-border-top-pegado --}}" id="eventos-buscador">
   <div class="container-fluid">
         <div class="row">          
             @include('paginas.eventos.partes.select_buscador')    
