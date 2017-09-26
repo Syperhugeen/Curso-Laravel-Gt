@@ -13,7 +13,7 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass(['mixer.scss'])
-       .version(['css/app.css']);
+       .version(['css/app.css']); 
 
     mix.scripts([
         'Plug-jquery-1.11.3.min.js',        
@@ -34,6 +34,7 @@ elixir(function(mix) {
         'Plug-texarea-Te_v1.js',
         'Plug-bootstrap-fileinput v4.3.7.js',
         'Plug-slick.min.js',
+        'Plug-image-dropdown.js',
         'inicio.js',
         'mis-animations.js',
         'mis-funciones_personalizadas.js',

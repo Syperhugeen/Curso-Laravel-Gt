@@ -27,6 +27,11 @@ class Marca_de_eventoRepo extends BaseRepo
     $Marca_Evento->save();
   }
 
+  public function getMarca_de_eventoDeEstaMarca($id_marca)
+  {
+    return $this->getEntidad()->where('marca_id',$id_marca)->get();
+  }
+
 
   //setters//////////////////////////////////////////////////////////////////////
 

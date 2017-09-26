@@ -59,12 +59,9 @@
 <div class="section-wrapper bgcolor-3 hr-border-top-pegado" id="eventos-buscador">
   <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-12 text-center">
-            <div class="buscador wow fadeInRight">
-              <input type="text" class="buscador-input" placeholder="Buscar">
-              <a href=""><div class="buscador-boton"><h4 class="text-center"><span class="glyphicon glyphicon-search"></span></h4></div></a>
-            </div>
-          </div>
+          
+            @include('paginas.eventos.partes.select_buscador')
+          
         </div>
   </div>
 </div>

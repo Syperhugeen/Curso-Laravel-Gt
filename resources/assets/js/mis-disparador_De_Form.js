@@ -4,3 +4,15 @@ DispararForm('.admin-boton-editar',$('#form-admin-empresa-datos'));
 DispararForm('.admin-boton-editar',$('#form-admin-img-home-subir'));
 
 DispararForm('.boton-subir-img',$('#form-admin-subir-img-proyectos'));
+
+
+
+  // buscador de eventos por marca
+  $('body').on('change','#select_marcas_en_evento',function(e)
+  {
+   e.preventDefault();   
+
+   var form  = $(this).parents() ;  
+   form.submit();
+  });
+

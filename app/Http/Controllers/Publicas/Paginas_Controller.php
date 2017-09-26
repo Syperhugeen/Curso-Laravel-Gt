@@ -70,8 +70,29 @@ class Paginas_Controller extends Controller
     //pagina donde estan los eventos de esa
     public function get_pagina_eventos(Request $Request)
     {
-        $Eventos = $this->EventoRepo->getEntidadActivasPaginadas($Request,10);
-        return view('paginas.eventos.eventos', compact('Eventos'));
+        if($Request->get('select_marcas_en_evento') != '' && ($Request->get('select_marcas_en_evento') != null))
+        {
+            $Eventos = [];
+
+            //traigo los eventos de esta marca
+            $MarcaEventos = $this->Marca_de_eventoRepo->getMarca_de_eventoDeEstaMarca($Request->get('select_marcas_en_evento'));
+            
+            //busco los eventos y los cargo al array
+            foreach($MarcaEventos as $MarcaEvento)
+            {
+                array_push($Eventos,$this->EventoRepo->find($MarcaEvento->evento_id));
+            }
+        }
+        else
+        {
+            $Eventos = $this->EventoRepo->getEntidadActivasPaginadas($Request,10);
+        }
+        
+        
+        $Marcas  = $this->MarcaRepo->getEntidadActivas();
+
+
+        return view('paginas.eventos.eventos', compact('Eventos','Marcas'));
     }
         //pagina de evento individual
         public function get_pagina_evento_individual($name,$id,Request $Request)
