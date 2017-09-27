@@ -140,7 +140,7 @@
 
              
               <div class="col-md-8">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7780.706513329086!2d-56.16507737661393!3d-34.92190253851426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f819c496366d5%3A0xcf28002ebeb53842!2sBulevar+General+Artigas+%26+Dr+H%C3%A9ctor+Miranda%2C+11200+Montevideo!5e0!3m2!1ses!2suy!4v1506380541374" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.1610895724957!2d-56.16182242515406!3d-34.927496693088095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81acab8b9b8d%3A0xd869188814a91175!2sGlobal+Target!5e0!3m2!1ses-419!2s!4v1506548621039" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
             </div>
 
