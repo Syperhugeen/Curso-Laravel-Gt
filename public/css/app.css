@@ -14403,60 +14403,43 @@ como por ejemplo un carousel de imágenes de header---*/
 /* * *      B U S C A D O R  (input)     * * *  */
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 .buscador {
-  display: block;
-  text-align: center;
-  float: center;
-  height: 40px; }
-
-#eventos #eventos-buscador.buscador {
-  float: left; }
+  padding: 0;
+  margin: 0; }
 
 #eventos .buscador-predescription {
   color: #cebe98;
   text-align: left; }
-
-#marcas #marcas-buscador.buscador {
-  float: right; }
 
 #marcas .buscador-predescription {
   color: #080808;
   text-align: right; }
 
 .buscador .buscador-boton {
-  display: inline-block;
   background-color: #2e2e2e;
   color: #cebe98;
-  margin: 0;
-  height: 100%; }
-
-.buscador .buscador-boton:hover {
-  background-color: #2e2e2e;
-  color: #f1e7d2; }
-
-.buscador .buscador-input {
-  display: inline-block;
-  background-color: #080808;
-  color: #4e4e4e;
-  width: 80px;
-  margin: 0;
-  padding: 10px;
-  height: 100%;
-  /*cambiar "all" por "translate" si quiero que los demás cambios se hagan instantáneamente*/
-  transition: all .3s ease; }
-
-.buscador .buscador-input:focus {
-  width: 200px;
-  color: #808080;
-  border-radius: 0;
-  border-color: #cebe98; }
+  height: 42px; }
 
 .buscador .buscador-boton h4 .glyphicon {
   padding: 0 10px;
-  margin-right: -4px;
+  margin-right: -8px;
   color: #917e4b; }
 
-.buscador .buscador-boton:hover h4 .glyphicon {
-  color: #f1e7d2; }
+.buscador .buscador-selector {
+  background-color: #2e2e2e;
+  -webkit-box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  border: none;
+  min-height: 42px; }
+
+#eventos #eventos-buscador.buscador,
+#eventos #eventos-buscador.buscador .buscador-boton,
+#eventos #eventos-buscador.buscador .buscador-selector {
+  float: left; }
+
+#marcas #marcas-buscador.buscador,
+#marcas #marcas-buscador.buscador .buscador-boton,
+#marcas #marcas-buscador.buscador .buscador-selector {
+  float: right; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 /* * * T H U M B N A I L   G A L L E R Y * * *  */

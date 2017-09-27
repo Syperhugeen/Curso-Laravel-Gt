@@ -134,7 +134,7 @@
                    <h4 class="color-3 contacto-mapa-texto-negrita"><span class="glyphicon glyphicon-map-marker"></span> Punta Carretas - Montevideo, Uruguay</h4>
                    </div>
                    <div class="hr-border-top-pegado">
-                     <h3>Bulevar Artigas 76, esquina Héctor Miranda<br>(Torre A - Oficina 302, Golf Tower's)</h3>
+                     <h3>Bulevar Artigas 76, esquina M.J. Errazquin<br>(Torre A - Oficina 302, Golf Tower's)</h3>
                    </div>
                 </div>
 
