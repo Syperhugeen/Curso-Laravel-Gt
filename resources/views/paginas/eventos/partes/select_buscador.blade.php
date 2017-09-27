@@ -2,8 +2,13 @@
                   'method'=> 'get',
                   'class' => 'col-sm-12 text-center'
                           ])               !!}
+
+          <div class="buscador-boton">
+          <h4><span class="glyphicon glyphicon-search"></span></h4>
+          </div>
+
           <select name="select_marcas_en_evento"  id="select_marcas_en_evento" class="selectpicker" data-live-search="true" style="width: 100%;">
-           <option value="">Elige una marca para ver sus eventos</option>
+           <option value=""><span class="glyphicon glyphicon-triangle-right"></span>Ver todas</option>
            @foreach($Marcas as $Marca)
                <option  
                               value="{{$Marca->id}}"
@@ -17,8 +22,3 @@
           </select>    
 
 {!! Form::close() !!}
-
-{{-- <div class="buscador wow fadeInRight">
-              <input type="text" class="buscador-input" placeholder="Buscar">
-              <a href=""><div class="buscador-boton"><h4 class="text-center"><span class="glyphicon glyphicon-search"></span></h4></div></a>
-</div> --}}

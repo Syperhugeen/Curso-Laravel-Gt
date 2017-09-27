@@ -47,8 +47,7 @@
               <h4 class="buscador-predescription">¿Buscas una marca en particular?</h4>
             </div>
             <div class="buscador wow fadeInRight" id="marcas-buscador">
-              <input type="text" class="buscador-input" placeholder="Buscar">
-              <a href=""><div class="buscador-boton"><h4 class="text-center"><span class="glyphicon glyphicon-search"></span></h4></div></a>
+              @include('paginas.eventos.partes.select_buscador') 
             </div>
           </div>
         </div>
