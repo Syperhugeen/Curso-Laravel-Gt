@@ -711,66 +711,44 @@ $special-col-altura:400px;
 /* * *      B U S C A D O R  (input)     * * *  */
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 .buscador{
-  display: block;
-  text-align: center;
-  float: center;
-  height: 40px;
-}
-#eventos #eventos-buscador.buscador{
-  float: left;
+  padding: 0;
+  margin: 0;
 }
 #eventos .buscador-predescription{
   color: $color-3;
   text-align: left;
-}
-#marcas #marcas-buscador.buscador{
-  float: right;
 }
 #marcas .buscador-predescription{
   color: $color-2;
   text-align: right;
 }
 .buscador .buscador-boton{
-  display: inline-block;
   background-color: $color-2semilight;
   color: $color-3;
-  margin:0;
-  height: 100%;
-}
-.buscador .buscador-boton:hover{
-  background-color: $color-2semilight;
-  color: $color-3superlight;
-}
-.buscador .buscador-input{
-  display: inline-block;
-  background-color: $color-2;
-  color: $color-2light;
-  width: 80px;
-  margin:0;
-  padding: 10px;
-  height: 100%;
-  -webkit-transition: all .3s ease; /*cambiar "all" por "translate" si quiero que los demás cambios se hagan instantáneamente*/
-  -moz-transition: all .3s ease;
-  transition: all .3s ease;
-}
-.buscador .buscador-input:focus{
-  width: 200px;
-  color: $color-2superlight;
-  border-radius: 0;
-  border-color: $color-3;
+  height: 42px;
 }
 .buscador .buscador-boton h4 .glyphicon{
   padding: 0 10px;
-  margin-right: -4px;
+  margin-right: -8px;
   color: $color-3dark;
 }
-.buscador .buscador-boton:hover h4 .glyphicon{
-  color: $color-3superlight;
+.buscador .buscador-selector{
+  background-color: $color-2semilight;
+  -webkit-box-shadow: inset 3px 3px 6px rgba(0,0,0,0.3); 
+  border-radius: 0px;
+  border: none;
+  min-height: 42px;
 }
-
-
-
-
+#eventos #eventos-buscador.buscador,
+#eventos #eventos-buscador.buscador .buscador-boton,
+#eventos #eventos-buscador.buscador .buscador-selector{
+  float: left;
+}
+#marcas #marcas-buscador.buscador,
+#marcas #marcas-buscador.buscador .buscador-boton,
+#marcas #marcas-buscador.buscador .buscador-selector{
+  float: right;
+}
 
 
 
