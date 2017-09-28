@@ -9,6 +9,9 @@
 	    <div class="col-sm-6 no-margin">
 	      <div class="table-outer">
 			<div class="table-inner">
+				<div>
+					<p class="text-center">logo de la marca</p>
+				</div>
 				<h2>{{$Evento->name}}</h2>
 				<div class="p-container"><p class="text-center">{{$Evento->description}}</p></div>
 				<a href="{{$Evento->route}}">
