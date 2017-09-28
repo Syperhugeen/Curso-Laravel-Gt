@@ -50,6 +50,12 @@
   background: white; }
 
 /* grises */
+.color-grey0 {
+  color: #f8f8f8; }
+
+.bgcolor-grey0 {
+  background: #f8f8f8; }
+
 .color-grey1 {
   color: #b3b3b3; }
 
@@ -551,7 +557,7 @@ h1.section-title {
   padding-right: 20px; }
 
 #servicios #servicios-diferencial .section-text {
-  border-top-color: #917e4b;
+  border-top-color: #cebe98;
   padding-top: 10px; }
 
 #marcas #marcas-header .section-title {
@@ -13790,6 +13796,12 @@ select.selectpicker {
   background: white; }
 
 /* grises */
+.color-grey0 {
+  color: #f8f8f8; }
+
+.bgcolor-grey0 {
+  background: #f8f8f8; }
+
 .color-grey1 {
   color: #b3b3b3; }
 
@@ -14379,10 +14391,10 @@ como por ejemplo un carousel de imágenes de header---*/
   border-bottom: none; }
 
 #servicios #servicios-listado.row:hover .special-col-fake {
-  background-color: #decdab; }
+  background-color: #f8f8f8; }
 
 #servicios #servicios-listado.row:hover {
-  background-color: #decdab; }
+  background-color: #f8f8f8; }
 
 @media (min-width: 767px) {
   #servicios #servicios-listado .col-sm-6 {
@@ -16543,7 +16555,7 @@ h1.section-title {
   padding-right: 20px; }
 
 #servicios #servicios-diferencial .section-text {
-  border-top-color: #917e4b;
+  border-top-color: #cebe98;
   padding-top: 10px; }
 
 #marcas #marcas-header .section-title {

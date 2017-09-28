@@ -667,10 +667,10 @@ $special-col-altura:400px;
   border-bottom: none;
 }
 #servicios #servicios-listado.row:hover .special-col-fake{
-  background-color: $color-3light;
+  background-color: $color-grey0;
 }
 #servicios #servicios-listado.row:hover{
-  background-color: $color-3light;
+  background-color: $color-grey0;
 }
 @media (min-width:767px) {
   #servicios #servicios-listado .col-sm-6{
