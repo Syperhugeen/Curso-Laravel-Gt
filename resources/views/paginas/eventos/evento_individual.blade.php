@@ -21,23 +21,36 @@
 <div id="evento-individual">
 
 
-<!--para agregar los márgenes laterales-->
-<div class="container-fluid">
-  
 
-  <div class="row special-col no-padding">  
 
-    <div class="col-sm-6 special-col special-col-img no-padding">
-      <!-- solo la imagen principal -->
-      <img class="img-main" src="{{$Evento->url_img}}">
-    </div>
 
-    <div class="col-sm-6 no-margin">
-      <div class="table-outer">
-        <div class="table-inner">
-          <div>
-      			<h2>{{$Evento->name}}</h2>
-      			<p class="text-center">{{$Evento->description}}</p>
+
+
+<!--evento individual - título, logos de marcas asociadas y descripción del mismo-->
+<div class="container-fluid no-padding section-wrapper bgcolor-white">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-push-2 space-bottom super-space-top">
+
+
+          <div class="row" id="evento-individual-header">
+
+            <div class="col-sm-6">
+              <h1 class="section-title hidden-xs">{{$Evento->name}}</h1>
+              <h1 class="section-title visible-xs">{{$Evento->name}}</h1>
+              <div class="section-text visible-xs">
+                <h3>{{$Evento->description}}</h3>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="section-text hidden-xs">
+                <h3>{{$Evento->description}}</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="center-block text-center">
             <div class="inline-logos">
               @foreach($Evento->marcasevento as $Marca)
                 <a href="{{$Marca->marca->route}}">
@@ -47,15 +60,28 @@
               @endforeach
             </div>
           </div>
-        </div>
-		  </div>
-    </div> 
 
+
+       </div>
+    </div>
   </div>
+</div><!--fin de filosofia-->
+
+
+
+
+
+
+
+
+
+<!--para agregar los márgenes laterales-->
+<div class="container-fluid">
+  
 
   
     <div class="row">  
-      <div class="col-sm-12 no-padding bgcolor-2">
+      <div class="col-sm-12 no-padding special-col-fake">
         <!-- todas las imagenes asociadas al evento -->
         <div class="thumbnail-gallery-parent">
           @foreach($Evento->imagenesevento as $img)

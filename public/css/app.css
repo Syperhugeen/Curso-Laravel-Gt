@@ -479,13 +479,15 @@ h1.section-title {
   border-top: 1px solid #917e4b;
   padding-top: 10px; }
 
-#nosotros #filosofia-intro .section-text.hidden-xs {
+#nosotros #filosofia-intro .section-text.hidden-xs,
+#evento-individual #evento-individual-header .section-text.hidden-xs {
   border-top: none;
   border-left: 1px solid #cebe98;
   padding-left: 20px;
   margin-left: -20px; }
 
-#nosotros #filosofia-intro .section-title.hidden-xs {
+#nosotros #filosofia-intro .section-title.hidden-xs,
+#evento-individual #evento-individual-header .section-title.hidden-xs {
   padding-right: 20px;
   text-align: right; }
 
@@ -14167,6 +14169,9 @@ como por ejemplo un carousel de imágenes de header---*/
 .no-margin {
   margin: 0 !important; }
 
+.no-border {
+  border: none; }
+
 /*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - -*/
 /* * *  S P E C I A L - C O L S  * * *  */
@@ -14250,17 +14255,17 @@ como por ejemplo un carousel de imágenes de header---*/
 
 /* special-cols de eventos individuales */
 #evento-individual .special-col .col-sm-6 {
-  height: 532px;
+  height: 400px;
   padding: 20px 140px;
   overflow: hidden; }
 
 /* special-cols de eventos individuales */
 #marca-individual .special-col .col-sm-6 {
-  height: 532px;
+  height: 400px;
   padding: 20px 140px;
   overflow: hidden; }
 
-/* special-cols de eventos individuales */
+/* special-cols de contacto */
 #contacto .special-col .col-sm-6 {
   height: 532px;
   padding: 20px 140px;
@@ -14409,6 +14414,12 @@ como por ejemplo un carousel de imágenes de header---*/
 @media (min-width: 767px) {
   #contacto #contacto-datos .special-col-fake {
     height: 500px; } }
+
+#evento-individual .special-col-fake {
+  background-color: white; }
+
+#evento-individual .special-col-fake:hover {
+  background-color: #f8f8f8; }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -16477,13 +16488,15 @@ h1.section-title {
   border-top: 1px solid #917e4b;
   padding-top: 10px; }
 
-#nosotros #filosofia-intro .section-text.hidden-xs {
+#nosotros #filosofia-intro .section-text.hidden-xs,
+#evento-individual #evento-individual-header .section-text.hidden-xs {
   border-top: none;
   border-left: 1px solid #cebe98;
   padding-left: 20px;
   margin-left: -20px; }
 
-#nosotros #filosofia-intro .section-title.hidden-xs {
+#nosotros #filosofia-intro .section-title.hidden-xs,
+#evento-individual #evento-individual-header .section-title.hidden-xs {
   padding-right: 20px;
   text-align: right; }
 

@@ -384,6 +384,9 @@ como por ejemplo un carousel de imágenes de header---*/
 .no-margin{
   margin:0!important;
 }
+.no-border{
+  border:none;
+}
 
 
 
@@ -525,17 +528,17 @@ $special-col-altura:400px;
 }
 /* special-cols de eventos individuales */
 #evento-individual .special-col .col-sm-6{
-  height: $special-col-altura * 1.33;
+  height: $special-col-altura;
   padding: 20px 140px;
   overflow: hidden;
 }
 /* special-cols de eventos individuales */
 #marca-individual .special-col .col-sm-6{
-  height: $special-col-altura * 1.33;
+  height: $special-col-altura;
   padding: 20px 140px;
   overflow: hidden;
 }
-/* special-cols de eventos individuales */
+/* special-cols de contacto */
 #contacto .special-col .col-sm-6{
   height: $special-col-altura * 1.33;
   padding: 20px 140px;
@@ -687,7 +690,13 @@ $special-col-altura:400px;
   #contacto #contacto-datos .special-col-fake{
     height: 500px;}}
 
-
+// Evento individual
+#evento-individual .special-col-fake{
+  background-color: $color-white;
+}
+#evento-individual .special-col-fake:hover{
+  background-color: $color-grey0;
+}
 
 
 
