@@ -82,17 +82,20 @@ class Paginas_Controller extends Controller
             {
                 array_push($Eventos,$this->EventoRepo->find($MarcaEvento->evento_id));
             }
+
+            $Marca_seleccionada = $this->MarcaRepo->find($Request->get('select_marcas_en_evento'));
         }
         else
         {
-            $Eventos = $this->EventoRepo->getEntidadActivasPaginadas($Request,10);
+            $Eventos            = $this->EventoRepo->getEntidadActivasPaginadas($Request,10);
+            $Marca_seleccionada = '';
         }
         
         
         $Marcas  = $this->MarcaRepo->getEntidadActivas();
 
 
-        return view('paginas.eventos.eventos', compact('Eventos','Marcas'));
+        return view('paginas.eventos.eventos', compact('Eventos','Marcas','Marca_seleccionada'));
     }
         //pagina de evento individual
         public function get_pagina_evento_individual($name,$id,Request $Request)

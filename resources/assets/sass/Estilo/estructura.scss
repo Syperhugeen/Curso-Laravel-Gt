@@ -759,10 +759,26 @@ $special-col-altura:400px;
   float: right;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+/* * *      I M G  S E L E C C I O N D A  ( F I L T R O )    * * *  */
+/* - - - - - - - - - - - - - - - - - - - - - - -*/
+.img-seleccionada-filtro-eventos{
+  background-color:  $color-2; 
+  height: 80px;
+  border:solid 1px $color-2semilight;
+  padding:10px;
+  position: relative;
+}
 
-
-
-
+.contenedor-img-seleccionada-filtro-eventos{
+  position: relative;
+}
+  .img-seleccionada-filtro-eventos-remove{
+    position:absolute;
+    top:2px;
+    right: 2px;
+    color: $color-grey1;
+  }
 
 
 
