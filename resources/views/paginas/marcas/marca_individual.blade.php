@@ -18,16 +18,16 @@
 
 @section('content')
 
-<div id="marca-individual">
+<div class="bgcolor-white" id="marca-individual">
 
 
   <!--para agregar los márgenes laterales-->
-  <div class="container-fluid section-wrapper no-padding bgcolor-white">
+  <div class="container-fluid">
 
   {{-- contiene hasta diez eventos como máximo --}}
     <div class="row">
 
-      <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
+      <div class="col-md-6 col-md-push-3 super-space-top space-bottom">
         <h1 class="section-title text-center">Eventos y promociones asociados a {{$Marca->name}}</h1>
         <div class="table-outer">
           <div class="table-inner">
@@ -42,65 +42,70 @@
       </div>
 
 
-
     </div>
+  </div>
 
     
     
-    <div class="hr-border-top-pegado">
+    <div class="container-fluid hr-border-top-pegado">
+      
 
       @if(count($Eventos) > 0)
-
         <!-- aquí se muestra cada evento relacionado a la marca -->
+        <div class="row"> <!-- row que incluye todos los eventos -->
         @foreach($Eventos as $Evento)
-        <div class="row special-col no-padding">
-            
-          <div class="col-sm-6 no-padding eventos-imagen">
-            <img class="img-main" src="{{$Evento->evento->url_img}}">
-          </div>
-              
-          <div class="col-sm-6 no-margin">
-            <div class="table-outer">
-              <div class="table-inner">
-                <div>
-                  <h2>{{$Evento->evento->name}}</h2>
-
-                 
-                  <div class="p-container">
-                    <p class="text-center">
-                      @if(isset($Evento->evento->description))
-                       {{$Evento->evento->description}}
-                      @endif
-                    </p>
-                  </div>
-                  <a href="{{$Evento->evento->route}}">
-                    <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
-                  </a>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div>                
-        @endforeach
-     
-
-        <!-- pagination -->
-        <div class="col-xs-12 special-col">
+        <!-- col del evento individual -->
+        <div class="col-xs-12 special-col no-padding no-border">
           <div class="row">
-            <div class="">          
-                <h5 class="ampliar text-center">aqui ira la paginacion</h5>  
-
-                {{-- es la paginacio --}}
-                <div class="col-centered">
-                  {!! $Eventos->appends(Request::all())->render() !!}
-                </div>    
-
+              
+            <div class="col-sm-6 no-padding special-col special-col-img">
+              <img class="img-main" src="{{$Evento->evento->url_img}}">
+            </div>
+                
+            <div class="col-sm-6 no-margin">
+              <div class="table-outer">
+                <div class="table-inner">
+                  <div>
+                    <h2>{{$Evento->evento->name}}</h2>
+                    <div class="p-container hidden-xs">
+                      <p class="text-center">
+                        @if(isset($Evento->evento->description))
+                         {{$Evento->evento->description}}
+                        @endif
+                      </p>
+                    </div>
+                    <a href="{{$Evento->evento->route}}">
+                      <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
+                    </a>
+                  </div>
+                </div>
+              </div> 
             </div>
           </div>
-        </div>
+        </div><!-- /col del evento individual -->
+                        
+        @endforeach
+        </div><!-- /row que incluye todos los eventos -->
+
+        <!-- row de la pagination -->
+        <div class="row special-col no-padding">
+          <div class="col-xs-12 special-col">
+            <h5 class="ampliar text-center">aqui ira la paginacion</h5>  
+            {{-- es la paginacion --}}
+            <div class="col-centered">
+              {!! $Eventos->appends(Request::all())->render() !!}
+            </div>
+          </div>
+        </div><!-- /row de la pagination -->
+
+        
+
+
+
+
+
 
         @else
-
           <!-- cuando no hay eventos asociados a la marca -->
           <div class="row bgcolor-grey0">
             <div class="col-md-8 col-md-push-2 col-lg-6 col-lg-push-3 super-space-top super-space-bottom">
@@ -111,8 +116,8 @@
 
         @endif
 
-    </div>
+      </div><!-- /container-fluid -->
 
-  </div>
+
 </div>
 @stop

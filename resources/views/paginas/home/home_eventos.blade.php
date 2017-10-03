@@ -28,8 +28,11 @@
 		    <div class="col-sm-6 no-margin">
 		      <div class="table-outer">
 				<div class="table-inner">
+					<div>
+						<p class="text-center">logo de la marca</p>
+					</div>
 					<h2>{{$UltimoEvento->name}}</h2>
-					<div class="p-container"><p class="text-center">{{$UltimoEvento->description}}</p></div>
+					<div class="p-container hidden-xs"><p class="text-center">{{$UltimoEvento->description}}</p></div>
 					<a href="{{$UltimoEvento->route}}">
 						<h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
 					</a>
@@ -49,6 +52,9 @@
 		    <div class="col-sm-6 no-margin">
 		      <div class="table-outer">
 				<div class="table-inner">
+					<div>
+						<p class="text-center">logo de la marca</p>
+					</div>
 					<h2>{{$PenultimoEvento->name}}</h2>
 					<div class="p-container"><p class="text-center">{{$PenultimoEvento->description}}</p></div>
 					<a href="{{$PenultimoEvento->route}}">

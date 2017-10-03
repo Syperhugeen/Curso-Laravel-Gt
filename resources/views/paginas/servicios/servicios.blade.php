@@ -151,18 +151,23 @@
                   </div>
 
                   <div class="section-text space-bottom">
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Confianza generada a partir de más de diez años de trayectoria ininterrumpida, forjada a partir del trabajo contínuo con organizaciones de distintos tamaños, tanto en nuestro país como en el exterior.</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Amplio conocimiento del mercado local y regional</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Personal con formación académica y conocimiento de idiomas (inglés y portugués)</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Capacitación constante a todo el personal</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Staff capacitado para suplencias, de acuerdo al perfil buscado</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Estricto cumplimiento de contratos y normas vigente</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Vasta experiencia en publicidad directa y acciones promocionales</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Atención personalizada: calidez y contacto directo con cada uno de nuestros clientes</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Flexibilidad organizacional, que permite la rápida adaptación ante cualquier eventualidad o cambio solicitado por el cliente</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Seguimiento constante, con el objetivo de generar el mejor clima laboral</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Miembros de la Asociación de Marketing Promocional del Uruguay (AMPRO)</h4>
-                  <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>En proceso de certificación de calidad</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Confianza generada a partir de más de diez años de trayectoria ininterrumpida, forjada a partir del trabajo contínuo con organizaciones de distintos tamaños, tanto en nuestro país como en el exterior.</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Amplio conocimiento del mercado local y regional</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Personal con formación académica y conocimiento de idiomas (inglés y portugués)</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Capacitación constante a todo el personal</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Staff capacitado para suplencias, de acuerdo al perfil buscado</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Estricto cumplimiento de contratos y normas vigente</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Vasta experiencia en publicidad directa y acciones promocionales</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Atención personalizada: calidez y contacto directo con cada uno de nuestros clientes</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Flexibilidad organizacional, que permite la rápida adaptación ante cualquier eventualidad o cambio solicitado por el cliente</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Seguimiento constante, con el objetivo de generar el mejor clima laboral</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>Miembros de la Asociación de Marketing Promocional del Uruguay (AMPRO)</h4>
+                    <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>En proceso de certificación de calidad</h4>
+                    <div class="row space-top">
+                      <div class="col-xs-6 col-xs-push-3">
+                        <img class="img-responsive" src="imagenes/Empresa/ampro_seal_color3dark.png">
+                      </div>
+                    </div>      
                   </div>
                 </div>
 

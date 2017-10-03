@@ -267,13 +267,15 @@ h1.section-title{
   border-top: 1px solid $color-3dark;
   padding-top: 10px;
 }
-#nosotros #filosofia-intro .section-text.hidden-xs{
+#nosotros #filosofia-intro .section-text.hidden-xs,
+#evento-individual #evento-individual-header .section-text.hidden-xs{
   border-top: none;
   border-left: 1px solid $color-3;
   padding-left: 20px;
   margin-left: -20px;
 }
-#nosotros  #filosofia-intro .section-title.hidden-xs{
+#nosotros  #filosofia-intro .section-title.hidden-xs,
+#evento-individual  #evento-individual-header .section-title.hidden-xs{
   padding-right: 20px;
   text-align: right;
 }
