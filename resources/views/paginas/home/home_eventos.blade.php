@@ -29,7 +29,8 @@
 		      <div class="table-outer">
 				<div class="table-inner">
 					<div>
-						<p class="text-center">logo de la marca
+						<p class="text-center">
+						  logo de la marca
 							@foreach($UltimoEvento->marcasevento as $Marca)
                 <a href="{{$Marca->marca->route}}">
                   <!-- logo de la(s) marca(s) asociada(s) al evento -->
