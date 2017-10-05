@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12 space-top">
+    <div class="col-md-12 super-space-top">
         <h1 class="section-subtitle text-center no-margin">Trayectoria</h1>
         <!--<h1 class="section-subtitle text-center no-margin"><span class="logo-font"><span class="logo-font-space">GLOBAL</span>TARGET</span> hoy</h1>-->
     </div>
@@ -14,7 +14,7 @@
         <div class="puzzle-container hidden-sm hidden-xs">
 
         
-            <div class="puzzle-box-square-container wow fadeInUp delay1">
+            <div class="puzzle-box-square-container wow fadeInUp">
 
 
                 <div class="puzzle-box puzzle-box-index10">

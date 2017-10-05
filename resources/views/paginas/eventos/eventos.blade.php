@@ -47,8 +47,8 @@
             </div>
 
 
-          <div class="row super-space-top space-bottom hidden-xs">
-            <div class="col-sm-6 col-sm-push-6 space-bottom">
+          <div class="row space-bottom hidden-xs">
+            <div class="col-sm-6 col-sm-push-6 half-space-bottom">
               <div>
                 <h4 class="buscador-predescription">¿Buscas los eventos relacionados a una marca en particular?</h4>
               </div>

@@ -9,8 +9,12 @@
 	    <div class="col-sm-6 no-margin">
 	      <div class="table-outer">
 			<div class="table-inner">
-				<div>
-					<p class="text-center">logo de la marca</p>
+				<div class="inline-logos chiqui-logos">
+					@foreach($Evento->marcasevento as $Marca)
+		                <!-- <a href="{{$Marca->marca->route}}"> -->
+		                  <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
+		                <!-- </a> -->
+		             @endforeach
 				</div>
 				<h2>{{$Evento->name}}</h2>
 				<div class="p-container hidden-xs"><p class="text-center">{{$Evento->description}}</p></div>
