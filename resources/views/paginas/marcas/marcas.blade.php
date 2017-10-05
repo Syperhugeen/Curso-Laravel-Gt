@@ -47,7 +47,7 @@
               <h4 class="buscador-predescription">¿Buscas una marca en particular?</h4>
             </div>
             <div class="buscador wow fadeInRight" id="marcas-buscador">
-              @include('paginas.eventos.partes.select_buscador') 
+              <!-- @include('paginas.eventos.partes.select_buscador')  -->
             </div>
           </div>
         </div>

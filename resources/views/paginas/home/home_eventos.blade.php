@@ -28,16 +28,12 @@
 		    <div class="col-sm-6 no-margin">
 		      <div class="table-outer">
 				<div class="table-inner">
-					<div>
-						<p class="text-center">
-						  logo de la marca
-							@foreach($UltimoEvento->marcasevento as $Marca)
-                <a href="{{$Marca->marca->route}}">
-                  <!-- logo de la(s) marca(s) asociada(s) al evento -->
-                  <img src="{{$Marca->marca->url_img}}">
-                </a>
-              @endforeach
-						</p>
+					<div class="inline-logos chiqui-logos">
+						@foreach($UltimoEvento->marcasevento as $Marca)
+			                <!-- <a href="{{$Marca->marca->route}}"> -->
+			                  <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
+			                <!-- </a> -->
+			             @endforeach
 					</div>
 					<h2>{{$UltimoEvento->name}}</h2>
 					<div class="p-container hidden-xs"><p class="text-center">{{$UltimoEvento->description}}</p></div>
@@ -60,18 +56,12 @@
 		    <div class="col-sm-6 no-margin">
 		      <div class="table-outer">
 				<div class="table-inner">
-					<div>
-						<p class="text-center">
-
-						 logo de la marca 
-						 @foreach($PenultimoEvento->marcasevento as $Marca)
-                <a href="{{$Marca->marca->route}}">
-                  <!-- logo de la(s) marca(s) asociada(s) al evento -->
-                  <img src="{{$Marca->marca->url_img}}">
-                </a>
-             @endforeach
-
-						</p>
+					<div class="inline-logos">
+						@foreach($PenultimoEvento->marcasevento as $Marca)
+			                <!-- <a href="{{$Marca->marca->route}}"> -->
+			                  <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
+			                <!-- </a> -->
+			             @endforeach
 					</div>
 					<h2>{{$PenultimoEvento->name}}</h2>
 					<div class="p-container"><p class="text-center">{{$PenultimoEvento->description}}</p></div>

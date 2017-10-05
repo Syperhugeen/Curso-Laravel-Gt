@@ -4,19 +4,6 @@
                           ])               !!}
 
           {{-- aqui agrego los botones para quitar filtro y muestro el seleccionado   --}}
-            @if($Marca_seleccionada != '')
-              <div class="Helper-OrdenarHijos-columna get_width_100">
-                <div class="Helper-OrdenarHijo-columna-self-left Helper-Fuente-Clara Helper-Fuente-10px">seleccionada</div>
-                <div class="contenedor-img-seleccionada-filtro-eventos Helper-OrdenarHijo-columna-self-left">
-                  <img class="img-seleccionada-filtro-eventos" src="{{$Marca_seleccionada->url_img}}">
-                  <span class="img-seleccionada-filtro-eventos-remove">                   
-                     <a href="{{route('get_pagina_eventos')}}"><span class="icon-cancel"></span></a> 
-                  </span>
-                </div>
-                
-              </div>
-            @endif
-          {{-- fin de : aqui agrego los botones para quitar filtro y muestro el seleccionado --}}  
 
 
           <div class="buscador-boton">
@@ -24,7 +11,7 @@
           </div>
 
           <select name="select_marcas_en_evento"  id="select_marcas_en_evento" class="selectpicker" data-style="buscador-selector" data-live-search="true" style="width: 100%;">
-           <option value=""><span class="glyphicon glyphicon-triangle-right"></span>Ver todas las marcas</option>
+           <option value=""><span class="glyphicon glyphicon-triangle-right"></span>Selecciona una marca aquí</option>
            @foreach($Marcas as $Marca)
                <option  
                               value="{{$Marca->id}}"
@@ -36,5 +23,21 @@
               </option>
            @endforeach                  
           </select>    
+
+
+          @if($Marca_seleccionada != '')
+              <div class="Helper-OrdenarHijos-columna get_width_100">
+                <div class="contenedor-img-seleccionada-filtro-eventos Helper-OrdenarHijo-columna-self-left">
+                  <img class="img-seleccionada-filtro-eventos" src="{{$Marca_seleccionada->url_img}}">
+                  <span class="img-seleccionada-filtro-eventos-remove">                   
+                     <a href="{{route('get_pagina_eventos')}}"><h4><span class="glyphicon glyphicon-remove"></span></h4></a> 
+                  </span>
+                </div>
+                <!-- <div class="Helper-OrdenarHijo-columna-self-left Helper-Fuente-Clara Helper-Fuente-10px">seleccionada</div> -->
+              </div>
+            @endif
+          {{-- fin de : aqui agrego los botones para quitar filtro y muestro el seleccionado --}}  
+
+
 
 {!! Form::close() !!}

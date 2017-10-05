@@ -653,6 +653,20 @@ $special-col-altura:400px;
   margin-left:10px;
   margin-right:10px;
 }
+#home #section4 .inline-logos.chiqui-logos img, // home eventos
+#eventos-listado .inline-logos.chiqui-logos img{ // eventos
+  width: auto;
+  height: 120px;
+  margin-left:10px;
+  margin-right:10px;
+  margin-top: 0;
+  margin-bottom: -20px;
+}
+#home #section4 .inline-logos.chiqui-logos,
+#eventos-listado .inline-logos.chiqui-logos{
+  padding: 0;
+  margin: 0;
+}
 
 // Servicios - Intro (botones special-col)
 #servicios #servicios-intro .special-col a h4{
@@ -764,7 +778,8 @@ $special-col-altura:400px;
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 .img-seleccionada-filtro-eventos{
   background-color:  $color-2; 
-  height: 80px;
+  width: 261px;
+  height: auto;
   border:solid 1px $color-2semilight;
   padding:10px;
   position: relative;
@@ -775,12 +790,16 @@ $special-col-altura:400px;
 }
   .img-seleccionada-filtro-eventos-remove{
     position:absolute;
-    top:2px;
+    top:6px;
     right: 2px;
     color: $color-grey1;
   }
-
-
+    .img-seleccionada-filtro-eventos-remove a h4 span{
+      color: $color-2semilight !important;
+    }
+    .img-seleccionada-filtro-eventos-remove a:hover h4 span{
+      color: $color-2light !important;
+    }
 
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
 /* * * T H U M B N A I L   G A L L E R Y * * *  */
