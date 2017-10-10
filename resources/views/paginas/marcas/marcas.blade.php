@@ -61,11 +61,11 @@
 
 
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper no-padding bgcolor-3light">
+<div class="container-fluid section-wrapper no-padding bgcolor-3light" id="marcas-logos">
         {{-- rombo divisor con el logo de GT --}}
         <div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 
-{{-- contiene hasta diez eventos como máximo --}}
+{{-- contiene hasta 20 logos de marcas como máximo a la vez (luego aparece la paginación) --}}
   <div class="row hr-border-top-pegado">
 
                 @foreach($Marcas as $Marca)

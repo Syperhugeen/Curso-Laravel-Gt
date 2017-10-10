@@ -56,7 +56,7 @@
 		    <div class="col-sm-6 no-margin">
 		      <div class="table-outer">
 				<div class="table-inner">
-					<div class="inline-logos">
+					<div class="inline-logos chiqui-logos">
 						@foreach($PenultimoEvento->marcasevento as $Marca)
 			                <!-- <a href="{{$Marca->marca->route}}"> -->
 			                  <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
@@ -64,7 +64,7 @@
 			             @endforeach
 					</div>
 					<h2>{{$PenultimoEvento->name}}</h2>
-					<div class="p-container"><p class="text-center">{{$PenultimoEvento->description}}</p></div>
+					<div class="p-container hidden-xs"><p class="text-center">{{$PenultimoEvento->description}}</p></div>
 					<a href="{{$PenultimoEvento->route}}">
 						<h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
 					</a>
