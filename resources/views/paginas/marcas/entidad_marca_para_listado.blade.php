@@ -1,5 +1,5 @@
 	<a href="{{$Marca->route}}">
-			<div class="col-sm-6 special-col">
+			<div class="col-xs-6 col-sm-6 special-col">
 			    <div class="table-outer">
 					<div class="table-inner">
 

@@ -14337,7 +14337,7 @@ como por ejemplo un carousel de imágenes de header---*/
   #contacto .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6 {
-    height: 200px; }
+    /*height: $special-col-altura / 2; */ }
   .special-col img {
     width: 100% !important;
     height: auto !important;
@@ -14395,6 +14395,18 @@ como por ejemplo un carousel de imágenes de header---*/
   padding: 0;
   margin: 0; }
 
+@media (max-width: 559px) {
+  #home #section4 .inline-logos.chiqui-logos img,
+  #eventos-listado .inline-logos.chiqui-logos img {
+    height: auto !important;
+    width: 40vw !important; } }
+
+@media (min-width: 560px) and (max-width: 767px) {
+  #home #section4 .inline-logos.chiqui-logos img,
+  #eventos-listado .inline-logos.chiqui-logos img {
+    height: auto !important;
+    width: 25vw !important; } }
+
 #servicios #servicios-intro .special-col a h4 {
   text-align: center;
   color: #917e4b;
@@ -14415,7 +14427,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #servicios #servicios-listado.row:hover {
   background-color: #f8f8f8; }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   #servicios #servicios-listado .col-sm-6 {
     height: 1384px; } }
 
@@ -14425,7 +14437,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #contacto #contacto-datos .special-col-fake:hover {
   background-color: #f8f8f8; }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   #contacto #contacto-datos .special-col-fake {
     height: 500px; } }
 
@@ -16086,6 +16098,10 @@ escritura de código)---*/
 img.marca-col {
   width: 300px;
   height: auto; }
+
+@media (max-width: 559px) {
+  #marcas #marcas-logos.row .col-xs-6.col-sm-6.special-col {
+    padding: 0 !important; } }
 
 .marca-header {
   /*---   aun sin usar, podria ser un header para la seccion marcas, con una foto de empresarios dandose las manos   ---*/

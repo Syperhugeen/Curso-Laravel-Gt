@@ -246,6 +246,10 @@ img.marca-col{
   width:300px;
   height:auto;
 }
+@media (max-width:559px) {
+  #marcas #marcas-logos.row .col-xs-6.col-sm-6.special-col{
+  padding: 0 !important;
+}}
 
 .marca-header{ /*---   aun sin usar, podria ser un header para la seccion marcas, con una foto de empresarios dandose las manos   ---*/
   background: $color-white url("../../imagenes/Img/equipo.jpg") no-repeat left;

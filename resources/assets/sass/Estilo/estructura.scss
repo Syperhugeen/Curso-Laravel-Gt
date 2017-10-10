@@ -615,7 +615,8 @@ $special-col-altura:400px;
   #contacto .special-col .col-sm-6,
   #evento-individual .special-col .col-sm-6,
   #marca-individual .special-col .col-sm-6{
-    height: $special-col-altura / 2;}
+    /*height: $special-col-altura / 2; */
+  }
   .special-col img{
     width:100% !important;
     height:auto !important;
@@ -667,6 +668,18 @@ $special-col-altura:400px;
   padding: 0;
   margin: 0;
 }
+@media (max-width:559px) {
+  #home #section4 .inline-logos.chiqui-logos img,
+  #eventos-listado .inline-logos.chiqui-logos img {
+    height: auto !important;
+    width: 40vw !important;
+}}
+@media (min-width:560px)and(max-width:767px) {
+  #home #section4 .inline-logos.chiqui-logos img,
+  #eventos-listado .inline-logos.chiqui-logos img {
+    height: auto !important;
+    width: 25vw !important;
+}}
 
 // Servicios - Intro (botones special-col)
 #servicios #servicios-intro .special-col a h4{
@@ -689,7 +702,7 @@ $special-col-altura:400px;
 #servicios #servicios-listado.row:hover{
   background-color: $color-grey0;
 }
-@media (min-width:767px) {
+@media (min-width:768px) {
   #servicios #servicios-listado .col-sm-6{
     height: 1384px;}}
 
@@ -700,7 +713,7 @@ $special-col-altura:400px;
 #contacto #contacto-datos .special-col-fake:hover{
   background-color: $color-grey0;
 }
-@media (min-width:767px) {
+@media (min-width:768px) {
   #contacto #contacto-datos .special-col-fake{
     height: 500px;}}
 
