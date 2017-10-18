@@ -170,14 +170,17 @@ $section2-altura:300px;
 /*--- brands carousel (home)---*/
 .logos-carousel-col{
   overflow:hidden;
-  background-color: $color-2;
+  background-color: $color-white;
+}
+.logos-carousel-col:hover{
+  background-color: $color-grey0;
 }
 /*asignar esta clase a un div insertado dentro de una columna*/
 /*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
 .destacado-pliegues{ /*luego pasar a mis_recursos*/
   position:absolute;
   top:0px;
-  margin-top:-20px;
+  margin-top:-22px;
   height:$section2-altura + 40px;
   padding: 0px 14px;
   background:$color-bordeaux;
@@ -321,7 +324,11 @@ img.marca-col{
 #servicios h4 a:hover {
   color:$color-3 !important;
 }
-
+.servicios-logo-ampro{
+  text-align: center;
+}
+.servicios-logo-ampro img{
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

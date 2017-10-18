@@ -16052,7 +16052,10 @@ escritura de código)---*/
 /*--- brands carousel (home)---*/
 .logos-carousel-col {
   overflow: hidden;
-  background-color: #080808; }
+  background-color: white; }
+
+.logos-carousel-col:hover {
+  background-color: #f8f8f8; }
 
 /*asignar esta clase a un div insertado dentro de una columna*/
 /*recomendado agregar la clase hidden-xs y hidden-sm a la columna parent*/
@@ -16060,7 +16063,7 @@ escritura de código)---*/
   /*luego pasar a mis_recursos*/
   position: absolute;
   top: 0px;
-  margin-top: -20px;
+  margin-top: -22px;
   height: 340px;
   padding: 0px 14px;
   background: #5F021F;
@@ -16122,6 +16125,9 @@ img.marca-col {
 
 #servicios h4 a:hover {
   color: #cebe98 !important; }
+
+.servicios-logo-ampro {
+  text-align: center; }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

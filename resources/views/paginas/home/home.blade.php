@@ -37,7 +37,7 @@
 
 <!--PREMIUM BRANDS / logos de clientes prestigiosos-->
 <div id="section2">
-  <div class="container-fluid no-padding section-wrapper bgcolor-3">
+  <div class="container-fluid no-padding section-wrapper bgcolor-white hr-border-top-pegado">
         <div>
          @include('paginas.home.home_brands')
         </div>
