@@ -90,7 +90,7 @@ class Admin_Eventos_Controllers extends Controller
          return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
         } 
 
-      DB::commit() 
+      DB::commit(); 
       }
       catch(\Exception $e)
       {            
@@ -152,7 +152,7 @@ class Admin_Eventos_Controllers extends Controller
        }
      }
 
-    DB::commit() 
+    DB::commit(); 
     }
     catch(\Exception $e)
     {            
