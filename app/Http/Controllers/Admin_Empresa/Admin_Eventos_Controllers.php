@@ -85,15 +85,16 @@ class Admin_Eventos_Controllers extends Controller
          { 
            $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
          }
-         }
+         
 
          return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
         } 
-
       DB::commit(); 
+
       }catch(\Exception $e){            
       DB::rollback();            
       } 
+   }
 
     
       return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
