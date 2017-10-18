@@ -31,7 +31,7 @@ class Evento extends Model
 
     public function marcasevento()
     {
-      return $this->hasMany(Marca_de_evento::class,'evento_id','id')->where('estado','si');
+      return $this->hasMany(Marca_de_evento::class,'evento_id','id');
     }
 
     
