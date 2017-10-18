@@ -171,7 +171,7 @@ class Admin_Eventos_Controllers extends Controller
       $evento = $this->EventoRepo->find($imagen->evento_id);
 
       //me fijo si hay mas imagenes
-      if($evento->ImgEventoRepo->count() > 1)
+      if($evento->imagenesevento->count() > 1)
       {
         $this->ImgEventoRepo->destroy_entidad($id_img);
 
