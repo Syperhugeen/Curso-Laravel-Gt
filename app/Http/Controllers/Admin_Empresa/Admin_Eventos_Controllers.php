@@ -91,9 +91,7 @@ class Admin_Eventos_Controllers extends Controller
         } 
 
       DB::commit(); 
-      }
-      catch(\Exception $e)
-      {            
+      }catch(\Exception $e){            
       DB::rollback();            
       } 
 
@@ -153,9 +151,7 @@ class Admin_Eventos_Controllers extends Controller
      }
 
     DB::commit(); 
-    }
-    catch(\Exception $e)
-    {            
+    }catch(\Exception $e){            
     DB::rollback();            
     } 
      
