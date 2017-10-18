@@ -86,7 +86,8 @@
         <div class="thumbnail-gallery-parent">
           @foreach($Evento->imagenesevento as $img)
             <div class="thumbnail-gallery-child">
-              <img class="img-greyscale-hover" src="{{$img->url_img}}">
+              <!-- agregar modal que se abra con carrusel de fotos, mostrando la foto específica -->
+              <a href=""><img class="img-greyscale-hover" src="{{$img->url_img}}"></a>
             </div>
           @endforeach
         </div>
