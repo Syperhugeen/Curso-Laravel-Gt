@@ -94,9 +94,7 @@ class Admin_Eventos_Controllers extends Controller
       }catch(\Exception $e){            
       DB::rollback();            
       } 
-   }
-
-    
+      
       return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     
   }
