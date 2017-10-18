@@ -21,7 +21,9 @@
 
 		{{-- las marcas de la base de datos --}}
 	  @foreach($Marcas as $Marca)
-		 <a href="{{$Marca->route}}"><img src="{{$Marca->url_img}}"></a> 
+		 <!--<a href="{{$Marca->route}}">-->
+		 	<img src="{{$Marca->url_img}}">
+		 <!--</a>-->
 		@endforeach 
 
 	</section>

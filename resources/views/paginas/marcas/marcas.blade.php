@@ -76,7 +76,7 @@
     <!-- pagination -->
       <div class="col-xs-12 special-col">
       <div class="row">
-        <div class="">
+        <div>
           
             <h5 class="ampliar text-center">aqui ira la paginacion</h5>
                   
