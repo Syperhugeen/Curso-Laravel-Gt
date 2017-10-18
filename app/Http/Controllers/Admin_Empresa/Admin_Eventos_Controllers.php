@@ -12,6 +12,8 @@ use App\Repositorios\ImgEventoRepo;
 use App\Managers\Evento\crear_evento_admin_manager;
 use App\Repositorios\MarcaRepo;
 use App\Repositorios\Marca_de_eventoRepo;
+use DB;
+
 
 
 
@@ -67,22 +69,33 @@ class Admin_Eventos_Controllers extends Controller
       
       $manager = new crear_evento_admin_manager(null, $Request->all());
 
-      //valido la data
-      if ($manager->isValid())
-      {
-       $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
+      try{
+      DB::beginTransaction(); 
+        
+        //valido la data
+        if ($manager->isValid())
+        {
+         $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
-       //utilzo la funciona creada en el controlador para subir la imagen
-       $this->set_admin_eventos_img($Evento->id, $Request);  
+         //utilzo la funciona creada en el controlador para subir la imagen
+         $this->set_admin_eventos_img($Evento->id, $Request);  
 
-       //creo las marcas asociadas a este evento
-       foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
-       {
-         $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
-       }
+         //creo las marcas asociadas a este evento
+         foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
+         { 
+           $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
+         }
+         }
 
-       return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
-      }  
+         return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
+        } 
+
+      DB::commit() 
+      }
+      catch(\Exception $e)
+      {            
+      DB::rollback();            
+      } 
 
     
       return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
@@ -106,6 +119,9 @@ class Admin_Eventos_Controllers extends Controller
     $Evento = $this->EventoRepo->find($id);
 
     $Propiedades = ['name','description','estado','fecha','ubicacion'];
+
+    try{
+      DB::beginTransaction(); 
       
     $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
@@ -135,6 +151,13 @@ class Admin_Eventos_Controllers extends Controller
          $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
        }
      }
+
+    DB::commit() 
+    }
+    catch(\Exception $e)
+    {            
+    DB::rollback();            
+    } 
      
      
 
