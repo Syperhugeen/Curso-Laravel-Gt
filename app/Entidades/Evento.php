@@ -78,6 +78,7 @@ class Evento extends Model
         elseif($cantidad_imagenes === 0)
         {
             $imagen = $imagenesProyectos->first();
+            dd($imagen);
             $imagen->foto_principal = 'si';
             $imagen->save();
 
