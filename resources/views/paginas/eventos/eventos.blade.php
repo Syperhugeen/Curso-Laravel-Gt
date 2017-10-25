@@ -89,10 +89,10 @@
   					
   						<h5 class="ampliar text-center">
                  @if($Marca_seleccionada != '')
-
-                 @endif
-                    {!! $Eventos->appends(Request::all())->render() !!}
+                 
                  @else
+                    {!! $Eventos->appends(Request::all())->render() !!}
+                 @endif
               </h5>
   									
   				</div>
