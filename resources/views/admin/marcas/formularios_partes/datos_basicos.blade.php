@@ -9,7 +9,7 @@
 </div>
 
 <div class="formulario-label-fiel">
-  {!! Form::label('rank', 'Rango', array('class' => 'formulario-label ')) !!}
+  {!! Form::label('rank', 'Calidad / Prestigio', array('class' => 'formulario-label ')) !!}
   {!! Form::select('rank',  [1 => '1 - Normal',
                              2 => '2 - Alta ',
                              3 => '3 - Elite'] , null )          !!}
