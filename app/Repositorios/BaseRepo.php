@@ -70,7 +70,7 @@ abstract class BaseRepo
       return $this->entidad
                   ->name($request->get('name')) 
                   ->active()               
-                  ->orderBy($Atributo,$Orden)
+                  ->orderBy($OrdenadasSegunAtributo,$Orden)
                   ->paginate($paginacion);
     }
 
