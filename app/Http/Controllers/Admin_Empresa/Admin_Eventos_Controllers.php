@@ -41,7 +41,7 @@ class Admin_Eventos_Controllers extends Controller
   public function get_admin_eventos(Request $Request)
   {
 
-    $Eventos = $this->EventoRepo->getEntidadesAllPaginadas($Request,30);
+    $Eventos = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
 
     return view('admin.eventos.eventos_home', compact('Eventos'));
   }
