@@ -87,7 +87,7 @@ class Paginas_Controller extends Controller
         }
         else
         {
-            $Eventos            = $this->EventoRepo->getEntidadActivasPaginadas($Request,10);
+            $Eventos            = $this->EventoRepo->getEntidadActivasYOrdenadasSegunPaginadas($Request,'fecha','desc',10);
             $Marca_seleccionada = '';
         }
         

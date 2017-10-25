@@ -63,6 +63,18 @@ abstract class BaseRepo
     }
 
     /**
+     * Entidades Activas Paginadas
+     */
+    public function getEntidadActivasYOrdenadasSegunPaginadas($request,$OrdenadasSegunAtributo,$Orden,$paginacion)
+    {
+      return $this->entidad
+                  ->name($request->get('name')) 
+                  ->active()               
+                  ->orderBy($Atributo,$Orden)
+                  ->paginate($paginacion);
+    }
+
+    /**
      * Entidades All ya paginadas Paginadas
      */
     public function getEntidadesAllPaginadas($request,$paginacion)
