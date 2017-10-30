@@ -78,7 +78,12 @@
       <div class="row">
         <div>
           
-            <h5 class="ampliar text-center">aqui ira la paginacion</h5>
+            <h5 class="ampliar text-center">
+              <!--¿qué es esto? no lo borré porque no sé ni qué es ni dónde tiene que ir -->
+              <div class="col-centered">
+                {!! $Marcas->appends(Request::all())->render() !!}
+              </div>
+            </h5>
                   
         </div>
       </div>
@@ -96,10 +101,7 @@
 
 
 
-   <!--¿qué es esto? no lo borré porque no sé ni qué es ni dónde tiene que ir -->
-    <div class="col-centered">
-      {!! $Marcas->appends(Request::all())->render() !!}
-    </div>
+   
 
 
 @stop

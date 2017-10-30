@@ -73,7 +73,7 @@ class Paginas_Controller extends Controller
         if($Request->get('select_marcas_en_evento') != '' && ($Request->get('select_marcas_en_evento') != null))
         {
             $Eventos = [];
-
+ 
             //traigo los eventos de esta marca
             $MarcaEventos = $this->Marca_de_eventoRepo->getMarca_de_eventoDeEstaMarca($Request->get('select_marcas_en_evento'));
             
@@ -87,7 +87,7 @@ class Paginas_Controller extends Controller
         }
         else
         {
-            $Eventos            = $this->EventoRepo->getEntidadActivasPaginadas($Request,10);
+            $Eventos            = $this->EventoRepo->getEntidadActivasYOrdenadasSegunPaginadas($Request,'fecha','desc',10);
             $Marca_seleccionada = '';
         }
         

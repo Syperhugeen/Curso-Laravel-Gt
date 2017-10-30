@@ -63,7 +63,19 @@ abstract class BaseRepo
     }
 
     /**
-     * Entidades All ya paginadas Paginadas
+     * Entidades Activas Paginadas y ordenadas
+     */
+    public function getEntidadActivasYOrdenadasSegunPaginadas($request,$OrdenadasSegunAtributo,$Orden,$paginacion)
+    {
+      return $this->entidad
+                  ->name($request->get('name')) 
+                  ->active()               
+                  ->orderBy($OrdenadasSegunAtributo,$Orden)
+                  ->paginate($paginacion);
+    }
+
+    /**
+     * Entidades All ya paginadas Paginadas 
      */
     public function getEntidadesAllPaginadas($request,$paginacion)
     {
@@ -71,6 +83,16 @@ abstract class BaseRepo
     return $this->entidad
                 ->name($request->get('name'))                
                 ->orderBy('id','desc')
+                ->paginate($paginacion);
+  
+    }
+
+    public function getEntidadesAllPaginadasYOrdenadas($request,$OrdenadasSegunAtributo,$Orden,$paginacion)
+    {
+
+    return $this->entidad
+                ->name($request->get('name'))                
+                ->orderBy($OrdenadasSegunAtributo,$Orden)
                 ->paginate($paginacion);
   
     }

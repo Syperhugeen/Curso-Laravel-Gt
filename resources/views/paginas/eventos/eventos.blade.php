@@ -87,7 +87,13 @@
   			<div class="row">
   				<div class="">
   					
-  						<h5 class="ampliar text-center">aqui ira la paginacion</h5>
+  						<h5 class="ampliar text-center">
+                 @if($Marca_seleccionada != '')
+                 
+                 @else
+                    {!! $Eventos->appends(Request::all())->render() !!}
+                 @endif
+              </h5>
   									
   				</div>
   			</div>
