@@ -58,26 +58,34 @@
         <div class="col-xs-12 special-col no-padding no-border">
           <div class="row">
               
-            <div class="col-sm-6 no-padding special-col special-col-img">
+            <div class="col-sm-6 no-padding eventos-imagen special-col special-col-img">
               <img class="img-main" src="{{$Evento->evento->url_img}}">
             </div>
                 
             <div class="col-sm-6 no-margin">
               <div class="table-outer">
                 <div class="table-inner">
-                  <div>
-                    <h2>{{$Evento->evento->name}}</h2>
-                    <div class="p-container hidden-xs">
-                      <p class="text-center">
-                        @if(isset($Evento->evento->description))
-                         {{$Evento->evento->description}}
-                        @endif
-                      </p>
-                    </div>
-                    <a href="{{$Evento->evento->route}}">
-                      <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
-                    </a>
+
+                  <div class="inline-logos chiqui-logos">
+                    @foreach($Evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
+                    <!-- <a href="{{$Marca->marca->route}}"> -->
+                      <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
+                    <!-- </a> -->
+                    @endforeach
                   </div>
+
+                  <h2>{{$Evento->evento->name}}</h2>
+                  <div class="p-container hidden-xs">
+                    <p class="text-center">
+                      @if(isset($Evento->evento->description))
+                       {{$Evento->evento->description}}
+                      @endif
+                    </p>
+                  </div>
+                  <a href="{{$Evento->evento->route}}">
+                    <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
+                  </a>
+
                 </div>
               </div> 
             </div>
