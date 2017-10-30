@@ -28,7 +28,7 @@
     <div class="row">
 
       <div class="col-md-6 col-md-push-3 super-space-top space-bottom">
-        <h1 class="section-title text-center">Eventos y promociones asociados a {{$Marca->name}}</h1>
+        <h1 class="section-title text-center">Lalala Eventos y promociones asociados a {{$Marca->name}}</h1>
         <div class="table-outer">
           <div class="table-inner">
             <div class="inline-logos">
