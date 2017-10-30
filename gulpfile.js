@@ -35,6 +35,7 @@ elixir(function(mix) {
         'Plug-bootstrap-fileinput v4.3.7.js',
         'Plug-slick.min.js',
         'Plug-image-dropdown.js',
+        'ekko-lightbox.js',
         'inicio.js',
         'mis-animations.js',
         'mis-funciones_personalizadas.js',
