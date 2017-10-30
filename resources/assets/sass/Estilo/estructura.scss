@@ -22,7 +22,7 @@ $navbar-altura-xs:68px;
 
 /*---esto se cambia automáticamente acorde a la altura ingresada de la Navbar
 para que el contenido comience luego de la Navbar y no se pierda nada detrás de ella---*/
-  body{   	padding-top:$navbar-altura; background-color:$color-2;}
+  body{   	padding-top:$navbar-altura; background-color:$color-white;}
   @media (max-width:767px) {body{    padding-top:$navbar-altura-xs; }}
 
 /* escribir aquí la altura de las columnas del footer, a criterio según la cantidad de info que tengan */
@@ -39,7 +39,7 @@ $altura-footer-columns:200px;
   overflow-x:hidden;
   padding-top:$navbar-altura;
   margin-top:-$navbar-altura;
-  background-color:$color-2;
+  background-color:$color-white;
 }
 @media (max-width:767px){.global-wrapper{
   padding-top:$navbar-altura-xs;
