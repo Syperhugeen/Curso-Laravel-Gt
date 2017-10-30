@@ -86,9 +86,9 @@
         <div class="thumbnail-gallery-parent">
           @foreach($Evento->imagenesevento as $img)
             <div class="thumbnail-gallery-child">
-               <!--<a href="">-->
-                <img class="img-greyscale-hover" src="{{$img->url_img}}">
-              <!--</a>-->
+              <a href="{{$img->url_img}}" data-toggle="lightbox" data-gallery="evento-gallery" data-type="image"> <!-- data-title="{{$Evento->name}}" data-footer="{{$Empresa->name}}" data-remote="{{$img->url_img}}"-->
+                <img class="img-greyscale-hover img-fluid" src="{{$img->url_img}}">
+              </a>
             </div>
           @endforeach
         </div>
@@ -142,6 +142,9 @@
 
   </div>
 
+
+
+<!-- /fin de #evento-individual -->
 </div>
 
 
@@ -149,41 +152,4 @@
 
 
 
-<!-- modal con lightbox de foto elegida -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
-
-<!-- script para que dictaminar que los thumbnail abren el modal -->
-<script type="text/javascript">
-$(document).ready(function(){
-  $('div.thumbnail-gallery-parent').bsPhotoGallery({
-    "classes" : "col-lg-2 col-md-4 col-sm-3 col-xs-4 col-xxs-12",
-    "hasModal" : true
-  });
-})
-</script>
-
-
-<!-- script para abrir el modal con el lightbox de las fotos -->
-<script type="text/javascript">
-$(document).ready(function(){
-   $('div.thumbnail-gallery-child img').on('click',function(){
-        var src = $(this).attr('src');
-        var img = '<img src="' + src + '" class="img-responsive"/>';
-        $('#myModal').modal();
-        $('#myModal').on('shown.bs.modal', function(){
-            $('#myModal .modal-body').html(img);
-        });
-        $('#myModal').on('hidden.bs.modal', function(){
-            $('#myModal .modal-body').html('');
-        });
-   });
-})
-</script>

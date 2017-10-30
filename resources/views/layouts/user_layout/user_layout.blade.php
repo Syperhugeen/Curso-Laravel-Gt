@@ -40,7 +40,7 @@
 
 
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="120">
+  <body data-spy="scroll" data-target="navbar" data-offset="120"> <!-- le quité el punto al valor de data-target; .navbar decía antes -->
 
       <div class="global-wrapper">
 
@@ -129,6 +129,15 @@
         }
      });
     });
+  </script>
+
+
+  <!-- script para abrir el modal con el lightbox de las fotos -->
+  <script type="text/javascript">
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                  event.preventDefault();
+                  $(this).ekkoLightbox();
+              });
   </script>
 
   </body>
