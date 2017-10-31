@@ -69,7 +69,9 @@
     <div class="row hr-border-top-pegado">
 
                   @foreach($Marcas as $Marca)
-                   @include('paginas.marcas.entidad_marca_para_listado')
+                   {{$Marca->name}} <br><br>
+                   {{-- @include('paginas.marcas.entidad_marca_para_listado') --}}
+                   
                   @endforeach
    
 

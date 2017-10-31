@@ -17,9 +17,14 @@
 		             @endforeach
 				</div>
 				<h2>{{$Evento->name}}</h2>
-				<div class="p-container hidden-xs"><p class="text-center">{{$Evento->description}}</p></div>
+				<div class="p-container hidden-xs">
+					 <p class="text-center">{{$Evento->description}}</p>
+				</div>
 				<a href="{{$Evento->route}}">
-					<h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
+					<h5 class="ampliar">
+						<span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR
+
+					</h5>
 				</a>
 			</div>
 		  </div>
