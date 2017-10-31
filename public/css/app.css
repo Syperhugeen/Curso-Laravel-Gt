@@ -14329,6 +14329,11 @@ como por ejemplo un carousel de imágenes de header---*/
 #servicios .special-col:hover img.img-main {
   transform: scale(1.1); }
 
+/* ARREGLO DE MARCAS, DE LOS CUADRADITOS QUE DESAPARECÍAN */
+#marcas .special-col img.img-main {
+  height: 300px;
+  width: 300px; }
+
 /* altura de las special-cols responsive */
 @media (max-width: 767px) {
   #eventos .special-col .col-sm-6,
@@ -14382,7 +14387,8 @@ como por ejemplo un carousel de imágenes de header---*/
   margin-right: 10px; }
 
 #home #section4 .inline-logos.chiqui-logos img,
-#eventos-listado .inline-logos.chiqui-logos img {
+#eventos-listado .inline-logos.chiqui-logos img,
+#marca-individual .inline-logos.chiqui-logos img {
   width: auto;
   height: 120px;
   margin-left: 10px;
@@ -14391,19 +14397,22 @@ como por ejemplo un carousel de imágenes de header---*/
   margin-bottom: -20px; }
 
 #home #section4 .inline-logos.chiqui-logos,
-#eventos-listado .inline-logos.chiqui-logos {
+#eventos-listado .inline-logos.chiqui-logos,
+#marca-individual .inline-logos.chiqui-logos {
   padding: 0;
   margin: 0; }
 
 @media (max-width: 559px) {
   #home #section4 .inline-logos.chiqui-logos img,
-  #eventos-listado .inline-logos.chiqui-logos img {
+  #eventos-listado .inline-logos.chiqui-logos img,
+  #marca-individual .inline-logos.chiqui-logos img {
     height: auto !important;
     width: 40vw !important; } }
 
 @media (min-width: 560px) and (max-width: 767px) {
   #home #section4 .inline-logos.chiqui-logos img,
-  #eventos-listado .inline-logos.chiqui-logos img {
+  #eventos-listado .inline-logos.chiqui-logos img,
+  #marca-individual .inline-logos.chiqui-logos img {
     height: auto !important;
     width: 25vw !important; } }
 

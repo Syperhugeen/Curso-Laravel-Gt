@@ -74,7 +74,8 @@
   	{{-- rombo divisor con el logo de GT --}}
   	<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
 
-  	<div class="row hr-border-top-pegado">
+ {{-- contiene hasta 10 eventos como máximo a la vez (luego aparece la paginación) --}}
+  	 <div class="row hr-border-top-pegado">
 
   			{{-- for each... insertar aquí las entidades --}}
   	    @foreach($Eventos as $Evento)
@@ -92,6 +93,8 @@
            @endif	
   			</div>
   		</div>
+      <!-- /pagination -->
+
 
    	</div>
 

@@ -86,7 +86,7 @@
         <div class="thumbnail-gallery-parent">
           @foreach($Evento->imagenesevento as $img)
             <div class="thumbnail-gallery-child">
-              <a href="{{$img->url_img}}" data-toggle="lightbox" data-gallery="evento-gallery" data-type="image" data-title="{{$Evento->name}}"> <!--  data-footer="{{$Empresa->name}}"-->
+              <a href="{{$img->url_img}}" data-toggle="lightbox" data-gallery="evento-gallery" data-type="image" data-title="{{$Evento->name}}" data-footer="{{$Empresa->name}}">
                 <img class="img-greyscale-hover img-opacity-hover img-fluid ease" src="{{$img->url_img}}">
               </a>
             </div>

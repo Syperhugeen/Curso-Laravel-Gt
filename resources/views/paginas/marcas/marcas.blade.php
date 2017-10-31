@@ -69,30 +69,17 @@
     <div class="row hr-border-top-pegado">
 
                   @foreach($Marcas as $Marca)
-                   {{-- {{$Marca->name}} <br><br> --}}
-
-                   <div style="padding: 50px; background-color: white; border-bottom: solid 5px black;">
-                     <a href="{{$Marca->route}}">
-                        <div class="">
-                          
-                            <div class="table-inner">
-                              <img style="width: 50px; height: 50px;" src="{{$Marca->url_img}}" alt="{{$Marca->name}}">
-                            </div>
-                          
-                        </div>
-                      </a>
-                   </div> <br>
-                   {{-- @include('paginas.marcas.entidad_marca_para_listado') --}}
-                   
+                   @include('paginas.marcas.entidad_marca_para_listado')
                   @endforeach
    
 
-      <!-- pagination -->
-      <div class="col-xs-12 special-col">
+      <!-- pagination MUTEADO por ahora-->
+      <!--<div class="col-xs-12 special-col">
           <div class="pagination-block">
             {!! $Marcas->appends(Request::all())->render() !!}
           </div>
-      </div>
+      </div>-->
+      <!-- /pagination -->
 
 
     </div>
