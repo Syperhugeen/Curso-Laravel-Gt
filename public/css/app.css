@@ -14019,8 +14019,8 @@ div.wrapper-portada > img.portada {
 
 .bg-home-service {
   background-color: white;
-  background-image: url("../../imagenes/Img/bg-home-servicios3.jpg");
-  background-size: auto 100%;
+  background-image: url("../../imagenes/Img/bg-home-servicios4.jpg");
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: left bottom; }
 
