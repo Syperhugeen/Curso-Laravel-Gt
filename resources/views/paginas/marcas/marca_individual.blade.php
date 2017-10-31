@@ -68,9 +68,9 @@
 
                   <div class="inline-logos chiqui-logos">
                     @foreach($Evento->evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
-                    <a href="{{$Marca->marca->route}}">
+                    <!--<a href="{{$Marca->marca->route}}">-->
                       <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
-                    </a> 
+                    <!--</a> -->
                     @endforeach
                   </div>
 
@@ -96,7 +96,7 @@
         </div><!-- /row que incluye todos los eventos -->
 
         <!-- row de la pagination -->
-        <div class="row special-col">
+        <div class="row special-col no-padding">
           <!-- pagination -->
            <div class="col-xs-12 special-col">
             <div class="pagination-block">

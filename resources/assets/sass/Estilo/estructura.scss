@@ -605,6 +605,12 @@ $special-col-altura:400px;
   transform: scale(1.1);
 }
 
+/* ARREGLO DE MARCAS, DE LOS CUADRADITOS QUE DESAPARECÍAN */
+#marcas .special-col img.img-main{
+  height: 300px;
+  width: 300px;
+}
+
 
 /* altura de las special-cols responsive */
 @media (max-width:767px) {
@@ -654,7 +660,8 @@ $special-col-altura:400px;
   margin-right:10px;
 }
 #home #section4 .inline-logos.chiqui-logos img, // home eventos
-#eventos-listado .inline-logos.chiqui-logos img{ // eventos
+#eventos-listado .inline-logos.chiqui-logos img, // eventos
+#marca-individual .inline-logos.chiqui-logos img,{ // eventos de una marca
   width: auto;
   height: 120px;
   margin-left:10px;
@@ -663,19 +670,22 @@ $special-col-altura:400px;
   margin-bottom: -20px;
 }
 #home #section4 .inline-logos.chiqui-logos,
-#eventos-listado .inline-logos.chiqui-logos{
+#eventos-listado .inline-logos.chiqui-logos,
+#marca-individual .inline-logos.chiqui-logos{
   padding: 0;
   margin: 0;
 }
 @media (max-width:559px) {
   #home #section4 .inline-logos.chiqui-logos img,
-  #eventos-listado .inline-logos.chiqui-logos img {
+  #eventos-listado .inline-logos.chiqui-logos img,
+  #marca-individual .inline-logos.chiqui-logos img{
     height: auto !important;
     width: 40vw !important;
 }}
 @media (min-width:560px)and(max-width:767px) {
   #home #section4 .inline-logos.chiqui-logos img,
-  #eventos-listado .inline-logos.chiqui-logos img {
+  #eventos-listado .inline-logos.chiqui-logos img,
+  #marca-individual .inline-logos.chiqui-logos img {
     height: auto !important;
     width: 25vw !important;
 }}
