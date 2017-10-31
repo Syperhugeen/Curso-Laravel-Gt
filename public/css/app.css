@@ -13913,7 +13913,7 @@ son los titulos de la seccion */
 para que el contenido comience luego de la Navbar y no se pierda nada detrás de ella---*/
 body {
   padding-top: 140px;
-  background-color: #080808; }
+  background-color: white; }
 
 @media (max-width: 767px) {
   body {
@@ -13927,7 +13927,7 @@ body {
   overflow-x: hidden;
   padding-top: 140px;
   margin-top: -140px;
-  background-color: #080808; }
+  background-color: white; }
 
 @media (max-width: 767px) {
   .global-wrapper {
@@ -14019,8 +14019,8 @@ div.wrapper-portada > img.portada {
 
 .bg-home-service {
   background-color: white;
-  background-image: url("../../imagenes/Img/bg-home-servicios3.jpg");
-  background-size: auto 100%;
+  background-image: url("../../imagenes/Img/bg-home-servicios4.jpg");
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: left bottom; }
 
@@ -14699,6 +14699,12 @@ body::after {
 .ease {
   /*para que las transiciones sea más smooth*/
   transition: all .3s ease; }
+
+.img-opacity-hover {
+  opacity: 1; }
+
+.img-opacity-hover:hover {
+  opacity: 0.7; }
 
 .decorative-divider {
   position: absolute;
