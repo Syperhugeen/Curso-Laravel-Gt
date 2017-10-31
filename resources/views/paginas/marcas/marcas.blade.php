@@ -70,7 +70,19 @@
 
                   @foreach($Marcas as $Marca)
                    {{-- {{$Marca->name}} <br><br> --}}
-                   @include('paginas.marcas.entidad_marca_para_listado')
+
+                   <div style="padding: 50px; background-color: white; border-bottom: solid 5px black;">
+                     <a href="{{$Marca->route}}">
+                        <div class="">
+                          
+                            <div class="table-inner">
+                              <img style="width: 50px; height: 50px;" src="{{$Marca->url_img}}" alt="{{$Marca->name}}">
+                            </div>
+                          
+                        </div>
+                      </a>
+                   </div> <br>
+                   {{-- @include('paginas.marcas.entidad_marca_para_listado') --}}
                    
                   @endforeach
    
