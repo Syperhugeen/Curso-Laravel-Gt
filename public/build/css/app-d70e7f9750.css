@@ -16329,6 +16329,56 @@ img.marca-col {
     padding-left: 40px;
     padding-right: 40px; } }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*---  P A G I N A C I Ó N  ---*/
+/*--- personalizando los botones de paginación ---*/
+.pagination-block {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center; }
+
+.pagination-block ul.pagination {
+  padding: 0; }
+
+/*--- span y a (características de todos los botones; links y no clickeables) ---*/
+.pagination-block ul.pagination li span,
+.pagination-block ul.pagination li a {
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 16pt;
+  font-family: HelveticaNoue37Thin;
+  color: #cebe98;
+  padding: 10px 20px; }
+
+/*--- span (los botones activos o deshabilitados) ---*/
+.pagination-block ul.pagination li.disabled span {
+  background-color: transparent;
+  color: #cebe98; }
+
+.pagination-block ul.pagination li.disabled:hover span {
+  background-color: transparent;
+  color: #cebe98; }
+
+.pagination-block ul.pagination li.active span {
+  background-color: #cebe98;
+  color: #f1e7d2;
+  border-color: #cebe98; }
+
+.pagination-block ul.pagination li.active:hover span {
+  background-color: #cebe98;
+  color: #f1e7d2; }
+
+/*--- a (los botones clickeables que hacen algo on click) ---*/
+.pagination-block ul.pagination li:hover a {
+  background-color: #f1e7d2; }
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * * * * *   G L O B A L    T E X T   S E T T I N G S   * * * * * *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

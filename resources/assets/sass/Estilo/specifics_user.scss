@@ -563,3 +563,61 @@ right: 0;
   padding-right: 40px;
   }
 }
+
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+
+/*---  P A G I N A C I Ó N  ---*/
+/*--- personalizando los botones de paginación ---*/
+.pagination-block{
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center); 
+}
+.pagination-block ul.pagination{
+  padding: 0;
+}
+/*--- span y a (características de todos los botones; links y no clickeables) ---*/
+.pagination-block ul.pagination li span,
+.pagination-block ul.pagination li a{
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 16pt;
+  font-family: HelveticaNoue37Thin;
+  color: $color-3;
+  padding: 10px 20px;
+}
+/*--- span (los botones activos o deshabilitados) ---*/
+.pagination-block ul.pagination li.disabled span{
+  background-color: transparent;
+  color: $color-3;
+  }
+.pagination-block ul.pagination li.disabled:hover span{
+  background-color: transparent;
+  color: $color-3;
+  }
+.pagination-block ul.pagination li.active span{
+  background-color: $color-3;
+  color: $color-3superlight;
+  border-color: $color-3;
+  }
+.pagination-block ul.pagination li.active:hover span{
+  background-color: $color-3;
+  color: $color-3superlight;
+  }
+
+/*--- a (los botones clickeables que hacen algo on click) ---*/
+.pagination-block ul.pagination li a{
+  }
+.pagination-block ul.pagination li:hover a{
+  background-color: $color-3superlight;
+  }

@@ -84,18 +84,12 @@
 
   		<!-- pagination -->
   	   <div class="col-xs-12 special-col">
-  			<div class="row">
-  				<div class="">
-  					
-  						<h5 class="ampliar text-center">
-                 @if($Marca_seleccionada != '')
-                 
-                 @else
-                    {!! $Eventos->appends(Request::all())->render() !!}
-                 @endif
-              </h5>
-  									
-  				</div>
+  			<div class="pagination-block">
+           @if($Marca_seleccionada != '')
+           
+           @else
+              {!! $Eventos->appends(Request::all())->render() !!}
+           @endif	
   			</div>
   		</div>
 
