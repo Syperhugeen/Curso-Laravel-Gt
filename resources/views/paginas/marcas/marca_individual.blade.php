@@ -67,10 +67,10 @@
                 <div class="table-inner">
 
                   <div class="inline-logos chiqui-logos">
-                    @foreach($Evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
-                    <!-- <a href="{{$Marca->marca->route}}"> -->
+                    @foreach($Evento->evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
+                    <a href="{{$Marca->marca->route}}">
                       <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
-                    <!-- </a> -->
+                    </a> 
                     @endforeach
                   </div>
 
