@@ -28,7 +28,7 @@
     <div class="row">
 
       <div class="col-md-6 col-md-push-3 super-space-top space-bottom">
-        <h1 class="section-title text-center">Lalala Eventos y promociones asociados a {{$Marca->name}}</h1>
+        <h1 class="section-title text-center">Eventos y promociones asociados a {{$Marca->name}}</h1>
         <div class="table-outer">
           <div class="table-inner">
             <div class="inline-logos">
@@ -96,12 +96,11 @@
         </div><!-- /row que incluye todos los eventos -->
 
         <!-- row de la pagination -->
-        <div class="row special-col no-padding">
-          <div class="col-xs-12 special-col">
-            <h5 class="ampliar text-center">aqui ira la paginacion</h5>  
-            {{-- es la paginacion --}}
-            <div class="col-centered">
-              {!! $Eventos->appends(Request::all())->render() !!}
+        <div class="row special-col">
+          <!-- pagination -->
+           <div class="col-xs-12 special-col">
+            <div class="pagination-block">
+                  {!! $Eventos->appends(Request::all())->render() !!}
             </div>
           </div>
         </div><!-- /row de la pagination -->
