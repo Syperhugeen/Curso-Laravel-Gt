@@ -109,7 +109,8 @@ class Paginas_Controller extends Controller
         public function get_pagina_evento_individual($name,$id,Request $Request)
         {
             $Evento = $this->EventoRepo->find($id);
-            return view('paginas.eventos.evento_individual', compact('Evento'));
+            $Empresa = $this->EmpresaRepo->getEmpresaDatos(); 
+            return view('paginas.eventos.evento_individual', compact('Evento','Empresa'));
         }
 
 
