@@ -51,6 +51,14 @@ class Paginas_Controller extends Controller
     public function get_pagina_marcas(Request $Request)
     {
         $Marcas = $this->MarcaRepo->getEntidadActivasPaginadas($Request,20);
+
+        //consultar todas rango altorandom 
+
+        //consultar las demas
+
+        //cosnultar las demas
+
+
         return view('paginas.marcas.marcas', compact('Marcas'));
     }
         //pagina de la marca individual
@@ -59,11 +67,11 @@ class Paginas_Controller extends Controller
             $Marca   = $this->MarcaRepo->find($id);
 
             //le envio los eventos de esa marca
-            $Eventos = $this->Marca_de_eventoRepo->getEntidadActivasAll_Segun_Atributo_y_Ordenadas('marca_id',$id,'desc',5);
+            $Eventos = $this->Marca_de_eventoRepo->getEntidadActivasAll_Segun_Atributo_y_Ordenadas('marca_id',$id,'desc',5);    
 
-                   
+            $Empresa = $this->EmpresaRepo->getEmpresaDatos();       
            
-            return view('paginas.marcas.marca_individual', compact('Marca','Eventos'));
+            return view('paginas.marcas.marca_individual', compact('Marca','Eventos','Empresa'));
         }
 
 
@@ -101,7 +109,8 @@ class Paginas_Controller extends Controller
         public function get_pagina_evento_individual($name,$id,Request $Request)
         {
             $Evento = $this->EventoRepo->find($id);
-            return view('paginas.eventos.evento_individual', compact('Evento'));
+            $Empresa = $this->EmpresaRepo->getEmpresaDatos(); 
+            return view('paginas.eventos.evento_individual', compact('Evento','Empresa'));
         }
 
 
