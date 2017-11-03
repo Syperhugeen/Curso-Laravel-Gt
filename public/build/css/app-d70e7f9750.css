@@ -14011,7 +14011,7 @@ div.wrapper-portada > img.portada {
 
 /* B A C K G R O U N D   I M A G E  size: cover */
 .bg-home-puzzle {
-  background-image: url("../../imagenes/Img/bg-home-puzzle.jpg");
+  background-image: url("../../imagenes/Img/bg-home-puzzle3.jpg");
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14019,7 +14019,7 @@ div.wrapper-portada > img.portada {
 
 .bg-home-service {
   background-color: white;
-  background-image: url("../../imagenes/Img/bg-home-servicios.jpg");
+  background-image: url("../../imagenes/Img/bg-home-servicios4.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: left bottom; }
@@ -14046,14 +14046,14 @@ div.wrapper-portada > img.portada {
   background-color: white; }
 
 .bg-servicios-diferencial {
-  background-image: url("../../imagenes/Img/bg-servicios-diferencial.jpg");
+  background-image: url("../../imagenes/Img/bg-servicios-diferencial2.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white; }
 
 .bg-marcas-header {
-  background-image: url("../../imagenes/Img/bg-marcas-header.jpg");
+  background-image: url("../../imagenes/Img/bg-marcas-header2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14074,7 +14074,7 @@ div.wrapper-portada > img.portada {
   background-color: white; }
 
 .bg-contacto-header {
-  background-image: url("../../imagenes/Img/bg-contacto-header.jpg");
+  background-image: url("../../imagenes/Img/bg-contacto-header2.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14103,7 +14103,7 @@ div.wrapper-portada > img.portada {
   .bg-servicios-listado {
     background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
   .bg-servicios-diferencial {
-    background-image: url("../../imagenes/Img/bg-servicios-diferencial(responsive).jpg"); }
+    background-image: url("../../imagenes/Img/bg-servicios-diferencial(responsive)2.jpg"); }
   .bg-marcas-header {
     background-image: url("../../imagenes/Img/bg-marcas-header(responsive).jpg"); }
   .bg-eventos-header {
@@ -14329,11 +14329,6 @@ como por ejemplo un carousel de imágenes de header---*/
 #servicios .special-col:hover img.img-main {
   transform: scale(1.1); }
 
-/* ARREGLO DE MARCAS, DE LOS CUADRADITOS QUE DESAPARECÍAN */
-#marcas .special-col img.img-main {
-  height: 300px;
-  width: 300px; }
-
 /* altura de las special-cols responsive */
 @media (max-width: 767px) {
   #eventos .special-col .col-sm-6,
@@ -14387,8 +14382,7 @@ como por ejemplo un carousel de imágenes de header---*/
   margin-right: 10px; }
 
 #home #section4 .inline-logos.chiqui-logos img,
-#eventos-listado .inline-logos.chiqui-logos img,
-#marca-individual .inline-logos.chiqui-logos img {
+#eventos-listado .inline-logos.chiqui-logos img {
   width: auto;
   height: 120px;
   margin-left: 10px;
@@ -14397,22 +14391,19 @@ como por ejemplo un carousel de imágenes de header---*/
   margin-bottom: -20px; }
 
 #home #section4 .inline-logos.chiqui-logos,
-#eventos-listado .inline-logos.chiqui-logos,
-#marca-individual .inline-logos.chiqui-logos {
+#eventos-listado .inline-logos.chiqui-logos {
   padding: 0;
   margin: 0; }
 
 @media (max-width: 559px) {
   #home #section4 .inline-logos.chiqui-logos img,
-  #eventos-listado .inline-logos.chiqui-logos img,
-  #marca-individual .inline-logos.chiqui-logos img {
+  #eventos-listado .inline-logos.chiqui-logos img {
     height: auto !important;
     width: 40vw !important; } }
 
 @media (min-width: 560px) and (max-width: 767px) {
   #home #section4 .inline-logos.chiqui-logos img,
-  #eventos-listado .inline-logos.chiqui-logos img,
-  #marca-individual .inline-logos.chiqui-logos img {
+  #eventos-listado .inline-logos.chiqui-logos img {
     height: auto !important;
     width: 25vw !important; } }
 
