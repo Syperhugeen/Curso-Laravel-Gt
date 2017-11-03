@@ -1,14 +1,14 @@
-<!--flecha guía hacia abajo (indicando que hay más contenido)-->
-<div class="row hidden-xs space-top">
-	<div class="text-center">
-	<h1 class="color-3light"><span class="glyphicon glyphicon-triangle-bottom"></span></h1>
-	</div>
-</div>
-
-
 
 <!--row para un texto introductorio-->
 <div class="row bg-home-service space-top">
+
+
+	<!--flecha guía hacia abajo (indicando que hay más contenido)-->
+	<div class="col-sm-12 hidden-xs space-top">
+		<div class="text-center">
+		<h1 class="color-3light"><span class="glyphicon glyphicon-triangle-bottom"></span></h1>
+		</div>
+	</div>
 
 
 	<div class="col-sm-5 col-sm-push-6 space-top space-bottom">
