@@ -83,17 +83,20 @@
   	    @endforeach
 
 
-  		<!-- pagination -->
-  	   <div class="col-xs-12 special-col">
-  			<div class="pagination-block">
-           @if($Marca_seleccionada != '')
-              {!! $Eventos->appends(Request::all())->render() !!}
-           @else
-              {!! $Eventos->appends(Request::all())->render() !!}
-           @endif	
-  			</div>
-  		</div>
-      <!-- /pagination -->
+     @if($Eventos->hasMorePages() )     
+        <!-- pagination -->
+         <div class="col-xs-12 special-col">
+          <div class="pagination-block">
+             @if($Marca_seleccionada != '')
+                {!! $Eventos->appends(Request::all())->render() !!}
+             @else
+                {!! $Eventos->appends(Request::all())->render() !!}
+             @endif 
+          </div>
+        </div>
+        <!-- /pagination -->
+     @endif
+  		
 
 
    	</div>

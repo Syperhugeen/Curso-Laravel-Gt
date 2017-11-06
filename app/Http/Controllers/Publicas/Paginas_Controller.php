@@ -55,13 +55,16 @@ class Paginas_Controller extends Controller
         $Marcas = $this->MarcaRepo->getEntidadActivasPaginadas($Request,20);
 
         //consultar todas rango altorandom 
+        $MarcasRango3 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(3, null);
+        $MarcasRango2 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(2, null);;
+        $MarcasRango1 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(1, null);;
 
         //consultar las demas
 
         //cosnultar las demas
 
 
-        return view('paginas.marcas.marcas', compact('Marcas'));
+        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1'));
     }
         //pagina de la marca individual
         public function get_pagina_marca_individual($name,$id,Request $Request)
@@ -100,12 +103,14 @@ class Paginas_Controller extends Controller
         }
         else
         {
-            $Eventos            = $this->EventoRepo->getEntidadActivasYOrdenadasSegunPaginadas($Request,'fecha','desc',10);
+            $Eventos            = $this->EventoRepo->getEntidadActivasYOrdenadasSegunPaginadas($Request,'fecha','desc',50);
             $Marca_seleccionada = '';
         }
         
         
         $Marcas  = $this->MarcaRepo->getEntidadActivas();
+
+        
 
 
         return view('paginas.eventos.eventos', compact('Eventos','Marcas','Marca_seleccionada'));

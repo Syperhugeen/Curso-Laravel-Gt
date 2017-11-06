@@ -68,10 +68,20 @@
   {{-- contiene hasta 20 logos de marcas como máximo a la vez (luego aparece la paginación) --}}
     <div class="row hr-border-top-pegado">
 
-                  @foreach($Marcas as $Marca)
+                  @foreach($MarcasRango3 as $Marca)
+                   @include('paginas.marcas.entidad_marca_para_listado')
+                  @endforeach
+
+                  @foreach($MarcasRango2 as $Marca)
+                   @include('paginas.marcas.entidad_marca_para_listado')
+                  @endforeach
+
+                  @foreach($MarcasRango1 as $Marca)
                    @include('paginas.marcas.entidad_marca_para_listado')
                   @endforeach
    
+
+      
 
       <!-- pagination MUTEADO por ahora-->
       <!--<div class="col-xs-12 special-col">
