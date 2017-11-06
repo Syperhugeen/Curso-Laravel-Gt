@@ -35,5 +35,14 @@ class EventoRepo extends BaseRepo
   {
       return $this->getEntidad()->active()->take(2)->get()->last();
   }
+
+  public function getEventosArrayDeEventosID($array_eventos_id,$pagination)
+  {
+    return $this->getEntidad()
+                ->whereIn('id', $array_eventos_id)  
+                ->active() 
+                ->orderBy('fecha', 'desc')
+                ->paginate($pagination);
+  }
   
 }

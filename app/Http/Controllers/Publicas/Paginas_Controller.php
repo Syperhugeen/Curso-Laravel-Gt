@@ -11,6 +11,8 @@ use App\Repositorios\EmpresaRepo;
 use App\Repositorios\MarcaRepo;
 use App\Repositorios\EventoRepo;
 use App\Repositorios\Marca_de_eventoRepo;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 
 
 class Paginas_Controller extends Controller
@@ -80,7 +82,7 @@ class Paginas_Controller extends Controller
     {
         if($Request->get('select_marcas_en_evento') != '' && ($Request->get('select_marcas_en_evento') != null))
         {
-            $Eventos = [];
+            $EventosIds = [];
  
             //traigo los eventos de esta marca
             $MarcaEventos = $this->Marca_de_eventoRepo->getMarca_de_eventoDeEstaMarca($Request->get('select_marcas_en_evento'));
@@ -88,8 +90,11 @@ class Paginas_Controller extends Controller
             //busco los eventos y los cargo al array
             foreach($MarcaEventos as $MarcaEvento)
             {
-                array_push($Eventos,$this->EventoRepo->find($MarcaEvento->evento_id));
+                array_push($EventosIds,$MarcaEvento->evento_id);
             }
+
+            $Eventos = $this->EventoRepo->getEventosArrayDeEventosID($EventosIds,10);
+            
 
             $Marca_seleccionada = $this->MarcaRepo->find($Request->get('select_marcas_en_evento'));
         }
