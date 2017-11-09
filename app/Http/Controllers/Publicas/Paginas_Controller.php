@@ -52,8 +52,15 @@ class Paginas_Controller extends Controller
     //pagina donde estan las marcas
     public function get_pagina_marcas(Request $Request)
     {
-        $Marcas = $this->MarcaRepo->getEntidadActivasPaginadas($Request,20);
 
+        $Marcas =  $this->MarcaRepo->getEntidadActivas();
+
+        $Marca = '';
+
+        if($Request->get('select_marcas_id') != '' && ($Request->get('select_marcas_id') != null))
+        {
+         $Marca = $this->MarcaRepo->find($Request->get('select_marcas_id'));
+        }
         //consultar todas rango altorandom 
         $MarcasRango3 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(3, null);
         $MarcasRango2 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(2, null);;
@@ -64,7 +71,7 @@ class Paginas_Controller extends Controller
         //cosnultar las demas
 
 
-        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1'));
+        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1','Marcas','Marca'));
     }
         //pagina de la marca individual
         public function get_pagina_marca_individual($name,$id,Request $Request)

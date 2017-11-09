@@ -47,7 +47,7 @@
                 <h4 class="buscador-predescription">¿Buscas una marca en particular?</h4>
               </div>
               <div class="buscador wow fadeInRight" id="marcas-buscador">
-                <!-- @include('paginas.eventos.partes.select_buscador')  -->
+                @include('paginas.marcas.select_buscador')  
               </div>
             </div>
           </div>
@@ -67,18 +67,21 @@
 
   {{-- contiene hasta 20 logos de marcas como máximo a la vez (luego aparece la paginación) --}}
     <div class="row hr-border-top-pegado">
+                  @if($Marca != '')
+                    @include('paginas.marcas.entidad_marca_para_listado')
+                  @else
+                    @foreach($MarcasRango3 as $Marca)
+                     @include('paginas.marcas.entidad_marca_para_listado')
+                    @endforeach
 
-                  @foreach($MarcasRango3 as $Marca)
-                   @include('paginas.marcas.entidad_marca_para_listado')
-                  @endforeach
+                    @foreach($MarcasRango2 as $Marca)
+                     @include('paginas.marcas.entidad_marca_para_listado')
+                    @endforeach
 
-                  @foreach($MarcasRango2 as $Marca)
-                   @include('paginas.marcas.entidad_marca_para_listado')
-                  @endforeach
-
-                  @foreach($MarcasRango1 as $Marca)
-                   @include('paginas.marcas.entidad_marca_para_listado')
-                  @endforeach
+                    @foreach($MarcasRango1 as $Marca)
+                     @include('paginas.marcas.entidad_marca_para_listado')
+                    @endforeach
+                  @endif
    
 
       
