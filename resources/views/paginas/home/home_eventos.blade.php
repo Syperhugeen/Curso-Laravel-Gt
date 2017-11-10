@@ -20,6 +20,7 @@
 <div class="row hr-border-top-pegado">
 
 {{-- ultimo evento --}}
+<a href="{{$UltimoEvento->route}}">
 	<div class="col-xs-12 special-col no-padding">
 		<div class="row">
 			<div class="col-sm-6 no-padding eventos-imagen">
@@ -45,9 +46,11 @@
 			</div>
 		</div>
 	</div>
+</a>
 
 
 {{-- penultimo evento --}}
+<a href="{{$PenultimoEvento->route}}">
 	<div class="col-xs-12 special-col no-padding">
 		<div class="row">
 			<div class="col-sm-6 no-padding eventos-imagen">
@@ -73,9 +76,11 @@
 			</div>
 		</div>
 	</div>
+</a>
 
 
 {{-- boton - ver mas eventos --}}
+<a href="{{route('get_pagina_eventos')}}">
 	<div class="col-xs-12 special-col">
 		<div class="row"><!-- ver más / ampliar / explorar -->
 			<div class="">
@@ -85,6 +90,7 @@
 			</div>
 		</div>
 	</div>
+</a>
 
 
 </div>

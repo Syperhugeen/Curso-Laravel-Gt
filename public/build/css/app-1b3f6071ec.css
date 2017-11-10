@@ -327,6 +327,7 @@ p, h1, h2, h3, h4, h5, h6 {
 y para quitar el subrayado de los links*/
 a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
   cursor: pointer;
+  cursor: hand;
   text-decoration: none;
   outline: none; }
 
@@ -14170,7 +14171,11 @@ como por ejemplo un carousel de imágenes de header---*/
   margin: 0 !important; }
 
 .no-border {
-  border: none; }
+  border: none !important; }
+
+.no-vertical-border {
+  border-top: none !important;
+  border-bottom: none !important; }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - -*/
@@ -14455,6 +14460,14 @@ como por ejemplo un carousel de imágenes de header---*/
 
 #evento-individual .special-col-fake:hover {
   background-color: #f8f8f8; }
+
+a .special-col {
+  cursor: pointer;
+  cursor: hand; }
+
+a .special-col-fake {
+  cursor: pointer;
+  cursor: hand; }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -14792,6 +14805,7 @@ ul.text-slide {
 
 ul.text-slide a li h4 {
   cursor: pointer;
+  cursor: hand;
   color: #b3b3b3;
   margin: 0;
   font-size: 16px;
@@ -16463,6 +16477,7 @@ p, h1, h2, h3, h4, h5, h6 {
 y para quitar el subrayado de los links*/
 a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
   cursor: pointer;
+  cursor: hand;
   text-decoration: none;
   outline: none; }
 

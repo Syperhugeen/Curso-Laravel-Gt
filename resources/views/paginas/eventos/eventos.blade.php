@@ -79,8 +79,29 @@
 
   <!--para agregar los márgenes laterales-->
   <div class="container-fluid no-padding section-wrapper" id="eventos-listado">
+
+
+
+
+
   	{{-- rombo divisor con el logo de GT --}}
-  	<div class="decorative-divider"><img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
+    <!--desaparece cuando no hay header-->
+  	<div class="decorative-divider"
+
+    @if($Eventos->hasPages())  
+        @if($Eventos->currentPage() != 1)
+            style="display:none;"
+        @endif
+      @endif>
+
+      <img class="img-responsive" src="imagenes/Empresa/isologo_color3.png"></div>
+
+
+
+
+
+
+
 
  {{-- contiene hasta 10 eventos como máximo a la vez (luego aparece la paginación) --}}
   	 <div class="row hr-border-top-pegado">
