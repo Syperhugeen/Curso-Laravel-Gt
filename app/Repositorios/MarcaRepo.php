@@ -47,7 +47,28 @@ class MarcaRepo extends BaseRepo
   //setters//////////////////////////////////////////////////////////////////////
 
  
+  public function getMarcasDesordenadasRandomSegunRank($rank,$cantidad)
+  {
+    $marcas = $this->getEntidad()
+                  ->active()
+                  ->where('rank',$rank)
+                  ->get()
+                  ->shuffle();
 
+    if($marcas->count( ) >= $cantidad) 
+    {
+      if($cantidad == null)
+      {
+        return $marcas;
+      }
+      return $marcas->take($cantidad)->get();
+    } 
+    else
+    {
+      return $marcas;
+    }            
+
+  }
  
 
 

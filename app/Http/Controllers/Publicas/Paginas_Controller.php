@@ -11,6 +11,8 @@ use App\Repositorios\EmpresaRepo;
 use App\Repositorios\MarcaRepo;
 use App\Repositorios\EventoRepo;
 use App\Repositorios\Marca_de_eventoRepo;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 
 
 class Paginas_Controller extends Controller
@@ -50,16 +52,26 @@ class Paginas_Controller extends Controller
     //pagina donde estan las marcas
     public function get_pagina_marcas(Request $Request)
     {
-        $Marcas = $this->MarcaRepo->getEntidadActivasPaginadas($Request,20);
 
+        $Marcas =  $this->MarcaRepo->getEntidadActivas();
+
+        $Marca = '';
+
+        if($Request->get('select_marcas_id') != '' && ($Request->get('select_marcas_id') != null))
+        {
+         $Marca = $this->MarcaRepo->find($Request->get('select_marcas_id'));
+        }
         //consultar todas rango altorandom 
+        $MarcasRango3 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(3, null);
+        $MarcasRango2 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(2, null);;
+        $MarcasRango1 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(1, null);;
 
         //consultar las demas
 
         //cosnultar las demas
 
 
-        return view('paginas.marcas.marcas', compact('Marcas'));
+        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1','Marcas','Marca'));
     }
         //pagina de la marca individual
         public function get_pagina_marca_individual($name,$id,Request $Request)
@@ -80,7 +92,7 @@ class Paginas_Controller extends Controller
     {
         if($Request->get('select_marcas_en_evento') != '' && ($Request->get('select_marcas_en_evento') != null))
         {
-            $Eventos = [];
+            $EventosIds = [];
  
             //traigo los eventos de esta marca
             $MarcaEventos = $this->Marca_de_eventoRepo->getMarca_de_eventoDeEstaMarca($Request->get('select_marcas_en_evento'));
@@ -88,8 +100,11 @@ class Paginas_Controller extends Controller
             //busco los eventos y los cargo al array
             foreach($MarcaEventos as $MarcaEvento)
             {
-                array_push($Eventos,$this->EventoRepo->find($MarcaEvento->evento_id));
+                array_push($EventosIds,$MarcaEvento->evento_id);
             }
+
+            $Eventos = $this->EventoRepo->getEventosArrayDeEventosID($EventosIds,10);
+            
 
             $Marca_seleccionada = $this->MarcaRepo->find($Request->get('select_marcas_en_evento'));
         }
@@ -101,6 +116,8 @@ class Paginas_Controller extends Controller
         
         
         $Marcas  = $this->MarcaRepo->getEntidadActivas();
+
+        
 
 
         return view('paginas.eventos.eventos', compact('Eventos','Marcas','Marca_seleccionada'));

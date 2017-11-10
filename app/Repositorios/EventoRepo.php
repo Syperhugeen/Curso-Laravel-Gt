@@ -25,7 +25,7 @@ class EventoRepo extends BaseRepo
    */
   public function getUltimoEvento()
   {
-    return $this->getEntidad()->active()->get()->first();
+    return $this->getEntidad()->active()->orderBy('fecha', 'desc')->get()->first();
   }
 
   /**
@@ -33,7 +33,16 @@ class EventoRepo extends BaseRepo
     */  
   public function getPenultimoEvento()
   {
-      return $this->getEntidad()->active()->take(2)->get()->last();
+      return $this->getEntidad()->active()->orderBy('fecha', 'desc')->take(2)->get()->last();
+  }
+
+  public function getEventosArrayDeEventosID($array_eventos_id,$pagination)
+  {
+    return $this->getEntidad()
+                ->whereIn('id', $array_eventos_id)  
+                ->active() 
+                ->orderBy('fecha', 'desc')
+                ->paginate($pagination);
   }
   
 }

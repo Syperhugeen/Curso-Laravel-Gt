@@ -29,8 +29,16 @@
     
 
 
+
   <!--para agregar los márgenes laterales-->
-  <div class="section-wrapper bg-eventos-header" id="eventos-header">
+  <div class="section-wrapper bg-eventos-header" id="eventos-header"    
+
+      @if($Eventos->hasPages())  
+        @if($Eventos->currentPage() != 1)
+            style="display:none;"
+        @endif
+      @endif
+  >
     <div class="container-fluid">
       <div class="row super-space-bottom space-top">
           <div class="col-md-8 col-md-push-3 col-lg-8 col-lg-push-2">
@@ -83,17 +91,20 @@
   	    @endforeach
 
 
-  		<!-- pagination -->
-  	   <div class="col-xs-12 special-col">
-  			<div class="pagination-block">
-           @if($Marca_seleccionada != '')
-           
-           @else
-              {!! $Eventos->appends(Request::all())->render() !!}
-           @endif	
-  			</div>
-  		</div>
-      <!-- /pagination -->
+     @if($Eventos->hasPages() )     
+        <!-- pagination -->
+         <div class="col-xs-12 special-col">
+          <div class="pagination-block">
+             @if($Marca_seleccionada != '')
+                {!! $Eventos->appends(Request::all())->render() !!}
+             @else
+                {!! $Eventos->appends(Request::all())->render() !!}
+             @endif 
+          </div>
+        </div>
+        <!-- /pagination -->
+     @endif
+  		
 
 
    	</div>
