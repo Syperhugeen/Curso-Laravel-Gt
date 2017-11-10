@@ -55,10 +55,10 @@
         <div class="row"> <!-- row que incluye todos los eventos -->
         @foreach($Eventos as $Evento)
         <!-- col del evento individual -->
-        <div class="col-xs-12 special-col no-padding no-border">
+        <div class="col-xs-12 special-col no-padding">
           <div class="row">
               
-            <div class="col-sm-6 no-padding eventos-imagen special-col special-col-img">
+            <div class="col-sm-6 no-padding eventos-imagen special-col special-col-img no-vertical-border">
               <img class="img-main" src="{{$Evento->evento->url_img}}">
             </div>
                 

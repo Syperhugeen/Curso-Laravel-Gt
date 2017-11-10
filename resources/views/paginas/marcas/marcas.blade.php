@@ -41,7 +41,7 @@
             </div>
           </div>
 
-          <div class="row super-space-top space-bottom hidden-xs">
+          <div class="row space-bottom hidden-xs">
             <div class="col-sm-6 col-sm-push-6 space-bottom">
               <div>
                 <h4 class="buscador-predescription">¿Buscas una marca en particular?</h4>

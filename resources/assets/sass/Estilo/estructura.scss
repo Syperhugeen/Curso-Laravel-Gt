@@ -384,7 +384,11 @@ como por ejemplo un carousel de imágenes de header---*/
   margin:0!important;
 }
 .no-border{
-  border:none;
+  border:none!important;
+}
+.no-vertical-border{
+  border-top:none!important;
+  border-bottom:none!important;
 }
 
 
@@ -737,6 +741,29 @@ $special-col-altura:400px;
 
 
 
+// cursor behaviour
+a .special-col {
+  cursor: pointer; cursor: hand;
+}
+a .special-col-fake {
+  cursor: pointer; cursor: hand;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -744,6 +771,21 @@ $special-col-altura:400px;
 
 
 /*--------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

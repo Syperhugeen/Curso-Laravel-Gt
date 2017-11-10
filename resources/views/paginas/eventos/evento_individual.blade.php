@@ -87,7 +87,7 @@
           @foreach($Evento->imagenesevento as $img)
             <div class="thumbnail-gallery-child">
               <a href="{{$img->url_img}}" data-toggle="lightbox" data-gallery="evento-gallery" data-type="image" data-title="{{$Evento->name}}" data-footer="{{$Empresa->name}}">
-                <img class="img-greyscale-hover img-opacity-hover img-fluid ease" src="{{$img->url_img}}">
+                <img class="img-opacity-hover img-fluid ease" src="{{$img->url_img}}">
               </a>
             </div>
           @endforeach
@@ -113,7 +113,7 @@
     					<h5 class="ampliar text-center">
 
                  <!-- logo de la marca -->
-                 <span class="glyphicon glyphicon-triangle-right"></span> ver todos los eventos y promociones asociados a {{$Marca->marca->name}}
+                 <span class="glyphicon glyphicon-triangle-right"></span> ver todos los eventos asociados a {{$Marca->marca->name}}
 
               </h5>
     				</a>
@@ -131,13 +131,15 @@
 
 
     <!-- ver el listado completo de eventos (link a eventos.blade.php) -->
-  	<div class="row"><!-- ver más / ampliar / explorar -->
+  	<a href="{{route('get_pagina_eventos')}}">
+      <div class="row"><!-- ver más / ampliar / explorar -->
   		<div class="col-xs-12 special-col">
   				<a href="{{route('get_pagina_eventos')}}">
-  					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver listado completo de eventos y promociones</h5>
+  					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>ver todos los eventos</h5>
   				</a>
   		</div>
   	</div>
+    </a>
 
 
   </div>

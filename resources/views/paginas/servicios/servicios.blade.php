@@ -118,6 +118,7 @@
       </div>
 
       <div class="row">
+        <a href="{{route('get_pagina_contacto')}}">
               <!-- ultimo boton -->
               <div class="col-xs-12 special-col">
                 <div class="row">
@@ -128,6 +129,7 @@
                   </div>
                 </div>
               </div>
+        </a>
       </div>
 
 

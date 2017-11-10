@@ -1,5 +1,6 @@
-
+<a href="{{$Evento->route}}">
 	<div class="col-xs-12 special-col no-padding">
+	
 	<div class="row">
 
 		<div class="col-sm-6 no-padding eventos-imagen special-col-img">
@@ -31,5 +32,7 @@
 		</div>
 
 	</div>
+
 	</div>
+</a>
 	
