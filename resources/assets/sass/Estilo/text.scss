@@ -68,7 +68,7 @@ font-family: HelveticaNoue;
 
 /*para que el cursor no se transforme en selector de texto*/
 p, h1, h2, h3, h4, h5, h6 {
-  cursor:default;
+  cursor: default;
   text-decoration: none;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -85,7 +85,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /*para que el cursor se transforme en el dedito al pasar sobre links
 y para quitar el subrayado de los links*/
 a, a p, a h1, a h2, a h3, a h4, a h5, a h6 {
-  cursor:pointer;
+  cursor: pointer; cursor: hand;
   text-decoration: none;
   outline:none;
 }

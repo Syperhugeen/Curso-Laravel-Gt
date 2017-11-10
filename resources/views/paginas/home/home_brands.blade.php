@@ -33,15 +33,15 @@
 </div>
 
 <div class="row">
-<div class="col-xs-12 special-col"><!-- ver más / ampliar / explorar -->
 	<a href="{{route('get_pagina_marcas')}}">
-		<h5 class="ampliar text-center">
-		 <span class="glyphicon glyphicon-triangle-right"></span> 
-		  ver todos los clientes
-		</h5>
-	</a> 
-</div>
-
-
+		<div class="col-xs-12 special-col"><!-- ver más / ampliar / explorar -->
+			<a href="{{route('get_pagina_marcas')}}">
+				<h5 class="ampliar text-center">
+				 <span class="glyphicon glyphicon-triangle-right"></span> 
+				  ver todos los clientes
+				</h5>
+			</a> 
+		</div>
+	</a>
 <!-- /row-->
 </div>
