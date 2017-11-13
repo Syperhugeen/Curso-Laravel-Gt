@@ -10,7 +10,7 @@
           <h4><span class="glyphicon glyphicon-search"></span></h4>
           </div>
 
-          <select name="select_marcas_en_evento"  id="select_marcas_en_evento" class="selectpicker" data-style="buscador-selector" data-live-search="true" style="width: 100%;">
+          <select name="select_marcas_en_evento"  id="select_marcas_en_evento" class="selectpicker" data-style="buscador-selector" data-live-search="true" style="width: 100%;" data-size="3">
            <option value=""><span class="glyphicon glyphicon-triangle-right"></span>Selecciona una marca aquí</option>
            @foreach($Marcas as $Marca)
                <option  
