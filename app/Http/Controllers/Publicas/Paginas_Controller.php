@@ -60,6 +60,9 @@ class Paginas_Controller extends Controller
         if($Request->get('select_marcas_id') != '' && ($Request->get('select_marcas_id') != null))
         {
          $Marca = $this->MarcaRepo->find($Request->get('select_marcas_id'));
+
+         //redireccion a la pagina de eventos de esa Marca
+         return redirect($Marca->route);
         }
         //consultar todas rango altorandom 
         $MarcasRango3 = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(3, null);
