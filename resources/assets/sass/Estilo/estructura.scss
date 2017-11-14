@@ -351,7 +351,17 @@ div.wrapper-portada>img.portada{
   margin: 0 auto;
   text-align: center;
 }
-
+.center-content-flex{
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center); 
+  width: 100%;
+  height: 100%;
+}
+.img-cover{
+    display: block;
+    object-fit: cover;
+  }
 
 
 /*---para ocultar/mostrar algún elemento a partir de un width xs que no llega a ser sm
@@ -564,6 +574,12 @@ $special-col-altura:400px;
   padding: 20px;
 }
 
+.special-col.special-col-img{
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
 /* img de todas las special-cols */
 #evento-individual .special-col.special-col-img img.horizontal.img-main,
 #marca-individual .special-col.special-col-img img.horizontal.img-main,
@@ -573,6 +589,7 @@ $special-col-altura:400px;
   min-height:100%;
   height:auto;
   width:60vw;
+  object-fit: cover;
 }
 #evento-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #marca-individual .special-col.special-col-img img:not(.horizontal).img-main,
@@ -580,8 +597,9 @@ $special-col-altura:400px;
 #home #section4 .special-col img:not(.horizontal).img-main,
 #servicios .special-col img:not(.horizontal).img-main{
   height:auto;
-  width:100%; /* testeando con 100%, antes era 60vw */
+  width:60vw; /* si anda mal, testear con 100% */
 }
+
 /* para que los greyscale-hover tomen color cuando se pasa por arriba de la special-col que es parent */
 #eventos .special-col:hover .img-greyscale-hover,
 #home .special-col:hover .img-greyscale-hover,
@@ -605,11 +623,11 @@ $special-col-altura:400px;
 #marcas .special-col:hover img.img-main,
 #marca-individual .special-col:hover img.img-main,
 #servicios .special-col:hover img.img-main {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* ARREGLO DE MARCAS, DE LOS CUADRADITOS QUE DESAPARECÍAN */
+/* ARREGLO DE MARCAS, DE LOS CUADRADITOS QUE DESAPARECÍAN porque se exportaban con 301px a veces */
 #marcas .special-col img.img-main{
   height: 300px;
   width: 300px;
@@ -644,6 +662,8 @@ $special-col-altura:400px;
     padding: $special-col-padding;
   }}
 
+
+/* logos que aparecen alineados (los asociados a cada evento por ejemplo) */
 .inline-logos{
   width: 100%;  
   @include flex;
