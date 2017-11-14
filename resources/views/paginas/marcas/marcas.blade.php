@@ -33,15 +33,15 @@
           <div class="row super-space-bottom">
             <div class="col-sm-6 col-sm-push-6">
               <!--<h1 class="section-title">Repertorio de clientes</h1>-->
-              <h2 class="section-title">Elegidos por las mejores marcas del mundo</h2>
-              <div class="section-text">
+              <h2 class="section-title super-space-bottom">Elegidos por las mejores marcas del mundo</h2>
+              <!--<div class="section-text">
                 <h3>A lo largo de nuestra trayectoria hemos representado a las más grandes marcas, tanto locales como internacionales.</h3>
                 <h3>La calidad y profesionalidad de nuestro personal brinda distinción y prestigio en cada acción promocional o evento organizado.</h3>
-              </div>
+              </div>-->
             </div>
           </div>
 
-          <div class="row space-bottom hidden-xs">
+          <div class="row super-space-top space-bottom hidden-xs">
             <div class="col-sm-6 col-sm-push-6 space-bottom">
               <div>
                 <h4 class="buscador-predescription">¿Buscas una marca en particular?</h4>

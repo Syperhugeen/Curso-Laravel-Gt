@@ -124,7 +124,7 @@
     <div class="section-wrapper special-col no-margin no-padding">
       <div class="container-fluid">
         <div class="row space-bottom space-top" id="contacto-mapa">
-          <div class="col-md-8 col-md-push-2 col-lg-6 col-lg-push-3 space-top">
+          <div class="col-md-12 space-top">
 
             <h1 class="section-title text-center space-bottom">Nuestra oficina</h1>
               <div class="row space-bottom space-top">

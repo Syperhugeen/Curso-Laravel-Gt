@@ -103,13 +103,15 @@
         autoplaySpeed: 1000,
         arrows: false,
         dots: false,
-          pauseOnHover: false,
-          responsive: [{
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3
+        pauseOnHover: false,
+        pauseOnClick: false,
+        pauseOnFocus: false,
+        responsive: [{
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3
           }
-        }, {
+        },{
           breakpoint: 520,
           settings: {
             slidesToShow: 1
