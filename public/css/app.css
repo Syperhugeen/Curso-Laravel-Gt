@@ -11752,6 +11752,10 @@ ul.bxslider {
   font-size: .85em;
   padding: 10px; }
 
+/* agregado por mí */
+.customer-logos img {
+  outline: none !important; }
+
 @font-face {
   font-family: 'Socicon';
   src: url("../fonts/socicon/Socicon.eot?3i0ff0#iefix") format("embedded-opentype"), url("../fonts/socicon/Socicon.woff2?3i0ff0") format("woff2"), url("../fonts/socicon/Socicon.ttf?3i0ff0") format("truetype"), url("../fonts/socicon/Socicon.woff?3i0ff0") format("woff"), url("../fonts/socicon/Socicon.svg?3i0ff0#Socicon") format("svg");
@@ -14149,6 +14153,23 @@ div.wrapper-portada > img.portada {
   margin: 0 auto;
   text-align: center; }
 
+.center-content-flex {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%; }
+
+.img-cover {
+  display: block;
+  object-fit: cover; }
+
 /*---para ocultar/mostrar algún elemento a partir de un width xs que no llega a ser sm
 como por ejemplo un carousel de imágenes de header---*/
 .super-xs-shown {
@@ -14292,6 +14313,17 @@ como por ejemplo un carousel de imágenes de header---*/
   height: auto;
   padding: 20px; }
 
+.special-col.special-col-img {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center; }
+
 /* img de todas las special-cols */
 #evento-individual .special-col.special-col-img img.horizontal.img-main,
 #marca-individual .special-col.special-col-img img.horizontal.img-main,
@@ -14300,7 +14332,8 @@ como por ejemplo un carousel de imágenes de header---*/
 #servicios .special-col img.horizontal.img-main {
   min-height: 100%;
   height: auto;
-  width: 60vw; }
+  width: 60vw;
+  object-fit: cover; }
 
 #evento-individual .special-col.special-col-img img:not(.horizontal).img-main,
 #marca-individual .special-col.special-col-img img:not(.horizontal).img-main,
@@ -14308,8 +14341,8 @@ como por ejemplo un carousel de imágenes de header---*/
 #home #section4 .special-col img:not(.horizontal).img-main,
 #servicios .special-col img:not(.horizontal).img-main {
   height: auto;
-  width: 100%;
-  /* testeando con 100%, antes era 60vw */ }
+  width: 60vw;
+  /* si anda mal, testear con 100% */ }
 
 /* para que los greyscale-hover tomen color cuando se pasa por arriba de la special-col que es parent */
 #eventos .special-col:hover .img-greyscale-hover,
@@ -14332,9 +14365,9 @@ como por ejemplo un carousel de imágenes de header---*/
 #marcas .special-col:hover img.img-main,
 #marca-individual .special-col:hover img.img-main,
 #servicios .special-col:hover img.img-main {
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
-/* ARREGLO DE MARCAS, DE LOS CUADRADITOS QUE DESAPARECÍAN */
+/* ARREGLO DE MARCAS, DE LOS CUADRADITOS QUE DESAPARECÍAN porque se exportaban con 301px a veces */
 #marcas .special-col img.img-main {
   height: 300px;
   width: 300px; }
@@ -14364,6 +14397,7 @@ como por ejemplo un carousel de imágenes de header---*/
   #contacto .special-col .col-sm-12 {
     padding: 20px 60px; } }
 
+/* logos que aparecen alineados (los asociados a cada evento por ejemplo) */
 .inline-logos {
   width: 100%;
   -moz-flex: 1;
