@@ -69,12 +69,18 @@ class Admin_Eventos_Controllers extends Controller
       
       $manager = new crear_evento_admin_manager(null, $Request->all());
 
-      try{
-      DB::beginTransaction(); 
+      //imagenes
+      $files = $Request->file('img');
+
+     
+
+      
         
         //valido la data
         if ($manager->isValid())
         {
+
+
            $Evento = $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
            /*//utilzo la funciona creada en el controlador para subir la imagen
@@ -87,8 +93,7 @@ class Admin_Eventos_Controllers extends Controller
            }*/
 
  //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            //imagenes
-            $files = $Request->file('img');
+            
 
             
             //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
@@ -109,17 +114,13 @@ class Admin_Eventos_Controllers extends Controller
              {
                $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
              }
-           }  
+           } 
 
  //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
            return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
         } 
-      DB::commit(); 
-
-      }catch(\Exception $e){            
-      DB::rollback();            
-      } 
+      
       
       return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     
@@ -238,6 +239,67 @@ class Admin_Eventos_Controllers extends Controller
       $this->Marca_de_eventoRepo->destroy_entidad($id);
 
       return redirect()->back()->with('alert-rojo', 'Marca eliminada');
+  }
+
+
+  public function EliminarUnEvento($evento_id)
+  {
+
+    
+    $Evento = $this->EventoRepo->find($evento_id);
+
+    //eliminar las imagenes
+    $Imagenes = $Evento->imagenesevento;
+
+    if($Imagenes->count() > 0)
+    {
+      foreach($Imagenes as $imgaen)
+      {
+        $this->ImgEventoRepo->destruir_esta_entidad($imgaen);
+      }
+    }
+    
+
+    //eliminar las marcas asociadas
+    $Marcas   = $Evento->marcasevento;
+    if($Marcas->count() > 0)  
+    { 
+      foreach($Marcas as $marca)
+      {
+        $this->Marca_de_eventoRepo->destruir_esta_entidad($marca);
+      }
+    }  
+
+    $Evento   = $this->EventoRepo->find($evento_id);
+    $Imagenes = $Evento->imagenesevento;
+    $Marcas   = $Evento->marcasevento; 
+
+   
+
+
+    if(($Imagenes->count() == 0) && ($Marcas->count() == 0))
+    {
+      $this->EventoRepo->destruir_esta_entidad($Evento); 
+      $validator = true;
+    }
+    else
+    {
+      $validator = false;
+    }
+
+    if($validator == true)
+    {
+       return redirect()->route('get_admin_eventos')->with('alert', 'Evento eliminado');
+    }
+    else
+    {
+      return redirect()->route('get_admin_eventos')->with('alert-rojo', 'No se eliminó correctamente probar de nuevo');
+    }
+
+
+    //eliminar el evento
+
+    //dirigir a atras
   }
 
   
