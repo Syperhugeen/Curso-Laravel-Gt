@@ -53,7 +53,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_marcas(Request $Request)
     {
 
-        $Marcas =  $this->MarcaRepo->getMarcasParaAdminOrdenadasAlfabeticamente($Request,20  );
+        $Marcas =  $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request,20  );
 
         $Marca = '';
 

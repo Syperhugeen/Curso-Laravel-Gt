@@ -43,6 +43,15 @@ class MarcaRepo extends BaseRepo
                   ->paginate($paginacion);
   }
 
+  public function getMarcasParaWebOrdenadasAlfabeticamente($request,$paginacion)
+  {
+      return $this->getEntidad()
+                  ->active()
+                  ->name($request->get('name'))                                 
+                  ->orderBy('name','asc')
+                  ->paginate($paginacion);
+  }
+
 
   //setters//////////////////////////////////////////////////////////////////////
 
