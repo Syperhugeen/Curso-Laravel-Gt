@@ -164,6 +164,8 @@ abstract class BaseRepo
         } 
 
         $Entidad->save();     
+
+        return $Entidad;
     }
 
 

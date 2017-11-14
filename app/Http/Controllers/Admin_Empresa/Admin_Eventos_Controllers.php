@@ -75,19 +75,45 @@ class Admin_Eventos_Controllers extends Controller
         //valido la data
         if ($manager->isValid())
         {
-         $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
+           $Evento = $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
 
-         //utilzo la funciona creada en el controlador para subir la imagen
-         $this->set_admin_eventos_img($Evento->id, $Request);  
+           /*//utilzo la funciona creada en el controlador para subir la imagen
+           $this->set_admin_eventos_img($Evento->id, $Request);  
 
-         //creo las marcas asociadas a este evento
-         foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
-         { 
-           $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
-         }
-         
+           //creo las marcas asociadas a este evento
+           foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
+           { 
+             $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
+           }*/
 
-         return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
+ //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //imagenes
+            $files = $Request->file('img');
+
+            
+            //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
+            if($files[0] != null )
+            {        
+
+              foreach($files as $file)
+              { 
+                $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$Evento->id,$Request,'EventosImagenes/' );
+              }
+              
+            }
+            
+           //creo las marcas asociadas a este evento
+           if($Request->input('marca_asociado_id') != '')
+           {
+             foreach ($Request->input('marca_asociado_id') as $marca_asociada_id)
+             {
+               $this->Marca_de_eventoRepo->crearNuevaMarcaDeEvento( $Evento->id, $marca_asociada_id);
+             }
+           }  
+
+ //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+           return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
         } 
       DB::commit(); 
 
@@ -120,14 +146,10 @@ class Admin_Eventos_Controllers extends Controller
     try{
       DB::beginTransaction(); 
       
-    $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);
-
-     //utilzo la funciona creada en el controlador para subir la imagen
-     //archivos imagenes
+    $this->EventoRepo->setEntidadDato($Evento,$Request,$Propiedades);     
 
       //imagenes
       $files = $Request->file('img');
-
       
       //verifico si la pocion 0 es diferente de null, significa que el array no esta vacio
       if($files[0] != null )
