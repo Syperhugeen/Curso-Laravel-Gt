@@ -10,13 +10,13 @@
   <span class="spam-separador">|</span> 
 
   {{-- lugar atras --}}
-  <a href="{{route('get_admin_marcas')}}"><span>Marcas</span></a>
+  <a href="{{route('get_admin_marcas')}}"><span>Clientes</span></a>
 
   {{-- separador --}}
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
-  <span>Editar Marca: {{$marca->name}}</span>
+  <span>Editar Cliente: {{$marca->name}}</span>
 </div>
 
 <div class="contenedor-admin-entidad">
@@ -24,7 +24,7 @@
  {{-- titulo --}}
  <div class="admin-entidad-titulo">
  <img class="admin-entidad-img" src="{{$marca->url_img}}">
- Editar Marca {{$marca->name}}
+ Editar Cliente {{$marca->name}}
  </div>
 
  {{-- formulario --}}
