@@ -27,14 +27,14 @@ class EmpresaRepo extends BaseRepo
   {
     $Empresa = $this->getEmpresaDatos();
 
-    $Propiedades = ['name','slogan','vision','mision','telefono','direccion','horarios_dias','celular','email','email_no_reply'];
+    $Propiedades = [/*'name','slogan','vision','mision',*/'telefono','direccion','horarios_dias','celular','email','email_no_reply'];
     
     $this->setEntidadDato($Empresa,$request,$Propiedades);
        
 
-    $this->setImagen($Empresa,$request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
-    $this->setImagen($Empresa,$request,'logo_horizontal','Empresa/','logo_horizontal','.png');
-    $this->setImagen($Empresa,$request,'logo_vertical','Empresa/','logo_vertical','.png');
+    /*$this->setImagen($Empresa,$request,'logo_cuadrado','Empresa/','logo_cuadrado','.png');
+      $this->setImagen($Empresa,$request,'logo_horizontal','Empresa/','logo_horizontal','.png');
+      $this->setImagen($Empresa,$request,'logo_vertical','Empresa/','logo_vertical','.png');*/
 
     $Empresa->save();   
   }

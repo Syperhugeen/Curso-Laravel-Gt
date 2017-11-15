@@ -10,14 +10,14 @@
   <span class="spam-separador">|</span> 
 
   {{-- lugar donde esta --}}
-  <span>Marcas</span>
+  <span>Clientes</span>
 </div>
 
 <div class="contenedor-admin-entidad">
 
  {{-- titulo --}}
  <div class="contenedor-admin-entidad-titulo-form-busqueda">
-    <div class="admin-entidad-titulo">Marcas 
+    <div class="admin-entidad-titulo">Clientes 
      <a href="{{route('get_admin_marcas_crear')}}">
       <span class="admin-user-boton-Crear">Crear 
        <span class="icon-add_circle_outline"></span> 

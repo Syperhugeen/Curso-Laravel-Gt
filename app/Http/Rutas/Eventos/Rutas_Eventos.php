@@ -57,3 +57,12 @@ Route::get('establecer_como_imagen_principal/{id_img}',
   'uses'  => 'Admin_Empresa\Admin_Eventos_Controllers@establecer_como_imagen_principal',
   'as'    => 'establecer_como_imagen_principal'
 ]); 
+
+Route::get('EliminarUnEvento/{id}',
+[
+  'uses'  => 'Admin_Empresa\Admin_Eventos_Controllers@EliminarUnEvento',
+  'as'    => 'EliminarUnEvento'
+]); 
+
+
+
