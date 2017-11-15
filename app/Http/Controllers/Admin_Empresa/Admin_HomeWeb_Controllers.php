@@ -31,6 +31,8 @@ class Admin_HomeWeb_Controllers extends Controller
     $Home = $this->HomeWebRepo->getHomeWebDatos();
 
     return view('admin.home.home_web_home', compact('Home'));
+
+    
   }
 
   public function set_datos_home_web(Request $Request)
