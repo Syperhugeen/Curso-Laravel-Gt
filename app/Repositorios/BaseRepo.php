@@ -39,6 +39,12 @@ abstract class BaseRepo
       $entidad_a_borrar->delete();
     }
 
+    //elimina esta entidad
+    public function destruir_esta_entidad($Entidad)
+    {
+      $Entidad->delete();
+    }
+
     /**
      * Entidades Activas 
      */
@@ -164,6 +170,8 @@ abstract class BaseRepo
         } 
 
         $Entidad->save();     
+
+        return $Entidad;
     }
 
 

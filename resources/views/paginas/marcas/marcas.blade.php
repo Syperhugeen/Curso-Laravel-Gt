@@ -67,7 +67,14 @@
 
   {{-- contiene hasta 20 logos de marcas como máximo a la vez (luego aparece la paginación) --}}
     <div class="row hr-border-top-pegado">
-                  @if($Marca != '')
+
+
+                {{-- ordenadas alfabeticamente --}}
+                @foreach($Marcas as $Marca)
+                 @include('paginas.marcas.entidad_marca_para_listado')
+                @endforeach
+                
+                 {{--  @if($Marca != '')
                     @include('paginas.marcas.entidad_marca_para_listado')
                   @else
                     @foreach($MarcasRango3 as $Marca)
@@ -81,17 +88,17 @@
                     @foreach($MarcasRango1 as $Marca)
                      @include('paginas.marcas.entidad_marca_para_listado')
                     @endforeach
-                  @endif
+                  @endif --}}
    
 
       
 
       <!-- pagination MUTEADO por ahora-->
-      <!--<div class="col-xs-12 special-col">
+      <div class="col-xs-12 special-col">
           <div class="pagination-block">
             {!! $Marcas->appends(Request::all())->render() !!}
           </div>
-      </div>-->
+      </div>
       <!-- /pagination -->
 
 

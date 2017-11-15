@@ -85,6 +85,7 @@
    <div class="admin-boton-editar">
      Guardar
    </div> 
+   <a href="{{route('EliminarUnEvento', $Evento->id)}}">Eliminar este evento</a>
 
 
   {!! Form::close() !!}
