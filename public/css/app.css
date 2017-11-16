@@ -14232,7 +14232,8 @@ como por ejemplo un carousel de imágenes de header---*/
 .special-col h2 {
   font-family: Champagne;
   letter-spacing: 3px;
-  color: #917e4b; }
+  color: #917e4b;
+  font-size: 25px; }
 
 .p-container {
   max-height: 120px;
@@ -14429,7 +14430,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #eventos-listado .inline-logos.chiqui-logos img,
 #marca-individual .inline-logos.chiqui-logos img {
   width: auto;
-  height: 120px;
+  height: 160px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 0;
