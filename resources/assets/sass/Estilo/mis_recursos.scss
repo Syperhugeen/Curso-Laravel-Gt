@@ -633,6 +633,75 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* NUEVO PUZZLE DESIGN */
+.new-puzzle-box-void{
+  width: $puzzle-box-medida;
+  height: $puzzle-box-medida;
+  padding: 20px;
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row);
+  text-align: center;
+  background-color: transparent;
+ }
+.new-puzzle-box-white{
+  width: $puzzle-box-medida;
+  height: $puzzle-box-medida;
+  padding: 20px;
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: $color-2;
+ }
+.new-puzzle-box-black{
+  width: $puzzle-box-medida;
+  height: $puzzle-box-medida;
+  padding: $puzzle-padding;
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row);
+  text-align: center;
+  background-color: $color-2;
+ }
+.new-puzzle-box-beige{
+  width: $puzzle-box-medida;
+  height: $puzzle-box-medida;
+  padding: $puzzle-padding;
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row);
+  text-align: center;
+  background-color: $color-3;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* * * * * * * * * * * * * * *    C S S   R I B B O N S    * * * * * * * * * * * * * * */ 
 
 
