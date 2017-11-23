@@ -15234,6 +15234,72 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   .row.home-puzzle-responsive-design .col-xs-9 {
     padding: 40px; } }
 
+/* NUEVO PUZZLE DESIGN */
+.new-puzzle-box-void {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: transparent; }
+
+.new-puzzle-box-white {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #080808; }
+
+.new-puzzle-box-black {
+  width: 200px;
+  height: 200px;
+  padding: 36px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: #080808; }
+
+.new-puzzle-box-beige {
+  width: 200px;
+  height: 200px;
+  padding: 36px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: #cebe98; }
+
 /* * * * * * * * * * * * * * *    C S S   R I B B O N S    * * * * * * * * * * * * * * */
 /* * *   R I B B O N   * * *
 (css ribbons that use z-index)*/
@@ -16112,6 +16178,9 @@ escritura de código)---*/
   display: block;
   height: 120px;
   width: auto; }
+
+#section3 h1.section-subtitle {
+  color: #080808 !important; }
 
 /*--- brands carousel (home)---*/
 .logos-carousel-col {
