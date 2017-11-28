@@ -2,7 +2,7 @@
 
 
 <div class="bg-home-header">
-
+  <img src="imagenes/Img/header_15years(responsive).jpg" alt="" class="img-responsive visible-xs">
 </div>
 
 
