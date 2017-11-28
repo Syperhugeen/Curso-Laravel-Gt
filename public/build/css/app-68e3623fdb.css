@@ -14116,7 +14116,12 @@ div.wrapper-portada > img.portada {
   .bg-contacto-formulario {
     background-image: url("../../imagenes/Img/bg-contacto-formulario(responsive).jpg"); }
   .bg-contacto-header {
-    background-image: url("../../imagenes/Img/bg-contacto-header(responsive).jpg"); } }
+    background-image: url("../../imagenes/Img/bg-contacto-header(responsive).jpg"); }
+  .bg-home-header {
+    background-image: none;
+    max-height: 100vh;
+    height: auto;
+    width: auto; } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
