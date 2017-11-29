@@ -37,7 +37,7 @@ class Home_Public_Controller extends Controller
     {
         
         $Empresa               = $this->EmpresaRepo->getEmpresaDatos();        
-        $Marcas                = $this->MarcaRepo->getMarcasHome();
+        $Marcas                = $this->MarcaRepo->getMarcasDesordenadasRandomSegunRank(3,15);
         $UltimoEvento          = $this->EventoRepo->getUltimoEvento();
         $PenultimoEvento       = $this->EventoRepo->getPenultimoEvento();
 
