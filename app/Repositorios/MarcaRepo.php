@@ -28,7 +28,7 @@ class MarcaRepo extends BaseRepo
                 ->where('rank', 3 )
                 ->active()
                 ->get()
-                ->random(6);
+                ->random(15);
   }
 
 
