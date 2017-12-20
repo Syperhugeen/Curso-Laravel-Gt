@@ -3,6 +3,9 @@
 
 <div class="bg-home-header">
   <img src="imagenes/Img/header_15years(responsive).jpg" alt="" class="img-responsive visible-xs">
+  <div class="home-header-frase hidden-xs">
+    <h1>CELEBRANDO 15 AÑOS<br>DE EXPERIENCIA</h1>
+  </div>
 </div>
 
 
