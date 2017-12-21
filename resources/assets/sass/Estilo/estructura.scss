@@ -250,12 +250,12 @@ div.wrapper-portada>img.portada{
   background-color: $color-white;
 }
 .bg-home-header{
-  background-image: url('../../imagenes/Img/bg-home-header-new.jpg');
-  background-position: center top;
+  background-image: url('../../imagenes/Img/bg-home-header-newest.jpg');
+  background-position: center 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $color-white;
-  height: 80vh;
+  background-color: $color-black;
+  height: 85vh;
   width: 100%;
 }
 
@@ -283,10 +283,10 @@ div.wrapper-portada>img.portada{
   .bg-contacto-header {
     background-image: url('../../imagenes/Img/bg-contacto-header(responsive).jpg');}
   .bg-home-header {
-    background-image: none;
-    max-height: 100vh;
-    height: auto;
-    width: auto;}
+    background-image: url('../../imagenes/Img/bg-home-header-newest(responsive).jpg');
+    height: 100vw;
+    width: auto;
+    background-position: center center;}
   }
 
 
