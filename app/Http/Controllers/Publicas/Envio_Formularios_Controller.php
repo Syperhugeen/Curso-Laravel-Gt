@@ -7,7 +7,7 @@ use App\Repositorios\EmpresaRepo;
 use Illuminate\Http\Request;
 use App\Repositorios\Emails\EmailsRepo;
 use App\Repositorios\Emails\EmailsEspecificosDePaginasRepo;;
-use App\Managers\envio_solicitud_trabajo_manager;
+use App\Managers\envio_contacto_manager;
 
 
 
@@ -32,7 +32,7 @@ class Envio_Formularios_Controller extends Controller
     public function post_contacto_form(Request $Request)
     {
         $entidad = '';
-        $manager = new envio_solicitud_trabajo_manager($entidad,$Request->all());
+        $manager = new envio_contacto_manager($entidad,$Request->all());
 
 
         if ($manager->isValid())
