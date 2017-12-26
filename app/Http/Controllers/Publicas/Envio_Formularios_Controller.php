@@ -39,7 +39,7 @@ class Envio_Formularios_Controller extends Controller
         {
          
          //envio el email de la contacto
-         $this->EmailsRepo->EnvioEmailDeContacto();
+         $this->EmailsRepo->EnvioEmailDeContacto($Request);
 
          return redirect()->route('get_home')
                           ->with('alert' , 'Solicitud de contacto enviada con exíto.');      
