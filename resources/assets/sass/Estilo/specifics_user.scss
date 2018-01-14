@@ -670,3 +670,49 @@ right: 0;
 .pagination-block ul.pagination li:hover a{
   background-color: $color-3superlight;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+
+/*---         E R R O R  '   s   ---*/
+/*--- personalizando las páginas de errores 404, 503, etc. ---*/
+
+.bg-error {
+  background: $color-2;
+  width: 100vw;
+  height: 100vh;
+}
+.bg-error h1{
+  color: $color-3light !important;
+  text-align: center;
+}
+.bg-error h2{
+  color: $color-3 !important;
+  text-align: center;
+}
+.bg-error h3{
+  color: $color-2light !important;
+  text-align: center;
+}
+.bg-error h4{
+  color: $color-3 !important;
+  text-align: right;
+}
