@@ -53,7 +53,8 @@ class Paginas_Controller extends Controller
     public function get_pagina_marcas(Request $Request)
     {
 
-        $Marcas =  $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request,20  );
+        $Marcas          =   $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request,20);
+        $Marcas_buscador =   $this->MarcaRepo->getEntidadActivas();
 
         $Marca = '';
 
@@ -74,7 +75,7 @@ class Paginas_Controller extends Controller
         //cosnultar las demas
 
 
-        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1','Marcas','Marca'));
+        return view('paginas.marcas.marcas', compact('MarcasRango3','MarcasRango2','MarcasRango1','Marcas','Marca','Marcas_buscador'));
     }
         //pagina de la marca individual
         public function get_pagina_marca_individual($name,$id,Request $Request)
