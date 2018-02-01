@@ -164,6 +164,55 @@ escritura de código)---*/
   width: auto;
 }
 
+#section0 .bg-home-header .home-header-container .home-header-frase h1 {
+  position: absolute;
+  font-family: Champagne;
+  font-size: 50px;
+  letter-spacing: 4px;
+  color: $color-3;
+  text-align: center;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#section0 .bg-home-header .home-header-container:hover .home-header-frase h1 {
+ color: $color-3superlight;
+}
+@media (max-width:767px) {#section0 .bg-home-header .home-header-container .home-header-frase h1 {
+font-size: 30px;
+bottom: none;
+top: 70vw;
+}}
+
+#section0 .bg-home-header .home-header-container .arrow-container{
+  width: 100%;
+}
+#section0 .bg-home-header .home-header-container .arrow-container .my-arrow-down{
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-color: $color-3 transparent transparent transparent;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  }
+#section0 .bg-home-header .home-header-container:hover .arrow-container .my-arrow-down{
+  border-color: $color-3superlight transparent transparent transparent;
+  }
+@media (max-width:767px) {#section0 .bg-home-header .home-header-container .arrow-container .my-arrow-down {
+  bottom: none;
+  top: 85vw;
+  border-width: 15px 15px 0 15px;
+}}
+
+
+#section3 h1.section-subtitle {
+  color: $color-2 !important;
+}
 
 
 $section2-altura:300px;

@@ -250,12 +250,12 @@ div.wrapper-portada>img.portada{
   background-color: $color-white;
 }
 .bg-home-header{
-  background-image: url('../../imagenes/Img/bg-home-header-new.jpg');
-  background-position: center top;
+  background-image: url('../../imagenes/Img/bg-home-header-newest.jpg');
+  background-position: center 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $color-white;
-  height: 80vh;
+  background-color: $color-black;
+  height: 85vh;
   width: 100%;
 }
 
@@ -282,6 +282,11 @@ div.wrapper-portada>img.portada{
     background-image: url('../../imagenes/Img/bg-contacto-formulario(responsive).jpg');}
   .bg-contacto-header {
     background-image: url('../../imagenes/Img/bg-contacto-header(responsive).jpg');}
+  .bg-home-header {
+    background-image: url('../../imagenes/Img/bg-home-header-newest(responsive).jpg');
+    height: 100vw;
+    width: auto;
+    background-position: center center;}
   }
 
 
@@ -490,6 +495,7 @@ $special-col-altura:400px;
   font-family: Champagne;
   letter-spacing: 3px;
   color: $color-3dark;
+  font-size: 25px;
 }
 .p-container {
   max-height:120px;
@@ -687,7 +693,7 @@ $special-col-altura:400px;
 #eventos-listado .inline-logos.chiqui-logos img, // eventos
 #marca-individual .inline-logos.chiqui-logos img,{ // eventos de una marca
   width: auto;
-  height: 120px;
+  height: 160px;
   margin-left:10px;
   margin-right:10px;
   margin-top: 0;

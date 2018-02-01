@@ -6,7 +6,8 @@
                             ])               !!}
 
             
-
+<div class="text-center">
+<div class="center-block">
             <div class="form-group">
               <label for="username" class="cols-sm-2 control-label">Usuario</label>
               <div class="cols-sm-10">
@@ -45,9 +46,11 @@
 
     <hr>
    <div class="login-register">
-                    <p class="text-center"><a href="{{route('password_recet_get')}}">Olvidé mi contraseña</a> | <a href="{{route('register_get')}}">Aún no estoy registrado</a></p>
+                    <p class="text-center"><a href="{{route('password_recet_get')}}">Olvidé mi contraseña</a><!--  | <a href="{{route('register_get')}}">Aún no estoy registrado</a> --></p>
    </div>
-
+   
+</div>
+</div>
 
 
 

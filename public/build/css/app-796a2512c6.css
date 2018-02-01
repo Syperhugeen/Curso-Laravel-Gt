@@ -14086,12 +14086,12 @@ div.wrapper-portada > img.portada {
   background-color: white; }
 
 .bg-home-header {
-  background-image: url("../../imagenes/Img/bg-home-header-new.jpg");
-  background-position: center top;
+  background-image: url("../../imagenes/Img/bg-home-header-newest.jpg");
+  background-position: center 40%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
-  height: 80vh;
+  background-color: black;
+  height: 85vh;
   width: 100%; }
 
 /* backgrounds responsive changes */
@@ -14116,7 +14116,12 @@ div.wrapper-portada > img.portada {
   .bg-contacto-formulario {
     background-image: url("../../imagenes/Img/bg-contacto-formulario(responsive).jpg"); }
   .bg-contacto-header {
-    background-image: url("../../imagenes/Img/bg-contacto-header(responsive).jpg"); } }
+    background-image: url("../../imagenes/Img/bg-contacto-header(responsive).jpg"); }
+  .bg-home-header {
+    background-image: url("../../imagenes/Img/bg-home-header-newest(responsive).jpg");
+    height: 100vw;
+    width: auto;
+    background-position: center center; } }
 
 /*--------------------------------------------------------------------------------------------------*/
 /* P E R S O N I F I C A N D O   E L E M E N T O S */
@@ -14232,7 +14237,8 @@ como por ejemplo un carousel de imágenes de header---*/
 .special-col h2 {
   font-family: Champagne;
   letter-spacing: 3px;
-  color: #917e4b; }
+  color: #917e4b;
+  font-size: 25px; }
 
 .p-container {
   max-height: 120px;
@@ -14429,7 +14435,7 @@ como por ejemplo un carousel de imágenes de header---*/
 #eventos-listado .inline-logos.chiqui-logos img,
 #marca-individual .inline-logos.chiqui-logos img {
   width: auto;
-  height: 120px;
+  height: 160px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 0;
@@ -14755,6 +14761,13 @@ body::after {
 .ease {
   /*para que las transiciones sea más smooth*/
   transition: all .3s ease; }
+
+.my-arrow-down {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 25px 0 25px;
+  border-color: #cebe98 transparent transparent transparent; }
 
 .img-opacity-hover {
   opacity: 1; }
@@ -15232,6 +15245,72 @@ mientras que el puzzle animado va en la columna derecha (col-lg-6) */
   .row.home-puzzle-responsive-design .col-xs-3,
   .row.home-puzzle-responsive-design .col-xs-9 {
     padding: 40px; } }
+
+/* NUEVO PUZZLE DESIGN */
+.new-puzzle-box-void {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: transparent; }
+
+.new-puzzle-box-white {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #080808; }
+
+.new-puzzle-box-black {
+  width: 200px;
+  height: 200px;
+  padding: 36px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: #080808; }
+
+.new-puzzle-box-beige {
+  width: 200px;
+  height: 200px;
+  padding: 36px;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: center;
+  background-color: #cebe98; }
 
 /* * * * * * * * * * * * * * *    C S S   R I B B O N S    * * * * * * * * * * * * * * */
 /* * *   R I B B O N   * * *
@@ -16111,6 +16190,52 @@ escritura de código)---*/
   display: block;
   height: 120px;
   width: auto; }
+
+#section0 .bg-home-header .home-header-container .home-header-frase h1 {
+  position: absolute;
+  font-family: Champagne;
+  font-size: 50px;
+  letter-spacing: 4px;
+  color: #cebe98;
+  text-align: center;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: all .3s ease-in-out; }
+
+#section0 .bg-home-header .home-header-container:hover .home-header-frase h1 {
+  color: #f1e7d2; }
+
+@media (max-width: 767px) {
+  #section0 .bg-home-header .home-header-container .home-header-frase h1 {
+    font-size: 30px;
+    bottom: none;
+    top: 70vw; } }
+
+#section0 .bg-home-header .home-header-container .arrow-container {
+  width: 100%; }
+
+#section0 .bg-home-header .home-header-container .arrow-container .my-arrow-down {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-color: #cebe98 transparent transparent transparent;
+  transition: all .3s ease-in-out; }
+
+#section0 .bg-home-header .home-header-container:hover .arrow-container .my-arrow-down {
+  border-color: #f1e7d2 transparent transparent transparent; }
+
+@media (max-width: 767px) {
+  #section0 .bg-home-header .home-header-container .arrow-container .my-arrow-down {
+    bottom: none;
+    top: 85vw;
+    border-width: 15px 15px 0 15px; } }
+
+#section3 h1.section-subtitle {
+  color: #080808 !important; }
 
 /*--- brands carousel (home)---*/
 .logos-carousel-col {
