@@ -12,7 +12,7 @@
 
           <select name="select_marcas_id"  id="select_marcas_en_evento" class="selectpicker" data-style="buscador-selector " data-live-search="true" style="width: 100%;" data-size="4">
            <option value=""><span class="glyphicon glyphicon-triangle-right"></span>Selecciona una marca aquí</option>
-           @foreach($Marcas as $Marcar)
+           @foreach($Marcas_buscador as $Marcar)
                <option  
                               value="{{$Marcar->id}}"
                               data-content="<div class='Helper-OrdenarHijos-Row get_width_100 drop-select-contenedor Helper-OrdenarHijos-Row-space-around'>{{$Marcar->name}}</div>"
