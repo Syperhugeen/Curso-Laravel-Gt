@@ -16561,6 +16561,31 @@ img.marca-col {
 .pagination-block ul.pagination li:hover a {
   background-color: #f1e7d2; }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*---         E R R O R  '   s   ---*/
+/*--- personalizando las páginas de errores 404, 503, etc. ---*/
+.bg-error {
+  background: #080808;
+  width: 100vw;
+  height: 100vh; }
+
+.bg-error h1 {
+  color: #decdab !important;
+  text-align: center; }
+
+.bg-error h2 {
+  color: #cebe98 !important;
+  text-align: center; }
+
+.bg-error h3 {
+  color: #4e4e4e !important;
+  text-align: center; }
+
+.bg-error h4 {
+  color: #cebe98 !important;
+  text-align: right; }
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 * * * * *   G L O B A L    T E X T   S E T T I N G S   * * * * * *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
