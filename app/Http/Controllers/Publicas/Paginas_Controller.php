@@ -54,7 +54,7 @@ class Paginas_Controller extends Controller
     {
 
         $Marcas          =   $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamente($Request,20);
-        $Marcas_buscador =   $this->MarcaRepo->getEntidadActivas();
+        $Marcas_buscador =   $this->MarcaRepo->getMarcasParaWebOrdenadasAlfabeticamenteSinPaginacion();
 
         $Marca = '';
 
