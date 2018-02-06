@@ -418,32 +418,44 @@ h1.section-title{
 #contacto .quote {
   color: $color-3;
 }
+
+
+
+
 #contacto #contacto-datos .glyphicon,
 #contacto #contacto-datos .socicon{
-    color: $color-3;
+    color: $color-3light;
     padding-right: 10px;
 }
 #contacto #contacto-datos h3,
 #contacto #contacto-datos h4{
-  color: $color-2light;
+  color: $color-3;
   padding-top: 10px;
 }
 #contacto #contacto-datos a:hover h3,
 #contacto #contacto-datos a:hover h4{
-  color: $color-3;
+  color: $color-3superlight;
 }
 #contacto #contacto-datos a:hover h3 .socicon,
 #contacto #contacto-datos a:hover h4 .socicon{
-  color: $color-3superlight;
+  color: $color-3hyperlight;
 }
 #contacto #contacto-header h1.section-title{
-  color: $color-3superlight;
+  color: $color-3hyperlight;
 }
 .contacto-mapa-texto-negrita{
   font-family: HelveticaNoue;
 }
-
-
+#contacto #contacto-header .contacto-frase-header{
+  padding-top: 400px;
+}
+#contacto-datos{
+  padding-top: 300px;
+}
+@media (max-width: 991px){
+  #contacto-datos{
+  padding-top: 100px;
+}}
 
 
 

@@ -43,8 +43,8 @@
 				<div class="center-content-flex">
 					<h1>ERROR 404</H1>
 					<h2>La página que estás buscando no existe</h2>
-					<h3>...probablemente sea culpa del programador.</h3>
-					<h4>- Atte.,<br>El diseñador.</h4>
+					<h3>Asegúrate de que la dirección URL sea correcta.</h3>
+					<h4>- Atte.,<br>el quipo de Global Target.</h4>
 					<div class="space-top"><img src="imagenes/Empresa/logo-gt.png"></div>
 					<a href="{{route('get_pagina_home')}}">
   					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>volver a la Home</h5></a>
