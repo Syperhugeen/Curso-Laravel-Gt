@@ -9,6 +9,9 @@
 		<h1 class="color-3light"><span class="glyphicon glyphicon-triangle-bottom"></span></h1>
 		</div>
 	</div>
+	<div class="home-header-frase space-top visible-xs">
+      <h1>CELEBRANDO 15 AÑOS<br>DE EXPERIENCIA</h1>
+    </div>
 
 
 	<div class="col-sm-5 col-sm-push-6 space-top space-bottom">

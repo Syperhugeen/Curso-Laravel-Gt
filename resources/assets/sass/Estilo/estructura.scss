@@ -244,19 +244,24 @@ div.wrapper-portada>img.portada{
 }
 .bg-contacto-header{
   background-image: url('../../imagenes/Img/bg-contacto-header.jpg');
-  background-position: center center;
+  /*background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $color-white;
-}
-.bg-home-header{
-  background-image: url('../../imagenes/Img/bg-home-header-newest.jpg');
-  background-position: center 40%;
+  background-color: $color-white;*/
+  background-position: center 35%;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-black;
-  height: 85vh;
+}
+.bg-home-header{
+  background-image: url('../../imagenes/Img/bg-home-header-newest.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-color: $color-black;
+  height: 90vh;
   width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 /* backgrounds responsive changes */
@@ -281,12 +286,11 @@ div.wrapper-portada>img.portada{
   .bg-contacto-formulario {
     background-image: url('../../imagenes/Img/bg-contacto-formulario(responsive).jpg');}
   .bg-contacto-header {
-    background-image: url('../../imagenes/Img/bg-contacto-header(responsive).jpg');}
+    background-image: url('../../imagenes/Img/bg-contacto-header(responsive).jpg');
+    background-position: center top;}
   .bg-home-header {
     background-image: url('../../imagenes/Img/bg-home-header-newest(responsive).jpg');
-    height: 100vw;
-    width: auto;
-    background-position: center center;}
+    height: 50vh;}
   }
 
 

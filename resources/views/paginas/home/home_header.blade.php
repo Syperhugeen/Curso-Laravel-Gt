@@ -2,12 +2,13 @@
 
 
 <div class="bg-home-header">
+  <!--<div><img class="img-responsive index-1" src="imagenes/Img/bg-home-header-newest.jpg"></div>-->
   <!--<img src="imagenes/Img/header_15years(responsive).jpg" alt="" class="img-responsive visible-xs">-->
-  <div class="home-header-container">
-    <div class="home-header-frase">
+  <div class="home-header-container super-space-top super-space-bottom hidden-xs">
+    <div class="home-header-frase super-space-top">
       <h1>CELEBRANDO 15 AÑOS<br>DE EXPERIENCIA</h1>
     </div>
-    <div class="arrow-container hidden-xs">
+    <div class="arrow-container space-top">
       <div class="my-arrow-down">.
       </div>
     </div>
