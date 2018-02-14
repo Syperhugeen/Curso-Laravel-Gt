@@ -52,7 +52,13 @@ class MarcaRepo extends BaseRepo
                   ->paginate($paginacion);
   }
 
-
+  public function getMarcasParaWebOrdenadasAlfabeticamenteSinPaginacion()
+  {
+    return $this->getEntidad()
+                  ->active()                                               
+                  ->orderBy('name','asc')
+                  ->get();
+  }
   //setters//////////////////////////////////////////////////////////////////////
 
  
