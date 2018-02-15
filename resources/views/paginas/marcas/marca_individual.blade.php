@@ -55,6 +55,7 @@
         <div class="row"> <!-- row que incluye todos los eventos -->
         @foreach($Eventos as $Evento)
         <!-- col del evento individual -->
+        <a href="{{$Evento->evento->route}}">
         <div class="col-xs-12 special-col no-padding">
           <div class="row">
               
@@ -91,11 +92,20 @@
             </div>
           </div>
         </div><!-- /col del evento individual -->
+        </a>
                         
         @endforeach
         </div><!-- /row que incluye todos los eventos -->
 
-        <!-- row de la pagination -->
+
+
+
+
+
+        <!-- row de la pagination 
+          ESTO DEBERÍA APARECER SÓLO CUANDO APARECE LA PAGINACIÓN
+          (es decir, sólo cuando la cantidad de eventos asociados a la marca es mayor
+          que la cantidad de eventos mostrados por página-->
         <div class="row special-col no-padding">
           <!-- pagination -->
            <div class="col-xs-12 special-col">
