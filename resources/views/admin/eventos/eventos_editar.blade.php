@@ -86,7 +86,7 @@
         </div>
       </div>
    </div>
- {{ Form::hidden('tipo_de_boton', ' ') }}
+  {!! Form::hidden('tipo_de_boton','hola') !!}
    
    <div class="boton-enviar editar-evento-guardar">
      Guardar
