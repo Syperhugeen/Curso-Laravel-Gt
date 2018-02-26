@@ -87,7 +87,7 @@
       </div>
    </div>
    {!! Form::hidden('tipo_de_boton','hola') !!}
-   <div class="Helper-OrdenarHijos-Row-flex_start">
+   <div class="Helper-OrdenarHijos-Row">
        <div class="admin-boton-editar editar-evento-guardar">
        Guardar
      </div> 

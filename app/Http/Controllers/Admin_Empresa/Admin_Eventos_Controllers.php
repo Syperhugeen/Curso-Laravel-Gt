@@ -187,11 +187,11 @@ class Admin_Eventos_Controllers extends Controller
      
      if($Request->get('tipo_de_boton') == 'guardar')
      {
-       return redirect()->route('get_admin_eventos_editar',$Evento->id)->with('alert', 'Evento creado correctamente');  
+       return redirect()->route('get_admin_eventos_editar',$Evento->id)->with('alert', 'Evento editado correctamente');  
      }
      else
      {
-       return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');  
+       return redirect()->route('get_admin_eventos')->with('alert', 'Evento editado correctamente');  
      }
     
   }
