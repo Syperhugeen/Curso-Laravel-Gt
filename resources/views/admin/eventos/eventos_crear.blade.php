@@ -61,9 +61,17 @@
       </div>      
    </div>
 
-   <div class="admin-boton-editar">
-     Crear 
+    {{ Form::hidden('tipo_de_boton', ' ') }}
+   
+   <div class="boton-enviar editar-evento-guardar">
+     Crear
    </div> 
+
+   <div class="boton-enviar editar-evento-guardar-y-salir">
+     Crear y salir
+   </div> 
+
+   
 
 
   {!! Form::close() !!}

@@ -39,6 +39,10 @@
                             'files' =>  true,
                             'id'    => 'form-admin-empresa-datos'
                           ])               !!}
+
+
+
+
    <div class="formulario-contenedor">
 
 
@@ -82,8 +86,14 @@
         </div>
       </div>
    </div>
-   <div class="admin-boton-editar">
+ {{ Form::hidden('tipo_de_boton', ' ') }}
+   
+   <div class="boton-enviar editar-evento-guardar">
      Guardar
+   </div> 
+
+   <div class="boton-enviar editar-evento-guardar-y-salir">
+     Guardar y salir
    </div> 
    <a href="{{route('EliminarUnEvento', $Evento->id)}}">Eliminar este evento</a>
 
