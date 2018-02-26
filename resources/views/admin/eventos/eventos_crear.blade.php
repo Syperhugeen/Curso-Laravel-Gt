@@ -63,13 +63,15 @@
 
     {!! Form::hidden('tipo_de_boton','hola') !!}
    
-   <div class="boton-enviar editar-evento-guardar">
-     Crear
-   </div> 
+  <div class="Helper-OrdenarHijos-Row-flex_start">
+       <div class="admin-boton-editar editar-evento-guardar">
+       Crear
+     </div> 
 
-   <div class="boton-enviar editar-evento-guardar-y-salir">
-     Crear y salir
-   </div> 
+     <div class="admin-boton-editar editar-evento-guardar-y-salir">
+       Crear y salir
+     </div> 
+   </div>
 
    
 

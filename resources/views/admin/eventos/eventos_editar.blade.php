@@ -86,15 +86,17 @@
         </div>
       </div>
    </div>
-  {!! Form::hidden('tipo_de_boton','hola') !!}
-   
-   <div class="boton-enviar editar-evento-guardar">
-     Guardar
-   </div> 
+   {!! Form::hidden('tipo_de_boton','hola') !!}
+   <div class="Helper-OrdenarHijos-Row-flex_start">
+       <div class="admin-boton-editar editar-evento-guardar">
+       Guardar
+     </div> 
 
-   <div class="boton-enviar editar-evento-guardar-y-salir">
-     Guardar y salir
-   </div> 
+     <div class="admin-boton-editar editar-evento-guardar-y-salir">
+       Guardar y salir
+     </div> 
+   </div>
+   
    <a href="{{route('EliminarUnEvento', $Evento->id)}}">Eliminar este evento</a>
 
 
