@@ -15,7 +15,7 @@ class user_registro extends ManagerBase
   {
     $rules = [
       'name'      => 'required',
-      'email'     => 'required|email|unique:users'
+      'email'     => 'required|unique:users'
              ];
 
     return $rules;
