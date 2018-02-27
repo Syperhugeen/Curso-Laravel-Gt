@@ -63,14 +63,18 @@
 
     {!! Form::hidden('tipo_de_boton','hola') !!}
    
-  <div class="Helper-OrdenarHijos-Row">
-       <div class="admin-boton-editar editar-evento-guardar">
-       Crear
-     </div> 
+  <div class="Helper-OrdenarHijos-columna get_width_100" >
+      <dir class="Helper-OrdenarHijos-Row">
+         <div class="boton-formato editar-evento-guardar">
+           Guardar
+         </div> 
 
-     <div class="admin-boton-editar editar-evento-guardar-y-salir">
-       Crear y salir
-     </div> 
+         <div style="padding: 20px;"></div>
+
+         <div class="boton-formato editar-evento-guardar-y-salir">
+           Guardar y salir
+         </div> 
+     </dir>
    </div>
 
    
