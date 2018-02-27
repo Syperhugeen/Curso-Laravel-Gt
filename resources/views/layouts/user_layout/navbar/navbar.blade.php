@@ -9,7 +9,7 @@
         <div class="text-center"><!-- para centrar el navbar toggle button -->
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
         </div>
-        <a class="navbar-brand" href="{{route('get_home')}}"><img class="navbar-logo" src="imagenes/Empresa/navbar-logo-Global-Target2.png"></a>
+        <a class="navbar-brand" href="{{route('get_home')}}"><img class="navbar-logo" src="{{url()}}/imagenes/Empresa/navbar-logo-Global-Target2.png"></a>
         </div>
       </div> <!-- / container fluid-->
 
