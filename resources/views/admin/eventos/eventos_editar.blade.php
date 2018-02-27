@@ -94,6 +94,8 @@
            Guardar
          </div> 
 
+         <div style="padding: 20px;"></div>
+
          <div class="boton-formato editar-evento-guardar-y-salir">
            Guardar y salir
          </div> 
