@@ -88,14 +88,16 @@
    </div>
    {!! Form::hidden('tipo_de_boton','hola') !!}
    
-   <div class="Helper-OrdenarHijos-Row Helper-OrdenarHijos-Row-space-around" style="width: 300px;">
-       <div class="boton-formato editar-evento-guardar">
-       Guardar
-     </div> 
+   <div class="Helper-OrdenarHijos-columna get_width_100" >
+      <dir class="Helper-OrdenarHijos-Row">
+         <div class="boton-formato editar-evento-guardar">
+           Guardar
+         </div> 
 
-     <div class="boton-formato editar-evento-guardar-y-salir">
-       Guardar y salir
-     </div> 
+         <div class="boton-formato editar-evento-guardar-y-salir">
+           Guardar y salir
+         </div> 
+     </dir>
    </div>
    
    <a href="{{route('EliminarUnEvento', $Evento->id)}}">Eliminar este evento</a>
