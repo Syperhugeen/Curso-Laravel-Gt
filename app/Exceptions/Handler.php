@@ -39,6 +39,7 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $e)
     {
 
+        dd($e->getStatusCode());
         if ($e->getStatusCode() == 500) {
             return response()->view('errors.500', [], 500);
         }
