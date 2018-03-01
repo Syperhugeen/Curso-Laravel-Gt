@@ -106,7 +106,7 @@
           ESTO DEBERÍA APARECER SÓLO CUANDO APARECE LA PAGINACIÓN
           (es decir, sólo cuando la cantidad de eventos asociados a la marca es mayor
           que la cantidad de eventos mostrados por página-->
-        @if($Eventos->hasMorePages())  
+        @if($Eventos->hasPages())  
           <div class="row special-col no-padding">
             <!-- pagination -->
              <div class="col-xs-12 special-col">
