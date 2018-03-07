@@ -83,9 +83,9 @@ class Paginas_Controller extends Controller
             $Marca   = $this->MarcaRepo->find($id);
 
             //le envio los eventos de esa marca
-            /*$Eventos = $this->Marca_de_eventoRepo->getEntidadActivasAll_Segun_Atributo_y_Ordenadas('marca_id',$id,'desc',10); */
+            $Eventos = $this->Marca_de_eventoRepo->getEntidadActivasAll_Segun_Atributo_y_Ordenadas('marca_id',$id,'desc',10); 
 
-            $Eventos = $this->Marca_de_eventoRepo->getEventosDeEstaMarcaActivosYPaginados('marca_id',$id,'desc',10,$Request);  
+            /*$Eventos = $this->Marca_de_eventoRepo->getEventosDeEstaMarcaActivosYPaginados('marca_id',$id,'desc',10,$Request); */ 
 
             dd($Eventos)   ;  
 
