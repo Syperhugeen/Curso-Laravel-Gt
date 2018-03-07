@@ -59,7 +59,7 @@ class Marca_de_eventoRepo extends BaseRepo
                                         count($coleccion), // Total items
                                         $perPage, // Items per page
                                         $page, // Current page
-                                        ['path' => $request->url(), 'query' => $request->query()] // We need this so we can keep all old query parameters from the url   
+                                        ['path' => $request->url(), 'query' => $request->query()]); // We need this so we can keep all old query parameters from the url  ) 
 
         
     }
