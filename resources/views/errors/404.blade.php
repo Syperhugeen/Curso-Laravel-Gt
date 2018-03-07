@@ -46,7 +46,7 @@
 					<h3>Asegúrate de que la dirección URL sea correcta.</h3>
 					<h4>- Atte.,<br>el quipo de Global Target.</h4>
 					<div class="space-top"><img src="imagenes/Empresa/logo-gt.png"></div>
-					<a href="{{route('get_pagina_home')}}">
+					<a href="{{route('get_home')}}">
   					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>volver a la Home</h5></a>
 				</div>
 			</div>

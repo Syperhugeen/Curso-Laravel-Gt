@@ -42,14 +42,11 @@ class Marca_de_eventoRepo extends BaseRepo
                           ->get();
 
 
-        //filtro las que no estan activas                      
-        foreach($coleccion as $item)  
-        {
-          if($item->evento->estado != 'si')
-          {
-            $coleccion->forget($item->id);
-          }
-        } 
+        //filtro las que no estan activas  
+        $coleccion->filter(function ($value) {
+         $value->evento->estado == 'si';
+        });                    
+      
 
         $coleccion->all();
 
