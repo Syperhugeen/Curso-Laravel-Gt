@@ -41,6 +41,7 @@ class Marca_de_eventoRepo extends BaseRepo
                           ->orderBy('id',$orden)                           
                           ->get();
 
+
         //filtro las que no estan activas                      
         foreach($coleccion as $item)  
         {
@@ -49,6 +50,8 @@ class Marca_de_eventoRepo extends BaseRepo
             $coleccion->forget($item->id);
           }
         } 
+
+        $coleccion->all();
 
         $page    = Input::get('page', 1); // Get the ?page=1 from the url
         $perPage = $paginacion; // Number of items per page

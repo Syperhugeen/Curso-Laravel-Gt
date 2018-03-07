@@ -87,7 +87,7 @@ class Paginas_Controller extends Controller
 
             $Eventoss = $this->Marca_de_eventoRepo->getEventosDeEstaMarcaActivosYPaginados('marca_id',$id,'desc',10,$Request);  
 
-            
+            dd($Eventos,$Eventoss);
 
             $Empresa = $this->EmpresaRepo->getEmpresaDatos();       
            
