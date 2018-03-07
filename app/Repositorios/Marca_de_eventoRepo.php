@@ -5,6 +5,8 @@ namespace App\Repositorios;
 use App\Entidades\Marca_de_evento;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Input;
 
 /**
 * Repositorio de consultas a la base de datos User
@@ -32,7 +34,7 @@ class Marca_de_eventoRepo extends BaseRepo
     return $this->getEntidad()->where('marca_id',$id_marca)->get();
   }
 
-   public function getEventosDeEstaMarcaActivosYPaginados($atributo,$valor_atributo,$orden,$paginacion)
+   public function getEventosDeEstaMarcaActivosYPaginados($atributo,$valor_atributo,$orden,$paginacion,$request)
     {
         $coleccion = $this->entidad
                           ->where($atributo,$valor_atributo)  
@@ -46,9 +48,20 @@ class Marca_de_eventoRepo extends BaseRepo
           {
             $coleccion->forget($item->id);
           }
-        }    
+        } 
 
-        return   $coleccion->paginate($paginacion);
+        $page    = Input::get('page', 1); // Get the ?page=1 from the url
+        $perPage = $paginacion; // Number of items per page
+        $offset  = ($page * $perPage) - $perPage;
+
+        return new LengthAwarePaginator(
+                                        array_slice($coleccion->toArray(), $offset, $perPage, true), // Only grab the items we need
+                                        count($coleccion), // Total items
+                                        $perPage, // Items per page
+                                        $page, // Current page
+                                        ['path' => $request->url(), 'query' => $request->query()] // We need this so we can keep all old query parameters from the url   
+
+        
     }
 
 
