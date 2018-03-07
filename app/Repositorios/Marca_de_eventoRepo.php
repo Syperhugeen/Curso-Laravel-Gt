@@ -43,8 +43,8 @@ class Marca_de_eventoRepo extends BaseRepo
 
 
         //filtro las que no estan activas  
-        $coleccion->filter(function ($value) {
-          dd($value->evento->estado);
+        $coleccion = $coleccion->filter(function ($value) {
+
          $value->evento->estado == 'si';
         });                    
       
