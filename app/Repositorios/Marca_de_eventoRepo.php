@@ -36,6 +36,7 @@ class Marca_de_eventoRepo extends BaseRepo
     {
         $coleccion = $this->entidad
                           ->where($atributo,$valor_atributo)  
+                          ->orderBy('id',$orden)                           
                           ->get();
 
         //filtro las que no estan activas                      
@@ -47,8 +48,7 @@ class Marca_de_eventoRepo extends BaseRepo
           }
         }    
 
-        return   $coleccion->orderBy('id',$orden)
-                           ->paginate($paginacion);
+        return   $coleccion->paginate($paginacion);
     }
 
 
