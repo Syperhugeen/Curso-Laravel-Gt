@@ -32,7 +32,24 @@ class Marca_de_eventoRepo extends BaseRepo
     return $this->getEntidad()->where('marca_id',$id_marca)->get();
   }
 
-  
+   public function getEventosDeEstaMarcaActivosYPaginados($atributo,$valor_atributo,$orden,$paginacion)
+    {
+        $coleccion = $this->entidad
+                          ->where($atributo,$valor_atributo)  
+                          ->get();
+
+        //filtro las que no estan activas                      
+        foreach($coleccion as $item)  
+        {
+          if($item->evento->estado != 'si')
+          {
+            $coleccion->forget($item->id);
+          }
+        }    
+
+        return   $coleccion->orderBy('id',$orden)
+                           ->paginate($paginacion);
+    }
 
 
   //setters//////////////////////////////////////////////////////////////////////
