@@ -52,6 +52,13 @@ class Marca_de_evento extends Model
         }
         
     }
+
+    public function scopeActive($query)
+    {
+                               
+           $query->where('estado', "si"); 
+                
+    }
   
     
 }
