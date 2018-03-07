@@ -33,7 +33,7 @@
           <div class="table-inner">
             <div class="inline-logos">
                 <img src="{{$Marca->url_img}}">
-                <img src="imagenes/Empresa/logo-gt.png">
+                <img src="imagenes/Empresa/logo-gt.png"> 
             </div>
           </div>
         </div>
