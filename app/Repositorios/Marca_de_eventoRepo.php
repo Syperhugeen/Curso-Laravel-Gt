@@ -55,7 +55,7 @@ class Marca_de_eventoRepo extends BaseRepo
         $offset  = ($page * $perPage) - $perPage;
 
         return new LengthAwarePaginator(
-                                        array_slice($coleccion->toArray(), $offset, $perPage, true), // Only grab the items we need
+                                        $coleccion, // Only grab the items we need
                                         count($coleccion), // Total items
                                         $perPage, // Items per page
                                         $page, // Current page
