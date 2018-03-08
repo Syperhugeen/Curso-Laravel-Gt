@@ -50,8 +50,8 @@ class Admin_Eventos_Controllers extends Controller
       
       if(trim($Request->get('name')) != "")
       {
-        $Eventoss = $this->EventoRepo->getEventosParaAdminPanel('desc', 30, $Request);
-        dd($Eventos,$Eventoss);
+        $Eventos = $this->EventoRepo->getEventosParaAdminPanel('desc', 30, $Request);
+        
       } 
       else
       {
