@@ -74,7 +74,7 @@ class EventoRepo extends BaseRepo
         }
 
         //traigo las marcas que coinciden con la busqued
-        $Marcas = $this->getMarcaRepo()->name($request->get('name'))->get();        
+        $Marcas = $this->getMarcaRepo()->getEntidad()->name($request->get('name'))->get();        
         
         //busco los eventos que contengan esas marcas
         foreach($Marcas as $Marca) 
