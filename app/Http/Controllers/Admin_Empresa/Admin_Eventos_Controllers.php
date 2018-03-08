@@ -13,6 +13,7 @@ use App\Managers\Evento\crear_evento_admin_manager;
 use App\Repositorios\MarcaRepo;
 use App\Repositorios\Marca_de_eventoRepo;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -41,7 +42,23 @@ class Admin_Eventos_Controllers extends Controller
   public function get_admin_eventos(Request $Request)
   {
 
-    $Eventos = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
+    $Eventos  = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30); 
+
+    if(Auth::user()->email == 'mauricio@worldmaster.com.uy')
+    {
+      if($Request->get('name') != '')
+      {
+        $Eventoss = $this->EventoRepo->getEventosParaAdminPanel('desc', 30, $Request);
+        dd($Eventos,$Eventoss);
+      } 
+      else
+      {
+        return $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30); 
+      }  
+      
+      
+    }  
+    
 
     return view('admin.eventos.eventos_home', compact('Eventos'));
   }
