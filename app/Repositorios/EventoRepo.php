@@ -79,7 +79,7 @@ class EventoRepo extends BaseRepo
         //busco los eventos que contengan esas marcas
         foreach($Marcas as $Marca) 
         {
-          $Eventos_de_marca = $this->getMarca_de_eventoRepo()->where('marca_id',$Marca->id)->get();
+          $Eventos_de_marca = $this->getMarca_de_eventoRepo()->getEntidad()->where('marca_id',$Marca->id)->get();
 
           foreach($Eventos_de_marca as $coleccion)
           {
