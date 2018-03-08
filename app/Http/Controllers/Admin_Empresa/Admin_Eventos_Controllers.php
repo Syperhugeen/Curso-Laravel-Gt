@@ -41,12 +41,6 @@ class Admin_Eventos_Controllers extends Controller
 
   public function get_admin_eventos(Request $Request)
   {
-
-    $Eventos  = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30); 
-
-    if(Auth::user()->email == 'mauricio@worldmaster.com.uy')
-    {
-
       
       if(trim($Request->get('name')) != "")
       {
@@ -56,11 +50,7 @@ class Admin_Eventos_Controllers extends Controller
       else
       {
         $Eventos = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30); 
-      }  
-      
-      
-    }  
-    
+      } 
 
     return view('admin.eventos.eventos_home', compact('Eventos'));
   }
