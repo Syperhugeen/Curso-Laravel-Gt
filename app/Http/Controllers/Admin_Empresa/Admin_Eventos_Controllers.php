@@ -47,15 +47,15 @@ class Admin_Eventos_Controllers extends Controller
     if(Auth::user()->email == 'mauricio@worldmaster.com.uy')
     {
 
-      dd(trim($Request->get('name')));
-      if(trim($Request->get('name')) != '')
+      
+      if(trim($Request->get('name')) != "")
       {
         $Eventoss = $this->EventoRepo->getEventosParaAdminPanel('desc', 30, $Request);
         dd($Eventos,$Eventoss);
       } 
       else
       {
-        return $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30); 
+        $Eventos = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30); 
       }  
       
       
