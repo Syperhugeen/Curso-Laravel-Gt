@@ -85,7 +85,7 @@ class Paginas_Controller extends Controller
             //le envio los eventos de esa marca    
             $Eventos_id = $this->Marca_de_eventoRepo->getEventosDeEstaMarcaActivosYPaginados('marca_id',$id,'desc',10,$Request);  
 
-            $Eventos = $this->EventoRepo->getEventosArrayDeEventosID($EventosIds,10);
+            $Eventos = $this->EventoRepo->getEventosArrayDeEventosID($Eventos_id,10);
 
            
 
