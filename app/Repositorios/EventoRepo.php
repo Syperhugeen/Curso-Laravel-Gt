@@ -94,7 +94,7 @@ class EventoRepo extends BaseRepo
        //hago la consulta segun el array de eventos id
        return $this->getEntidad()
                    ->whereIn('id',$array_de_eventos_id)
-                   ->orderBy('created_at',$orden)  
+                   ->orderBy('fecha',$orden)  
                    ->paginate($paginacion);
         
   }
