@@ -55,15 +55,15 @@ class Marca_de_eventoRepo extends BaseRepo
                         
       
         //quito los elementos duplicados
-       $array_de_eventos_id = array_unique($array_de_eventos_id);
+       return array_unique($array_de_eventos_id);
 
 
 
-       //hago la consulta segun el array de eventos id
+      /* //hago la consulta segun el array de eventos id
        return $this->getEntidad()
                    ->whereIn('id',$array_de_eventos_id)
                    ->orderBy('created_at',$orden)  
-                   ->paginate($paginacion);
+                   ->paginate($paginacion);*/
        
 
        
