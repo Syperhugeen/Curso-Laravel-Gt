@@ -49,7 +49,7 @@ class Marca_de_eventoRepo extends BaseRepo
         {
           if($Evento_de_marca->evento->estado == 'si')
           {
-             array_push($array_de_eventos_id,$Evento_de_marca->id);
+             array_push($array_de_eventos_id,$Evento_de_marca->evento_id);
           }
         }
                         
