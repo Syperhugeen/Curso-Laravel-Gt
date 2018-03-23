@@ -36,22 +36,26 @@
 
   </head>
   <body>
-
+    <div class="global-wrapper">
       <div class="bg-error">
-		<div class="row">
-			<div class="col-sm-8 col-sm-push-2 col-lg-6 col-lg-push-3">
-				<div class="center-content-flex">
-					<h1>ERROR 404</H1>
-					<h2>La página que estás buscando no existe</h2>
-					<h3>Asegúrate de que la dirección URL sea correcta.</h3>
-					<h4>- Atte.,<br>el quipo de Global Target.</h4>
-					<div class="space-top"><img src="imagenes/Empresa/logo-gt.png"></div>
-					<a href="{{route('get_home')}}">
-  					<h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>volver a la Home</h5></a>
-				</div>
-			</div>
-		</div>
+    		<div class="row">
+    			<div class="col-sm-8 col-sm-push-2 col-lg-6 col-lg-push-3">
+    				<div class="center-content-flex-vertical">
+    					<h1><span class="double-size-font">ERROR 404</span></H1>
+    					<h2>La página que estás buscando no existe</h2>
+    					<h3>Asegúrate de que la dirección URL sea correcta.</h3>
+    					<h4>- Atte., el equipo de Global Target.</h4>
+    					<div class="center-content-flex">
+                <img src="imagenes/Empresa/logo-gt.png">
+              </div>
+    					<a href="{{route('get_home')}}">
+                <h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>volver a la Home</h5>
+              </a>
+    				</div>
+    			</div>
+    		</div>
       </div>
+   </div>
 
 
   <!-- Scripts -->
