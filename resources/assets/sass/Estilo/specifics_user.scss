@@ -739,7 +739,10 @@ right: 0;
   background: $color-2;
   width: 100vw;
   height: 100vh;
+  padding-top: 100px;
+  margin-top: $navbar-altura * -1;
 }
+@media (max-width:767px) {.bg-error{    margin-top:$navbar-altura-xs * -1; }}
 .bg-error h1{
   color: $color-3light !important;
   text-align: center;
@@ -753,6 +756,32 @@ right: 0;
   text-align: center;
 }
 .bg-error h4{
-  color: $color-3 !important;
-  text-align: right;
+  color: $color-2light !important;
+  text-align: center;
+}
+
+.bg-error .ampliar {
+  color: $color-3dark;
+  font-family: HelveticaNoue37Thin;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform:uppercase;
+}
+.bg-error .quote {
+  color:$color-3dark;
+}
+.bg-error .quote:before{
+  color:$color-3light;
+}
+.bg-error .quote:after{
+  color:$color-3light;
+}
+.bg-error .ampliar:hover {
+  color: $color-3;
+}
+.bg-error .ampliar span.glyphicon{
+  color: $color-3light;
+}
+.double-size-font{
+  font-size: 200%;
 }
