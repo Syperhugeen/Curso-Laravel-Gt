@@ -1,43 +1,68 @@
-<html>
-    <head>
-        <title>Be right back.</title>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <!-- social media meta-tags for proper sharing
+    (la imagen tiene que estar en la carpeta root, ratio 1.91:1 1200x630px) -->
+    <meta property="og:title" content="Global Target">
+    <meta property="og:description" content="Agencia de modelos, eventos y promociones.">
+    <meta property="og:image" content="http://www.globaltarget.com.uy/thumbnail.jpg">
+    <meta property="og:url" content="http://www.globaltarget.com.uy/">
+    
+    <!-- Favicons (tienen que estar en la carpeta root) -->
+    <link rel="icon" type="image/png" href="http://www.globaltarget.com.uy/favicon-16x16.png" sizes="16x16">  
+    <link rel="icon" type="image/png" href="http://www.globaltarget.com.uy/favicon-32x32.png" sizes="32x32">  
+    <link rel="icon" type="image/png" href="http://www.globaltarget.com.uy/favicon-96x96.png" sizes="96x96">
 
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+    <!-- Apple Touch Icons (tienen que estar en la carpeta root) -->
+    <link rel="apple-touch-icon" href="older-iPhone.png"> <!-- // 120px -->  
+    <link rel="apple-touch-icon" sizes="180x180" href="iPhone-6-Plus.png">  
+    <link rel="apple-touch-icon" sizes="152x152" href="iPad-Retina.png">  
+    <link rel="apple-touch-icon" sizes="167x167" href="iPad-Pro.png">
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+    <title>{{$Empresa->name}} - Error 503</title>
+    <meta name="Description" CONTENT="@yield('MetaContent')">
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+    <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/app.css') }}">   
+    <link rel="stylesheet" type="text/css" href=" {{ asset('Iconos/fonts/style.css')}}">
+    <META name="robots" content="@yield('MetaRobot')">
 
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
+
+
+
+
+  </head>
+  <body>
+    <div class="global-wrapper">
+      <div class="bg-error">
+            <div class="row">
+                <div class="col-sm-8 col-sm-push-2 col-lg-6 col-lg-push-3">
+                    <div class="center-content-flex-vertical">
+                        <h1><span class="double-size-font">ERROR 503</span></H1>
+                        <h2>Servidor momentáneamente ocupado</h2>
+                        <h3>El servidor está bajo mantenimiento, vuelve a intentarlo luego.</h3>
+                        <h4>- Atte., el equipo de Global Target.</h4>
+                        <div class="center-content-flex">
+                <img src="imagenes/Empresa/logo-gt.png">
+              </div>
+                        <a href="{{route('get_home')}}">
+                <h5 class="ampliar text-center"><span class="glyphicon glyphicon-triangle-right"></span>volver a la Home</h5>
+              </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </body>
+      </div>
+   </div>
+
+
+  <!-- Scripts -->
+  <script src="{{ asset('js/all.js')}}"></script>    
+
+  <!-- activate WOW.js (ya está cargada al principio del html code) --> 
+  <script> new WOW().init(); </script>
+
+  </body>
 </html>
