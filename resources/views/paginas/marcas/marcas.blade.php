@@ -92,7 +92,7 @@
    
 
       
-
+      @if($Marcas->hasPages())            
       <!-- pagination MUTEADO por ahora-->
       <div class="col-xs-12 special-col">
           <div class="pagination-block">
@@ -100,6 +100,7 @@
           </div>
       </div>
       <!-- /pagination -->
+      @endif
 
 
     </div>

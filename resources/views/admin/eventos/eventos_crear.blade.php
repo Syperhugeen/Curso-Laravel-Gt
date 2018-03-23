@@ -61,9 +61,23 @@
       </div>      
    </div>
 
-   <div class="admin-boton-editar">
-     Crear 
-   </div> 
+    {!! Form::hidden('tipo_de_boton','hola') !!}
+   
+  <div class="Helper-OrdenarHijos-columna get_width_100" >
+      <dir class="Helper-OrdenarHijos-Row">
+         <div class="boton-formato editar-evento-guardar">
+           Crear
+         </div> 
+
+         <div style="padding: 20px;"></div>
+
+         <div class="boton-formato editar-evento-guardar-y-salir">
+           Crear y salir
+         </div> 
+     </dir>
+   </div>
+
+   
 
 
   {!! Form::close() !!}

@@ -13,6 +13,7 @@ use App\Managers\Evento\crear_evento_admin_manager;
 use App\Repositorios\MarcaRepo;
 use App\Repositorios\Marca_de_eventoRepo;
 use DB;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -40,8 +41,16 @@ class Admin_Eventos_Controllers extends Controller
 
   public function get_admin_eventos(Request $Request)
   {
-
-    $Eventos = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30);
+      
+      if(trim($Request->get('name')) != "")
+      {
+        $Eventos = $this->EventoRepo->getEventosParaAdminPanel('desc', 30, $Request);
+        
+      } 
+      else
+      {
+        $Eventos = $this->EventoRepo->getEntidadesAllPaginadasYOrdenadas($Request,'fecha','desc',30); 
+      } 
 
     return view('admin.eventos.eventos_home', compact('Eventos'));
   }
@@ -117,8 +126,15 @@ class Admin_Eventos_Controllers extends Controller
            } 
 
  //////////////////////          ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-           return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');       
+           if($Request->get('tipo_de_boton') == 'guardar')
+           {
+             return redirect()->route('get_admin_eventos_editar',$Evento->id)->with('alert', 'Evento creado correctamente');  
+           }
+           else
+           {
+             return redirect()->route('get_admin_eventos')->with('alert', 'Evento creado correctamente');  
+           }
+                
         } 
       
       
@@ -178,8 +194,15 @@ class Admin_Eventos_Controllers extends Controller
     } 
      
      
-
-    return redirect()->route('get_admin_eventos')->with('alert', 'Evento editado correctamente');  
+     if($Request->get('tipo_de_boton') == 'guardar')
+     {
+       return redirect()->route('get_admin_eventos_editar',$Evento->id)->with('alert', 'Evento editado correctamente');  
+     }
+     else
+     {
+       return redirect()->route('get_admin_eventos')->with('alert', 'Evento editado correctamente');  
+     }
+    
   }
 
   //subo img adicional

@@ -77,19 +77,26 @@
 
 @mixin boton-formato-normal {
        padding: 10px 18px;
-       background-color: $Color-Azul-Wm;
-       border-radius: 4px;
-       border: solid 2px transparent;
-       color:$Color-Claro-Categoria-ML;
-       font-family:$Menu-Derecho-Font ;
+       background-color: $color-3;
+       border-radius: 4px;       
+       color:$color-white;       
        font-size: 16px;               
        margin-top: 15px;
        margin-bottom: 10px;
        text-align: center;
+       cursor:pointer;
 }
 
 @mixin boton-formato-normal-hover{
-     background-color: $Color-background-titulos;
+     background-color: $color-1;
+}
+
+.boton-formato{
+  @include boton-formato-normal;  
+}
+
+.boton-formato:hover{
+  @include boton-formato-normal-hover;  
 }
 
 

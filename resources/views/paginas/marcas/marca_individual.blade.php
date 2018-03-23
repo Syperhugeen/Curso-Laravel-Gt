@@ -33,7 +33,7 @@
           <div class="table-inner">
             <div class="inline-logos">
                 <img src="{{$Marca->url_img}}">
-                <img src="imagenes/Empresa/logo-gt.png">
+                <img src="imagenes/Empresa/logo-gt.png"> 
             </div>
           </div>
         </div>
@@ -54,45 +54,47 @@
         <!-- aquí se muestra cada evento relacionado a la marca -->
         <div class="row"> <!-- row que incluye todos los eventos -->
         @foreach($Eventos as $Evento)
-        <!-- col del evento individual -->
-        <a href="{{$Evento->evento->route}}">
-        <div class="col-xs-12 special-col no-padding">
-          <div class="row">
-              
-            <div class="col-sm-6 no-padding eventos-imagen special-col special-col-img no-vertical-border">
-              <img class="img-main" src="{{$Evento->evento->url_img}}">
-            </div>
+         @if($Evento->evento->estado == "si")
+          <!-- col del evento individual -->
+          <a href="{{$Evento->evento->route}}">
+          <div class="col-xs-12 special-col no-padding">
+            <div class="row">
                 
-            <div class="col-sm-6 no-margin">
-              <div class="table-outer">
-                <div class="table-inner">
+              <div class="col-sm-6 no-padding eventos-imagen special-col special-col-img no-vertical-border">
+                <img class="img-main" src="{{$Evento->evento->url_img}}">
+              </div>
+                  
+              <div class="col-sm-6 no-margin">
+                <div class="table-outer">
+                  <div class="table-inner">
 
-                  <div class="inline-logos chiqui-logos">
-                    @foreach($Evento->evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
-                    <!--<a href="{{$Marca->marca->route}}">-->
-                      <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
-                    <!--</a> -->
-                    @endforeach
+                    <div class="inline-logos chiqui-logos">
+                      @foreach($Evento->evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
+                      <!--<a href="{{$Marca->marca->route}}">-->
+                        <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
+                      <!--</a> -->
+                      @endforeach
+                    </div>
+
+                    <h2>{{$Evento->evento->name}}</h2>
+                    <div class="p-container hidden-xs">
+                      <p class="text-center">
+                        @if(isset($Evento->evento->description))
+                         {{$Evento->evento->description}}
+                        @endif
+                      </p>
+                    </div>
+                    <a href="{{$Evento->evento->route}}">
+                      <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
+                    </a>
+
                   </div>
-
-                  <h2>{{$Evento->evento->name}}</h2>
-                  <div class="p-container hidden-xs">
-                    <p class="text-center">
-                      @if(isset($Evento->evento->description))
-                       {{$Evento->evento->description}}
-                      @endif
-                    </p>
-                  </div>
-                  <a href="{{$Evento->evento->route}}">
-                    <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
-                  </a>
-
-                </div>
-              </div> 
+                </div> 
+              </div>
             </div>
-          </div>
-        </div><!-- /col del evento individual -->
-        </a>
+          </div><!-- /col del evento individual -->
+          </a>
+         @endif
                         
         @endforeach
         </div><!-- /row que incluye todos los eventos -->
@@ -106,14 +108,17 @@
           ESTO DEBERÍA APARECER SÓLO CUANDO APARECE LA PAGINACIÓN
           (es decir, sólo cuando la cantidad de eventos asociados a la marca es mayor
           que la cantidad de eventos mostrados por página-->
-        <div class="row special-col no-padding">
-          <!-- pagination -->
-           <div class="col-xs-12 special-col">
-            <div class="pagination-block">
-                  {!! $Eventos->appends(Request::all())->render() !!}
+        @if($Eventos->hasPages())  
+          <div class="row special-col no-padding">
+            <!-- pagination -->
+             <div class="col-xs-12 special-col">
+              <div class="pagination-block">
+                    {!! $Eventos->appends(Request::all())->render() !!}
+              </div>
             </div>
           </div>
-        </div><!-- /row de la pagination -->
+        @endif
+
 
         
 

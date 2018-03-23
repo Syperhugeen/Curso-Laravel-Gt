@@ -114,6 +114,11 @@ class Evento extends Model
     {
          return \Carbon\Carbon::parse($this->fecha);  
     }
+
+    public function getRouteAdminAttribute()
+    {
+        return route('get_admin_eventos_editar',$this->id);
+    }
      
     
 }
