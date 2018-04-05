@@ -30,6 +30,17 @@
     <link rel="stylesheet" type="text/css" href=" {{ asset('Iconos/fonts/style.css')}}">
     <META name="robots" content="@yield('MetaRobot')">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116180841-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116180841-1');
+    </script>
+
+
 
 
 

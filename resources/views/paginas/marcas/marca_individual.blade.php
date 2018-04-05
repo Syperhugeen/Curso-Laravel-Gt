@@ -54,14 +54,14 @@
         <!-- aquí se muestra cada evento relacionado a la marca -->
         <div class="row"> <!-- row que incluye todos los eventos -->
         @foreach($Eventos as $Evento)
-         @if($Evento->evento->estado == "si")
+         @if($Evento->estado == "si")
           <!-- col del evento individual -->
-          <a href="{{$Evento->evento->route}}">
+          <a href="{{$Evento->route}}">
           <div class="col-xs-12 special-col no-padding">
             <div class="row">
                 
               <div class="col-sm-6 no-padding eventos-imagen special-col special-col-img no-vertical-border">
-                <img class="img-main" src="{{$Evento->evento->url_img}}">
+                <img class="img-main" src="{{$Evento->url_img}}">
               </div>
                   
               <div class="col-sm-6 no-margin">
@@ -69,22 +69,22 @@
                   <div class="table-inner">
 
                     <div class="inline-logos chiqui-logos">
-                      @foreach($Evento->evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
+                      @foreach($Evento->marcasevento as $Marca) <!-- ACÁ ACÁ ACÁ -->
                       <!--<a href="{{$Marca->marca->route}}">-->
                         <img src="{{$Marca->marca->url_img}}"> <!-- logo demarca asociada al evento -->
                       <!--</a> -->
                       @endforeach
                     </div>
 
-                    <h2>{{$Evento->evento->name}}</h2>
+                    <h2>{{$Evento->name}}</h2>
                     <div class="p-container hidden-xs">
                       <p class="text-center">
-                        @if(isset($Evento->evento->description))
-                         {{$Evento->evento->description}}
+                        @if(isset($Evento->description))
+                         {{$Evento->description}}
                         @endif
                       </p>
                     </div>
-                    <a href="{{$Evento->evento->route}}">
+                    <a href="{{$Evento->route}}">
                       <h5 class="ampliar"><span class="glyphicon glyphicon-chevron-right"></span>AMPLIAR</h5>
                     </a>
 

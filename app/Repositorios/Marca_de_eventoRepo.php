@@ -42,26 +42,31 @@ class Marca_de_eventoRepo extends BaseRepo
                           ->get();
 
 
-        //filtro las que no estan activas  
-        $coleccion = $coleccion->filter(function ($value) {
+        //array_de_eventos 
+        $array_de_eventos_id = [];
 
-         return $value->evento->estado == 'si';
-
-        });                    
+        foreach($coleccion as $Evento_de_marca)
+        {
+          if($Evento_de_marca->evento->estado == 'si')
+          {
+             array_push($array_de_eventos_id,$Evento_de_marca->evento_id);
+          }
+        }
+                        
       
+        //quito los elementos duplicados
+       return array_unique($array_de_eventos_id);
 
-        $coleccion->all();
 
-        $page    = Input::get('page', 1); // Get the ?page=1 from the url
-        $perPage = $paginacion; // Number of items per page
-        $offset  = ($page * $perPage) - $perPage;
 
-        return new LengthAwarePaginator(
-                                        $coleccion, // Only grab the items we need
-                                        count($coleccion), // Total items
-                                        $perPage, // Items per page
-                                        $page, // Current page
-                                        ['path' => $request->url(), 'query' => $request->query()]); // We need this so we can keep all old query parameters from the url  ) 
+      /* //hago la consulta segun el array de eventos id
+       return $this->getEntidad()
+                   ->whereIn('id',$array_de_eventos_id)
+                   ->orderBy('created_at',$orden)  
+                   ->paginate($paginacion);*/
+       
+
+       
 
         
     }
