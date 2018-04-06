@@ -391,6 +391,33 @@ img.marca-col{
 }
 .servicios-logo-ampro img{
 }
+#servicios #servicios-intro .special-col{
+  background-color: rgba(0,0,0, 0.3) !important;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#servicios #servicios-intro .special-col:hover{
+  background-color: rgba(0,0,0, 0.5) !important;
+}
+#servicios #servicios-intro .special-col a h4{
+  color: $color-3superlight !important;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+#servicios #servicios-intro .special-col:hover a h4{
+  color: $color-3superlight !important;
+  letter-spacing: 6px !important;
+}
+#servicios #servicios-intro{
+  padding-top: 300px;
+  height: 70vh;
+}
+@media (max-width: 991px){
+  #servicios #servicios-intro{
+  padding-top: 100px;
+  height: auto;
+}}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

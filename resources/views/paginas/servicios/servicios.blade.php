@@ -6,7 +6,7 @@
 @stop
 
 @section('MetaContent')
-  Servicios - Personal, Entrenamiento y Organización | Global Target
+  Servicios - Personal de reposición para todo el país: azafatas, modelos, promotoras, maquilladoras; Entrenamiento de formación como profesional; y Organización de eventos y campañas | Global Target
 @stop
 
 @section('MetaRobot')
@@ -21,14 +21,16 @@
 <div id="servicios">
     
 <!--para agregar los márgenes laterales-->
-<div class="container-fluid section-wrapper no-padding bgcolor-white">
+<div class="container-fluid section-wrapper no-padding bg-color-white">
 
+
+<div class="container-fluid section-wrapper no-padding bg-servicios-header">
   <div class="row" id="servicios-intro">
 
     <div class="col-md-8 col-md-push-2 super-space-top space-bottom">
       <!--<h1 class="section-title text-center">Servicios</h1>-->
       <!--<h2 class="section-subtitle text-center">Ofrecemos soluciones adaptadas a las necesidades de cada cliente.</h2>-->
-      <div class="non-semantic-protector">
+      <div class="super-space-top non-semantic-protector">
         <h1 class="ribbon"> 
           <!--<span class="ribbon-contenido">Superar sus expectativas es nuestro objetivo principal.</span>-->
           <span class="ribbon-contenido">Ofrecemos soluciones adaptadas a sus necesidades.</span>
@@ -55,15 +57,15 @@
     </div>
 
   </div>
+</div>
 
 
-
-
+<!--
   <div>
     <img class="img-responsive hidden-xs" src="imagenes/Img/bg-servicios-chicas.jpg">
     <img class="img-responsive visible-xs" src="imagenes/Img/bg-servicios-chicas(responsive).jpg">
   </div>
-
+-->
 
 
   <div class="row hr-border-top-pegado">

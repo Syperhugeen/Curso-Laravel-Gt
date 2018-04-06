@@ -207,6 +207,13 @@ div.wrapper-portada>img.portada{
   background-size: cover;
   background-color: $color-white;
 }
+.bg-servicios-header{
+  background-image: url('../../imagenes/Img/bg-servicios-chicas.jpg');
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}
 .bg-servicios-listado{
   background-image: url('../../imagenes/Img/bg-servicios-triada.jpg');
   background-position: center top;
@@ -275,6 +282,8 @@ div.wrapper-portada>img.portada{
     background-image: url('../../imagenes/Img/bg-home-puzzle(responsive).jpg');}
   .bg-nosotros-filosofia {
     background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
+  .bg-servicios-header {
+    background-image: url('../../imagenes/Img/bg-servicios-chicas(responsive).jpg');}
   .bg-servicios-listado {
     background-image: url('../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg');}
   .bg-servicios-diferencial {

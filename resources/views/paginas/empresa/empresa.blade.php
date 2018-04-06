@@ -2,11 +2,11 @@
 
 
 @section('title')
- Empresa
+ Nosotros
 @stop
 
 @section('MetaContent')
-  Description Home 
+  Origen y devenir de la empresa. Misión y visión; objetivos, valores y filosofía empresarial | Global Target
 @stop
 
 @section('MetaRobot')
