@@ -169,7 +169,7 @@
                     <h4><small><span class="glyphicon glyphicon-triangle-right"></span></small>En proceso de certificación de calidad</h4>
                     <div class="row space-top">
                       <div class="col-xs-4 col-xs-push-4 servicios-logo-ampro">
-                        <a href="http://amprouruguay.com.uy/"><img class="img-responsive center-block mi-float-up" src="imagenes/Empresa/ampro_seal_color3dark.png" title="Asociación de Marketing Promocional del Uruguay"></a>
+                        <a href="http://amprouruguay.com.uy/"><img class="img-responsive center-block" src="imagenes/Empresa/ampro_asociado_globaltarget.png" title="Asociación de Marketing Promocional del Uruguay"></a>
                       </div>
                     </div>      
                   </div>
