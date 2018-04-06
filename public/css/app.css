@@ -14067,6 +14067,13 @@ div.wrapper-portada > img.portada {
   background-size: cover;
   background-color: white; }
 
+.bg-servicios-header {
+  background-image: url("../../imagenes/Img/bg-servicios-chicas.jpg");
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white; }
+
 .bg-servicios-listado {
   background-image: url("../../imagenes/Img/bg-servicios-triada.jpg");
   background-position: center top;
@@ -14134,6 +14141,8 @@ div.wrapper-portada > img.portada {
     background-image: url("../../imagenes/Img/bg-home-puzzle(responsive).jpg"); }
   .bg-nosotros-filosofia {
     background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
+  .bg-servicios-header {
+    background-image: url("../../imagenes/Img/bg-servicios-chicas(responsive).jpg"); }
   .bg-servicios-listado {
     background-image: url("../../imagenes/Img/bg-nosotros-filosofia(responsive).jpg"); }
   .bg-servicios-diferencial {
@@ -16371,6 +16380,30 @@ img.marca-col {
 
 .servicios-logo-ampro {
   text-align: center; }
+
+#servicios #servicios-intro .special-col {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  transition: all .3s ease-in-out; }
+
+#servicios #servicios-intro .special-col:hover {
+  background-color: rgba(0, 0, 0, 0.5) !important; }
+
+#servicios #servicios-intro .special-col a h4 {
+  color: #f1e7d2 !important;
+  transition: all .5s ease-in-out; }
+
+#servicios #servicios-intro .special-col:hover a h4 {
+  color: #f1e7d2 !important;
+  letter-spacing: 6px !important; }
+
+#servicios #servicios-intro {
+  padding-top: 300px;
+  height: 70vh; }
+
+@media (max-width: 991px) {
+  #servicios #servicios-intro {
+    padding-top: 100px;
+    height: auto; } }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

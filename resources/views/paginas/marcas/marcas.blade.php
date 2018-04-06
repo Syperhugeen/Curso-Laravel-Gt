@@ -2,11 +2,11 @@
 
 
 @section('title')
- Cartera de Clientes
+ Clientes
 @stop
 
 @section('MetaContent')
-  Cartera de Clientes de Global Target
+  Cartera de Clientes de Global Target | Global Target
 @stop
 
 @section('MetaRobot')

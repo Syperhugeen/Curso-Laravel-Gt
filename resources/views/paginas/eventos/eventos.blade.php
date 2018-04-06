@@ -2,11 +2,11 @@
 
 
 @section('title')
- Eventos
+ Galería
 @stop
 
 @section('MetaContent')
-  Eventos y promociones de Global Target
+  Galería fotográfica de acciones promocionales, eventos y lanzamientos realizados por nuestros clientes y de los que orgullosamente fuimos parte | Global Target
 @stop
 
 @section('MetaRobot')

@@ -6,7 +6,7 @@
 @stop
 
 @section('MetaContent')
-  Description Home 
+  Agencia dedicada al rubro de modelos, promociones y eventos desde el año 2012 | Global Target 
 @stop
 
 @section('MetaRobot')

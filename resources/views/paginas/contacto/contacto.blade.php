@@ -6,7 +6,7 @@
 @stop
 
 @section('MetaContent')
-  Description Home 
+  Póngase en contacto desde el medio que le sea más conveniente; por teléfono/celular, correo electrónico, mediante un formulario de contacto, o directamente diríjase a nuestra oficina | Global Target
 @stop
 
 @section('MetaRobot')
