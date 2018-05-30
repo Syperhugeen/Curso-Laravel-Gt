@@ -1,7 +1,7 @@
 <?php 
 
 //Marcas
-Route::get('/Marcas' , [                    
+Route::get('/Clientes' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_marcas',
   'as'   => 'get_pagina_marcas']
 ); 
