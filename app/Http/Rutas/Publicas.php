@@ -28,7 +28,7 @@ Route::get('/Contacto' , [
 );
 
 //Empresa
-Route::get('/Empresa' , [                    
+Route::get('/Nosotros' , [                    
   'uses' => 'Publicas\Paginas_Controller@get_pagina_empresa',
   'as'   => 'get_pagina_empresa']
 );
