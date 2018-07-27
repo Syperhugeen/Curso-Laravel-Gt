@@ -2,11 +2,11 @@
 
 
 @section('title')
- Clientes
+ Cartera de Clientes
 @stop
 
 @section('MetaContent')
-  Cartera de Clientes de Global Target | Global Target
+  Elegidos por las mejores marcas del mundo; Absolut, Audi, BMW, Carolina Herrera, Chivas, Givenchy, Gucci, Jeep, Marc Jacobs, Ralph Lauren, Ray-Ban, Versace, Victoria's Secret ...entre otras.
 @stop
 
 @section('MetaRobot')
