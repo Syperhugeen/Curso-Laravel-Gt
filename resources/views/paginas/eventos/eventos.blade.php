@@ -6,7 +6,7 @@
 @stop
 
 @section('MetaContent')
-  Galería fotográfica de acciones promocionales, eventos y lanzamientos realizados por nuestros clientes y de los que orgullosamente fuimos parte | Global Target
+  Fotografías de nuestras acciones promocionales, eventos y lanzamientos.
 @stop
 
 @section('MetaRobot')

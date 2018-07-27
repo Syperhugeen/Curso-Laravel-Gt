@@ -6,7 +6,7 @@
 @stop
 
 @section('MetaContent')
-  Servicios - Personal de reposición para todo el país: azafatas, modelos, promotoras, maquilladoras; Entrenamiento de formación como profesional; y Organización de eventos y campañas | Global Target
+  Eventos y promociones. Personal de la más alta calidad en azafatas, modelos, promotoras, maquilladoras y bartenders.
 @stop
 
 @section('MetaRobot')

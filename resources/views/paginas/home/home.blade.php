@@ -2,11 +2,11 @@
 
 
 @section('title')
- Home
+ Azafatas, modelos y promotoras
 @stop
 
 @section('MetaContent')
-  Agencia dedicada al rubro de modelos, promociones y eventos desde el año 2012 | Global Target 
+  Distinción, prestigio y una trayectoria de más de 15 años en el rubro de modelos, promociones y eventos.
 @stop
 
 @section('MetaRobot')
