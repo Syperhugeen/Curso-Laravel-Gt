@@ -40,9 +40,14 @@
       gtag('config', 'UA-116180841-1');
     </script>
 
+<!-- script de conversion de la agencia de posicionamiento -->
+<!-- Event snippet for Contacto conversion page -->
+  <script>
 
+    gtag('event', 'conversion', {'send_to': 'AW-794875575/uy1eCMmj1oYBELetg_sC'});
 
-
+  </script>
+<!-- / fin del script de conversion de la agencia de posicionamiento -->
 
 
   <script>
@@ -63,6 +68,12 @@
     });
   });
   </script>
+
+
+
+
+
+
 
 
 
