@@ -61,10 +61,7 @@
   <!-- /fin del tag -->
 
 <!-- script de conversion de la nueva agencia de posicionamiento -->
-  <!-- Event snippet for Contacto conversion page -->
-    <script>
-      gtag('event', 'conversion', {'send_to': 'AW-794875575/uy1eCMmj1oYBELetg_sC'});
-    </script>
+  <!-- Event snippet for Contacto conversion page -->    
 <!-- / fin del script -->
 
 

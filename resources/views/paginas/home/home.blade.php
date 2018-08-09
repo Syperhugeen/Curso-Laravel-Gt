@@ -18,6 +18,7 @@
 @push('adwords_contacto_push') 
  @if(Session::has('contacto'))
     {{-- poner codigo de adwords aqui --}}
+     gtag('event', 'conversion', {'send_to': 'AW-794875575/uy1eCMmj1oYBELetg_sC'});
  @endif
 @endpush
 
