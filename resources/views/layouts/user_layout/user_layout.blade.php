@@ -30,20 +30,42 @@
     <link rel="stylesheet" type="text/css" href=" {{ asset('Iconos/fonts/style.css')}}">
     <META name="robots" content="@yield('MetaRobot')">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Ads: 794875575 -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-794875575"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics de la agencia nueva de Ads -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116180841-1'); 
+
+      @stack('adwords_contacto_push') 
+
+    </script>
+  <!-- /fin del tag -->
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics de nuestra campaña de Ads -->
+    <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116180841-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-116180841-1'); 
-
-      @stack('adwords_contacto_push') 
+      gtag('config', 'UA-116180841-1');
     </script>
+    -->
+  <!-- /fin del tag -->
 
-
-
-
+<!-- script de conversion de la nueva agencia de posicionamiento -->
+  <!-- Event snippet for Contacto conversion page -->
+    <script>
+      gtag('event', 'conversion', {'send_to': 'AW-794875575/uy1eCMmj1oYBELetg_sC'});
+    </script>
+<!-- / fin del script -->
 
 
   <script>
@@ -64,6 +86,12 @@
     });
   });
   </script>
+
+
+
+
+
+
 
 
 

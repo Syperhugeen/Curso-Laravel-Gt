@@ -2,11 +2,11 @@
 
 
 @section('title')
- Nosotros
+ Acerca de Nosotros
 @stop
 
 @section('MetaContent')
-  Origen y devenir de la empresa. Misión y visión; objetivos, valores y filosofía empresarial | Global Target
+  Origen y devenir de la empresa. Misión y visión; objetivos, valores y filosofía empresarial. 
 @stop
 
 @section('MetaRobot')
