@@ -39,7 +39,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-116180841-1'); 
 
       @stack('adwords_contacto_push') 
@@ -60,9 +59,7 @@
     -->
   <!-- /fin del tag -->
 
-<!-- script de conversion de la nueva agencia de posicionamiento -->
-  <!-- Event snippet for Contacto conversion page -->    
-<!-- / fin del script -->
+
 
 
   <script>
