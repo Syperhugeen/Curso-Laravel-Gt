@@ -36,8 +36,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      gtag('config', 'UA-116180841-1'); 
 
-      gtag('config', 'UA-116180841-1');
+      @stack('adwords_contacto_push') 
     </script>
 
 

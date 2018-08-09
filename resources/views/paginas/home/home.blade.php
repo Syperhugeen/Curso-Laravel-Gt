@@ -15,6 +15,12 @@
 
 @section('content')
 
+@push('adwords_contacto_push') 
+ @if(Session::has('contacto'))
+    {{-- poner codigo de adwords aqui --}}
+ @endif
+@endpush
+
 
 <div id="home">
 <!--PORTADA / header , previamente carousel/slider-->
