@@ -30,6 +30,20 @@
     <link rel="stylesheet" type="text/css" href=" {{ asset('Iconos/fonts/style.css')}}">
     <META name="robots" content="@yield('MetaRobot')">
 
+<!-- realfavicongenerator headlines -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=eEGWoRWgP3">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=eEGWoRWgP3">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=eEGWoRWgP3">
+<link rel="manifest" href="/site.webmanifest?v=eEGWoRWgP3">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=eEGWoRWgP3" color="#caa752">
+<link rel="shortcut icon" href="/favicon.ico?v=eEGWoRWgP3">
+<meta name="apple-mobile-web-app-title" content="GlobalTarget">
+<meta name="application-name" content="GlobalTarget">
+<meta name="msapplication-TileColor" content="#caa752">
+<meta name="theme-color" content="#ffffff">
+<!-- / fin de realfavicongenerator headlines -->
+
+
 <!-- Global site tag (gtag.js) - Google Ads: 794875575 -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-794875575"></script>
