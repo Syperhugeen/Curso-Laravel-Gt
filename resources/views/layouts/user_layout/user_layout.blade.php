@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- social media meta-tags for proper sharing
+    <!-- social media meta-tags for proper sharing -->
     (la imagen tiene que estar en la carpeta root, ratio 1.91:1 1200x630px) -->
     <meta property="og:title" content="Global Target">
     <meta property="og:description" content="Agencia de modelos, eventos y promociones.">
-    <meta property="og:image" content="http://www.globaltarget.com.uy/thumbnail.jpg">
-    <meta property="og:url" content="http://www.globaltarget.com.uy/">
+    <meta property="og:image" content="https://www.globaltarget.com.uy/thumbnail.jpg">
+    <meta property="og:url" content="https://www.globaltarget.com.uy/">
     
     <!-- Favicons (tienen que estar en la carpeta root) -->
-    <link rel="icon" type="image/png" href="http://www.globaltarget.com.uy/favicon-16x16.png" sizes="16x16">  
-    <link rel="icon" type="image/png" href="http://www.globaltarget.com.uy/favicon-32x32.png" sizes="32x32">  
-    <link rel="icon" type="image/png" href="http://www.globaltarget.com.uy/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://www.globaltarget.com.uy/favicon-16x16.png" sizes="16x16">  
+    <link rel="icon" type="image/png" href="https://www.globaltarget.com.uy/favicon-32x32.png" sizes="32x32">  
+    <link rel="icon" type="image/png" href="https://www.globaltarget.com.uy/favicon-96x96.png" sizes="96x96">
 
     <!-- Apple Touch Icons (tienen que estar en la carpeta root) -->
     <link rel="apple-touch-icon" href="older-iPhone.png"> <!-- // 120px -->  
