@@ -101,6 +101,11 @@ class AuthController extends Controller
         return redirect()->back()->withErrors($manager->getErrors())->withInput($manager->getData());
     }
 
+    public function getRegister()
+    {
+        return redirect()->route('get_home');
+    }
+
     
 
 
