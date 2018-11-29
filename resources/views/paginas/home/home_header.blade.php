@@ -9,7 +9,7 @@
       <h1>CELEBRANDO 15 AÑOS<br>DE EXPERIENCIA</h1>
     </div>
     <div class="arrow-container space-top">
-      <div class="my-arrow-down">.
+      <div class="my-arrow-down">
       </div>
     </div>
   </div>
