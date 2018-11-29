@@ -26,7 +26,7 @@ Route::get('salir', [
 // Registration routes...
 Route::get('registro', [
   'uses'  => 'Auth\AuthController@getRegister',
-  'as'    => 'register_get'
+  'as'    => 'registro'
 ]);
 
 Route::post('registro', [
