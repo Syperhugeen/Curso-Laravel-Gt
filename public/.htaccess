@@ -14,3 +14,10 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^globaltarget.com.uy
+RewriteRule (.*) https://www.globaltarget.com.uy/$1 [R=301,L]
