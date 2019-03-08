@@ -111,7 +111,7 @@ class Admin_Eventos_Controllers extends Controller
 
               foreach($files as $file)
               { 
-                $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$Evento->id,$Request,'EventosImagenes/' );
+                $this->ImgEventoRepo->set_datos_de_img($file,$this->ImgEventoRepo->getEntidad(),'evento_id',$Evento->id,$Request,'EventosImagenes/' );  
               }
               
             }
