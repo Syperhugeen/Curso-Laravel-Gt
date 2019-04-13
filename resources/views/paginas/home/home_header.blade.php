@@ -4,14 +4,15 @@
 <div class="bg-home-header">
   <!--<div><img class="img-responsive index-1" src="imagenes/Img/bg-home-header-newest.jpg"></div>-->
   <!--<img src="imagenes/Img/header_15years(responsive).jpg" alt="" class="img-responsive visible-xs">-->
-  <div class="home-header-container super-space-top super-space-bottom hidden-xs">
-    <div class="home-header-frase super-space-top">
-      <h1>CELEBRANDO 15 AÑOS<br>DE EXPERIENCIA</h1>
+  <div class="home-header-container super-space-top super-space-bottom">
+    <a href="https://www.globaltarget.com.uy/evento-Latin_American_Quality_Awards_2018-419"><img src="imagenes/Img/premio_latinoamericano.png" class="img-responsive" style="bottom: 0px;"></a>
+    <!--<div class="home-header-frase super-space-top">
+      <a href="https://www.globaltarget.com.uy/evento-Latin_American_Quality_Awards_2018-419"><h1>PREMIO LATINOAMERICANO<br>POR CALIDAD TOTAL Y EXCELENCIA</h1></a>
     </div>
     <div class="arrow-container space-top">
       <div class="my-arrow-down">
       </div>
-    </div>
+    </div>-->
   </div>
 </div>
 
