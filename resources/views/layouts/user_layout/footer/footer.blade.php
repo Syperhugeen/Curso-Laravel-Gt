@@ -73,7 +73,7 @@
       </div>
 
       <div class="col-md-6">
-        <h5>Diseño de interfaz y desarrollo web: <a href="http://www.simbiontecreativo.com/">Simbionte</a></h5>
+        <h5>Diseño de interfaz : <a href="http://www.simbiontecreativo.com/">Simbionte</a> y desarrollo web <a href="https://mauricio.mwebs.com.uy">MCS</a></h5>
       </div>
 
   </div>
