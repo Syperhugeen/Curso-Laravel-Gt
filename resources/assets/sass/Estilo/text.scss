@@ -481,37 +481,37 @@ h1.section-title{
 /* color de los títulos de las 3 columnas principales */
 .footer-title{
 }
-#footer .col-md-4 h5.footer-title {
+#footer  h5.footer-title {
   color: $color-3light;
   text-transform: uppercase;
   letter-spacing: 4px;
   padding-bottom:10px;
 }
 /* color de los glyphicons */
-#footer .col-md-4 h5 span.socicon,
-#footer .col-md-4 h5 span.glyphicon {
+#footer  h5 span.socicon,
+#footer  h5 span.glyphicon {
   color: $color-3dark;
   padding-right: 4px;
 }
-#footer .col-md-4 a h5:hover span.socicon,
-#footer .col-md-4 a h5:hover span.glyphicon {
+#footer  a h5:hover span.socicon,
+#footer  a h5:hover span.glyphicon {
   color: $color-3;
 }
 /* color de los renglones que tienen glyphicons */
-#footer .col-md-4 h5 {
+#footer  h5 {
   color: $color-2light;
 }
-#footer .col-md-4 a h5:hover {
+#footer  a h5:hover {
   color: $color-3dark;
 }
 /* color de la información que está abajo */
-#footer .col-md-6 h4, #footer .col-md-6 h5 {
+#footer  h4, #footer  h5 {
   color: $color-2light;
 }
-#footer .col-md-6 h4 a, #footer .col-md-6 h5 a{
+#footer  h4 a, #footer  h5 a{
   color: $color-3dark;
 }
-#footer .col-md-6 h4 a:hover, #footer .col-md-6 h5 a:hover{
+#footer  h4 a:hover, #footer  h5 a:hover{
   color: $color-3;
 }
 @media (max-width: 991px){
