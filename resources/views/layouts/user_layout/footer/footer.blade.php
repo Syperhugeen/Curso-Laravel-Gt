@@ -20,7 +20,8 @@
 
     {{-- Logos nuevos --}}
      <div class="col-md-3 footer-line hidden-xs hidden-sm footer-col-height">
-      <h5 class="footer-title">Premios</h5>
+      <h5 class="footer-title">Premio</h5>
+      <h5>Al Liderazgo Empresarial por Global Business Corporation</h5> 
       <div class=" footer-col-height Helper-OrdenarHijos-columna">
         <img style="margin-top: 15px;" class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019-2.png">
        {{--  <h5>Premio al Liderazgo Empresarial | Global Business Corporation</h5> --}}
