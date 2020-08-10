@@ -23,7 +23,7 @@
       <h5 class="footer-title">Premios</h5>
       <div class=" footer-col-height Helper-OrdenarHijos-columna">
         <img class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019-2.png">
-        <img class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019-3.png">
+        <h5>Liderazgo Empresarial, del Global Business Corporation.</h5>
       </div>
     </div>
 
