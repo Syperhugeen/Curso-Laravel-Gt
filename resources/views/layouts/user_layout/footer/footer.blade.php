@@ -20,6 +20,7 @@
 
     {{-- Logos nuevos --}}
      <div class="col-md-3 footer-line hidden-xs hidden-sm footer-col-height">
+      <h5 class="footer-title">Premios</h5>
       <div class="footer-isologo-container footer-col-height">
         <img class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019.png">
       </div>
