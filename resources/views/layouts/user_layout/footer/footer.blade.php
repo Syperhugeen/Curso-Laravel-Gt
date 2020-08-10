@@ -21,7 +21,7 @@
     {{-- Logos nuevos --}}
      <div class="col-md-3 footer-line hidden-xs hidden-sm footer-col-height">
       <h5 class="footer-title">Premios</h5>
-      <div class="footer-isologo-container footer-col-height">
+      <div class="footer-isologo-container footer-col-height Helper-OrdenarHijos-columna">
         <img class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019-2.png">
       </div>
     </div>
