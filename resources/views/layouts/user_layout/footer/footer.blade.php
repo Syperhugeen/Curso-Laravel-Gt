@@ -23,8 +23,9 @@
       <h5 class="footer-title">Premio</h5>
       
       <div class=" footer-col-height Helper-OrdenarHijos-columna">
-        <img style="margin-top: 15px;" class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019-2.png">
-         <h5>Premio al Liderazgo Empresarial | Global Business Corporation</h5>
+        <img class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019-2.png">
+        <img style="margin-top: 2px;" class="img-responsive footer-isologo" src="imagenes/Premios/awards-2019-3.png">
+        
        
       </div>
     </div>
