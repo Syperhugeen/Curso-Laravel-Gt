@@ -9,10 +9,10 @@
 
     @if(!Auth::guest())
      @if(Auth::user()->first_name == 'Mauricio')
-       <a href="https://www.globaltarget.com.uy/evento-Latin_American_Quality_Awards_2018-419" class="Helper-OrdenarHijos-Row Helper-OrdenarHijos-Row-space-around premio-contenedor-img"><img src="imagenes/Img/premio_latinoamericano-2.png" class="img-responsive " style="bottom: 0px;"></a>
+       <a href="https://www.globaltarget.com.uy/evento-Latin_American_Quality_Awards_2018-419" class="Helper-OrdenarHijos-Row Helper-OrdenarHijos-Row-space-around premio-contenedor-img"><img src="imagenes/Img/premio_latinoamericano-2.png" class="img-responsive " style="top: 0px; left:0px;"></a>
       @endif 
     @endif
-    <a href="https://www.globaltarget.com.uy/evento-Latin_American_Quality_Awards_2018-419" class="Helper-OrdenarHijos-Row Helper-OrdenarHijos-Row-space-around premio-contenedor-img"><img src="imagenes/Img/premio_latinoamericano.png" class="img-responsive " style="bottom: 0px; left:0px;"></a>
+    <a href="https://www.globaltarget.com.uy/evento-Latin_American_Quality_Awards_2018-419" class="Helper-OrdenarHijos-Row Helper-OrdenarHijos-Row-space-around premio-contenedor-img"><img src="imagenes/Img/premio_latinoamericano.png" class="img-responsive " style="bottom: 0px; "></a>
     <!--<div class="home-header-frase super-space-top">
       <a href="https://www.globaltarget.com.uy/evento-Latin_American_Quality_Awards_2018-419"><h1>PREMIO LATINOAMERICANO<br>POR CALIDAD TOTAL Y EXCELENCIA</h1></a>
     </div>
