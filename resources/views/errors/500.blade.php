@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="iPad-Retina.png">  
     <link rel="apple-touch-icon" sizes="167x167" href="iPad-Pro.png">
 
-    <title>{{$Empresa->name}} - Error 500</title>
+    <title>Error 500</title>
     <meta name="Description" CONTENT="@yield('MetaContent')">
 
     <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/app.css') }}">   
