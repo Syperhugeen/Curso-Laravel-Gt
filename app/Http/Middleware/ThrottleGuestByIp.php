@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class ThrottleGuestByIp
 {
@@ -51,6 +52,8 @@ class ThrottleGuestByIp
         Cache::put($key, $data, (int) ceil($ttlSeconds / 60));
 
         if ($data['count'] > $this->maxAttempts) {
+
+            Log::warning("⛔ ThrottleGuestByIp: IP $ip excedió el límite de $this->maxAttempts solicitudes en $this->decaySeconds segundos.");
             return response('Too Many Requests', 429, [
                 'Retry-After' => $ttlSeconds,
             ]);
